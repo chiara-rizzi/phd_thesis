@@ -1,14 +1,7 @@
-image: blang/latex
-
-build:
-    script:
-        - apt-get install --reinstall make
-        - which pdflatex
-        - which make
-        - ls
-        - make
-        - make clean
-    only: [master]
-    artifacts:
-        paths:
-            - int_multibjets.pdf
+compile_pdf:
+  image: aergus/latex
+  script:
+    - make
+  artifacts:
+    paths:
+      - main.pdf
