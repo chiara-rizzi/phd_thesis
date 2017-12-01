@@ -1,0 +1,14 @@
+image: blang/latex
+
+build:
+    script:
+        - apt-get install --reinstall make
+        - which pdflatex
+        - which make
+        - ls
+        - make
+        - make clean
+    only: [master]
+    artifacts:
+        paths:
+            - int_multibjets.pdf
