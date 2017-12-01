@@ -1,10 +1,11 @@
+image: blang/latex
+
 compile_pdf:
-  image: aergus/latex
   script:
-    - pdflatex main.tex
-    - bibtex main
-    - pdflatex main.tex
-    - pdflatex main.tex
+    - ls 
+    - ls figures
+    - ls figures/front
+    - make
     - make clean
   artifacts:
     paths:
