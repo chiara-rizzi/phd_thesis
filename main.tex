@@ -46,7 +46,22 @@ headsepline, % Uncomment to get a line under the header
 
 \addbibresource{main.bib} % The filename of the bibliography
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+\usepackage{amssymb}  % to have some symbol I don't remember
+\usepackage{multirow}
+\usepackage{times} % to have tilde
+\usepackage{textcomp} % to have tilde
+\usepackage{amsmath} % to have math symbols, e.g. binom
+\usepackage{mathtools}
+\usepackage{slashed} % to have slashed
 
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\cmsette}{$\sqrt{s}$ = 7 TeV}
+\newcommand{\cmotto}{$\sqrt{s}$ = 8 TeV}
+\newcommand{\stilde}{\tilde{s}}
+\newcommand{\sbar}{\bar{s}}
+\newcommand{\lagr}{\mathcal{L}}
+\newcommand{\ifb}{fb$^{-1}$}
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
@@ -132,10 +147,6 @@ Other test \cite{Reference2}
 
 \tableofcontents % Prints the main table of contents
 
-\listoffigures % Prints the list of figures
-
-\listoftables % Prints the list of tables
-
 %----------------------------------------------------------------------------------------
 %	ABBREVIATIONS
 %----------------------------------------------------------------------------------------
@@ -182,7 +193,9 @@ Other test \cite{Reference2}
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 
-\include{Chapters/theory}
+%\include{Chapters/sm_and_susy}
+\include{chap/theory}
+\include{chap/lhc}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
@@ -194,6 +207,15 @@ Other test \cite{Reference2}
 % Uncomment the lines as you write the Appendices
 
 \include{Appendices/test_appendix}
+
+%----------------------------------------------------------------------------------------
+%	LIST
+%----------------------------------------------------------------------------------------
+
+
+\listoffigures % Prints the list of figures
+\listoftables % Prints the list of tables
+
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
