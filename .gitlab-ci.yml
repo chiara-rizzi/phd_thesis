@@ -1,7 +1,11 @@
 compile_pdf:
   image: aergus/latex
   script:
-    - make
+    - pdflatex main.tex
+    - bibtex main
+    - pdflatex main.tex
+    - pdflatex main.tex
+    - make clean
   artifacts:
     paths:
       - main.pdf
