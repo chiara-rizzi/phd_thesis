@@ -101,7 +101,7 @@ p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \,
 d t_{\mu} \;,
 \end{equation}
 
-The p-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the p-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% confidence level (CL).
+The p-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the p-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% confidence level (CL). Note that excluding an alternate hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
 
 The threshold to exclude the null hypothesis (SM only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (BSM). Assuming that the B-only hypothesis as true, the 0.05 threshold would lead to 5\% of the BSM searches to declare a discovery. Instead, the convention is to declare evidence for New Physics when the p-value for the B-only hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it's lower than $2.9 \times 10^{-7}$.
 
@@ -112,15 +112,27 @@ The significance $Z$ of the p-value can be evaluated by transforming it in the e
 Z = \Phi^{-1}(1-p) \
 \end{equation} 
 
-\noindent where $\Phi$ is the cumulative of the standard Gaussian.
 
-\iffalse
-Points to discuss
-- correspondence between p-values and sigma
-- arbitrary choice 
-- note that excluding one hypothesis does not mean stating that the other is true
-- using 95 CLs for discovery would mean claiming 1/20 of the times that the SM is false
-\fi 
+\noindent where $\Phi$ is the cumulative of the standard Gaussian. Table \ref{tab:stat:thresholds} summarized the conventional values for the exclusion of a signal hypothesis, the declaration of evidence or discovery of New Physics in terms of p-value and significance.
+
+\begin{table}
+\center
+\begin{tabular}{|c|c|c|}
+\hline 
+ & p-value  & $Z$ \\ 
+\hline 
+\hline 
+Exclude test hypothesis & 0.05 & 1.64 \\ 
+\hline 
+Evidence of New Physics & $1.3 \times 10^{-3}$ & 3 \\ 
+\hline 
+Discovery of New Physics & $2.9 \times 10^{-7}$ & 5 \\ 
+\hline 
+\end{tabular}
+\caption{Conventional p-value and significance thresholds to exclude a test hypothesis, declare evidence or discovery of New Physics.}
+\label{tab:stat:thresholds}
+\end{table}
+
 
 
 
