@@ -30,6 +30,10 @@ e^{- (\mu s_{j} + b_{j}) }
 
 The prediction on the expected number of events is affected by systematic and statistical uncertainties, that are incorporated in the Likelihood in the form of nuisance parameters (NPs).
 
+\par\smallskip
+
+The factorization holds only as long as the data used to derive the constraints on the NPs is statistically independent from the data in the analysis and not affected by the potential presence of the signal under study.
+
 \subsubsection*{Functional Forms of the Prior}
 
 \iffalse
@@ -59,7 +63,7 @@ e^{- (\mu s_{j} + b_{j}) }   \;\;
 The post-fit values of the NPs can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified MC will have a better agreement with data than the original one. If the post-fit uncertainty on one NP is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty on that NP.
 % The effect of a specific systematic is not compatible with the range allowed by the data statistics 
 
-When multiple NPs have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by data. The individual effects can not be disentangled and constrained individually, but a correlation between them produce a total variation that is compatible with what observed in data. % chiara: un po' copiato da Javier, rifrasare!
+When multiple NPs have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by data. The individual effects can not be disentangled and constrained individually, but a correlation between them produce a total variation that is compatible with what observed in data. % chiarareco:;\ un po' copiato da Javier, rifrasare!
 
 \subsubsection*{Interpolation}
 
@@ -83,7 +87,7 @@ Hypothesis testing is the statistical procedure that allows to confirm or reject
 \item H$_1$ is the test hypothesis, that corresponds to the SM with the addition of the BSM processes under test
 \end{itemize}
 
-The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section scaling; $\mu$=1 corresponds to the BSM process with its theoretical cross section, while $\mu$=0 is the SM.
+\noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section scaling; $\mu$=1 corresponds to the BSM process with its theoretical cross section, while $\mu$=0 is the SM.
 
 \subsection{Test Statistics and p-value}
 
@@ -101,7 +105,7 @@ Points to discuss
 
 \begin{equation}
 \label{eq:stat:sig}
-Z = \Phi^-1(1-p) \
+Z = \Phi^{-1}(1-p) \
 \end{equation}
 
 \subsection{Test Statistics when using PRL}
@@ -118,19 +122,9 @@ p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \,
 d t_{\mu} \;,
 \end{equation}
 
-\subsubsection*{Test Statistics for Exclusion}
-
-\begin{equation}
-\label{eq:qmu}
-q_{\mu} =
-\left\{ \! \! \begin{array}{ll}
-               - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
-               0 & \hat{\mu} > \mu \;,
-              \end{array}
-       \right.
-\end{equation}
-
 \subsubsection*{Test Statistic for Discovery}
+
+The discovery test statistics $q_{0}$ used to quantify the level of disagreement of data with the B-only hypothesis in case of an excess is defined as:
 
 \begin{equation}
 \label{eq:stat:q0}
@@ -142,16 +136,59 @@ q_{0} =
               \end{array}
        \right.
 \end{equation}
+ 
+\noindent The reason to assign the value 0 to the test statistic when $\hat{\mu} < 0$ is to avoid excluding the B-only hypothesis in case of a deficit. In fact, $\hat{\mu} < 0$ can indeed be symptomatic of a non correct B-only hypothesis (e.g. a systematic error), but it does not indicate the presence of a signal, which is what we want to highlight with this test statistics. Note that, since \prl assumes values between 0 and 1, \qzero is positive definite. The associated discovery p-value $p_{0}$ is:
 
 \begin{equation}
 \label{eq:stat:p0}
 p_{0} = \int_{q_{0,{\rm obs}}}^{\infty} f(q_{0} | 0 ) \, d q_{0} \;.
 \end{equation}
 
-\subsubsection*{Allow Only Positive Signals}
+\subsubsection*{Test Statistics for Exclusion}
+
+When investigating the exclusion of the test hypothesis, we want a test statistics that does not penalize an excess. The exclusion test statistics \qmu is therefore defined as:
 
 \begin{equation}
-\label{eq:stat:lik:excl}
+\label{eq:stat:qmu}
+q_{\mu} =
+\left\{ \! \! \begin{array}{ll}
+               - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
+               0 & \hat{\mu} > \mu \;,
+              \end{array}
+       \right.
+\end{equation}
+
+\noindent This test statistic, also known as one-sided PRL, is the default one used in the analyses described in the next two chapters. \pmu is consequently defined as the integral above the observed value: 
+
+\begin{equation}
+\label{eq:stat:pmu}
+p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \, d q_{\mu} \;.
+\end{equation}
+
+% chiara: e' vero?
+% credo che dipenda dal fatto che la L sia simmetrica rispetto a eccessi o deficit
+%\noindent Note that, despite the very similar integration formula in \ref{eq:stat:p0} and \ref{eq:stat:pmu}, $p_{\mu, \mu=0}$ is different from \pzero because of the difference in definition between the exclusion and discovery test statistics.
+
+\subsubsection*{Uncapped Test Statistics}
+
+The strategy described above leads to a loss of information when the test statistic is set to 0. A solution is obtained by uncapping the test statistic and, instead of assigning a 0 to the situations we do not want to penalize, assign them a negative value. This is achieved with the $r_0$ and $r_\mu$ test statistics. As an example, the definition for $r_\mu$ is:
+\begin{equation}
+\label{eq:rmu}
+r_{\mu} =
+\left\{ \! \! \begin{array}{ll}
+               - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
+               + 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;,
+              \end{array}
+       \right.
+\end{equation}
+
+ 
+\subsubsection*{Allow Only Positive Signals}
+
+The alternate PRL, $\tilde{\lambda}({\mu})$, is designed to take into account the fact that, in most physical cases, only positive $\mu$ have a physical meaning. In this case, when $\hat{\mu} < 0$ , the best physical value is 0, and the alternate PRL is defined as: 
+
+\begin{equation}
+\label{eq:stat:lik:alpexcl}
 \tilde{\lambda}({\mu}) =
 \left\{ \! \! \begin{array}{ll}
                \frac{ L(\mu,
@@ -165,6 +202,8 @@ p_{0} = \int_{q_{0,{\rm obs}}}^{\infty} f(q_{0} | 0 ) \, d q_{0} \;.
               \end{array}
        \right.
 \end{equation}
+
+\noindent The corresponding test statistics are indicated with $\tilde{q}$ and are defined as in Eq \ref{eq:stat:q0} and Eq \ref{eq:stat:qmu} after substituting $\lambda({\mu}) \rightarrow \tilde{\lambda}({\mu})$.
 
 \iffalse
 % this equation in the original paper uses the notation t and not q
@@ -193,7 +232,10 @@ The \cls method \cite{JUNK1999435}
 
 \subsection{Distribution of the Test Statistic}
 
+To compute the p-value associated with the observed value of a test statistics $t$, we need the PDF of $t$ assuming that the signal hypothesis $H_\mu$ is true, $ f(t | \mu ) $. The distribution of the test statistics can be obtained with pseudo-experiments or, in the case of large statistics, with the asymptotic approximation. 
+
 \subsubsection*{Pseudo-experiments}
+
 
 \subsubsection*{Asymptotic Approximation}
 Asymptotic approximation \cite{Cowan2011}
