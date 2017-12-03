@@ -91,8 +91,28 @@ Hypothesis testing is the statistical procedure that allows to confirm or reject
 
 \subsection{Test Statistics and p-value}
 
-The test statistics quantifies the compatibility of the observed data with a specific model.
-A p-value can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given an observation, the p-value corresponds to the probability of having another observation more extreme of the current one.
+ A test statistic $t$ is single real-value quantity, function of all the collected data. The probability density function (PDF) of the test statistic is different if we assume the null hypothesis or the test hypothesis to be true.
+
+To quantify the compatibility of the observed data with a specific model, a p-value can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given an observation, the p-value corresponds to the probability of having another observation more extreme than the current one:
+
+\begin{equation}
+\label{eq:stat:pval}
+p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \,
+d t_{\mu} \;,
+\end{equation}
+
+The p-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the p-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% confidence level (CL).
+
+The threshold to exclude the null hypothesis (SM only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (BSM). Assuming that the B-only hypothesis as true, the 0.05 threshold would lead to 5\% of the BSM searches to declare a discovery. Instead, the convention is to declare evidence for New Physics when the p-value for the B-only hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it's lower than $2.9 \times 10^{-7}$.
+
+The significance $Z$ of the p-value can be evaluated by transforming it in the equivalent number of standard deviations of a standard Gaussian needed to have an upper-tail integral equal to the p-value:
+
+\begin{equation}
+\label{eq:stat:sig}
+Z = \Phi^{-1}(1-p) \
+\end{equation} 
+
+\noindent where $\Phi$ is the cumulative of the standard Gaussian.
 
 \iffalse
 Points to discuss
@@ -100,13 +120,9 @@ Points to discuss
 - arbitrary choice 
 - note that excluding one hypothesis does not mean stating that the other is true
 - using 95 CLs for discovery would mean claiming 1/20 of the times that the SM is false
-- ATTENZIONE: al momento ho delle inconsistenza della definizione di t_mu: e' l'integrale da -inf a t_obs o da t_obs a +inf
 \fi 
 
-\begin{equation}
-\label{eq:stat:sig}
-Z = \Phi^{-1}(1-p) \
-\end{equation}
+
 
 \subsection{Test Statistics when using PRL}
 
@@ -114,7 +130,6 @@ Z = \Phi^{-1}(1-p) \
 \label{eq:stat:tmu}
 t_{\mu} = -2 \log \prl
 \end{equation}
-
 
 \begin{equation}
 \label{eq:stat:pmu}
@@ -177,7 +192,7 @@ The strategy described above leads to a loss of information when the test statis
 r_{\mu} =
 \left\{ \! \! \begin{array}{ll}
                - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
-               + 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;,
+               + 2 \ln \lambda(\mu)  & \hat{\mu} > \mu  \;,
               \end{array}
        \right.
 \end{equation}
@@ -224,11 +239,15 @@ The alternate PRL, $\tilde{\lambda}({\mu})$, is designed to take into account th
 
 \subsection{The CLs Method}
 
-The \cls method \cite{JUNK1999435}
+If we consider a situation where $H_0$ and $H_1$ give similar distribution of the exclusion test statistic (e.g. because the signal cross section is
+small) and we observe a downward fluctuation in data, we could end up excluding the test hypothesis, even if almost indistinguishable from the null hypothesis. The \cls method \cite{JUNK1999435} recovers from this situations by defining:
 
 \begin{equation}
-\cls = \dfrac{\pmu}{1 - \pzero}
+\label{eq:stat:cls}
+\cls = \dfrac{\pmu}{1 - p_b} , 
 \end{equation}
+
+\noindent where $p_b = 1 - p_{\mu, \mu=0}$. With the CLs method, the test hypothesis is excluded at 95\% CL if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Eq \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \cls method is the default procedure used in this thesis to define the exclusion of a signal model. 
 
 \subsection{Distribution of the Test Statistic}
 
