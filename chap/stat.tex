@@ -98,20 +98,84 @@ Points to discuss
 Z = \Phi^-1(1-p) \
 \end{equation}
 
-\subsubsection*{Test Statistics when using PRL}
+\subsection{Test Statistics when using PRL}
 
 \begin{equation}
-\label{eq:stat:qmu}
-\qmu = -2 \log \prl
+\label{eq:stat:tmu}
+t_{\mu} = -2 \log \prl
 \end{equation}
 
 
 \begin{equation}
 \label{eq:stat:pmu}
-p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \,
-d q_{\mu} \;,
+p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \,
+d t_{\mu} \;,
 \end{equation}
 
+\subsubsection*{Test Statistics for Exclusion}
+
+\begin{equation}
+\label{eq:qmu}
+q_{\mu} =
+\left\{ \! \! \begin{array}{ll}
+               - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
+               0 & \hat{\mu} > \mu \;,
+              \end{array}
+       \right.
+\end{equation}
+
+\subsubsection*{Test Statistic for Discovery}
+
+\begin{equation}
+\label{eq:stat:q0}
+q_{0} =
+\left\{ \! \! \begin{array}{ll}
+               - 2 \ln \lambda(0)
+               & \quad \hat{\mu} \ge 0 \;, \\*[0.3 cm]
+               0 & \quad \hat{\mu} < 0  \;,
+              \end{array}
+       \right.
+\end{equation}
+
+\begin{equation}
+\label{eq:stat:p0}
+p_{0} = \int_{q_{0,{\rm obs}}}^{\infty} f(q_{0} | 0 ) \, d q_{0} \;.
+\end{equation}
+
+\subsubsection*{Allow Only Positive Signals}
+
+\begin{equation}
+\label{eq:stat:lik:excl}
+\tilde{\lambda}({\mu}) =
+\left\{ \! \! \begin{array}{ll}
+               \frac{ L(\mu,
+               \hat{\hat{\vec{\theta}}}(\mu)) }
+               {L(\hat{\mu}, \hat{\vec{\theta}}) }
+                 & \hat{\mu} \ge 0 , \\*[0.3 cm]
+                \frac{ L(\mu,
+               \hat{\hat{\vec{\theta}}}(\mu)) }
+               {L(0, \hat{\hat{\vec{\theta}}}(0)) }
+ & \hat{\mu} < 0 \;.
+              \end{array}
+       \right.
+\end{equation}
+
+\iffalse
+% this equation in the original paper uses the notation t and not q
+\begin{equation}
+\label{eq:stat:q:excl}
+\qmu = - 2 \ln \tilde{\lambda}(\mu) =
+\left\{ \! \! \begin{array}{ll}
+               - 2 \ln \frac{L(\mu, \hat{\hat{\vec{\theta}}}(\mu))}
+                {L(0, \hat{\hat{\theta}}(0))}
+                & \quad \hat{\mu} < 0  \;, \\*[0.2 cm]
+               -2 \ln \frac{L(\mu, \hat{\hat{\vec{\theta}}}(\mu))}
+                {L(\hat{\mu}, \hat{\vec{\theta}})}
+&  \quad \hat{\mu} \ge 0  \;.
+              \end{array}
+       \right.
+\end{equation}
+\fi
 
 \subsection{The CLs Method}
 
@@ -126,5 +190,30 @@ The \cls method \cite{JUNK1999435}
 \subsubsection*{Pseudo-experiments}
 
 \subsubsection*{Asymptotic Approximation}
+Asymptotic approximation \cite{Cowan2011}
 
-\cite{Cowan2011}
+\noindent Wald's approximation \cite{Wald1943}
+
+\begin{equation}
+\label{eq:wald}
+t_{\mu} = -2 \ln \lambda(\mu)
+= \frac{(\mu - \hat{\mu})^2}{\sigma^2} + {\cal  O}(1/\sqrt{N}) \;.
+\end{equation}
+
+ $t_{\mu} = -2 \ln \lambda(\mu)$ is distributed according to a noncentral chi-square distribution with one degree of freedom:
+
+\begin{equation}
+\label{eq:stat:ftmulambda}
+f(t_{\mu};\Lambda) = \frac{1}{2 \sqrt{t_{\mu}}} \frac{1}{\sqrt{2 \pi}}
+\left[ \exp \left( - \frac{1}{2}
+\left( \sqrt{t_{\mu}} + \sqrt{\Lambda} \right)^2 \right) +
+\exp \left( - \frac{1}{2} \left( \sqrt{t_{\mu}} - \sqrt{\Lambda} \right)^2
+\right) \right] \;,
+\end{equation}
+
+\noindent where the noncentrality parameter $\Lambda$ is
+
+\begin{equation}
+\label{eq:stat:noncentrality}
+\Lambda = \frac{(\mu - \mu^{\prime})^2}{\sigma^2} \;.
+\end{equation}
