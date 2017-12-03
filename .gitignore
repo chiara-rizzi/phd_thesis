@@ -9,3 +9,5 @@
 *.out 
 *.xml 
 *blx.bib
+*bak
+*gz

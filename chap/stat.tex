@@ -54,9 +54,12 @@ e^{- (\mu s_{j} + b_{j}) }   \;\;
 \prod_{k=1}^M \rho( \theta_k) \
 \end{equation}
 
-\subsubsection*{Profiling}
+\subsubsection*{Correlation and Profiling}
 
 The post-fit values of the NPs can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified MC will have a better agreement with data than the original one. If the post-fit uncertainty on one NP is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty on that NP.
+% The effect of a specific systematic is not compatible with the range allowed by the data statistics 
+
+When multiple NPs have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by data. The individual effects can not be disentangled and constrained individually, but a correlation between them produce a total variation that is compatible with what observed in data. % chiara: un po' copiato da Javier, rifrasare!
 
 \subsubsection*{Interpolation}
 
@@ -91,6 +94,9 @@ A p-value can be extracted from the distribution of the test statistics accordin
 Points to discuss
 - correspondence between p-values and sigma
 - arbitrary choice 
+- note that excluding one hypothesis does not mean stating that the other is true
+- using 95 CLs for discovery would mean claiming 1/20 of the times that the SM is false
+- ATTENZIONE: al momento ho delle inconsistenza della definizione di t_mu: e' l'integrale da -inf a t_obs o da t_obs a +inf
 \fi 
 
 \begin{equation}
@@ -217,3 +223,7 @@ f(t_{\mu};\Lambda) = \frac{1}{2 \sqrt{t_{\mu}}} \frac{1}{\sqrt{2 \pi}}
 \label{eq:stat:noncentrality}
 \Lambda = \frac{(\mu - \mu^{\prime})^2}{\sigma^2} \;.
 \end{equation}
+
+
+\section{A Simplified Walk-through Example}
+
