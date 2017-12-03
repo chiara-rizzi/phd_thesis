@@ -1,24 +1,130 @@
 \chapter{Statistics Tool Box}
 \label{chap:stat}
 
-The data we collect is stochastic: quantum mechanics is not deterministic, so the particle content result of an interaction follows probabilistic laws. Furthermore, experimental effects need to be taken into account. Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. This section describes the main statistical procedures that are used to obtain the results described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. The two main topics discussed are parameter estimation (Section \ref{sec:stat:pe}), that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing (Section \ref{sec:stat:ht}), that checks the plausibility of models against the observed data.
+The data we collect is stochastic: quantum mechanics is not deterministic, the particle content result of an interaction follows probabilistic laws. Furthermore, experimental effects need to be taken into account. Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. This section describes the main statistical procedures that are used to obtain the results described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. The two main topics discussed are parameter estimation (Section \ref{sec:stat:pe}), that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing (Section \ref{sec:stat:ht}), that checks the plausibility of models against the observed data.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Parameter Estimation}
-
 \label{sec:stat:pe}
 
+The Likelihood function and the parameter estimation technique based on its maximization are described in this section.
 
+\subsection{The Likelihood Function}
+
+\begin{equation}
+\label{eq:stat:exp}
+E[n_i] = \mu s_i + b_i \
+\end{equation}
+
+
+\begin{equation}
+\label{eq:stat:lik_no_sys}
+L(\mu, \vec{\theta}) =
+\prod_{j=1}^N \frac{ (\mu s_{j} +
+b_{j} )^{n_{j}} }{ n_{j}! }
+e^{- (\mu s_{j} + b_{j}) } 
+\end{equation}
 
 \subsection{Inclusion of Systematic Uncertainties}
 
+The prediction on the expected number of events is affected by systematic and statistical uncertainties, that are incorporated in the Likelihood in the form of nuisance parameters (NPs).
+
+\subsubsection*{Functional Forms of the Prior}
+
+\iffalse
+% this is taken from "Asymptotic formulae for likelihood-based tests of new physics"
+\begin{equation}
+\label{eq:stat:lik_boh}
+L(\mu, \vec{\theta}) =
+\prod_{j=1}^N \frac{ (\mu s_{j} +
+b_{j} )^{n_{j}} }{ n_{j}! }
+e^{- (\mu s_{j} + b_{j}) }   \;\;
+\prod_{k=1}^M \frac{ u_k^{m_{k}}} { m_{k}! } \,
+e^{- u_k }  \;.
+\end{equation}
+\fi
+
+\begin{equation}
+\label{eq:stat:lik_sys}
+L(\mu, \vec{\theta}) =
+\prod_{j=1}^N \frac{ (\mu s_{j} +
+b_{j} )^{n_{j}} }{ n_{j}! }
+e^{- (\mu s_{j} + b_{j}) }   \;\;
+\prod_{k=1}^M \rho( \theta_k) \
+\end{equation}
+
+\subsubsection*{Profiling}
+
+The post-fit values of the NPs can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified MC will have a better agreement with data than the original one. If the post-fit uncertainty on one NP is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty on that NP.
+
+\subsubsection*{Interpolation}
+
 \subsection{Profiled Likelihood Ratio}
+
+\begin{equation}
+\label{eq:stat:prl}
+\prl = \frac{ L(\mu,
+\hat{\hat{\theta}}) } {L(\hat{\mu}, \hat{\theta}) } \;.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Hypothesis Testing}
 \label{sec:stat:ht}
 
+Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, this allows to discover or exclude a BSM theory. 
+
+\begin{itemize}
+\item H$_0$ is the null hypothesis, that corresponds to SM only
+\item H$_1$ is the test hypothesis, that corresponds to the SM with the addition of the BSM processes under test
+\end{itemize}
+
+The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section scaling; $\mu$=1 corresponds to the BSM process with its theoretical cross section, while $\mu$=0 is the SM.
+
+\subsection{Test Statistics and p-value}
+
+The test statistics quantifies the compatibility of the observed data with a specific model.
+A p-value can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given an observation, the p-value corresponds to the probability of having another observation more extreme of the current one.
+
+\iffalse
+Points to discuss
+- correspondence between p-values and sigma
+- arbitrary choice 
+\fi 
+
+\begin{equation}
+\label{eq:stat:sig}
+Z = \Phi^-1(1-p) \
+\end{equation}
+
+\subsubsection*{Test Statistics when using PRL}
+
+\begin{equation}
+\label{eq:stat:qmu}
+\qmu = -2 \log \prl
+\end{equation}
+
+
+\begin{equation}
+\label{eq:stat:pmu}
+p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \,
+d q_{\mu} \;,
+\end{equation}
+
 
 \subsection{The CLs Method}
 
-\subsection{Asymptotic Approximation}
+The \cls method \cite{JUNK1999435}
 
+\begin{equation}
+\cls = \dfrac{\pmu}{1 - \pzero}
+\end{equation}
 
+\subsection{Distribution of the Test Statistic}
+
+\subsubsection*{Pseudo-experiments}
+
+\subsubsection*{Asymptotic Approximation}
+
+\cite{Cowan2011}

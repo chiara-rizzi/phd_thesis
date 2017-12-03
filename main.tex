@@ -54,14 +54,34 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{mathtools}
 \usepackage{slashed} % to have slashed
 
-\newcommand{\beq}{\begin{equation}}
-\newcommand{\eeq}{\end{equation}}
-\newcommand{\cmsette}{$\sqrt{s}$ = 7 TeV}
-\newcommand{\cmotto}{$\sqrt{s}$ = 8 TeV}
+%\newcommand{\beq}{\begin{equation}}
+%\newcommand{\eeq}{\end{equation}}
+
+\newcommand{\cmsette}{\ensuremath{\sqrt{s}  =  7 \ }}
+\newcommand{\cmotto}{\ensuremath{\sqrt{s}  =  8 \ }}
+\newcommand{\lumi}{\ensuremath{\int L \, dt}}
+\def\ipb{\mbox{pb$^{-1}$}} %  Inverse picobarns.
+\def\ifb{\mbox{fb$^{-1}$}} %  Inverse femtobarns.
+\def\inb{\mbox{nb$^{-1}$}}
+
+% new commands particles
 \newcommand{\stilde}{\tilde{s}}
 \newcommand{\sbar}{\bar{s}}
 \newcommand{\lagr}{\mathcal{L}}
-\newcommand{\ifb}{fb$^{-1}$}
+\newcommand{\ttbar}{$t\overline{t}\ $}
+
+% new commands stat
+\newcommand{\cls}{\ensuremath{CL_s \ }}
+\newcommand{\pzero}{\ensuremath{p_0 \ }}
+\newcommand{\pmu}{\ensuremath{p_\mu \ }}
+\newcommand{\qzero}{\ensuremath{q_0 \ }}
+\newcommand{\qmu}{\ensuremath{q_\mu \ }}
+\newcommand{\prl}{\ensuremath{\lambda(\mu) \ }}
+
+% new commands variables
+\newcommand{\met}{\ensuremath{E_{T}^{miss}\,}}
+\newcommand{\pt}{$p_T \ $}
+
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
@@ -129,8 +149,7 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-This is the abstract of my awesome thesis. Test reference \cite{Reference1} \ldots
-Other test \cite{Reference2}
+This is the abstract of my awesome thesis. 
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
