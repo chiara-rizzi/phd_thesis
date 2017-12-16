@@ -52,6 +52,7 @@ The characteristics used to evaluate the performance of an estimator are:
 \paragraph{Consistency}
 The asymptotic limit for large number of observations of the estimator is the true value of the parameter 
 \begin{equation}
+\label{eq:stat:consistency}
 \lim_{N \rightarrow \infty} \hat{\vec{\theta}} = \vec{\theta}
 \end{equation}
 
@@ -59,6 +60,7 @@ The asymptotic limit for large number of observations of the estimator is the tr
 \paragraph{Bias}
 The bias is the difference between the expectation value of the estimator ($E[\hat{\vec{\theta}}]$) and the true value
 \begin{equation}
+\label{eq:stat:bias}
 b = E[\hat{\vec{\theta}}] - \theta
 \end{equation}
 Once the bias of a specific estimator is known, it is possible to build and unbiased one by defining 
@@ -81,7 +83,26 @@ An estimator is robust if it is not sensitive to small changes in the assumption
 
 \subsection{The Maximum Likelihood Estimator}
 
-The maximum likelihood estimate of the parameters $\theta_i$, first introduced by Fisher \cite{fisher1911absolute}\cite{aldrich1997}, is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. At an intuitive level this corresponds to the choice for which the observed data $\vec{x}$ are more probable. 
+The maximum likelihood estimate (MLE) of the parameters $\theta_i$, first introduced by Fisher \cite{fisher1911absolute}\cite{aldrich1997}, is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. At an intuitive level this corresponds to the choice for which the observed data $\vec{x}$ are more probable. 
+
+The MLE is widely used because of the favorable properties that it reaches in the asymptotic limit of infinite number of events N:
+\begin{itemize}
+\item Consistent, which means that it satisfies Eq. \ref{eq:stat:consistency}
+\item Unbiased, so the bias, defined in Eq. \ref{eq:stat:bias}, tends to zero
+\item Efficient, as it reaches the minimum bound for the variance 
+\item It follows a Gaussian distribution
+\end{itemize}
+With a finite number of events, the estimator is biased and the bias is proportional to $\frac{1}{N}$. Also, the MLE is invariant under a functional transformation, which means that if $\hat{\theta}$ is the MLE for the parameter $\theta$, $g(\hat{\theta})$ is the MLE for the reparametrization $g(\theta)$ (and maintains therefore all the properties described above). This is not necessarily true for other estimators.
+
+Practically, most of the times instead of maximizing the likelihood function is more convenient to minimize $-\logl$. This has the advantage to move from a maximization to a minimization because of the minus sign, but also to transform all the products into sums, which makes the minimization easier. As long as the likelihood is a monotonous function, its maxims are the same as the ones of the $\logl$.
+
+There are two types of maximum likelihood fits that can be performed:
+\begin{itemize}
+\item \textit{Unbinned} fits, where each event enters in the likelihood separately. This method is the optimal one from the statistics point of view, but it results to be computationally expensive
+\item \textit{Binned} fits, where the events are grouped in bins of a histogram, and the quantity entering in the likelihood is the number of events in each bin
+\end{itemize}
+
+In this chapter the focus will be on the second type of fit.
 
 \subsubsection*{Variance of the Maximum Likelihood Estimator}
 
@@ -98,23 +119,23 @@ If we consider the representation of the observed data given by the binned distr
 
 \begin{equation}
 \label{eq:stat:exp}
-E[n_i] = b_i + \mu s_i  \,
+E[n_i] = b_i + \mu s_i  \ ,
 \end{equation}
 
 \noindent where $b_i$ is the expected number of background events, $s_i$ the expected number of signal events and $\mu$ the signal strength.
+If the observed data follow a Poisson distribution, the likelihood is given by:
 
 \begin{equation}
 \label{eq:stat:lik_no_sys}
 L(\mu, \vec{\theta}) =
-\prod_{j=1}^N \frac{ (\mu s_{j} +
-b_{j} )^{n_{j}} }{ n_{j}! }
-e^{- (\mu s_{j} + b_{j}) } 
+\prod_{i=1}^N \frac{ (\mu s_{i} +
+b_{i} )^{n_{i}} }{ n_{i}! }
+e^{- (\mu s_{i} + b_{i}) } \ ,
 \end{equation}
 
+\noindent where the index $i$ runs on all the bins of the distribution.
 
-The prediction on the expected number of events is affected by systematic and statistical uncertainties, that are incorporated in the Likelihood in the form of nuisance parameters (NPs).
-
-Assuming that data used to derive the constraints on the NPs is statistically independent from the data in the analysis and not affected by the potential presence of the signal under study, the combined likelihood assumes the factorized form:
+The prediction on the expected number of events in each bin is affected by systematic and statistical uncertainties, that are incorporated in the Likelihood in the form of nuisance parameters (NPs). In the frequentistic approach, each NP has a true unknown value, and the best values to estimate those are derived in auxiliary measurements. While in principle we should include into our likelihood the full likelihood of the auxiliary measurements, in most practical cases this is not feasible, and this is modelled through constraining terms. Assuming that data used to derive the constraints on the NPs is statistically independent from the data in the analysis and not affected by the potential presence of the signal under study, the combined likelihood assumes the factorized form:
 
 
 \begin{equation}
@@ -126,7 +147,22 @@ e^{- (\mu s_{j} + b_{j}) }   \;\;
 \prod_{k=1}^M \rho( \theta_k) \
 \end{equation}
 
-\subsubsection*{Functional Forms of the Prior}
+Where $\rho( \theta_k)$ is the constraint term for the parameter $\theta_k$. Note that the treatment of an uncertainty through the addition of a constraint term, from the pure frequentist point of view is justified only for sources of uncertainty of experimental nature, where there is indeed an auxiliary measurement. The same approach is instead used also for theoretical uncertainties, where the frequentist prescription would be to have a result that depends on these parameters. While in the Bayesian view the constrain term would easily be interpreted as a prior on the value of the theoretical parameter, in the frequentist approach this is equivalent to assigning also to the theoretical uncertainties a fictitious auxiliary measurement. 
+
+
+\subsubsection*{Functional Forms of the Constraining Terms}
+
+Depending on the underlying auxiliary measurement, different functional types can be used for the constraining terms.
+
+\paragraph{Gaussian Constraint}
+
+\paragraph{Poisson Constraint}
+
+\paragraph{Log-normal Constraint}
+
+\subsubsection*{Evaluation of the Response}
+
+\subsection*{Interpolation}
 
 \iffalse
 % this is taken from "Asymptotic formulae for likelihood-based tests of new physics"
