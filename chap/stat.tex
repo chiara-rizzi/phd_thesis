@@ -156,9 +156,25 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 \paragraph{Gaussian Constraint}
 
-\paragraph{Poisson Constraint}
+\begin{equation}
+\label{eq:stat:gauss}
+\rho( \theta) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left( -\frac{(\theta - \hat{\theta})^2}{2\sigma^2} \right)
+\end{equation}
+
+\paragraph{Gamma Constraint}
+
+\begin{equation}
+\label{eq:stat:poisson}
+\rho(n) = \frac{1}{\alpha} \frac{(n/\alpha)^N}{N!} \exp\left( -n/\alpha \right)
+\end{equation}
 
 \paragraph{Log-normal Constraint}
+
+\begin{equation}
+\label{eq:stat:lognorm}
+\rho( \theta) = \frac{1}{\sqrt{2\pi}\ln{\sigma}}\exp\left( -\frac{(ln{\frac{\theta}{\hat{\theta}}})^2}{2(\ln{\sigma})^2} \right)\frac{1}{\theta}
+\end{equation}
+
 
 \subsubsection*{Evaluation of the Response}
 
