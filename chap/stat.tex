@@ -81,21 +81,7 @@ An estimator is robust if it is not sensitive to small changes in the assumption
 
 \subsection{The Maximum Likelihood Estimator}
 
-The maximum likelihood estimate of the parameters $\theta_i$ is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. 
-
-\begin{equation}
-\label{eq:stat:exp}
-E[n_i] = \mu s_i + b_i \
-\end{equation}
-
-
-\begin{equation}
-\label{eq:stat:lik_no_sys}
-L(\mu, \vec{\theta}) =
-\prod_{j=1}^N \frac{ (\mu s_{j} +
-b_{j} )^{n_{j}} }{ n_{j}! }
-e^{- (\mu s_{j} + b_{j}) } 
-\end{equation}
+The maximum likelihood estimate of the parameters $\theta_i$, first introduced by Fisher \cite{fisher1911absolute}\cite{aldrich1997}, is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. At an intuitive level this corresponds to the choice for which the observed data $\vec{x}$ are more probable. 
 
 \subsubsection*{Variance of the Maximum Likelihood Estimator}
 
@@ -106,13 +92,39 @@ Given a data sample, to the estimate of a parameter is associated an uncertainty
 
 \paragraph{Graphical Method} With the increase of the size of the data sample, the likelihood function tends to a Gaussian, and the $\logl$ tends to a parabola.  
 
-\subsection{Inclusion of Systematic Uncertainties}
+\subsection{Binned Likelihood with Systematic Uncertainties}
+
+If we consider the representation of the observed data given by the binned distribution of a certain variable, the expected number of events in each bin of the distribution is given by:
+
+\begin{equation}
+\label{eq:stat:exp}
+E[n_i] = b_i + \mu s_i  \,
+\end{equation}
+
+\noindent where $b_i$ is the expected number of background events, $s_i$ the expected number of signal events and $\mu$ the signal strength.
+
+\begin{equation}
+\label{eq:stat:lik_no_sys}
+L(\mu, \vec{\theta}) =
+\prod_{j=1}^N \frac{ (\mu s_{j} +
+b_{j} )^{n_{j}} }{ n_{j}! }
+e^{- (\mu s_{j} + b_{j}) } 
+\end{equation}
+
 
 The prediction on the expected number of events is affected by systematic and statistical uncertainties, that are incorporated in the Likelihood in the form of nuisance parameters (NPs).
 
-\par\smallskip
+Assuming that data used to derive the constraints on the NPs is statistically independent from the data in the analysis and not affected by the potential presence of the signal under study, the combined likelihood assumes the factorized form:
 
-The factorization holds only as long as the data used to derive the constraints on the NPs is statistically independent from the data in the analysis and not affected by the potential presence of the signal under study.
+
+\begin{equation}
+\label{eq:stat:lik_sys}
+L(\mu, \vec{\theta}) =
+\prod_{j=1}^N \frac{ (\mu s_{j} +
+b_{j} )^{n_{j}} }{ n_{j}! }
+e^{- (\mu s_{j} + b_{j}) }   \;\;
+\prod_{k=1}^M \rho( \theta_k) \
+\end{equation}
 
 \subsubsection*{Functional Forms of the Prior}
 
@@ -129,14 +141,6 @@ e^{- u_k }  \;.
 \end{equation}
 \fi
 
-\begin{equation}
-\label{eq:stat:lik_sys}
-L(\mu, \vec{\theta}) =
-\prod_{j=1}^N \frac{ (\mu s_{j} +
-b_{j} )^{n_{j}} }{ n_{j}! }
-e^{- (\mu s_{j} + b_{j}) }   \;\;
-\prod_{k=1}^M \rho( \theta_k) \
-\end{equation}
 
 \subsubsection*{Correlation and Profiling}
 
