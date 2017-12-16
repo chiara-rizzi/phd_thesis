@@ -1,16 +1,87 @@
 \chapter{Statistics Tool Box}
 \label{chap:stat}
 
-The data we collect is stochastic: quantum mechanics is not deterministic, the particle content result of an interaction follows probabilistic laws. Furthermore, experimental effects need to be taken into account. Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. This section describes the main statistical procedures that are used to obtain the results described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. The two main topics discussed are parameter estimation (Section \ref{sec:stat:pe}), that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing (Section \ref{sec:stat:ht}), that checks the plausibility of models against the observed data.
+The data we collect is stochastic: quantum mechanics is not deterministic, the particle content result of an interaction follows probabilistic laws. Furthermore, experimental effects need to be taken into account. Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. This section describes the main statistical procedures that are used to obtain the results described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. After a brief introduction to statistical inference in Section \ref{sec:stat:intro}, the two main topics discussed are parameter estimation (Section \ref{sec:stat:pe}), that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing (Section \ref{sec:stat:ht}), that checks the plausibility of models against the observed data.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statistical Inference}
+\label{sec:stat:intro}
+
+Statistical inference uses a data sample to make probabilistic statements on the population from which the sample is extracted. The generalization from the properties of the sample to the properties of the entire population comes with a certain degree of uncertainty, that can also be accesses through statistical methods.
+
+There are two main approaches to statistical inference: Bayesian and frequentist.
+
+\paragraph{Frequentist}
+
+Probability is defined as the fraction of favorable outcomes of a repeatable experiment when the number of repetitions tends to infinity 
+\begin{equation}
+P(\mathrm{A}) = \lim_{N_{\mathrm{tot}} \rightarrow \infty} \frac{N_\mathrm{A}}{N_{\mathrm{tot}}}
+\end{equation}
+
+In the frequentist approach, there is no probability for hypothesis or true values of the parameters. A theory is either true or false, and given a theory only the data has a certain probability or probability density function (\pdf).
+
+\paragraph{Bayesian}
+
+In the Bayesian approach, probability is a more subjective notion, that incorporates the degree of belief in the from of priors. In this case it is meaningful to speak about \pdf not only for the observed data, but also for theories and parameters. Performing an experiment will modify the probability of a theory according to the Bayes formula:
+\begin{equation}
+P(\mathrm{theory} | \mathrm{data}) = \frac{ P(\mathrm{data}|\mathrm{theory}) \times P(\mathrm{theory})}{P(\mathrm{data})},
+\end{equation}
+
+\noindent where $P(\mathrm{data}|\mathrm{theory})$ is the probability of the data given the theory under examination, $P(\mathrm{theory})$ is the theory prior, $P(\mathrm{data})$ is a normalization constant that expresses the probability of observing these data whether the theory is true or false, and $P(\mathrm{theory} | \mathrm{data})$ is the final posterior probability of the theory.
+
+In this chapter we discuss only about frequentist statistics, as only frequentist methods are applied to obtain the results presented in chapters \ref{chap:strong_prod} and chapter \ref{chap:ewk_prod}. 
+
+As mentioned above, an hypothesis is statement based on which one can access the probability of the data. An hypothesis can be simple, when the data \pdf can be fully determined by stating if the hypothesis is true or false, or complex, when it depends on a number of parameters that in the following will be generally denoted with $\theta$. 
+
+Given a certain hypothesis $H$, the probability of observing the data $x$ is $P(x|H)$. This probability can be considered also as a function of the hypothesis, for fixed data, and in this case it is assigned the name of \textit{likelihood} ($L$). In the case of a composite hypothesis, the value of the likelihood depends on the value of the parameters necessary to specify the hypothesis, and it takes the name of \textit{likelihood function}: $L(\theta)=P(x|\theta)$.
 
 \section{Parameter Estimation}
 \label{sec:stat:pe}
 
-The Likelihood function and the parameter estimation technique based on its maximization are described in this section.
+Parameter estimation, also know as \textit{fitting}, is the technique that allows to derive the best values of some parameters from data.
+This sections describes parameter estimation and in particular the method based on the maximum likelihood.
 
-\subsection{The Likelihood Function}
+\subsection{Estimators}
+
+Consider a set of independent observations $\vec{x}=\{x_1, x_2, ..., x_\mathrm{N}\}$, distributed accordingly to a $\pdf$ $f(x|\vec{\theta})$, where $\vec{\theta}=\{\theta_1, \theta_2, ..., \theta_\mathrm{M}\}$ are the M true parameters that specify the underlying theory. 
+A \textit{statistic} is any function of the measured data $\vec{x}$, and \textit{estimator} $\hat{\vec{\theta}}$ is a statistic introduced to provide an estimate of $\vec{\theta}$.
+
+The characteristics used to evaluate the performance of an estimator are:
+
+
+\paragraph{Consistency}
+The asymptotic limit for large number of observations of the estimator is the true value of the parameter 
+\begin{equation}
+\lim_{N \rightarrow \infty} \hat{\vec{\theta}} = \vec{\theta}
+\end{equation}
+
+
+\paragraph{Bias}
+The bias is the difference between the expectation value of the estimator ($E[\hat{\vec{\theta}}]$) and the true value
+\begin{equation}
+b = E[\hat{\vec{\theta}}] - \theta
+\end{equation}
+Once the bias of a specific estimator is known, it is possible to build and unbiased one by defining 
+\begin{equation}
+\hat{\vec{\theta}}_{\mathrm{unbiased}} = \hat{\vec{\theta}} - b
+\end{equation}
+
+
+\paragraph{Efficiency}
+The efficiency of an estimator is high when its variance ($V[\hat{\vec{\theta}}]$) is small. $V[\hat{\vec{\theta}}]$ has a lower bound, that is given by the Cramer-Rao inequality \cite{Cramer1946}\cite{Rao1992}.
+
+%, stating that the variance is larger than the inverse of the information matrix $I[\theta]$
+%\begin{equation}
+%V[\hat{\vec{\theta}}] \geq I[\vec{\theta}]^{-1}
+%\end{equation}
+
+\paragraph{Robustness}
+An estimator is robust if it is not sensitive to small changes in the assumptions in the \pdf
+
+
+\subsection{The Maximum Likelihood Estimator}
+
+The maximum likelihood estimate of the parameters $\theta_i$ is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. 
 
 \begin{equation}
 \label{eq:stat:exp}
@@ -25,6 +96,15 @@ L(\mu, \vec{\theta}) =
 b_{j} )^{n_{j}} }{ n_{j}! }
 e^{- (\mu s_{j} + b_{j}) } 
 \end{equation}
+
+\subsubsection*{Variance of the Maximum Likelihood Estimator}
+
+Given a data sample, to the estimate of a parameter is associated an uncertainty. If we would repeat the same parameter estimate on a different data sample, we would obtain a different values of the best estimate. If we repeat N times the same estimate on independent data samples, the best estimates will have a distribution that tends to a Gaussian for large N. There are two main methods to access the variance (and therefore the standard deviation) of this distribution.
+
+\paragraph{Monte Carlo Method} Once the parameter is estimated from the experimental results, the experiment can be simulated N times with Monte Carlo simulations. For each simulation the best value of the parameter can be estimated with the maximum likelihood method, and from the distribution of these values it is possible to compute the variance.
+
+
+\paragraph{Graphical Method} With the increase of the size of the data sample, the likelihood function tends to a Gaussian, and the $\logl$ tends to a parabola.  
 
 \subsection{Inclusion of Systematic Uncertainties}
 
