@@ -208,7 +208,7 @@ G( 0 | \theta, 1) \
 
 \subsection*{Interpolation}
 
-The response to of the efficiency to a $\pm 1 sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Eq. \ref{eq:stat:lik_one_bin_sys_pre} and Eq. \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. Several interpolation strategies are possible, and the ones described below are the ones supported by HistFactory \cite{Cranmer:1456844}.
+The response of the efficiency to a $\pm 1 sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Eq. \ref{eq:stat:lik_one_bin_sys_pre} and Eq. \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. Several interpolation strategies are possible, and the ones described below are the ones supported by HistFactory \cite{Cranmer:1456844}.
  
 
 \paragraph{Piecewise Linear} This is the simplest interpolation techniques. The value of the predicted background yields is given by:
@@ -217,8 +217,8 @@ The response to of the efficiency to a $\pm 1 sigma$ variation of each parameter
 \label{eq:stat:interp_linear}
 b(\theta)=
 \begin{cases}
-b \frac{b^+}{b}^\theta  \;\;\;\;\;\; \theta \geq 0\\
-b \frac{b^-}{b}^{-\theta}  \;\;\; \theta < 0
+b \left( \frac{b^+}{b}\right)^{\theta}  \;\;\;\;\;\; \theta \geq 0\\
+b \left( \frac{b^-}{b}\right)^{-\theta}  \;\;\;\; \theta < 0
 \end{cases} \, , \
 \end{equation}
 
@@ -230,29 +230,19 @@ b \frac{b^-}{b}^{-\theta}  \;\;\; \theta < 0
 \label{eq:stat:interp_exp}
 b(\theta)=
 \begin{cases}
-b + \theta (b^+ -b) \;\;\;\;\;\; \theta \geq 0\\
-b + \theta (b - b^-) \;\;\; \theta < 0
-\end{cases} \, , \
+b + \theta (b^+ -b)  \;\;\;\;\;\; \theta \geq 0\\
+b + \theta (b - b^-) \;\;\;\;\;\; \theta < 0
+\end{cases} \,  \
 \end{equation}
 
-\paragraph{Quadratic Interpolation and Linear Extrapolation}
+\noindent In this case, $b(\theta)$ is bound to be positive. The discontinuity at $\theta=0$ is still present, and in this case it appears also when $b^+$ and $b^-$ are symmetric with respect to $b$. Note that, once this is inserted into the likelihood, the combination of a Gaussian constraint with exponential interpolation is equivalent to a log-normal constraint with a linear extrapolation. This strategy avoids the discontinuity for $\theta=0$, but it can introduce problems with the sign of the variation, for example sign inversion if $b-b^+$ and $b-b^-$ have the same sign.
+
+\paragraph{Quadratic Interpolation and Linear Extrapolation} In this case the interpolation between the $\pm 1 \sigma$ response is given by the parabola passing through $b^-$, $b^+$ and $b$, while outside this range the extrapolation is given by the line tangent to the parabola in $b^+$ and $b^-$. 
+
+\paragraph{Polynomial Interpolation and Exponential Extrapolation} The extrapolation outside the range of the $\pm 1 \sigma$ response is given by the formula in Eq. \ref{eq:stat:interp_exp}, while the interpolation is obtained with a polynomial of sixth degree, bound to pass through $b^-$, $b^+$ and $b$ and to match in value, first and second derivative the exponential extrapolation at the $\pm 1 \sigma$ boundaries. This strategy avoids both the discontinuity at $\theta=0$ and the possibility of negative $b(\theta)$.
 
 
-\paragraph{Polynomial Interpolation and Exponential Extrapolation}
 
-
-\iffalse
-% this is taken from "Asymptotic formulae for likelihood-based tests of new physics"
-\begin{equation}
-\label{eq:stat:lik_boh}
-L(\mu, \vec{\theta}) =
-\prod_{j=1}^N \frac{ (\mu s_{j} +
-b_{j} )^{n_{j}} }{ n_{j}! }
-e^{- (\mu s_{j} + b_{j}) }   \;\;
-\prod_{k=1}^M \frac{ u_k^{m_{k}}} { m_{k}! } \,
-e^{- u_k }  \;.
-\end{equation}
-\fi
 
 
 \subsubsection*{Correlation and Profiling}
