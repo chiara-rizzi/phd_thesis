@@ -212,18 +212,28 @@ The response to of the efficiency to a $\pm 1 sigma$ variation of each parameter
  
 
 \paragraph{Piecewise Linear} This is the simplest interpolation techniques. The value of the predicted background yields is given by:
+
 \begin{equation}
 \label{eq:stat:interp_linear}
+b(\theta)=
+\begin{cases}
+b \frac{b^+}{b}^\theta  \;\;\;\;\;\; \theta \geq 0\\
+b \frac{b^-}{b}^{-\theta}  \;\;\; \theta < 0
+\end{cases} \, , \
+\end{equation}
+
+\noindent where $b$ is the nominal background prediction and $b^\pm$ correspond to the background yields for the $\pm 1 \sigma$ variation of the nuisance parameter. This interpolation technique has the clear advantage of simplicity, but it has the cons of presenting a discontinuity for $\theta=0$. For large uncertainties, it can also lead to negative $b(\theta)$.
+
+\paragraph{Piecewise Exponential} The piecewise exponential interpolation is given by:
+
+\begin{equation}
+\label{eq:stat:interp_exp}
 b(\theta)=
 \begin{cases}
 b + \theta (b^+ -b) \;\;\;\;\;\; \theta \geq 0\\
 b + \theta (b - b^-) \;\;\; \theta < 0
 \end{cases} \, , \
 \end{equation}
-
-\noindent where $b$ is the nominal background prediction and $b^\pm$ correspond to the background yields for the $\pm 1 \sigma$ variation of the nuisance parameter.
-
-\paragraph{Piecewise Exponential}
 
 \paragraph{Quadratic Interpolation and Linear Extrapolation}
 
@@ -252,7 +262,6 @@ The post-fit values of the NPs can be compared to the pre-fit values. A central 
 
 When multiple NPs have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by data. The individual effects can not be disentangled and constrained individually, but a correlation between them produce a total variation that is compatible with what observed in data. % chiarareco:;\ un po' copiato da Javier, rifrasare!
 
-\subsubsection*{Interpolation}
 
 \subsection{Profiled Likelihood Ratio}
 
