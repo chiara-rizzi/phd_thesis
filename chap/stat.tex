@@ -155,26 +155,32 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 \paragraph{Gaussian Constraint}
 
-Default, motivated by the central limit theorem.
+This is the default constrain type for systematic uncertainties, and its usage is justified by the central limit theorem. In general, it is safe to use this constraint as long as the MLE of the nuisance parameter from the corresponding auxiliary measurement follows a Gaussian distribution. The functional form is:
 
 \begin{equation}
 \label{eq:stat:gauss}
 \rho( \theta) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left( -\frac{(\theta - \hat{\theta})^2}{2\sigma^2} \right)
 \end{equation}
 
-\paragraph{Gamma Constraint}
+\noindent Technically, the function implemented in the likelihood is a truncated Gaussian, in order to avoid non-zero probability for non-physical values of the nuisance parameter. This truncated Gaussian is normalized to still have unit area.
+
+\paragraph{Poisson Constraint}
+
+This constraint is often referred to as "Gamma" constraint because, when using it in a Bayesian approach, if combined with a uniform prior it gives rise to a Gamma posterior. It is used for nuisance parameters related to event count and to model the MC statistical uncertainty. If we assume that the background yield predicted from MC is $n$ background events, deriving from $N$ MC events with a multiplicative scale $\alpha$, then the constraint term is:
 
 \begin{equation}
 \label{eq:stat:poisson}
 \rho(n) = \frac{1}{\alpha} \frac{(n/\alpha)^N}{N!} \exp\left( -n/\alpha \right)
 \end{equation}
 
-\paragraph{Log-normal Constraint}
+\paragraph{Log-normal Constraint} Log-normal is the distribution of a variable whose logarithm is distributed according to a Gaussian distribution. When random variables are multiplied, their product follows a log-normal distribution:
 
 \begin{equation}
 \label{eq:stat:lognorm}
 \rho( \theta) = \frac{1}{\sqrt{2\pi}\ln{\sigma}}\exp\left( -\frac{(ln{\frac{\theta}{\hat{\theta}}})^2}{2(\ln{\sigma})^2} \right)\frac{1}{\theta}
 \end{equation}
+
+\noindent The advantage of this constraint is that it never assumes negative values.
 
 
 \subsubsection*{Evaluation of the Response}
@@ -189,8 +195,8 @@ If we consider only one bin of the likelihood in Eq. \ref{eq:stat:lik_no_sys}, c
 \label{eq:stat:lik_one_bin_sys_pre}
 L(\mu, \theta) =
 \frac{ (\mu s +
-b\frac{\theta}{\tilde{\theta}}2 )^{n} }{ n! }
-e^{- (\mu  + b\frac{\theta}{\tilde{\theta} }2)}   \;\;
+b \left( \frac{\theta}{\tilde{\theta}} \right) 2 )^{n} }{ n! }
+e^{- (\mu  + b\left(\frac{\theta}{\tilde{\theta} }\right)2)}   \;\;
 G( \tilde{\theta} | \theta, \sigma_\theta) \ 
 \end{equation}
 
