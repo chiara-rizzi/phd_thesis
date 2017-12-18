@@ -81,6 +81,7 @@ An estimator is robust if it is not sensitive to small changes in the assumption
 
 
 \subsection{The Maximum Likelihood Estimator}
+\label{sec:stat:MLE}
 
 The maximum likelihood estimate (MLE) of the parameters $\theta_i$, first introduced by Fisher \cite{fisher1911absolute}\cite{aldrich1997}, is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. At an intuitive level this corresponds to the choice for which the observed data $\vec{x}$ are more probable. 
 
@@ -261,11 +262,14 @@ When multiple NPs have a similar effect on the background prediction, the total 
 
 \subsection{Profiled Likelihood Ratio}
 
+Once we divide the parameters in the likelihood into parameter of interest (POI) and nuisance parameters, the likelihood itself can be maximized globally with respect to both the POI and the nuisance parameters ($L(\hat{\mu}, \hat{\theta})$), but we can also find the conditional maximum for a certain value of the POI ($L(\mu, \hat{\hat{\theta}})$). The ratio of these two quantities is the profiled likelihood ratio (prl):
+
 \begin{equation}
 \label{eq:stat:prl}
-\prl = \frac{ L(\mu,
-\hat{\hat{\theta}}) } {L(\hat{\mu}, \hat{\theta}) } \;.
+\prl = \frac{ L(\mu, \hat{\hat{\theta}}) } {L(\hat{\mu}, \hat{\theta}) } \;.
 \end{equation}
+
+As it was discussed in section \ref{sec:stat:MLE}, rather than maximizing the $\prl$ it is more convenient to minimize its negative logarithm $- \loglr$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
