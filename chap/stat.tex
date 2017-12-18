@@ -155,6 +155,8 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 \paragraph{Gaussian Constraint}
 
+Default, motivated by the central limit theorem.
+
 \begin{equation}
 \label{eq:stat:gauss}
 \rho( \theta) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left( -\frac{(\theta - \hat{\theta})^2}{2\sigma^2} \right)
@@ -184,25 +186,49 @@ For this example, we assume that a 10\% shift in JER causes a 20\% change in the
 If we consider only one bin of the likelihood in Eq. \ref{eq:stat:lik_no_sys}, consider only one systematic (JER in this case) and write explicitly the effect of the systematic on the number of background events, we have:
 
 \begin{equation}
-\label{eq:stat:lik_one_bin_sys}
+\label{eq:stat:lik_one_bin_sys_pre}
 L(\mu, \theta) =
 \frac{ (\mu s +
 b\frac{\theta}{\tilde{\theta}}2 )^{n} }{ n! }
-e^{- (\mu  + b\frac{\theta}{\tilde{\theta})2 }}   \;\;
+e^{- (\mu  + b\frac{\theta}{\tilde{\theta} }2)}   \;\;
 G( \tilde{\theta} | \theta, \sigma_\theta) \ 
+\end{equation}
+
+\noindent The change $b \rightarrow b\frac{\theta}{\tilde{\theta} }2$ encodes exactly the fact that a 10\% change in JER leads to a 20\% change in background yields. To simplify this expression, the auxiliary measurement can be normalized to a standard Gaussian: $G( \tilde{\theta} | \theta, \sigma_\theta) \rightarrow G( 0 | \theta, 1)$, where also $\theta$ has been normalized such that the values $\theta = \pm 1$ correspond to the nominal uncertainty. The likelihood then becomes:
+
+
+\begin{equation}
+\label{eq:stat:lik_one_bin_sys}
+L(\mu, \theta) =
+\frac{ (\mu s +
+b(1 + 0.1\theta) )^{n} }{ n! }
+e^{- (\mu  + b (1 + 0.1\theta) )}   \;\;
+G( 0 | \theta, 1) \ 
 \end{equation}
 
 \subsection*{Interpolation}
 
-\paragraph{Piecewise Linear}
+The response to of the efficiency to a $\pm 1 sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Eq. \ref{eq:stat:lik_one_bin_sys_pre} and Eq. \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. Several interpolation strategies are possible, and the ones described below are the ones supported by HistFactory \cite{Cranmer:1456844}.
+ 
 
+\paragraph{Piecewise Linear} This is the simplest interpolation techniques. The value of the predicted background yields is given by:
+\begin{equation}
+\label{eq:stat:interp_linear}
+b(\theta)=
+\begin{cases}
+b + \theta (b^+ -b) \;\;\;\;\;\; \theta \geq 0\\
+b + \theta (b - b^-) \;\;\; \theta < 0
+\end{cases} \, , \
+\end{equation}
+
+\noindent where $b$ is the nominal background prediction and $b^\pm$ correspond to the background yields for the $\pm 1 \sigma$ variation of the nuisance parameter.
 
 \paragraph{Piecewise Exponential}
 
-\paragraph{Quadratic}
+\paragraph{Quadratic Interpolation and Linear Extrapolation}
 
 
-\paragraph{Polynomial}
+\paragraph{Polynomial Interpolation and Exponential Extrapolation}
 
 
 \iffalse
