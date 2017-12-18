@@ -1,8 +1,7 @@
 \chapter{Statistics Tool Box}
 \label{chap:stat}
 
-The data we collect is stochastic: quantum mechanics is not deterministic, the particle content result of an interaction follows probabilistic laws. Furthermore, experimental effects need to be taken into account. Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. This section describes the main statistical procedures that are used to obtain the results described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. After a brief introduction to statistical inference in Section \ref{sec:stat:intro}, the two main topics discussed are parameter estimation (Section \ref{sec:stat:pe}), that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing (Section \ref{sec:stat:ht}), that checks the plausibility of models against the observed data.
-
+The data we collect is stochastic: quantum mechanics is not deterministic, the particle content result of an interaction follows probabilistic laws. Furthermore, experimental effects need to be taken into account. Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. This chapter does not aim at being an exhaustive reference for statistics, but it describes the main statistical procedures that are used to obtain the results described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. After a brief introduction to statistical inference in Section \ref{sec:stat:intro}, the two main topics discussed are parameter estimation (Section \ref{sec:stat:pe}), that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing (Section \ref{sec:stat:ht}), that checks the plausibility of models against the observed data. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Inference}
 \label{sec:stat:intro}
@@ -178,7 +177,33 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 \subsubsection*{Evaluation of the Response}
 
+Let’s consider one single bin of a distribution, and the effect that a systematic uncertainty has on it. For example, we can consider the jet energy resolution (JER) uncertainty. The physical meaning of this uncertainty will be described in more details in chapter \ref{section_on_systematics}, but for the moment we focus on the effect that this calibration uncertainty has on the likelihood of a single bin counting experiment. The JER uncertainty is calibrated with an auxiliary measurement, whose likelihood we include by the simplification of a Gaussian constraint term, $G( \tilde{\theta} | \theta, \sigma_\theta)$, where $\tilde{\theta}$ is the nominal value of the calibration, $\theta$ the underlying real value and $\sigma_\theta$ the uncertainty. Stating that the uncertainty on JER is 10\%, means that the width of the Gaussian is 10\%. 
+
+To include this information in the likelihood, we need to evaluate the effect of a shift in JER in the background efficiency of our region, which means evaluate how much a one-sigma variation of JER (10\% in our example) changes the number of expected events in the bin. 
+For this example, we assume that a 10\% shift in JER causes a 20\% change in the background yields.
+If we consider only one bin of the likelihood in Eq. \ref{eq:stat:lik_no_sys}, consider only one systematic (JER in this case) and write explicitly the effect of the systematic on the number of background events, we have:
+
+\begin{equation}
+\label{eq:stat:lik_one_bin_sys}
+L(\mu, \theta) =
+\frac{ (\mu s +
+b\frac{\theta}{\tilde{\theta}}2 )^{n} }{ n! }
+e^{- (\mu  + b\frac{\theta}{\tilde{\theta})2 }}   \;\;
+G( \tilde{\theta} | \theta, \sigma_\theta) \ 
+\end{equation}
+
 \subsection*{Interpolation}
+
+\paragraph{Piecewise Linear}
+
+
+\paragraph{Piecewise Exponential}
+
+\paragraph{Quadratic}
+
+
+\paragraph{Polynomial}
+
 
 \iffalse
 % this is taken from "Asymptotic formulae for likelihood-based tests of new physics"
