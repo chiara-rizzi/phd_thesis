@@ -80,10 +80,11 @@ void StandardHypoTestDemo(const char* infile = "",
                           const char* modelBName = "",
                           const char* dataName = "obsData",
                           int calcType = 0, /* 0 freq 1 hybrid, 2 asymptotic */
-                          int testStatType = 3,   /* 0 LEP, 1 TeV, 2 LHC, 3 LHC - one sided*/
-                          int ntoys = 5000,
+                          int testStatType = 2,   /* 0 LEP, 1 TeV, 2 LHC, 3 LHC - one sided*/
+                          int ntoys = 500,
                           bool useNC = false,
-                          const char * nuisPriorName = 0)
+                          const char * nuisPriorName = 0,
+			  bool discovery=false)
 {
 
    bool noSystematics = optHT.noSystematics;
@@ -92,7 +93,7 @@ void StandardHypoTestDemo(const char* infile = "",
    int  printLevel = optHT.printLevel;
    bool generateBinned = optHT.generateBinned;             // for binned generation
    bool useProof = optHT.useProof;                // use Proof
-   bool enableDetOutput = optHT.enableDetailedOutput;
+   bool enableDetOutput = false;//optHT.enableDetailedOutput;
 
 
   // Other Parameter to pass in tutorial
@@ -203,23 +204,6 @@ void StandardHypoTestDemo(const char* infile = "",
    // make b model
    ModelConfig* bModel = (ModelConfig*) w->obj(modelBName);
 
-
-   // case of no systematics
-   // remove nuisance parameters from model
-   if (noSystematics) {
-      const RooArgSet * nuisPar = sbModel->GetNuisanceParameters();
-      if (nuisPar && nuisPar->getSize() > 0) {
-         std::cout << "StandardHypoTestInvDemo" << "  -  Switch off all systematics by setting them constant to their initial values" << std::endl;
-         RooStats::SetAllConstant(*nuisPar);
-      }
-      if (bModel) {
-         const RooArgSet * bnuisPar = bModel->GetNuisanceParameters();
-         if (bnuisPar)
-            RooStats::SetAllConstant(*bnuisPar);
-      }
-   }
-
-
   if (!bModel ) {
       Info("StandardHypoTestInvDemo","The background model %s does not exist",modelBName);
       Info("StandardHypoTestInvDemo","Copy it from ModelConfig %s and set POI to zero",modelSBName);
@@ -240,34 +224,69 @@ void StandardHypoTestDemo(const char* infile = "",
       if (!var) return;
       double oldval = var->getVal();
       if (poiValue > 0)  var->setVal(poiValue);
-      //sbModel->SetSnapshot( RooArgSet(*var, *w->var("lumi") ) );
+      //altModel->SetSnapshot( RooArgSet(*var, *w->var("lumi") ) );
       sbModel->SetSnapshot( RooArgSet(*var) );
       if (poiValue > 0) var->setVal(oldval);
-      //sbModel->SetSnapshot( *sbModel->GetParametersOfInterest() );
+      //altModel->SetSnapshot( *altModel->GetParametersOfInterest() );
+   }
+
+
+   ModelConfig* nullModel;
+   ModelConfig* altModel;
+   if(discovery) {
+     nullModel = bModel->Clone();
+     altModel = sbModel->Clone();
+     nullModel -> SetName("f(q_{0} | #mu=0)");
+     altModel -> SetName("f(q_{0} | #mu=1)");
+     data -> SetName("q_{0}^{obs}");
+   }
+   else{
+     nullModel = sbModel->Clone();
+     altModel = bModel->Clone();
+     data -> SetName("q_{#mu}^{obs}");
+     nullModel -> SetName("f(q_{#mu} | #mu=1)");
+     altModel -> SetName("f(q_{#mu} | #mu=0)");
+
+   }
+
+   // case of no systematics
+   // remove nuisance parameters from model
+   if (noSystematics) {
+      const RooArgSet * nuisPar = altModel->GetNuisanceParameters();
+      if (nuisPar && nuisPar->getSize() > 0) {
+         std::cout << "StandardHypoTestInvDemo" << "  -  Switch off all systematics by setting them constant to their initial values" << std::endl;
+         RooStats::SetAllConstant(*nuisPar);
+      }
+      if (nullModel) {
+         const RooArgSet * bnuisPar = nullModel->GetNuisanceParameters();
+         if (bnuisPar)
+            RooStats::SetAllConstant(*bnuisPar);
+      }
    }
 
 
 
-
-
    // part 1, hypothesis testing
-   SimpleLikelihoodRatioTestStat * slrts = new SimpleLikelihoodRatioTestStat(*bModel->GetPdf(), *sbModel->GetPdf());
+   SimpleLikelihoodRatioTestStat * slrts = new SimpleLikelihoodRatioTestStat(*nullModel->GetPdf(), *altModel->GetPdf());
    // null parameters must includes snapshot of poi plus the nuisance values
-   RooArgSet nullParams(*bModel->GetSnapshot());
-   if (bModel->GetNuisanceParameters()) nullParams.add(*bModel->GetNuisanceParameters());
 
-   slrts->SetNullParameters(nullParams);
-   RooArgSet altParams(*sbModel->GetSnapshot());
-   if (sbModel->GetNuisanceParameters()) altParams.add(*sbModel->GetNuisanceParameters());
-   slrts->SetAltParameters(altParams);
+   //   RooArgSet nullParams(*nullModel->GetSnapshot());
+   //   if (nullModel->GetNuisanceParameters()) nullParams.add(*nullModel->GetNuisanceParameters());
+   
+   //   slrts->SetNullParameters(nullParams);
+   //   RooArgSet altParams(*altModel->GetSnapshot());
+   //   if (altModel->GetNuisanceParameters()) altParams.add(*altModel->GetNuisanceParameters());
+   //   slrts->SetAltParameters(altParams);
 
-   ProfileLikelihoodTestStat * profll = new ProfileLikelihoodTestStat(*bModel->GetPdf());
-
+   //   ProfileLikelihoodTestStat * profll = new ProfileLikelihoodTestStat(*nullModel->GetPdf());
+   // chiara
+   ProfileLikelihoodTestStat * profll = new ProfileLikelihoodTestStat(*nullModel->GetPdf());
 
    RatioOfProfiledLikelihoodsTestStat *
-      ropl = new RatioOfProfiledLikelihoodsTestStat(*bModel->GetPdf(), *sbModel->GetPdf(), sbModel->GetSnapshot());
+      ropl = new RatioOfProfiledLikelihoodsTestStat(*nullModel->GetPdf(), *altModel->GetPdf(), altModel->GetSnapshot());
    ropl->SetSubtractMLE(false);
 
+   // chiara: decomment
    if (testStatType == 3) profll->SetOneSidedDiscovery(1);
    profll->SetPrintLevel(printLevel);
 
@@ -286,9 +305,11 @@ void StandardHypoTestDemo(const char* infile = "",
 
    HypoTestCalculatorGeneric *  hypoCalc = 0;
    // note here Null is B and Alt is S+B
-   if (calcType == 0) hypoCalc = new  FrequentistCalculator(*data, *sbModel, *bModel);
-   else if (calcType == 1) hypoCalc= new  HybridCalculator(*data, *sbModel, *bModel);
-   else if (calcType == 2) hypoCalc= new  AsymptoticCalculator(*data, *sbModel, *bModel);
+   if (calcType == 0) hypoCalc = new  FrequentistCalculator(*data, *altModel, *nullModel);
+   // chiara
+   //   if (calcType == 0) hypoCalc = new  FrequentistCalculator(*data, *nullModel, *altModel);
+   else if (calcType == 1) hypoCalc= new  HybridCalculator(*data, *altModel, *nullModel);
+   else if (calcType == 2) hypoCalc= new  AsymptoticCalculator(*data, *altModel, *nullModel);
 
    if (calcType == 0) {
        ((FrequentistCalculator*)hypoCalc)->SetToys(ntoys, ntoys/nToysRatio);
@@ -308,20 +329,20 @@ void StandardHypoTestDemo(const char* infile = "",
 
 
    // check for nuisance prior pdf in case of nuisance parameters
-   if (calcType == 1 && (bModel->GetNuisanceParameters() || sbModel->GetNuisanceParameters() )) {
+   if (calcType == 1 && (nullModel->GetNuisanceParameters() || altModel->GetNuisanceParameters() )) {
          RooAbsPdf * nuisPdf = 0;
          if (nuisPriorName) nuisPdf = w->pdf(nuisPriorName);
-         // use prior defined first in bModel (then in SbModel)
+         // use prior defined first in nullModel (then in SnullModel)
          if (!nuisPdf)  {
             Info("StandardHypoTestDemo","No nuisance pdf given for the HybridCalculator - try to deduce  pdf from the   model");
-            if (bModel->GetPdf() && bModel->GetObservables() )
-               nuisPdf = RooStats::MakeNuisancePdf(*bModel,"nuisancePdf_bmodel");
+            if (nullModel->GetPdf() && nullModel->GetObservables() )
+               nuisPdf = RooStats::MakeNuisancePdf(*nullModel,"nuisancePdf_bmodel");
             else
-               nuisPdf = RooStats::MakeNuisancePdf(*sbModel,"nuisancePdf_sbmodel");
+               nuisPdf = RooStats::MakeNuisancePdf(*altModel,"nuisancePdf_sbmodel");
          }
          if (!nuisPdf ) {
-            if (bModel->GetPriorPdf())  {
-               nuisPdf = bModel->GetPriorPdf();
+            if (nullModel->GetPriorPdf())  {
+               nuisPdf = nullModel->GetPriorPdf();
                Info("StandardHypoTestDemo","No nuisance pdf given - try to use %s that is defined as a prior pdf in the B model",nuisPdf->GetName());
             }
             else {
@@ -333,7 +354,7 @@ void StandardHypoTestDemo(const char* infile = "",
          Info("StandardHypoTestDemo","Using as nuisance Pdf ... " );
          nuisPdf->Print();
 
-         const RooArgSet * nuisParams = (bModel->GetNuisanceParameters() ) ? bModel->GetNuisanceParameters() : sbModel->GetNuisanceParameters();
+         const RooArgSet * nuisParams = (nullModel->GetNuisanceParameters() ) ? nullModel->GetNuisanceParameters() : altModel->GetNuisanceParameters();
          RooArgSet * np = nuisPdf->getObservables(*nuisParams);
          if (np->getSize() == 0) {
             Warning("StandardHypoTestDemo","Prior nuisance does not depend on nuisance parameters. They will be smeared in their full range");
@@ -344,15 +365,15 @@ void StandardHypoTestDemo(const char* infile = "",
          ((HybridCalculator*)hypoCalc)->ForcePriorNuisanceNull(*nuisPdf);
    }
 
-   /* hypoCalc->ForcePriorNuisanceAlt(*sbModel->GetPriorPdf());*/
-   /* hypoCalc->ForcePriorNuisanceNull(*bModel->GetPriorPdf());*/
+   /* hypoCalc->ForcePriorNuisanceAlt(*altModel->GetPriorPdf());*/
+   /* hypoCalc->ForcePriorNuisanceNull(*nullModel->GetPriorPdf());*/
 
    ToyMCSampler * sampler = (ToyMCSampler *)hypoCalc->GetTestStatSampler();
 
    if (sampler && (calcType == 0 || calcType == 1) ) {
 
       // look if pdf is number counting or extended
-      if (sbModel->GetPdf()->canBeExtended() ) {
+      if (altModel->GetPdf()->canBeExtended() ) {
          if (useNC)   Warning("StandardHypoTestDemo","Pdf is extended: but number counting flag is set: ignore it ");
       }
       else {
@@ -403,14 +424,28 @@ void StandardHypoTestDemo(const char* infile = "",
    if (calcType != 2) {
       HypoTestPlot * plot = new HypoTestPlot(*htr,100);
       plot->SetLogYaxis(true);
+      if(discovery)
+	plot -> SetAxisTitle("q_{0}");
+      else
+	plot -> SetAxisTitle("q_{#mu}");
       plot->Draw();
+      //      TLatex test;
+      //      test.DrawLatex(1, 0.1, "test");
+      TH1F * h_alt = (TH1F*)plot->GetHistogram(htr->GetAltDistribution());
+      h_alt->SetName("alternate");
+      TFile * hist_file=TFile::Open("histFile.root","recreate");
+      hist_file->cd();
+      h_alt->Write();
+      hist_file->Close();
    }
    else {
       std::cout << "Asymptotic results " << std::endl;
 
    }
-
-   can->SaveAs("mytest.pdf");
+   TString name_out = "plot_disc";
+   if(!discovery) name_out="plot_excl";
+   can->SaveAs(name_out+".pdf");
+   can->SaveAs(name_out+".C");
    // look at expected significances
    // found median of S+B distribution
    if (calcType != 2) {
@@ -451,7 +486,6 @@ void StandardHypoTestDemo(const char* infile = "",
 
    // write result in a file in case of toys
    bool writeResult = (calcType != 2);
-
    if (enableDetOutput) {
       writeResult=true;
       Info("StandardHypoTestDemo","Detailed output will be written in output result file");
@@ -475,8 +509,6 @@ void StandardHypoTestDemo(const char* infile = "",
 
       fileOut->Close();
    }
-
-
 
 
 
