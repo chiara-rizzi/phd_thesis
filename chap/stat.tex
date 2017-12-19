@@ -276,7 +276,7 @@ As it was discussed in section \ref{sec:stat:MLE}, rather than maximizing the $\
 \section{Hypothesis Testing}
 \label{sec:stat:ht}
 
-Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion a BSM theory. When the alternative between two hypotheses is presented, they are typically indicted as \textit{null hypothesis} and \textit{alternative hypothesis}. In the case of a BSM signal:
+Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion a BSM theory. When the alternative between two hypotheses is presented, they are typically indicted as \textit{null hypothesis} and \textit{alternative hypothesis}. If what we want to do is to proof the discovery of a new BSM signal by excluding the SM only hypothesis, we have that:
 
 \begin{itemize}
 \item H$_0$, the null hypothesis, corresponds to SM only
@@ -287,9 +287,9 @@ Hypothesis testing is the statistical procedure that allows to confirm or reject
 
 \subsection{Test Statistics and p-value}
 
- A test statistic $t$ is single real-value quantity, function of all the collected data. The probability density function (PDF) of the test statistic is different if we assume the null hypothesis or the alternative hypothesis to be true.
+ A \textit{test statistic} $t$ is single real-value quantity, function of all the collected data. The probability density function (PDF) of the test statistic is different if we assume the null hypothesis or the alternative hypothesis to be true.
 
-To quantify the compatibility of the observed data with a specific model, a p-value can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given an observation, the p-value corresponds to the probability of having another observation more extreme than the current one:
+To quantify the compatibility of the observed data with a specific model, a \textit{p-value} can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given an observation, the p-value corresponds to the probability of having another observation more extreme than the current one:
 
 \begin{equation}
 \label{eq:stat:pval}
@@ -332,18 +332,24 @@ Discovery of New Physics & $2.9 \times 10^{-7}$ & 5 \\
 
 
 
-\subsection{Test Statistics when using PRL}
+\subsection{Test Statistics Using the PRL}
+
+While a test statistic can be any real-valued function of the data, the Neyman-Pearson lemma \cite{Neyman} ensures that the ones based on a likelihood ratio are the most statistically powerful. This means that, for a given signal efficiency, they provide the decision criterion that minimizes the misidentification probability. The PRL defined in Eq. \ref{eq:stat:prl} is the most used at the LHC, and it gives origin to this test statistic:
 
 \begin{equation}
 \label{eq:stat:tmu}
 t_{\mu} = -2 \log \prl
 \end{equation}
 
+\noindent and the corresponding p-value:
+
 \begin{equation}
 \label{eq:stat:pmu}
 p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \,
 d t_{\mu} \;,
 \end{equation}
+
+Different variations of this test statistic are used for discovery and exclusion.
 
 \subsubsection*{Test Statistic for Discovery}
 
@@ -387,6 +393,8 @@ q_{\mu} =
 \label{eq:stat:pmu}
 p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \, d q_{\mu} \;.
 \end{equation}
+
+\noindent Note that switching from the discovery test statistic to the exclusion test statistic is equivalent to inverting the role of the background-only and signal-plus-background hypothesis: in the case of the exclusion fit, the null hypothesis to exclude is the signal-plus-background one.
 
 % chiara: e' vero?
 % credo che dipenda dal fatto che la L sia simmetrica rispetto a eccessi o deficit
@@ -456,6 +464,11 @@ small) and we observe a downward fluctuation in data, we could end up excluding 
 \end{equation}
 
 \noindent where $p_b = 1 - p_{\mu, \mu=0}$. With the CLs method, the test hypothesis is excluded at 95\% CL if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Eq \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \cls method is the default procedure used in this thesis to define the exclusion of a signal model. 
+
+
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{}
+\end{figure}
 
 \subsection{Distribution of the Test Statistic}
 
