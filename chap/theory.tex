@@ -9,9 +9,74 @@ This chapter presents an introduction to the Standard Model (SM) of particle phy
 
 The Standard Model (SM) is a renormalizable gauge quantum field theory based on the group $SU(3) \times SU(2) \times U(1)$. It has been developed in the second half of the 20th century \cite{Glashow:1961tr}\cite{Weinberg:1967tq}\cite{Salam:1980jd}, and since then the description that it gives of the elementary particles and of their interactions has been accurately tested by several experiments. Many experimental discoveries have been guided by the SM predictions, including the discovery of the top quark \cite{Abachi:1994td}\cite{PhysRevLett.74.2626} and up to the latest one, the observation of the Higgs boson at the LHC in July 2012 \cite{Aad:2012tfa}\cite{Chatrchyan:2012xdj}. 
 
-\subsection{Matter}
+\subsection{Fermions}
 
-\subsection{Forces}
+In the SM, particles are described as fields excitations; in particular, matter constituents are half-integer spin fields (\textit{fermions}). Fermions are further divided into two categories based on the type of interaction they experience:
+\begin{itemize}
+\item Leptons experience only the electroweak interaction
+\item Quarks experience both the electroweak and the strong interaction
+\end{itemize}
+
+Both leptons and quarks come in three generations, and conventionally the numbering of these generations follows an order of increasing mass. While it is possible to observe free leptons, quarks exist only in bound states (\textit{hadrons}); this is because of confinement, discussed in Section \ref{sec:strong}. Hadrons built of three quarks have spin $\frac{1}{2}$ and are named \textit{barions}, while \textit{mesons} are formed by two quarks and have integer spin.
+
+
+The free lagrangian of a fermion is given by:
+
+\begin{equation}
+ \mathcal{L}_{free} = \bar{\psi} \left( i \gamma^{\mu} \partial_{\mu} - m \right) \psi \, , \
+ \label{eq:sm:dirac}
+\end{equation}
+
+\noindent where $\psi$ is the fermion field, $m$ its mass, $\gamma$ are the Dirac matrices and $\partial_{\mu}$ is the four-vector derivative.
+
+\iffalse
+\begin{equation}
+\psi_L = \frac{(1 - \gamma_5)}{2} \psi, \qquad\qquad
+\psi_R = \frac{(1 + \gamma_5)}{2} \psi
+ \label{eq:sm:siLR}
+\end{equation}
+
+\begin{equation}
+P_L = (1 - \gamma_5)/2, \qquad\qquad
+P_R = (1 + \gamma_5)/2
+ \label{eq:sm:parity}
+\end{equation}
+\fi
+
+\subsection{Bosons}
+
+Particles with integer spin are referred to as \textit{bosons}. In the SM, force carriers are described through spin-1 fields. Beside force carriers, the SM includes another boson, the Higgs boson, that has spin 0. All the other particles of the SM acquire mass though interaction with the Higgs boson field, as described in Section \ref{sec:smsusy:ew}.
+
+\begin{equation}
+\mathcal{L}_{free} = \frac{1}{2} \partial^\mu \phi \partial_\mu \phi + \frac{1}{2} m^2 \phi ^2 ,
+\end{equation}
+
+ 
+while for a complex scalar field is:
+\begin{equation}
+\mathcal{L}_{free} =  \partial^\mu \phi \partial_\mu \phi^* +  m^2 \phi \phi^* .
+\end{equation}
+
+
+On the other hand, a vector field $A^\mu$ with spin 1 obeys the Proca lagrangian if it has mass different from zero
+
+\begin{equation}
+\mathcal{L}_{free} =  - \frac{1}{4} F^{\mu \nu}F_{\mu \nu}+  \frac{1}{2} m^2 A^\mu A_\mu ,
+\label{eq:lproca}
+\end{equation}
+
+and the Maxwell lagrangian if it has null mass
+
+\begin{equation}
+\mathcal{L}_{free} =  - \frac{1}{4} F^{\mu \nu}F_{\mu \nu} ,
+\label{eq:lmax}
+\end{equation}
+
+
+where we have defined $F^{\mu \nu} = \partial^\mu A_\nu - \partial^\nu A_\mu$
+
+
+The SM describes all the interactions among elementary particles, except for gravity.
 
 \begin{table}[h]
 \centering
@@ -34,8 +99,10 @@ Electromagnetic & Photon ($\gamma$) & 0 & 0  & $10^{-2}$ \\
 \end{table}
 
 \subsection{Strong Interaction}
+\label{sec:strong}
 
 \subsection{Electroweak Interaction and Higgs Physics}
+\label{sec:smsusy:ew}
 
 \section{Limits of the Standard Models and its Extensions}
 \label{sec:smsusy:bsm}
