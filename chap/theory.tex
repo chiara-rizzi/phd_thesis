@@ -105,7 +105,7 @@ Electromagnetic & Photon ($\gamma$) & 0 & 0  & $10^{-2}$ \\
 
 \subsubsection{Gauge Invariance}
 
-The interaction terms in the SM Lagrangian are introduced by promoting an already existing global symmetry of the Lagrangian ($\theta$) to a \textit{local} one ($(x)$) function of the space-time coordinates. 
+The interaction terms in the SM Lagrangian are introduced by promoting an already existing global symmetry of the Lagrangian ($\theta$) to a \textit{local} one ($\theta(x)$) function of the space-time coordinates. 
 In general, given a Lagrangian globally invariant under a symmetry group, the fields transform as:
 \begin{equation}
 \psi \rightarrow e^{ig\theta_k \tau_k} \psi  
@@ -118,9 +118,21 @@ In general, given a Lagrangian globally invariant under a symmetry group, the fi
 
 \noindent $f_{ijk}$ is the structure constant of the group and is always zero for Abelian groups. Promoting this invariance to a global one ($\theta_k \rightarrow \theta_k(x)$) implies adding to the theory:
 \begin{itemize}
-\item A number of massless gauge fields $W^\mu_k$ equal to the number of generators of the symmetry group, that transform as $W^\mu_k \rightarrow W^\mu_k - \partial^\mu \theta_k - g \epsilon_{klm} \theta^m W^\mu_m $
-\item A covariant derivatibe, $D^\mu = \partial^\mu + ig\tau^kW^\mu_k$, that substitutes the standard derivative in the Lagrangian
-\item A free Lagrangian for the vector fields as in Eq. \ref{eq:lproca}, with $F^{\mu \nu}_k = \partial_\mu W_k^\nu - \partial_\nu W_k^\mu - g f_k^{lm} W^\mu_l W^\nu_m$. The last term, of second order in the field, is present only for non-Albelian symmetry groups. 
+\item A number of massless gauge fields $W^\mu_k$ equal to the number of generators of the symmetry group, that transform as 
+\begin{equation}
+W^\mu_k \rightarrow W^\mu_k - \partial^\mu \theta_k - g \epsilon_{klm} \theta^m W^\mu_m 
+\end{equation}
+\item A covariant derivatibe: 
+\begin{equation}
+D^\mu = \partial^\mu + ig\tau^kW^\mu_k 
+\end{equation}
+
+\noindent that substitutes the standard derivative in the Lagrangian
+\item A free Lagrangian for the vector fields as in Eq. \ref{eq:lproca}, with:
+\begin{equation}
+F^{\mu \nu}_k = \partial_\mu W_k^\nu - \partial_\nu W_k^\mu - g f_k^{lm} W^\mu_l W^\nu_m
+\end{equation}
+\noindent The last term, of second order in the field, is present only for non-Albelian symmetry groups. 
 \end{itemize}
 
 
@@ -129,22 +141,24 @@ The SM is a theory invariant under $SU(3)_\mathrm{C} \times SU(2)_\mathrm{L} \ti
 \subsubsection{Strong Interaction}
 \label{sec:strong}
 
-Quantum Chromo-Dynamics (QCD) is the theory that describes strong interactions, and it is invariant under the symmetry group $SU(3)_\mathrm{C}$. The subscript C refers to the color, the quantum number associated with strong interactions. $SU(3)_\mathrm{C}$ is believed to be an exact symmetry, and the corresponding eight gauge bosons (\textit{gluons}) are therefore massless. Since the group is non-Abelian, the gluons carry color charge and interact not only with quarks but also among themselves. 
+Quantum Chromo-Dynamics (QCD) is the theory that describes strong interactions, and it is invariant under the symmetry group $SU(3)_\mathrm{C}$, where the subscript C refers to the color, the quantum number associated with these interactions; this can assume three possible values denoted with red, blue and green. The observable stated (hadrons) are color singlets, while quarks (anti-quarks) carry only one color (anti-colr) charge. Since the symmetry group is non-Abelian, also the corresponding eight gauge bosons (\textit{gluons}) carry a color charge (bi-color, with one color and one different anti-color) and therefore interact not only with quarks but also among themselves. Since $SU(3)_\mathrm{C}$ is believed to be an exact symmetry,  gluons are massless. 
 
 The renormalization of a gauge theory leads to the definition of \textit{running coupling constants}, whose value depends on the energy scale where they are evaluated. In QCD, at leading order the dependence of the coupling constant from the energy scale is given by:
 
 \begin{equation}
-\alpha(Q^2)=\frac{1}{b\log{\frac{Q^2}{\Lambda_\mathrm{QCD}^2}}} \quad \quad b = \frac{11N_\mathrm{C}-2n_\mathrm{f}}{12\pi}
+\alpha_\mathrm{s}(Q^2)=\frac{1}{b\log{\frac{Q^2}{\Lambda_\mathrm{QCD}^2}}} \quad \quad b = \frac{11N_\mathrm{C}-2n_\mathrm{f}}{12\pi}
 \label{eq:alfaQCD}
 \end{equation}
 
-\noindent where $N_\mathrm{C}$ is the number of colors, $n_\mathrm{f}$ is the number of quark flavors that are active (i.e. whose mass is lower than the energy scale) and $\Lambda_\mathrm{QCD}$ is the infrared cutoff scale that sets the limit of validity of the perturbative approximation.
+\noindent where $N_\mathrm{C}$ is the number of colors, $n_\mathrm{f}$ is the number of quark flavors that are active (i.e. whose mass is lower than the energy scale) and $\Lambda_\mathrm{QCD}$ is the infrared cutoff scale that sets the limit of validity of the perturbative approximation. In QCD $N_\mathrm{C} = 3$, so for $n_\mathrm{f}<16$ the coupling constants decreases with the increase of the energy scale of the process considered. This structure has important consequences on the properties of quarks and gluons:
 
-\paragraph{Asymptotic freedom}
+\begin{itemize}
+\item At high $Q^2$ ($\rightarrow$ small distances), $\alpha_\mathrm{s}$ becomes small enough for the perturbative approximation to be correct. In this case quarks and gluons behave as free particles (\textit{asymptotic freedom}) \cite{PhysRevLett.30.1343}\cite{PhysRevLett.30.1346}.
+\item When the momentum transfer is small ($\rightarrow$ large distances) $\alpha_\mathrm{s}$ is large; this gives rise to \textit{confinement}: quarks can not be observed as isolated particles, as it is not possible to extract individual quarks from hadrons. When the distance between two quarks is increased, the potential energy increases as well, up to the point when is energetically more favorable to create from the vacuum a quark-antiquark pair and thus a new hadron is formed.
+\item In a collider experiment, quarks and gluons will create a collimated spray of hadrons (\textit{jets})
+\end{itemize}
 
-\paragraph{Confinement}
 
-\paragraph{Hadronization}
 
 \subsubsection{Electroweak Interaction and Higgs Physics}
 \label{sec:smsusy:ew}
