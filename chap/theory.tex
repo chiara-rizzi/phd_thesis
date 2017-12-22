@@ -11,12 +11,14 @@ The Standard Model (SM) is a renormalizable gauge quantum field theory based on 
 
 \subsection{Particle Content of the Standard Model}
 
+In the SM, particles are described as fields excitations. In the following sections, we introduce the quantum filed theory descriptions of fermions and bosons.
+
 \subsubsection{Fermions}
 
-In the SM, particles are described as fields excitations; in particular, matter constituents are half-integer spin fields (\textit{fermions}). Fermions are further divided into two categories based on the type of interaction they experience:
+Matter constituents are half-integer spin fields (\textit{fermions}). Fermions are further divided into two categories based on the type of interaction they experience:
 \begin{itemize}
-\item Leptons experience only the electroweak interaction
-\item Quarks experience both the electroweak and the strong interaction
+\item \textit{Leptons} experience only the electroweak interaction
+\item \textit{Quarks} experience both the electroweak and the strong interaction
 \end{itemize}
 
 Both leptons and quarks come in three generations, and conventionally the numbering of these generations follows an order of increasing mass. While it is possible to observe free leptons, quarks exist only in bound states (\textit{hadrons}); this is because of confinement, discussed in Section \ref{sec:strong}. Hadrons built of three quarks have spin $\frac{1}{2}$ and are named \textit{barions}, while \textit{mesons} are formed by two quarks and have integer spin.
@@ -29,46 +31,36 @@ The free lagrangian of a fermion is given by:
  \label{eq:sm:dirac}
 \end{equation}
 
-\noindent where $\psi$ is the fermion field, $m$ its mass, $\gamma$ are the Dirac matrices and $\partial_{\mu}$ is the four-vector derivative.
+\noindent where $\psi$ is the fermion field, $m$ its mass, $\gamma$ are the Dirac matrices and $\partial_{\mu}$ is the four-momentum derivative.
 
-\iffalse
-\begin{equation}
-\psi_L = \frac{(1 - \gamma_5)}{2} \psi, \qquad\qquad
-\psi_R = \frac{(1 + \gamma_5)}{2} \psi
- \label{eq:sm:siLR}
-\end{equation}
-
-\begin{equation}
-P_L = (1 - \gamma_5)/2, \qquad\qquad
-P_R = (1 + \gamma_5)/2
- \label{eq:sm:parity}
-\end{equation}
-\fi
 
 \subsubsection{Bosons}
 
-Particles with integer spin are referred to as \textit{bosons}. In the SM, force carriers are described through spin-1 fields. Beside force carriers, the SM includes another boson, the Higgs boson, that has spin 0. All the other particles of the SM acquire mass though interaction with the Higgs boson field, as described in Section \ref{sec:smsusy:ew}.
+Particles with integer spin are referred to as \textit{bosons}. In the SM, force carriers are described through spin-1 fields. 
+The SM includes also a spin-0 particle, the Higgs boson. Is the interaction with the Higgs boson field that allows all the other elementary particles to acquire mass, as described in Section \ref{sec:smsusy:ew}.
+
+The Klein-Gordon Lagrangian governs the kinenatic of spin-0 neutral particles:
 
 \begin{equation}
 \mathcal{L}_{free} = \frac{1}{2} \partial^\mu \phi \partial_\mu \phi + \frac{1}{2} m^2 \phi ^2 ,
 \end{equation}
 
  
-\noindent while for a complex scalar field is:
+\noindent while in the case of charged particles (described through a complex filed) the Lagrangian becomes:
 
 \begin{equation}
 \mathcal{L}_{free} =  \partial^\mu \phi \partial_\mu \phi^* +  m^2 \phi \phi^* .
 \end{equation}
 
 
-\noindent On the other hand, a vector field $A^\mu$ with spin 1 obeys the Proca lagrangian if it has mass different from zero
+\noindent The two equations above describe scalar particles. In the case of a vector filed, the expression of the Lagrangian is the following: 
 
 \begin{equation}
-\mathcal{L}_{free} =  - \frac{1}{4} F^{\mu \nu}F_{\mu \nu}+  \frac{1}{2} m^2 A^\mu A_\mu ,
+\mathcal{L}_{free} =  - \frac{1}{4} F^{\mu \nu}F_{\mu \nu} +  \frac{1}{2} m^2 A^\mu A_\mu \, .
 \label{eq:lproca}
 \end{equation}
 
-\noindent and the Maxwell lagrangian if it has null mass
+\noindent This is the Proca Lagrangian. In the case of a particle with zero mass, this reduces to the Maxwell Lagrangian:
 
 \begin{equation}
 \mathcal{L}_{free} =  - \frac{1}{4} F^{\mu \nu}F_{\mu \nu} ,
@@ -76,11 +68,11 @@ Particles with integer spin are referred to as \textit{bosons}. In the SM, force
 \end{equation}
 
 
-\noindent where we have defined $F^{\mu \nu} = \partial^\mu A_\nu - \partial^\nu A_\mu$.
+\noindent where $F^{\mu \nu} = \partial^\mu A_\nu - \partial^\nu A_\mu$.
 
 \subsection{Interactions}
 
-The SM describes all the interactions among elementary particles, except for gravity, for which nowadays no renormalizable quantum field theory is known. Table \ref{tab:sm_interazioni} presents a summary of the SM interactions and the properties of the corresponding force carriers. More details about the strong and electroweak sectors are given in the following sections.
+The SM describes all the interactions among elementary particles, except for gravity, for which nowadays no renormalizable quantum field theory is formulated. Table \ref{tab:sm_interazioni} presents a summary of the SM interactions and the properties of the corresponding force carriers. More details about the strong and electroweak sectors are given in the following sections.
 
 \begin{table}[h]
 \centering
@@ -141,9 +133,9 @@ The SM is a theory invariant under $SU(3)_\mathrm{C} \times SU(2)_\mathrm{L} \ti
 \subsubsection{Strong Interaction}
 \label{sec:strong}
 
-Quantum Chromo-Dynamics (QCD) is the theory that describes strong interactions, and it is invariant under the symmetry group $SU(3)_\mathrm{C}$, where the subscript C refers to the color, the quantum number associated with these interactions; this can assume three possible values denoted with red, blue and green. The observable stated (hadrons) are color singlets, while quarks (anti-quarks) carry only one color (anti-colr) charge. Since the symmetry group is non-Abelian, also the corresponding eight gauge bosons (\textit{gluons}) carry a color charge (bi-color, with one color and one different anti-color) and therefore interact not only with quarks but also among themselves. Since $SU(3)_\mathrm{C}$ is believed to be an exact symmetry,  gluons are massless. 
+Quantum Chromo-Dynamics (QCD) is the theory that describes strong interactions, and it is invariant under the symmetry group $SU(3)_\mathrm{C}$, where the subscript C refers to the color, the quantum number associated with these interactions; this can assume three possible values denoted with red, blue and green. The observable states (hadrons) are color singlets, while quarks (anti-quarks) carry only one color (anti-colr) charge. Since the symmetry group is non-Abelian, also the corresponding eight gauge bosons (\textit{gluons}) carry a color charge (bi-color, with one color and one different anti-color) and therefore interact not only with quarks but also among themselves. Since $SU(3)_\mathrm{C}$ is believed to be an exact symmetry,  gluons are massless. 
 
-The renormalization of a gauge theory leads to the definition of \textit{running coupling constants}, whose value depends on the energy scale where they are evaluated. In QCD, at leading order the dependence of the coupling constant from the energy scale is given by:
+The renormalization of a gauge theory leads to the definition of \textit{running coupling constants}, whose value depend on the energy scale where they are evaluated. In QCD, at leading order the dependence of the coupling constant from the energy scale is given by:
 
 \begin{equation}
 \alpha_\mathrm{s}(Q^2)=\frac{1}{b\log{\frac{Q^2}{\Lambda_\mathrm{QCD}^2}}} \quad \quad b = \frac{11N_\mathrm{C}-2n_\mathrm{f}}{12\pi}
@@ -162,6 +154,71 @@ The renormalization of a gauge theory leads to the definition of \textit{running
 
 \subsubsection{Electroweak Interaction and Higgs Physics}
 \label{sec:smsusy:ew}
+
+The theory of electroweak interactions is based on the symmetry group $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$. This symmetry breaks at a scale around 100 GeV giving rise to the electromagnetic interaction, mediated by the photon, and to the weak interaction, mediated by the $Z$ (neutral currents) and $W^{\pm}$ bosons (charged currents). The number of mediators, four, is the same as the number of generators of the symmetry group. 
+
+The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions, and the suffix L indicates that only left-handed particles participate to them. Left-handed and right-handed fields ($\psi_L$ and $\psi_R$ respectively) are defined as:
+
+\begin{equation}
+\begin{aligned}
+\psi_L = \frac{(1 - \gamma_5)}{2} \psi, \\
+\psi_R = \frac{(1 + \gamma_5)}{2} \psi
+\end{aligned}
+\label{eq:sm:LR}
+\end{equation}
+
+\noindent where $(1 \pm \gamma_5)/2$ are the chirality projectors, and $\gamma_5$ is defined as $\gamma_5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3 $. Looking back at Eq. \ref{eq:sm:dirac}, it can be noted that, if we decompose the fermion filed into its left-handed and right-handed components, the derivative term keeps $\psi_L$ and $\psi_R$ separated, while the mass term mixes them:
+\begin{equation}
+-m \bar \psi \psi = -m \bar \psi P_L^2 \psi - m \bar \psi P_R^2 \psi
+	= -m \bar \psi_R \psi_L - m \bar \psi_L \psi_R \
+\end{equation}
+
+
+The covariant derivative for the  $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ group is:
+\begin{equation}
+\mathcal{D}^{\mu} = \partial^{\mu} + i \frac{g'}{2} B^\mu Y + ig W^\mu_k T^k
+\end{equation}
+
+\noindent and substituting with this the regular derivative results in the interaction Lagrangian:
+\begin{equation}
+\mathcal{L}_{int}^{EW} = -\frac{g'}{2} \left( \bar{\psi} \gamma_\mu Y \psi \right) B^\mu - g \sum_k \left( \bar{\psi} \gamma_\mu T^k \psi  \right) W_k^\mu
+\end{equation}
+
+\noindent where we have introduced $T^k$, the weak isospin operator, and $Y$, the hypercharge operator, and the respective coupling constants $g$ and $g'$. The quantum numbers of the $T^k$ and $Y$ operators relate to the electric change $Q$ through the  Gell-Mann Nishijima relation:
+
+\begin{equation}
+Q = \frac{Y}{2} + T_3
+\label{eq:sm:Q}
+\end{equation}
+
+\noindent where $Y$ is the hypercharge quantum number and $T_3$ is the quantum number of the third component of the isospin. 
+
+In the case of an $SU(2)$ symmetry, is not possible to add directly to the lagrangian a mass term for the vector bosons of the form in Eq. \ref{eq:lproca}, as it would spoil the $SU(2)$ local invariance. The Higgs-Englert-Brout mechanism solves this problem through Spontaneous Symmetry Breaking (SSB) of the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ invariance. The SSB is obtained by adding to the theory one extra isospin doublet of complex scalar fields:
+
+\begin{equation}
+	\Phi = \left( \begin{array}{c} \phi^+  \\ \phi^0 \end{array} \right)
+	= \frac{1}{\sqrt{2}} \left( \begin{array}{c} \phi_1 + i \phi_2 \\ \phi_3 + i \phi_4 \end{array} \right)
+\end{equation}
+
+This doublet has hypercharge Y=1 and isospin $T=\frac{1}{2}$; the first component is positively charged, while the second one is electrically neutral.
+
+
+
+%The physical mass eigenstates are different from the interactions eigenstates, and can be recovered by rotating $B_\mu$ and $W^i_\mu$ and requiring that the field of the photon, $A_\mu$, has the correct quantum numbers. The transformation that relates the interaction eigenstates to the mass eigenstates is:
+
+
+
+\begin{equation}
+\begin{aligned}
+W_\mu^\pm &= \frac{W_\mu^1 \mp W_\mu^2}{\sqrt{2}} \\
+A_\mu &= B_\mu \cos\theta_W + W^3_\mu \sin\theta_W  \\
+Z_\mu &= W^3_\mu \cos\theta_W - B_\mu \sin\theta_W
+\end{aligned}
+\label{eq:wein}
+\end{equation}
+
+
+
 
 \begin{figure}
 \centering
