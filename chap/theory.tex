@@ -9,7 +9,9 @@ This chapter presents an introduction to the Standard Model (SM) of particle phy
 
 The Standard Model (SM) is a renormalizable gauge quantum field theory based on the group $SU(3) \times SU(2) \times U(1)$. It has been developed in the second half of the 20th century \cite{Glashow:1961tr}\cite{Weinberg:1967tq}\cite{Salam:1980jd}, and since then the description that it gives of the elementary particles and of their interactions has been accurately tested by several experiments. Many experimental discoveries have been guided by the SM predictions, including the discovery of the top quark \cite{Abachi:1994td}\cite{PhysRevLett.74.2626} and up to the latest one, the observation of the Higgs boson at the LHC in July 2012 \cite{Aad:2012tfa}\cite{Chatrchyan:2012xdj}. 
 
-\subsection{Fermions}
+\subsection{Particle Content of the Standard Model}
+
+\subsubsection{Fermions}
 
 In the SM, particles are described as fields excitations; in particular, matter constituents are half-integer spin fields (\textit{fermions}). Fermions are further divided into two categories based on the type of interaction they experience:
 \begin{itemize}
@@ -43,7 +45,7 @@ P_R = (1 + \gamma_5)/2
 \end{equation}
 \fi
 
-\subsection{Bosons}
+\subsubsection{Bosons}
 
 Particles with integer spin are referred to as \textit{bosons}. In the SM, force carriers are described through spin-1 fields. Beside force carriers, the SM includes another boson, the Higgs boson, that has spin 0. All the other particles of the SM acquire mass though interaction with the Higgs boson field, as described in Section \ref{sec:smsusy:ew}.
 
@@ -76,8 +78,9 @@ Particles with integer spin are referred to as \textit{bosons}. In the SM, force
 
 \noindent where we have defined $F^{\mu \nu} = \partial^\mu A_\nu - \partial^\nu A_\mu$.
 
+\subsection{Interactions}
 
-The SM describes all the interactions among elementary particles, except for gravity, for which nowadays no renormalizable quantum field theory is known. Table \ref{tab:sm_interazioni} presents a summary of the SM interactions and the properties of the corresponding force carriers. More details about the strong and electroweak sectors are given in sections \ref{sec:strong} and \ref{sec:smsusy:ew} respectively.
+The SM describes all the interactions among elementary particles, except for gravity, for which nowadays no renormalizable quantum field theory is known. Table \ref{tab:sm_interazioni} presents a summary of the SM interactions and the properties of the corresponding force carriers. More details about the strong and electroweak sectors are given in the following sections.
 
 \begin{table}[h]
 \centering
@@ -99,10 +102,51 @@ Electromagnetic & Photon ($\gamma$) & 0 & 0  & $10^{-2}$ \\
 \label{tab:sm_interazioni}
 \end{table}
 
-\subsection{Strong Interaction}
+
+\subsubsection{Gauge Invariance}
+
+The interaction terms in the SM Lagrangian are introduced by promoting an already existing global symmetry of the Lagrangian ($\theta$) to a \textit{local} one ($(x)$) function of the space-time coordinates. 
+In general, given a Lagrangian globally invariant under a symmetry group, the fields transform as:
+\begin{equation}
+\psi \rightarrow e^{ig\theta_k \tau_k} \psi  
+\end{equation}
+
+\noindent where $\tau_k$ are the generators of the group and obey commutation relations: 
+\begin{equation}
+\left[ \tau_i, \tau_j \right] = i f_{ijk} \tau^k \, . \
+\end{equation}
+
+\noindent $f_{ijk}$ is the structure constant of the group and is always zero for Abelian groups. Promoting this invariance to a global one ($\theta_k \rightarrow \theta_k(x)$) implies adding to the theory:
+\begin{itemize}
+\item A number of massless gauge fields $W^\mu_k$ equal to the number of generators of the symmetry group, that transform as $W^\mu_k \rightarrow W^\mu_k - \partial^\mu \theta_k - g \epsilon_{klm} \theta^m W^\mu_m $
+\item A covariant derivatibe, $D^\mu = \partial^\mu + ig\tau^kW^\mu_k$, that substitutes the standard derivative in the Lagrangian
+\item A free Lagrangian for the vector fields as in Eq. \ref{eq:lproca}, with $F^{\mu \nu}_k = \partial_\mu W_k^\nu - \partial_\nu W_k^\mu - g f_k^{lm} W^\mu_l W^\nu_m$. The last term, of second order in the field, is present only for non-Albelian symmetry groups. 
+\end{itemize}
+
+
+The SM is a theory invariant under $SU(3)_\mathrm{C} \times SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$. Imposing local invariance under $SU(3)_\mathrm{C}$ leads to the theory of strong interactions, while $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ is the symmetry whose breaking gives origin to the electroweak interactions. 
+
+\subsubsection{Strong Interaction}
 \label{sec:strong}
 
-\subsection{Electroweak Interaction and Higgs Physics}
+Quantum Chromo-Dynamics (QCD) is the theory that describes strong interactions, and it is invariant under the symmetry group $SU(3)_\mathrm{C}$. The subscript C refers to the color, the quantum number associated with strong interactions. $SU(3)_\mathrm{C}$ is believed to be an exact symmetry, and the corresponding eight gauge bosons (\textit{gluons}) are therefore massless. Since the group is non-Abelian, the gluons carry color charge and interact not only with quarks but also among themselves. 
+
+The renormalization of a gauge theory leads to the definition of \textit{running coupling constants}, whose value depends on the energy scale where they are evaluated. In QCD, at leading order the dependence of the coupling constant from the energy scale is given by:
+
+\begin{equation}
+\alpha(Q^2)=\frac{1}{b\log{\frac{Q^2}{\Lambda_\mathrm{QCD}^2}}} \quad \quad b = \frac{11N_\mathrm{C}-2n_\mathrm{f}}{12\pi}
+\label{eq:alfaQCD}
+\end{equation}
+
+\noindent where $N_\mathrm{C}$ is the number of colors, $n_\mathrm{f}$ is the number of quark flavors that are active (i.e. whose mass is lower than the energy scale) and $\Lambda_\mathrm{QCD}$ is the infrared cutoff scale that sets the limit of validity of the perturbative approximation.
+
+\paragraph{Asymptotic freedom}
+
+\paragraph{Confinement}
+
+\paragraph{Hadronization}
+
+\subsubsection{Electroweak Interaction and Higgs Physics}
 \label{sec:smsusy:ew}
 
 \begin{figure}
