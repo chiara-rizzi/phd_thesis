@@ -252,6 +252,7 @@ We can then expand small excitations around the minimum:
 \noindent where $\phi(x)$ is the physical field associated with the Higgs boson, and $\vec{\theta}(x)$ the three degrees of freedom absorbed to give masses to the $Z$ and $W^\pm$ bosons. Inserting Eq. \ref{eq:hvphi} in Eq. \ref{eq:Lhiggs} relates the mass of the Higgs boson to the parameters in the potential:
 \begin{equation}
 m_H = \sqrt{- 2 \mu^2} = \sqrt{2 \lambda} v
+\label{eq:sm:higgsmass}
 \end{equation}
 
 Since the numeric value of the $\mu^2$ and $\lambda$ parameters is not set, the theory does not predict a specific value for $m_H$. The $(\mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi)$ term in Eq. \ref{eq:Lhiggs} gives rise to the physical mass of the gauge boson, that at tree level are:
@@ -328,20 +329,67 @@ The SM describes only baryonic matter; this accounts for only 5\% of the univers
 
 \subsubsection*{CP Violation}
 
+CP-violating processes are needed in order to produce asymmetry between the matter and the anti-matter content of our universe. While the SM provides one source of CP violation with the complex phase in the CKM matrix mentioned in Section \ref{sec:smsusy:ew}, this is not enough and additional sources are needed in order to explain the observed asymmetry.
+
 \subsubsection*{Gravity}
+
+Gravity is the only force acting on elementary particles that is not described by the SM. In fact, not only is not described by the SM, but the simple attempt to quantize gravity through a spin-2  mediator (\textit{graviton}) leads to a non-renormalizable theory. The strength of gravity is expected to be comparable to the one of the other forces at the \textit{Plank scale} ($\Lambda_{Plank}$, $10^{19}$ GeV). 
 
 \subsection{Aesthetic Shortcomings}
 \label{sec:sm:aesthetics}
 
-\subsubsection*{Naturalness} 
+While the previous section discusses objective limits of the SM, there are also some aesthetic criteria that the SM does not seem to satisfy. These are mostly based on the concept of \textit{Naturalness}: unless there is a good reason, the parameters of a "beautiful" theory should be all of the same order of magnitude, and a theory where instead the parameters are bound to assume very specific and different values (\textit{fine tuning}) seems "unnatural". It is important to notice that this naturalness requirement is subjective, as well as the amount of fine tuning that we judge to be too much for a theory to be considered natural.
 
-\subsubsection*{Unification}
+
+\subsubsection*{Hierarchy Problem and Higgs Mass}
+
+The expression for the mass of the Higgs boson in Eq. \ref{eq:sm:higgsmass} contains only the tree level component. The proper computation should include the radiative contributions from all the particles that couple with the Higgs boson, directly or indirectly. A fermion, whose Yukawa coupling is given by $-\lambda_f \phi \bar{f} f$, will lead to a correction to the Higgs mass with a divergent integral; this can be computed for example with a cut-off regularization, and in this case the resulting correction to the Higgs mass is:
+\begin{equation}
+\Delta m_H^2 \>=\>  
+-{|y_f|^2\over 8 \pi^2} \Lambda_{UV}^2 + \mathcal{O}(\ln \Lambda_{UV} )
+\label{eq:divhf}
+\end{equation}
+
+where $\Lambda_{UV}^2$ is the cut-off scale, identified with the limit of validity of the theory. If we assume that no physics beyond the SM (BSM) is present up to $\Lambda_{Plank}$, having corrections to the mass proportional to $\Lambda_{UV}$ requires a fine tuning of the parameters of the order of $\frac{m_H}{\Lambda_{UV}} \approx 10^{-17}$. This is due to the strong hierarchy of the scales involved (\textit{hierarchy problem}) \cite{Weinberg:1975gm}\cite{PhysRevD.20.2619}\cite{PhysRevD.14.1667}\cite{tHooft:1979rat}. Since the correction to the mass is proportional to the Yukawa coupling of the fermion, it is clear that the most important correction is the one given by the top quark, whose Yukawa coupling is $y_t \approx 0.94$. 
+
+Despite this, it can still be argued that the appearance of the $\Lambda_{UV}$ divergence is connected more to the regularization schema rather than the theory itself. But even in this case, the value of 125 GeV for the Higgs mass remains difficult to justify. The The SM Lagrangian does not have any symmetry that prevents the Higgs boson to couple to new BSM particles. If we assume the existence of a complex scalar that couples with the Higgs field through $ -y_S|\phi|^2 |S|^2$, the correction to the Higgs propagator is given by:
+
+\begin{equation}
+\Delta m_H^2 \>=\> {y_S\over 16 \pi^2}
+\left [\Lambda_{UV}^2 - 2 m_S^2
+\> {\rm ln}(\Lambda_{UV}/m_S) + \ldots
+\right ].
+\label{eq:divhs}
+\end{equation}
+
+Beside the first term, proportional to $\Lambda_{UV}^2$, that can be thought as a consequence of the cut-off regularization, we also have a second  term proportional to $m_S^2$. If we assume that BSM physics exists and that, since it has not yet been observed, $m_S$ must be large, this contribution drives $m_H$ to high values. A similar argument applies even if the new BSM sector and the Higgs filed do not couple directly but, for example, share a gauge interaction.
+
+\subsubsection*{Fermion Hierarchy Problem} 
+
+
+\subsubsection*{Unification of Coupling Constants}
+
+The SM coupling constants of the $SU(3)_\mathrm{C}$, $SU(2)_\mathrm{L}$ and $U(1)_\mathrm{Y}$ groups have a different evolution, and the extrapolation of their values at very high energies suggests a common value at a scale $M_{GUT} \approx 10^{15}-10^{16}$ GeV, after which the different couplings unite. If the only particles involved in the computation of the evolution of the coupling constants are the SM ones, there is no exact crossing point, as shown in Fig. \ref{fig:susy:gut}(a).
+
+\subsection*{Strong CP Problem}
+
+The most general SM QCD Lagrangian should include also a CP-violating angle, and this would not spoil renormalizability. The presence of this term would have directly measurable physical consequences, for example a non-zero electric dipole moment for the neutron (nEDM). The tight  limits on the nEDM ( $< 3.6 \times 10^{-26}$ e cm at 95\% CL \cite{PhysRevD.92.092003}) translate into upper limits on the parameter regulating the CP-violating term of the QCD Lagrangian ($< 10^{-10}$ rad), while there is no theoretical reason why it should not be of order 1. 
 
 
 \subsection{Standard Model Extensions}
+
+The aspects of the particle physics world not yet described by the SM, are an indication that the SM should be extended.
+In this section we briefly discuss some of the most popular theories and models proposed to extend the SM, except from Supersymmetry which is discussed in more details in section \ref{sec:smsusy:susy}.
 \label{sec:sm:extensions}
 
 
 \section{Supersymmetry}
 \label{sec:smsusy:susy}
 
+\begin{figure}[ht]
+\centering
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/gut_0.pdf}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/gut_1.pdf}}
+\caption{Running couplings in SM and MSSM, figure from Ref. \cite{Patrignani:2016xqp}.}
+\label{fig:susy:gut}
+\end{figure}
