@@ -343,16 +343,16 @@ While the previous section discusses objective limits of the SM, there are also 
 
 \subsubsection*{Hierarchy Problem and Higgs Mass}
 
-The expression for the mass of the Higgs boson in Eq. \ref{eq:sm:higgsmass} contains only the tree level component. The proper computation should include the radiative contributions from all the particles that couple with the Higgs boson, directly or indirectly. A fermion, whose Yukawa coupling is given by $-\lambda_f \phi \bar{f} f$, will lead to a correction to the Higgs mass with a divergent integral; this can be computed for example with a cut-off regularization, and in this case the resulting correction to the Higgs mass is:
+The expression for the mass of the Higgs boson in Eq. \ref{eq:sm:higgsmass} contains only the tree level component. The proper computation should include the radiative contributions from all the particles that couple with the Higgs boson, directly or indirectly. A fermion, whose Yukawa coupling is given by $-\lambda_f \phi \bar{f} f$, will lead to a correction to the Higgs mass with a divergent integral; this can be computed for example with a cut-off regularization, and in this case the resulting correction to the Higgs mass, shown in Fig. \ref{fig:sm:h_corr}(a), is:
 \begin{equation}
 \Delta m_H^2 \>=\>  
 -{|y_f|^2\over 8 \pi^2} \Lambda_{UV}^2 + \mathcal{O}(\ln \Lambda_{UV} )
 \label{eq:divhf}
 \end{equation}
 
-where $\Lambda_{UV}^2$ is the cut-off scale, identified with the limit of validity of the theory. If we assume that no physics beyond the SM (BSM) is present up to $\Lambda_{Plank}$, having corrections to the mass proportional to $\Lambda_{UV}$ requires a fine tuning of the parameters of the order of $\frac{m_H}{\Lambda_{UV}} \approx 10^{-17}$. This is due to the strong hierarchy of the scales involved (\textit{hierarchy problem}) \cite{Weinberg:1975gm}\cite{PhysRevD.20.2619}\cite{PhysRevD.14.1667}\cite{tHooft:1979rat}. Since the correction to the mass is proportional to the Yukawa coupling of the fermion, it is clear that the most important correction is the one given by the top quark, whose Yukawa coupling is $y_t \approx 0.94$. 
+where $\Lambda_{UV}^2$ is the cut-off scale, identified with the limit of validity of the theory. If we assume that no physics beyond the SM (BSM) is present up to $\Lambda_{Plank}$, having corrections to the mass proportional to $\Lambda_{UV}$ requires a fine tuning of the parameters of the order of $\frac{m_H}{\Lambda_{UV}} \approx 10^{-17}$. This is due to the strong hierarchy of the scales involved (\textit{hierarchy problem}) \cite{Weinberg:1975gm}\cite{PhysRevD.20.2619}\cite{PhysRevD.14.1667}\cite{tHooft:1979rat}. Since the correction to the mass is proportional to the Yukawa coupling of the fermion, it is clear that the most important correction is the one given by the top quark, whose Yukawa coupling is $y_t \approx 0.996$. 
 
-Despite this, it can still be argued that the appearance of the $\Lambda_{UV}$ divergence is connected more to the regularization schema rather than the theory itself. But even in this case, the value of 125 GeV for the Higgs mass remains difficult to justify. The The SM Lagrangian does not have any symmetry that prevents the Higgs boson to couple to new BSM particles. If we assume the existence of a complex scalar that couples with the Higgs field through $ -y_S|\phi|^2 |S|^2$, the correction to the Higgs propagator is given by:
+Despite this, it can still be argued that the appearance of the $\Lambda_{UV}$ divergence is connected more to the regularization schema rather than the theory itself. But even in this case, the value of 125 GeV for the Higgs mass remains difficult to justify. The The SM Lagrangian does not have any symmetry that prevents the Higgs boson to couple to new BSM particles. If we assume the existence of a complex scalar that couples with the Higgs field through $ -y_S|\phi|^2 |S|^2$, the correction to the Higgs propagator, shown in Fig. \ref{fig:sm:h_corr}(b), is given by:
 
 \begin{equation}
 \Delta m_H^2 \>=\> {y_S\over 16 \pi^2}
@@ -363,6 +363,14 @@ Despite this, it can still be argued that the appearance of the $\Lambda_{UV}$ d
 \end{equation}
 
 Beside the first term, proportional to $\Lambda_{UV}^2$, that can be thought as a consequence of the cut-off regularization, we also have a second  term proportional to $m_S^2$. If we assume that BSM physics exists and that, since it has not yet been observed, $m_S$ must be large, this contribution drives $m_H$ to high values. A similar argument applies even if the new BSM sector and the Higgs filed do not couple directly but, for example, share a gauge interaction.
+
+\begin{figure}[ht]
+\centering
+\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_f.pdf}}
+\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_s.pdf}}
+\caption{Correction to the Higgs boson propagator form the interaction with a fermion (a) and with a scalar (b), figure from Ref. \cite{Martin:1997ns}.}
+\label{fig:sm:h_corr}
+\end{figure}
 
 \subsubsection*{Fermion Hierarchy Problem} 
 
@@ -378,14 +386,42 @@ The most general SM QCD Lagrangian should include also a CP-violating angle, and
 
 
 \subsection{Standard Model Extensions}
+\label{sec:sm:extensions}
 
 The aspects of the particle physics world not yet described by the SM, are an indication that the SM should be extended.
-In this section we briefly discuss some of the most popular theories and models proposed to extend the SM, except from Supersymmetry which is discussed in more details in section \ref{sec:smsusy:susy}.
-\label{sec:sm:extensions}
+In this section we briefly discuss some of the most popular theories and models proposed to extend the SM, except from Supersymmetry which is discussed in more details in section \ref{sec:smsusy:susy}. These extensions introduce typically one or more of the following:
+
+\begin{itemize}
+\item New particles, that can be independent particles or "partners" of the SM ones.
+\item New symmetries, that can be broken 
+\item New degrees of freedom, such as new quantum numbers or extra dimensions.
+\item New forces, whose strength depends on the energy scale
+\end{itemize}
+
+\subsubsection*{Little Higgs}
+% chiara: expand
+Little Higgs models address the problem of the Higgs mass by considering the Higgs boson as a pseudo-Goldstone boson of a global symmetry. This leads to a light mass for the Higgs like it does for the pion in QCD.
+
+\subsubsection*{Technicolor}
+In technicolor models \cite{Weinberg:1975gm}\cite{PhysRevD.20.2619} the mass of the $Z$ and $W^{\pm}$ bosons is not generated through the interaction with the Higgs boson, but dynamically with a new asymptotically free gauge interaction whose strength is higher at small distances; the analogy with QCD (and the "color" degree of freedom) lead to the name technicolor. New fermions ("technifermions") are also introduced, transforming under the group vectorial representation. The Higgs boson is not predicted by technicolor, but it can be included in the models as a singlet scalar resonance, a dilaton, or a singlet pseudo-Goldstone boson.
+
+\subsubsection*{Extra Dimensions}
+
+The first attempt to introduce additional spacial dimensions to unify forces was done in the 1920's by Kaluza and Klein \cite{Kaluza}\cite{Klein:1926tv}, who interpreted our four-dimensional universe as a "brane" of a higher-dimensional spacetime. While the SM foresees only three spatial dimensions, adding extra dimensions can explain the observed weakness of gravity with respect to the other forces as it would be diluted in the extra dimensions. 
+% rephrase
+Particles propagating in the extra dimensions manifest in our brane as Kaluza-Klein modes. % end rephrase
+While the first model from Kaluza and Klein was disproved shortly afterwards, similar ideas and formalism have been used also afterwards:  
+
+\begin{itemize}
+\item In the Arkani-Hamed-Dimopoulos-Dvali (ADD) model \cite{ArkaniHamed:1998rs}, two (or more) extra dimensions are added in which only gravity can propagate (through a graviton).
+\item In the Randall and Sundrum model \cite{PhysRevLett.83.3370} the universe is conceived as five-dimensional Anti-de Sitter spacetime, and the weakness of gravity is explained through red-shift of the gravity brane.
+\end{itemize}
 
 
 \section{Supersymmetry}
 \label{sec:smsusy:susy}
+
+Supersymmetry (SUSY) is a BSM framework that allows to generate an infinite amount of BSM models, each with different signatures.
 
 \begin{figure}[ht]
 \centering
