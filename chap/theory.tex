@@ -571,7 +571,7 @@ the Minimal Supersymmetric Standard Model. Table from Ref. \cite{Martin:1997ns}.
 The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, and the gauge supermultiples in Table \ref{tab:gauge}. Note that the states defined in these tables are the interaction eigenstates, but not necessary mass eigenstates as mixing is possible. In particular, the higgsinos mix with the gauginos, as well as the sfermions associated with the left and right component of the same SM fermion. The gluinos instead do not undergo any mixing, as there are no other superpartners with the proper quantum numbers.
 
 
-\subsubsection{SUSY Higgs Sector}
+\subsubsection{MSSM Higgs Sector}
 \label{sec:susy:higgs}
 
 To maintain an holomorphic superpotential, SUSY requires at least two SU(2) doublets: one to give mass to up-type quarks ($H_u$) and one to give mass to the the down-type quarks ($H_d$). The two doublets provide 8 degrees of freedom. Three of them are the ones needed to give masses to the gauge bosons, while the other 5 become observable particles:
@@ -582,9 +582,27 @@ To maintain an holomorphic superpotential, SUSY requires at least two SU(2) doub
 \end{itemize}
 
 
-\subsubsection{Particle Content of the MSSM}
-
 \subsubsection{R-parity}
+
+The MSSM does not include all the possible terms that are gauge- and SUSY-invariant, to avoid interactions that would violate the lepton or baryon number. \textit{Matter parity}, defined as:
+
+\begin{equation}
+P_M = (-1)^{3 (B-L)} 
+\label{eq:defmatterparity}
+\end{equation}
+
+is a multiplicative quantum number whose conservation implies automatically the conservation of lepton and baryon numbers, without having to impose their conservation by hand. Particles in the same supermultiplet have the same matter parity: $P_M =-1$ for lepton and quark supermultiplets, while the Higgs and gauge supermultiplets have $P_M =+1$.
+
+A more convenient way to express the same conservation rule is \textit{R-parity}:
+
+\begin{equation}
+P_R = (-1)^{3(B-L) + 2 s}
+\label{eq:defRparity}
+\end{equation}
+
+where $s$ is the spin of the particle. This is equivalent to matter parity as $(-1)^{2s}$ is conserved in all interaction where angular momentum conservation holds. The advantage of R-parity over matter parity is that for all the SM particles $P_R = 1$ and for all the SUSY particles $P_R=-1$. If  R-parity is conserved, in a collider SUSY particles are always produced in pairs, and each SUSY particle always has an odd number of SUSY particles in its decay products. As a consequence of this, the lightest SUSY particle (LSP) is stable; if the LSP is electrically neutral, it interacts with ordinary matter only gravitationally and it provides a good candidate for dark matter.
+
+Note that R-parity conservation is not deduced by the theory and thus, while its consequences are appealing (especially the provision of a dark matter candidate), it is not an assumption that holds in all SUSY models.
 
 \subsubsection{SUSY Breaking Terms}
 
