@@ -421,7 +421,61 @@ While the first model from Kaluza and Klein was disproved shortly afterwards, si
 \section{Supersymmetry}
 \label{sec:smsusy:susy}
 
-Supersymmetry (SUSY) is a BSM framework that allows to generate an infinite amount of BSM models, each with different signatures.
+Supersymmetry (SUSY) \cite{Wess:1974tw}\cite{Salam:1974ig} is an extension of the Poincar\'e group that rotates bosonic states into fermionic ones and vice versa, through the supercharge operator ($Q$) that carries itself a fermionic charge: 
+
+\begin{equation}
+Q |{\rm boson}\rangle = |{\rm fermion }\rangle \qquad\qquad
+Q |{\rm fermion}\rangle = |{\rm boson }\rangle 
+\end{equation}
+
+The Haag-Lopuszanski-Sohnius extension of the Coleman-Mandula theorem \cite{HAAG1975257} allows such operator as only non-trivial extension of the Poincar\'e in a consistent four-dimensional theory, as the operator and his hermitian conjugate ($Q^\dagger$) satisfy the following relations:
+
+\begin{equation}
+\begin{aligned}
+&\{ Q, Q^\dagger \} = P^\mu ,  \\
+&\{ Q,Q \} = \{ Q^\dagger , Q^\dagger \} = 0 ,  \\
+&[ P^\mu , Q  ] = [P^\mu, Q^\dagger ] = 0 ,
+\label{eq:susyalgth}
+\end{aligned}
+\end{equation}
+
+where $P$ is the four-momentum operator. These relations, that define the Superssymmetry algebra, make it clear how the action of the supercharge is related to the Poincar\'e group: the combination of two supersymmetry rotations is a space-time translation.
+
+\subsubsection{Supermultiplets}
+
+The irreducible representations of the SUSY algebra are the \textit{supermultiplets}, that contain both bosons and fermions. Particles within the same supermultiplet are known as \textit{superpartners} of each others. Superpartners of the SM particles are indicated with the same letter but with a $\sim$ on top of it. Depending on their particle content, supermultiplets are classified into:
+
+\begin{itemize}
+\item \textit{Chiral supermultiplets} are the ones containing the SM fermions and their superpartners. Each Dirac fermionic filed can be seen as two separate Weyl filed, each of which has two degrees of freedom and is associated with a complex scalar as a superpartner. The name given to superpartners of fermions is \textit{sfermions} (e.g. the superpartner of the top is the stop). Since chiral supermultiplets are formed by spin-0 and spin-$\frac{1}{2}$ particles, they contain also the SUSY extended Higgs sector, as described in Section \ref{sec:susy:higgs}.
+
+\item \textit{Gauge supermultiplets} contain gauge bosons and their superpartners. Each spin-1 SM boson is associated to a spin-$\frac{1}{2}$ Weyl fermion, as before the electroweak symmetry breaking all the gauge bosons are massless and have only two degrees of freedom. The name of the superpartners of the gauge bosons is the same as the corresponding SM particle but with a -ino suffix (e.g. the gluon superpartner is the gluino). 
+
+\item \textit{Gravitational supermultiplets}. If we assume that gravity is mediated by the graviton, then a third type of supermultiplet is necessary that contains spin-2 graviton and its superpartner, the spin-$\frac{3}{2}$ gravitino.
+
+\end{itemize}
+
+% Avoid fine tuning
+
+% SUSY is a broken symmetry
+\subsubsection{SUSY and the Higgs Mass}
+
+Superpartners share the same electric charge, isospin and QCD color as $Q$ and $Q^\dagger$ commute with the generator of the gauge transformations.
+The third equality in \ref{eq:susyalgth} implies that $[ (P^\mu)^2 , Q  ]=0$. If we think of this as an operator applied to a supermultiplet, this implies that all the particles within the same supermultiplet should have also the same mass. The superpartners also bring a radiative correction to the Higgs mass, since they couple to the Higgs with the same coupling constant as their SM partners ($y_S=y_f=y$). If we consider the case of a fermion and a sfermion, according to Eq. \ref{eq:divhf} and Eq. \ref{eq:divhs} the two contributions have opposite sign and the total correction is:
+
+\begin{equation}
+\Delta m_H^2 \>=\> {y\over 16 \pi^2}
+\left [ m_f^2
+\> {\rm ln}(\Lambda_{UV}/m_f) 
+- m_S^2
+\> {\rm ln}(\Lambda_{UV}/m_S) 
+\right ].
+\label{eq:divhsusy}
+\end{equation}
+
+This correction cancels if each SM particle and its superpartner have the same mass. Unfortunately we know that, if SUSY exists, it must be a broken symmetry as the superpartners do not have the same mass as the corresponding SM particles (otherwise they would have been already observed). Since the correction to the Higgs mass becomes larger with the increase of the mass difference between particles in the same supermultiplet, SUSY remains a solution to the Higgs hierarchy problem as long as this mass difference is reasonably small.
+
+
+% Unifications of the coupling constants
 
 \begin{figure}[ht]
 \centering
@@ -430,3 +484,109 @@ Supersymmetry (SUSY) is a BSM framework that allows to generate an infinite amou
 \caption{Running couplings in SM and MSSM, figure from Ref. \cite{Patrignani:2016xqp}.}
 \label{fig:susy:gut}
 \end{figure}
+
+\subsubsection{Minimal Supersymmetric Standard Model}
+
+SUSY is a framework that allows to generate an infinite number of models. The Minimal Supersymmetric Standard Model (MSSM) is the one that allows to include and extend the SM with the smallest amount of extra parameters, and is based on the \textit{superpotential}:
+
+\begin{equation}
+\begin{aligned}
+W_{MSSM} & = y_u \tilde{u} \tilde{Q} H_u - y_d \tilde{d}\tilde{Q} H_d - y_e \tilde{e} \tilde{L}H_d + \mu H_u H_d \\  
+& = \sum_{F, G, T} y_u^{FG} \tilde{u}_F \tilde{Q}_G^T H_u^T -
+ = \sum_{F, G, T} y_u^{FG} \tilde{u}_F \tilde{Q}_G^T H_u^T - 
+   \sum_{F, G, T} y_d^{FG} \tilde{d}_F \tilde{Q}_G^T H_d^T   \\ 
+   & -
+   \sum_{F, G, T} y_e^{FG} \tilde{e}_F\tilde{L}_G^T H_d^T  +
+   \sum_{T} \mu H_u^T H_d^T 
+\end{aligned}
+\label{eq:WMMS}
+\end{equation}
+
+The superpotential appears in the MSSM Lagrangian through first and second order derivatives as discussed e.g. in Ref. \cite{Martin:1997ns}.
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{c c c c c}
+\hline
+\multicolumn{2}{c}{Names} 
+& spin 0 & spin 1/2 & $SU(3)_C ,\, SU(2)_L ,\, U(1)_Y$
+\\  \hline\hline
+squarks, quarks & $Q$ & $({\tilde{u}}_L\>\>\>{\tilde{d}}_L )$&
+ $(u_L\>\>\>d_L)$ & $(\>{\bf 3},\>{\bf 2}\>,\>{1d\over 6})$
+\\
+($\times 3$ families) & $\bar{u}$
+&${\tilde{u}}^*_R$ & $u^\dagger_R$ & 
+$(\>{\bf \overline 3},\> {\bf 1},\> -{2\over 3})$
+\\ & $\bar{d}$ &${\tilde{d}}^*_R$ & $d^\dagger_R$ & 
+$(\>{\bf \overline 3},\> {\bf 1},\> {1\over 3})$
+\\  \hline
+sleptons, leptons & $L$ &$({\tilde{\nu}}\>\>{\tilde{e}}_L )$&
+ $(\nu\>\>\>e_L)$ & $(\>{\bf 1},\>{\bf 2}\>,\>-{1\over 2})$
+\\
+($\times 3$ families) & $\bar{e}$
+&${\tilde{e}}^*_R$ & $e^\dagger_R$ & $(\>{\bf 1},\> {\bf 1},\>1)$
+\\  \hline
+Higgs, higgsinos &$H_u$ &$(H_u^+\>\>\>H_u^0 )$&
+$(\tilde{H}_u^+ \>\>\> \tilde{H}_u^0)$& 
+$(\>{\bf 1},\>{\bf 2}\>,\>+{1\over 2})$
+\\ &$H_d$ & $(H_d^0 \>\>\> H_d^-)$ & $(\tilde{H}_d^0 \>\>\> \tilde{H}_d^-)$& 
+$(\>{\bf 1},\>{\bf 2}\>,\>-{1\over 2})$
+\\  \hline
+\end{tabular}
+\caption{Chiral supermultiplets in the Minimal Supersymmetric Standard Model.
+The spin-$0$ fields are complex scalars, and the spin-$1/2$ fields are 
+left-handed two-component Weyl fermions. Table from Ref. \cite{Martin:1997ns}. \label{tab:chiral}}
+\vspace{-0.6cm}
+\end{center}
+\end{table}
+
+
+
+\renewcommand{\arraystretch}{1.55}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{c c c c}
+\hline
+Names & spin 1/2 & spin 1 & $SU(3)_C, \> SU(2)_L,\> U(1)_Y$\\
+\hline\hline
+gluino, gluon &$ \tilde{g}$& $g$ & $(\>{\bf 8},\>{\bf 1}\>,\> 0)$
+\\
+\hline
+winos, W bosons & $ \tilde {W}^\pm\>\>\> \tilde {W}^0 $&
+ $W^\pm\>\>\> W^0$ & $(\>{\bf 1},\>{\bf 3}\>,\> 0)$
+\\
+\hline
+bino, B boson &$\tilde{B}^0$&
+ $B^0$ & $(\>{\bf 1},\>{\bf 1}\>,\> 0)$
+\\
+\hline
+\end{tabular}
+\caption{Gauge supermultiplets in
+the Minimal Supersymmetric Standard Model. Table from Ref. \cite{Martin:1997ns}. \label{tab:gauge}}
+\vspace{-0.45cm}
+\end{center}
+\end{table}
+
+The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, and the gauge supermultiples in Table \ref{tab:gauge}. Note that the states defined in these tables are the interaction eigenstates, but not necessary mass eigenstates as mixing is possible. In particular, the higgsinos mix with the gauginos, as well as the sfermions associated with the left and right component of the same SM fermion. The gluinos instead do not undergo any mixing, as there are no other superpartners with the proper quantum numbers.
+
+
+\subsubsection{SUSY Higgs Sector}
+\label{sec:susy:higgs}
+
+To maintain an holomorphic superpotential, SUSY requires at least two SU(2) doublets: one to give mass to up-type quarks ($H_u$) and one to give mass to the the down-type quarks ($H_d$). The two doublets provide 8 degrees of freedom. Three of them are the ones needed to give masses to the gauge bosons, while the other 5 become observable particles:
+\begin{itemize}
+\item Two CP-even neutral Higgs bosons: $h^0$ (the lighter) and $H^0$.
+\item $A^0$, a CP-odd Higgs boson.
+\item Two charged Higgs bosons, $H^+$ and $H^-$.
+\end{itemize}
+
+
+\subsubsection{Particle Content of the MSSM}
+
+\subsubsection{R-parity}
+
+\subsubsection{SUSY Breaking Terms}
+
+
+% Supersymmetry (SUSY) is a BSM framework that allows to generate an infinite amount of BSM models, each with different signatures.
