@@ -568,7 +568,7 @@ the Minimal Supersymmetric Standard Model. Table from Ref. \cite{Martin:1997ns}.
 \end{center}
 \end{table}
 
-The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, and the gauge supermultiples in Table \ref{tab:gauge}. Note that the states defined in these tables are the interaction eigenstates, but not necessary mass eigenstates as mixing is possible. In particular, the higgsinos mix with the gauginos, as well as the sfermions associated with the left and right component of the same SM fermion. The gluinos instead do not undergo any mixing, as there are no other superpartners with the proper quantum numbers.
+The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, and the gauge supermultiples in Table \ref{tab:gauge}. Note that the states defined in these tables are the interaction eigenstates, but not necessary mass eigenstates as mixing is possible. In particular, the higgsinos mix with the gauginos to form \textit{neutralinos} ($\tilde{\chi}^0_i$) and charginos ($\tilde{\chi}^\pm_i$), as well as the sfermions associated with the left and right component of the same SM fermion can mix to form the sfermion mass eigenstates (e.g. $\tilde{t}_L$ and $\tilde{t}_R$ mix to form $\tilde{t}_1$ and $\tilde{t}_2$). The gluinos instead do not undergo any mixing, as there are no other superpartners with the proper quantum numbers.
 
 Once the MSSM particles are introduced the computation of the evolution of the coupling constants, the unification of the forces discussed in Section \ref{sec:sm:aesthetics} appears more natural, as shown in Fig. \ref{fig:susy:gut}(b).
 
@@ -608,27 +608,31 @@ Note that R-parity conservation is not deduced by the theory and thus, while its
 
 \subsubsection{Phenomenological MSSM}
 
-The phenomenological Minimal Supersymmetric Standard Model (pMSSM) reduces the number of free parameters in the MSSM through some general and experimentally motivated assumptions. In particular:
+The phenomenological Minimal Supersymmetric Standard Model (pMSSM) \cite{Djouadi:1998di} reduces the number of free parameters in the MSSM through some assumptions motivated by experimental evidence. In particular:
 \begin{itemize}
-\item 
+\item To avoid \textit{flavour changing neutral currents}, the sfermion mass matrices and all the trilinear couplings are diagonal. 
+\item The presence of \textit{CP-violating terms} is bind to be only the one predicted by the SM by imposing that all the new parameters are real numbers.
+\item The first \textit{two generations of sfermions are degenerate}: corresponding elements in the first and second generation have the same mass, to circumvent the limits on the splitting between the first ans second squark generations.
+\item Since the \textit{trilinear couplings} give rise to amplitudes that are proportional to the corresponding Yukawa coupling, only the third generation ones are relevant and the others are set to zero.
 \end{itemize}
 
-The parameters of the pMSSM are summarized in Table \ref{tab:pMMSpar}.
+These assumptions allow to reduce the number of free parameters from 105 to 19 (summarized in Table \ref{tab:pMMSpar}), making phenomenological analyses possible.
+
 
 \begin{table}[h]
 \centering
 \begin{tabular}{c c}
 \hline 
-Parameter & Meaning \\ 
+Parameter & Description \\ 
 \hline 
 \hline
+$M_1, M_2  \, M_3 $ & Gaugino mass parameters \\ 
+\hline 
 $\tan \beta$ & ratio of the VEVs of the two Higgs doublets \\ 
 \hline 
-$M_A$ & Cp-odd Higgs boson mass parameter \\ 
+$M_A$ & Pseudoscalar Higgs boson mass parameter \\ 
 \hline 
 $\mu$ & Higgsino mass parameter \\ 
-\hline 
-$M_2  \, M_3 $ & Bino, wuino and gluino mass parameters \\ 
 \hline 
 $  A_t, \, A_b, \, A_\tau    $ & 3rd generation trlinear couplings \\ 
 \hline 
@@ -637,9 +641,8 @@ $m_{qL},  \,  m_{uR},  \, m_{dR},  m_{lL},  \, m_{eR}$ & 1st/2nd generation sfer
  $m_{q3L}, \, m_{tR}, \, m_{bR}, \, m_{\tilde{L}}, \, m_{\tilde{\tau}_R},$ & 3rd generation sfermion masses \\ 
 \hline 
 \end{tabular} 
-\caption[Free parameters of the pMSSM]{\label{tab:pMMSpar}Free parameters of the pMSSM (phenomenological Minimal Supersymmetric Standard Model). After introducing some experimentally motivated assumptions, the 105 free parameters of the MSSM can be reduced to the 19 parameters of the pMSSM.}
+\caption[Free parameters of the pMSSM]{\label{tab:pMMSpar}The 19 free parameters of the pMSSM.}
 \end{table}
-
 
 
 \subsubsection{SUSY Breaking}
