@@ -664,10 +664,10 @@ $m_{qL},  \,  m_{uR},  \, m_{dR},  m_{lL},  \, m_{eR}$ & 1st (and 2nd) generatio
 \end{table}
 
 
-\subsubsection{Origin of SUSY Breaking}
+\subsubsection{SUSY Breaking Mechanisms}
 \label{sec:susybreaking}
 
-The SUSY-breaking terms of $\lagr_{\rm soft}$ can be generated in models where SUSY is spontaneously broken: just like it happens for the electroweak symmetry breaking, the Lagrangian is SUSY-invariant, but the vacuum state is not. As it happens with the Higgs mechanism, the spontaneous breaking of a symmetry implies the arisen of a massless Goldstone particle (\textit{goldstino}) that, in the case of SUSY, has to be a neutral Weyl fermion in order to have the same quantum numbers as the supercharge $Q$. To annihilate the fermion mass matrix, the goldstino field has to be proportional to:
+The SUSY-breaking terms of $\lagr_{\rm soft}$ can be generated in models where SUSY is spontaneously broken: just like it happens for the electroweak symmetry breaking, the Lagrangian is SUSY-invariant, but the vacuum state is not. As it happens with the Higgs mechanism, the spontaneous breaking of a symmetry implies the arisen of a massless Goldstone particle (\textit{goldstino}) that, in the case of SUSY, has to be a neutral Weyl fermion in order to have the same quantum numbers as the supercharge $Q$. To be massless and annihilate the fermion mass matrix, the goldstino field has to be proportional to:
 
 \begin{equation}
  \tilde{G} \,=\, 
@@ -682,11 +682,16 @@ The Fayet-Iliopoulos mechanism \cite{Fayet:1974jb} allows to have a non-zero VEV
 \begin{equation}
 \lagr_{\rm FI} \,=\, -\kappa D .
 \end{equation}
-Whith This mechanism it is however difficult to attribute properly masses to all the MSSM particles.
+With this mechanism it is however difficult to attribute properly masses to all the MSSM particles.
 %This type of term is gauge-invariant only for abelian groups. 
 %the hypercharge symmetry group $U(1)_Y$ is not eligible 
 
-Another possibility is to assign a VEV to an F term \cite{ORaifeartaigh:1975nky}. Since in the MSSM there is not a good candidate to be a gauge singlet with a non-vanishing VEV for an $F$-term, this implies the addition of at least one set of chiral supermultiplets, such that $F_i$ is non-trivial for at least one of them. A realization of this is possible for example with three chiral supermupliplets $\Phi_i$ and a superpotential 
+Another possibility is to assign a VEV to an $F$-term, with the O’Raifeartaigh mechanism \cite{ORaifeartaigh:1975nky}. Since in the MSSM there is not a good candidate to be a gauge singlet with a non-vanishing VEV for an $F$-term, this implies the addition of at least one set of chiral supermultiplets, such that $F_i$ is non-trivial for at least one of them. A realization of this is possible for example with three chiral supermupliplets $\Phi_i$ and a superpotential of the form:
+\begin{equation}
+W = -k \Phi_1 + m \Phi_2 \Phi_3 + {y\over 2} \Phi_1 \Phi_3^2 .
+\label{oraif}
+\end{equation}
+The resulting scalar potential at tree level has a minimum for $\phi_2=\phi_3=0$ and independent of $\phi_1$ (where $\phi_i$ are the scalar fields in $\Phi_i$), while the one-loop correction highlight a non-zero global minimum when also $\phi_1=0$. In the following we will consider only SUSY breaking originating from the O’Raifeartaigh mechanism.
 
 
 When SUSY is treated as a local symmetry, it has to include also gravity, and the resulting theory is called \textit{supergravity}. The gravity mediator is the spin-2 graviton, and its superpartner the spin-$\frac{3}{2}$ \textit{gravitino} ($\tilde{G}$). The gravitino can be interpreted as the gauge field of SUSY, and it incorporates the goldstino degrees of freedom upon spontaneous SUSY breaking and is indicated with the same symbol, $\tilde{G}$. By dimensional arguments, we can understand that the gravitino mass ($m_{\frac{3}{2}}$) 
@@ -705,10 +710,17 @@ If supergravity and the other new physics effects that arise at the Plank scale 
 m_{soft} \approx \frac{\langle F \rangle}{M_P} \; ,
 \label{msoft_PMSB}
 \end{equation}
-where $\langle F \rangle$ is the VEV of the SUSY-breaking $F$-term. This ratio is motivated by the observation that $m_{soft}$ should vanish both in the limit where SUSY is an exact symmetry, as well as in the limit where the Plank mass is very large and the interactions mediated by gravity are not anymore sizable. We refer to this scenario as Plank-scale-mediated-supersymmetry-breaking (PMSB). In PMSB models, the gravitino mass has the same order of magnitude as the mass of the other superpartners (as we can notice by comparing Eq.\ref{mgrav} and Eq. \ref{msoft_PMSB}), and it can not therefore be particularly light.
+where $\langle F \rangle$ is the VEV of the SUSY-breaking $F$-term. This ratio is motivated by the observation that $m_{soft}$ should vanish both in the limit where SUSY is an exact symmetry, as well as in the limit where the Plank mass is very large and the interactions mediated by gravity are not anymore sizable. We refer to this scenario as Plank-scale-mediated-supersymmetry-breaking (PMSB) \cite{PhysRevLett.49.970}\cite{BARBIERI1982343}\cite{IBANEZ198273}\cite{PhysRevD.27.2359}. In PMSB models, the gravitino mass has the same order of magnitude as the mass of the other superpartners (as we can notice by comparing Eq.\ref{mgrav} and Eq. \ref{msoft_PMSB}), and it can not therefore be particularly light. 
 
 \paragraph{GMSB}
 
-In the case of gauge-mediated-supersymmetry-breaking (GMSB) the interactions mediating the connection with the MSSM are the same gauge interactions of the MSSM itself.
+In the case of gauge-mediated-supersymmetry-breaking (GMSB) \cite{Dine:1981gu}\cite{AlvarezGaume:1981wy}\cite{Nappi:1982hm}\cite{PhysRevD.48.1277}\cite{Dine:1994vc}\cite{Dine:1995ag} the interactions mediating the connection with the MSSM are the same gauge interactions of the MSSM itself. This requires to add to the theory a set of chiral supermultiplets (\textit{mediators}) that interact both with the source of supersymmetry breaking and with the MSSM particles (through loop corrections to their mass, involving the MSSM gauge interactions). The mediators contribute at one loop to the mass of gauginos, while they have a two-loop contribution to the mass of squarks and leptons. In both cases, the scale of the mass of the superpartners is:
+\begin{equation}
+m_{soft} \approx \frac{\langle F \rangle}{M_\mathrm{mediator}} \; .
+\label{msoft_GMSB}
+\end{equation}
+SM gauge bosons are not affected by the loop corrections induced by the mediators as their mass is protected by the gauge symmetry.
+If we compare Eq. \ref{msoft_GMSB} with Eq. \ref{mgrav}, we can see that as long as the mass of the mediators is lower than the Plank scale, the gravitino can be significantly lighter than the rest of the superpartners spectrum. In most GMSB models the gravitino is the LSP, and all particles decay to it. While we could expect the decay rate to a $\tilde{G}$ to be low because of the weakness of the gravitational interaction, this is not the case as the gravitino inherits the gauge interactions of the goldstino it absorbs during the spontaneous supersymmetry breaking.  
+
 
 % Supersymmetry (SUSY) is a BSM framework that allows to generate an infinite amount of BSM models, each with different signatures.
