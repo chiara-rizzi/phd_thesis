@@ -441,7 +441,7 @@ The Haag-Lopuszanski-Sohnius extension of the Coleman-Mandula theorem \cite{HAAG
 
 where $P$ is the four-momentum operator. These relations, that define the Supersymmetry algebra, make it clear how the action of the supercharge is related to the Poincar\'e group: the combination of two supersymmetry rotations is a space-time translation.
 
-\subsubsection{Supermultiplets}
+\subsection{Supermultiplets}
 
 The irreducible representations of the SUSY algebra are the \textit{supermultiplets}, that contain both bosons and fermions. Particles within the same supermultiplet are known as \textit{superpartners} of each others. Superpartners of the SM particles are indicated with the same letter but with a $\sim$ on top of it. Depending on their particle content, supermultiplets are classified into:
 
@@ -457,35 +457,9 @@ The irreducible representations of the SUSY algebra are the \textit{supermultipl
 % Avoid fine tuning
 
 % SUSY is a broken symmetry
-\subsubsection{SUSY and the Higgs Mass}
-
-Superpartners share the same electric charge, isospin and QCD color as $Q$ and $Q^\dagger$ commute with the generator of the gauge transformations.
-The third equality in \ref{eq:susyalgth} implies that $[ (P^\mu)^2 , Q  ]=0$. If we think of this as an operator applied to a supermultiplet, this implies that all the particles within the same supermultiplet should have also the same mass. The superpartners also bring a radiative correction to the Higgs mass, since they couple to the Higgs with the same coupling constant as their SM partners ($y_S=y_f=y$). If we consider the case of a fermion and a sfermion, according to Eq. \ref{eq:divhf} and Eq. \ref{eq:divhs} the two contributions have opposite sign and the total correction is:
-
-\begin{equation}
-\Delta m_H^2 \>=\> {y\over 16 \pi^2}
-\left [ m_f^2
-\> {\rm ln}(\Lambda_{UV}/m_f) 
-- m_S^2
-\> {\rm ln}(\Lambda_{UV}/m_S) 
-\right ].
-\label{eq:divhsusy}
-\end{equation}
-
-This correction cancels if each SM particle and its superpartner have the same mass. Unfortunately we know that, if SUSY exists, it must be a broken symmetry as the superpartners do not have the same mass as the corresponding SM particles (otherwise they would have been already observed). Since the correction to the Higgs mass becomes larger with the increase of the mass difference between particles in the same supermultiplet, SUSY remains a solution to the Higgs hierarchy problem as long as this mass difference is reasonably small.
 
 
-% Unifications of the coupling constants
-
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/gut_0.pdf}}
-\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/gut_1.pdf}}
-\caption{Running couplings in SM and MSSM, figure from Ref. \cite{Patrignani:2016xqp}.}
-\label{fig:susy:gut}
-\end{figure}
-
-\subsubsection{Minimal Supersymmetric Standard Model}
+\subsection{Minimal Supersymmetric Standard Model}
 
 SUSY is a framework that allows to generate an infinite number of models. The Minimal Supersymmetric Standard Model (MSSM) is the one that allows to include and extend the SM with the smallest amount of extra parameters, and is based on the \textit{superpotential}:
 
@@ -572,6 +546,14 @@ The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, 
 
 Once the MSSM particles are introduced the computation of the evolution of the coupling constants, the unification of the forces discussed in Section \ref{sec:sm:aesthetics} appears more natural, as shown in Fig. \ref{fig:susy:gut}(b).
 
+% Unifications of the coupling constants
+\begin{figure}[ht]
+\centering
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/gut_0.pdf}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/gut_1.pdf}}
+\caption{Running couplings in SM and MSSM, figure from Ref. \cite{Patrignani:2016xqp}.}
+\label{fig:susy:gut}
+\end{figure}
 
 \subsubsection{MSSM Higgs Sector}
 \label{sec:susy:higgs}
@@ -606,6 +588,56 @@ where $s$ is the spin of the particle. This is equivalent to matter parity as $(
 
 Note that R-parity conservation is not deduced by the theory and thus, while its consequences are appealing (especially the provision of a dark matter candidate), it is not an assumption that holds in all SUSY models.
 
+
+
+\subsection{Natural SUSY}
+
+Superpartners share the same electric charge, isospin and QCD color as $Q$ and $Q^\dagger$ commute with the generator of the gauge transformations.
+The third equality in \ref{eq:susyalgth} implies that $[ (P^\mu)^2 , Q  ]=0$. If we think of this as an operator applied to a supermultiplet, this implies that all the particles within the same supermultiplet should have also the same mass. The superpartners also bring a radiative correction to the Higgs mass, since they couple to the Higgs with the same coupling constant as their SM partners ($y_S=y_f=y$). If we consider the case of a fermion and a sfermion, according to Eq. \ref{eq:divhf} and Eq. \ref{eq:divhs} the two contributions have opposite sign and the total correction is:
+
+\begin{equation}
+\Delta m_H^2 \>=\> {y\over 16 \pi^2}
+\left [ m_f^2
+\> {\rm ln}(\Lambda_{UV}/m_f) 
+- m_S^2
+\> {\rm ln}(\Lambda_{UV}/m_S) 
+\right ].
+\label{eq:divhsusy}
+\end{equation}
+
+This correction cancels if each SM particle and its superpartner have the same mass. Unfortunately we know that, if SUSY exists, it must be a broken symmetry as the superpartners do not have the same mass as the corresponding SM particles (otherwise they would have been already observed). Since the correction to the Higgs mass becomes larger with the increase of the mass difference between particles in the same supermultiplet, SUSY remains a solution to the Higgs hierarchy problem as long as this mass difference is reasonably small. The term \textit{Natural SUSY} refers to the class of SUSY models that allow to solve (or mitigate) the fine-tuning problem that affects the Higgs mass determination. 
+
+Not all the superpartners have the same relevance in the contribution to the Higgs-mass corrections, and a SUSY model can be natural even if a lot of the particles in it are extremely heavy. The particles that should be light in a natural SUSY models are summarized in Fig. \ref{fig:NaturalSpectrum} and are:
+\begin{itemize}
+\item Higgsinos, whose tree-level mass is directly controlled by the $\mu$ parameter
+\item Stops, that contribute at one loop to the Higgs mass
+\item Gluinos, that contribute at two loops, giving a one-loop correction to the stop mass
+\end{itemize}
+
+% formula for relation between mass difference and correction to higgs mass
+
+%In the MSSM, the mass of the $Z$ boson and the higgs sector masses are related at tree level through:
+%\begin{equation}
+%\label{eq:tune}
+%-\frac{m_Z^2}{2} = |\mu|^2 + m_{H_u}^2.
+%\end{equation}
+%Where $\mu$ is the higgsino mass parameter and $m_{H_u}$ the mass term for the higgs filed that gives mass to down-type quarks. While \ref{eq:tune} holds only at tree level, it still means that if the masses of the superpartners in the higgs sector are too large, fine-tuned loop corrections will be required to bring the left side of the equation down to the observed value of the $Z$-boson mass.
+
+%\begin{equation}
+%\Delta \equiv \frac{2\delta m_{H}^{2}}{m_{h}^{2}}.
+%\end{equation}
+% Z mass at tree level and definition of fine tuning
+
+% susy particles that have to be light 
+
+\begin{figure}[h!]
+\begin{center} 
+\includegraphics[width=0.9\textwidth]{figures/theory/NaturalSpec.pdf} 
+\end{center}
+\caption{The Naturalness argument constrains the masses of the SUSY particles on the left side of the figure to be light, while the superpartners on the right side of the figures can have arbitrary mass without spoiling the Naturalness of the model. Figure from ref \cite{Papucci:2011wy}}.
+\label{fig:NaturalSpectrum}
+\end{figure}
+
 \subsubsection{SUSY Breaking in the MSSM}
 
 Superpartners of the SUSY particles have not been observed; this means that, if they exist, their mass is larger than the mass of the corresponding SM particle and SUSY is therefore a broken symmetry. The Lagrangian can therefore be written as:
@@ -623,45 +655,6 @@ where $\lagr_{\rm SUSY}$ is the SUSY-conserving part derived from the superpoten
 \end{itemize}  
 
 The necessary susy-breaking part of the Lagrangian adds to the MSSM many free parameters: in total the MSSM has 105 parameters in addition to the SM ones.
-
-
-\subsubsection{Phenomenological MSSM}
-
-The phenomenological Minimal Supersymmetric Standard Model (pMSSM) \cite{Djouadi:1998di} reduces the number of free parameters in the MSSM through some assumptions motivated by experimental evidence. In particular:
-\begin{itemize}
-\item To avoid \textit{flavour changing neutral currents}, the sfermion mass matrices and all the trilinear couplings are diagonal. 
-\item The presence of \textit{CP-violating terms} is bound to be only the one predicted by the SM by imposing that all the new parameters are real numbers.
-\item The first \textit{two generations of sfermions are degenerate}: corresponding elements in the first and second generation have the same mass, to circumvent the limits on the splitting between the first ans second squark generations.
-\item Since the \textit{trilinear couplings} give rise to amplitudes that are proportional to the corresponding Yukawa coupling, only the third generation ones are relevant and the others are set to zero.
-\end{itemize}
-
-These assumptions allow to reduce the number of free parameters from 105 to 19 (summarized in Table \ref{tab:pMMSpar}), making phenomenological analyses possible.
-
-
-\begin{table}[h]
-\centering
-\begin{tabular}{c c}
-\hline 
-Parameter & Description \\ 
-\hline 
-\hline
-$M_1, M_2  \, M_3 $ & Gaugino mass parameters \\ 
-\hline 
-$\tan \beta$ & ratio of the VEVs of the two Higgs doublets \\ 
-\hline 
-$M_A$ & Pseudoscalar Higgs boson mass parameter \\ 
-\hline 
-$\mu$ & Higgsino mass parameter \\ 
-\hline 
-$  A_t, \, A_b, \, A_\tau    $ & 3rd generation trlinear couplings \\ 
-\hline 
-$m_{qL},  \,  m_{uR},  \, m_{dR},  m_{lL},  \, m_{eR}$ & 1st (and 2nd) generation sfermion masses \\ 
-\hline 
- $m_{q3L}, \, m_{tR}, \, m_{bR}, \, m_{\tilde{L}}, \, m_{\tilde{\tau}_R},$ & 3rd generation sfermion masses \\ 
-\hline 
-\end{tabular} 
-\caption[Free parameters of the pMSSM]{\label{tab:pMMSpar}The 19 free parameters of the pMSSM.}
-\end{table}
 
 
 \subsubsection{SUSY Breaking Mechanisms}
@@ -721,6 +714,48 @@ m_{soft} \approx \frac{\langle F \rangle}{M_\mathrm{mediator}} \; .
 \end{equation}
 SM gauge bosons are not affected by the loop corrections induced by the mediators as their mass is protected by the gauge symmetry.
 If we compare Eq. \ref{msoft_GMSB} with Eq. \ref{mgrav}, we can see that as long as the mass of the mediators is lower than the Plank scale, the gravitino can be significantly lighter than the rest of the superpartners spectrum. In most GMSB models the gravitino is the LSP, and all particles decay to it. While we could expect the decay rate to a $\tilde{G}$ to be low because of the weakness of the gravitational interaction, this is not the case as the gravitino inherits the gauge interactions of the goldstino it absorbs during the spontaneous supersymmetry breaking.  
+
+
+\subsubsection{Phenomenological MSSM}
+
+The phenomenological Minimal Supersymmetric Standard Model (pMSSM) \cite{Djouadi:1998di} reduces the number of free parameters in the MSSM through some assumptions motivated by experimental evidence. In particular:
+\begin{itemize}
+\item To avoid \textit{flavour changing neutral currents}, the sfermion mass matrices and all the trilinear couplings are diagonal. 
+\item The presence of \textit{CP-violating terms} is bound to be only the one predicted by the SM by imposing that all the new parameters are real numbers.
+\item The first \textit{two generations of sfermions are degenerate}: corresponding elements in the first and second generation have the same mass, to circumvent the limits on the splitting between the first ans second squark generations.
+\item Since the \textit{trilinear couplings} give rise to amplitudes that are proportional to the corresponding Yukawa coupling, only the third generation ones are relevant and the others are set to zero.
+\end{itemize}
+
+These assumptions allow to reduce the number of free parameters from 105 to 19 (summarized in Table \ref{tab:pMMSpar}), making phenomenological analyses possible.
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c}
+\hline 
+Parameter & Description \\ 
+\hline 
+\hline
+$M_1, M_2  \, M_3 $ & Gaugino mass parameters \\ 
+\hline 
+$\tan \beta$ & ratio of the VEVs of the two Higgs doublets \\ 
+\hline 
+$M_A$ & Pseudoscalar Higgs boson mass parameter \\ 
+\hline 
+$\mu$ & Higgsino mass parameter \\ 
+\hline 
+$  A_t, \, A_b, \, A_\tau    $ & 3rd generation trlinear couplings \\ 
+\hline 
+$m_{qL},  \,  m_{uR},  \, m_{dR},  m_{lL},  \, m_{eR}$ & 1st (and 2nd) generation sfermion masses \\ 
+\hline 
+ $m_{q3L}, \, m_{tR}, \, m_{bR}, \, m_{\tilde{L}}, \, m_{\tilde{\tau}_R},$ & 3rd generation sfermion masses \\ 
+\hline 
+\end{tabular} 
+\caption[Free parameters of the pMSSM]{\label{tab:pMMSpar}The 19 free parameters of the pMSSM.}
+\end{table}
+
+
+
 
 
 % Supersymmetry (SUSY) is a BSM framework that allows to generate an infinite amount of BSM models, each with different signatures.
