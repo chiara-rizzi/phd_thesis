@@ -1,7 +1,7 @@
 \chapter{Standard Model and Supersymmetry}
 \label{chap:SMSUSY}
 
-This chapter presents an introduction to the Standard Model (SM) of particle physics, the theory that nowadays best described the subatomic world. In Section \ref{sec:smsusy:sm} a general overview of the SM is given. Section \ref{sec:smsusy:bsm} discusses the limitations of the SM, and some of the theoretical extensions proposed to overcome them. Finally Section \ref{sec:smsusy:susy} focuses on Supersymmetry (SUSY), one of the most promising of these extensions. Throughout this Chapter (as well as in the rest of this thesis) we use Natural units; we will thus use energy units to describe masses, as the speed of light ($c$) and the Plank constant ($\hslash$) are set to unity.
+This chapter presents an introduction to the Standard Model (SM) of particle physics, the theory that nowadays best describes the subatomic world. In Section \ref{sec:smsusy:sm} a general overview of the SM is given. Section \ref{sec:smsusy:bsm} discusses the limitations of the SM, and some of the theoretical extensions proposed to overcome them. Finally Section \ref{sec:smsusy:susy} focuses on Supersymmetry (SUSY), one of the most promising of these extensions. Throughout this Chapter (as well as in the rest of this thesis) we use Natural units; we will thus use energy units to describe masses, as the speed of light ($c$) and the Plank constant ($\hslash$) are set to unity.
 
 
 \section{The Standard Model of Particle Physics}
@@ -53,7 +53,7 @@ The Klein-Gordon Lagrangian governs the kinematic of spin-0 neutral particles:
 \end{equation}
 
 
-\noindent The two equations above describe scalar particles. In the case of a vector filed, the expression of the Lagrangian is the following: 
+\noindent The two equations above describe scalar particles. In the case of a vector filed $A^\mu$, the expression of the Lagrangian is the following: 
 
 \begin{equation}
 \mathcal{L}_{free} =  - \frac{1}{4} F^{\mu \nu}F_{\mu \nu} +  \frac{1}{2} m^2 A^\mu A_\mu \, .
@@ -78,7 +78,7 @@ The SM describes all the interactions among elementary particles, except for gra
 \centering
 \begin{tabular}{llccc}
 \hline
-\multirow{2}*{Interaction} & \multirow{2}*{Carrier} & \multirow{2}*{$\frac{Q}{e}$} & \multirow{2}*{Mass [GeV]} & \multirow{2}*{\textbf{$\alpha$}} \\
+\multirow{2}*{Interaction} & \multirow{2}*{Carrier} & \multirow{2}*{Electric Charge} & \multirow{2}*{Mass [GeV]} & \multirow{2}*{\textbf{$\alpha$}} \\
  & & & &  \\
 \hline
 \hline
@@ -114,7 +114,7 @@ In general, given a Lagrangian globally invariant under a symmetry group, the fi
 \begin{equation}
 W^\mu_k \rightarrow W^\mu_k - \partial^\mu \theta_k - g \epsilon_{klm} \theta^m W^\mu_m 
 \end{equation}
-\item A covariant derivative: 
+\item A \textit{covariant derivative}: 
 \begin{equation}
 D^\mu = \partial^\mu + ig\tau^kW^\mu_k 
 \end{equation}
@@ -124,7 +124,7 @@ D^\mu = \partial^\mu + ig\tau^kW^\mu_k
 \begin{equation}
 F^{\mu \nu}_k = \partial_\mu W_k^\nu - \partial_\nu W_k^\mu - g f_k^{lm} W^\mu_l W^\nu_m
 \end{equation}
-\noindent The last term, of second order in the field, is present only for non-Abelian symmetry groups. 
+\noindent Note that the last term, of second order in the field, is present only for non-Abelian symmetry groups, since it is proportional to the structure constant. This has non-trivial consequences as the second-order term leads to self-interaction among the gauge fields.
 \end{itemize}
 
 
@@ -133,7 +133,7 @@ The SM is a theory invariant under $SU(3)_\mathrm{C} \times SU(2)_\mathrm{L} \ti
 \subsubsection{Strong Interaction}
 \label{sec:strong}
 
-Quantum Chromo-Dynamics (QCD) is the theory that describes strong interactions, and it is invariant under the symmetry group $SU(3)_\mathrm{C}$, where the subscript C refers to the color, the quantum number associated with these interactions; this can assume three possible values denoted with red, blue and green. The observable states (hadrons) are color singlets, while quarks (anti-quarks) carry only one color (anti-color) charge. Since the symmetry group is non-Abelian, also the corresponding eight gauge bosons (\textit{gluons}) carry a color charge (bi-color, with one color and one different anti-color) and therefore interact not only with quarks but also among themselves. Since $SU(3)_\mathrm{C}$ is believed to be an exact symmetry,  gluons are massless. 
+Quantum Chromo-Dynamics (QCD) is the theory that describes strong interactions, and it is invariant under the symmetry group $SU(3)_\mathrm{C}$, where the subscript C refers to the \textit{color}, the quantum number associated with these interactions; this can assume three possible values denoted with red, blue and green. The observable states (\textit{hadrons}) are color singlets, while quarks (anti-quarks) carry only one color (anti-color) charge. Since the symmetry group is non-Abelian, also the corresponding eight gauge bosons (\textit{gluons}) carry a color charge (bi-color, with one color and one different anti-color) and therefore interact not only with quarks but also among themselves. Since $SU(3)_\mathrm{C}$ is believed to be an exact symmetry,  gluons are massless. 
 
 The renormalization of a gauge theory leads to the definition of \textit{running coupling constants}, whose value depend on the energy scale where they are evaluated. In QCD, at leading order the dependence of the coupling constant from the energy scale is given by:
 
@@ -146,7 +146,7 @@ The renormalization of a gauge theory leads to the definition of \textit{running
 
 \begin{itemize}
 \item At high $Q^2$ ($\rightarrow$ small distances), $\alpha_\mathrm{s}$ becomes small enough for the perturbative approximation to be correct. In this case quarks and gluons behave as free particles (\textit{asymptotic freedom}) \cite{PhysRevLett.30.1343}\cite{PhysRevLett.30.1346}.
-\item When the momentum transfer is small ($\rightarrow$ large distances) $\alpha_\mathrm{s}$ is large; this gives rise to \textit{confinement}: quarks can not be observed as isolated particles, as it is not possible to extract individual quarks from hadrons. When the distance between two quarks is increased, the potential energy increases as well, up to the point when is energetically more favorable to create from the vacuum a quark-antiquark pair and thus a new hadron is formed.
+\item When the momentum transfer is small ($\rightarrow$ large distances) $\alpha_\mathrm{s}$ is large; this gives rise to \textit{confinement}: quarks can not be observed as isolated particles, as it is not possible to extract individual quarks from hadrons. When the distance between two quarks is increased, the potential energy increases as well, up to the point when it is energetically more favorable to create from the vacuum a quark-antiquark pair and thus a new hadron is formed.
 \item In a collider experiment, quarks and gluons will create a collimated spray of hadrons (\textit{jets})
 \end{itemize}
 
@@ -157,17 +157,17 @@ The renormalization of a gauge theory leads to the definition of \textit{running
 
 The theory of electroweak interactions is based on the symmetry group $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$. This symmetry breaks at a scale around 100 GeV giving rise to the electromagnetic interaction, mediated by the photon, and to the weak interaction, mediated by the $Z$ (neutral currents) and $W^{\pm}$ bosons (charged currents). The number of mediators, four, is the same as the number of generators of the symmetry group. 
 
-The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions, and the suffix L indicates that only left-handed particles participate to them. Left-handed and right-handed fields ($\psi_L$ and $\psi_R$ respectively) are defined as:
+The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions, and the suffix L indicates that only left-handed particles participate to them. Left-handed and right-handed fields ($\psi_L$ and $\psi_R$ respectively) are defined through the chirality projectors $P_L$ and $P_R$:
 
 \begin{equation}
 \begin{aligned}
-\psi_L = \frac{(1 - \gamma_5)}{2} \psi, \\
-\psi_R = \frac{(1 + \gamma_5)}{2} \psi
+\psi_L = P_L \psi = \frac{(1 - \gamma_5)}{2} \psi, \\
+\psi_R = P_R \psi = \frac{(1 + \gamma_5)}{2} \psi,
 \end{aligned}
 \label{eq:sm:LR}
 \end{equation}
 
-\noindent where $(1 \pm \gamma_5)/2$ are the chirality projectors, and $\gamma_5$ is defined as $\gamma_5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3 $. Looking back at Eq. \ref{eq:sm:dirac}, it can be noted that, if we decompose the fermion filed into its left-handed and right-handed components, the derivative term keeps $\psi_L$ and $\psi_R$ separated, while the mass term mixes them:
+\noindent where $\gamma_5$ is defined as $\gamma_5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3 $. Looking back at Eq. \ref{eq:sm:dirac}, it can be noted that, if we decompose the fermion filed into its left-handed and right-handed components, the derivative term keeps $\psi_L$ and $\psi_R$ separated, while the mass term mixes them:
 \begin{equation}
 -m \bar \psi \psi = -m \bar \psi P_L^2 \psi - m \bar \psi P_R^2 \psi
 	= -m \bar \psi_R \psi_L - m \bar \psi_L \psi_R \
@@ -185,7 +185,7 @@ The covariant derivative for the  $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ grou
 \mathcal{L}_{int}^{EW} = -\frac{g'}{2} \left( \bar{\psi} \gamma_\mu Y \psi \right) B^\mu - g \sum_k \left( \bar{\psi} \gamma_\mu T^k \psi  \right) W_k^\mu
 \end{equation}
 
-\noindent where we have introduced $T^k$, the weak isospin operator, and $Y$, the hypercharge operator, and the respective coupling constants $g$ and $g'$. The quantum numbers of the $T^k$ and $Y$ operators relate to the electric change $Q$ through the  Gell-Mann Nishijima relation:
+\noindent where we have introduced $T^k$, the \textit{weak isospin} operator, and $Y$, the \textit{hypercharge} operator (associated to the $U(1)_\mathrm{Y}$ group), and the respective coupling constants $g$ and $g'$. The quantum numbers of the $T^k$ and $Y$ operators relate to the electric charge $Q$ through the  Gell-Mann Nishijima relation:
 
 \begin{equation}
 Q = \frac{Y}{2} + T_3
@@ -194,7 +194,7 @@ Q = \frac{Y}{2} + T_3
 
 \noindent where $Y$ is the hypercharge quantum number and $T_3$ is the quantum number of the third component of the isospin. 
 
-In the case of an $SU(2)$ symmetry, is not possible to add directly to the lagrangian a mass term for the vector bosons of the form in Eq. \ref{eq:lproca}, as it would spoil the $SU(2)$ local invariance. The Higgs-Englert-Brout mechanism \cite{Englert:1964et}\cite{Higgs:1964pj}\cite{Higgs:1964ia} solves this problem through Spontaneous Symmetry Breaking (SSB) of the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ invariance. The SSB is obtained by adding to the theory one extra isospin doublet of complex scalar components (\textit{Higgs field}):
+In the case of an $SU(2)$ symmetry, it is not possible to add directly to the lagrangian a mass term for the vector bosons of the form in Eq. \ref{eq:lproca}, as it would spoil the $SU(2)$ local invariance. The Higgs-Englert-Brout mechanism \cite{Englert:1964et}\cite{Higgs:1964pj}\cite{Higgs:1964ia} solves this problem through Spontaneous Symmetry Breaking (SSB) of the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ invariance. The SSB is obtained by adding to the theory one extra isospin doublet of complex scalar components (\textit{Higgs field}):
 
 \begin{equation}
 	\Phi = \left( \begin{array}{c} \phi^+  \\ \phi^0 \end{array} \right)
@@ -217,9 +217,9 @@ This doublet has hypercharge Y=1 and isospin $T=\frac{1}{2}$; the first componen
 
 \noindent The two real parameters $\mu^2$ and $\lambda$ relate respectively to the mass term and the strength of the self-interaction term. The shape of the potential depends on the value of these parameters:
 \begin{itemize}
-\item If $\lambda < 0$, the potential does not present any stable minima, and is therefore unphysical.
+\item If $\lambda < 0$, the potential does not present any stable minima, and this case is therefore unphysical.
 \item If $\lambda > 0$ and $\mu^2 > 0$ there is only one solution to the minimization of the potential, $\Phi=0$. This case is shown in Fig. \ref{fig:sm:higgsV}(a).
-\item If $\lambda > 0$ and $\mu^2 < 0$, the field acquires a vacuum expectation values (VEV) as the minima is not at zero; it lies instead on the points of the circumference such that:
+\item If $\lambda > 0$ and $\mu^2 < 0$, the field acquires a vacuum expectation value (VEV) as the minima is not at zero; it lies instead on the points of the circumference such that:
 \begin{equation}
 \Phi^{\dagger} \Phi = \frac{\mu^2}{2 \lambda}  \equiv \frac{v^2}{2}
 \end{equation}
@@ -324,7 +324,7 @@ Neutrino oscillations \cite{PhysRevLett.81.1562} are possible only if there is a
 
 \subsubsection*{Dark Matter and Dark Energy}
 
-The SM describes only baryonic matter; this accounts for only 5\% of the universe composition. Even though no direct observation of it has been made so far, we know there is also another type of matter, that does not participate to electroweak interactions and  accounts for about 27\% of the universe composition.  Since this type of matter does not reflect light, it is known as \textit{dark matter}. The presence of dark matter has been postulated for the first time from the rotational velocity of galaxies \cite{Zwicky:1937zza}, but this evidence has now been confirmed also by other observations, including the analysis of the cosmic microwave background from the WMAP and Plank collaborations \cite{Larson:2010gs} \cite{Ade:2013zuv}. The sum of baryonic and dark matter describes about 32\% of the universe. The remaining part is the energy responsible for the accelerated expansion of the universe, \textit{dark energy}. While some extensions of the SM provide candidates for dark matter, at the moment no theory provides one for dark energy.
+The SM describes only baryonic matter; this accounts for about 5\% of the universe composition. Even though no direct observation of it has been made so far, we know there is also another type of matter, that does not participate to electroweak interactions and  accounts for about 27\% of the universe composition.  Since this type of matter does not reflect light, it is known as \textit{dark matter}. The presence of dark matter has been postulated for the first time from the rotational velocity of galaxies \cite{Zwicky:1937zza}, but this evidence has now been confirmed also by other observations, including the analysis of the cosmic microwave background from the WMAP and Plank collaborations \cite{Larson:2010gs} \cite{Ade:2013zuv}. The sum of baryonic and dark matter describes about 32\% of the universe. The remaining part is the energy responsible for the accelerated expansion of the universe, \textit{dark energy}. While some extensions of the SM provide candidates for dark matter, at the moment no theory provides one for dark energy.
 
 
 \subsubsection*{CP Violation}
@@ -343,16 +343,16 @@ While the previous section discusses objective limits of the SM, there are also 
 
 \subsubsection*{Hierarchy Problem and Higgs Mass}
 
-The expression for the mass of the Higgs boson in Eq. \ref{eq:sm:higgsmass} contains only the tree level component. The proper computation should include the radiative contributions from all the particles that couple with the Higgs boson, directly or indirectly. A fermion, whose Yukawa coupling is given by $-\lambda_f \phi \bar{f} f$, will lead to a correction to the Higgs mass with a divergent integral; this can be computed for example with a cut-off regularization, and in this case the resulting correction to the Higgs mass, shown in Fig. \ref{fig:sm:h_corr}(a), is:
+The expression for the mass of the Higgs boson in Eq. \ref{eq:sm:higgsmass} contains only the tree level component. The proper computation should include the radiative contributions from all the particles that couple with the Higgs boson, directly or indirectly. A fermion, whose Yukawa coupling leads to the interaction $-y_f \phi \bar{f} f$, will produce a correction to the Higgs mass with a divergent integral; this can be computed for example with a cut-off regularization, and in this case the resulting correction to the Higgs mass, shown in Fig. \ref{fig:sm:h_corr}(a), is:
 \begin{equation}
 \Delta m_H^2 \>=\>  
 -{|y_f|^2\over 8 \pi^2} \Lambda_{UV}^2 + \mathcal{O}(\ln \Lambda_{UV} )
 \label{eq:divhf}
 \end{equation}
 
-where $\Lambda_{UV}^2$ is the cut-off scale, identified with the limit of validity of the theory. If we assume that no physics beyond the SM (BSM) is present up to $\Lambda_{Plank}$, having corrections to the mass proportional to $\Lambda_{UV}$ requires a fine tuning of the parameters of the order of $\frac{m_H}{\Lambda_{UV}} \approx 10^{-17}$. This is due to the strong hierarchy of the scales involved (\textit{hierarchy problem}) \cite{Weinberg:1975gm}\cite{PhysRevD.20.2619}\cite{PhysRevD.14.1667}\cite{tHooft:1979rat}. Since the correction to the mass is proportional to the Yukawa coupling of the fermion, it is clear that the most important correction is the one given by the top quark, whose Yukawa coupling is $y_t \approx 0.996$. 
+where $\Lambda_{UV}^2$ is the cut-off scale, identified with the limit of validity of the theory. If we assume that no physics beyond the SM (BSM) is present up to $\Lambda_{Plank}$, having corrections to the mass proportional to $\Lambda_{Plank}$ requires a fine tuning of the parameters of the order of $\frac{m_H}{\Lambda_{Plank}} \approx 10^{-17}$. This is due to the strong hierarchy of the scales involved (\textit{hierarchy problem}) \cite{Weinberg:1975gm}\cite{PhysRevD.20.2619}\cite{PhysRevD.14.1667}\cite{tHooft:1979rat}. Since the correction to the mass is proportional to the Yukawa coupling of the fermion, it is clear that the most important correction is the one given by the top quark, whose Yukawa coupling is $y_t \approx 0.996$. 
 
-Despite this, it can still be argued that the appearance of the $\Lambda_{UV}$ divergence is connected more to the regularization schema rather than the theory itself. But even in this case, the value of 125 GeV for the Higgs mass remains difficult to justify. The The SM Lagrangian does not have any symmetry that prevents the Higgs boson to couple to new BSM particles. If we assume the existence of a complex scalar that couples with the Higgs field through $ -y_S|\phi|^2 |S|^2$, the correction to the Higgs propagator, shown in Fig. \ref{fig:sm:h_corr}(b), is given by:
+Despite this, it can still be argued that the appearance of the $\Lambda_{UV}$ divergence is connected more to the regularization schema rather than the theory itself. But even in this case, the value of 125 GeV for the Higgs mass remains difficult to justify. The SM Lagrangian does not have any symmetry that prevents the Higgs boson to couple to new BSM particles. If we assume the existence of a complex scalar that couples with the Higgs field through $ -y_S|\phi|^2 |S|^2$, the correction to the Higgs propagator, shown in Fig. \ref{fig:sm:h_corr}(b), is given by:
 
 \begin{equation}
 \Delta m_H^2 \>=\> {y_S\over 16 \pi^2}
@@ -389,7 +389,7 @@ The most general SM QCD Lagrangian should include also a CP-violating angle, and
 \label{sec:sm:extensions}
 
 The aspects of the particle physics world not yet described by the SM, are an indication that the SM should be extended.
-In this section we briefly discuss some of the most popular theories and models proposed to extend the SM, except from Supersymmetry which is discussed in more details in section \ref{sec:smsusy:susy}. These extensions introduce typically one or more of the following:
+In this section we briefly discuss a few of the most popular theories and models proposed to extend the SM, except from Supersymmetry which is discussed in more details in section \ref{sec:smsusy:susy}. These extensions introduce typically one or more of the following:
 
 \begin{itemize}
 \item New particles, that can be independent particles or "partners" of the SM ones.
@@ -428,7 +428,7 @@ Q |{\rm boson}\rangle = |{\rm fermion }\rangle \qquad\qquad
 Q |{\rm fermion}\rangle = |{\rm boson }\rangle 
 \end{equation}
 
-The Haag-Lopuszanski-Sohnius extension of the Coleman-Mandula theorem \cite{HAAG1975257} allows such operator as only non-trivial extension of the Poincar\'e in a consistent four-dimensional theory, as the operator and his hermitian conjugate ($Q^\dagger$) satisfy the following relations:
+The Haag-Lopuszanski-Sohnius extension of the Coleman-Mandula theorem \cite{HAAG1975257} allows such operator as only non-trivial extension of the Poincar\'e group in a consistent four-dimensional theory, if the operator and his hermitian conjugate ($Q^\dagger$) satisfy the following relations:
 
 \begin{equation}
 \begin{aligned}
@@ -443,14 +443,14 @@ where $P$ is the four-momentum operator. These relations, that define the Supers
 
 \subsection{Supermultiplets}
 
-The irreducible representations of the SUSY algebra are the \textit{supermultiplets}, that contain both bosons and fermions. Particles within the same supermultiplet are known as \textit{superpartners} of each others. Superpartners of the SM particles are indicated with the same letter but with a $\sim$ on top of it. Depending on their particle content, supermultiplets are classified into:
+The irreducible representations of the SUSY algebra are the \textit{supermultiplets}, that contain both bosons and fermions. Particles within the same supermultiplet are known as \textit{superpartners} of each others. Superpartners of the SM particles are indicated with the same letter but with a $\sim$ on top of it. Depending on their particle content, supermultiplets are classified in different categories:
 
 \begin{itemize}
-\item \textit{Chiral supermultiplets} are the ones containing the SM fermions and their superpartners. Each Dirac fermionic filed can be seen as two separate Weyl filed, each of which has two degrees of freedom and is associated with a complex scalar as a superpartner. The name given to superpartners of fermions is \textit{sfermions} (e.g. the superpartner of the top is the stop). Since chiral supermultiplets are formed by spin-0 and spin-$\frac{1}{2}$ particles, they contain also the SUSY extended Higgs sector, as described in Section \ref{sec:susy:higgs}.
+\item \textit{Chiral supermultiplets} are the ones containing the SM fermions and their superpartners. Each Dirac fermionic filed can be seen as two separate Weyl filed, each of which has two degrees of freedom and is associated with a complex scalar as a superpartner. The name given to superpartners of fermions is \textit{sfermions} (e.g. the superpartner of the top is the \textit{stop} and the superpartner of the bottom is the \textit{sbottom}). Since chiral supermultiplets are formed by spin-0 and spin-$\frac{1}{2}$ particles, they contain also the SUSY extended Higgs sector, as described in Section \ref{sec:susy:higgs}.
 
-\item \textit{Gauge supermultiplets} contain gauge bosons and their superpartners. Each spin-1 SM boson is associated to a spin-$\frac{1}{2}$ Weyl fermion, as before the electroweak symmetry breaking all the gauge bosons are massless and have only two degrees of freedom. The name of the superpartners of the gauge bosons is the same as the corresponding SM particle but with a -ino suffix (e.g. the gluon superpartner is the gluino). 
+\item \textit{Gauge supermultiplets} contain gauge bosons and their superpartners. Each spin-1 SM boson is associated to a spin-$\frac{1}{2}$ Weyl fermion, as before the electroweak symmetry breaking all the gauge bosons are massless and have only two degrees of freedom. The name of the superpartners of the gauge bosons is the same as the corresponding SM particle but with a -ino suffix (e.g. the gluon superpartner is the \textit{gluino}). 
 
-\item \textit{Gravitational supermultiplets}. If we assume that gravity is mediated by the graviton, then a third type of supermultiplet is necessary that contains spin-2 graviton and its superpartner, the spin-$\frac{3}{2}$ gravitino.
+\item \textit{Gravitational supermultiplets}. If we assume that gravity is mediated by the graviton, then a third type of supermultiplet is necessary that contains spin-2 graviton and its superpartner, the spin-$\frac{3}{2}$ \textit{gravitino}.
 
 \end{itemize}
 
@@ -510,7 +510,7 @@ $(\>{\bf 1},\>{\bf 2}\>,\>-{1\over 2})$
 \end{tabular}
 \caption{Chiral supermultiplets in the Minimal Supersymmetric Standard Model.
 The spin-$0$ fields are complex scalars, and the spin-$1/2$ fields are 
-left-handed two-component Weyl fermions. Table from Ref. \cite{Martin:1997ns}. \label{tab:chiral}}
+left-handed two-component Weyl fermions. Table follows Ref. \cite{Martin:1997ns}. \label{tab:chiral}}
 \vspace{-0.6cm}
 \end{center}
 \end{table}
@@ -537,12 +537,12 @@ bino, B boson &$\stilde{B}^0$&
 \hline
 \end{tabular}
 \caption{Gauge supermultiplets in
-the Minimal Supersymmetric Standard Model. Table from Ref. \cite{Martin:1997ns}. \label{tab:gauge}}
+the Minimal Supersymmetric Standard Model. Table follows Ref. \cite{Martin:1997ns}. \label{tab:gauge}}
 \vspace{-0.45cm}
 \end{center}
 \end{table}
 
-The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, and the gauge supermultiples in Table \ref{tab:gauge}. Note that the states defined in these tables are the interaction eigenstates, but not necessary mass eigenstates as mixing is possible. In particular, the higgsinos mix with the gauginos to form \textit{neutralinos} ($\stilde{\chi}^0_i$) and charginos ($\stilde{\chi}^\pm_i$), as well as the sfermions associated with the left and right component of the same SM fermion can mix to form the sfermion mass eigenstates (e.g. $\stilde{t}_L$ and $\stilde{t}_R$ mix to form $\stilde{t}_1$ and $\stilde{t}_2$). The gluinos instead do not undergo any mixing, as there are no other superpartners with the proper quantum numbers. The mass eigenstates of the MSSM is reported in Table \ref{tab:undiscovered}, assuming that the mixing within the first- and second-generation sfermions is negligible.
+The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, and the gauge supermultiples in Table \ref{tab:gauge}. Note that the states defined in these tables are interaction eigenstates, but not necessary mass eigenstates as mixing is possible. In particular, the higgsinos mix with the gauginos to form \textit{neutralinos} ($\stilde{\chi}^0_i$) and \textit{charginos} ($\stilde{\chi}^\pm_i$), as well as the sfermions associated with the left and right component of the same SM fermion can mix to form the sfermion mass eigenstates (e.g. $\stilde{t}_L$ and $\stilde{t}_R$ mix to form $\stilde{t}_1$ and $\stilde{t}_2$). The gluinos instead do not undergo any mixing, as there are no other superpartners with the proper quantum numbers. The mass eigenstates of the MSSM is reported in Table \ref{tab:undiscovered}, assuming that the mixing within the first- and second-generation sfermions is negligible.
 
 \renewcommand{\arraystretch}{1.4}
 \begin{table}[tb]
@@ -630,7 +630,7 @@ P_M = (-1)^{3 (B-L)}
 \label{eq:defmatterparity}
 \end{equation}
 
-is a multiplicative quantum number whose conservation implies automatically the conservation of lepton and baryon numbers, without having to impose their conservation by hand. Particles in the same supermultiplet have the same matter parity: $P_M =-1$ for lepton and quark supermultiplets, while the Higgs and gauge supermultiplets have $P_M =+1$.
+is a multiplicative quantum number whose conservation implies automatically the conservation of lepton and baryon numbers (denoted with $L$ and $B$ respectively), without having to impose their conservation by hand. Particles in the same supermultiplet have the same matter parity: $P_M =-1$ for lepton and quark supermultiplets, while the Higgs and gauge supermultiplets have $P_M =+1$.
 
 A more convenient way to express the same conservation rule is \textit{R-parity}:
 
@@ -639,7 +639,7 @@ P_R = (-1)^{3(B-L) + 2 s}
 \label{eq:defRparity}
 \end{equation}
 
-where $s$ is the spin of the particle. This is equivalent to matter parity as $(-1)^{2s}$ is conserved in all interaction where angular momentum conservation holds. The advantage of R-parity over matter parity is that for all the SM particles $P_R = 1$ and for all the SUSY particles $P_R=-1$. If  R-parity is conserved, in a collider SUSY particles are always produced in pairs, and each SUSY particle always has an odd number of SUSY particles in its decay products. As a consequence of this, the lightest SUSY particle (LSP) is stable; if the LSP is electrically neutral, it interacts with ordinary matter only gravitationally and it provides a good candidate for dark matter.
+where $s$ is the spin of the particle. This is equivalent to matter parity as $(-1)^{2s}$ is conserved in all interaction where angular momentum conservation holds. The advantage of R-parity over matter parity is that for all the SM particles $P_R = 1$ and for all the SUSY particles $P_R=-1$. If  R-parity is conserved, in a collider experiment SUSY particles are always produced in pairs, and each SUSY particle always has an odd number of SUSY particles in its decay products. As a consequence of this, the lightest SUSY particle (LSP) is stable; if the LSP is electrically neutral, it interacts with ordinary matter only gravitationally and it provides a good candidate for dark matter.
 
 Note that R-parity conservation is not deduced by the theory and thus, while its consequences are appealing (especially the provision of a dark matter candidate), it is not an assumption that holds in all SUSY models.
 
@@ -660,7 +660,7 @@ The third equality in \ref{eq:susyalgth} implies that $[ (P^\mu)^2 , Q  ]=0$. If
 \label{eq:divhsusy}
 \end{equation}
 
-This correction cancels if each SM particle and its superpartner have the same mass. Unfortunately we know that, if SUSY exists, it must be a broken symmetry as the superpartners do not have the same mass as the corresponding SM particles (otherwise they would have been already observed). Since the correction to the Higgs mass becomes larger with the increase of the mass difference between particles in the same supermultiplet, SUSY remains a solution to the Higgs hierarchy problem as long as this mass difference is reasonably small. The term \textit{Natural SUSY} refers to the class of SUSY models that allow to solve (or mitigate) the fine-tuning problem that affects the Higgs mass determination, and has been a very active topic of discussion both before the LHC (see for example Ref. \cite{BARBIERI198863}\cite{Dimopoulos:1995mi}) and after (for example \cite{Papucci:2011wy}\cite{Casas:2014eca}) 
+This correction cancels if each SM particle and its superpartner have the same mass. Unfortunately we know that, if SUSY exists, it must be a broken symmetry as the superpartners do not have the same mass as the corresponding SM particles (otherwise they would have been already observed). Since the correction to the Higgs mass becomes larger with the increase of the mass difference between particles in the same supermultiplet, SUSY remains a solution to the Higgs hierarchy problem as long as this mass difference is reasonably small. The term \textit{natural SUSY} refers to the class of SUSY models that allow to solve (or mitigate) the fine-tuning problem that affects the Higgs mass determination; this has been a very active topic of discussion both before the LHC (see for example Ref. \cite{BARBIERI198863}\cite{Dimopoulos:1995mi}) and after (for example \cite{Papucci:2011wy}\cite{Casas:2014eca}) 
 
 Not all the superpartners have the same relevance in the contribution to the Higgs-mass corrections, and a SUSY model can be natural even if a lot of the particles in it are extremely heavy. The particles that should be light in a natural SUSY models are summarized in Fig. \ref{fig:NaturalSpectrum} and are:
 \begin{itemize}
@@ -694,7 +694,7 @@ Not all the superpartners have the same relevance in the contribution to the Hig
 \end{figure}
 
 
-\subsubsection{SUSY Breaking in the MSSM}
+\subsection{SUSY Breaking in the MSSM}
 
 Superpartners of the SUSY particles have not been observed; this means that, if they exist, their mass is larger than the mass of the corresponding SM particle and SUSY is therefore a broken symmetry. The Lagrangian can therefore be written as:
 
@@ -702,7 +702,7 @@ Superpartners of the SUSY particles have not been observed; this means that, if 
 \lagr = \lagr_{\rm SUSY} + \lagr_{\rm soft}
 \end{equation}
 
-where $\lagr_{\rm SUSY}$ is the SUSY-conserving part derived from the superpotential, while $\lagr_{\rm soft}$ encloses the terms that break SUSY. The suffix "soft" means that we allow in the Lagrangian only soft-SUSY-breaking terms, whose couplings have positive mass dimension, so that they vanish at very high mass scales. The inclusion of SUSY breaking terms requires the addition of new particles and interactions to the MSSM. While there is no unambiguous way to modify the theory to do this (some examples of SUSY-breaking mechanisms are described in Section \ref{sec:susybreaking}), it is possible to include in the Lagrangian a general parametric SUSY-breaking terms:
+where $\lagr_{\rm SUSY}$ is the SUSY-conserving part derived from the superpotential, while $\lagr_{\rm soft}$ encloses the terms that break SUSY. The suffix "soft" means that we allow in the Lagrangian only soft-SUSY-breaking terms, whose couplings have positive mass dimension, so that they vanish at very high mass scales. The inclusion of SUSY breaking terms requires the addition of new particles and interactions to the MSSM. While there is no unambiguous way to modify the theory to do this (some examples of SUSY-breaking mechanisms are described in Section \ref{sec:susybreaking}), it is possible to include in the Lagrangian a general parametric form of the SUSY-breaking terms:
 \begin{itemize}
 \item Gaugino masses, that in the MSSM correspond to the bino, wino and gluino mass terms
 \item Non-holmorphic scalar squared masses, that add mass terms for squarks and sleptons and contribute to the Higgs potential
@@ -713,10 +713,10 @@ where $\lagr_{\rm SUSY}$ is the SUSY-conserving part derived from the superpoten
 The necessary susy-breaking part of the Lagrangian adds to the MSSM many free parameters: in total the MSSM has 105 parameters in addition to the SM ones.
 
 
-\subsubsection{SUSY Breaking Mechanisms}
+\subsection{SUSY Breaking Mechanisms}
 \label{sec:susybreaking}
 
-The SUSY-breaking terms of $\lagr_{\rm soft}$ can be generated in models where SUSY is spontaneously broken: just like it happens for the electroweak symmetry breaking, the Lagrangian is SUSY-invariant, but the vacuum state is not. As it happens with the Higgs mechanism, the spontaneous breaking of a symmetry implies the arisen of a massless Goldstone particle (\textit{goldstino}) that, in the case of SUSY, has to be a neutral Weyl fermion in order to have the same quantum numbers as the supercharge $Q$. To be massless and annihilate the fermion mass matrix, the goldstino field has to be proportional to:
+The SUSY-breaking terms of $\lagr_{\rm soft}$ can be generated in models where SUSY is spontaneously broken. This is the case if, just like  for the electroweak symmetry breaking, the Lagrangian is SUSY-invariant, but the vacuum state is not. As it happens with the Higgs mechanism, the spontaneous breaking of a symmetry implies the arisen of a massless Goldstone particle (\textit{goldstino}, $\stilde{G}$) that, in the case of SUSY, has to be a neutral Weyl fermion in order to have the same quantum numbers as the supercharge $Q$. To be massless and annihilate the fermion mass matrix, the goldstino field has to be proportional to:
 
 \begin{equation}
  \stilde{G} \,=\, 
@@ -743,27 +743,29 @@ W = -k \Phi_1 + m \Phi_2 \Phi_3 + {y\over 2} \Phi_1 \Phi_3^2 .
 The resulting scalar potential at tree level has a minimum for $\phi_2=\phi_3=0$ and independent of $\phi_1$ (where $\phi_i$ are the scalar fields in $\Phi_i$), while the one-loop correction highlight a non-zero global minimum when also $\phi_1=0$. In the following we will consider only SUSY breaking originating from the O’Raifeartaigh mechanism.
 
 
-When SUSY is treated as a local symmetry, it has to include also gravity, and the resulting theory is called \textit{supergravity}. The gravity mediator is the spin-2 graviton, and its superpartner the spin-$\frac{3}{2}$ \textit{gravitino} ($\stilde{G}$). The gravitino can be interpreted as the gauge field of SUSY, and it incorporates the goldstino degrees of freedom upon spontaneous SUSY breaking and is indicated with the same symbol, $\stilde{G}$. By dimensional arguments, we can understand that the gravitino mass ($m_{\frac{3}{2}}$) 
+When SUSY is treated as a local symmetry, it has to include also gravity, and the resulting theory is called \textit{supergravity}. The gravity mediator is the spin-2 graviton, and its superpartner the spin-$\frac{3}{2}$ gravitino. The gravitino can be interpreted as the gauge field of SUSY, and it incorporates the goldstino degrees of freedom upon spontaneous SUSY breaking, and it is therefore also indicated with the same symbol, $\stilde{G}$. By dimensional arguments, we can understand that the gravitino mass ($m_{\frac{3}{2}}$) has to be proportional to:
+
 \begin{equation}
-m_{\frac{3}{2}} \approx \frac{\langle F \rangle}{M_P}
+m_{\frac{3}{2}} \approx \frac{\langle F \rangle}{\Lambda_P} \; ,
 \label{mgrav}
 \end{equation}
-as it has to vanish both if SUSY is an exact symmetry and if the Plank scale is extremely high (and thus gravity is negligible). 
 
-For any SUSY-breaking mechanism, the MSSM soft term do not appear at tree level, but are generated through radiative corrections. SUSY breaking happens in a "hidden sector", while the MSSM particle live in the visible sector, and experiment the consequences of the spontaneous SUSY breaking happening in the hidden sector through interactions that couple both sectors. Depending on which interaction is driving the communication between the SUSY-breaking sector and the MSSM, we can distinguish two main mechanisms.
+where $\langle F \rangle$ is the VEV of the SUSY-breaking $F$-term, as it has to vanish both if SUSY is an exact symmetry and if the Plank scale is extremely high (and thus gravity is negligible). 
 
-\paragraph{PMSB} 
+For any SUSY-breaking mechanism, the MSSM soft term do not appear at tree level, but are generated through radiative corrections. SUSY breaking happens in a \textit{hidden sector}, while the MSSM particle live in the visible sector, and experiment the consequences of the spontaneous SUSY breaking happening in the hidden sector through interactions that couple both sectors. Depending on which interaction is driving the communication between the SUSY-breaking sector and the MSSM, we can distinguish two main mechanisms.
+
+\subsubsection*{PMSB} 
 
 If supergravity and the other new physics effects that arise at the Plank scale are the responsible of the connection of the hidden sector with the MSSM sector, then the order of magnitude of the soft parameters in the MSSM is:
 \begin{equation}
-m_{soft} \approx \frac{\langle F \rangle}{M_P} \; ,
+m_{soft} \approx \frac{\langle F \rangle}{\Lambda_P} \; .
 \label{msoft_PMSB}
 \end{equation}
-where $\langle F \rangle$ is the VEV of the SUSY-breaking $F$-term. This ratio is motivated by the observation that $m_{soft}$ should vanish both in the limit where SUSY is an exact symmetry, as well as in the limit where the Plank mass is very large and the interactions mediated by gravity are not anymore sizable. We refer to this scenario as Plank-scale-mediated-supersymmetry-breaking (PMSB) \cite{PhysRevLett.49.970}\cite{BARBIERI1982343}\cite{IBANEZ198273}\cite{PhysRevD.27.2359}. In PMSB models, the gravitino mass has the same order of magnitude as the mass of the other superpartners (as we can notice by comparing Eq.\ref{mgrav} and Eq. \ref{msoft_PMSB}), and it can not therefore be particularly light. 
+This ratio is motivated by the observation that $m_{soft}$ should vanish both in the limit where SUSY is an exact symmetry, as well as in the limit where the Plank mass is very large and the interactions mediated by gravity are not anymore sizable. We refer to this scenario as Plank-scale-mediated-supersymmetry-breaking (PMSB) \cite{PhysRevLett.49.970}\cite{BARBIERI1982343}\cite{IBANEZ198273}\cite{PhysRevD.27.2359}. In PMSB models, the gravitino mass has the same order of magnitude as the mass of the other superpartners (as we can notice by comparing Eq.\ref{mgrav} and Eq. \ref{msoft_PMSB}), and it can not therefore be particularly light. 
 
-\paragraph{GMSB}
+\subsubsection*{GMSB}
 
-In the case of gauge-mediated-supersymmetry-breaking (GMSB) \cite{Dine:1981gu}\cite{AlvarezGaume:1981wy}\cite{Nappi:1982hm}\cite{PhysRevD.48.1277}\cite{Dine:1994vc}\cite{Dine:1995ag} the interactions mediating the connection with the MSSM are the same gauge interactions of the MSSM itself. This requires to add to the theory a set of chiral supermultiplets (\textit{mediators}) that interact both with the source of supersymmetry breaking and with the MSSM particles (through loop corrections to their mass, involving the MSSM gauge interactions). The mediators contribute at one loop to the mass of gauginos, while they have a two-loop contribution to the mass of squarks and leptons. In both cases, the scale of the mass of the superpartners is:
+In the case of gauge-mediated-supersymmetry-breaking (GMSB) \cite{Dine:1981gu}\cite{AlvarezGaume:1981wy}\cite{Nappi:1982hm}\cite{PhysRevD.48.1277}\cite{Dine:1994vc}\cite{Dine:1995ag} the interactions mediating the connection between the hidden sector and the MSSM are the same gauge interactions of the MSSM itself. This requires to add to the theory a set of chiral supermultiplets (\textit{mediators}) that interact both with the source of supersymmetry breaking and with the MSSM particles (through loop corrections to their mass, involving the MSSM gauge interactions). The mediators contribute at one loop to the mass of gauginos, while they have a two-loop contribution to the mass of squarks and leptons. In both cases, the mass scale of the superpartners is:
 \begin{equation}
 m_{soft} \approx \frac{\langle F \rangle}{M_\mathrm{mediator}} \; .
 \label{msoft_GMSB}
@@ -772,7 +774,7 @@ SM gauge bosons are not affected by the loop corrections induced by the mediator
 If we compare Eq. \ref{msoft_GMSB} with Eq. \ref{mgrav}, we can see that as long as the mass of the mediators is lower than the Plank scale, the gravitino can be significantly lighter than the rest of the superpartners spectrum. In most GMSB models the gravitino is the LSP, and all particles decay to it. While we could expect the decay rate to a $\stilde{G}$ to be low because of the weakness of the gravitational interaction, this is not the case as the gravitino inherits the gauge interactions of the goldstino it absorbs during the spontaneous supersymmetry breaking.  
 
 
-\subsubsection{Phenomenological MSSM}
+\subsection{Phenomenological MSSM}
 
 The phenomenological Minimal Supersymmetric Standard Model (pMSSM) \cite{Djouadi:1998di} reduces the number of free parameters in the MSSM through some assumptions motivated by experimental evidence. In particular:
 \begin{itemize}
