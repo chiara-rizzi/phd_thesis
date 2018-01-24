@@ -178,7 +178,14 @@ The renormalization of a gauge theory leads to the definition of \textit{running
 \item In a collider experiment, quarks and gluons will create a collimated spray of hadrons (\textit{jets})
 \end{itemize}
 
+The evolution of the QCD coupling constant with the energy scale has been verified experimentally, as shown in Fig. \ref{fig:sm:alphas} \cite{Bethke:2012jm}.
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/theory/asq-2011}
+\caption{Evolution of the QCD coupling constant $\alpha_\mathrm{s}$ with the energy scale. Figure from Ref \cite{Bethke:2012jm}.}
+\label{fig:sm:alphas}
+\end{figure}
 
 \subsubsection{Electroweak Interaction and Higgs-Englert-Brout Mechanism}
 \label{sec:smsusy:ew}
@@ -283,21 +290,7 @@ m_H = \sqrt{- 2 \mu^2} = \sqrt{2 \lambda} v
 \label{eq:sm:Higgsmass}
 \end{equation}
 
-Since the numeric value of the $\mu^2$ and $\lambda$ parameters is not set, the theory does not predict a specific value for $m_H$. The $(\mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi)$ term in Eq. \ref{eq:LHiggs} gives rise to the physical mass of the gauge boson, that at tree level are:
-
-\begin{equation}
-\begin{aligned}
-m_\gamma &= 0 \, ,\\
-m_Z &= \frac{v \sqrt{g^2 + g'^2}}{2} \, , \\
-m_W &= \frac{vg}{2} =  \cos\theta_W m_Z \, ,
-\end{aligned}
-\end{equation}
-
-\noindent where we have introduced the Weinberg angle $\theta_W$ such that:
-\begin{equation}
-\tan\theta_W \equiv \frac{g'}{g}
-\end{equation}
-
+Since the numeric value of the $\mu^2$ and $\lambda$ parameters is not set, the theory does not predict a specific value for $m_H$. 
 The physical mass eigenstates of the gauge bosons are a rotation of the interactions eigenstates, given by:
 
 \begin{equation}
@@ -308,6 +301,32 @@ Z_\mu &= W^3_\mu \cos\theta_W - B_\mu \sin\theta_W \, .
 \end{aligned}
 \label{eq:wein}
 \end{equation}
+
+\noindent where we have introduced the Weinberg angle $\theta_W$ such that:
+\begin{equation}
+\tan\theta_W \equiv \frac{g'}{g}
+\end{equation}
+
+
+The $(\mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi)$ term in Eq. \ref{eq:LHiggs} gives rise to the physical mass of the gauge boson: once applied to the Higgs field, the covariant derivative in Eq. \ref{eq:sm:covD} produces terms quadratic in the gauge fields, that we interpret as mass terms:
+
+\begin{equation}
+\mathcal{L}_{\Phi} = \left(1+\frac{\phi}{v}\right)^2 \,
+\left\{ m_W^2\, W_\mu^\dagger W^\mu
++ \frac{1}{2}\, m_Z^2\, Z_\mu Z^\mu \right\}\, +\, \mathcal{L}_H\, 
+\end{equation}
+
+where $\mathcal{L}_H$ denotes all the terms in $\mathcal{L}_{\Phi}$ that involve only the Higgs filed: Higgs mass, cubic and quadratic self-interaction. Note that the coupling of the gauge bosons with the Higgs filed is proportional to the square of the boson mass.
+At tree level the resulting masses of the gauge bosons are:
+
+\begin{equation}
+\begin{aligned}
+m_\gamma &= 0 \, ,\\
+m_Z &= \frac{v \sqrt{g^2 + g'^2}}{2} \, , \\
+m_W &= \frac{vg}{2} =  \cos\theta_W m_Z \, ,
+\end{aligned}
+\end{equation}
+
 
 The Higgs-Englert-Brout mechanism generates automatically a mass term for the gauge bosons, that does not break the global underlying $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ symmetry. The Higgs field is used also to make fermion mass terms arise, but in this case it is necessary to add the couplings by hand. The fermion masses are assumed to be proportional to the strength of the coupling and, unlike what happens with the masses of the gauge bosons, they are not related to other parameters of the theory. While the Higgs filed itself is enough to give mass to down-type fermions, the mass term for the down type ones requires the introduction of the complex conjugate of the Higgs field ($\Phi_C$):
 
@@ -380,8 +399,6 @@ Also the production cross section is found to be in agreement with the SM predic
 \end{figure}
 
  
-
-
 
 
 \section{Limits of the Standard Models and its Extensions}
