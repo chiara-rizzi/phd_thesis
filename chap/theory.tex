@@ -233,7 +233,7 @@ This doublet has hypercharge Y=1 and isospin $T=\frac{1}{2}$; the first componen
 
 \begin{equation}
 	\mathcal{L}_{\Phi} = ( \mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi) - V(\Phi) 
-	\label{eq:Lhiggs}
+	\label{eq:LHiggs}
 \end{equation}
 
 \noindent where $\mathcal{D}_{\mu}$ is the covariant derivative defined in Eq. \ref{eq:sm:covD} and the potential $V(\Phi)$ is given by:
@@ -246,21 +246,21 @@ This doublet has hypercharge Y=1 and isospin $T=\frac{1}{2}$; the first componen
 \noindent The two real parameters $\mu^2$ and $\lambda$ relate respectively to the mass term and the strength of the self-interaction term. The shape of the potential depends on the value of these parameters:
 \begin{itemize}
 \item If $\lambda < 0$, the potential does not present any stable minima, and this case is therefore unphysical.
-\item If $\lambda > 0$ and $\mu^2 > 0$ there is only one solution to the minimization of the potential, $\Phi=0$. This case is shown in Fig. \ref{fig:sm:higgsV}(a).
+\item If $\lambda > 0$ and $\mu^2 > 0$ there is only one solution to the minimization of the potential, $\Phi=0$. This case is shown in Fig. \ref{fig:sm:HiggsV}(a).
 \item If $\lambda > 0$ and $\mu^2 < 0$, the field acquires a vacuum expectation value (VEV) as the minima is not at zero; it lies instead on the points of the circumference such that:
 \begin{equation}
 \Phi^{\dagger} \Phi = \frac{\mu^2}{2 \lambda}  \equiv \frac{v^2}{2}
 \end{equation}
-\noindent Fig. \ref{fig:sm:higgsV}(b) illustrates this case.
+\noindent Fig. \ref{fig:sm:HiggsV}(b) illustrates this case.
 \end{itemize}
 
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.49\textwidth]{produce_plots/sm/higgs_posmu2.pdf}}
-\subfigure[]{\includegraphics[width=0.49\textwidth]{produce_plots/sm/higgs_negmu2.pdf}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{produce_plots/sm/Higgs_posmu2.pdf}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{produce_plots/sm/Higgs_negmu2.pdf}}
 \caption{Higgs potential in the case $\lambda > 0$ and $\mu^2 > 0$ (a) and $\lambda > 0$ and $\mu^2 < 0$ (b).}
-\label{fig:sm:higgsV}
+\label{fig:sm:HiggsV}
 \end{figure}
 
 Up to this point the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ symmetry is still intact, but the explicit choice of one of the infinite possible vacuum states for the Higgs field breaks the symmetry. According to the Goldstone theorem \cite{Goldstone:1962es}, the breaking of a continuous symmetry leads to the appearance of new massless scalar particles as allowed excitations. These new degrees of freedom can be absorbed by the existing gauge bosons, thus giving them mass. To meet the experimental requirement of a massless photon, the choice of the Higgs vacuum has not to break the electromagnetic symmetry ($U(1)_{EM}$), so the component of the Higgs doublet that acquires a VEV is the neutral one:
@@ -277,13 +277,13 @@ We can then expand small excitations around the minimum:
 \label{eq:hvphi}
 \end{equation}
 
-\noindent where $\phi(x)$ is the physical field associated with the Higgs boson, and $\vec{\theta}(x)$ the three degrees of freedom absorbed to give masses to the $Z$ and $W^\pm$ bosons. Inserting Eq. \ref{eq:hvphi} in Eq. \ref{eq:Lhiggs} relates the mass of the Higgs boson to the parameters in the potential:
+\noindent where $\phi(x)$ is the physical field associated with the Higgs boson, and $\vec{\theta}(x)$ the three degrees of freedom absorbed to give masses to the $Z$ and $W^\pm$ bosons. Inserting Eq. \ref{eq:hvphi} in Eq. \ref{eq:LHiggs} relates the mass of the Higgs boson to the parameters in the potential:
 \begin{equation}
 m_H = \sqrt{- 2 \mu^2} = \sqrt{2 \lambda} v
-\label{eq:sm:higgsmass}
+\label{eq:sm:Higgsmass}
 \end{equation}
 
-Since the numeric value of the $\mu^2$ and $\lambda$ parameters is not set, the theory does not predict a specific value for $m_H$. The $(\mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi)$ term in Eq. \ref{eq:Lhiggs} gives rise to the physical mass of the gauge boson, that at tree level are:
+Since the numeric value of the $\mu^2$ and $\lambda$ parameters is not set, the theory does not predict a specific value for $m_H$. The $(\mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi)$ term in Eq. \ref{eq:LHiggs} gives rise to the physical mass of the gauge boson, that at tree level are:
 
 \begin{equation}
 \begin{aligned}
@@ -333,7 +333,55 @@ If we identify as $g_f$ the coupling of the fermion $f$ to the Higgs field (\tex
 m_f =  \frac{1}{\sqrt{2}} v y_f
 \end{equation}
 
-The matrices $y_f$ are not necessarily diagonal, but they can be diagonalized through a unitary transformation, that we can interpret as the transformation that relates the mass eigenstates to the weak interaction eigenstates. In the quark sector, this transformation is encoded in the Cabibbo–Kobayashi–Maskawa (CKM) matrix \cite{Cabibbo:1963yz}\cite{Kobayashi:1973fv}, that describes the mixing of the down-type quarks. In the SM with three generations of fermions, the CKM matrix is specified by three angles and one complex phase, that can induce CP-violation.
+Note that, in the case of fermions, the coupling to the Higgs boson is directly proportional to the fermion mass.The matrices $y_f$ are not necessarily diagonal, but they can be diagonalized through a unitary transformation, that we can interpret as the transformation that relates the mass eigenstates to the weak interaction eigenstates. In the quark sector, this transformation is encoded in the Cabibbo–Kobayashi–Maskawa (CKM) matrix \cite{Cabibbo:1963yz}\cite{Kobayashi:1973fv}, that describes the mixing of the down-type quarks. In the SM with three generations of fermions, the CKM matrix is specified by three angles and one complex phase, that can induce CP-violation.
+
+\subsection{Measured Properties of the Higgs Boson}
+
+The SM does not predict the value of the Higgs mass, but this can be measured and, once it is know, the Higgs production cross section and decay fractions can be predicted accurately. These predictions can be verified experimentally, providing hints toward believing that the discovered boson is indeed the SM Higgs boson. In 2015 the ATLAS and CMS collaborations published a combined measurement of the Higgs boson mass \cite{Aad:2015zhl}:
+\begin{equation}
+m_H = 125.09 \pm 0.21 (\mathrm{stat.}) \pm 0.11 (\mathrm{syst.}) \;\; \mathrm{GeV}.
+\end{equation}
+
+This result uses the full Run1 ATLAS and CMS data, analyzed in the $H \rightarrow \gamma \gamma$ and $H \rightarrow ZZ \rightarrow 4 \; \mathrm{leptons}$ channels.
+
+
+The discussion of the Higgs mechanism in Section \ref{sec:smsusy:ew} highlights interesting properties of the interactions involving the Higgs boson. In particular, the strength of its coupling with fermions and bosons is proportional respectively to the mass or the square of the mass of the particle involved. This is reflected on the branching fractions: they are high for the decay to particles with the highest mass that kinematically allows a decay, and for the decays that happen through a loop of top quarks. The theoretical decay fractions for a Higgs mass of 125.09 GeV are reported in Table \ref{tab:SMBranchingFractions}. The relation between the fermion or boson mass and the Higgs coupling has been verified experimentally, as show in Fig. \ref{fig:sm:h_couplings_mass}(a) \cite{Khachatryan:2016vau}. 
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{clcr@{\hskip 0.4ex}l} \\ 
+\hline
+ &    Decay mode &\multicolumn{3}{c}{Branching fraction [\%]}  \\  \hline
+ \hline
+ &     $H \rightarrow b\bar{b}$       & &   $57.5$&${}\pm 1.9$    \\
+ &     $H \rightarrow WW$       & &   $21.6$&${}\pm 0.9$   \\
+ &     $H \rightarrow gg$       & &   $8.56$&${}\pm 0.86$  \\
+ &     $H \rightarrow \tau \bar{\tau}$       & &   $6.30$&${}\pm 0.36$  \\
+ &     $H \rightarrow c\bar{c}$       & &   $2.90$&${}\pm 0.35$  \\
+ &     $H \rightarrow ZZ$       & &   $2.67$&${}\pm 0.11$  \\
+ &     $H \rightarrow \gamma \gamma$       & &   $0.228$&${}\pm 0.011$  \\
+ &     $H \rightarrow Zg$       & &   $0.155$&${}\pm 0.014$  \\
+ &     $H \rightarrow \mu \bar{\mu}$       & &   ~~$0.022$&${}\pm 0.001$  \\ 
+\hline
+\end{tabular} 
+\end{center}
+\caption{Standard Model predictions for the decay branching fractions of a Higgs boson with a mass of 125.09~GeV, together with their uncertainties~\cite{Heinemeyer:2013tqa}. Table follows Ref. \cite{Khachatryan:2016vau}.}
+\label{tab:SMBranchingFractions}
+\end{table} 
+
+Also the production cross section is found to be in agreement with the SM predictions within uncertainties. Figure \ref{fig:sm:h_couplings_mass} (b) shows the best fit value of Higgs production cross section times branchng fraction in the different production and decay modes \cite{Khachatryan:2016vau}.
+
+\begin{figure}[ht]
+\centering
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/CMS-HIG-15-002_Figure_019}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/CMS-HIG-15-002_Figure_007}}
+\caption{(a) Best fit values as a function of particle mass for the combination of ATLAS and CMS data. (b) Best fit value of Higgs production cross section times branchng fraction in the different production and decay modes. Figure from \cite{Khachatryan:2016vau}.}
+\label{fig:sm:h_couplings_mass}
+\end{figure}
+
+ 
+
+
 
 
 \section{Limits of the Standard Models and its Extensions}
@@ -371,7 +419,7 @@ While the previous section discusses objective limits of the SM, there are also 
 
 \subsubsection*{Hierarchy Problem and Higgs Mass}
 
-The expression for the mass of the Higgs boson in Eq. \ref{eq:sm:higgsmass} contains only the tree level component. The proper computation should include the radiative contributions from all the particles that couple with the Higgs boson, directly or indirectly. A fermion, whose Yukawa coupling leads to the interaction $-y_f \phi \bar{f} f$, will produce a correction to the Higgs mass with a divergent integral; this can be computed for example with a cut-off regularization, and in this case the resulting correction to the Higgs mass, shown in Fig. \ref{fig:sm:h_corr}(a), is:
+The expression for the mass of the Higgs boson in Eq. \ref{eq:sm:Higgsmass} contains only the tree level component. The proper computation should include the radiative contributions from all the particles that couple with the Higgs boson, directly or indirectly. A fermion, whose Yukawa coupling leads to the interaction $-y_f \phi \bar{f} f$, will produce a correction to the Higgs mass with a divergent integral; this can be computed for example with a cut-off regularization, and in this case the resulting correction to the Higgs mass, shown in Fig. \ref{fig:sm:h_corr}(a), is:
 \begin{equation}
 \Delta m_H^2 \>=\>  
 -{|y_f|^2\over 8 \pi^2} \Lambda_{UV}^2 + \mathcal{O}(\ln \Lambda_{UV} )
@@ -394,7 +442,8 @@ Beside the first term, proportional to $\Lambda_{UV}^2$, that can be thought as 
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_f.pdf}}
+\subfigure[]
+{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_f.pdf}}
 \subfigure[]{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_s.pdf}}
 \caption{Correction to the Higgs boson propagator form the interaction with a fermion (a) and with a scalar (b), figure from Ref. \cite{Martin:1997ns}.}
 \label{fig:sm:h_corr}
@@ -474,7 +523,7 @@ where $P$ is the four-momentum operator. These relations, that define the Supers
 The irreducible representations of the SUSY algebra are the \textit{supermultiplets}, that contain both bosons and fermions. Particles within the same supermultiplet are known as \textit{superpartners} of each others. Superpartners of the SM particles are indicated with the same letter but with a $\sim$ on top of it. Depending on their particle content, supermultiplets are classified in different categories:
 
 \begin{itemize}
-\item \textit{Chiral supermultiplets} are the ones containing the SM fermions and their superpartners. Each Dirac fermionic filed can be seen as two separate Weyl filed, each of which has two degrees of freedom and is associated with a complex scalar as a superpartner. The name given to superpartners of fermions is \textit{sfermions} (e.g. the superpartner of the top is the \textit{stop} and the superpartner of the bottom is the \textit{sbottom}). Since chiral supermultiplets are formed by spin-0 and spin-$\frac{1}{2}$ particles, they contain also the SUSY extended Higgs sector, as described in Section \ref{sec:susy:higgs}.
+\item \textit{Chiral supermultiplets} are the ones containing the SM fermions and their superpartners. Each Dirac fermionic filed can be seen as two separate Weyl filed, each of which has two degrees of freedom and is associated with a complex scalar as a superpartner. The name given to superpartners of fermions is \textit{sfermions} (e.g. the superpartner of the top is the \textit{stop} and the superpartner of the bottom is the \textit{sbottom}). Since chiral supermultiplets are formed by spin-0 and spin-$\frac{1}{2}$ particles, they contain also the SUSY extended Higgs sector, as described in Section \ref{sec:susy:Higgs}.
 
 \item \textit{Gauge supermultiplets} contain gauge bosons and their superpartners. Each spin-1 SM boson is associated to a spin-$\frac{1}{2}$ Weyl fermion, as before the electroweak symmetry breaking all the gauge bosons are massless and have only two degrees of freedom. The name of the superpartners of the gauge bosons is the same as the corresponding SM particle but with a -ino suffix (e.g. the gluon superpartner is the \textit{gluino}). 
 
@@ -528,7 +577,7 @@ sleptons, leptons & $L$ &$({\stilde{\nu}}\>\>{\stilde{e}}_L )$&
 ($\times 3$ families) & $\bar{e}$
 &${\stilde{e}}^*_R$ & $e^\dagger_R$ & $(\>{\bf 1},\> {\bf 1},\>1)$
 \\  \hline
-Higgs, higgsinos &$H_u$ &$(H_u^+\>\>\>H_u^0 )$&
+Higgs, Higgsinos &$H_u$ &$(H_u^+\>\>\>H_u^0 )$&
 $(\stilde{H}_u^+ \>\>\> \stilde{H}_u^0)$& 
 $(\>{\bf 1},\>{\bf 2}\>,\>+{1\over 2})$
 \\ &$H_d$ & $(H_d^0 \>\>\> H_d^-)$ & $(\stilde{H}_d^0 \>\>\> \stilde{H}_d^-)$& 
@@ -568,7 +617,7 @@ the Minimal Supersymmetric Standard Model. Table follows Ref. \cite{Martin:1997n
 \end{center}
 \end{table}
 
-The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, and the gauge supermultiples in Table \ref{tab:gauge}. Note that the states defined in these tables are interaction eigenstates, but not necessary mass eigenstates as mixing is possible. In particular, the higgsinos mix with the gauginos to form \textit{neutralinos} ($\stilde{\chi}^0_i$) and \textit{charginos} ($\stilde{\chi}^\pm_i$), as well as the sfermions associated with the left and right component of the same SM fermion can mix to form the sfermion mass eigenstates (e.g. $\stilde{t}_L$ and $\stilde{t}_R$ mix to form $\stilde{t}_1$ and $\stilde{t}_2$). The gluinos instead do not undergo any mixing, as there are no other superpartners with the proper quantum numbers. The mass eigenstates of the MSSM is reported in Table \ref{tab:undiscovered}, assuming that the mixing within the first- and second-generation sfermions is negligible.
+The chiral supermultiplets of the MSSM are described in Table \ref{tab:chiral}, and the gauge supermultiples in Table \ref{tab:gauge}. Note that the states defined in these tables are interaction eigenstates, but not necessary mass eigenstates as mixing is possible. In particular, the Higgsinos mix with the gauginos to form \textit{neutralinos} ($\stilde{\chi}^0_i$) and \textit{charginos} ($\stilde{\chi}^\pm_i$), as well as the sfermions associated with the left and right component of the same SM fermion can mix to form the sfermion mass eigenstates (e.g. $\stilde{t}_L$ and $\stilde{t}_R$ mix to form $\stilde{t}_1$ and $\stilde{t}_2$). The gluinos instead do not undergo any mixing, as there are no other superpartners with the proper quantum numbers. The mass eigenstates of the MSSM is reported in Table \ref{tab:undiscovered}, assuming that the mixing within the first- and second-generation sfermions is negligible.
 
 
 \begin{table}[tb]
@@ -637,7 +686,7 @@ Once the MSSM particles are introduced the computation of the evolution of the c
 \end{figure}
 
 \subsubsection{MSSM Higgs Sector}
-\label{sec:susy:higgs}
+\label{sec:susy:Higgs}
 
 To maintain an holomorphic superpotential, SUSY requires at least two SU(2) doublets: one to give mass to up-type quarks ($H_u$) and one to give mass to the the down-type quarks ($H_d$). The two doublets provide 8 degrees of freedom. Three of them are the ones needed to give masses to the gauge bosons, while the other 5 become observable particles:
 \begin{itemize}
@@ -695,14 +744,14 @@ Not all the superpartners have the same relevance in the contribution to the Hig
 \item Gluinos, that contribute at two loops, since they give a one-loop correction to the stop mass
 \end{itemize}
 
-% formula for relation between mass difference and correction to higgs mass
+% formula for relation between mass difference and correction to Higgs mass
 
-%In the MSSM, the mass of the $Z$ boson and the higgs sector masses are related at tree level through:
+%In the MSSM, the mass of the $Z$ boson and the Higgs sector masses are related at tree level through:
 %\begin{equation}
 %\label{eq:tune}
 %-\frac{m_Z^2}{2} = |\mu|^2 + m_{H_u}^2.
 %\end{equation}
-%Where $\mu$ is the higgsino mass parameter and $m_{H_u}$ the mass term for the higgs filed that gives mass to down-type quarks. While \ref{eq:tune} holds only at tree level, it still means that if the masses of the superpartners in the higgs sector are too large, fine-tuned loop corrections will be required to bring the left side of the equation down to the observed value of the $Z$-boson mass.
+%Where $\mu$ is the Higgsino mass parameter and $m_{H_u}$ the mass term for the Higgs filed that gives mass to down-type quarks. While \ref{eq:tune} holds only at tree level, it still means that if the masses of the superpartners in the Higgs sector are too large, fine-tuned loop corrections will be required to bring the left side of the equation down to the observed value of the $Z$-boson mass.
 
 %\begin{equation}
 %\Delta \equiv \frac{2\delta m_{H}^{2}}{m_{h}^{2}}.
