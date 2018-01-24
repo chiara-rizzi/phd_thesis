@@ -7,7 +7,7 @@ gStyle.SetOptTitle(0)
 
 def plot(fb, name):
     
-    c = TCanvas("can","can",600,900)
+    c = TCanvas("can","can",600,750)
     c.cd()
 #fb = TF2("fb","-2000*x*y + 3*(x*x*y*y)",-10,10,-10,10);
 #fb.SetLineColor(kRed)
