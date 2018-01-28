@@ -90,36 +90,58 @@ where $\gamma$ is the Lorentz factor of the particle. This means that while the 
 \label{fig:lhc:phase}
 \end{figure}
 
+
+In the LHC beams particles are not distributed continuously, as this would now be allowed by phase instabilities, but are divided in \textit{bunches}. 
 The areas of stable motion are identified as \textit{bucket}, and the area of the bucket is the beam \textit{longitudinal acceptance}. The beam bunches fill only a part of the bucket, and the area of the beam bunches is the \textit{longitudinal beam emittance}. Fig. \ref{fig:lhc:phase}(b) shows a schematic view of the bucket and the bunch area.
 
 \subsection{Operational Parameters}
 
 \begin{equation}
 \label{eq:cern:nev}
-N_{ev} = \sigma \,\, \mathcal{L}_{int}
+N_{events}^{process} = \sigma_{process} \,\, \mathcal{L}_{int}
 \end{equation}
 
-The integrated luminosity is the time integral of the instantaneous luminosity $\mathcal{L}$, 
+The integrated luminosity is the time integral of the \textit{instantaneous luminosity} $\mathcal{L}$, 
 
 \begin{equation}
 \label{eq:cern:intlumi}
 \mathcal{L}_{int} = \int \mathcal{L} \, dt
 \end{equation}
 
-which in turn is defined as:
+where the instantaneous luminosity is in turn defined as:
 
 \begin{equation}
+\mathcal{L}=\frac{f N_1 N_2}{4 \pi \sigma_x \sigma_y} \;
 \label{eq:cern:lumi}
-\mathcal{L}=\frac{f n_1 n_2}{4 \pi \sigma_x \sigma_y}
 \end{equation}
 
+where f is the revolution frequency, $N_1$ and $N_2$ are the number of particle in each beam and $\sigma_{x,y}$  are the x and y dimensions of the beam at the interaction point.
 
-In eq. \ref{eq:cern:lumi}:
-\begin{itemize}
-\item f is the revolution frequency
-\item $n_1$ and $n_2$ are the number of particle in each beam
-\item $\sigma_x$ and $\sigma_y$ are the x and y dimensions of the beam at the interaction point
-\end{itemize}
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{c c c c c }
+\hline 
+Parameter & 2015 & 2016 & 2017 & Design \\ 
+\hline 
+\hline
+Prtons per bunch N$_b$ [$10^11$ p] & $\approx$ 1.2 & $\approx$ 1.1 & $\approx$ 1.2 & 1.15 \\ 
+\hline 
+Number of bunches k & 2244 & 2220 & $\approx$ 2250 & 2780 \\ 
+\hline 
+Emittance $\epsilon$ [mm mrad] & $\approx$ 3.5 & $\approx$ 2.2 & $\approx$ 2.2 & 3.5 \\ 
+\hline 
+$\beta^*$ [cm] & 80 & 40 & 40 (33) & 55 \\
+\hline
+Crossing angle [$\mu$rad] & 290 & 370 (280) & 300 (340) & 285 \\
+\hline
+Peak luminosity [$10^{34} cm^{-2}s^{-1}$] & 0.51 & 1.4 & 1.7(1.9) & 1.0 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{LHC operational parameters in Run2.}
+\label{tab:lhc:param}
+\end{table}
+
 
 
 \subsection{Accelerator Complex}
