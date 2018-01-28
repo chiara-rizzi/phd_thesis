@@ -14,12 +14,12 @@ In this section we give a brief introduction to the Large Hadron Collider (LHC) 
 
 \subsection{A Circular Hadron Collider}
 
-The LHC is a circular hadron accelerator, located in a 26.7-km-long underground tunnel (with a depth ranging between 50 and 140 meters) that was previously hosting the Large Electron-Positron Collider (LEP), a CERN accelerator active from 1989 to 2000. The LHC can accelerate protons up to a design center-of-mass energy of 7 TeV. Accelerating particles to very high energies is necessary to both study the structure of the particles themselves at smaller scales, and to create heavy states in collisions. Cosmic rays provide a source of particles with energies up to $10^7$ times more than what the LHC is capable of, but these extremely energetic rays are very rare, and the flux is not controlled. Accelerators provide a well controlled flux of particles of a specific type in a specific location, and this allows the study of these particles with dedicated detectors.
+The LHC is a circular hadron accelerator, located in a 26.7-km-long underground tunnel (with a depth ranging between 50 and 140 meters) that was previously hosting the Large Electron-Positron Collider (LEP), a CERN accelerator active from 1989 to 2000. The LHC can accelerate protons up to a design center-of-mass energy of 13 TeV. Accelerating particles to very high energies is necessary to both study the structure of the particles themselves at smaller scales, and to create heavy states in collisions. Cosmic rays provide a source of particles with energies up to $10^7$ times more than what the LHC is capable of, but these extremely energetic rays are very rare, and the flux is not controlled. Accelerators provide a well controlled flux of particles of a specific type in a specific location, and this allows the study of these particles with dedicated detectors.
 
 A circular accelerator simplifies the acceleration of the particles, as this can happen over several revolutions. When a charged particle travels on an orbit of radius r under the effect of a magnetic field B, its momentum p is given by:
 \begin{equation}
 \label{eq:cern:p03br}
-p = 0.3 B r,
+p = 0.3 r B,
 \end{equation}
 \noindent where the momentum is expressed in GeV, B in Tesla and the radius of the orbit in meters. For a given magnetic field, a larger radius allows to reach higher energies. 
 
@@ -32,7 +32,7 @@ At the LHC it has been chosen to study collisions with protons and lead ions. Th
 
 \begin{equation}
 \label{eq:cern:sync}
-\frac{dE}{dt} \propto \frac{E^4}{m^4 r}
+\frac{dE}{dt} \propto \frac{E^4}{m^4 r^2}
 \end{equation}
 
 The larger mass of a proton with respect to an electron leads to a decrease of a factor $10^{12}$ of the energy lost for syncrotron radiation. This choice comes with a price: proton-proton collisions lead to less clean events, where a lot of soft interactions covering the interesting hard interactions and the center of mass is unknown as the particles taking part in hard interactions are not the protons themselves but their constituents.
@@ -40,7 +40,7 @@ The larger mass of a proton with respect to an electron leads to a decrease of a
 \subsection{Magnet System} 
 
 
-The LHC is not a perfect circumference: it is composed by eight arcs (\textit{sectors}), where the magnetic system is located, and eight straight sections containing the resonant cavities, the detectors, the equipment for beam injection and extraction, and other instrumentation. Magnetic fields are used to govern the trajectory of the particles. In the LHC there are more than nine thousand magnets, constructed from a superconducting alloy of niobium and titanium. 150 tons of super-fluid helium at the temperature of 1.9 K are used to maintain the magnet system in the superconducting regime. The different types of magnets necessary to achieve a proper control over the trajectory of the particles are:
+The LHC is not a perfect circumference: it is composed by eight arcs (\textit{sectors}), where the magnetic system is located, and eight straight sections containing the resonant cavities, the four interaction points with and the detectors, the equipment for beam injection and extraction, and other instrumentation. Magnetic fields are used to govern the trajectory of the particles. In the LHC there are more than nine thousand magnets, constructed from a superconducting alloy of niobium and titanium. 150 tons of super-fluid helium at the temperature of 1.9 K are used to maintain the magnet system in the superconducting regime. The different types of magnets necessary to achieve a proper control over the trajectory of the particles are:
 
 \subsubsection*{Dipoles} 
 Dipoles are used to create a vertical magnetic field, to bend the particles in the horizontal plane and give the dominant circular orbit. The LHC has 1232 dipoles, each 15 m long and providing a magnetic field of 8.3 T. The current necessary to achieve this strong magnetic field is 11.8 kA.
@@ -94,7 +94,7 @@ where $\gamma$ is the Lorentz factor of the particle. This means that while the 
 In the LHC beams particles are not distributed continuously, as this would now be allowed by phase instabilities, but are divided in \textit{bunches}. 
 The areas of stable motion are identified as \textit{bucket}, and the area of the bucket is the beam \textit{longitudinal acceptance}. The beam bunches fill only a part of the bucket, and the area of the beam bunches is the \textit{longitudinal beam emittance}. Fig. \ref{fig:lhc:phase}(b) shows a schematic view of the bucket and the bunch area.
 
-\subsection{Operational Parameters}
+\subsection{Luminosity and Operational Parameters}
 
 The amount of data collected by an accelerator is quantified by the \textit{integrated luminosity} $\mathcal{L}_{int}$.
 Given a certain process with production cross section $\sigma$, the total number of events for that process is the product of cross section and integrated luminosity:
@@ -111,20 +111,31 @@ The integrated luminosity is the time integral of the \textit{instantaneous lumi
 \mathcal{L}_{int} = \int \mathcal{L} \, dt
 \end{equation}
 
-and the instantaneous luminosity is in turn defined as:
+and, assuming Gaussian particle distribution and same characteristics for the two beams, the instantaneous luminosity can be expressed as:
 
 \begin{equation}
-\mathcal{L}=\frac{f N_b n^2}{4 \pi \sigma_{x,y} } \;
+\mathcal{L}=\frac{f N_b n^2}{4 \pi \sigma_{x}\sigma_{y} } \;
 \label{eq:cern:lumi}
 \end{equation}
 
-where f is the revolution frequency, $N_b$ the number of bunches in each beam, $n$ the number of protons in each bunch and $\sigma_{x,y}$  is the transverse beam size at the interaction point. The transverse size can be expressed as:
+where f is the revolution frequency, $N_b$ the number of bunches in each beam, $n$ the number of protons in each bunch and $\sigma_{x(y)}$  is the transverse beam size at the interaction point in the x(y) direction . 
 
+The instantaneous luminosity defined in Eq. \ref{eq:cern:lumi} needs to be corrected for two factors. First of all, this formula assumes a head-on collision between the bunches; in reality, to avoid unwanted interactions the beams collide with a crossing angle, and a large crossing angle decreases the instantaneous luminosity. The second correction is related to the transverse size, that can be expressed as:
 \begin{equation}
 \sigma_{x,y} = \sqrt{  \epsilon \beta^* } \; ,
 \end{equation}
+where $\epsilon$ is the beam emittance and $\beta^*$ the beta function. Beam collisions happen in \textit{minibeta insertions}, drift spaces with a beta waist in the center, where the beam size is as small as possible. In the vicinity of the minimum, the beta function evolves like:
 
-where $\epsilon$ is the beam emittance and $\beta^*$ the betatron function. The instantaneous luminosity defined in Eq. \ref{eq:cern:lumi} needs to be corrected for two factors. First of all, this formula assumes a head-on collision between the bunches; in reality, to avoid unwanted interactions the beams collide with a crossing angle, and a large crossing angle decreases the instantaneous luminosity.
+\begin{equation}
+\beta(s) = \beta^* + \frac{s^2}{\beta^*} \; .
+\end{equation}
+
+From this it is possible to see that the smaller the beta function, the larger the dependence with s, so a bunch with a finite size will not have the same beta function as a whole (\textit{hour glass effect}). This correction becomes more important with the decrease of the $\beta^*$ value. With the LHC design parameters, the effect of crossing angle and hour glass changes the the instantaneous luminosity by about 20\%.
+
+The main limitations in the choice of the parameters that regulate the luminosity are \textit{collective effects}, that could cause beam instabilities if the number of bunches or the number of proton per bunch is too high, and the limitations in the available aperture in the minbeta quadrupoles, that impacts $\beta^*$.
+
+The summary of the LHC operational parameters during Run2 is reported in Table \ref{tab:lhc:param}.
+
 
 \begin{table}[ht]
 \begin{center}
@@ -139,7 +150,7 @@ Number of bunches (N$_b$) & 2244 & 2220 & $\approx$ 2250 & 2780 \\
 \hline 
 Emittance ($\epsilon$) [mm mrad] & $\approx$ 3.5 & $\approx$ 2.2 & $\approx$ 2.2 & 3.5 \\ 
 \hline 
-Betatron function ($\beta^*$) [cm] & 80 & 40 & 40 (33) & 55 \\
+Beta function ($\beta^*$) [cm] & 80 & 40 & 40 (33) & 55 \\
 \hline
 Crossing angle [$\mu$rad] & 290 & 370 (280) & 300 (340) & 285 \\
 \hline
@@ -147,20 +158,29 @@ Peak luminosity [$10^{34} cm^{-2}s^{-1}$] & 0.51 & 1.4 & 1.7(1.9) & 1.0 \\
 \hline
 \end{tabular}
 \end{center}
-\caption{LHC operational parameters in Run2.}
+\caption{LHC operational parameters in Run2 and their design value.}
 \label{tab:lhc:param}
 \end{table}
 
 
+The luminosity profile changes over time, and different experiments have different luminosity needs. ATLAS and CMS profit form having the maximum luminosity possible, while LHCb and ALICE have their top functionality at lower luminosity, and therefore apply a \textit{luminosity leveling} that consists in changing the offset of the beams during the run, to maintain a constant (low) value of the instantaneous luminosity.
+
+An high number of particles participating in a single bunch crossing creates an elevated number of simultaneous interactions (\textit{pile-up}). In 2012 the LHC operated with a bunch spacing of 50 ns, leading to a pile-up of about 35 events per bunch crossing. With the increase in energy from Run1 to Run2, the same settings would have implied more than 100 events, while the limit for the proper functioning of the detectors is about 50. This is what motivated the choice to move from the 50 ns bunch spacing used in Run1 to the 25 ns in Run2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up.
+
 
 \subsection{Accelerator Complex}
 
+Protons are injected in the LHC only after being accelerated to 450 GeV by a sequence of machines.
+
 \begin{itemize}
-\item Linac
-\item PS Booster
-\item PS
-\item SPS
+\item Protons are extracted from a $H_2$ at the Linac2 facility, a linear accelerator of 33 m that brings them to the energy of 50 MeV.
+\item The Proton Synchrotron Booster (PSB) is the first synchrotron in the acceleration chain (with a circumference of 157 m), that in 1.2 s increases the energy of the protons from 50 MeV to 1.4 GeV.
+\item With a circumference of 628 m, the Proton Synchrotron (PS) brings the protons to about 26 GeV. This was the oldest synchrotron experiment at CERN.
+\item The Super Proton Synchrotron (SPS) is the first accelerator of the chain to be underground (about 30 m) and has a circumference of 6.9 km; it brings the proton energy at 450 GeV. Beside preparing the protons to be injected into the LHC, the SPS provides beam also to the North Area, where neutrino experiments are held, and to the AWAKE and HiRadMat experiments.
+\item The LHC is the last step of this chain, and it accelerates the protons form 450 GeV to 6.5 TeV (the design energy is 7 TeV); while in the LHC the protons gain about 0.5 MeV per turn, so it takes about 15 minutes to reach 6.5 TeV.
 \end{itemize}
+
+The accelerator complex of CERN is shown in Fig. \ref{fig:lhc:acc}. The acceleration chain for lead ions is the same, except that the extraction and first acceleration is performed by LINAC3 instead than by LINAC2.
 
 \begin{figure}[ht]
 \centering
