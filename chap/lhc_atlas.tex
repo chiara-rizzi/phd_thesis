@@ -96,9 +96,12 @@ The areas of stable motion are identified as \textit{bucket}, and the area of th
 
 \subsection{Operational Parameters}
 
+The amount of data collected by an accelerator is quantified by the \textit{integrated luminosity} $\mathcal{L}_{int}$.
+Given a certain process with production cross section $\sigma$, the total number of events for that process is the product of cross section and integrated luminosity:
+
 \begin{equation}
 \label{eq:cern:nev}
-N_{events}^{process} = \sigma_{process} \,\, \mathcal{L}_{int}
+N_{\mathrm{events}} = \sigma \,\, \mathcal{L}_{int} \; .
 \end{equation}
 
 The integrated luminosity is the time integral of the \textit{instantaneous luminosity} $\mathcal{L}$, 
@@ -108,14 +111,20 @@ The integrated luminosity is the time integral of the \textit{instantaneous lumi
 \mathcal{L}_{int} = \int \mathcal{L} \, dt
 \end{equation}
 
-where the instantaneous luminosity is in turn defined as:
+and the instantaneous luminosity is in turn defined as:
 
 \begin{equation}
-\mathcal{L}=\frac{f N_1 N_2}{4 \pi \sigma_x \sigma_y} \;
+\mathcal{L}=\frac{f N_b n^2}{4 \pi \sigma_{x,y} } \;
 \label{eq:cern:lumi}
 \end{equation}
 
-where f is the revolution frequency, $N_1$ and $N_2$ are the number of particle in each beam and $\sigma_{x,y}$  are the x and y dimensions of the beam at the interaction point.
+where f is the revolution frequency, $N_b$ the number of bunches in each beam, $n$ the number of protons in each bunch and $\sigma_{x,y}$  is the transverse beam size at the interaction point. The transverse size can be expressed as:
+
+\begin{equation}
+\sigma_{x,y} = \sqrt{  \epsilon \beta^* } \; ,
+\end{equation}
+
+where $\epsilon$ is the beam emittance and $\beta^*$ the betatron function. The instantaneous luminosity defined in Eq. \ref{eq:cern:lumi} needs to be corrected for two factors. First of all, this formula assumes a head-on collision between the bunches; in reality, to avoid unwanted interactions the beams collide with a crossing angle, and a large crossing angle decreases the instantaneous luminosity.
 
 \begin{table}[ht]
 \begin{center}
@@ -124,13 +133,13 @@ where f is the revolution frequency, $N_1$ and $N_2$ are the number of particle 
 Parameter & 2015 & 2016 & 2017 & Design \\ 
 \hline 
 \hline
-Prtons per bunch N$_b$ [$10^11$ p] & $\approx$ 1.2 & $\approx$ 1.1 & $\approx$ 1.2 & 1.15 \\ 
+Prtons per bunch (n) [$10^{11}$ p] & $\approx$ 1.2 & $\approx$ 1.1 & $\approx$ 1.2 & 1.15 \\ 
 \hline 
-Number of bunches k & 2244 & 2220 & $\approx$ 2250 & 2780 \\ 
+Number of bunches (N$_b$) & 2244 & 2220 & $\approx$ 2250 & 2780 \\ 
 \hline 
-Emittance $\epsilon$ [mm mrad] & $\approx$ 3.5 & $\approx$ 2.2 & $\approx$ 2.2 & 3.5 \\ 
+Emittance ($\epsilon$) [mm mrad] & $\approx$ 3.5 & $\approx$ 2.2 & $\approx$ 2.2 & 3.5 \\ 
 \hline 
-$\beta^*$ [cm] & 80 & 40 & 40 (33) & 55 \\
+Betatron function ($\beta^*$) [cm] & 80 & 40 & 40 (33) & 55 \\
 \hline
 Crossing angle [$\mu$rad] & 290 & 370 (280) & 300 (340) & 285 \\
 \hline
