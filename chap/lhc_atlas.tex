@@ -1,12 +1,20 @@
 \chapter{LHC and ATLAS}
 \label{chap:cern}
 
-The analyses presented in this thesis use the data collected by the ATLAS experiment in 2015, 2016 and 2017 at \cmtre TeV; the ATLAS experiment is one of the four main experiments at the Large Hadron Collider (LHC) at CERN. In this chapter we will first describe the experimental setup of the LHC in sec. \ref{sed:cern:lhc} and then the ATLAS detector in sec. \ref{sed:cern:atlas}.
+The analyses presented in this thesis use the data collected by the ATLAS experiment in 2015, 2016 and 2017 at \cmtre TeV; the ATLAS experiment is one of the four main experiments at the Large Hadron Collider (LHC) at CERN. Section \ref{sed:cern:lhc} of this chapter describes the LHC accelerator complex, followed by a description of the ATLAS detector in Section \ref{sed:cern:atlas}.
 
 %%%%%%%%%%%%%%%%%% LHC
 
 \section{The Large Hadron Collider}
 \label{sed:cern:lhc}
+
+In this section we give a brief introduction to the Large Hadron Collider (LHC) \cite{1748-0221-3-08-S08001}, at the moment the largest and most powerful particle accelerator in the world, hosted by the European Organization for Nuclear Research (CERN) and active since September 2008.
+
+
+
+\subsubsection{A Circular Hadron Collider}
+
+The LHC is a circular hadron accelerator, located in a 26.7-km-long underground tunnel (with a depth ranging between 50 and 140 meters) that was previously hosting the Large Electron-Positron Collider (LEP), a CERN accelerator active from 1989 to 2000. The LHC can accelerate protons up to a design center of mass energy of 7 TeV. Accelerating particles to very high energies is necessary to both study the structure of the particles themselves at smaller scales, but also to crease heavy states in collisions. Cosmic rays provide a source of particles with energies up to $10^7$ times more than what the LHC is capable of. But these extremely energetic rays are very rare, and the flux is not controlled. Accelerators provide a well controlled flux of particles of a specific type in a specific location, and this allows the study of these particles with dedicated detectors.
 
 The momentum of a particle kept in a circular trajectory by a magnetic field is given by:
 \begin{equation}
@@ -14,15 +22,38 @@ The momentum of a particle kept in a circular trajectory by a magnetic field is 
 p = 0.3 B r,
 \end{equation}
 
-\noindent where B is the magnetic field expressed in tesla, r the radius of the circumference in meters and the resulting momentum is expressed in GeV.
+\noindent where B is the magnetic field expressed in Tesla, r the radius of the circumference in meters and the resulting momentum is expressed in GeV.
 
 
-Syncrotron Radiation, which leads to an energy loss inversely proportional to the fourth power of the mass of the particle:
+The choice of suitable particles for a collider experiment is limited by two factors: they need to be charged, in order to be accelerated and guided through electric and magnetic fields, and they need to be stable enough not to decay before being used for collisions. These criteria effectively limit the choice to protons, electrons and their antiparticles, in addition to ions. 
+
+At the LHC it has been chosen to study collisions with protons and lead ions. Three types of collisions are studied: proton-proton ($p-p$), lead-lead ($Pb-Pb$) and also proton-lead ($Pb-p$). The main reason to prefer protons over electrons is the energy loss that affects charged particles accelerated in a circular trajectory (\textit{syncrotron radiation}), that decreases with the fourth power of the mass of the particle:
+
 \begin{equation}
 \label{eq:cern:sync}
 \frac{dE}{dt} \propto \frac{E^4}{m^4 r}
 \end{equation}
 
+The larger mass of a proton with respect to an electron leads to a decrease of a factor $10^{12}$ of the energy lost for syncrotron radiation. This choice comes with a price: proton-proton collisions lead to less clean events, where a lot of soft interactions covering the interesting hard interactions and the center of mass is unknown as the particles taking part in hard interactions are not the protons themselves but their constituents.
+
+\subsection{Magnet System and Resonant Cavities}
+
+The LHC is not a perfect circumference: it is composed by eight arcs (\textit{sectors}), where the magnetic system is located, and eight straight sections containing the resonant cavities, the detectors, the equipment for beam injection and extraction, and other instrumentation. Magnetic fields are used to govern the trajectory of the particles. In the LHC there are more than nine thousand magnets, constructed from a superconducting alloy of niobium and titanium. 150 tons of super-fluid helium at the temperature of 1.9 K are used to maintain the magnet system in the superconducting regime. The different types of magnets necessary to achieve a proper control over the trajectory of the particles are:
+
+\begin{itemize}
+\item \textit{Dipoles}. Dipoles are used to create a vertical magnetic field, to bend the particles in the horizontal plane and give the dominant circular orbit. The LHC has 1232 dipoles, each 15 m long and providing a magnetic field of 8.3 T. The current necessary to achieve this strong magnetic field is 11.8 kA.
+
+
+\item \textit{Quadrupoles}. The LHC has 858 quadrupoles, used for beam focusing. A single quadrupole can focus the beam either in the vertical or horizontal plane, but causes a defocusing on the other; conventionally a quadrupole is denoted as focusing if it is oriented to focus in the horizontal plane. A combination of focusing and defocusing quarupoles separated by some drift space (\textit{FODO lattice}) is used to keep both planes focused, and gives rise to \textit{Betatron oscillations}.
+
+\item \textit{Higher-order Magnets}. Beside dipoles and quadrupoles, in the LHC there are about 600 higher-order magnets are used to maintain a good beam quality; for example sextupoles are used to correct the spread in Betatron tune caused by the quadrupoles.
+
+\end{itemize}
+
+While the orbit of the particles is governed through magnetic fields, longitudinal electric fields are used for acceleration. In the LHC the electric filed is provided by the radiofrequency (RF) cavities. There are overall 16 RF cavities, 8 per beam, hosted in four cryo-modules. Each cavity can create a field up to 2 MV (providing an accelerating field of 5 MV/m), and oscillates with a frequency of 400 MHz. 
+
+
+\subsection{Operational Parameters}
 
 \begin{equation}
 \label{eq:cern:nev}
@@ -51,7 +82,22 @@ In eq. \ref{eq:cern:lumi}:
 \item $\sigma_x$ and $\sigma_y$ are the x and y dimensions of the beam at the interaction point
 \end{itemize}
 
+
 \subsection{Accelerator Complex}
+
+\begin{itemize}
+\item Linac
+\item PS Booster
+\item PS
+\item SPS
+\end{itemize}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{figures/lhc/acc_complex.pdf}
+\caption{CERN accelerator complex \cite{Christiane:1260465}.}
+\label{fig:lhc:acc}
+\end{figure}
 
 \subsection{Experiments at the LHC}
 
@@ -116,7 +162,7 @@ p_z = p_T \,\sinh \eta
 
 \subsection{Inner Detector}
 
-
+\subsubsection*{IBL}
 
 \subsubsection*{Pixel Detector}
 
@@ -128,10 +174,7 @@ p_z = p_T \,\sinh \eta
 
 
 
-\subsubsection*{IBL}
-
-
-\subsection{CalorimetersFaculy}
+\subsection{Calorimeters}
 
 \subsubsection*{Electromagnetic Calorimeter}
 
