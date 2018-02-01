@@ -16,12 +16,51 @@ The ability to accurately identify particles and reconstruct their energy is wha
 
 
 \subsection{Tracking and Spectrometry}
+\label{sec:dec:tracking}
 A tracking device measures the traces left by charged particles passing through it. To allow the determination of the momentum and the charge of a particle, a tracking device needs to be accompanied by a magnetic field. 
 
+The relative uncertainty on the momentum is given by:
+\begin{equation}
+\frac{\sigma_p}{p} = \frac{p}{0.3 B L^2}\sigma \sqrt{C_N}
+\end{equation}
+
+
 \subsection{Calorimetry}
+\label{sec:dec:calo}
+
+Calorimeters can measure the energy of both charged and neutral particles through a destructive measurement: the energy of the particles is deposited in the detector material and transformed into a measurable quantity. Because of their sensitivity to a wide variety of particles, good energy resolution and relatively small size, they are very attractive devices for accelerator physics experiments \cite{RevModPhys.75.1243} \cite{Wigmans:2000vf}.
+
+When the incident particle interacts with the material of the calorimeter it develops a cascade of particles (\textit{shower}), with different characteristics for electromagnetic and hadronic interactions, described in the next two sections. Different types of calorimeters are necessary to capture the two typologies. The energy of the shower is decreased by the interactions happening in the \textit{absorber} material, while the \textit{active} material provides the conversion of the energy in a charge or light signal. In \textit{sampling calorimeters} layers of absorber and active material are alternated in sequence, while in \textit{homogeneous calorimeters} a single material carries out both functions.
+
+We have noticed in section \ref{sec:dec:tracking} how the resolution of the momentum measurement in a magnetic spectrometer decreases with the increase of the momentum itself. Instead, the relative energy resolution in a calorimeter improves for high-energy particles, and can be written in the parametric form:
+
+\begin{equation}
+\frac{\sigma_E}{E} = \sqrt{\left(\frac{a}{\sqrt{E}} \right)^2 + \left( \frac{b}{E} \right)^2 + c^2 } \; .
+\end{equation}
+
+The first term of the sum in quadrature reflects the \textit{stochastic} nature of the shower development: ignoring the instrumental effects, the energy resolution of a calorimeter is proportional to the square root of the total track length, which is in turn proportional to the initial energy. The contribution of this term is small in homogeneous calorimeters, while is larger in sampling calorimeters (because of fluctuations of the fraction of energy deposited in the absorber) and it grows with the thickness of the absorber layers; typical values for $a$ are 5-20\% if the energy is expressed in GeV. The second term is the \textit{noise term} coming from the electronic noise of the readout chain; this term is in general more relevant for calorimeters producing charge signals than for those producing light signals, and can become the dominant term for particles with energy below one GeV. The last term is a constant deriving from instrumental effects that produce a non-uniform detector response, including for example energy lost outside the detector volume and radiation damage; this becomes the dominant term at high energies and is typically $<1\%$. 
 
 \subsubsection{Electromagnetic Cascade}
 
+When electrons, positrons and photons with energies above 1 GeV traverse a block of material the produce a cascade of particles (\textit{electromagnetic shower}): electrons and positrons can emit a photon by Bremsstrahlung, and a photon (thanks to the interaction with a nucleus) can turn into an electron-positron pair. A schematic view of the evolution of an electromagnetic shower is shown  in Fig. \ref{fig:det:shower_elec}(a); once the electrons in the shower have an energy lower than the \textit{critical energy} ($E_c$), the shower stops as the energy is dissipated mostly through ionization and not anymore through the creation of new particles.
+
+\begin{figure}[ht]
+\centering
+\subfigure{\includegraphics[width=0.4\textwidth]{figures/detector/elec_shower}}
+\subfigure{\includegraphics[width=0.57\textwidth]{figures/detector/elec_shower_lateral}}
+\caption{(a) Sketch of the evolution of an electromagnetic shower. (b) Lateral and longitudianl evolution of the shower form 6-GeV electons. Figure from Ref. \cite{grupen_shwartz_2008}.}
+\label{fig:det:shower_elec}
+\end{figure}
+
 \subsubsection{Hadronic Shower}
+
+
+\begin{figure}[ht]
+\centering
+\subfigure{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower}}
+\subfigure{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower_lateral}}
+\caption{(a) Sketch of the evolution of an hadronic shower. Figure from Ref. \cite{grupen_shwartz_2008}. (b) Lateral energy distribution of shower induced by 10-GeV $\pi^-$, measured at a depth of 10, 20, 30, 50 and 70 cm in Fe. Fig from Ref. \cite{FRIEND1976505}.}
+\label{fig:det:shower_had}
+\end{figure}
 
 \subsubsection{Types of Calorimeters}
