@@ -33,7 +33,7 @@ Calorimeters can measure the energy of both charged and neutral particles throug
 When the incident particle interacts with the material of the calorimeter it develops a cascade of particles (\textit{shower}), with different characteristics for electromagnetic and hadronic interactions, described in the next two sections. Different types of calorimeters are necessary to capture the two typologies. The energy of the shower is decreased by the interactions happening in the \textit{absorber} material, while the \textit{active} material provides the conversion of the energy in a charge or light signal. In \textit{sampling calorimeters} layers of absorber and active material are alternated in sequence, while in \textit{homogeneous calorimeters} a single material carries out both functions.
 
 
-\subsubsection{Electromagnetic Cascade}
+\subsubsection{Electromagnetic Calorimeters}
 
 The type of interaction that electromagnetically-interacting particles have with the detector depends on their energy. The average fractional energy loss in lead for electrons and positrons and the photon interaction cross section in lead are shown in Fig. \ref{fig:det:shower_elec} (a) and (b) respectively. 
 
@@ -73,7 +73,7 @@ R_M = \frac{21 MeV \; X_0[\frac{g}{cm^2}]}{E_c [MeV]} \; .
 \end{equation}
 A cylinder of radius 2$R_M$ contains about 95\% of the shower; for most calorimeters $R_M$ has a value of few centimeters, so electromagnetic showers are quite narrow. The longitudinal and lateral development of the shower induced in lead by 6-GeV electrons is shown in Fig. \ref{fig:det:shower_elec}(b).
 
-Once the electrons in the shower have an energy lower than the \textit{critical energy} ($E_c$, defined as the energy where the loss through Bremsstrahlung equals the one through ionization), the shower stops as the energy is dissipated mostly through ionization for electrons and photoelectric effect for photons, and not anymore through the creation of new particles.
+Once the electrons in the shower have an energy lower than the \textit{critical energy} ($E_c$, defined as the energy where the loss through Bremsstrahlung equals the one through ionization), the shower stops as the energy is dissipated mostly through ionization for electrons and photoelectric effect for photons, and not anymore through the creation of new particles. Therefore all the energy of the incoming particle is in the end used to ionize the material of the detector, and this is the effect that is detected.
 
 
 We have noticed in section \ref{sec:dec:tracking} how the resolution of the momentum measurement in a magnetic spectrometer decreases with the increase of the momentum itself. Instead, the relative energy resolution in a calorimeter improves for high-energy particles, and can be written in the parametric form:
@@ -86,11 +86,18 @@ The first term of the sum in quadrature reflects the \textit{stochastic} nature 
 
 
 
-\subsubsection{Hadronic Shower}
+\subsubsection{Hadronic Calorimeters}
 
-The difference between electromagnetic calorimeters and hadronic calorimeters finds its origin in the more complicated nature of strong interactions compared to the electromagnetic ones.
+The difference between electromagnetic calorimeters and hadronic calorimeters finds its origin in the more complicated nature of strong interactions compared to the electromagnetic ones. 
 
-A sketch of the evolution of an hadronic shower is shown in Fig. \ref{fig:det:shower_had}(a)
+A sketch of the evolution of an hadronic shower is shown in Fig. \ref{fig:det:shower_had}(a). A first relevant difference between hadronic and electromagnetic showers is that the former has a much larger spatial extension. On the longitudinal direction, the scale is determined by the \textit{nuclear interaction length} ($\lambda_I$), which is material-dependent and can be expressed as:
+\begin{equation}
+\lambda_I = 35 \frac{g}{cm^2} A^{1/3} \; ,
+\end{equation}
+
+where $A$ is the atomic number of the material. For most materials used in particle detectors this results to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, 16.77 cm for iron \cite{Patrignani:2016xqp}). Also the lateral width of the sower results larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of an hadronic shower depends on the transverse-momentum transfer, that can be quite sizable in strong nuclear interactions. 
+
+
 
 Fig. \ref{fig:det:shower_had}(b) shows the lateral shower profile for 10-GeV pions in iron.
 
