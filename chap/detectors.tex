@@ -42,15 +42,48 @@ The first term of the sum in quadrature reflects the \textit{stochastic} nature 
 
 \subsubsection{Electromagnetic Cascade}
 
-When electrons, positrons and photons with energies above 1 GeV traverse a block of material the produce a cascade of particles (\textit{electromagnetic shower}): electrons and positrons can emit a photon by Bremsstrahlung, and a photon (thanks to the interaction with a nucleus) can turn into an electron-positron pair. A schematic view of the evolution of an electromagnetic shower is shown  in Fig. \ref{fig:det:shower_elec}(a); once the electrons in the shower have an energy lower than the \textit{critical energy} ($E_c$), the shower stops as the energy is dissipated mostly through ionization and not anymore through the creation of new particles.
+The type of interaction that electromagnetically-interacting particles have with the detector depends on their energy. The average fractional energy loss in lead for electrons and positrons and the photon interaction cross section in lead are shown in Fig. \ref{fig:det:shower_elec} (a) and (b) respectively. 
 
 \begin{figure}[ht]
 \centering
-\subfigure{\includegraphics[width=0.4\textwidth]{figures/detector/elec_shower}}
-\subfigure{\includegraphics[width=0.57\textwidth]{figures/detector/elec_shower_lateral}}
+\subfigure{\includegraphics[width=0.58\textwidth]{figures/detector/electron_energy_loss}}
+\subfigure{\includegraphics[width=0.4\textwidth]{figures/detector/photon_xsec}}
+\caption{(a) Fractional energy loss per radiation length in lead as a function of the electron (positron) energy. (b) Photon interaction cross section in lead. Figures from Ref. \cite{Patrignani:2016xqp}. }
+\label{fig:det:shower_elec}
+\end{figure}
+
+
+When electrons, positrons and photons with energies above 1 GeV traverse a block of material the produce a cascade of particles (\textit{electromagnetic shower}): electrons and positrons can emit a photon by Bremsstrahlung, and a photon (thanks to the interaction with a nucleus) can turn into an electron-positron pair (pair production is indicated with the symbol $\kappa_{nucl}$ in Fig. \ref{fig:det:shower_elec} (b)). A schematic view of the evolution of an electromagnetic shower is shown  in Fig. \ref{fig:det:shower_elec}(a). 
+
+\begin{figure}[ht]
+\centering
+\subfigure{\includegraphics[width=0.45\textwidth]{figures/detector/elec_shower}}
+\subfigure{\includegraphics[width=0.52\textwidth]{figures/detector/elec_shower_lateral}}
 \caption{(a) Sketch of the evolution of an electromagnetic shower. (b) Lateral and longitudianl evolution of the shower form 6-GeV electons. Figure from Ref. \cite{grupen_shwartz_2008}.}
 \label{fig:det:shower_elec}
 \end{figure}
+
+
+The main parameter to describe the evolution of an electromagnetic shower is the \textit{radiation length} ($X_0$), defined as the distance over which an electron reduces its energy to $\frac{1}{e}$ of the initial value, and corresponds also to $\frac{7}{9}$ of the mean free path for pair production for a photon. The radiation length depends on the characteristics of the material:
+\begin{equation}
+X_0 [\frac{g}{cm^2}] = \frac{716 \frac{g}{ cm^2} A }{Z(Z+1) \ln\left(287/\sqrt{Z}\right)} \; ,
+\end{equation}
+
+where $A$ and $Z$ are the atomic and mass number of the material. If we define $t = \frac{x}{X_0}$ as the shower depth relative to the radiation length, the maximum number of produced particles occurs at:
+\begin{equation}
+t_{max} = \frac{\ln \left(E_0/E_c\right)}{ln\left(2\right)} \;,
+\end{equation}
+and 25 radiation lengths contain about 99\% of the total shower energy. The typical values for the interaction length are of the order of the $cm$ (e.g. 0.56 cm for lead \cite{Patrignani:2016xqp}), allowing for electromagnetic calorimeters of compact dimensions. 
+The lateral with of the shower increases with depth and is defined in terms of the Moli\'ere radius:
+\begin{equation}
+R_M = \frac{21 MeV \; X_0[\frac{g}{cm^2}]}{E_c [MeV]} \; .
+\end{equation}
+A cylinder of radius 2$R_M$ contains about 95\% of the shower. The longitudinal and lateral development of the shower induced in lead by 6-GeV electrons is shown in Fig. \ref{fig:det:shower_elec}(b).
+
+Once the electrons in the shower have an energy lower than the \textit{critical energy} ($E_c$, defined as the energy where the loss through Bremsstrahlung equals the one through ionization), the shower stops as the energy is dissipated mostly through ionization for electrons and photoelectric effect for photons, and not anymore through the creation of new particles.
+
+
+
 
 \subsubsection{Hadronic Shower}
 
