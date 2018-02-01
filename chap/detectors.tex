@@ -32,13 +32,6 @@ Calorimeters can measure the energy of both charged and neutral particles throug
 
 When the incident particle interacts with the material of the calorimeter it develops a cascade of particles (\textit{shower}), with different characteristics for electromagnetic and hadronic interactions, described in the next two sections. Different types of calorimeters are necessary to capture the two typologies. The energy of the shower is decreased by the interactions happening in the \textit{absorber} material, while the \textit{active} material provides the conversion of the energy in a charge or light signal. In \textit{sampling calorimeters} layers of absorber and active material are alternated in sequence, while in \textit{homogeneous calorimeters} a single material carries out both functions.
 
-We have noticed in section \ref{sec:dec:tracking} how the resolution of the momentum measurement in a magnetic spectrometer decreases with the increase of the momentum itself. Instead, the relative energy resolution in a calorimeter improves for high-energy particles, and can be written in the parametric form:
-
-\begin{equation}
-\frac{\sigma_E}{E} = \sqrt{\left(\frac{a}{\sqrt{E}} \right)^2 + \left( \frac{b}{E} \right)^2 + c^2 } \; .
-\end{equation}
-
-The first term of the sum in quadrature reflects the \textit{stochastic} nature of the shower development: ignoring the instrumental effects, the energy resolution of a calorimeter is proportional to the square root of the total track length, which is in turn proportional to the initial energy. The contribution of this term is small in homogeneous calorimeters, while is larger in sampling calorimeters (because of fluctuations of the fraction of energy deposited in the absorber) and it grows with the thickness of the absorber layers; typical values for $a$ are 5-20\% if the energy is expressed in GeV. The second term is the \textit{noise term} coming from the electronic noise of the readout chain; this term is in general more relevant for calorimeters producing charge signals than for those producing light signals, and can become the dominant term for particles with energy below one GeV. The last term is a constant deriving from instrumental effects that produce a non-uniform detector response, including for example energy lost outside the detector volume and radiation damage; this becomes the dominant term at high energies and is typically $<1\%$. 
 
 \subsubsection{Electromagnetic Cascade}
 
@@ -73,20 +66,33 @@ where $A$ and $Z$ are the atomic and mass number of the material. If we define $
 \begin{equation}
 t_{max} = \frac{\ln \left(E_0/E_c\right)}{ln\left(2\right)} \;,
 \end{equation}
-and 25 radiation lengths contain about 99\% of the total shower energy. The typical values for the interaction length are of the order of the $cm$ (e.g. 0.56 cm for lead \cite{Patrignani:2016xqp}), allowing for electromagnetic calorimeters of compact dimensions. 
-The lateral with of the shower increases with depth and is defined in terms of the Moli\'ere radius:
+and 25 radiation lengths contain about 99\% of the total shower energy. The typical values for the interaction length are of the order of the $cm$ (e.g. 0.56 cm for lead, 1.76 cm for iron \cite{Patrignani:2016xqp}), allowing for electromagnetic calorimeters of compact dimensions. 
+The lateral with of the shower, determined mainly by multiple scattering, increases with depth and is defined in terms of the Moli\'ere radius:
 \begin{equation}
 R_M = \frac{21 MeV \; X_0[\frac{g}{cm^2}]}{E_c [MeV]} \; .
 \end{equation}
-A cylinder of radius 2$R_M$ contains about 95\% of the shower. The longitudinal and lateral development of the shower induced in lead by 6-GeV electrons is shown in Fig. \ref{fig:det:shower_elec}(b).
+A cylinder of radius 2$R_M$ contains about 95\% of the shower; for most calorimeters $R_M$ has a value of few centimeters, so electromagnetic showers are quite narrow. The longitudinal and lateral development of the shower induced in lead by 6-GeV electrons is shown in Fig. \ref{fig:det:shower_elec}(b).
 
 Once the electrons in the shower have an energy lower than the \textit{critical energy} ($E_c$, defined as the energy where the loss through Bremsstrahlung equals the one through ionization), the shower stops as the energy is dissipated mostly through ionization for electrons and photoelectric effect for photons, and not anymore through the creation of new particles.
 
+
+We have noticed in section \ref{sec:dec:tracking} how the resolution of the momentum measurement in a magnetic spectrometer decreases with the increase of the momentum itself. Instead, the relative energy resolution in a calorimeter improves for high-energy particles, and can be written in the parametric form:
+
+\begin{equation}
+\frac{\sigma_E}{E} = \sqrt{\left(\frac{a}{\sqrt{E}} \right)^2 + \left( \frac{b}{E} \right)^2 + c^2 } \; .
+\end{equation}
+
+The first term of the sum in quadrature reflects the \textit{stochastic} nature of the shower development: ignoring the instrumental effects, the energy resolution of a calorimeter is proportional to the square root of the total track length, which is in turn proportional to the initial energy. The contribution of this term is small in homogeneous calorimeters, while is larger in sampling calorimeters (because of fluctuations of the fraction of energy deposited in the absorber) and it grows with the thickness of the absorber layers; typical values for $a$ are 5-20\% if the energy is expressed in GeV. The second term is the \textit{noise term} coming from the electronic noise of the readout chain; this term is in general more relevant for calorimeters producing charge signals than for those producing light signals, and can become the dominant term for particles with energy below one GeV. The last term is a constant deriving from instrumental effects that produce a non-uniform detector response, including for example energy lost outside the detector volume and radiation damage; this becomes the dominant term at high energies and is typically $<1\%$. 
 
 
 
 \subsubsection{Hadronic Shower}
 
+The difference between electromagnetic calorimeters and hadronic calorimeters finds its origin in the more complicated nature of strong interactions compared to the electromagnetic ones.
+
+A sketch of the evolution of an hadronic shower is shown in Fig. \ref{fig:det:shower_had}(a)
+
+Fig. \ref{fig:det:shower_had}(b) shows the lateral shower profile for 10-GeV pions in iron.
 
 \begin{figure}[ht]
 \centering
@@ -96,4 +102,3 @@ Once the electrons in the shower have an energy lower than the \textit{critical 
 \label{fig:det:shower_had}
 \end{figure}
 
-\subsubsection{Types of Calorimeters}
