@@ -1,4 +1,4 @@
-\section{Detectors for High Energy Physics}
+\section{Detectors for Collider Physics}
 \label{sec:detectors}
 
 In this section we review the basic concepts that drive the design of the LHC detectors, including ATLAS.
@@ -17,13 +17,41 @@ The ability to accurately identify particles and reconstruct their energy is wha
 
 \subsection{Tracking and Spectrometry}
 \label{sec:dec:tracking}
-A tracking device measures the traces left by charged particles passing through it. To allow the determination of the momentum and the charge of a particle, a tracking device needs to be accompanied by a magnetic field. 
+A tracking device measures the traces left by charged particles passing through it. To allow the determination of the momentum and the charge of a particle, a tracking device needs to be accompanied by a magnetic field (and in this case we speak of a \textit{magnetic spectrometer}): once the magnetic field is known, the measure of the radius of curvature of the particle is equivalent to a measure of its momentum, according to Eq. \ref{eq:cern:p03br}. In a typical particle detector as the one in the schema in Fig. \ref{fig:detector:interaction}, both the inner tracking system and the muon system are magnetic spectrometers.
 
 The relative uncertainty on the momentum is given by:
 \begin{equation}
-\frac{\sigma_p}{p} = \frac{p}{0.3 B L^2}\sigma \sqrt{C_N}
+\frac{\sigma_p}{p} = \sqrt{ \left(a p \right)^2 + b^2} \; .
+\label{eq:tracking:reso}
 \end{equation}
 
+The first term, whose relative importance increases for high-momentum particles, derives from the angular measurement resolution. Typical values for $a$ are between 0.01\% and 1\%. The constant term in Eq. \ref{eq:tracking:reso} accounts for the impact of multiple Coulomb scattering, that broadens the distribution of the transverse momentum perpendicular to the direction of motion. This terms is important only at low energies, while is negligible for high-energy particles.
+
+There are three main configurations of magnetic fields for momentum spectrometers:
+\begin{itemize}
+\item A \textit{dipole} field leads to a rectangular symmetry; if we think of a circular collider with a coordinate system where $z$ is the direction along the beam trajectory and ($x$,$y$) define a Cartesian system in the transverse plane, a dipole  field in the $x$ direction will cause a deflection in the ($y,z$) plane. This is the configuration adopted by forward spectrometers like LHCb, where the tracking devices are arranged in sequence in the z direction. As an example, the integral of the LHCb dipole field over the detector length is 4 Tm.
+\item A \textit{solenoidal} field leads to a cylindrical symmetry and, if the field lines are along the $z$ direction, the deflection is in the ($x,y$) plane. This is the typical configuration of the spectrometers in the central barrel, where the detectors are arranged in cylindrical layers. The CMS solenoid field is 4 T, while the ATLAS one is 2 T. 
+\item A \textit{toroidal} field leads to an azymuthal symmetry: the direction of the field lines is a circle in the transverse plane, and a deflection is in the ($r,z$) plane. This configuration is adopted by the ATLAS muon spectrometer, with a magnetic field of 0.5 T. As in the case of the solenoidal field, the detectors are arranged in cylindrical shells.
+\end{itemize}
+
+The track left by the charge particles curving because of the magnetic field is reconstructed by the tracking detectors. The two most common categories of tracking devices are gas and silicon detectors, described in the next two sections.
+
+\subsubsection{Gas Detectors}
+
+In gas detectors, the passage of a charge particle ionizes the atoms and creates electron-ion pairs. Once the electron and the ion are created, they can be separated (thus creating a current) by applying an electric field. This induces signal on an electrode added to the material, read through a readout system. The basic principle of most of gas detectors relies on a tube with a wire in the center, which is an anode with an high electric field. When the particle crosses the gas, the electrons drift toward the anode and can be collected. Without electric field, the electron and ion move in the system by thermal diffusion. The effect of an electric field is to make the electron and ion to move in opposite directions, allowing us to measure them. Since not many electrons are produced in gas, they need to be amplified. Inside the tube, decreases with the inverse of the distance from the anode wire. When the electrons reach a distance of a few micrometers from the wire, the electric field is very large and the electrons gain more energy than the ionisation energy; this leads to secondary ionisation and an exponential growth of the electron-ion pairs (\textit{avalanche effect}). 
+
+\subsubsection{Semiconductor Detectors}
+
+Silicon detector the main type of solid-state detectors, and are currently the most used for the inner tracking, where you need higher precision and low occupancy. 
+
+\begin{figure}[ht]
+\centering
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/single-sided-AC-coupled-silicon-strip.pdf}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/double-sided-silicon-strip.pdf}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/pixel-schema.pdf}}
+\caption{(a)  (b) (c) }
+\label{fig:det:shower_elec}
+\end{figure}
 
 \subsection{Calorimetry}
 \label{sec:dec:calo}
@@ -64,9 +92,9 @@ X_0 [\frac{g}{cm^2}] = \frac{716 \frac{g}{ cm^2} A }{Z(Z+1) \ln\left(287/\sqrt{Z
 
 where $A$ and $Z$ are the atomic and mass number of the material. If we define $t = \frac{x}{X_0}$ as the shower depth relative to the radiation length, the maximum number of produced particles occurs at:
 \begin{equation}
-t_{max} = \frac{\ln \left(E_0/E_c\right)}{ln\left(2\right)} \;,
+t_{max} = \frac{\ln \left(E_0/E_c\right)}{ln\left(2\right)} \;.
 \end{equation}
-and 25 radiation lengths contain about 99\% of the total shower energy. The typical values for the interaction length are of the order of the $cm$ (e.g. 0.56 cm for lead, 1.76 cm for iron \cite{Patrignani:2016xqp}), allowing for electromagnetic calorimeters of compact dimensions. 
+The typical values for the interaction length are of the order of the $cm$ (e.g. 0.56 cm for lead, 1.76 cm for iron \cite{Patrignani:2016xqp}); 99\% of the shower is contained in about 11(22) $X_0$ for a particle of 1 GeV(TeV), allowing for electromagnetic calorimeters of compact dimensions. 
 The lateral with of the shower, determined mainly by multiple scattering, increases with depth and is defined in terms of the Moli\'ere radius:
 \begin{equation}
 R_M = \frac{21 MeV \; X_0[\frac{g}{cm^2}]}{E_c [MeV]} \; .
@@ -95,7 +123,7 @@ A sketch of the evolution of an hadronic shower is shown in Fig. \ref{fig:det:sh
 \lambda_I = 35 \frac{g}{cm^2} A^{1/3} \; ,
 \end{equation}
 
-where $A$ is the atomic number of the material. For most materials used in particle detectors this results to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, 16.77 cm for iron \cite{Patrignani:2016xqp}). Also the lateral width of the sower results larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of an hadronic shower depends on the transverse-momentum transfer, that can be quite sizable in strong nuclear interactions. Fig. \ref{fig:det:shower_had}(b) shows the lateral shower profile for 10-GeV pions in iron.
+where $A$ is the atomic number of the material. For most materials used in particle detectors this results to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, 16.77 cm for iron \cite{Patrignani:2016xqp}). The 99\% shower containment is reached after about 5(9) $\lambda_I$ for pions of 10(138) GeV. Also the lateral width of the sower results larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of an hadronic shower depends on the transverse-momentum transfer, that can be quite sizable in strong nuclear interactions. Fig. \ref{fig:det:shower_had}(b) shows the lateral shower profile for 10-GeV pions in iron.
 
 \begin{figure}[ht]
 \centering
@@ -105,6 +133,8 @@ where $A$ is the atomic number of the material. For most materials used in parti
 \label{fig:det:shower_had}
 \end{figure}
 
+
+% chiara: elaborate on the shower containment 
 
 Another difference with electromagnetic showers lies in the composition of the shower: while an electromagnetic shower is constituted only by electrons, positrons and photons, a much larger variety of particles participates to hadronic showers, including both hadrons and electromagnetically-interacting particles. Starting from the simplifying assumption that one third of the particles produced in nuclear interactions are neutral pions ($f_{\pi^0}=\frac{1}{3}$), a first approximation of the electromagnetic fraction of a shower is given by:
 \begin{equation}
@@ -129,10 +159,17 @@ where $E_0$ is the energy necessary to produce one pion (e.g. 0.7 GeV for iron a
 
 Fig. \ref{fig:det:shower_had_spectra} shows the particle spectra produced by 100-GeV protons absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301}. We can see that at low energies the particle content is dominated by electrons, positrons, photons and neutrons.
 
-While in electromagnetic showers most of the initial energy is recorded in the detector, in hadronic showers a relevant fraction (up to 30-40\%) is invisible. This invisible fraction is caused by energy that goes into breaking the nuclear bonds, nuclear fragments that in sampling calorimeters do not reach the active material, and neutral particles that can escape the calorimeter (e.g. neutrinos or long-lived neutral kaons). Therefore, for the same initial energy, the visible energy will be lower for an hadronic shower than for an electromagnetic one. 
+While in electromagnetic showers most of the initial energy is recorded in the detector, in hadronic showers a relevant fraction (up to 30-40\%) is invisible. This invisible fraction is caused by energy that goes into breaking the nuclear bonds, nuclear fragments that in sampling calorimeters do not reach the active material, and neutral particles that can escape the calorimeter (e.g. neutrinos or long-lived neutral kaons). Therefore, for the same initial energy, the visible energy will be lower for an hadronic shower than for an electromagnetic one. If we define the \textit{response} as the collected signal per unit of incident energy, the invisible energy causes a different response of calorimeters to the electromagnetic and to the purely-hadronic parts of the shower. Defining $\eta_{em}$, $\eta_{h}$, $\eta_{\pi}$ respectively as the calorimeter response to electromagnetic shower, the hadronic part of the shower and to pions, we have that:
+\begin{equation}
+\eta_{\pi} = f_{em}\eta_{em} + (1-f_{em}) \eta_h = \eta_h \left( \frac{\eta_{em}}{\eta_{h}}f_{em} + (1-f_{em})  \right) \; .
+\end{equation}
 
+In general $\frac{\eta_{em}}{\eta_{h}}>1$. Since the value of the electromagnetic fraction is energy-dependent, the signal from the calorimeter does not increase linearly with energy. \textit{Compensating} calorimeters are the ones aiming at $\frac{\eta_{em}}{\eta_{h}}=1$, and to have the same response to the electromagnetic and hadronic part of the shower, restoring the linearity of the calorimeter response. In non-compensating calorimeters the fluctuations in $f_{em}$ are the dominant component of the energy resolution and, since the fluctuations are Gaussian, give rise to a term proportional to:
 
-
+\begin{equation}
+\frac{\sigma_E}{E} = \frac{\mathrm{const}}{\sqrt{E}}  \; .
+\end{equation}
+In modern non-compensating calorimeters the value of the constant is about 0.4, while it can be as low as 0.2 in the case of compensating calorimeters.
 
 
 
