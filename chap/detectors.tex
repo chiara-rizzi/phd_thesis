@@ -48,16 +48,17 @@ In general the main problems of gas detectors are the spatial extension and the 
 
 Silicon detectors are the main type of solid-state detectors, and are currently the most used for the inner tracking, where you need higher precision and low occupancy \cite{Hartmann:2009zza}. These detectors detectors are also based on the ionization of the material but in this case, since the structure is a crystal, we talk about electrons and \textit{electron holes}. 
 
-The underlying principle is based on the \textit{band model} of solids.
+The underlying principle is based on the \textit{band model} of solids, describing the allowed energy levels for electrons in a solid: when many atoms of the same type are bound together in a crystal lattice, in order to fulfill Pauli's principle the atomic orbitals split into many closely spaced molecular orbitals, that can be considered as continuous energy bands. The highest-energy full band is the \textit{valence band}, while the lowest partially-filled (or empty) band is the \textit{conduction band}; the energy difference between the conduction band and the valence band is referred to as \textit{energy gap}, as illustrated in Fig. \ref{fig:det:band}(a). 
 
 \begin{figure}[ht]
 \centering
-\subfigure{\includegraphics[width=0.45\textwidth]{figures/detector/band_structure}}
-\caption{Figure frmo Ref. \cite{grupen_shwartz_2008}.}
+\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/band_structure}}
+\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/pn.pdf}}
+\caption{(a) Schema of band model of solids. (b) Top: schema of a p-n junction. Bottom: charge distribution in a p-n junction and extension of the depletion area. Figures from Ref. \cite{grupen_shwartz_2008}.}
 \label{fig:det:band}
 \end{figure}
 
-
+Semiconductors are materials where the conduction band is almost empty, but the energy gap is small ($\approx$ 1 eV, e.g. 1.07 eV for silicon), so the conduction band can be occupied by excited electrons from the valence band; this leaves holes in the valence band, that under the effect of an electric field can drift as well. Semiconductors with a pure composition have the same amount of electorns and holes. If the semiconductor is doped with an atom with one more electron in the valence band, this creates an excess of electrons and the material is referred to as a \textit{n-type} semiconductor. If instead the impurities are electron acceptors, the material has an excess of holes and is referred to as \textit{p-type} semiconductor. When a p-type and a n-type semiconductors are pulled together, the holes of the p-type side drift into the n-type, and the electrons from the n-type into the p-type side, as shown in Fig. \ref{fig:det:band}(b). This creates an electric field that takes charge carriers out of the area where it is present (\textit{depletion region}). If a charged particle parring through the semiconductor produces electron-hole pairs in the depletion region, these drift apart because of the electric field and can be collected by electrodes. The application of an additional electric field can increase the depletion area.
 
 
 The density of silicon is about one thousand higher than the density of gases like argon, and also need a much lower energy to be ionized (3.6 eV for silicon, while it is about 250 times higher for argon). This leads to a much higher number of electron-holes pairs than the number of electron-ion pairs in gas detectors, so the signal needs very little amplification, and the size of the detector itself can be smaller. 
@@ -151,8 +152,6 @@ where $A$ is the atomic number of the material. For most materials used in parti
 \label{fig:det:shower_had}
 \end{figure}
 
-
-% chiara: elaborate on the shower containment 
 
 Another difference with electromagnetic showers lies in the composition of the shower: while an electromagnetic shower is constituted only by electrons, positrons and photons, a much larger variety of particles participates to hadronic showers, including both hadrons and electromagnetically-interacting particles. Starting from the simplifying assumption that one third of the particles produced in nuclear interactions are neutral pions ($f_{\pi^0}=\frac{1}{3}$), a first approximation of the electromagnetic fraction of a shower is given by:
 \begin{equation}
