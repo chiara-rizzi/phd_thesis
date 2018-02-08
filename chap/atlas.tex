@@ -14,14 +14,25 @@ ATLAS (A Toroidal LHC ApparatuS)\cite{atlas:atlas}
 
 \subsection{Coordinate System}
 
+ATLAS uses a right-handed coordinate system, with its origin at the nominal interaction point. The $z$-axis follows the beam direction, while in the transverse plane the $y$-axis points upward and the $x$axis toward the LHC center. Positive and negative values of the $z$-axis identify respectively the A-side and the C-side of the detector. When spherical coordinates are used, the \textit{azimuthal angle} $\phi$ is defined starting from the $x$-axis, and ranges between $-\pi$ and $\pi$; the \textit{polar angle} $\theta$ is defined starting from the $z$-axis and takes values between $0$ and $\pi$. Often the polar angle is substituted by the \textit{pseudorapidity}: 
+ 
 \begin{equation}
 \label{eq:cern:eta}
 \eta = - \ln \tan \frac{\theta}{2}
 \end{equation}
 
+which, in the limit of massless particles, is equivalent to the \textit{rapidity}:
+
 \begin{equation}
 \label{eq:cern:y}
-y = \frac{1}{2} \ln \frac{E + p_z}{E - p_z}
+y = \frac{1}{2} \ln \frac{E + p_z}{E - p_z} \; ,
+\end{equation}
+
+where $E$ is the energy of the particle and $p_z$ its momentum projected on the $z$-axis. The $\eta$-$\phi$ plane is used to define the angular separation of two objects in the detector:
+
+\begin{equation}
+\label{eq:cern:dR}
+\Delta R = \sqrt{ \Delta \phi^2 + \Delta \eta^2  } \; .
 \end{equation}
 
 \begin{equation}
@@ -34,10 +45,7 @@ p_T = \sqrt{p_x^2 + p_y^2}
 p_z = p_T \,\sinh \eta
 \end{equation}
 
-\begin{equation}
-\label{eq:cern:dR}
-\Delta R = \sqrt{ \Delta \phi^2 + \Delta \eta^2  }
-\end{equation}
+
 
 
 

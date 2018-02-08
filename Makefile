@@ -10,7 +10,6 @@ run: $(THESIS).pdf
 
 $(THESIS).pdf: $(THESIS).bbl $(THESIS).tex
 	pdflatex $(THESIS).tex -draftmode
-	pdflatex $(THESIS).tex 
 
 $(THESIS).bbl: $(THESIS).aux
 	bibtex $(THESIS)
@@ -18,6 +17,7 @@ $(THESIS).bbl: $(THESIS).aux
 $(THESIS).aux: $(THESIS).bib
 	pdflatex $(THESIS).tex -draftmode
 	pdflatex $(THESIS).tex -draftmode
+	pdflatex $(THESIS).tex 
 
 clean_pdf:
 	rm -rf *.aux *.lof *.log *.lot *.toc *.bbl *.blg *pdf
