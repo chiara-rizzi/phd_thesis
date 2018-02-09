@@ -139,11 +139,6 @@ HCal end caps & 1$/\sqrt{E[GeV]}$ + 0.1 \\
 \label{tab:atlas:cal:reso}
 \end{table}
 
-\subsubsection*{Electromagnetic Calorimeter}
-
-The ECal is a sampling calorimeter with liquid argon (LAr) as active material and lead plates as absorber, both in the barrel and in the end caps. The lead plates have a characteristic accordion shape and, in the barrel, are oriented in the radial direction. Before the ECal, a presampler provides the information necessary to reconstruct the amount of energy lost in the passive material of the solenoid. The design of a LAr barrel module is shown in Fig. \ref{fig:atlas:lar}(a), where it is possible to see the segmentation in three layers with decreasing granularity: the first layer is finely segmented in pseudorapiditu, with strips of $\Delta\eta \times \Delta\phi = $ 0.0031 $\times$ 0.098. The second layer has towers of $\Delta\eta \times \Delta\phi = $ 0.025 $\times$ 0.025 to measure the clusters, while the third layer has broader towers of $\Delta\eta \times \Delta\phi = $ 0.05 $\times$ 0.0245 to provide an estimate of the energy propagating beyond the ECal. In the LAr barrel offers pseudorapidity coverage up to $|\eta|<$1.475, and the thickness of the detector varies from 22 $X_0$ at $\eta=0$ to 33 $X_0$ at $|\eta|=1.3$. 
-Each of the two end-cap regions consists of two coaxial wheels, of eight module each, that cover the region 1.375$<|\eta|<$3.2, with a thickness varying between 26 and 36 $X_0$ for the inner wheel, 24 and 38 $X_0$ for the outer wheel. The end-cap modules are divided into two layers, again with decreasing granularity.
-
 \begin{figure}[ht]
 \centering
 \subfigure[]{\includegraphics[width=0.495\textwidth]{figures/atlas/barrel_em.pdf}}
@@ -152,22 +147,38 @@ Each of the two end-cap regions consists of two coaxial wheels, of eight module 
 \label{fig:atlas:lar}
 \end{figure}
 
+\subsubsection*{Electromagnetic Calorimeter}
+
+The ECal is a sampling calorimeter with liquid argon (LAr) as active material and lead plates as absorber, both in the barrel and in the end caps. The lead plates have a characteristic accordion shape and, in the barrel, are oriented in the radial direction. Before the ECal, a presampler provides the information necessary to reconstruct the amount of energy lost in the passive material of the solenoid. The design of a LAr barrel module is shown in Fig. \ref{fig:atlas:lar}(a), where it is possible to see the segmentation in three layers with decreasing granularity: the first layer is finely segmented in pseudorapiditu, with strips of $\Delta\eta \times \Delta\phi = $ 0.0031 $\times$ 0.098. The second layer has towers of $\Delta\eta \times \Delta\phi = $ 0.025 $\times$ 0.025 to measure the clusters, while the third layer has broader towers of $\Delta\eta \times \Delta\phi = $ 0.05 $\times$ 0.0245 to provide an estimate of the energy propagating beyond the ECal. In the LAr barrel offers pseudorapidity coverage up to $|\eta|<$1.475, and the thickness of the detector varies from 22 $X_0$ at $\eta=0$ to 33 $X_0$ at $|\eta|=1.3$. 
+Each of the two end-cap regions consists of two coaxial wheels, of eight module each, that cover the region 1.375$<|\eta|<$3.2, with a thickness varying between 26 and 36 $X_0$ for the inner wheel, 24 and 38 $X_0$ for the outer wheel. The end-cap modules are divided into two layers, again with decreasing granularity.
+
+
 \subsubsection*{Hadronic Calorimeter}
 
 The hadronic calorimeter is composed of three subsystems with different technologies: the tile barrel calorimeter (TileCal) is a sampling calorimeter with plastic scintillator as active material and steal as absorber, the hadronic end-cap calorimeter (HEC) uses copper as absorber and liquid argon as scintillator, while the forward calorimeter (FCal) uses again liquid argon in the active layer but has tungsten rods embedded in a copper matrix as absorber. The choice of the materials is driven by having detectors more resistant to radiation in the forward region, where the flux of particles is more abundant. 
 
-TileCal covers the pseudorapidity region with $|\eta|<$1.7.
+TileCal covers the pseudorapidity region with $|\eta|<$1.7, and is divided into a central long barrel (LB), 5.8-m long, and two extended barrels (EB), 2.6-m long; the TileCal inner radius is 2.28 m, and the outer radius 4.25 m. Each barrel is divided in 64 modules, disposed on the $\phi$ direction and each having the size of 0.1 radians. Each module is further segmented radially into three layers with thicknesses of about 1.5, 4.1 and 1.8 interaction lengths in the LB and 1.5, 2.6 and 3.3 interaction lengths in the EB; a schematic of one module is shown in Fig. \ref{fig:atlas:tile}(a). Ionizing particles passing through the plastic scintillator (polystyrene) produce ultra-violet light, which is then collected at the two edges of each tile and converted to the longer wavelength of visible light by wavelength-shifting fibers. The fibers, with a diameter of 1 mm each, transmit the light to the readout photomultiplier tubes (PMTs) located in the grinder.
+
 \begin{figure}[ht]
 \centering
 \subfigure[]{\includegraphics[width=0.495\textwidth]{figures/atlas/tile.pdf}}
 \subfigure[]{\includegraphics[width=0.495\textwidth]{figures/atlas/tile_pic.pdf}}
-\caption{(a) (b)}
+\caption{(a) Schematic representation of a TileCal module and its interface with the optical readout. (b)}
 \label{fig:atlas:tile}
+\end{figure}
+
+An approximately projective geometry, shown in Fig. \ref{fig:atlas:tile_cells}, is provided by the grouping of the readout fibres into the PMTs: this defines a cell structure, and each cell has dimension $\Delta\eta \times \Delta\phi = $ 0.1 $\times$ 0.1 in the first two layers and $\Delta\eta \times \Delta\phi = $ 0.2 $\times$ 0.1 in the third layer. Special cells cover the gap region between the LB and the EB: the gap scintillators in the pseudorapidity region 1.0$<|\eta|<$1.2 and crack scintillators in the region 1.2$<|\eta|<$1.6, in front of the LAr end caps.
+
+\begin{figure}[ht]
+\centering
+\subfigure{\includegraphics[width=0.7\textwidth]{figures/atlas/tile_cells.pdf}}
+\caption{Layout of the projective geometry of the TileCal cells.}
+\label{fig:atlas:tile_cells}
 \end{figure}
 
 The HEC shares the same cryogenic system as the ECal end caps, and covers the region with 1.5$<|\eta|<$3.2. Liquid argon is more resistant to radiation than the plastic scintillator used in TileCal, and is therefore the preferred choice in the end-cap region. Each side of the HEC consists of two wheels with outer radius of 2.03 m, and each wheel is composed by 32 identical modules. The electromagnetic signal produced in the LAr is collected by catodes on the plates. 
 
-
+The FCal provides coverage in the forward region with 3.1$<|\eta|<$4.9. The FCal modules are located at high pseudorapidity, at a distance of 4.7 m along the $z$-axis from the interaction point.
 
 
 \subsection{Muon Spectrometer}
