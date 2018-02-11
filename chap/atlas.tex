@@ -193,7 +193,9 @@ The muon spectrometer (MS) \cite{ATLAS:1997ad}, shown in Fig. \ref{fig:atlas:muo
 \label{fig:atlas:muon}
 \end{figure}
 
-The two systems dedicated to precision measurement are the \textit{monitored drift tubes} (MDTs)  and the \textit{cathode strip chambers} (CSCs). The MDTs are drift chambers made of aluminium tubes with a diameter of 30 mm and a length between 700 and 6300 mm, and a cathode wire made of an alloy of tungsten (97\%) and rhenium (3\%). The filling gas is a mixture of Ar, N$_2$, and CH$_4$ with percentages respectively of 91\%, 4\% and 5\%.
+The two systems dedicated to precision measurement are the \textit{monitored drift tubes} (MDTs)  and the \textit{cathode strip chambers} (CSCs), both present in barrel and end caps. The MDTs are proportional drift chambers covering the region $|\eta|<$2.7; they are made of aluminium tubes with a diameter of 30 mm and a length between 700 and 6300 mm, and a cathode wire made of an alloy of tungsten (97\%) and rhenium (3\%). The filling gas is a mixture of Ar, N$_2$, and CH$_4$ with percentages respectively of 91\%, 4\% and 5\%. The CSCs are multi-wire proportional chambers that cover the region with 2.0$<|\eta|<$2.7, where the shorter drift time of this detector (30 ns compared to the 480 ns of the MDTs) allows to cope better with the increase in particle flux in the forward region. The anode wires in the CSCs are made of the same tungsten-rhenium alloy of the MDTs and have a 2.54 mm pitch, which is the same distance separating them from the copper cathode strips, creating a symmetric cell. The gas inside the chamber is a mixture of 30\% Ar, 50\% CO$_2$, and 20\% CF$_4$. The spatial resolution is 40 $\mu$m in the bending plane and 5 mm in the perpendicular one.
+
+The muon trigger system needs to be able to identify events with energetic muons in a timescale compatible with assigning them to the correct bunch crossing, that at the nominal value are spaced by 25 ns. The two trigger chambers are the \textit{resistive plate chambers} (RPCs) and the \textit{thin gap chambers} (TGCs). The RPCs are arranged in three layers in the barrel region, outside the outermost MDT layer. Each narrow chamber consists of two parallel resistive bakelite plates and is filled with a mixture of 94.7\% C$_2$H$_2$F$_4$, 5\% Iso-C$_4$H$_{10}$, and 0.3\% SF$_6$. The signal is readout by metal plates through capacitive coupling, providing a time resolution of 1.5 ns, while the space resolution is about 1 cm. The RPC also provides the $\phi$ coordinate for the track, which is not measured by the MDTs. The TGCs are multi-wire proportional chambers located in the end caps, filled with a mixture of 55\% CO$_2$ and 45\% n-C$_5$H$_{12}$; with respect to the CSCs, are characterized by a distance between the cathode and the anode shorter than the anode pitch. The pseudorapidity coverage is 1.05$<|\eta|<$2.7 for tracking and 1.05$<|\eta|<$2.4 for triggering; the time response is similar to the one of the RPCs, while the spatial resolution is better: between 2 and 7 mm. 
 
 \subsection{Luminosity Detectors}
 
@@ -202,6 +204,13 @@ The two systems dedicated to precision measurement are the \textit{monitored dri
 \item BCM (Beam Conditions Monitor)
 \item ALFA (Absolute Luminosity For ATLAS)
 \end{itemize}
+
+\begin{figure}[ht]
+\centering
+\subfigure{\includegraphics[width=0.75\textwidth]{figures/atlas/forward}}
+\caption{Forward detectors in ATLAS.}
+\label{fig:atlas:forward}
+\end{figure}
 
 \subsection{Luminosity Determination and Uncertainty}
 
