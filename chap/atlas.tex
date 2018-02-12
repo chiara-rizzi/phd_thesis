@@ -197,13 +197,30 @@ The two systems dedicated to precision measurement are the \textit{monitored dri
 
 The muon trigger system needs to be able to identify events with energetic muons in a timescale compatible with assigning them to the correct bunch crossing, that at the nominal value are spaced by 25 ns. The two trigger chambers are the \textit{resistive plate chambers} (RPCs) and the \textit{thin gap chambers} (TGCs). The RPCs are arranged in three layers in the barrel region, outside the outermost MDT layer. Each narrow chamber consists of two parallel resistive bakelite plates and is filled with a mixture of 94.7\% C$_2$H$_2$F$_4$, 5\% Iso-C$_4$H$_{10}$, and 0.3\% SF$_6$. The signal is readout by metal plates through capacitive coupling, providing a time resolution of 1.5 ns, while the space resolution is about 1 cm. The RPC also provides the $\phi$ coordinate for the track, which is not measured by the MDTs. The TGCs are multi-wire proportional chambers located in the end caps, filled with a mixture of 55\% CO$_2$ and 45\% n-C$_5$H$_{12}$; with respect to the CSCs, are characterized by a distance between the cathode and the anode shorter than the anode pitch. The pseudorapidity coverage is 1.05$<|\eta|<$2.7 for tracking and 1.05$<|\eta|<$2.4 for triggering; the time response is similar to the one of the RPCs, while the spatial resolution is better: between 2 and 7 mm. 
 
-\subsection{Luminosity Detectors}
+\subsection{Luminosity Measurement}
 
-\begin{itemize}
-\item LUCID (LUminosity measurements using Cherenkov Integrating Detector)
-\item BCM (Beam Conditions Monitor)
-\item ALFA (Absolute Luminosity For ATLAS)
-\end{itemize}
+An accurate determination of the luminosity is important both for SM measurements, where often the luminosity uncertainty is one of the most relevant ones, and for BSM searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the ATLAS detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Eq. \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{chiara_put_atlas_lumi_paper} as product of the number of bunch crossings and the average luminosity per bunch cross $<\mathcal{L}_b>$:
+\begin{equation}
+\mathcal{L} = N_b <\mathcal{L}_b> = N_b \frac{f <\mu>}{\sigma_{\mathrm{inel}} } \; .
+\label{eq:atlas:lumi}
+\end{equation}
+
+With respect to the nomenclature of Eq. \ref{eq:cern:lumi}, $<\mu>$ is the average pile-up per bunch crossing and $\sigma_{\mathrm{inel}}$ the inelastic $p-p$ cross section. Because of the finite acceptance and efficiency of the detector, what is measured is:
+\begin{equation}
+\mathcal{L}_b = \frac{f <\mu_\mathrm{vis}>}{\sigma_{\mathrm{vis}} } \; ,
+\end{equation}
+
+where $<\mu_\mathrm{vis}>$ and $\sigma_{\mathrm{vis}}$ are the product of the corresponding quantities in Eq. \ref{eq:atlas:lumi} and the acceptance and efficiency of the detector. Out of these two quantities, $<\mu_\mathrm{vis}>$ is directly measurable during the collisions, while $\sigma_{\mathrm{vis}}$ is determined with the \textit{van der Meer} (vdM) method, carried out in the dedicated vdM runs. These are special runs with low bunch intensity and number of bunches, where a variation (scan) of the overlap of the two beams in the $x$ and $y$ directions is performed; the beam parameters and the peak of visible interaction rate per bunch crossing during the scan can be used to determine the visible cross section and therefore calibrate each subsystem. 
+
+The relevant quantity in physics analyses is the integrated luminosity over a defined period of time. The basic time unit over which the integrated luminosity is computed and stored is the \textit{luminosity block} (LB), whose duration is defined by the ATLAS trigger system and is typically about one minute. The data contained in each LB is collected with the same detector conditions, and the integrated luminosity is computed as average instantaneous luminosity multiplied by the LB time duration.
+
+\subsubsection{Bunch-by-bunch Luminometers}
+
+\begin{description}
+\item[LUCID-2] (LUminosity measurements using Cherenkov Integrating Detector)
+\item[BCM] (Beam Conditions Monitor)
+\item[ALFA] (Absolute Luminosity For ATLAS)
+\end{description}
 
 \begin{figure}[ht]
 \centering
@@ -212,7 +229,11 @@ The muon trigger system needs to be able to identify events with energetic muons
 \label{fig:atlas:forward}
 \end{figure}
 
-\subsection{Luminosity Determination and Uncertainty}
+\subsubsection{Tracker-based Algorithms}
+
+\subsubsection{Bunch-integrating Devices}
+
+%\subsection{Luminosity Determination and Uncertainty}
 
 \subsection{Trigger System}
 \label{sec:cern:trigger}
