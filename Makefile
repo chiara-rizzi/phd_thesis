@@ -9,13 +9,13 @@ THESIS=main
 run: $(THESIS).pdf
 
 $(THESIS).pdf: $(THESIS).bbl $(THESIS).tex
-	pdflatex $(THESIS).tex -draftmode
+	pdflatex $(THESIS).tex 
 
 $(THESIS).bbl: $(THESIS).aux
+	pdflatex $(THESIS).tex -draftmode	
 	bibtex $(THESIS)
 
 $(THESIS).aux: $(THESIS).bib
-	pdflatex $(THESIS).tex -draftmode
 	pdflatex $(THESIS).tex -draftmode
 	pdflatex $(THESIS).tex 
 
