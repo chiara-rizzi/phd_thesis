@@ -201,7 +201,7 @@ The muon trigger system needs to be able to identify events with energetic muons
 
 \subsection{Luminosity Measurement}
 
-An accurate determination of the luminosity is important both for SM measurements, where often the luminosity uncertainty is one of the most relevant ones, and for BSM searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the ATLAS detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Eq. \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{chiara_put_atlas_lumi_paper} as product of the number of bunch crossings and the average luminosity per bunch cross $<\mathcal{L}_b>$:
+An accurate determination of the luminosity is important both for SM measurements, where often the luminosity uncertainty is one of the most relevant ones, and for BSM searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the ATLAS detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Eq. \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{Aaboud:2016hhf} as product of the number of bunch crossings and the average luminosity per bunch cross $<\mathcal{L}_b>$:
 \begin{equation}
 \mathcal{L} = N_b <\mathcal{L}_b> = N_b \frac{f <\mu>}{\sigma_{\mathrm{inel}} } \; .
 \label{eq:atlas:lumi}
@@ -258,5 +258,24 @@ During Run1 the HLT consisted of two separate steps, that in Run2 have been merg
 
 A trigger chain is a set of selections that characterize a certain trigger object, and the list of all available trigger chains defines the \textit{trigger menu}; some of the items on the menu are unprescaled, which means all the events firing that trigger are stored, while others are associated to a prescale constant P such that only a fraction $\frac{1}{P}$ of the events firing the trigger are stored.
 
-\subsection{ATLAS Performance Summary}
+\subsection{ATLAS Operation}
 
+ATLAS has been successfully recording the collision data delivered by the LHC in Run1 and Run2. Figure \ref{fig:atlas:lumi1} shows the cumulative luminosity delivered by the LHC between the declaration of stable beams and the request to put the detector in standby for beam dump (green area in the figure) and the luminosity recorded by ATLAS (yellow) in 2015 and 2016, which is the dataset used in the analyses described in this thesis. The difference between the two derives from inefficiencies of the data acquisition system and from the "warm start" procedure: the high voltage of the tracking devices and the preamplifiers of the pixel detector are turned on after the start of stable beams \cite{LumiTwiki}.
+
+\begin{figure}[ht]
+\centering
+\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/atlas/lumi/lumi_2015}}
+\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/atlas/lumi/lumi_2016}}
+\caption{Cumulative luminosity versus time delivered to (green) and recorded by ATLAS (yellow) during stable beams for pp collisions at 13 TeV centre-of-mass energy in (a) 2015 and (b) 2016 \cite{LumiTwiki}.}
+\label{fig:atlas:lumi1}
+\end{figure}
+
+At the time of this writing, the 2017 dataset has been collected but not yet analyzed. The delivered and collected luminosity for 2017 is shown in Fig. \ref{fig:atlas:lumi2}(a). Not all the collected luminosity can be used for physics analyses, as most of these require a good state of all the detector subsystems. This is checked for each luminosity block; the ones with poor detector conditions are disregarded, while the ones that pass this criteria form the \textit{good run list} (GRL). Figure \ref{fig:atlas:lumi2}(b) shows the total cumulative luminosity for the 2015-2017 period, highlighting the portion that enters the GRL (blue). 
+
+\begin{figure}[ht]
+\centering
+\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/atlas/lumi/lumi_2017}}
+\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/atlas/lumi/intlumivstimeRun2DQ}}
+\caption{(a) Cumulative luminosity versus time delivered to (green) and recorded by ATLAS (yellow) during stable beams for pp collisions at 13 TeV centre-of-mass energy in 2017. (b) Cumulative luminosity versus time in 2015-2017 certified to be good quality data (blue) \cite{LumiTwiki}.}
+\label{fig:atlas:lumi2}
+\end{figure}
