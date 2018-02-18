@@ -164,7 +164,15 @@ Peak luminosity [$10^{34} cm^{-2}s^{-1}$] & 0.51 & 1.4 & 1.7(1.9) & 1.0 \\
 
 The luminosity profile changes over time, and different experiments have different luminosity needs. ATLAS and CMS profit form having the maximum luminosity possible, while LHCb and ALICE have their top functionality at lower luminosity, and therefore apply a \textit{luminosity leveling} that consists in changing the offset of the beams during the run, to maintain a constant (low) value of the instantaneous luminosity.
 
-An high number of particles participating in a single bunch crossing creates an elevated number of simultaneous interactions (\textit{pile-up}). In 2012 the LHC operated with a bunch spacing of 50 ns, leading to a pile-up of about 35 events per bunch crossing. With the increase in energy from Run1 to Run2, the same settings would have implied more than 100 events, while the limit for the proper functioning of the detectors is about 50. This is what motivated the choice to move from the 50 ns bunch spacing used in Run1 to the 25 ns in Run2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up.
+An high number of particles participating in a single bunch crossing creates an elevated number of simultaneous interactions (\textit{pile-up}). In 2012 the LHC operated with a bunch spacing of 50 ns, leading to a pile-up of about 35 events per bunch crossing. With the increase in energy from Run1 to Run2, the same settings would have implied more than 100 events, above the limit for the proper functioning of the detectors. This is what motivated the choice to move from the 50 ns bunch spacing used in Run1 to the 25 ns in Run2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up. Figure \ref{fig:atlas:pu} shows the luminosity-weighted distribution of the mean number of interactions per crossing during 2015-2017 as recorded by the ATLAS Experiment.
+
+\begin{figure}[ht]
+\centering
+\subfigure{\includegraphics[width=0.53\textwidth]{figures/atlas/lumi/pu_profile}}
+\caption{Luminosity-weighted distribution of the mean number of interactions per crossing. All data recorded by ATLAS during stable beams is shown. The mean number of interactions per crossing $\mu$ corresponds to the mean of the Poisson distribution of the number of interactions per crossing calculated for each bunch. It is calculated from the instantaneous per bunch luminosity as 
+$\mu = \frac{L_{bunch}\times \sigma_{inel}}{f}$, where $L_{bunch}$ is the per bunch instantaneous luminosity, $\sigma_{inel}$ is the inelastic cross section which is taken to be 80 mb for 13 TeV collisions, and $f$ is the LHC revolution frequency. Figure from Ref. \cite{LumiTwiki}.}
+\label{fig:atlas:pu}
+\end{figure}
 
 
 \subsection{Accelerator Complex}

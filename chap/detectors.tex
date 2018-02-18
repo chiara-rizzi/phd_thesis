@@ -94,8 +94,8 @@ The type of interaction that electromagnetically-interacting particles have with
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.58\textwidth]{figures/detector/electron_energy_loss}}
-\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/detector/photon_xsec}}
+\subfigure[]{\includegraphics[width=0.54\textwidth]{figures/detector/electron_energy_loss}}
+\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/detector/photon_xsec}}
 \caption{(a) Fractional energy loss per radiation length in lead as a function of the electron (positron) energy. (b) Photon interaction cross section in lead. Figures from Ref. \cite{Patrignani:2016xqp}. }
 \label{fig:det:xsec_elec}
 \end{figure}
@@ -199,9 +199,24 @@ In modern non-compensating calorimeters the value of the constant is about 0.4, 
 
 \subsection{Detecting Photons}
 
-As already mentioned in the previous sections, photons are often the effect of the passage of a particle; this is the case for example in TRDs or in calorimeters with scintillator as active material. In this section we are going to summarize how these photon can generate a detectable current; for a more extensive discussion see for example Ref. \cite{lightdetection}. The typical process of photon detection can be summarized in three different steps \cite{Patrignani:2016xqp}: first of all, the incident photon generates a photoelectron or an electron-hole pair (e-h) through photoelectric or photoconductive effect. Then the signal of the electron needs to be amplified, and finally collected. 
+As already mentioned in the previous sections, photons are often the effect of the passage of a particle; this is the case for example in TRDs or in calorimeters with scintillator as active material. In this section we are going to summarize how these photon can generate a detectable current; for a more extensive discussion see for example Ref. \cite{lightdetection,Grupen:2012zpa}. The typical process of photon detection can be summarized in three different steps: first of all, the incident photon generates a photoelectron or an electron-hole pair (e-h) through photoelectric or photoconductive effect. Then the signal of the electron needs to be amplified, and finally collected. Important properties to classify photon-detecting devices are \cite{Patrignani:2016xqp}:
+\begin{description}[font=\normalfont]
+\item[\textit{Quantum efficiency}] the probability that the incident photon generates a photoelectron. This depends on the photon wavelength.
+\item[\textit{Collection efficiency}] the probability that the photoelectron is collected at the end of the chain.
+\item[\textit{Photon detection efficiency}] the product of quantum and collection efficiency.
+\item[\textit{Gain}] the amplification of the photoelectron, quantified as the number of electrons collected for each photoelectron generated.
+\item[\textit{Dark current or dark noise}] the output current in the absence of signal.
+\item[\textit{Energy resolution}] resolution depending on electronic noise and statistical fluctuations.
+\item[\textit{Dynamic range}] Maximum intensity that the detector can handle expressed in units of smallest intensity with a signal-to-noise ratio above one.
+\item[\textit{Time dependence}] Time between the arrival of the photon and the collection of the electrical current.
+\item[\textit{Rate capability}] Inverse of the time needed after the arrival of a photon to be ready for another one.
+\end{description}
+
+Photon detectors can be broadly classified into three categories: vacuum, gaseous and solid-state detectors, described in the following paragraphs.
 
 \subsubsection*{Photomultiplier Tubes}  
+
+Photomultipler tubes (PMTs) are the most common type of vacuum photon detector. A sketch of the structure of a PMT is shown in Fig. \ref{fig:det:pmt}. It consists of a vacuum tube with an input window, a photocatode, a focusing electrode, electron multipliers and and anode  \cite{hamamatsu}. The photons enter the device through the window and excite the electrons in the valence band of the photocatode, which is a semiconductor; in transmission-type PMT's the photocatode is deposited on the inside of the window, while in reflection-type PMT's is on a separate surface. The excited electrons diffuse to the surface of the semiconductor and, if they have enough energy to overcame the vacuum level barrier, are emitted as photoelectrons. These are accelerated and focused by the electrode toward the multi-stage dynodes, a system of electrodes coated with a secondary emissive material, where the incident electrons are multiplied. The gain $G$ of the PMT depends on the applied voltage $V$ as $G=AV^{kn}$, where $A$ and $k$ are constants and $n$ is the number of multiplicative stages. Typical values for the gain are $10^5-10^6$. After the last stage of multiplication, the electrons are collected by the anode that then outputs the current to the external circuit.
 
 \begin{figure}[ht]
 \centering
@@ -210,11 +225,14 @@ As already mentioned in the previous sections, photons are often the effect of t
 \label{fig:det:pmt}
 \end{figure}
 
-\subsubsection*{Gaseous Photon Detectors}
+Beside PMT's, other examples of vacuum photon detectors are Microchannel plates (MCP) and Hybrid photon detectors (HPD). MCP's are based on the same principle as PMT's but substitute the discrete multiplicative stages of the dynodes with continuous multiplication in cylindrical holes of a few $\mu$m. The decreased size of a MCP comes at the price of a large recovery time, shorter lifetime and smaller gain (the typical gain of a MCP is about $10^4$). In HPD's photoelectrons are accelerated onto a silicon sensor, allowing higher resolution in space and energy; this type of sensors are used for example in the CMS hadronic calorimeter.
 
+\subsubsection*{Gaseous Photon Detectors}
+In gaseous photon detectors the photoelectrons are multiplied through the avalanche effect in an high-field region, similarly to what happens in gaseous tracking detectors. The photoelectrons are generated by the interaction of the photon either with a solid photocatode or with a photosensitive molecule vaporized and mixed in the gas itself. 
 
 \subsubsection*{Solid-State Photon Detectors}
+Solid state photon detectors are devices where the production and detection of the photoelectrons takes place in the same semiconductor material. They are in rapid development (see e.g. Ref. \cite{Renker:2009zz}) as they provide a smaller and often cheaper option to PMT's and gaseous detectors, especially when the area to be covered is small. Silicon photodiodes are devices used in many applications from high-energy physics to solar cells based on a reverse-biased p-n junction. Photons passing through the silicon create e-h pairs through the photoconductive effect, and these e-h pairs are then collected respectively at the positive and negative side of the chip. 
 
-\cite{Renker:2009zz} %Advances in solid state photon detectors
+ %Advances in solid state photon detectors
 
 

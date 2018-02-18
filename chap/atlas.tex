@@ -65,7 +65,7 @@ The two segments of the ATLAS detector that are dedicated to tracking, the ID an
 \label{sec:cern:atlasmagnets}
 \begin{figure}[ht]
 \centering
-\subfigure{\includegraphics[width=0.35\textwidth]{figures/atlas/magnets}}
+\subfigure{\includegraphics[width=0.45\textwidth]{figures/atlas/magnets}}
 \caption{Layout of the ATLAS magnet system. Figure from Ref. \cite{Goodson}}
 \label{fig:atlas:magnet}
 \end{figure}
@@ -160,7 +160,7 @@ Each of the two end-cap regions consists of two coaxial wheels, of eight module 
 
 The hadronic calorimeter is composed of three subsystems with different technologies: the tile barrel calorimeter (TileCal) is a sampling calorimeter with plastic scintillator as active material and steal as absorber, the hadronic end-cap calorimeter (HEC) uses copper as absorber and liquid argon as scintillator, while the forward calorimeter (FCal) uses again liquid argon in the active layer but has tungsten rods embedded in a copper matrix as absorber. The choice of the materials is driven by having detectors more resistant to radiation in the forward region, where the flux of particles is more abundant. 
 
-TileCal covers the pseudorapidity region with $|\eta|<$1.7, and is divided into a central long barrel (LB), 5.8-m long, and two extended barrels (EB), 2.6-m long; the TileCal inner radius is 2.28 m, and the outer radius 4.25 m. Each barrel is divided in 64 modules, disposed on the $\phi$ direction and each having the size of 0.1 radians. Each module is further segmented radially into three layers with thicknesses of about 1.5, 4.1 and 1.8 interaction lengths in the LB and 1.5, 2.6 and 3.3 interaction lengths in the EB; a schematic of one module is shown in Fig. \ref{fig:atlas:tile}(a). Ionizing particles passing through the plastic scintillator (polystyrene) produce ultra-violet light, which is then collected at the two edges of each tile and converted to the longer wavelength of visible light by wavelength-shifting fibers. The fibers, with a diameter of 1 mm each, transmit the light to the readout photomultiplier tubes (PMTs) located in the grinder.
+TileCal covers the pseudorapidity region with $|\eta|<$1.7, and is divided into a central long barrel (LB), 5.8-m long, and two extended barrels (EB), 2.6-m long; the TileCal inner radius is 2.28 m, and the outer radius 4.25 m. Each barrel is divided in 64 modules, disposed on the $\phi$ direction and each having the size of 0.1 radians. Each module is further segmented radially into three layers with thicknesses of about 1.5, 4.1 and 1.8 interaction lengths in the LB and 1.5, 2.6 and 3.3 interaction lengths in the EB; a schematic of one module is shown in Fig. \ref{fig:atlas:tile}(a). Ionizing particles passing through the plastic scintillator (polystyrene) produce ultra-violet light, which is then collected at the two edges of each tile and converted to the longer wavelength of visible light by wavelength-shifting fibers. The fibers, with a diameter of 1 mm each, transmit the light to the readout PMTs located in the grinder.
 
 \begin{figure}[ht]
 \centering
@@ -174,7 +174,7 @@ An approximately projective geometry, shown in Fig. \ref{fig:atlas:tile_cells}, 
 
 \begin{figure}[ht]
 \centering
-\subfigure{\includegraphics[width=0.85\textwidth]{figures/atlas/tile_cells.pdf}}
+\subfigure{\includegraphics[width=1.0\textwidth]{figures/atlas/tile_cells.pdf}}
 \caption{Layout of the projective geometry of the TileCal cells.}
 \label{fig:atlas:tile_cells}
 \end{figure}
@@ -252,11 +252,19 @@ Other two systems used in the luminosity determination are the LAr-based calorim
 \subsection{Trigger System}
 \label{sec:cern:trigger}
 
-With the nominal bunch spacing of 25 ns, the LHC produces collisions at a frequency of 40 MHz. This exceeds by several order of magnitude the current possibilities to write events to disk, therefore the ATLAS \textit{trigger and data acquisition system} (TDAQ) selects and records the events that are considered interesting for analyses. The TDAQ system has been updated between Run1 and Run2 \cite{Aaboud:2016leb} and it consists now of a  hardware \textit{Level1} (L1) trigger and s single software-based \textit{high-level trigger} (HLT). L1 is the first step in the chain, and reduces the output rate from 40 MHz to about 100 kHz. It uses reduced-granularity information from all the calorimeter systems and form the muon RPC and TGS to find events with interesting objects and saves the information about the \textit{region of interest} (RoI). L1 has a latency time of 2.5 $\mu$s; this corresponds to about 100 collisions, whose information has to be temporarily stored in buffers before the L1 central trigger processor (CTP) finalizes a decision based on the inputs from the L1 calorimeter trigger (L1Calo), L1 muon trigger (L1Muon) and the topological trigger (L1Topo). 
+With the nominal bunch spacing of 25 ns, the LHC produces collisions at a frequency of 40 MHz. This exceeds by several order of magnitude the current possibilities to write events to disk, therefore the ATLAS \textit{trigger and data acquisition system} (TDAQ) selects and records the events that are considered interesting for analyses. The TDAQ system has been updated between Run1 and Run2 \cite{Aaboud:2016leb} and it consists now of a  hardware \textit{Level1} (L1) trigger and s single software-based \textit{high-level trigger} (HLT). A schematic view of the Run2 ATLAS TDAQ system is shown in Fig. \ref{fig:atlas:trig}. L1 is the first step in the chain, and reduces the output rate from 40 MHz to about 100 kHz. It uses reduced-granularity information from all the calorimeter systems and form the muon RPC and TGS to find events with interesting objects and saves the information about the \textit{region of interest} (RoI). L1 has a latency time of 2.5 $\mu$s; this corresponds to about 100 collisions, whose information has to be temporarily stored in buffers before the L1 central trigger processor (CTP) finalizes a decision based on the inputs from the L1 calorimeter trigger (L1Calo), L1 muon trigger (L1Muon) and the topological trigger (L1Topo). 
 
 During Run1 the HLT consisted of two separate steps, that in Run2 have been merged to have a simpler setup and better resource sharing. The HLT uses information with finer granularity from the calorimeter systems, precision tracking from the muon spectrometer and tracking information from the ID, not available for L1. The HLT reduces further the event rate to about 1 kHz, and has a processing time of about 0.2 s per each event. 
 
 A trigger chain is a set of selections that characterize a certain trigger object, and the list of all available trigger chains defines the \textit{trigger menu}; some of the items on the menu are unprescaled, which means all the events firing that trigger are stored, while others are associated to a prescale constant P such that only a fraction $\frac{1}{P}$ of the events firing the trigger are stored.
+
+\begin{figure}[ht]
+\centering
+\subfigure[]{\includegraphics[width=0.75\textwidth]{figures/atlas/tdaq-run2-schematic}}
+\caption{Schematic view of the Run2 ATLAS TDAQ system.}
+\label{fig:atlas:trig}
+\end{figure}
+
 
 \subsection{ATLAS Operation}
 
