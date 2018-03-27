@@ -127,7 +127,7 @@ If the observed data follow a Poisson distribution, the likelihood is given by:
 
 \begin{equation}
 \label{eq:stat:lik_no_sys}
-L(\mu, \vec{\theta}) =
+L(\mu) =
 \prod_{i=1}^N \frac{ (\mu s_{i} +
 b_{i} )^{n_{i}} }{ n_{i}! }
 e^{- (\mu s_{i} + b_{i}) } \ ,
@@ -141,9 +141,9 @@ The prediction on the expected number of events in each bin is affected by syste
 \begin{equation}
 \label{eq:stat:lik_sys}
 L(\mu, \vec{\theta}) =
-\prod_{j=1}^N \frac{ (\mu s_{j} +
-b_{j} )^{n_{j}} }{ n_{j}! }
-e^{- (\mu s_{j} + b_{j}) }   \;\;
+\prod_{i=1}^N \frac{ (\mu s_{i} +
+b_{i}(\vec{\theta}) )^{n_{i}} }{ n_{i}! }
+e^{- (\mu s_{i} + b_{i}(\vec{\theta})) }   \;\;
 \prod_{k=1}^M \rho( \theta_k) \
 \end{equation}
 
@@ -215,23 +215,10 @@ G( 0 | \theta, 1) \
 
 \subsection*{Interpolation}
 
-The response of the efficiency to a $\pm 1 sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Eq. \ref{eq:stat:lik_one_bin_sys_pre} and Eq. \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. Several interpolation strategies are possible, and the ones described below are the ones supported by HistFactory \cite{Cranmer:1456844}.
+The response of the efficiency to a $\pm 1 \sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Eq. \ref{eq:stat:lik_one_bin_sys_pre} and Eq. \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. Several interpolation strategies are possible, and the ones described below are the ones supported by HistFactory \cite{Cranmer:1456844}.
  
 
 \paragraph{Piecewise Linear} This is the simplest interpolation techniques. The value of the predicted background yields is given by:
-
-\begin{equation}
-\label{eq:stat:interp_linear}
-b(\theta)=
-\begin{cases}
-b \left( \frac{b^+}{b}\right)^{\theta}  \;\;\;\;\;\; \theta \geq 0\\
-b \left( \frac{b^-}{b}\right)^{-\theta}  \;\;\;\; \theta < 0
-\end{cases} \, , \
-\end{equation}
-
-\noindent where $b$ is the nominal background prediction and $b^\pm$ correspond to the background yields for the $\pm 1 \sigma$ variation of the nuisance parameter. This interpolation technique has the clear advantage of simplicity, but it has the cons of presenting a discontinuity for $\theta=0$. For large uncertainties, it can also lead to negative $b(\theta)$.
-
-\paragraph{Piecewise Exponential} The piecewise exponential interpolation is given by:
 
 \begin{equation}
 \label{eq:stat:interp_exp}
@@ -240,6 +227,19 @@ b(\theta)=
 b + \theta (b^+ -b)  \;\;\;\;\;\; \theta \geq 0\\
 b + \theta (b - b^-) \;\;\;\;\;\; \theta < 0
 \end{cases} \,  \
+\end{equation}
+
+\noindent where $b$ is the nominal background prediction and $b^\pm$ correspond to the background yields for the $\pm 1 \sigma$ variation of the nuisance parameter. This interpolation technique has the clear advantage of simplicity, but it has the cons of presenting a discontinuity for $\theta=0$. For large uncertainties, it can also lead to negative $b(\theta)$.
+
+\paragraph{Piecewise Exponential} The piecewise exponential interpolation is given by:
+
+\begin{equation}
+\label{eq:stat:interp_linear}
+b(\theta)=
+\begin{cases}
+b \left( \frac{b^+}{b}\right)^{\theta}  \;\;\;\;\;\; \theta \geq 0\\
+b \left( \frac{b^-}{b}\right)^{-\theta}  \;\;\;\; \theta < 0
+\end{cases} \, , \
 \end{equation}
 
 \noindent In this case, $b(\theta)$ is bound to be positive. The discontinuity at $\theta=0$ is still present, and in this case it appears also when $b^+$ and $b^-$ are symmetric with respect to $b$. Note that, once this is inserted into the likelihood, the combination of a Gaussian constraint with exponential interpolation is equivalent to a log-normal constraint with a linear extrapolation. This strategy avoids the discontinuity for $\theta=0$, but it can introduce problems with the sign of the variation, for example sign inversion if $b-b^+$ and $b-b^-$ have the same sign.
@@ -293,8 +293,8 @@ To quantify the compatibility of the observed data with a specific model, a \tex
 
 \begin{equation}
 \label{eq:stat:pval}
-p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \,
-d t_{\mu} \;,
+p_{\mu} = \int_{t_{{\rm obs}}}^{\infty} f(t | \mu ) \,
+d t \;,
 \end{equation}
 
 The p-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the p-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% confidence level (CL). Note that excluding an alternate hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
