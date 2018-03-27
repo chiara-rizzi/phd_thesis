@@ -42,9 +42,10 @@ headsepline, % Uncomment to get a line under the header
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{mathpazo} % Use the Palatino font by default
 
-\usepackage[backend=bibtex,style=numeric,natbib=true,sorting=none]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-
-\addbibresource{main.bib} % The filename of the bibliography
+%\usepackage[backend=bibtex,style=numeric,natbib=true,sorting=none]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\usepackage{cite}
+\bibliographystyle{atlasBibStyleWithTitle}
+%\addbibresource{main.bib} % The filename of the bibliography
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage{amssymb}  % to have some symbol I don't remember
 \usepackage{multirow}
@@ -281,7 +282,9 @@ headsepline, % Uncomment to get a line under the header
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\printbibliography[heading=bibintoc]
+%\printbibliography[heading=bibintoc]
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{main}
 
 %----------------------------------------------------------------------------------------
 
