@@ -1,26 +1,23 @@
-# Author: Emiliano Carlos de Moraes Firmino @ 10/2012
-SHELL=/bin/sh
-THESIS=main
+BASIC_BUILD = pdflatex main.tex 
+BUILD_GLOSSARY =  makeglossaries main
+BUILD_BIBLIOGRAPHY = bibtex main
+CLEAN =  rm -rf *.aux *.lof *.log *.lot *.toc *.bbl *.blg *~ *.out *.xml *blx.bib *.alg *.acr *.acn *.tex.bak *.gls *.glg *.ist *.glo
 
-.SUFFIXES:
-.SUFFIXES: .bib .pdf .tex
-.PHONY: clean
 
-run: $(THESIS).pdf
+all: _base_ 
+	echo "Done!"
 
-$(THESIS).pdf: $(THESIS).bbl $(THESIS).tex
-	pdflatex $(THESIS).tex 
-
-$(THESIS).bbl: $(THESIS).aux
-	pdflatex $(THESIS).tex -draftmode	
-	bibtex $(THESIS)
-
-$(THESIS).aux: $(THESIS).bib
-	pdflatex $(THESIS).tex -draftmode
-	pdflatex $(THESIS).tex 
-
-clean_pdf:
-	rm -rf *.aux *.lof *.log *.lot *.toc *.bbl *.blg *pdf
+_base_:
+	@$(BASIC_BUILD) #&>/dev/null
+	@$(BUILD_BIBLIOGRAPHY)
+	@$(BUILD_GLOSSARY)
+	@$(BASIC_BUILD) #&>/dev/null
+	@$(BASIC_BUILD) #&>/dev/null
+	@$(CLEAN)
 
 clean:
-	rm -rf *.aux *.lof *.log *.lot *.toc *.bbl *.blg *~ *.out *.xml *blx.bib
+	@$(CLEAN)
+
+clean_pdf: clean
+	rm *.pdf
+

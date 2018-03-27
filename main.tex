@@ -56,6 +56,18 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{slashed} % to have slashed
 \usepackage{subfigure}
 \usepackage{enumitem} % to personalize enumerations
+%\usepackage[nonumberlist,nopostdot,toc,acronym,nogroupskip]{glossaries} % to make a glossary
+\usepackage{glossaries} % to make a glossary
+
+\makeglossaries
+
+\newglossaryentry{pp}
+{
+    name=$p-p$,
+    description={Proton-proton}
+}
+
+\newacronym{gcd}{GCD}{Greatest Common Divisor}
 
 %\newcommand{\beq}{\begin{equation}}
 %\newcommand{\eeq}{\end{equation}}
@@ -250,12 +262,13 @@ headsepline, % Uncomment to get a line under the header
 \include{chap/theory}
 \include{chap/lhc}
 %\include{chap/mc_simul}
-%\include{chap/trig_obj}
+\include{chap/trig_obj}
 %\include{chap/susy_general}
 \include{chap/stat}
 %\include{chap/strong_prod}
 %\include{chap/ewk_prod}
 %\include{chap/concl}
+
 
 
 %----------------------------------------------------------------------------------------
@@ -277,6 +290,10 @@ headsepline, % Uncomment to get a line under the header
 %\listoffigures % Prints the list of figures
 %\listoftables % Prints the list of tables
 
+\clearpage
+% GLOSSARY
+\printglossary
+\clearpage
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
