@@ -57,12 +57,12 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{subfigure}
 \usepackage{enumitem} % to personalize enumerations
 %\usepackage[nonumberlist,nopostdot,toc,acronym,nogroupskip]{glossaries} % to make a glossary
+\usepackage[colorlinks=false,linkcolor=black]{hyperref}
 \usepackage{glossaries} % to make a glossary
 
 \makeglossaries
 
-\newacronym{pp}{$p-p$}{proton-proton}
-\newacronym{atlas}{ATLAS}{A Toroidal LHC Apparatus}
+\input{glossary.tex}
 
 %\newcommand{\beq}{\begin{equation}}
 %\newcommand{\eeq}{\end{equation}}
@@ -151,6 +151,8 @@ headsepline, % Uncomment to get a line under the header
 
 %\titleformat{\section}[hang]
 %    {\Large\bfseries} {\textcolor{red} \thesection \hsp \textcolor{gray} {|} \hsp} {0pt} {\Large\bfseries}
+
+
 
 \begin{document}
 
