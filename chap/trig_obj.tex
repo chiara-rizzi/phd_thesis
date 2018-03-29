@@ -79,15 +79,19 @@ The choice of a particular algorithm results in different shapes of the jets, re
 \label{fig:jetsalg}
 \end{figure}
 
-As mentioned above, the inputs to the jet-finding algorithms are calibrated at \gls{em} scale, and its coordinate refer to the center of the detector. To access a more precise measurement of the jet energy and kinematics, a sequence of calibration stages are applied \cite{TheATLAScollaboration:2015soq}:
+As mentioned above, the inputs to the jet-finding algorithms are calibrated at \gls{em} scale, and its coordinate refer to the center of the detector. To access a more precise measurement of the jet energy and kinematics, a sequence of calibration stages are applied; for the 2015-2016 dataset, the standard \gls{atlas} corrections are \cite{PhysRevD.96.0720}:
 
 \begin{description}
-\item[LCW calibration]
 \item[Origin correction] The direction of the jet is changed to point at the reconstructed hard-scattering \gls{pv} rather than at the cented of the detector. This correction improves the $\eta$ resolution of the jets.
+
 \item[Pile-up correction] Multiple collisions in the same bunch crossing (\textit{in-time pile-up}), as well as residual energy from previous collisions (\textit{out-of-time pile-up}), affect the e jet energy reconstruction. The effect of pile-up is corrected in two steps: a first correction \cite{Cacciari:2007fd,TheATLAScollaboration:2013pia}, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pile-up events. A second correction based on the number of \glspl{pv} and on the number of interactions per bunch crossing, is then applied to disentangle the the effect of in-time pile-uo and out-of-time pile-up.
-\item[Absolute calibration] The \gls{jes} correction is derived comparing in \gls{mc} the truth energy of a jet with the reconstructed energy. 
-\item[Global sequential calibration] \cite{ATLAS:2015oia}
-\item[Residual in-situ calibration]
+
+\item[Absolute calibration] The absolute \gls{jes} and $\eta$ correction is derived comparing in \gls{mc} the truth energy of a jet with the reconstructed energy, and also correct for biases in the $\eta$ reconstruction \cite{Aad2015jets}.
+
+\item[Global sequential calibration] The \gls{gsc} \cite{ATLAS:2015oia} improves the \gls{jes} resolution by deriving additional corrections based on individual jet properties, for example the number of associated tracks and the fraction of energy deposited in the various layers of the calorimeter.
+
+\item[In-situ calibration] As a last stage, the data-driven calibration (\textit{in-situ}) \cite{ATLAS:2015uwa} corrects for the differences between \gls{mc} simulation and data (arising for example from imperfect simulation of the detector response and material interaction). These corrections are derived from events where the jet \pt is balanced against other well measured objects. In the $\eta$-intercalibration, dijet events are used to correct the response of forward jets using well-measured central jets. The response of central jets is instead measured in $Z$+jets, $\gamma$+jets and multijet events. 
+ 
 \end{description}
 
 \subsection{Jets from B-hadrons}
@@ -100,7 +104,7 @@ Jets originating from the hadronization of a b-quark (b-jets) can be identified 
 \includegraphics[width=0.45\textwidth]{./figures/objects/secvtx.pdf}
 \end{center}
 \caption[Schematic view of the topology of a b-jet.]{Schematic view of the topology of a b-jet. Figure from Ref. \cite{dobtagging}.}
-\label{fig:btag}
+\el{fig:btag}
 \end{figure}
 
 
