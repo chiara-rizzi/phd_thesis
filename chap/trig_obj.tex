@@ -5,7 +5,7 @@ The particles produced in the \gls{pp} collisions in the center of the \gls{atla
 This chapter describes the reconstruction and identification of the objects used in the analyses discussed in this thesis: tracks and vertices, electrons, muons, hadronic jets and missing transverse momentum. 
 
 
-\subsection{Tracks and Primary Vertices}
+\section{Tracks and Primary Vertices}
 \label{sec:reco:tracks}
 
 In \gls{atlas} the identification of tracks from charged particles relies on the information collected by the \gls{id}. The tracking information is crucial to the reconstruction and identification of many types of particles, including electrons, muons, and the jest originating from the hadronization of a b-quark. The precision on the position measurement of the track depends on the granularity of the different subsystems of the \gls{id} and, since the \gls{id} is surrounded by a solenoidal magnetic field, the charged particles follow an helical trajectory. After the point of closest approach (perigee) to a given reference is defined, the trajectory of the track can be described by five parameters: 
@@ -29,36 +29,49 @@ Random groups of hits can be wrongly reconstructed as belonging to the helical t
 Tracks are the starting point for the identification of vertices. \glspl{pv} are reconstructed through a vertex fitting algorithm \cite{Fruhwirth:2007hz}, and then the vertex fitting algorithm identifies the vertex position and refits the tracks adding the constraint of the reconstructed interaction point. Once all the \glspl{pv} are reconstructed, the one with the highest sum of the squared transverse momenta of its associated tracks ($\sum_i^{N-tracks}p_{T,i}^2$) is identified as the hard scattering vertex, and $d_0$ and $z_0$ are recomputed with respect to its coordinates. The other vertices are named pile-up vertices, and their number is correlated  to the number of interactions per bunch crossing.
 
 
-\subsection{Hadronic Jets}
+\section{Hadronic Jets}
 
-The jet-finding algorithms of the $k_T$-family group together clusters that are close according to the metric $d_{i,j}$, defined as:
+Because of confinement, quarks and gluons produced in the collisions give origin to a collimated spray of hadrons (\textit{jets}) that move in the direction of the original parton. When jets interact with the detector, they loose most of their energy as deposits in the calorimeter systems, which are then grouped together aiming at reconstructing the characteristics of the original parton. 
+The first step in the jet reconstruction is the procedure that groups the calorimeter cells into topological clusters (\textit{topoclusters}). Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Fig. \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.3\textwidth]{./figures/objects/topocluster.pdf}
+\end{center}
+\caption[Topocluster schematic representation]{Topocluster schematic representation. The seed of the cluster is shown in red, the neighbouring cells are in yellow and the ring of guard cells is in grey.}
+\label{fig:obj:topocluster}
+\end{figure}
+ 
+
+The topoclusters are then grouped together by a jet-finding algorithm. Different algorithm are available, and in particular the algorithms of the $k_T$-family merge clusters according to the metric $d_{i,j}$, defined as:
 
 \begin{equation}
 d_{i,j} = min\left( k_{T,i}^{2n}, k_{T,i}^{2n}  \right) \frac{\Delta R_{i,j}^2}{R^2},
+\label{eq:obj:dij}
 \end{equation}
 
-where $k_{T,i}$ is the transverse momentum of the cluster, $\Delta R_{i,j}$ is the angular distance defined as in \ref{eq:deltaR}, R is a fixed parameter, whose values sets the size of the jet, and n is the parameters that defines the kind of algorithm we are using and therefore the shape of the resulting jets. Besides the distance between clusters, the distance of a cluster form the beam is also defined:
+where $k_{T,i}$ is the transverse momentum of the cluster, $\Delta R_{i,j}$ is the angular distance defined as in \ref{eq:deltaR}, $R$ is a fixed parameter, whose values sets the size of the jet, and $n$ is the parameters that defines the kind of algorithm we are using and therefore the shape of the resulting jets. Eq. \ref{eq:obj:dij} defined the distance between two clusters, while the cluster-beam distance is defined as:
 
 \begin{equation}
-d_{i,B} =  k_{T,i}^{2n}
+d_{i,B} =  k_{T,i}^{2n} \; .
 \end{equation}
 
-The $k_T$-family algorithms follow an iterative approach:
+The grouping of the clusters follows an iterative approach:
 \begin{enumerate}
-\item For each topocluster, the distances $d_{i,j}$ and $d_{i,B}$ are calculated
-\item If $d_{i,B} < d_{i,j} \, \forall i \neq j $ the i-th cluster is defined as a jet
-\item group together the two clusters i, j with the smallest $d_{i,j}$ among the remaining
-\item Reiterate the procedure
+\item For each topocluster, the distances $d_{i,j}$ and $d_{i,B}$ are calculated.
+\item If, for some $i$ and $j$, $d_{i,j} < d_{i,B}$, group together the two clusters with the smallest $d_{i,j}$
+\item Otherwise, if $d_{i,B} < d_{i,j} \, \forall i \neq j $ the $i$-th cluster is defined as a jet.
+\item This procedure is iterated until the jet is defined
 \end{enumerate}
 
 Depending on the value of the parameter n, we can distinguish different algorithms:
 \begin{itemize}
 \item $n=0$: Cambridge-Aachen. The grouping of the clusters depends only on geometrical considerations and not on their momentum. 
-\item $n=1$: $k_T$ algorithm. Groups soft clusters first.
-\item $n=-1$: $anti-k_T$ algorithm. Groups hard objects first; the shape of the jets is more regular than in the two previous cases and is a cone of radius R.
+\item $n=1$: $k_T$ algorithm. Soft clusters are grouped first.
+\item $n=-1$: anti-$k_T$ algorithm. Groups hard objects first; the shape of the jets is more regular than in the two previous cases and is a cone of radius R.
 \end{itemize}
 
-The choice of a particular algorithm results in different shapes of the jets, represented in fig. \ref{fig:jetsalg}. The standard algorithm used by \gls{atlas} is the $anti-k_T$ algorithm \cite{cacciari:antikt}.
+The choice of a particular algorithm results in different shapes of the jets, represented in fig. \ref{fig:jetsalg}. The standard algorithm used by \gls{atlas} is the anti-$k_T$ algorithm \cite{cacciari:antikt}.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{./figures/objects/jetsalg.pdf}
@@ -66,11 +79,20 @@ The choice of a particular algorithm results in different shapes of the jets, re
 \label{fig:jetsalg}
 \end{figure}
 
+As mentioned above, the inputs to the jet-finding algorithms are calibrated at \gls{em} scale, and its coordinate refer to the center of the detector. To access a more precise measurement of the jet energy and kinematics, a sequence of calibration stages are applied \cite{TheATLAScollaboration:2015soq}:
 
-\subsubsection{Jets from B-hadrons}
+\begin{description}
+\item[LCW calibration]
+\item[Origin correction] The direction of the jet is changed to point at the reconstructed hard-scattering \gls{pv} rather than at the cented of the detector. This correction improves the $\eta$ resolution of the jets.
+\item[Pile-up correction] Multiple collisions in the same bunch crossing (\textit{in-time pile-up}), as well as residual energy from previous collisions (\textit{out-of-time pile-up}), affect the e jet energy reconstruction. The effect of pile-up is corrected in two steps: a first correction \cite{Cacciari:2007fd,TheATLAScollaboration:2013pia}, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pile-up events. A second correction based on the number of \glspl{pv} and on the number of interactions per bunch crossing, is then applied to disentangle the the effect of in-time pile-uo and out-of-time pile-up.
+\item[Absolute calibration] The \gls{jes} correction is derived comparing in \gls{mc} the truth energy of a jet with the reconstructed energy. 
+\item[Global sequential calibration] \cite{ATLAS:2015oia}
+\item[Residual in-situ calibration]
+\end{description}
+
+\subsection{Jets from B-hadrons}
 
 Jets originating from the hadronization of a b-quark (b-jets) can be identified thanks to the lifetime of B-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the B-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a B-hadron is shown in Fig. \ref{fig:btag}.
-
 
 
 \begin{figure}[h]
@@ -81,11 +103,15 @@ Jets originating from the hadronization of a b-quark (b-jets) can be identified 
 \label{fig:btag}
 \end{figure}
 
-\subsection{Electrons}
 
-\subsection{Muons}
+\subsection{Reclustered Jets}
 
-\subsection{Missing Transverse Momentum}
+
+\section{Electrons}
+
+\section{Muons}
+
+\section{Missing Transverse Momentum}
 
 Particles that interact only weakly with the detector, such as neutrinos or BSM particles like neutralinos, are not reconstructed directly. 
 Their presence is instead inferred by measuring the total momentum imbalance in the event. 
