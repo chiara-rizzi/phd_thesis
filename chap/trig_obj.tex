@@ -110,15 +110,6 @@ As mentioned above, the inputs to the jet-finding algorithms are calibrated at \
 Jets originating from the hadronization of a b-quark (b-jets) can be identified thanks to the lifetime of B-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the B-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a B-hadron is shown in Fig. \ref{fig:btag}.
 
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.45\textwidth]{./figures/objects/secvtx.pdf}
-\end{center}
-\caption[Schematic view of the topology of a b-jet.]{Schematic view of the topology of a b-jet. Figure from Ref. \cite{d0btagging}.}
-\label{fig:btag}
-\end{figure}
-
-
 \subsection{Re-clustered Jets}
 
 The angular separation between the decay products of a particle with mass $m^P$ and transverse momentum 
@@ -136,18 +127,28 @@ Therefore, it is not always possible to choose the optimal value of the jet radi
 A possible solution to this problem comes from noticing that the same jet-finding algorithms used to group topoclusters can have different types of inputs. 
 In particular, jets themselves can be be used as input and grouped together, and in this case we speak of \textit{re-clustered jets} \cite{Nachman:2014kla}. 
 The re-clustered jest are automatically calibrated as long as the input jets are, and also the jet uncertainties can be propagated directly. 
+A comparison of the jet clustering obtained with $R$=1.0 anti-$k_T$ and by re-clustering anti-$k_T$ $R$=0.3 jets into anti-$k_T$ $R$=1.0
+is shown in Fig. \ref{fig:recluster}. It is possible to see how the jet axis is similar between the two cases, and how the $R$=1.0 anti-$k_T$ have more inputs away from the jet axis.
+Re-clustered jets can be \textit{trimmed} by removing the constituent small-R jets that have a \pt smaller than a certain fraction of the \pt of the original reclustered jet. 
+
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{./figures/objects/reclustered.pdf}
 \end{center}
-\caption[Example event where jets have been clustered with (a) anti-$k_T$ with $R$=1.0 and (b) anti-$k_T$ $R$=1.0 re-clustered jets (starting from anti-$k_T$ $R$=0.3 jets); the shaded region shows the jet area. Figure from Ref. \cite{Nachman:2014kla}.}
-\label{fig:btag}
+\caption{Example event where jets have been clustered with (a) anti-$k_T$ with $R$=1.0 and (b) anti-$k_T$ $R$=1.0 re-clustered jets (starting from anti-$k_T$ $R$=0.3 jets); the shaded region shows the jet area. Figure from Ref. \cite{Nachman:2014kla}.}
+\label{fig:recluster}
 \end{figure}
 
-Re-clustered jets can be \textit{trimmed}, by removing the constituent small-R jets that have a \pt smaller than a certain fraction of the \pt of the original reclustered jet. 
-
 \section{Jets from B-hadrons}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{./figures/objects/secvtx.pdf}
+\end{center}
+\caption[Schematic view of the topology of a b-jet.]{Schematic view of the topology of a b-jet. Figure from Ref. \cite{d0btagging}.}
+\label{fig:btag}
+\end{figure}
 
 \section{Electrons}
 
