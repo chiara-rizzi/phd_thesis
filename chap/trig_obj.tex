@@ -32,6 +32,8 @@ Tracks are the starting point for the identification of vertices. \glspl{pv} are
 \section{Hadronic Jets}
 
 Because of confinement, quarks and gluons produced in the collisions give origin to a collimated spray of hadrons (\textit{jets}) that move in the direction of the original parton. When jets interact with the detector, they loose most of their energy as deposits in the calorimeter systems, which are then grouped together aiming at reconstructing the characteristics of the original parton. 
+
+\subsection{Clusters}
 The first step in the jet reconstruction is the procedure that groups the calorimeter cells into topological clusters (\textit{topoclusters}). Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Fig. \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
 
 \begin{figure}[h]
@@ -42,6 +44,7 @@ The first step in the jet reconstruction is the procedure that groups the calori
 \label{fig:obj:topocluster}
 \end{figure}
  
+\subsection{Jet-finding Algorithms}
 
 The topoclusters are then grouped together by a jet-finding algorithm. Different algorithm are available, and in particular the algorithms of the $k_T$-family merge clusters according to the metric $d_{i,j}$, defined as:
 
@@ -79,6 +82,8 @@ The choice of a particular algorithm results in different shapes of the jets, re
 \label{fig:jetsalg}
 \end{figure}
 
+\subsection{Jet Calibration}
+
 As mentioned above, the inputs to the jet-finding algorithms are calibrated at \gls{em} scale, and its coordinate refer to the center of the detector. To access a more precise measurement of the jet energy and kinematics, a sequence of calibration stages are applied; for the 2015-2016 dataset, the standard \gls{atlas} corrections are \cite{PhysRevD.96.0720}:
 
 \begin{description}
@@ -93,6 +98,12 @@ As mentioned above, the inputs to the jet-finding algorithms are calibrated at \
 \item[In-situ calibration] As a last stage, the data-driven calibration (\textit{in-situ}) \cite{ATLAS:2015uwa} corrects for the differences between \gls{mc} simulation and data (arising for example from imperfect simulation of the detector response and material interaction). These corrections are derived from events where the jet \pt is balanced against other well measured objects. In the $\eta$-intercalibration, dijet events are used to correct the response of forward jets using well-measured central jets. The response of central jets is instead measured in $Z$+jets, $\gamma$+jets and multijet events. 
  
 \end{description}
+
+\subsubsection{Jet Calibration Uncertainties}
+
+\subsection{Jet Resolution}
+
+\subsection{Jet Cleaning}
 
 \subsection{Jets from B-hadrons}
 
