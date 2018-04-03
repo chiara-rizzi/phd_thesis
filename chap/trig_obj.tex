@@ -91,7 +91,7 @@ As mentioned above, the inputs to the jet-finding algorithms are calibrated at \
 \begin{description}
 \item[Origin correction] The direction of the jet is changed to point at the reconstructed hard-scattering \gls{pv} rather than at the cented of the detector. This correction improves the $\eta$ resolution of the jets.
 
-\item[Pile-up correction] Multiple collisions in the same bunch crossing (\textit{in-time pile-up}), as well as residual energy from previous collisions (\textit{out-of-time pile-up}), affect the e jet energy reconstruction. The effect of pile-up is corrected in two steps: a first correction \cite{Cacciari:2007fd,TheATLAScollaboration:2013pia}, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pile-up events. A second correction based on the number of \glspl{pv} and on the number of interactions per bunch crossing, is then applied to disentangle the the effect of in-time pile-uo and out-of-time pile-up.
+\item[Pileup correction] Multiple collisions in the same bunch crossing (\textit{in-time pile-up}), as well as residual energy from previous collisions (\textit{out-of-time pile-up}), affect the e jet energy reconstruction. The effect of pile-up is corrected in two steps: a first correction \cite{Cacciari:2007fd,TheATLAScollaboration:2013pia}, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pile-up events. A second correction based on the number of \glspl{pv} and on the number of interactions per bunch crossing, is then applied to disentangle the the effect of in-time pile-uo and out-of-time pile-up.
 
 \item[Absolute calibration] The absolute \gls{jes} and $\eta$ correction is derived comparing in \gls{mc} the truth energy of a jet with the reconstructed energy, and also correct for biases in the $\eta$ reconstruction \cite{Aad2015jets}.
 
@@ -103,11 +103,43 @@ As mentioned above, the inputs to the jet-finding algorithms are calibrated at \
 
 \subsubsection{Jet Calibration Uncertainties}
 
+The calibration procedure described above implies a set of uncertainties. In particular, 
+the \gls{atlas} \gls{jes} Run-2 calibration includes a set of 80 systematic uncertainties; 
+67 of those derive from the in-situ calibration \cite{PhysRevD.96.072002}, accounting for modelling uncertainties, 
+sample statistics and uncertainties on the calibration of other physics objects used in deriving the calibration. 
+The other 13 systematic uncertainties derive from the pileup correction, the $\eta$-intercalibration 
+and differences in the jet response and composition for jets of different flavors. 
+The full combination of the uncertainties derived from the first 3.2 \ifb of the Run 2 data 
+is shown in Fig. \ref{fig:obj:jessyst} as a function of \pt at $\eta = 0$ and as a function of $\eta$ at \pt$ = 80$ GeV.
+
+\begin{figure}[h]
+\begin{center}
+  \subfigure[]{
+    \label{fig:Comb_syst:pt}
+    \includegraphics[width=0.48\textwidth]{figures/objects/fig12a.pdf}
+  }
+  \subfigure[]{
+    \label{fig:Comb_syst:eta}
+    \includegraphics[width=0.48\textwidth]{figures/objects/fig12b.pdf}
+  }
+\end{center}
+ \caption{Combined uncertainty in the \gls{jes} of fully calibrated jets as a function of \subref{fig:Comb_syst:pt}  
+ jet \pt at $\eta = 0$ and \subref{fig:Comb_syst:eta} $\eta$ at \pt$ = 80$ GeV. Figure from Ref. \cite{PhysRevD.96.072002}.}
+  \label{fig:obj:jessyst}
+\end{figure}
+
+To allow an easier usage of the uncertainties in physics analyses, a reduced set of 19 \gls{np} is provided: 
+the 67 \glspl{np} from the in-situ calibration are reduced to six by keeping the five uncertainties of largest magnitude, 
+plus a sixth one which is the sum in quadrature of the remaining ones. 
+A further reduction is in place to group the remaining \glspl{np} into three components, 
+and the \glspl{np} within a single component are added in quadrature; this leads to a correlation loss, whose effect is analysis dependent. 
+
+
+
 \subsection{Jet Resolution}
 
 \subsection{Jet Cleaning and Jet Vertex Tagger}
 
-Jets originating from the hadronization of a b-quark (b-jets) can be identified thanks to the lifetime of B-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the B-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a B-hadron is shown in Fig. \ref{fig:btag}.
 
 
 \subsection{Re-clustered Jets}
@@ -129,18 +161,21 @@ In particular, jets themselves can be be used as input and grouped together, and
 The re-clustered jest are automatically calibrated as long as the input jets are, and also the jet uncertainties can be propagated directly. 
 A comparison of the jet clustering obtained with $R$=1.0 anti-$k_T$ and by re-clustering anti-$k_T$ $R$=0.3 jets into anti-$k_T$ $R$=1.0
 is shown in Fig. \ref{fig:recluster}. It is possible to see how the jet axis is similar between the two cases, and how the $R$=1.0 anti-$k_T$ have more inputs away from the jet axis.
-Re-clustered jets can be \textit{trimmed} by removing the constituent small-R jets that have a \pt smaller than a certain fraction of the \pt of the original reclustered jet. 
+Re-clustered jets can be \textit{trimmed} by removing the constituent small-R jets that have a \pt smaller than a defined fraction of the \pt of the original reclustered jet. 
 
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{./figures/objects/reclustered.pdf}
+\includegraphics[width=1.0\textwidth]{./figures/objects/reclustered.pdf}
 \end{center}
 \caption{Example event where jets have been clustered with (a) anti-$k_T$ with $R$=1.0 and (b) anti-$k_T$ $R$=1.0 re-clustered jets (starting from anti-$k_T$ $R$=0.3 jets); the shaded region shows the jet area. Figure from Ref. \cite{Nachman:2014kla}.}
 \label{fig:recluster}
 \end{figure}
 
 \section{Jets from B-hadrons}
+
+Jets originating from the hadronization of a b-quark (b-jets) can be identified thanks to the lifetime of B-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the B-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a B-hadron is shown in Fig. \ref{fig:btag}.
+
 
 \begin{figure}[h]
 \begin{center}
@@ -149,6 +184,9 @@ Re-clustered jets can be \textit{trimmed} by removing the constituent small-R je
 \caption[Schematic view of the topology of a b-jet.]{Schematic view of the topology of a b-jet. Figure from Ref. \cite{d0btagging}.}
 \label{fig:btag}
 \end{figure}
+
+\subsection{B-tagging Calibration and Uncertainties}
+
 
 \section{Electrons}
 
