@@ -45,6 +45,7 @@ The first step in the jet reconstruction is the procedure that groups the calori
 \end{figure}
  
 \subsection{Jet-finding Algorithms}
+\label{sec:obj:jetfinding}
 
 The topoclusters are then grouped together by a jet-finding algorithm. Different algorithm are available, and in particular the algorithms of the $k_T$-family merge clusters according to the metric $d_{i,j}$, defined as:
 
@@ -83,8 +84,9 @@ The choice of a particular algorithm results in different shapes of the jets, re
 \end{figure}
 
 \subsection{Jet Calibration}
+\label{sec:obj:jetcalib}
 
-As mentioned above, the inputs to the jet-finding algorithms are calibrated at \gls{em} scale, and its coordinate refer to the center of the detector. To access a more precise measurement of the jet energy and kinematics, a sequence of calibration stages are applied; for the 2015-2016 dataset, the standard \gls{atlas} corrections are \cite{PhysRevD.96.0720}:
+As mentioned above, the inputs to the jet-finding algorithms are calibrated at \gls{em} scale, and its coordinate refer to the center of the detector. To access a more precise measurement of the jet energy and kinematics, a sequence of calibration stages are applied; for the 2015-2016 dataset, the standard \gls{atlas} corrections are \cite{PhysRevD.96.072002}:
 
 \begin{description}
 \item[Origin correction] The direction of the jet is changed to point at the reconstructed hard-scattering \gls{pv} rather than at the cented of the detector. This correction improves the $\eta$ resolution of the jets.
@@ -103,9 +105,7 @@ As mentioned above, the inputs to the jet-finding algorithms are calibrated at \
 
 \subsection{Jet Resolution}
 
-\subsection{Jet Cleaning}
-
-\subsection{Jets from B-hadrons}
+\subsection{Jet Cleaning and Jet Vertex Tagger}
 
 Jets originating from the hadronization of a b-quark (b-jets) can be identified thanks to the lifetime of B-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the B-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a B-hadron is shown in Fig. \ref{fig:btag}.
 
@@ -119,8 +119,35 @@ Jets originating from the hadronization of a b-quark (b-jets) can be identified 
 \end{figure}
 
 
-\subsection{Reclustered Jets}
+\subsection{Re-clustered Jets}
 
+The angular separation between the decay products of a particle with mass $m^P$ and transverse momentum 
+$p_T^P$ scales as:
+\begin{equation}
+\Delta R \approx \frac{2 m^P}{p_T^P} \; .
+\end{equation}
+
+This indicates that the ideal value of the $R$ parameter described in Sec. \ref{sec:obj:jetfinding} can vary depending on the event topology that we want to capture;
+for example, the decay products of an heavy particle with a transverse momentum much larger than its rest mass (\textit{boosted object}) could be better described by a 
+single jet with a larger $R$ than with multiple jets with the "standard" 0.4 radius, 
+as it happens for example in the decay of very energetic top quarks, W, Z or Higgs bosons produced at the LHC.
+Each different value of the $R$ parameter requires a dedicated calibration following the steps described in Sec. \ref{sec:obj:jetcalib}. 
+Therefore, it is not always possible to choose the optimal value of the jet radius. 
+A possible solution to this problem comes from noticing that the same jet-finding algorithms used to group topoclusters can have different types of inputs. 
+In particular, jets themselves can be be used as input and grouped together, and in this case we speak of \textit{re-clustered jets} \cite{Nachman:2014kla}. 
+The re-clustered jest are automatically calibrated as long as the input jets are, and also the jet uncertainties can be propagated directly. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{./figures/objects/reclustered.pdf}
+\end{center}
+\caption[Example event where jets have been clustered with (a) anti-$k_T$ with $R$=1.0 and (b) anti-$k_T$ $R$=1.0 re-clustered jets (starting from anti-$k_T$ $R$=0.3 jets); the shaded region shows the jet area. Figure from Ref. \cite{Nachman:2014kla}.}
+\label{fig:btag}
+\end{figure}
+
+Re-clustered jets can be \textit{trimmed}, by removing the constituent small-R jets that have a \pt smaller than a certain fraction of the \pt of the original reclustered jet. 
+
+\section{Jets from B-hadrons}
 
 \section{Electrons}
 
