@@ -136,7 +136,18 @@ and the \glspl{np} within a single component are added in quadrature; this leads
 
 Jets with the same true energy can have different reconstructed energies; the distribution of the difference between true and reconstructed energy of a jet is modeled with a Gaussian, whose width is defined as \gls{jer}. The measurements for the in-situ calibrations can be used also to access the differences in \gls{jer} between data and \gls{mc} \cite{TheATLAScollaboration:2015ofv,ATLAS:2015uwa}, and result into an additional \gls{np}.
 
-\subsection{Jet Cleaning and Jet Vertex Tagger}
+\subsection{Jet Vertex Tagger}
+
+It has already been discussed in Sec. \ref{sec:obj:jetcalib} how pileup is taken into account in the calibration of the \gls{jes}. Beside affecting the jet energy, high levels of pileup can also lead to the reconstruction of spurious jets not originating from the hard-scattering interaction. In \gls{atlas} track-based algorithms are used for the identification of pileup jets \cite{Aad:2015ina}. 
+Tracks are matched to calorimeter jets by ghost-association \cite{Soyez:2012hv}. Once the \gls{pv} is identified, 
+for each jet it is possible to compute the \gls{jvf} the ratio of the sum of the track-momentum originating from the \gls{pv} to the total track momentum:
+
+\begin{equation}
+ \JVF({\rm jet}_{i},{\rm PV}_{j})=\frac{\sum_m \pt ({\rm track}_{m}^{\rm jet_i},{\rm PV}_j)}{\sum_n\sum_l  \pt ({\rm track}_{l}^{\rm jet_i},{\rm PV}_n)} \; .
+ \label{eq:jvf}
+\end{equation} 
+
+
 
 \begin{equation}
 \cJVF = \frac{\sum_m{p_{{\rm T}, m}^{{\rm track}}({\rm PV}_0)}}{\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_0) + \frac{\sum_{n\geq1}\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_n)}{ (k \cdot \nPUtrk)}}.
@@ -144,7 +155,7 @@ Jets with the same true energy can have different reconstructed energies; the di
 \end{equation}
 
 \gls{jvt}
-\cite{Aad:2015ina}
+
 
 \begin{equation}
 \RpT = \frac{\sum_k{p_{\rm{T}, k}^{{\rm track}}({\rm PV}_0)}}{\ptjet}
@@ -154,6 +165,8 @@ Jets with the same true energy can have different reconstructed energies; the di
 
 %\label{eq:RpT}
 %\end{equation}
+
+\subsection{Jet Cleaning}
 
 \subsection{Re-clustered Jets}
 
