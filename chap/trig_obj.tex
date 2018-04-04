@@ -162,6 +162,7 @@ sum of the \pt of the tracks originating from \gls{pv}$_0$ to the jet transverse
 
 \begin{equation}
 \RpT = \frac{\sum_k{p_{\rm{T}, k}^{{\rm track}}({\rm PV}_0)}}{\ptjet}
+\label{eq:obj:rpt}
 \end{equation}
 
 The \cJVF and \RpT are combined in a two-dimensional likelihood that constitutes a single tagger, the \gls{jvt}. 
@@ -185,6 +186,13 @@ while Fig. \ref{fig:obj:jvt_data} shows the comparison of the \gls{jvt} distribu
 \end{figure}
 
 \subsection{Jet Cleaning}
+
+Beside pileup jest, other spurious jets come from the \gls{ncb}; this type of background includes muons originating from secondary cascades from beam losses (in this case we speak of \gls{bib}) and from cosmic rays. These muons that leave energy deposits in the calorimeters while traversing the detector, that can be interpreted as jets. Also coherent noise from the calorimeters can give rise to fake jets. In \gls{atlas} a set of quality criteria are designed to reject jets not originating from \gls{pp} collisions \cite{TheATLAScollaboration:2015ofz}. These quality criteria are rely on variables built based on:
+\begin{itemize}
+\item Ionization signal shape in the LAr calorimeters, to remove mainly fake jets from calorimeter noise. 
+\item Ratios of energies, for example the ratio of the energy deposited in the electromagnetc calorimeter to the total energy, or the ratio of energy in different calorimeter layers, that can be used to discriminate against jets from \gls{bib} or calorimeter noise.
+\item Tracks associated with the jets, and in particular variables similar to \RpT defined in Eq. \ref{eq:obj:rpt}, that have in general lower value for fake jets than for jets originating from \gls{pp} collisions. 
+\end{itemize} 
 
 \subsection{Re-clustered Jets}
 
