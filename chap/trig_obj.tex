@@ -138,33 +138,48 @@ Jets with the same true energy can have different reconstructed energies; the di
 
 \subsection{Jet Vertex Tagger}
 
-It has already been discussed in Sec. \ref{sec:obj:jetcalib} how pileup is taken into account in the calibration of the \gls{jes}. Beside affecting the jet energy, high levels of pileup can also lead to the reconstruction of spurious jets not originating from the hard-scattering interaction. In \gls{atlas} track-based algorithms are used for the identification of pileup jets \cite{Aad:2015ina}. 
+It has already been discussed in Sec. \ref{sec:obj:jetcalib} how pileup is taken into account in the calibration of the \gls{jes}. Beside affecting the jet energy, high levels of pileup can also lead to the reconstruction of spurious jets not originating from the hard-scattering interaction. In \gls{atlas} track-based algorithms are used for the identification of pileup jets \cite{Aad:2015ina,ATLAS:2014cva}. 
 Tracks are matched to calorimeter jets by ghost-association \cite{Soyez:2012hv}. Once the \gls{pv} is identified, 
-for each jet it is possible to compute the \gls{jvf} the ratio of the sum of the track-momentum originating from the \gls{pv} to the total track momentum:
+for each jet it is possible to compute the \gls{jvf}, the ratio of the scalar sum of the \pt of the tracks associated to the jet and originating from the hard scattering vertex \gls{pv}$_0$ to that of all the associated tracks:
 
 \begin{equation}
- \JVF({\rm jet}_{i},{\rm PV}_{j})=\frac{\sum_m \pt ({\rm track}_{m}^{\rm jet_i},{\rm PV}_j)}{\sum_n\sum_l  \pt ({\rm track}_{l}^{\rm jet_i},{\rm PV}_n)} \; .
+ \JVF = \frac{\sum_m{p_{{\rm T}, m}^{{\rm track}}({\rm PV}_0)}}{\sum_n\sum_l  p_{{\rm T}, l}^{{\rm track}}({\rm PV}_n)} \; .
  \label{eq:jvf}
 \end{equation} 
 
-
+\noindent where the index $n$ runs over all the vertices of the event. In high-pileup conditions the denominator in 
+Eq. \ref{eq:jvf} increases; to correct for this dependence, the \gls{cjvf} is introduced. 
+This is a modified version of \gls{jvf}, that takes into account the dependence on the number of pileup tracks (\nPUtrk):
 
 \begin{equation}
-\cJVF = \frac{\sum_m{p_{{\rm T}, m}^{{\rm track}}({\rm PV}_0)}}{\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_0) + \frac{\sum_{n\geq1}\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_n)}{ (k \cdot \nPUtrk)}}.
+\cJVF = \frac{\sum_m{p_{{\rm T}, m}^{{\rm track}}({\rm PV}_0)}}{\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_0) + \frac{\sum_{n\geq1}\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_n)}{ (k \cdot \nPUtrk)}} \; ,
 \label{eq:corrJVF}
 \end{equation}
 
-\gls{jvt}
+\noindent with $k=0.001$. Another variable used to discriminate hard-scattering jets against pileup jets is the ratio of the scalar
+sum of the \pt of the tracks originating from \gls{pv}$_0$ to the jet transverse momentum:
 
 
 \begin{equation}
 \RpT = \frac{\sum_k{p_{\rm{T}, k}^{{\rm track}}({\rm PV}_0)}}{\ptjet}
 \end{equation}
 
-%\begin{equation}
+The \cJVF and \RpT are combined in a two-dimensional likelihood that constitutes a single tagger, the \gls{jvt}. 
 
-%\label{eq:RpT}
-%\end{equation}
+\begin{figure}[h]
+\begin{center}
+  \subfigure[]{
+    \label{fig:obj:jvt_mc}
+    \includegraphics[width=0.48\textwidth]{figures/objects/jvt.pdf}
+  }
+  \subfigure[]{
+    \label{fig:obj:jvt_data}
+    \includegraphics[width=0.48\textwidth]{figures/objects/jvt_data.png}
+  }
+\end{center}
+ \caption{\subref{fig:obj:jvt_mc} Distribution of JVT for pileup and hard-scatter jets with 20 < \pt < 30 GeV. Figure from Ref. \cite{ATLAS:2014cva}. \subref{fig:obj:jvt_data} The JVT distribution, in Powheg+Pythia8 MC and in 2015+2016 data, of jets balanced against Z bosons decaying to muons. Figure from Ref. \cite{jvtpublicplots}.}
+  \label{fig:obj:jvt}
+\end{figure}
 
 \subsection{Jet Cleaning}
 
