@@ -134,13 +134,26 @@ plus a sixth one which is the sum in quadrature of the remaining ones.
 A further reduction is in place to group the remaining \glspl{np} into three components, 
 and the \glspl{np} within a single component are added in quadrature; this leads to a correlation loss, whose effect is analysis dependent. 
 
-
-
-\subsection{Jet Resolution}
+Jets with the same true energy can have different reconstructed energies; the distribution of the difference between true and reconstructed energy of a jet is modeled with a Gaussian, whose width is defined as \gls{jer}. The measurements for the in-situ calibrations can be used also to access the differences in \gls{jer} between data and \gls{mc} \cite{TheATLAScollaboration:2015ofv,ATLAS:2015uwa}, and result into an additional \gls{np}.
 
 \subsection{Jet Cleaning and Jet Vertex Tagger}
 
+\begin{equation}
+\cJVF = \frac{\sum_m{p_{{\rm T}, m}^{{\rm track}}({\rm PV}_0)}}{\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_0) + \frac{\sum_{n\geq1}\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_n)}{ (k \cdot \nPUtrk)}}.
+\label{eq:corrJVF}
+\end{equation}
 
+\gls{jvt}
+\cite{Aad:2015ina}
+
+\begin{equation}
+\RpT = \frac{\sum_k{p_{\rm{T}, k}^{{\rm track}}({\rm PV}_0)}}{\ptjet}
+\end{equation}
+
+%\begin{equation}
+
+%\label{eq:RpT}
+%\end{equation}
 
 \subsection{Re-clustered Jets}
 
