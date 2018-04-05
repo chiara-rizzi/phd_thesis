@@ -243,11 +243,23 @@ The procedure of identifying b-jets is referred to as \textit{b-tagging}, and in
 
 \begin{description}
 
-\item[Impact Parameter] The transverse impact parameter of a track (\dzero) is the point of closest approach to the \gls{pv} in the transverse plane, while the longitudinal impact parameter (\zzerost) is defined as the distance along the $z$-axis between the \gls{pv} and the point of closest approach in the transverse plane. Because of the typical lifetime of B-hadrons, on average b-jets contain tracks with higher impact parameter than light-jets. A sign can be assigned to the impact parameter, that will be positive if the secondary vertex from which the track is originating is in front of the \gls{pv}, negative otherwise. The negative side of the impact-parameter distribution derives from the impact-parameter resolution, and can be used to calibrate light-jets. Two taggers make use of the information on the impact parameter \cite{ATLAS:2011qia}: IP2D, which is based on the significance of the transverse impact parameter (\dzero/$\sigma_\dzero$), and IP3D, which builds a two-dimensional template including also the significance of the longitudinal impact parameter (\zzerost/$\sigma_\zzerost$). The \pdf for each flavour hypothesis (b, c, light) is derived from \gls{mc} simulation on a per-track basis, and then a \gls{llr} of the different probabilities is computed, including the contribution from all the tracks associated to the jet. For example, the \gls{llr} discriminating b-jets from light-jets is of the form $\sum_{i=1}^{N}\log\frac{p_b}{p_{light}}$, where the index $N$ runs on the tracks associated to the jet. 
+\item[Impact Parameter] The transverse impact parameter of a track (\dzero) is the point of closest approach to the 
+\gls{pv} in the transverse plane, while the longitudinal impact parameter (\zzerost) is defined as the distance along 
+the $z$-axis between the \gls{pv} and the point of closest approach in the transverse plane. Because of the typical 
+lifetime of B-hadrons, on average b-jets contain tracks with higher impact parameter than light-jets. 
+A sign can be 
+assigned to the impact parameter, that will be positive if the secondary vertex from which the track is originating is 
+in front of the \gls{pv}, negative otherwise. The negative side of the impact-parameter distribution derives from the 
+impact-parameter resolution, and can be used to calibrate light-jets. Two taggers make use of the information on the impact parameter
+ \cite{ATLAS:2011qia}: IP2D, which is based on the significance of the transverse impact parameter (\dzero/$\sigma_\dzero$), and IP3D, which builds a two-dimensional template including also the significance of the longitudinal impact parameter (\zzerost/$\sigma_\zzerost$). The \pdf for each flavour hypothesis (b, c, light) is derived from \gls{mc} simulation on a per-track basis, and then a \gls{llr} of the different probabilities is computed, including the contribution from all the tracks associated to the jet. For example, the \gls{llr} discriminating b-jets from light-jets is of the form $\sum_{i=1}^{N}\log\frac{p_b}{p_{light}}$, where the index $N$ runs on the tracks associated to the jet. 
 
-\item[Secondary Vertex Finding] \cite{ATLAS:2011qia}
+\item[Secondary Vertex Finding] The secondary vertex finding algorithm \cite{ATLAS:2011qia} explicitly looks for a secondary vertex within a jet. 
+All the track pairs in the jet are tested for a two-track vertex hypothesis, removing the pairs that are likely to originate from 
+long-lived particles (e.g. K$_0$, $\Lambda$), photon conversion or hadronic interaction with the detector material. 
+If a two-track vertex remains, a new single vertex is fitted with the tracks passing this selection.
 
-\item[Identification of the Decay Chain] JetFitter algorithm \cite{1742-6596-119-3-032032}.
+\item[Identification of the Decay Chain] The b-hadrons inside b-jets decay with an electroweak interaction, 
+through which a b-quarks decays preferentially into a c-quark (since the CKM matrix element $|V_{cb}|^2$ is much larger than $|V_{ub}|^2$). Hadrons containing a c-quark (D-hadrons) subsequently decay as well, giving rise to a topology with two decay vertices. While the resolution is often not enough to reconstruct the two vertices individually, the JetFitter algorithm \cite{1742-6596-119-3-032032} operates assuming that they both lie on the same line, the flight axis of the B-hadron. The information on the event topology derived with JetFitter is then used in likelihood function, from which three different templates (one for each flavour) are derived.
 
 \end{description}
 
