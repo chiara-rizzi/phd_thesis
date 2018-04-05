@@ -296,6 +296,15 @@ Table \ref{tab:obj:mv2op} shows the \glspl{op} of the MV2c10 algorithm.
 
 \subsection{B-tagging Calibration and Uncertainties}
 
+The b-tagging efficiency can be different in \gls{mc} simulation and data. The b-tagging efficiency, 
+c-tagging efficiency and light mistag rate are measured in data for the \glspl{op} of Table \ref{tab:obj:mv2op}, 
+and the \gls{mc} simulation is corrected with the \glspl{sf} derived as the ratio of the efficiency in data and in \gls{mc}. 
+The \glspl{sf} are derived on a per-jet basis in a parametric form based on jet \pt, $\eta$ and truth flavour. 
+For each \gls{mc} simulated event, an event-level \gls{sf} is derived by multiplying all the efficiency \glspl{sf} for the b-tagged jets 
+and all the inefficiency \glspl{sf} for the jets that are not b-tagged.
+
+The b-tagging scale factors are affected by multiple sources of uncertainty, that are reflected in uncertainties on the \glspl{sf}.
+
 
 \section{Electrons}
 
