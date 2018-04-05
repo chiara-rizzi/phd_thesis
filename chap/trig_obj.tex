@@ -239,12 +239,16 @@ Jets originating from the hadronization of a b-quark (\textit{b-jets}) can be id
 \label{fig:btag}
 \end{figure}
 
-The procedure of identifying b-jets is referred to as \textit{b-tagging}, and in \gls{atlas} is performed using as input the tracks associated to the jets. There are three basic families of algorithms, that can then be combined through multivariate techniques. The basic algorithms can be based on:
+The procedure of identifying b-jets is referred to as \textit{b-tagging}, and in \gls{atlas} is performed using as input the tracks associated to the jets . As already mentioned in Sec. \ref{sec:atlas:pixel}, between Run 1 and Run 2 a fourth pixel layer (\gls{ibl}) was added to the \gls{atlas} detector, allowing a better impact parameter resolution and therefore improving substantially the b-tagging performance. There are three basic families of algorithms, that can then be combined through multivariate techniques. The basic algorithms can be based on:
+
 \begin{description}
-\item[Impact Parameter]
+\item[Impact Parameter] The transverse impact parameter of a track (\dzero) is the point of closest approach to the \gls{pv} in the transverse plane, while the longitudinal impact parameter (\zzerost) is defined as the distance along the $z$-axis between the \gls{pv} and the point of closest approach in the transverse plane. Because of the typical lifetime of B-hadrons, on average b-jets contain tracks with higher impact parameter than light-jets. A sign can be assigned to the impact parameter, that will be positive if the secondary vertex from which the track is originating is in front of the \gls{pv}, negative otherwise. 
 \item[Secondary Vertex Finding]
 \item[Identification of the Decay Chain]
 \end{description}
+
+The default b-tagging algorithm used by \gls{atlas} in the analysis of the 2015-2016 dataset is MV2c10, 
+a \gls{bdt}-based multivariate algorithm that combines the output of the algorithms described above. 
 
 \subsection{B-tagging Calibration and Uncertainties}
 
