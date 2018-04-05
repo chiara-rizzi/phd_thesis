@@ -266,6 +266,9 @@ through which a b-quarks decays preferentially into a c-quark (since the CKM mat
 The default b-tagging algorithm used by \gls{atlas} in the analysis of the 2015-2016 dataset is MV2c10 
 \cite{ATL-PHYS-PUB-2015-022,ATL-PHYS-PUB-2016-012}, 
 a multivariate algorithm based on a \gls{bdt} that combines the output of the algorithms described above. 
+MV2c10 belongs to the family of MV2 algorithms, that are trained on a \ttbar sample, using b-jets as signal and c-jets and light-jets as background, differ in the relative fraction of c-jets and light-jets that are
+used in the training; in the case of MV2c10, the background sample in the training contains 15\% of c-jets.
+Fig. \ref{fig:obj:mv2} shows the light-jet and c-jet rejection as a function of b-jet efficiency for different MV2 algorithms.
 
 \begin{figure}[h]
 \begin{center}
@@ -276,9 +279,20 @@ a multivariate algorithm based on a \gls{bdt} that combines the output of the al
     \label{fig:obj:mv2_b}
     \includegraphics[width=0.48\textwidth]{figures/objects/mv2c10_b.pdf} }
 \end{center}
- \caption{}
+ \caption{Light-jet \subref{fig:obj:mv2_a} and c-jet \subref{fig:obj:mv2_b} rejection as a function of the b-jet efficiency for the MV2 algorithms. Figures from Ref. \cite{ATL-PHYS-PUB-2016-012}.}
   \label{fig:obj:mv2}
 \end{figure}
+
+\glspl{op} are defined by a selection on the value of the \gls{bdt} output, and are designed to have a specific b-jet efficiency.
+Table \ref{tab:obj:mv2op} shows the \glspl{op} of the MV2c10 algorithm.
+
+\begin{table}[h]
+\begin{center}
+    \includegraphics[width=1.0\textwidth]{figures/objects/btag_op.pdf}  
+\end{center}
+ \caption{Operating points for the MV2c10 b-tagging algorithm. The efficiency and rejection rates are computed for jets with $\pt > 20$ GeV from \ttbar events. Table from Ref. \cite{ATL-PHYS-PUB-2016-012}.}
+  \label{tab:obj:mv2op}
+\end{table}
 
 \subsection{B-tagging Calibration and Uncertainties}
 
