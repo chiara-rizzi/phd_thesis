@@ -301,7 +301,27 @@ c-tagging efficiency and light mistag rate are measured in data for the \glspl{o
 and the \gls{mc} simulation is corrected with the \glspl{sf} derived as the ratio of the efficiency in data and in \gls{mc}. 
 The \glspl{sf} are derived on a per-jet basis in a parametric form based on jet \pt, $\eta$ and truth flavour. 
 For each \gls{mc} simulated event, an event-level \gls{sf} is derived by multiplying all the efficiency \glspl{sf} for the b-tagged jets 
-and all the inefficiency \glspl{sf} for the jets that are not b-tagged.
+and all the inefficiency \glspl{sf} for the jets that are not b-tagged. Different techniques are used in \gls{atlas} to measure the b-tagging 
+efficiency in \gls{atlas} for the different jet flavours \cite{1748-0221-11-04-P04008}.
+The calibrations used in the analyses described in this thesis are:
+
+\begin{description}
+
+\item[b-jets] \ttbar-based calibration
+
+\item[c-jets] The analysis described in Chapter \ref{chap:strong_prod} uses a c-jet calibration based on events where a W boson 
+is produced in association with a c-quark. The events selected are the ones where the W boson decays into an electron and a neutrino,
+and the D-hadron originating from the fragmentation of the c-quark decays leptonically (and in particular to a muon). 
+In W+c production the electron and the muon in the final state have opposite charge, 
+while most of the background processes have an equal number of same-sign and opposite-sign events. The number of W+c events can therefore 
+be obtained as the difference of these two categories.
+For the analysis described in Chapter \ref{chap:ewk_prod}, that was developed at a later time, a new calibration for c-jets, 
+based on \ttbar events \cite{ATLAS:2018bpl}, was available. 
+This calibration selects \ttbar events where one of the $W$ bosons decays leptonically and the other one decays to a c-quark and an s-quark. 
+
+\item[light-jets] Negative tags
+
+\end{description}
 
 The b-tagging scale factors are affected by multiple sources of uncertainty, that are reflected in uncertainties on the \glspl{sf}.
 
