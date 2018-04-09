@@ -307,7 +307,13 @@ The calibrations used in the analyses described in this thesis are:
 
 \begin{description}
 
-\item[b-jets] \ttbar-based calibration
+\item[b-jets] The default b-tagging calibration for b-jest is based on a \ttbar dileptonic sample. Events with exactly two opposite-sign leptons
+and two or three jets are selected, and a per-event likelihood is built containing the b-tagging weight \gls{pdf} for a jet of a given flavour;
+the \gls{pdf} for light-jets and c-jets is taken from \gls{mc}, while the \gls{pdf} for b-jets is the information that we want to extract from data.
+This last \gls{pdf} is described by a histogram with only two bins, one below and one above the threshold to b-tag a jet. 
+
+%\gls{bdt} based on 8 input variables 
+%Likelihood fit using per-jet flavour correlations. 
 
 \item[c-jets] The analysis described in Chapter \ref{chap:strong_prod} uses a c-jet calibration based on events where a W boson 
 is produced in association with a c-quark. The events selected are the ones where the W boson decays into an electron and a neutrino,
@@ -319,11 +325,32 @@ For the analysis described in Chapter \ref{chap:ewk_prod}, that was developed at
 based on \ttbar events \cite{ATLAS:2018bpl}, was available. 
 This calibration selects \ttbar events where one of the $W$ bosons decays leptonically and the other one decays to a c-quark and an s-quark. 
 
-\item[light-jets] Negative tags
+\item[light-jets] The b-tagging efficiency of light-jets (mistag rate) is calibrated on an inclusive sample of jets, using the negative tag method.
+The two main reasons that lead to b-tagged light-jets are the finite resolution of the impact parameter and the secondary vertices caused
+by long-lived particles and material interaction. If we consider only the first type of mistags, the signed impact parameter distribution 
+will be symmetric around zero. 
+The negative tag method is based on a modified version of the b-tagging algorithms, that takes as input impact parameters and decay lengths with
+reversed sign. The mistag rate is measured as the negative-tag efficiency of the jet sample, with \gls{mc}-based correction factors that take into account 
+the negative-tag rate for b- and c-jets and the effect of long-lived particles and material interactions.
 
 \end{description}
 
 The b-tagging scale factors are affected by multiple sources of uncertainty, that are reflected in uncertainties on the \glspl{sf}.
+As an example, Figure \ref{fig:obj:btagSF} shows the b-tagging \gls{sf} for c-jets derived with the \ttbar calibration for the
+77\% \gls{op}. \note{Plots for other calibrations will be added if related CONF is released}.
+
+\begin{figure}[h]
+\begin{center}
+  \subfigure[]{
+    \label{fig:obj:ttSF}
+    \includegraphics[width=0.48\textwidth]{figures/objects/cjettt_77SF.png}  }
+  %\subfigure[]{
+   % \label{fig:obj:mv2_b}
+    %\includegraphics[width=0.48\textwidth]{figures/objects/mv2c10_b.pdf} }
+\end{center}
+ \caption{B-tagging \gls{sf} for c-jets for the \gls{op} corresponding to a 77\% efficiency on \gls{mc} \ttbar. Figure from Ref. \cite{ATLAS:2018bpl}.}
+  \label{fig:obj:btagSF}
+\end{figure}
 
 
 \section{Electrons}
