@@ -1,4 +1,4 @@
-\chapter{LHC and ATLAS}
+\gls{trd}\gls{trd}\gls{pmt}\chapter{LHC and ATLAS}
 \label{chap:cern}
 
 The analyses presented in this thesis use the data collected by the ATLAS Experiment in 2015, 2016 and 2017 at \cmtre TeV; the ATLAS experiment is one of the four main experiments at the \gls{lhc} at the \gls{cern}. Section \ref{sed:cern:lhc} of this chapter describes the \gls{lhc} accelerator complex, followed by a general description of the detectors used in high-energy physics in Section \ref{sec:detectors}. The ATLAS detector is discussed in Section \ref{sed:cern:atlas}.
@@ -63,7 +63,7 @@ Beside dipoles and quadrupoles, in the \gls{lhc} there are about 600 higher-orde
 
 \subsection{Resonant Cavities}
 
-While the orbit of the particles is governed through magnetic fields, longitudinal electric fields are used for acceleration. In the \gls{lhc} the electric filed is provided by the \textit{radiofrequency (RF) cavities}. There are overall 16 RF cavities, 8 per beam, hosted in four cryo-modules. Each cavity can create a field up to 2 MV (providing an accelerating field of 5 MV/m), and oscillates with a frequency of 400 MHz. Since the electric field changes over time with the oscillations, particles passing through the same point of a RF cavity in different moments experience a different voltage; this produces a non-trivial longitudinal dynamic, where particles oscillate around the ideal synchronous particle with changes is momentum and phase (\textit{Synchrotron oscillations}). If we define the \textit{slip factor} $\eta$ as the relative change in frequency in Synchrotron oscillations with the relative change in momentum:
+While the orbit of the particles is governed through magnetic fields, longitudinal electric fields are used for acceleration. In the \gls{lhc} the electric filed is provided by the \gls{rf} cavities. There are overall 16 \gls{rf} cavities, 8 per beam, hosted in four cryo-modules. Each cavity can create a field up to 2 MV (providing an accelerating field of 5 MV/m), and oscillates with a frequency of 400 MHz. Since the electric field changes over time with the oscillations, particles passing through the same point of a \gls{rf} cavity in different moments experience a different voltage; this produces a non-trivial longitudinal dynamic, where particles oscillate around the ideal synchronous particle with changes is momentum and phase (\textit{Synchrotron oscillations}). If we define the \textit{slip factor} $\eta$ as the relative change in frequency in Synchrotron oscillations with the relative change in momentum:
 \begin{equation}
 \eta = \frac{\Delta f / f}{\Delta p / p}
 \end{equation}
@@ -79,7 +79,7 @@ the following relation holds:
 \eta = \frac{1}{\gamma^2} - \alpha \; ,
 \end{equation}
 
-where $\gamma$ is the Lorentz factor of the particle. This means that while the energy of the particle is low ($\eta>0$) an increase in momentum leads to an increase in frequency, while it leads to a decrease in frequency for $\eta<0$. At the transition energy a previously stable synchrotron phase becomes unstable and vice versa; this requires a rapid change in RF phase. This situation is illustrated in Fig. \ref{fig:lhc:phase}(a). For example, a particle corresponding to the phase point M1 will arrive in the RF cavity after one corresponding to the stability point P1, and will experiment higher voltage and increase in momentum; if $\eta>0$ this increase in momentum will translate in an increase in frequency and the particle will, at the following revolution, arrive earlier, while if $\eta<0$ the frequency will further decrease and the particle will be eventually lost.  The transition energy in the \gls{lhc} is 53 GeV, well below the injection energy of 450 GeV, so the \gls{lhc} is always above transition. 
+where $\gamma$ is the Lorentz factor of the particle. This means that while the energy of the particle is low ($\eta>0$) an increase in momentum leads to an increase in frequency, while it leads to a decrease in frequency for $\eta<0$. At the transition energy a previously stable synchrotron phase becomes unstable and vice versa; this requires a rapid change in \gls{rf} phase. This situation is illustrated in Fig. \ref{fig:lhc:phase}(a). For example, a particle corresponding to the phase point M1 will arrive in the \gls{rf} cavity after one corresponding to the stability point P1, and will experiment higher voltage and increase in momentum; if $\eta>0$ this increase in momentum will translate in an increase in frequency and the particle will, at the following revolution, arrive earlier, while if $\eta<0$ the frequency will further decrease and the particle will be eventually lost.  The transition energy in the \gls{lhc} is 53 GeV, well below the injection energy of 450 GeV, so the \gls{lhc} is always above transition. 
 
 \begin{figure}[ht]
 \centering
@@ -179,9 +179,9 @@ Protons are injected in the \gls{lhc} only after being accelerated to 450 GeV by
 
 \begin{itemize}
 \item Protons are extracted from a $H_2$ at the \textit{Linac2} facility, a linear accelerator of 33 m that brings them to the energy of 50 MeV.
-\item The \textit{Proton Synchrotron Booster} (PSB) is the first synchrotron in the acceleration chain (with a circumference of 157 m), that in 1.2 s increases the energy of the protons from 50 MeV to 1.4 GeV.
-\item With a circumference of 628 m, the \textit{Proton Synchrotron} (PS) brings the protons to about 26 GeV. This was the oldest synchrotron experiment at \gls{cern}.
-\item The \textit{Super Proton Synchrotron} (SPS) is the first accelerator of the chain to be underground (about 30 m) and has a circumference of 6.9 km; it brings the proton energy at 450 GeV. Beside preparing the protons to be injected into the \gls{lhc}, the SPS provides beam also to the North Area, and to the AWAKE experiment, that studies proton-induced plasma wakefield acceleration.
+\item The \gls{psb} is the first synchrotron in the acceleration chain (with a circumference of 157 m), that in 1.2 s increases the energy of the protons from 50 MeV to 1.4 GeV.
+\item With a circumference of 628 m, the \gls{ps} brings the protons to about 26 GeV. This was the oldest synchrotron experiment at \gls{cern}.
+\item The \gls{sps} is the first accelerator of the chain to be underground (about 30 m) and has a circumference of 6.9 km; it brings the proton energy at 450 GeV. Beside preparing the protons to be injected into the \gls{lhc}, the \gls{sps} provides beam also to the North Area, and to the AWAKE experiment, that studies proton-induced plasma wakefield acceleration.
 \item The \gls{lhc} is the last step of this chain, and it accelerates the protons form 450 GeV to 6.5 TeV (the design energy is 7 TeV); while in the \gls{lhc} the protons gain about 0.5 MeV per turn, so it takes about 15 minutes to reach 6.5 TeV.
 \end{itemize}
 
