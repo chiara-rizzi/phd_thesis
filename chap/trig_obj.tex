@@ -34,7 +34,7 @@ Tracks are the starting point for the identification of vertices. \glspl{pv} are
 Because of confinement, quarks and gluons produced in the collisions give origin to a collimated spray of hadrons (\textit{jets}) that move in the direction of the original parton. When jets interact with the detector, they loose most of their energy as deposits in the calorimeter systems, which are then grouped together aiming at reconstructing the characteristics of the original parton. 
 
 \subsection{Clusters}
-The first step in the jet reconstruction is the procedure that groups the calorimeter cells into topological clusters (\textit{topoclusters}). Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Fig. \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
+The first step in the jet reconstruction is the procedure that groups the calorimeter cells into topological clusters (\textit{topoclusters}) \cite{Lampl:2008zz}. Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Fig. \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
 
 \begin{figure}[h]
 \begin{center}
@@ -428,9 +428,12 @@ $\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\ptmu , \, 0.3\right) $. The
 \subsection{Electron Reconstruction}
 
 The electron reconstruction starts with the identification of clusters in the \gls{em} calorimeter.
+While, in the case of hadronic jets, the calorimeter clusters are created with a topological algorithm, in the case of electrons the calorimeter clusters are based on a sliding-window algorithm \cite{Lampl:2008zz}.
+
+% clustering algorithm 
 
 The identified clusters are the starting point to reconstruct electron, photons and converted photons. The key feature that allows to separate electrons from converted and unconverted photons is that, in the case of electrons, the calorimeter clusters are associated with a track from the \gls{id}; instead, in the case of converted photons the cluster is associated with a conversion vertex, while there is no track associated to an unconverted photon. Tracks from the \gls{id} are extrapolated to the second layer of the \gls{em} calorimeter, and a track is considered loosely matched to a seed cluster if the $\eta$ difference between the track and the barycenter of the cluster is lower than 0.05 and the $\phi$ difference either lower than 0.2 (0.1 in the case of tracks deriving from hits only in the \gls{trt}) in the bending direction, or lower that 0.05 in the opposite direction. 
-The tracks loosely matched with these criteria are then re-fitted with a Gaussian Sum Filter algorithm, and the re-fitted tracks are matched with 
+The tracks loosely matched with these criteria are then re-fitted with a Gaussian Sum Filter algorithm \cite{ATLAS:2012dma}, and the re-fitted tracks are matched with 
 the clusters with the same criteria as the loose matching, except from the $\phi$ difference in the direction of the bending, which is tightened to 0.1.
 
 \section{Missing Transverse Momentum}
