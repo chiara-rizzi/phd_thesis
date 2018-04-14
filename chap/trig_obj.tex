@@ -429,7 +429,9 @@ $\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\ptmu , \, 0.3\right) $. The
 
 The electron reconstruction starts with the identification of clusters in the \gls{em} calorimeter.
 
-The identified clusters are the starting point to reconstruct electron, photons and converted photons. The key feature that allows to separate electrons from converted and unconverted photons is that, in the case of electrons, the calorimeter clusters are associated with a track from the \gls{id}; instead, in the case of converted photons the cluster is associated with a conversion vertex, while there is no track associated to an unconverted photon. 
+The identified clusters are the starting point to reconstruct electron, photons and converted photons. The key feature that allows to separate electrons from converted and unconverted photons is that, in the case of electrons, the calorimeter clusters are associated with a track from the \gls{id}; instead, in the case of converted photons the cluster is associated with a conversion vertex, while there is no track associated to an unconverted photon. Tracks from the \gls{id} are extrapolated to the second layer of the \gls{em} calorimeter, and a track is considered loosely matched to a seed cluster if the $\eta$ difference between the track and the barycenter of the cluster is lower than 0.05 and the $\phi$ difference either lower than 0.2 (0.1 in the case of tracks deriving from hits only in the \gls{trt}) in the bending direction, or lower that 0.05 in the opposite direction. 
+The tracks loosely matched with these criteria are then re-fitted with a Gaussian Sum Filter algorithm, and the re-fitted tracks are matched with 
+the clusters with the same criteria as the loose matching, except from the $\phi$ difference in the direction of the bending, which is tightened to 0.1.
 
 \section{Missing Transverse Momentum}
 
