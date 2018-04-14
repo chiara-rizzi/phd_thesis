@@ -386,6 +386,11 @@ The Medium identification criteria is the default in \gls{atlas}, and is the one
 the muon reconstruction and calibration. In the pseudorapidity region with $|\eta|<2.5$, Medium muons are required to be combined muons with $\geq$ 3 hits in at least two \gls{mdt} layers (unless $|\eta|<0.1$, in which case the requirement becomes on one \gls{mdt} layer, but with a hole veto), while extrapolated muons are used when $2.5<|\eta|<2.7$. To suppress muons from hadron decays, the $\frac{q}{p}$ significance is required to be less than seven.
 
 
+While muons originating from semileptonic decays of hadrons are very close to the axis of a jet, prompt muons are typically well separated from other physics objects in the event (isolated). The isolation requirements help therefore suppressing further the background from semileptonically decaying hadrons. Different isolation requirements are available and calibrated in \gls{atlas}, defined to be optimal of different analyses. 
+The \gls{op} used in the analyses described in this thesis is the one labeled $LooseTrackOnly$, which applies a selection on the ratio of the 
+variable \ptvar over the muon \pt (\ptmu), where \ptvar is defined as the scalar sum of the momenta of the tracks with $\pt>1$ GeV in the cone with 
+$\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\ptmu , \, 0.3\right) $. The \pt-dependent size of the isolation cone helps in recovering efficiency for muons deriving from the decay of boosted particles. This isolation \gls{op} has an efficiency of 99\% constant in $\eta$ and \pt.
+
 
 % calibration  
 
