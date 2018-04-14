@@ -353,8 +353,6 @@ As an example, Figure \ref{fig:obj:btagSF} shows the b-tagging \gls{sf} for c-je
 \end{figure}
 
 
-\section{Electrons}
-
 \section{Muons}
 
 Muon reconstruction and identification \cite{Aad:2016jkr} is based on the information collected by the \gls{id}, where muons are reconstructed as charged tracks, and by the \gls{ms}. 
@@ -425,6 +423,13 @@ $\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\ptmu , \, 0.3\right) $. The
 %A set of corrections based on the muon \pt and $\eta$ are applied to the \gls{mc} simulation, such that after the correction the simulation describes the muon momentum and momentum resolution in data with a precision of the order of few per-mill and few percent respectively. 
 %The corrections are derived in $J/\Psi \rightarrow \mu \mu$ and $Z\rightarrow \mu \mu$ events 
 
+\section{Electrons}
+
+\subsection{Electron Reconstruction}
+
+The electron reconstruction starts with the identification of clusters in the \gls{em} calorimeter.
+
+The identified clusters are the starting point to reconstruct electron, photons and converted photons. The key feature that allows to separate electrons from converted and unconverted photons is that, in the case of electrons, the calorimeter clusters are associated with a track from the \gls{id}; instead, in the case of converted photons the cluster is associated with a conversion vertex, while there is no track associated to an unconverted photon. 
 
 \section{Missing Transverse Momentum}
 
