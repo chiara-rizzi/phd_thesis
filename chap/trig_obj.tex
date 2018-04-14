@@ -387,7 +387,16 @@ Based on these quantities, four muon identification criteria are defined: Loose,
 Loose, Medium and Tight are inclusive categories with increasingly tighter requirements, while the High-\pt selection starts from the Medium selection and applies extra requirements that improve the momentum resolution for muons with \pt above 100 GeV.
 
 The Medium identification criteria is the default in \gls{atlas}, and is the one that minimizes the systematic uncertainties associated with 
-the muon reconstruction and calibration. In the pseudorapidity region with $|\eta|<2.5$, Medium muons are required to be combined muons with $\geq$ 3 hits in at least two \gls{mdt} layers (unless $|\eta|<0.1$, in which case the requirement becomes on one \gls{mdt} layer, but with a hole veto), while extrapolated muons are used when $2.5<|\eta|<2.7$. To suppress muons from hadron decays, the $\frac{q}{p}$ significance is required to be less than seven. The reconstruction efficiency of the Medium \gls{op} as derived from $Z\rightarrow \mu \mu$ and $J/\Psi \rightarrow \mu \mu$ events is shown in Fig \ref{fig:obj:muon_reco}.
+the muon reconstruction and calibration. In the pseudorapidity region with $|\eta|<2.5$, Medium muons are required to be combined muons with $\geq$ 3 hits in at least two \gls{mdt} layers (unless $|\eta|<0.1$, in which case the requirement becomes on one \gls{mdt} layer, but with a hole veto), while extrapolated muons are used when $2.5<|\eta|<2.7$. To suppress muons from hadron decays, the $\frac{q}{p}$ significance is required to be less than seven. 
+
+\subsection{Reconstruction Efficiency}
+
+In the regions with $|\eta|<2.5$, where the information from both the \gls{id} and the \gls{ms} is available, 
+the reconstruction efficiency is measured with a tag-and-probe method, performed on $J/\Psi \rightarrow \mu \mu$ and $Z\rightarrow \mu \mu$ events for low-\pt and high-\pt muons respectively. 
+After a selection on the event topology to reduce the background fraction, one of the two muons of the decay is required to be identified 
+as a Medium muon. The second leg of the decay (the one to probe) has to be reconstructed by a system independent on the one to be calibrated. For example, calorimeter muons can be used to measure the efficiency of muon identification in the \gls{ms}, while the \gls{id} efficiency can be measured with respect to muons identified in the \gls{ms}. 
+The reconstruction efficiency of the Medium \gls{op} as derived from $Z\rightarrow \mu \mu$ and $J/\Psi \rightarrow \mu \mu$ events is shown in Fig \ref{fig:obj:muon_reco}.
+The efficiency for high-$\eta$ muons, for which the \gls{id} information is not available, is measured following the same strategy detailed in Ref. \cite{Aad:2014rra}.
 
 \begin{figure}[h]
 \begin{center}
@@ -410,10 +419,9 @@ the muon reconstruction and calibration. In the pseudorapidity region with $|\et
 While muons originating from semileptonic decays of hadrons are very close to the axis of a jet, prompt muons are typically well separated from other physics objects in the event (isolated). The isolation requirements help therefore suppressing further the background from semileptonically decaying hadrons. Different isolation requirements are available and calibrated in \gls{atlas}, defined to be optimal of different analyses. 
 The \gls{op} used in the analyses described in this thesis is the one labeled $LooseTrackOnly$, which applies a selection on the ratio of the 
 variable \ptvar over the muon \pt (\ptmu), where \ptvar is defined as the scalar sum of the momenta of the tracks with $\pt>1$ GeV in the cone with 
-$\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\ptmu , \, 0.3\right) $. The \pt-dependent size of the isolation cone helps in recovering efficiency for muons deriving from the decay of boosted particles. This isolation \gls{op} has an efficiency of 99\%, almost constant in $\eta$ and \pt, as shown in Fig. \ref{fig:obj:muon_iso}.
+$\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\ptmu , \, 0.3\right) $. The \pt-dependent size of the isolation cone helps in recovering efficiency for muons deriving from the decay of boosted particles. The efficiency of the isolation \glspl{op} is calibrated on $Z\rightarrow \mu \mu$ with the tag-and-probe method. The $LooseTrackOnly$ \gls{op} has an efficiency of 99\%, almost constant in $\eta$ and \pt, as shown in Fig. \ref{fig:obj:muon_iso}. 
 
-
-% calibration  
+\subsection{Momentum Calibration}
 
 
 
