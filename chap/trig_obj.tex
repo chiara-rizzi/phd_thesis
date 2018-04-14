@@ -364,11 +364,13 @@ The reconstruction of muon tracks in the \gls{id} proceeds as described in Secti
 Four types of muons are identified, depending on the subdetectors that contribute to the reconstruction:
 
 \begin{description}
-\item [Combined]
-\item[Segment-tagged]
-\item[Calorimeter-tagged]
-\item[Extrapolated]
+\item [Combined] Combined muons are built from a global fit that uses hits from tracks reconstructed independently in the \gls{id} and \gls{ms}.
+\item[Segment-tagged] Muons of lower \pt or that cross regions of lower acceptance of the \gls{ms} can result in a segment in only one \gls{ms} chamber. If a track from the \gls{id} is associated with this segment, this track is classified as a segment-tagged muon.
+\item[Calorimeter-tagged] A track in the \gls{id} is identified as a calorimeter-tagged muon if it is matched to an energy deposit in the calorimeter compatible with a minimum-ionizing particle. This muon category recovers identification efficiency for the muons that fall out of the \gls{ms} acceptance.
+\item[Extrapolated] Extrapolated muons are reconstructed from tracks in the \gls{ms} compatible with originating from the \gls{ip}, to recover muons in high-$\eta$ regions, outside of the \gls{id} acceptance.
 \end{description}
+
+When multiple types of muon are reconstructed for the same physical object, the redundant ones are removed with an \gls{or} procedure that, when muons share the same \gls{id} tracks, gives priority to combined muons, and then to segment-tagged muons over combined muons. The \gls{or} with extrapolated muons gives preference to the \gls{ms} track with the best quality.
 
 \section{Missing Transverse Momentum}
 
