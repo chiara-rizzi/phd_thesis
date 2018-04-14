@@ -361,7 +361,7 @@ Muon reconstruction \cite{Aad:2016jkr} is based on the information collected by 
 of muon candidates independently and then the information is combined to build the muon candidates used in physics analyses. 
 The reconstruction of muon tracks in the \gls{id} proceeds as described in Section \ref{sec:reco:tracks}. In the \gls{ms}, the first step is the identification of segments starting from the hits in each chamber. A muon track is reconstructed with a segment-seeded search (considering first the segments in the central layers of the detector as seeds, and then extending to the inner and outer ones). Except from the transition region between the barrel and the end-cap, tracks are required to have at least two matching segments; the hits associated to each track are fitted with a global \chis, and the track candidate is accepted or rejected based on the \chis value. 
 
-Four types of muons are identified, depending on the subdetectors that contribute to the reconstruction:
+Reconstructed muons can belong to four different types, depending on the subdetectors that contribute to the reconstruction:
 
 \begin{description}
 \item [Combined] Combined muons are built from a global fit that uses hits from tracks reconstructed independently in the \gls{id} and \gls{ms}.
@@ -370,7 +370,26 @@ Four types of muons are identified, depending on the subdetectors that contribut
 \item[Extrapolated] Extrapolated muons are reconstructed from tracks in the \gls{ms} compatible with originating from the \gls{ip}, to recover muons in high-$\eta$ regions, outside of the \gls{id} acceptance.
 \end{description}
 
-When multiple types of muon are reconstructed for the same physical object, the redundant ones are removed with an \gls{or} procedure that, when muons share the same \gls{id} tracks, gives priority to combined muons, and then to segment-tagged muons over combined muons. The \gls{or} with extrapolated muons gives preference to the \gls{ms} track with the best quality.
+\noindent When multiple types of muon are reconstructed for the same physical object, the redundant ones are removed with an \gls{or} procedure that, when muons share the same \gls{id} tracks, gives priority to combined muons, and then to segment-tagged muons over combined muons. The \gls{or} with extrapolated muons gives preference to the \gls{ms} track with the best quality.
+
+% identification
+
+The reconstructed muons have to fulfill identification criteria that help rejecting the background constituted mostly by decays of pions and kaons. 
+The variables used in the identification are the significance of the difference of the charge-over-momentum ration measured by the \gls{id} and by the \gls{ms} ($\frac{q}{p}$ significance),
+the difference of the \pt measured in the \gls{id} ad in the \gls{ms} divided by the \pt of the combined track ($\rho'$),
+the normalized \chis of the combined fit,
+and the number of hits in the different detector layers. 
+Based on these quantities, four muon identification criteria are defined: Loose, Medium, Tight and High-\pt. 
+Loose, Medium and Tight are inclusive categories with increasingly tighter requirements, while the High-\pt selection starts from the Medium selection and applies extra requirements that improve the momentum resolution for muons with \pt above 100 GeV.
+
+The Medium identification criteria is the default in \gls{atlas}, and is the one that minimizes the systematic uncertainties associated with 
+the muon reconstruction and calibration. In the pseudorapidity region with $|\eta|<2.5$, Medium muons are required to be combined muons with $\geq$ 3 hits in at least two \gls{mdt} layers (unless $|\eta|<0.1$, in which case the requirement becomes on one \gls{mdt} layer, but with a hole veto), while extrapolated muons are used when $2.5<|\eta|<2.7$. To suppress muons from hadron decays, the $\frac{q}{p}$ significance is required to be less than seven.
+
+
+
+% calibration  
+
+
 
 \section{Missing Transverse Momentum}
 
