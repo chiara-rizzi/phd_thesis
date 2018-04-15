@@ -514,7 +514,24 @@ The electron efficiency is a product of the reconstruction, identification and i
 (and also trigger efficiency, if the events are selected with an electron trigger).  The ratio between the efficiency expected from \gls{mc} simulations and the one measured in data, in the form of \glspl{sf} function of \et and $|\eta|$, is used to correct the simulations and its uncertainty is applied as a systematic variation. 
 
 The identification efficiency is measured with four methods. Two methods ($Z_\mathrm{mass}$ and $Z_\mathrm{iso}$) use $Z\rightarrow e e$ events. 
-In the $Z_\mathrm{mass}$ analysis, the tag-probe invariant mass is required to be within 15 GeV of the $Z$ boson mass, while in the $Z_\mathrm{iso}$ method the electron isolation is used to discriminate between signal and background. 
+In the $Z_\mathrm{mass}$ analysis, the tag-probe invariant mass is required to be within 15 GeV of the $Z$ boson mass, while in the $Z_\mathrm{iso}$ method the electron isolation is used to discriminate between signal and background. The other two methods \cite{ATLAS:2014wga}, $J/\Psi$ $\tau$-cut and $J/\Psi$ $\tau$-fit, use the distribution of a variable close to the $J/\Psi$ proper time (pseudo-proper time) to select $ee$ events. 
+The two $Z$-based methods and the two $J/\Psi$-based methods are combined, taking into account statistical and systematic correlations, to 
+derive \glspl{sf} in the high-\et and low-\et regions. As an example, the identification efficiency \glspl{sf} for Tight electrons in the 40-45 \et range, measured in the 2015 data are shown in Fig. \ref{fig:obj:ele_sff_tight}. Fig. \ref{fig:obj:ele_id2016} shows the electron identification 
+efficiency as measured in the 2016 data, for the three \glspl{op} and inclusive in $\eta$. In this second case, the difference between data and \gls{mc} is due to the fact that \gls{mc} simulation do not reflect the changes in the \gls{trt} configuration in 2016 \cite{atlaselec2016}.
+
+\begin{figure}[h]
+\begin{center}
+  \subfigure[]{
+    \label{fig:obj:ele_sff_tight}
+    \includegraphics[width=0.48\textwidth]{figures/objects/ele_sf_tight} }
+  \subfigure[]{
+    \label{fig:obj:ele_id2016}
+    \includegraphics[width=0.48\textwidth]{figures/objects/ele_ideff_2016}  }
+\end{center}
+ \caption{\subref{fig:obj:ele_sff_tight} Identification efficiency \glspl{sf} for Tight electrons in the 40-45 \et range, measured in the 2015 data. Figure from Ref. \cite{ATLAS:2016iqc}. \subref{fig:obj:ele_id2016} Electron identification efficiencies in $Z\rightarrow e e$ events. Figure from Ref. \cite{atlaselec2016}.
+ }
+  \label{fig:obj:ele_sf}
+\end{figure}
 
 
 \subsection{Electron Energy Scale and Resolution}
