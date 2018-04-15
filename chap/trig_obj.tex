@@ -557,9 +557,18 @@ probe electrons. For each isolation \gls{op}, the efficiency is derived with res
 
 \subsection{Electron Energy Scale and Resolution}
 
-The electron energy scale is measured in $Z\rightarrow e e$ and $J/\Psi \rightarrow e e$ events. 
+The electron energy calibration follows three steps \cite{Aad:2014nim,ATL-PHYS-PUB-2016-015}:
+\begin{description}
+\item[Detector response] Data-driven corrections are derived to correct for non-uniformity in the detector response, and are applied to data.
+ 
+\item[MC-based] The energy is corrected with a \gls{bdt} that takes into account the energy deposited in front of the calorimeter (before reaching the first active layer of the calorimeter particles traverse 5-10 radiation lengths) and the changes in energy response depending on the impact point in the calorimeter.
+This calibration is derived from \gls{mc} simulation and applied to both data and \gls{mc}. 
 
-The electron energy resolution is measured by comparing the width of the $ee$ invariant mass distribution in $Z\rightarrow e e$ events in \gls{mc} simulations and in data.
+\item[In-situ] After the application of the data-driven corrections for the detector non-uniformity and of the MC-based corrections, 
+residual differences in electron energy scale and resolution between data and \gls{mc} are measured with a template procedure on $Z\rightarrow e e$ events. The energy scale correction is applied to data, while the energy resolution correction is applied to \gls{mc}.
+
+\end{description}
+
 
 
 \section{Missing Transverse Momentum}
