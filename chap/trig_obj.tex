@@ -413,6 +413,7 @@ The efficiency for high-$\eta$ muons, for which the \gls{id} information is not 
 \end{figure}
 
 \subsection{Muon Isolation}
+\label{sec:muoniso}
 
 While muons originating from semileptonic decays of hadrons are very close to the axis of a jet, prompt muons are typically well separated from other physics objects in the event (isolated). The isolation requirements help therefore suppressing further the background from semileptonically decaying hadrons. Different isolation requirements are available and calibrated in \gls{atlas}, defined to be optimal of different analyses. 
 The \gls{op} used in the analyses described in this thesis is the one labeled $LooseTrackOnly$, which applies a selection on the ratio of the 
@@ -478,13 +479,31 @@ signal and background likelihoods ($\mathcal{L}\rm s$ and $\mathcal{L}\rm s$ res
  d_\mathcal{L} = \frac{\mathcal{L}\rm s}{\mathcal{L}\rm s + \mathcal{L}\rm b}
 \end{equation} 
 
-Three identification \glspl{op} are defined, Loose, Medium and Tight, that are inclusive and with an increasing level of signal purity. 
-
-
-
+Three identification \glspl{op} are defined, Loose, Medium and Tight, optimized in bins of $|\eta|$ and \et;
+these \glspl{op} are inclusive and with an increasing level of signal purity.
+The signal and background efficiency in \gls{mc} samples is shown in Fig. \ref{fig:obj:ele_eff}. It is possible to notice how, with increasing
+\et, the signal efficiency increases and the background mis-identification decreases.
+ 
+\begin{figure}[h]
+\begin{center}
+  \subfigure[]{
+    \label{fig:obj:ele_eff_e}
+    \includegraphics[width=0.48\textwidth]{figures/objects/ele_eff} }
+  \subfigure[]{
+    \label{fig:obj:ele_eff_bkg}
+    \includegraphics[width=0.48\textwidth]{figures/objects/ele_bkg_eff}  }
+\end{center}
+ \caption{Electron identification efficiency in $Z\rightarrow e e$ events (\subref{fig:obj:ele_eff_e}) and background mis-identification in dijet events (\subref{fig:obj:ele_eff_bkg}) for the three \glspl{op} Loose, Medium and Tight. Figures from Ref. \cite{ATLAS:2016iqc}.
+ }
+  \label{fig:obj:ele_eff}
+\end{figure}
 
 
 \subsection{Electron Isolation}
+
+As already discussed in the case of muons in Section \ref{sec:muoniso}, prompt signal electrons are in general more isolated than 
+electrons candidates originating from hadron decays, from light hadrons misidentified as electrons or from photon conversion. 
+
 
 \subsection{Electron Efficiency Measurement}
 
