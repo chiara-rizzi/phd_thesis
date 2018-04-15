@@ -454,16 +454,35 @@ In particular, in Run 2 analyses these selections are: \dzero/$\sigma_\dzero < 0
 
 After the electron candidates are reconstructed, a likelihood-based discriminant is used to reject the background, 
 constituted mostly by hadronic jets and converted photons. 
-
 This discriminant is built using as signal and background samples $Z\rightarrow e e$ and dijet events fir the
-high-\pt region, $J/\Psi \rightarrow e e$ and minimum bias events for the low-\pt region.
+high-\et region, $J/\Psi \rightarrow e e$ and minimum bias events for the low-\et region.
+Several variables are used to discriminate between signal and background, based on ratios of energy released in different layers of 
+the calorimeter, shape of the \gls{em} shower, quality of the track and of the track-cluster matching; 
+the full list of variables is reported in Table \ref{tab:obj:elev_var}.
+The variables counting the number of hits in the different layers, as well as $E/p$, $w_\mathrm{stot}$ and 
+$\Delta\phi_2$ are used to apply simple selections, while for the other discriminating variables \glspl{pdf} are built based
+on the signal and background samples.
 
-The signal and background samples are used to build \gls{pdf} for each discriminating variable, whose product constitutes the 
+\begin{table}[h]
+\begin{center}
+    \includegraphics[width=0.99\textwidth]{figures/objects/ele_var_tab.pdf}  
+\end{center}
+ \caption{Definitions of electron discriminating variables. Table from Ref. \cite{ATLAS:2016iqc}.}
+  \label{tab:obj:elev_var}
+\end{table}
+
+The product of these \glspl{pdf} constitutes the 
 signal and background likelihoods ($\mathcal{L}\rm s$ and $\mathcal{L}\rm s$ respectively), and the final discriminant is given by:
 
 \begin{equation}
  d_\mathcal{L} = \frac{\mathcal{L}\rm s}{\mathcal{L}\rm s + \mathcal{L}\rm b}
 \end{equation} 
+
+Three identification \glspl{op} are defined, Loose, Medium and Tight, that are inclusive and with an increasing level of signal purity. 
+
+
+
+
 
 \subsection{Electron Isolation}
 
