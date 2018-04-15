@@ -574,24 +574,41 @@ residual differences in electron energy scale and resolution between data and \g
 
 \section{Missing Transverse Momentum}
 
-Particles that interact only weakly with the detector, such as neutrinos or BSM particles like neutralinos, are not reconstructed directly. 
+Particles that interact only weakly with the detector, such as neutrinos or \gls{bsm} particles like neutralinos, are not reconstructed directly.  
 Their presence is instead inferred by measuring the total momentum imbalance in the event. 
+The missing transverse momentum (\met) is defined as the negative vector sum of the \pt of all the reconstructed calibrated objects in the event, 
+plus a term that groups all the energy that is not associated to any of the reconstructed objects (soft term) \cite{Aad:2016nrq}. 
+For each of the $X$ and $Y$ components, the missing energy in that direction is given by:
 
 \begin{equation}
-\met = \sqrt{(E_{X}^{miss})^{2}  +  (E_{Y}^{miss})^{2}},
-\end{equation}
-
-\begin{equation}
-E_{X(Y)}^{miss} = E_{X(Y)}^{miss,e} +    E_{X(Y)}^{miss,\gamma} + E_{X(Y)}^{miss,\tau}    \nonumber \\
-+ E_{X(Y)}^{miss,jets} + E_{X(Y)}^{miss,soft-terms}  +  E_{X(Y)}^{miss,\mu} 
+E_{X(Y)}^{miss} =  - \sum \pxy ^{e}  - \sum \pxy ^{\gamma} - \sum \pxy ^{\tau}    \nonumber \\
+- \sum \pxy ^{jets} - \sum \pxy   ^{\mu} - \sum \pxy  ^{soft-terms}   \;
 \label{eq:etm} 
 \end{equation}
 
-
+The magnitude of the missing transverse momentum is defined as:
 \begin{equation}
-\phi^{miss} = \arctan \left( \frac{E_Y^{miss}}{E_X^{miss}} \right)
+\met = \sqrt{(E_{X}^{miss})^{2}  +  (E_{Y}^{miss})^{2}} \;,
 \end{equation}
+
+\noindent and the azimuthal angle is:
+\begin{equation}
+\phi^{miss} = \arctan \left( \frac{E_Y^{miss}}{E_X^{miss}} \right) \; .
+\end{equation}
+
+The soft term includes all the detector signals that are not associated to muons, electrons, photons, taus or jets, and can receive contributions
+both from the hard scattering and from pileup interactions.
+In \gls{atlas} several algorithms are designed to reconstruct and calibrate the \met soft term, and the analyses discussed in this thesis use 
+the one recommended for the 2015-2016 analyses, the \gls{tst}. In this algorithm, the \met soft term is reconstructed purely from track information, without any contribution from the calorimeter information; 
+this results at the same time in better pileup resistance but also in the loss of information about soft neutral particles. 
+An alternative version of the soft term is the \gls{cst}, that instead uses energy deposits in the calorimeters not associated to hard physics objects. 
+Other algorithms are described in Ref. \cite{Aad:2016nrq}.
+
+The systematic uncertainties on the energy scale and resolution of all the physics objects are propagated to the \met computation.
+The only systematic uncertainties affecting only \met are the ones related to the soft term, which are measured in events with very small 
+\met (for example $Z \rightarrow \mu \mu events$) exploiting the balance between the soft term and the hard part of the \met computation.
 
 \subsection{\met Trigger}
 
-
+The version of \met used in the trigger is calorimeter-based, which means that the muons are not included in the computation of \met and are 
+therefore treated as invisible particles. 
