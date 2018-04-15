@@ -610,5 +610,15 @@ The only systematic uncertainties affecting only \met are the ones related to th
 
 \subsection{\met Trigger}
 
+The data used in this thesis are selected with \met triggers.
 The version of \met used in the trigger is calorimeter-based, which means that the muons are not included in the computation of \met and are 
-therefore treated as invisible particles. 
+therefore treated as invisible particles.  As described in Section \ref{sec:cern:trigger}, 
+trigger chains for physics analyses comprise first a \gls{lone} trigger selection, and then a selection from the \gls{hlt}.
+\begin{description}
+\item[L1] At \gls{lone} level, the computation of the \met is based on trigger towers of size $0.1\times0.1$ in the $\eta$, $\phi$ space. The towers are clustered in $4\times4$ group with a sliding-window algorithm, and these are used in the \met computation.
+\item[HLT] Many \gls{hlt} \met algorithms are available in \gls{atlas} and are described in Ref. \cite{Aaboud:2016leb}. 
+The one used in this thesis is the jet-based algorithm, where \met is computed as the negative sum of the \pt of the trigger-level jets in the event.
+
+\end{description}
+
+ 
