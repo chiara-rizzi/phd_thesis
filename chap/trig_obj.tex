@@ -387,7 +387,7 @@ Loose, Medium and Tight are inclusive categories with increasingly tighter requi
 The Medium identification criteria is the default in \gls{atlas}, and is the one that minimizes the systematic uncertainties associated with 
 the muon reconstruction and calibration. In the pseudorapidity region with $|\eta|<2.5$, Medium muons are required to be combined muons with $\geq$ 3 hits in at least two \gls{mdt} layers (unless $|\eta|<0.1$, in which case the requirement becomes on one \gls{mdt} layer, but with a hole veto), while extrapolated muons are used when $2.5<|\eta|<2.7$. To suppress muons from hadron decays, the $\frac{q}{p}$ significance is required to be less than seven. 
 
-\subsection{Reconstruction Efficiency}
+\subsection{Muon Efficiency Measurement}
 
 In the regions with $|\eta|<2.5$, where the information from both the \gls{id} and the \gls{ms} is available, 
 the reconstruction efficiency is measured with a tag-and-probe method, performed on $J/\Psi \rightarrow \mu \mu$ and $Z\rightarrow \mu \mu$ events for low-\pt and high-\pt muons respectively. 
@@ -452,7 +452,22 @@ In particular, in Run 2 analyses these selections are: \dzero/$\sigma_\dzero < 0
 
 \subsection{Electron Identification}
 
+After the electron candidates are reconstructed, a likelihood-based discriminant is used to reject the background, 
+constituted mostly by hadronic jets and converted photons. 
 
+This discriminant is built using as signal and background samples $Z\rightarrow e e$ and dijet events fir the
+high-\pt region, $J/\Psi \rightarrow e e$ and minimum bias events for the low-\pt region.
+
+The signal and background samples are used to build \gls{pdf} for each discriminating variable, whose product constitutes the 
+signal and background likelihoods ($\mathcal{L}\rm s$ and $\mathcal{L}\rm s$ respectively), and the final discriminant is given by:
+
+\begin{equation}
+ d_\mathcal{L} = \frac{\mathcal{L}\rm s}{\mathcal{L}\rm s + \mathcal{L}\rm b}
+\end{equation} 
+
+\subsection{Electron Isolation}
+
+\subsection{Electron Efficiency Measurement}
 
 
 \section{Missing Transverse Momentum}
@@ -475,6 +490,6 @@ E_{X(Y)}^{miss} = E_{X(Y)}^{miss,e} +    E_{X(Y)}^{miss,\gamma} + E_{X(Y)}^{miss
 \phi^{miss} = \arctan \left( \frac{E_Y^{miss}}{E_X^{miss}} \right)
 \end{equation}
 
-
+\subsection{\met Trigger}
 
 
