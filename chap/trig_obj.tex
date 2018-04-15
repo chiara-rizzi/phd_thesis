@@ -1,4 +1,4 @@
-\chapter{Event Reconstruction}
+\chapter{Physics Objects Reconstruction}
 \label{sec:event:reco}
 
 The particles produced in the \gls{pp} collisions in the center of the \gls{atlas} detector, interact with the detector material as discussed in Chapter \ref{chap:cern}. As a result of these interactions, electrical currents are recorded. \textit{Event reconstruction} is the process of recombining these digital signals and interpreting them as tracks and energy deposits in the calorimeters. A further step consists in analyzing the characteristics of the candidate tracks and calorimeter clusters and identify them as signs of the passage of specific particles.
@@ -466,7 +466,7 @@ on the signal and background samples.
 
 \begin{table}[h]
 \begin{center}
-    \includegraphics[width=0.99\textwidth]{figures/objects/ele_var_tab.pdf}  
+    \includegraphics[width=0.985\textwidth]{figures/objects/ele_var_tab.pdf}  
 \end{center}
  \caption{Definitions of electron discriminating variables. Table from Ref. \cite{ATLAS:2016iqc}.}
   \label{tab:obj:elev_var}
@@ -503,9 +503,23 @@ The signal and background efficiency in \gls{mc} samples is shown in Fig. \ref{f
 
 As already discussed in the case of muons in Section \ref{sec:muoniso}, prompt signal electrons are in general more isolated than 
 electrons candidates originating from hadron decays, from light hadrons misidentified as electrons or from photon conversion. 
-
+The analyses described in this thesis use a track-based isolation criterion, based on the variable \ptvarele, defined as the scalar sum of the \pt 
+of the tracks satisfying quality requirements in a cone with $\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\et , \, 0.2\right)$, where \et is the transverse energy of the electron candidate and the sum excludes the electron track. The operating point used is $LooseTrackOnly$, 
+that applies a selection on the ratio \ptvarele/\et to have an efficiency of 99\% on simulated $Z\rightarrow e e$ events, constant as a function of \et.
 
 \subsection{Electron Efficiency Measurement}
+
+The measurement of the electron efficiency in data relies on the tag-and-probe method, applied to $Z\rightarrow e e$ and $J/\Psi \rightarrow e e$ events, for the high-\et ($> 15$ GeV) and low-\et (typically 7-20 GeV) regions respectively. One of the two electrons is identified with tight criteria and, after kinematic requirements, the second one is used to measure the efficiency.
+The electron efficiency is a product of the reconstruction, identification and isolation efficiency 
+(and also trigger efficiency, if the events are selected with an electron trigger).  The ratio between the efficiency expected from \gls{mc} simulations and the one measured in data, in the form of \glspl{sf} function of \et and $|\eta|$, is used to correct the simulations and its uncertainty is applied as a systematic variation. 
+
+The identification efficiency is measured with four methods. Two methods ($Z_\mathrm{mass}$ and $Z_\mathrm{iso}$) use $Z\rightarrow e e$ events. 
+In the $Z_\mathrm{mass}$ analysis, the tag-probe invariant mass is required to be within 15 GeV of the $Z$ boson mass, while in the $Z_\mathrm{iso}$ method the electron isolation is used to discriminate between signal and background. 
+
+
+\subsection{Electron Energy Scale and Resolution}
+
+
 
 
 \section{Missing Transverse Momentum}
