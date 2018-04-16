@@ -71,9 +71,10 @@ headsepline, % Uncomment to get a line under the header
 \newcommand{\note}[1]{\color{red}\textbf{#1}\color{black}}
 
 % new commands energy and lumi
-\newcommand{\cmsette}{\ensuremath{\sqrt{s}  =  7 \ }}
-\newcommand{\cmotto}{\ensuremath{\sqrt{s}  =  8 \ }}
-\newcommand{\cmtre}{\ensuremath{\sqrt{s}  =  13 \ }}
+\newcommand{\cmsette}{\ensuremath{\sqrt{s}  =  7}\xspace}
+\newcommand{\cmotto}{\ensuremath{\sqrt{s}  =  8}\xspace}
+\newcommand{\cmtre}{\ensuremath{\sqrt{s}  =  13}\xspace}
+\newcommand{\cmpart}{\ensuremath{\sqrt{\hat{s}}}\xspace}
 \newcommand{\lumi}{\ensuremath{\int L \, dt}}
 \def\ipb{\mbox{pb$^{-1}$}} %  Inverse picobarns.
 \def\ifb{\mbox{fb$^{-1}$}} %  Inverse femtobarns.
@@ -283,8 +284,8 @@ headsepline, % Uncomment to get a line under the header
 \glsresetall
 \include{chap/lhc}
 \glsresetall
-%\include{chap/mc_simul}
-%\glsresetall
+\include{chap/mc_simul}
+\glsresetall
 \include{chap/trig_obj}
 %\include{chap/susy_general}
 \glsresetall
@@ -316,7 +317,7 @@ headsepline, % Uncomment to get a line under the header
 
 \clearpage
 % GLOSSARY
-\printglossary
+\printglossary[title={Abbreviations}]
 \clearpage
 
 %----------------------------------------------------------------------------------------
