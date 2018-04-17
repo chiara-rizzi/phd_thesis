@@ -18,7 +18,6 @@ In hard-scattering processes, where the momentum transfer is much higher than th
 a \gls{pp} collision is easier to understand in terms of interactions between the constituents of the protons, quarks and gluons, 
 collectively referred to as partons. A schematic view of \gls{pp} event is shown in Fig. \ref{fig:sim:pp2}. In this case, the interaction of a quark and a gluon leads to a final state with a Z boson and jets. 
 
-
 \begin{figure}[h]
 \begin{center}
 %  \subfigure[]{
@@ -30,11 +29,15 @@ collectively referred to as partons. A schematic view of \gls{pp} event is shown
   \label{fig:sim:pp2}
 \end{figure}
 
+As in can be understood from the figure, the hard process, which can be computed in perturbation theory, takes place between two of the proton partons; the probability that a gluon or a specific quark type takes part to the hard scattering is described \gls{partdf}, discussed in Section \ref{sec:ppint:hardscatter}. If the products of the hard scattering are quarks or gluons, they evolve into stable hadrons in the lower-energy hadronization process, which we can describe only through phenomenological models.
+This picture is further complicated by the fact that partons in the initial and final state can radiate other partons.
+Also partons not contributing to the hard scattering can interact, originating what is referred to as underlying event. 
+
+\subsection{Hard Scattering}
+\label{sec:ppint:hardscatter}
 
 The hard scattering between the partons inside the proton is in a kinematic regime where the \gls{qcd} coupling constant, $\alpha_s$, 
-is small and therefore the partonic cross sections can be computed in perturbation theory. Instead, our understanding of the 
-low-energy hadronization process, where stable hadrons are formed, is based on phenomenological models.
-
+is small and therefore the partonic cross sections can be computed in perturbation theory. 
 The generic production cross section for a final state $X$ can be expressed in terms of the partonic cross section $\hat\sigma$ as:
 
 \begin{equation}
@@ -47,10 +50,10 @@ The generic production cross section for a final state $X$ can be expressed in t
 The $i$ and $j$ indexes run on all the possible partons.  
 
 The partonic center of mass energy \cmpart is lower than the total center of mass energy, as it is the product of the center of mass energy times
-the fraction of the proton momentum that is carried by each parton. 
+the fraction of the proton momentum that is carried by each of the two partons. 
 
-\subsection{Hard Scattering}
 
+% factorization theorem 
 \cite{doi:10.1146}
 
 \begin{figure}[h]
