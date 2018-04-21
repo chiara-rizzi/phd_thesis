@@ -126,11 +126,13 @@ Equation \ref{eq:general-cross-section}, can be expressed at all orders as:
 \begin{equation}
 \hat\sigma_{ij\rightarrow X} = \sum_{k=0}^\infty \int d\Phi_{X+k} |\sum_{l=0}^\infty \mathcal{M}_{X+k}^{(l)}|^2 \; .
 \end{equation}
-\noindent In this expression, the $k$ represents the number of final state particles produced in addition to $X$ and $\mathcal{M}_{X+k}^{(l)}$
-the amplitude to produce the final state $X+k$ computed with $l$ virtual loops. The number of extra partons and the number of loops identify the 
+\noindent In this expression, the $k$ represents the number of final state quarks and gluons produced in addition to $X$ and $\mathcal{M}_{X+k}^{(l)}$
+the amplitude to produce the final state $X+k$ computed with $l$ virtual loops. To compute a cross section is not possible to extend these sums to infinity, and the number of extra partons and the number of loops identify the 
 perturbative order of the cross section. In particular:
 \begin{itemize}
-\item 
+\item The lowest possible order for the production of $X$ is the \gls{lo}, where $k=l=0$.
+\item $l=0$, $k=n$ represents the \gls{lo} computation for the production of $X$ + $n$ jets.
+\item $k+l \leq n$ corresponds to a N$^n$LO prediction for the production of $X$, while N$^{n-k}$LO for the production of $X$ in association with $k$ jets.
 \end{itemize}
 
 At each order, the computation of the matrix element implies a choice of the factorization and renormalization scales.
