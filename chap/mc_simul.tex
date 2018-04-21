@@ -113,9 +113,8 @@ The main steps in the simulation of \gls{pp} collision events consists of:
 \begin{itemize}
 \item Computation of the matrix element for the hard process.
 \item \gls{psh} and matching between \gls{psh} and matrix element.
-\item Hadronization.
+\item Hadronization and decay of unstable particles.
 \item Simulation of the underlying event.
-\item Decay of unstable particles.
 \end{itemize}
 In the next sections, each step is summarized in its main features.
 
@@ -143,7 +142,22 @@ The impact of this subjective choice is taken into account by evaluating each pr
 
 \subsection{Matching}
 
-\subsection{Hadronization}
+\subsection{Hadronization and Hadron Decays}
+
+The term hadronization refers to the process where colored partons, after parton shower, becomes a set of colorless hadrons (primary hadrons), 
+that can in turn decay into secondary hadrons. This transition is described through phenomenological models since the hadrinization scale, that corresponds also to the \gls{ir} cutoff of the parton shower, is outside the perturbative regime of \gls{qcd}. 
+Two main hadronization models are used in \gls{mc} generators:
+
+\begin{description}
+\item[String Model] The string model \cite{Artru:1974hr} is based on linear confinement: the potential energy between two colored particles increases linearly with their distance. This terms comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two and have therefore a rate for hadron production double than that of quarks. 
+\item[Cluster Model] The cluster model is based on preconfinement. 
+\end{description}
+
+When the simulation of the evens stops before hadronization, it is referred to as "parton-level".
+
+\subsection{Underlying Event}
+
+\subsection{Pileup}
 
 \section{MC Generators}
 
