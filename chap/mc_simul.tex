@@ -29,32 +29,34 @@ collectively referred to as partons. A schematic view of \gls{pp} event is shown
   \label{fig:sim:pp2}
 \end{figure}
 
-As in can be understood from the figure, the hard process, which can be computed in perturbation theory, takes place between two of the proton partons; the probability that a gluon or a specific quark type takes part to the hard scattering is described \gls{partdf}, discussed in Section \ref{sec:ppint:hardscatter}. If the products of the hard scattering are quarks or gluons, they evolve into stable hadrons in the lower-energy hadronization process, which we can describe only through phenomenological models.
-This picture is further complicated by the fact that partons in the initial and final state can radiate other partons.
-Also partons not contributing to the hard scattering can interact, originating what is referred to as underlying event. 
+As in can be understood from the figure, the hard process, which can be computed in perturbation theory, takes place between two of the proton partons; the probability that a gluon or a specific quark type takes part to the hard scattering is described the \glspl{partdf}, discussed in Section \ref{sec:ppint:hardscatter}. If the products of the hard scattering are quarks or gluons, after loosing energy by radiating other gluons (which in turn can generate quarks through gluon splitting) in the process of parton shower, they evolve into stable hadrons in the lower-energy hadronization process, which we can describe only through phenomenological models.
+This picture is further complicated by the fact that also initial-state quarks and gluons can radiate. Also, the other partons not contributing to the hard scattering can interact, originating what is referred to as underlying event. 
 
-\subsection{Hard Scattering}
+\subsection{Factorization Theorem}
 \label{sec:ppint:hardscatter}
 
 The hard scattering between the partons inside the proton is in a kinematic regime where the \gls{qcd} coupling constant, $\alpha_s$, 
 is small and therefore the partonic cross sections can be computed in perturbation theory. 
-The generic production cross section for a final state $X$ can be expressed in terms of the partonic cross section $\hat\sigma$ as:
+Thanks to the factorization theorem \cite{doi:10.1146}, the generic production cross section for a final state $X$ can be expressed in terms of the partonic cross section $\hat\sigma$ as:
 
 \begin{equation}
   \label{eq:general-cross-section}
   \sigma(pp\rightarrow X) = \sum_{i,j} \int dx_1 dx_2\, 
-     f_{i,p}(x_1,\mu_F^2)\, f_{j,p}(x_2,\mu_F^2)\, 
+     f_{i}(x_1,\mu_F^2)\, f_{j}(x_2,\mu_F^2)\, 
      \hat\sigma_{ij\rightarrow X}(x_1 x_2 s, \mu_R^2, \mu_F^2) \; .
 \end{equation}
+The $i$ and $j$ indexes run on all the possible partons, and $f_{i}(x_1,\mu_F^2)$ is the \gls{partdf} for the $i$-th parton, representing 
+the distribution of probability for that parton to carry a fraction $x_1$ of the proton momentum when the proton is probed at a scale $\mu_F$
+(factorization scale). $\hat\sigma_{ij\rightarrow X}$ is the partonic cross section, computer at the partonic center of mass energy \cmpart;   
+it has to be noted that \cmpart is lower than the total center of mass energy, as its square is the product of square of the center of mass energy times
+the fraction of the proton momentum that is carried by each of the two partons, $x_1$ and $x_2$. 
+While, when considered at all orders in perturbative \gls{qcd}, the partonic cross section does not depend on $\mu_F$,
+this dependence appears at any fixed order. $\hat\sigma$ depends also on the renormalization scale, $\mu_R$, which is the scale used for the evaluation of $\alpha_s$.
 
-The $i$ and $j$ indexes run on all the possible partons.  
-
-The partonic center of mass energy \cmpart is lower than the total center of mass energy, as it is the product of the center of mass energy times
-the fraction of the proton momentum that is carried by each of the two partons. 
 
 
 % factorization theorem 
-\cite{doi:10.1146}
+
 
 \begin{figure}[h]
 \begin{center}
@@ -73,6 +75,9 @@ the fraction of the proton momentum that is carried by each of the two partons.
 
 \subsection{Parton Density Functions}
 
+The partons inside the proton can not be observed as free particles, and therefore their \glspl{partdf} can not be computed with
+perturbative \gls{qcd}. Instead, 
+
 \begin{figure}[h]
 \begin{center}
     \includegraphics[width=0.8\textwidth]{figures/simul/pdf}
@@ -86,6 +91,9 @@ the fraction of the proton momentum that is carried by each of the two partons.
 \label{sec:eventsimul}
 
 \subsection{Matrix Element}
+
+The factorization and renormalization scales are not predetermined, and are typically set to values related to the scale of the considered physical process. 
+The impact of this subjective choice is taken into account by evaluating each production cross section at different scales (typically a variation of a factor two up and down), and assigning the difference as a systematic uncertainty on the cross section estimate.
 
 \subsection{Parton Shower}
 
