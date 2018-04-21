@@ -40,10 +40,10 @@ is small and therefore the partonic cross sections can be computed in perturbati
 Thanks to the factorization theorem \cite{doi:10.1146}, the generic production cross section for a final state $X$ can be expressed in terms of the partonic cross section $\hat\sigma$ as:
 
 \begin{equation}
-  \label{eq:general-cross-section}
   \sigma(pp\rightarrow X) = \sum_{i,j} \int dx_1 dx_2\, 
      f_{i}(x_1,\mu_F^2)\, f_{j}(x_2,\mu_F^2)\, 
      \hat\sigma_{ij\rightarrow X}(x_1 x_2 s, \mu_R^2, \mu_F^2) \; .
+  \label{eq:general-cross-section}
 \end{equation}
 The $i$ and $j$ indexes run on all the possible partons, and $f_{i}(x_1,\mu_F^2)$ is the \gls{partdf} for the $i$-th parton, representing 
 the distribution of probability for that parton to carry a fraction $x_1$ of the proton momentum when the proton is probed at a scale $\mu_F$
@@ -109,9 +109,32 @@ As mentioned above, the $x$ dependence has to be extracted experimentally. This 
 \section{Event Simulation}
 \label{sec:eventsimul}
 
+The main steps in the simulation of \gls{pp} collision events consists of:
+\begin{itemize}
+\item Computation of the matrix element for the hard process.
+\item \gls{psh} and matching between \gls{psh} and matrix element.
+\item Hadronization.
+\item Simulation of the underlying event.
+\item Decay of unstable particles.
+\end{itemize}
+In the next sections, each step is summarized in its main features.
+
 \subsection{Matrix Element}
 
-The factorization and renormalization scales are not predetermined, and are typically set to values related to the scale of the considered physical process. 
+The partonic cross section for the production of the final state $X$ starting from the partons $i$ and $j$, necessary to compute
+Equation \ref{eq:general-cross-section}, can be expressed at all orders as:
+\begin{equation}
+\hat\sigma_{ij\rightarrow X} = \sum_{k=0}^\infty \int d\Phi_{X+k} |\sum_{l=0}^\infty \mathcal{M}_{X+k}^{(l)}|^2 \; .
+\end{equation}
+\noindent In this expression, the $k$ represents the number of final state particles produced in addition to $X$ and $\mathcal{M}_{X+k}^{(l)}$
+the amplitude to produce the final state $X+k$ computed with $l$ virtual loops. The number of extra partons and the number of loops identify the 
+perturbative order of the cross section. In particular:
+\begin{itemize}
+\item 
+\end{itemize}
+
+At each order, the computation of the matrix element implies a choice of the factorization and renormalization scales.
+$\mu_F$ and $\mu_R$ are not predetermined, and are typically set to values related to the scale of the considered physical process. 
 The impact of this subjective choice is taken into account by evaluating each production cross section at different scales (typically a variation of a factor two up and down), and assigning the difference as a systematic uncertainty on the cross section estimate.
 
 \subsection{Parton Shower}
