@@ -58,32 +58,50 @@ this dependence appears at any fixed order. $\hat\sigma$ depends also on the ren
 % factorization theorem 
 
 
-\begin{figure}[h]
-\begin{center}
+%\begin{figure}[h]
+%\begin{center}
 %  \subfigure[]{
 %    \label{fig:Comb_syst:pt}
 %    \includegraphics[width=0.48\textwidth]{figures/simul/ppcoll2}
 %  }
 %    \subfigure[]{
 %    \label{fig:Comb_syst:pt}
-    \includegraphics[width=0.48\textwidth]{figures/simul/ppcoll}
+%    \includegraphics[width=0.48\textwidth]{figures/simul/ppcoll}
 %  }
-\end{center}
- \caption{Diagrammatic structure of a generic hard-scattering process. Figure from Ref. \cite{Campbell:2006wx}.}
-  \label{fig:sim:pp}
-\end{figure}
+%\end{center}
+% \caption{Diagrammatic structure of a generic hard-scattering process. Figure from Ref. \cite{Campbell:2006wx}.}
+%  \label{fig:sim:pp}
+%\end{figure}
 
 \subsection{Parton Density Functions}
 
 The partons inside the proton can not be observed as free particles, and therefore their \glspl{partdf} can not be computed with
-perturbative \gls{qcd}. Instead, 
+perturbative \gls{qcd}. In particular, for a given scale, it is not possible to predict theoretically the probability distribution 
+of the momentum fraction. Instead, once the \glspl{partdf} are known for a certain scale, their energy evolution is 
+determined by the equations derived independently by Dokshitzer \cite{Dokshitzer:1977sg} , Gribov and Lipatov \cite{Gribov:1972ri}, and Altarelli and Parisi \cite{ALTARELLI1977298} (DGLAP equations):
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial q(x,Q^2)}{\partial {\rm log}Q^2}~&=~\frac{\alpha_s}{2\pi}~\left( P_{qq} \otimes q~+~P_{qg} \otimes g \right) \\
+\frac{\partial g(x,Q^2)}{\partial {\rm log}Q^2}~&=~\frac{\alpha_s}{2\pi}~\left( \sum_i P_{gq} \otimes (q_i+\bar{q}_i)~+~P_{gg} \otimes g \right)
+\label{eq:glap1}
+\end{aligned}
+\end{equation}
+
+$P_{ab}$ describes the $b \to a$ parton splitting
+\noindent where $\otimes$ represents the convolution integral:
+\begin{equation}
+P \otimes f \equiv \int^1_x\frac{dy}{y}f_q(y)~P\left(\frac{x}{y}\right).
+\end{equation}
+
+As mentioned above, the $x$ dependence has to be extracted experimentally. 
 
 \begin{figure}[h]
 \begin{center}
     \includegraphics[width=0.8\textwidth]{figures/simul/pdf}
 \end{center}
- \caption{MSTW 2008 NLO PDFs at Q$^2$ = 10 GeV$^2$ and Q$^2$ = 104 GeV$^2$. Figure from Ref. \cite{Martin:2009iq}.}
-  \label{fig:sim:pp}
+\caption{MSTW 2008 NLO PDFs at Q$^2$ = 10 GeV$^2$ and Q$^2$ = 104 GeV$^2$. Figure from Ref. \cite{Martin:2009iq}.}
+ \label{fig:sim:pp}
 \end{figure}
 
 
