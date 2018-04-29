@@ -72,6 +72,7 @@ this dependence appears at any fixed order. $\hat\sigma$ depends also on the ren
 %\end{figure}
 
 \subsection{Parton Density Functions}
+\label{sec:protpdf}
 
 The partons inside the proton can not be observed as free particles, and therefore their \glspl{partdf} can not be computed with
 perturbative \gls{qcd}. In particular, for a given scale, it is not possible to predict theoretically the probability distribution 
@@ -122,6 +123,7 @@ As discussed e.g. in Ref \cite{Skands:2011pf}, the partonic cross section for th
 Equation \ref{eq:general-cross-section}, can be expressed at all orders as:
 \begin{equation}
 \hat\sigma_{ij\rightarrow X} = \sum_{k=0}^\infty \int d\Phi_{X+k} |\sum_{l=0}^\infty \mathcal{M}_{X+k}^{(l)}|^2 \; .
+\label{eq:xsec_matrix}
 \end{equation}
 \noindent In this expression, the $k$ represents the number of final state quarks and gluons produced in addition to $X$ and $\mathcal{M}_{X+k}^{(l)}$
 the amplitude to produce the final state $X+k$ computed with $l$ virtual loops. To compute a cross section is not possible to extend these sums to infinity, and the number of extra partons and the number of loops identify the 
@@ -136,9 +138,24 @@ At each order, the computation of the matrix element implies a choice of the fac
 $\mu_F$ and $\mu_R$ are not predetermined, and are typically set to values related to the scale of the considered physical process. 
 The impact of this subjective choice is taken into account by evaluating each production cross section at different scales (typically a variation of a factor two up and down), and assigning the difference as a systematic uncertainty on the cross section estimate.
 
-Kinoshita, Lee and Nauenberg (KLN theorem) \cite{Kinoshita:1962ur,Lee:1964is}
 
 \subsection{Parton Shower}
+
+The theorem from Kinoshita, Lee and Nauenberg (KLN theorem) \cite{Kinoshita:1962ur,Lee:1964is} guarantees that, 
+when computing inclusive cross sections, the logarithmic divergences arising from collinear splitting cancel against the virtual corrections order by order in perturbation theory. 
+This does not hold anymore when we are interested in the computation of a differential cross section, for example with a specific number of accompanying final-state extra partons, 
+as it could be the case $l=0, k=1$ in Equation \ref{eq:xsec_matrix}. 
+In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}. There are three types of splitting: $g \rightarrow q\bar{q}$, $g \rightarrow gg$ and $q \rightarrow q g$.
+The probability for a parton to evolve from an energy $t$ to a lower energy $t'$ without splitting is encoded in the Sudakov form factor:
+\begin{equation}\label{eq:sudakov_intro}
+  \Delta_i(t,t')=\exp\left\{-\sum_{j\in\{q,g\}}\,
+  \int_t^{t'}\frac{\rm{d}\bar{t}}{\bar{t}}\int_{z_{\rm min}}^{z_{\rm max}}\rm{d} z\,
+  \frac{\alpha_s}{2\pi}\,\frac{1}{2}\,P_{ij}(z)\right\}\;,
+\end{equation}
+\noindent where $P_{ij}$ is the parton splitting function (described in Section \ref{sec:protpdf}).
+Equation \ref{eq:sudakov_intro} is sampled with \gls{mc} techniques to produce the sequence of splittings, until the hadronization scale is reached. 
+
+Also incoming particles can emit extra partons, giving rise to \gls{isr} 
 
 \subsection{Matching}
 
@@ -174,7 +191,7 @@ When the simulation of the events stops before hadronization, it is referred to 
 \begin{description}
 \item[Herwig] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp}
 \item[Pythia] \cite{Sjostrand:2006za,Sjostrand:2014zea}
-\item[Herwig] \cite{Gleisberg:2008ta}
+\item[Herwig] \cite{Gleisberg:2008ta}. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. While Pythia uses a method that takes these affects into account only partially \cite{Webber:1987uy}, Herwig uses one that fully includes spin correlations \cite{Collins:1987cp}. 
 \end{description}
 
 \subsection{Generators for BSM Physics}
