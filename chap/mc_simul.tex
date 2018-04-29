@@ -118,7 +118,7 @@ In the next sections, each step is summarized in its main features.
 
 \subsection{Matrix Element}
 
-The partonic cross section for the production of the final state $X$ starting from the partons $i$ and $j$, necessary to compute
+As discussed e.g. in Ref \cite{Skands:2011pf}, the partonic cross section for the production of the final state $X$ starting from the partons $i$ and $j$, necessary to compute
 Equation \ref{eq:general-cross-section}, can be expressed at all orders as:
 \begin{equation}
 \hat\sigma_{ij\rightarrow X} = \sum_{k=0}^\infty \int d\Phi_{X+k} |\sum_{l=0}^\infty \mathcal{M}_{X+k}^{(l)}|^2 \; .
@@ -149,7 +149,15 @@ that can in turn decay into secondary hadrons. This transition is described thro
 Two main hadronization models are used in \gls{mc} generators:
 
 \begin{description}
-\item[String Model] The string model \cite{Artru:1974hr} is based on linear confinement: the potential energy between two colored particles increases linearly with their distance. This terms comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two and have therefore a rate for hadron production double than that of quarks. 
+\item[String Model] The string model \cite{Artru:1974hr} is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm. This terms comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
+The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm. 
+
+The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two and have therefore a rate for hadron production double than that of quarks. 
+
+% chiara: describe the main steps of the string model hadronization
+
+The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent on the sequence of string breakups. The resulting function depends on the mass and \pt of the hadron, leading to heavier hadrons carrying on average an higher fraction of the momentum.
+
 \item[Cluster Model] The cluster model is based on preconfinement. 
 \end{description}
 
@@ -172,5 +180,8 @@ When the simulation of the events stops before hadronization, it is referred to 
 \subsection{Generators for BSM Physics}
 
 \section{Detector Simulation}
+
+After the detector simulation, the \gls{mc} simulated events are treated in the same manner as data, going through the object reconstruction procedures
+describes in Chapter \ref{sec:event:reco}.
 
 \section{Data-driven Corrections}
