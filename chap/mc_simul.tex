@@ -155,9 +155,12 @@ The probability for a parton to evolve from an energy $t$ to a lower energy $t'$
 \noindent where $P_{ij}$ is the parton splitting function (described in Section \ref{sec:protpdf}).
 Equation \ref{eq:sudakov_intro} is sampled with \gls{mc} techniques to produce the sequence of splittings, until the hadronization scale is reached. 
 
-Also incoming particles can emit extra partons, giving rise to \gls{isr} 
+Also incoming particles can emit extra partons, giving rise to \gls{isr}. While in the case of \gls{fsr} the first emissions are harder than the following ones, for \gls{isr} the ordering is inverted, and the showering is performed with a backwards-evolution algorithm \cite{Sjostrand:1985xi}.
 
 \subsection{Matching}
+
+When a process is simulated at \gls{nlo}+\gls{ps}, the inclusive quantities have \gls{nlo} accuracy, the hardest extra jet is at \gls{lo} accuracy.
+
 
 \subsection{Hadronization and Hadron Decays}
 
@@ -195,6 +198,7 @@ When the simulation of the events stops before hadronization, it is referred to 
 \end{description}
 
 \subsection{Generators for BSM Physics}
+
 
 \section{Detector Simulation}
 
