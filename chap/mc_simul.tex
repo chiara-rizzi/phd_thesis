@@ -145,7 +145,8 @@ The theorem from Kinoshita, Lee and Nauenberg (KLN theorem) \cite{Kinoshita:1962
 when computing inclusive cross sections, the logarithmic divergences arising from collinear splitting cancel against the virtual corrections order by order in perturbation theory. 
 This does not hold anymore when we are interested in the computation of a differential cross section, for example with a specific number of accompanying final-state extra partons, 
 as it could be the case $l=0, k=1$ in Equation \ref{eq:xsec_matrix}. 
-In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}. There are three types of splitting: $g \rightarrow q\bar{q}$, $g \rightarrow gg$ and $q \rightarrow q g$.
+In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}, that generate an ordered sequence of emissions with decreasing angle and energy; the \gls{psh} approximation consists in retaining only the largest matrix elements, namely the ones corresponding to low angles and energies.
+There are three types of processes that need to be taken care of by the \gls{psh}: $g \rightarrow q\bar{q}$, $g \rightarrow gg$ and $q \rightarrow q g$.
 The probability for a parton to evolve from an energy $t$ to a lower energy $t'$ without splitting is encoded in the Sudakov form factor:
 \begin{equation}\label{eq:sudakov_intro}
   \Delta_i(t,t')=\exp\left\{-\sum_{j\in\{q,g\}}\,
