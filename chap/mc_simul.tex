@@ -179,19 +179,20 @@ The main difference between quarks and gluons resides in the fact that, while qu
 
 The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent on the sequence of string breakups. The resulting function depends on the mass and \pt of the hadron, leading to heavier hadrons carrying on average an higher fraction of the momentum.
 
-\item[Cluster Model] The cluster model is based on preconfinement. The clusters of color and anti-color, instead of forming a string, at a sufficient low scale can decay directly into hadrons. The mass distribution of the preconfined clusters is independent on the scale of the original hard process.
-
+\item[Cluster Model] The cluster model is based on preconfinement. The clusters of color and anti-color, instead of forming a string, at a sufficient low scale can decay directly into (possibly unstable) hadrons. The mass distribution of the preconfined clusters is independent on the scale and nature of the original hard process. This universal distribution of the cluster mass peaks below 1 GeV, with a tail that extends to above 10 GeV; these cluster with very high mass are decayed as a string.  
 
 \end{description}
 
-
-
+These two hadronization models have been developed in the 1980's, and since then there has been no fundamental progress in the theoretical understanding of hadronization. 
 When the simulation of the events stops before hadronization, it is referred to as "parton-level".
 
 \subsection{Underlying Event}
 
-Protons contain more than one quark, and they can undergo interactions as well. These secondary interactions will in general be of lower momentum, since the matrix element is larger for low momentum transfer. This will contribute to the activity along the beam direction, less in the transverse plane. These hadrons underlay the primary interaction with the large momentum transfer (underlying event)
-
+Protons contain more than one quark, and they can undergo interactions as well, giving origin to multiple parton interactions in the same collision.
+These secondary interactions are in general of lower momentum, since the matrix element is larger for low momentum transfer, and will contribute to the activity along the beam direction, less in the transverse plane. 
+When the two protons pass through each other the likelihood of having multiple interactions depends on the overlap between the two protons. 
+To model the underlying event, the assumption is made that these processes are $2\rightarrow2$ scattering; the matrix element for these diverges at small angle, so the modelling is dependent on the chosen \pt cutoff. 
+To model the data, color reconnection between the primary interaction and the underlying event is needed. 
 
 \subsection{Pileup}
 
@@ -199,11 +200,15 @@ Protons contain more than one quark, and they can undergo interactions as well. 
 
 \subsection{General Purpose Generators}
 
+Several independent codes allow to study the effects of different modelling of the hadronization and different choices for the parton shower. The three main general-purpose event generators are:
+
 \begin{description}
-\item[Herwig] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp}
-\item[Pythia] \cite{Sjostrand:2006za,Sjostrand:2014zea}
-\item[Herwig] \cite{Gleisberg:2008ta}. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. While Pythia uses a method that takes these affects into account only partially \cite{Webber:1987uy}, Herwig uses one that fully includes spin correlations \cite{Collins:1987cp}. 
+\item[Pythia] \cite{Sjostrand:2006za,Sjostrand:2014zea} Uses \pt-ordered parton shower and string hadronization.
+\item[Herwig] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp} Uses angular-ordered parton shower and cluster hadronization. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. While Pythia uses a method that takes these affects into account only partially \cite{Webber:1987uy}, Herwig uses one that fully includes spin correlations \cite{Collins:1987cp}. 
+\item[Sherpa] \cite{Gleisberg:2008ta} Uses dipole-type parton shower and cluster hadronization. 
 \end{description}
+
+The recent versions of all three generators are coded in c++, but Herwig and Pythia were originally developed in Fortran.  
 
 \subsection{Generators for BSM Physics}
 
