@@ -159,18 +159,19 @@ Also incoming particles can emit extra partons, giving rise to \gls{isr}. While 
 
 \subsection{Matching}
 
-When a process is simulated at \gls{nlo}+\gls{ps}, the inclusive quantities have \gls{nlo} accuracy, the hardest extra jet is at \gls{lo} accuracy.
+When a process is simulated at \gls{nlo}+\gls{psh}, the inclusive quantities have \gls{nlo} accuracy, the hardest extra jet is at \gls{lo} accuracy.
 
 
 \subsection{Hadronization and Hadron Decays}
 
-The term hadronization refers to the process where colored partons, after parton shower, becomes a set of colorless hadrons (primary hadrons), 
-that can in turn decay into secondary hadrons. This transition is described through phenomenological models since the hadrinization scale, that corresponds also to the \gls{ir} cutoff of the parton shower, is outside the perturbative regime of \gls{qcd}. 
+At the end of the shower we have emissions at very low energy and angles, which correspond to high values of the \gls{qcd} coupling constant. 
+When the strong coupling becomes of order unit, the interaction is very strong and this is presumably what gives rise to hadronization, the process where colored partons, after parton shower, become a set of colorless hadrons (primary hadrons), 
+that can in turn decay into secondary hadrons. This transition is described through phenomenological models since the hadrinization scale, that corresponds also to the \gls{ir} cutoff of the parton shower, is outside the perturbative regime of \gls{qcd}. At the end of the shower, the color, flavour and momentum distribution is already organized, and the hadronization process can only do a local redistribution.
 Two main hadronization models are used in \gls{mc} generators:
 
 \begin{description}
-\item[String Model] The string model \cite{Artru:1974hr} is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm. This terms comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
-The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm. 
+\item[String Model] The string model \cite{Artru:1974hr} is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). This terms comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
+A color string forms that joins the the final state in a string configuration of field energies, and hadrons originate from the breakups of the string. The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm.
 
 The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two and have therefore a rate for hadron production double than that of quarks. 
 
@@ -178,12 +179,19 @@ The main difference between quarks and gluons resides in the fact that, while qu
 
 The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent on the sequence of string breakups. The resulting function depends on the mass and \pt of the hadron, leading to heavier hadrons carrying on average an higher fraction of the momentum.
 
-\item[Cluster Model] The cluster model is based on preconfinement. 
+\item[Cluster Model] The cluster model is based on preconfinement. The clusters of color and anti-color, instead of forming a string, at a sufficient low scale can decay directly into hadrons. The mass distribution of the preconfined clusters is independent on the scale of the original hard process.
+
+
 \end{description}
+
+
 
 When the simulation of the events stops before hadronization, it is referred to as "parton-level".
 
 \subsection{Underlying Event}
+
+Protons contain more than one quark, and they can undergo interactions as well. These secondary interactions will in general be of lower momentum, since the matrix element is larger for low momentum transfer. This will contribute to the activity along the beam direction, less in the transverse plane. These hadrons underlay the primary interaction with the large momentum transfer (underlying event)
+
 
 \subsection{Pileup}
 
