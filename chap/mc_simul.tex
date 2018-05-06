@@ -162,6 +162,14 @@ Also incoming particles can emit extra partons, giving rise to \gls{isr}. While 
 
 \subsection{Matching}
 
+When a process F is simulated with \gls{lo} matrix element plus \gls{psh}, as illustrated in the left diagram in Figure \ref{fig:sim:matching} (following the discussion in Ref. \cite{Skands:2011pf}), the hardest extra jet is at \gls{ll} accuracy. 
+One might wish to improve the accuracy of the description of the event by adding the \gls{lo} matrix element for the process F with the addition of one extra parton (F+1), as in the second diagram in Figure \ref{fig:sim:matching}. In this figure, the boxes are only partially filled to indicate the phase-space restriction necessary to deal with the divergence of the F+1 matrix element. Adding naively these two pieces leads to double counting, as illustrated in the third diagram of Figure \ref{fig:sim:matching}. 
+This double-counting problem worsens with the increase of the number of extra legs that we want to add at matrix element.
+Different methods have been designed to match matrix elements to showers such that, for each order in perturbation theory, double-counting is avoided. 
+
+ 
+
+
 \begin{figure}[h]
 \begin{center}
     \includegraphics[width=\textwidth]{figures/simul/matching}
@@ -170,9 +178,6 @@ Also incoming particles can emit extra partons, giving rise to \gls{isr}. While 
  \label{fig:sim:matching}
 \end{figure}
 
-
-
-When a process is simulated at \gls{nlo}+\gls{psh}, the inclusive quantities have \gls{nlo} accuracy, the hardest extra jet is at \gls{lo} accuracy.
 
 
 \subsection{Hadronization and Hadron Decays}
