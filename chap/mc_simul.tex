@@ -182,13 +182,24 @@ Different methods have been designed to match matrix elements to showers such th
 \end{equation}
 \noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 matrix element, without actually adding the F+1 sample. This strategy, adopted by Powheg and Pythia, had traditionally been worked out only for one extra parton emission. 
 
-\item[Subtraction]
+\item[Subtraction] The subtraction approach consists in correcting the \gls{psh} by the difference between \gls{psh} and matrix element:
 
 \begin{equation}
 \rm{Matched} = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \; .
 \end{equation}
 
-\item[Slicing]
+\noindent With this strategy, the corrections are not resummed and the events are weighted. 
+
+\item[Slicing] The slicing approach divides the phase space into two regions: one described mainly by the matrix elements (by vetoing shower emissions below a cutoff scale, the matching scale), and one mainly by the \gls{psh}:
+
+\begin{equation}
+\begin{array}{c}
+\rm{Matched (above \; matching \;  scale)} \approx \rm{Exact} (1 + \mathcal{O}(\alpha_s)) \; , \\
+\rm{Matched (below \; matching \;  scale)}  = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \approx Approximate    \; .
+\end{array}
+\end{equation}
+
+
 \end{description}
 
 
