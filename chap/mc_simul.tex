@@ -150,7 +150,7 @@ There are three types of processes that need to be taken care of by the \gls{psh
 The probability for a parton to evolve from an energy $t$ to a lower energy $t'$ without splitting is encoded in the Sudakov form factor:
 \begin{equation}
   \Delta_i(t,t')=\exp\left(-\sum_{j\in\{q,g\}}\,
-  \int_t^{t'}\frac{\rm{d}\bar{t}}{\bar{t}}\int_{z_{\rm min}}^{z_{\rm max}}\rm{d} z\,
+  \int_t^{t'}\frac{{\rm{d}}\bar{t}}{\bar{t}}\int_{z_{\rm min}}^{z_{\rm max}}{\rm{d}} z\,
   \frac{ \alpha_s }{2 \pi } \, \frac{1}{2} \, P_{ij}(z) \right) \;,
   \label{eq:sudakov_intro}
 \end{equation}
@@ -183,7 +183,6 @@ $$
 \noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 matrix element, without actually adding the F+1 sample. This strategy, adopted by Powheg and Pythia, had traditionally been worked out only for one extra parton emission. 
 
 \item[Subtraction] The subtraction approach consists in correcting the \gls{psh} by the difference between \gls{psh} and matrix element:
-
 $$
 \rm{Matched} = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \; .
 $$
@@ -191,15 +190,15 @@ $$
 \noindent With this strategy, the corrections are not resummed and the events are weighted. 
 
 \item[Slicing] The slicing approach divides the phase space into two regions: one described mainly by the matrix elements (by vetoing shower emissions below a cutoff scale, the matching scale), and one mainly by the \gls{psh}:
-
 $$
-\rm{Matched (above \; matching \;  scale)} \approx \rm{Exact} (1 + \mathcal{O}(\alpha_s)) \; , 
+ {\rm{Matched (above \; matching \;  scale)}} \approx {\rm{Exact}} (1 + {\mathcal{O}} ( \alpha_s)) \; , 
 $$
 $$
 \rm{Matched (below \; matching \;  scale)}  = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \approx Approximate    \; ,
 $$
 
 \noindent where the last approximation holds because, below the matching scale, the matrix element and the \gls{psh} give similar results. 
+Examples of this approach are the CKKW and MLM prescriptions. With the slicing strategy, the corrections are not resummed and the events are weighted, but the weights are all positive. This approach can be extended beyond $\alpha_s$
 
 \end{description}
 
