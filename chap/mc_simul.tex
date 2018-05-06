@@ -177,28 +177,29 @@ This double-counting problem worsens with the increase of the number of extra le
 Different methods have been designed to match matrix elements to showers such that, for each order in perturbation theory, double-counting is avoided. The three main strategies are \cite{Giele:2011cb}:
 \begin{description}
 \item[Unitarity] This approach consists in correcting the shower splitting functions by multiplicative factors obtained as the ration of matrix elements to shower approximation:
-\begin{equation}
+$$
 \rm{Matched} = \rm{Approximate}\frac{\rm{Exact}}{Approximate} \; .
-\end{equation}
+$$
 \noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 matrix element, without actually adding the F+1 sample. This strategy, adopted by Powheg and Pythia, had traditionally been worked out only for one extra parton emission. 
 
 \item[Subtraction] The subtraction approach consists in correcting the \gls{psh} by the difference between \gls{psh} and matrix element:
 
-\begin{equation}
+$$
 \rm{Matched} = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \; .
-\end{equation}
+$$
 
 \noindent With this strategy, the corrections are not resummed and the events are weighted. 
 
 \item[Slicing] The slicing approach divides the phase space into two regions: one described mainly by the matrix elements (by vetoing shower emissions below a cutoff scale, the matching scale), and one mainly by the \gls{psh}:
 
-\begin{equation}
-\begin{array}{c}
-\rm{Matched (above \; matching \;  scale)} \approx \rm{Exact} (1 + \mathcal{O}(\alpha_s)) \; , \\
-\rm{Matched (below \; matching \;  scale)}  = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \approx Approximate    \; .
-\end{array}
-\end{equation}
+$$
+\rm{Matched (above \; matching \;  scale)} \approx \rm{Exact} (1 + \mathcal{O}(\alpha_s)) \; , 
+$$
+$$
+\rm{Matched (below \; matching \;  scale)}  = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \approx Approximate    \; ,
+$$
 
+\noindent where the last approximation holds because, below the matching scale, the matrix element and the \gls{psh} give similar results. 
 
 \end{description}
 
