@@ -212,18 +212,32 @@ that can in turn decay into secondary hadrons. This transition is described thro
 Two main hadronization models are used in \gls{mc} generators:
 
 \begin{description}
-\item[String Model] The string model \cite{Artru:1974hr} is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). This terms comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
+\item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). This terms comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
 A color string forms that joins the the final state in a string configuration of field energies, and hadrons originate from the breakups of the string. The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm.
-
 The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two and have therefore a rate for hadron production double than that of quarks. 
-
 % chiara: describe the main steps of the string model hadronization
-
 The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent on the sequence of string breakups. The resulting function depends on the mass and \pt of the hadron, leading to heavier hadrons carrying on average an higher fraction of the momentum.
 
-\item[Cluster Model] The cluster model is based on preconfinement. The clusters of color and anti-color, instead of forming a string, at a sufficient low scale can decay directly into (possibly unstable) hadrons. The mass distribution of the preconfined clusters results to be independent on the scale and nature of the original hard process. This universal distribution of the cluster mass peaks below 1 GeV, with a tail that extends to above 10 GeV; these cluster with very high mass are decayed as a string.  
+\item[Cluster Model] The cluster model, sketched in Figure \ref{fig:cluster_model}, is based on preconfinement. The clusters of color and anti-color, instead of forming a string, at a sufficient low scale can decay directly into (possibly unstable) hadrons. The mass distribution of the preconfined clusters results to be independent on the scale and nature of the original hard process. This universal distribution of the cluster mass peaks below 1 GeV, with a tail that extends to above 10 GeV; these cluster with very high mass are decayed as a string.  
 
 \end{description}
+
+\begin{figure}[h]
+\begin{center}
+  \subfigure[]{
+    \label{fig:string_model}
+    \includegraphics[width=0.43\textwidth]{figures/simul/Figures_MonteCarlo_string_had}
+  }
+    \subfigure[]{
+    \label{fig:cluster_model}
+    \includegraphics[width=0.43\textwidth]{figures/simul/Figures_MonteCarlo_clustr_had}
+  }
+\end{center}
+ \caption{Schematic view of string hadronization model \subref{fig:string_model} and cluster hadronization model \subref{fig:cluster_model}. Figure from Ref. \cite{Isildak:2013kfa}.}
+  \label{fig:had_model}
+\end{figure}
+
+
 
 These two hadronization models have been developed in the 1980's, and since then there has been no fundamental progress in the theoretical understanding of hadronization. 
 When the simulation of the events stops before hadronization, it is referred to as "parton-level".
@@ -237,6 +251,8 @@ To model the underlying event, the assumption is made that these processes are $
 To model the data, color reconnection between the primary interaction and the underlying event is needed. 
 
 \subsection{Pileup}
+
+The term pileup refers to additional \gls{pp} interactions happening in the same bunch crossing (in-time pileup) or in events in different bunch crossings (out-of-time pileup). 
 
 \section{MC Generators}
 
