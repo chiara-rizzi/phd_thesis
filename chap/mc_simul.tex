@@ -165,10 +165,6 @@ Also incoming particles can emit extra partons, giving rise to \gls{isr}. While 
 When a process F is simulated with \gls{lo} matrix element plus \gls{psh}, as illustrated in the left diagram in Figure \ref{fig:sim:matching} (following the discussion in Ref. \cite{Skands:2011pf}), the hardest extra jet is at \gls{ll} accuracy. 
 One might wish to improve the accuracy of the description of the event by adding the \gls{lo} matrix element for the process F with the addition of one extra parton (F+1), as in the second diagram in Figure \ref{fig:sim:matching}. In this figure, the boxes are only partially filled to indicate the phase-space restriction necessary to deal with the divergence of the F+1 matrix element. Adding naively these two pieces leads to double counting, as illustrated in the third diagram of Figure \ref{fig:sim:matching}. 
 This double-counting problem worsens with the increase of the number of extra legs that we want to add at matrix element.
-Different methods have been designed to match matrix elements to showers such that, for each order in perturbation theory, double-counting is avoided. 
-
- 
-
 
 \begin{figure}[h]
 \begin{center}
@@ -178,6 +174,22 @@ Different methods have been designed to match matrix elements to showers such th
  \label{fig:sim:matching}
 \end{figure}
 
+Different methods have been designed to match matrix elements to showers such that, for each order in perturbation theory, double-counting is avoided. The three main strategies are \cite{Giele:2011cb}:
+\begin{description}
+\item[Unitarity] This approach consists in correcting the shower splitting functions by multiplicative factors obtained as the ration of matrix elements to shower approximation:
+\begin{equation}
+\rm{Matched} = \rm{Approximate}\frac{\rm{Exact}}{Approximate} \; .
+\end{equation}
+\noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 matrix element, without actually adding the F+1 sample. This strategy, adopted by Powheg and Pythia, had traditionally been worked out only for one extra parton emission. 
+
+\item[Subtraction]
+
+\begin{equation}
+\rm{Matched} = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \; .
+\end{equation}
+
+\item[Slicing]
+\end{description}
 
 
 \subsection{Hadronization and Hadron Decays}
@@ -229,7 +241,9 @@ Several independent codes allow to study the effects of different modelling of t
 The recent versions of all three generators are coded in c++, but Herwig and Pythia were originally developed in Fortran.  
 
 \subsection{Matrix Elements Generators}
-
+\begin{description}
+\item[Powheg] 
+\end{description}
 
 \subsection{Specialized Generators}
 
