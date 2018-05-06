@@ -180,14 +180,14 @@ Different methods have been designed to match matrix elements to showers such th
 $$
 \rm{Matched} = \rm{Approximate}\frac{\rm{Exact}}{Approximate} \; .
 $$
-\noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 matrix element, without actually adding the F+1 sample. This strategy, adopted by Powheg and Pythia, had traditionally been worked out only for one extra parton emission. 
+\noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 matrix element, without actually adding the F+1 sample. This strategy has traditionally been worked out only for one extra parton emission. 
 
 \item[Subtraction] The subtraction approach consists in correcting the \gls{psh} by the difference between \gls{psh} and matrix element:
 $$
 \rm{Matched} = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \; .
 $$
 
-\noindent With this strategy, the corrections are not resummed and the events are weighted. 
+\noindent With this strategy, the corrections are not resummed and the events are weighted. This is the strategy used in MC\@NLO \cite{Frixione:2002ik,Frixione:2003ei,Frixione:2008ym}, and the POWHEG method \cite{Frixione:2007vw} is an hybrid between this and the unitarity approach.
 
 \item[Slicing] The slicing approach divides the phase space into two regions: one described mainly by the matrix elements (by vetoing shower emissions below a cutoff scale, the matching scale), and one mainly by the \gls{psh}:
 $$
@@ -198,7 +198,8 @@ $$
 $$
 
 \noindent where the last approximation holds because, below the matching scale, the matrix element and the \gls{psh} give similar results. 
-Examples of this approach are the CKKW and MLM prescriptions. With the slicing strategy, the corrections are not resummed and the events are weighted, but the weights are all positive. This approach can be extended beyond $\alpha_s$
+With the slicing strategy, the corrections are not resummed and the events are weighted, but the weights are all positive. This approach can be extended beyond the first extra emission. 
+Examples of this approach are the CKKW \cite{Catani:2001cc} and MLM \cite{Mangano:2006rw,Mrenna:2003if} prescriptions. The MLM approach at \gls{nlo} is known as FxFx \cite{Frederix:2012ps}. 
 
 \end{description}
 
