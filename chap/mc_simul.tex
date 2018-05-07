@@ -281,7 +281,31 @@ The recent versions of all three generators are coded in c++, but Herwig and Pyt
 
 \section{Detector Simulation}
 
-After the detector simulation, the \gls{mc} simulated events are treated in the same manner as data, going through the object reconstruction procedures
+The outcome of the event simulation are the four-vectors of all the stable particles produced in the final state of the event, stored in the standard HepMC format \cite{Dobbs:2001ck}.
+When this information is used directly, the analysis is referred to as "particle level" analysis; furthermore, if we want to filter the simulated events based on the final state, this can be done at this stage. 
+While the event generation can already provide information on the kinematic of the event, is is not enough to compare the \gls{mc} simulations with the 
+data collected by the \gls{atlas} detector. 
+After the event simulation, the \gls{atlas} simulation chain \cite{Aad:2010ah} (described in Figure \ref{fig:sim:chain}) proceeds with the emulation of the
+interaction of the particles with the detector and the signal generated in each of the detector's subsystems, 
+which is done with the Geant4 package \cite{Agostinelli:2002hh}. The configuration of the detector, including any misalignment, can be set at run time, and the energy depositions are recorded as hits. The digitalization step takes the input hits from the hard scattering, underlying event and pileup and transforms them into detector signals, adding also detector noise. The response of the \gls{lone} trigger (described in Section \ref{sec:cern:trigger}) is simulated at this stage as well. The final output of the digitalization is the \gls{rdo} file, to which the output of the \gls{atlas} detector itself, which is in "bytestream" format, can be converted as well. The \gls{hlt} trigger and the event reconstruction run on the \gls{rdo} data format. After the detector simulation, the \gls{mc} simulated events are treated in the same manner as data, going through the object reconstruction procedures
 describes in Chapter \ref{sec:event:reco}.
+
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{figures/simul/outline_v2}
+\end{center}
+\caption{The \gls{atlas} simulation software, compared with the processing of the recorded data; square-cornered boxes represent algorithms, while data objects are represented as rounded boxes. Figure from Ref. \cite{Aad:2010ah}.}
+ \label{fig:sim:chain}
+\end{figure}
+
+The full simulation of the interaction of particles with the \gls{atlas} detector is a CPU-intensive task. 
+ATLFAST-II \cite{Aad:2010ah} is a fast simulation method aiming at simulating the large amount of \gls{mc} events required by \gls{atlas} analyses by making use of a simplified detector description. 
+ATLFAST-II has two components: the Fast ATLAS Tracking Simulation (Fatras) \cite{Edmonds:2008zz}, to emulate the response of the \gls{id} and of the muon system, 
+and the Fast calorimeter Simulation (FastCaloSim) \cite{ATLAS:1300517}, that takes care of the simulation of the calorimeters. The default ATLFAST-II simulation uses the full Geant4 simulation for the \gls{id} and the muon spectrometer, 
+while it uses FastCaloSim to emulate the energy deposited in the calorimeters using a parametrization of the longitudinal and lateral energy profile. 
+ATLFAST-IIF uses both FastCaloSim for the calorimeters and Fatras for the tracking systems. 
+The output of ATLFAST-II includes all the properties necessary to run the same event reconstruction as with Geant4 or the real data.
+
+
 
 \section{Data-driven Corrections}
