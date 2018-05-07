@@ -309,3 +309,16 @@ The output of ATLFAST-II includes all the properties necessary to run the same e
 
 
 \section{Data-driven Corrections}
+
+After begin simulated, the \gls{mc} events are normalized to the highest-available-order cross section, and are reweighted so that the simulated pileup distribution matches the one observed in the data that will be compared with the simulation.
+Despite the accurate simulation, residual differences can be present in the reconstruction and selection efficiency in data and \gls{mc} simulation. 
+These differences are corrected for by multiplying the \gls{mc} simulation by \glspl{sf}, defined as the ratio of the efficiency (of a reconstruction or a selection) in data and \gls{mc}:
+\begin{equation}
+{\rm SF} = \frac{\epsilon_{\rm data}}{\epsilon_{\rm MC}} \; .
+\end{equation}
+\noindent These \glspl{sf} can be function of the kinematic of the objects in the event (often \pt and $\eta$). 
+Some examples of \glspl{sf} for the objects relevant for the analyses described in this thesis are given in Chapter \ref{sec:event:reco}.
+
+
+
+
