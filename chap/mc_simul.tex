@@ -268,15 +268,15 @@ In this section the main characteristics of the generators used in the analyses 
 Several independent codes allow to study the effects of different modelling of the hadronization and different choices for the parton shower. The three main general-purpose event generators are:
 
 \begin{description}
-\item[Pythia] \cite{Sjostrand:2006za,Sjostrand:2014zea} Pythia is a general purpose generator that uses \gls{lo} matrix elements for $2\rightarrow n $ ($n \leq 3$) processes; 
+\item[\PY] \cite{Sjostrand:2006za,Sjostrand:2014zea} This is a general purpose generator that uses \gls{lo} matrix elements for $2\rightarrow n $ ($n \leq 3$) processes; 
 it is capable to simulate both hard and soft interactions, including \gls{isr} and \gls{fsr} and multiple parton interactions.
 It uses a \pt-ordered parton shower and the Lund string hadronization model.
 
-\item[Herwig] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp} It computes $2\rightarrow 2$ \gls{lo} matrix elements.
+\item[\HW] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp} It computes $2\rightarrow 2$ \gls{lo} matrix elements.
  The partons shower is ordered by the anlge of the emitted parton. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. 
 While Pythia uses a method that takes these affects into account only partially \cite{Webber:1987uy}, Herwig uses one that fully includes spin correlations \cite{Collins:1987cp}. The hadronization is based on the cluster model.
 
-\item[Sherpa] \cite{Gleisberg:2008ta} The Sherpa event generator can provide multi-leg matrix elements both at \gls{lo} and at \gls{nlo}. 
+\item[\Sherpa] \cite{Gleisberg:2008ta} The Sherpa event generator can provide multi-leg matrix elements both at \gls{lo} and at \gls{nlo}. 
 The matching between matrix elements and the dipole-type parton shower \cite{Schumann:2007mg} follows the CKKW prescription.
 It uses a cluster hadronization model. 
 
@@ -290,7 +290,8 @@ The generators described in this section do not provide a full description of th
 computation of the matrix element, and can be afterwards interfaced to a general purpose generator to simulate parton shower, underlying event and pielup. The most common matrix element generators are:
 
 \begin{description}
-\item[Powheg-Box] 
+\item[\PowhegBox] \cite{Nason:2004rx}
+\item[\aNLO] \cite{Alwall:2014hca}
 \end{description}
 
 \subsection{Specialized Generators}
