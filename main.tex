@@ -56,6 +56,9 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{slashed} % to have slashed
 \usepackage{subfigure}
 \usepackage{enumitem} % to personalize enumerations
+\usepackage{lscape} % to have tables in landscape mode
+\usepackage{pifont}% http://ctan.org/pkg/pifont                                                                                              
+
 %\usepackage[nonumberlist,nopostdot,toc,acronym,nogroupskip]{glossaries} % to make a glossary
 \usepackage[colorlinks=false,linkcolor=black]{hyperref}
 \usepackage{glossaries} % to make a glossary
@@ -136,7 +139,7 @@ headsepline, % Uncomment to get a line under the header
 \newcommand{\stilde}{\tilde{s}\xspace}
 \newcommand{\sbar}{\bar{s}\xspace}
 \newcommand{\lagr}{\mathcal{L}\xspace}
-\newcommand{\ttbar}{$t\overline{t}\ $}
+\newcommand{\ttbar}{\ensuremath{t\overline{t}}\xspace}
 
 
 % BSM particles
@@ -272,10 +275,41 @@ headsepline, % Uncomment to get a line under the header
 \newcommand{\met}{\ensuremath{E_{\rm T}^{\mathrm{miss}}}\xspace}
 \newcommand{\pt}{\ensuremath{p_{\rm T}}\xspace}
 \newcommand{\et}{\ensuremath{E_{\rm T}}\xspace}
+\def\meffe{\ensuremath{m_{\mathrm{eff}}^{\mathrm{4j}}}\xspace}
+\def\meffi{\ensuremath{m_{\mathrm{eff}}^{\mathrm{incl}}}\xspace}
+\def\meff{\ensuremath{m_{\mathrm{eff}}}\xspace}
+\newcommand{\mt}{\ensuremath{m_\mathrm{T}}}
+\def\Ptmiss{\ensuremath{{\bf p}_\mathrm{T}^{\mathrm{miss}}}}
+\def\dphimin{\ensuremath{\mathrm{\Delta}\phi_{\mathrm{min}}^{4\mathrm{j}}}}
+\def\dphilead{\ensuremath{\mathrm{\Delta}\phi^{\mathrm{j}_1}}}
+\def\mtb{\ensuremath{m_{\mathrm{T, min}}^{b\textrm{-jets}}}\xspace}
+\def\mjsum{\ensuremath{M_{J}^{\Sigma}}\xspace}
+\def\nbjet{\ensuremath{N}_{b\textrm{-jets}}\xspace}
+\def\njet{\ensuremath{N}_{\textrm{jet}}\xspace}
+\def\leadjet{\ensuremath{\textrm{j}_1}\xspace}
+\def\fourthjet{\ensuremath{\textrm{j}_4}\xspace}
+\def\msplit{\ensuremath{\Delta m}\xspace}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+\def\lsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$<$}}}                % less than or approx. symbol
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$>$}}}                % greater than or approx. symbol
+
+\def\mchi{\ensuremath{m_{\tilde\chi^0_1}}\xspace}
+\def\mglu{\ensuremath{m_{\tilde{g}}}\xspace}
 
 
 % new commands for SUSY
 \def\stilde{\widetilde}
+
+
+% units
+\newcommand*{\gev}{\ensuremath{\text{Ge\kern -0.1em V}}}
+
+% tables
+\newcommand{\cmark}{\ding{51}}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS

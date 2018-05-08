@@ -38,13 +38,306 @@ The simplified models used to optimize this analysis are the two gluino-pair-pro
 
 \section{Discovery Signal Regions}
 
+\begin{table}[t]
+    \centering
+ \renewcommand{\arraystretch}{1.5}
+   \caption{Definitions of the Gtt SRs, CRs and VRs of the cut-and-count analysis.  All kinematic variables are
+   expressed in \gev\ except $\dphimin$, which is in radians. The jet \pt\ requirement is also applied to 
+   $b$-tagged jets.}
+   \label{tab:GttEvsel}
+         \begin{tabular}{c c c c c c c c}
+        \toprule
+\multicolumn{8}{c}{\textbf{ Gtt 1-lepton}}\\
+\multicolumn{8}{c}{Criteria common to all regions: $\ge 1$ signal lepton, ${\pt}^\mathrm{jet} >  30~\gev$, $\nbjet \geq 3$} \\\midrule
+Targeted kinematics & Type & $\njet$ & $\mt$ & $\mtb$& $\met$ & $\meffi$ & $\mjsum$ \\ \midrule
+\multirow{4}{*}{\begin{minipage}{3cm}\centering Region B\\
+              (Boosted, Large \msplit) \end{minipage}} 
+ & SR & $\ge 5$ & $> 150$ & $> 120 $  & $> 500 $ & $> 2200 $ & $> 200$  \\
+ & CR & $= 5$ & $< 150$ & $-$  & $> 300 $ & $> 1700 $ & $> 150$  \\
+ & VR-$\mt$ & $\ge 5$ & $> 150$ & $-$  & $> 300 $ & $> 1600 $ & $< 200$  \\
+& VR-$\mtb$ & $> 5$ & $< 150$ & $> 120 $  & $> 400 $ & $> 1400 $ & $> 200$  \\\midrule
+\multirow{4}{*}{\begin{minipage}{3cm}\centering Region M\\
+              (Moderate \msplit) \end{minipage}} 
+ & SR & $\ge 6$ & $> 150$ & $> 160 $  & $> 450 $ & $> 1800 $ & $> 200$  \\
+ & CR & $= 6$ & $< 150$ & $-$  & $> 400 $ & $> 1500 $ & $> 100$  \\
+ & VR-$\mt$ & $\ge 6$ & $> 200$ & $-$  & $> 250 $ & $> 1200 $ & $< 100$  \\
+& VR-$\mtb$ & $> 6$ & $< 150$ & $> 140 $  & $> 350 $ & $> 1200 $ & $> 150$  \\\midrule
+\multirow{4}{*}{\begin{minipage}{3cm}\centering Region C\\
+              (Compressed, small \msplit) \end{minipage}} 
+ & SR & $\ge 7$ & $> 150$ & $> 160 $  & $> 350 $ & $> 1000 $ & $-$  \\
+ & CR & $= 7$ & $< 150$ & $-$  & $> 350 $ & $> 1000 $ & $-$  \\
+ & VR-$\mt$ & $\ge 7$ & $> 150$ & $< 160 $  & $> 300 $ & $> 1000 $ & $-$  \\
+& VR-$\mtb$ & $> 7$ & $< 150$ & $> 160 $  & $> 300 $ & $> 1000 $ & $-$  \\
+      \end{tabular}
+         \begin{tabular}{c c c c c c c c c c c}
+        \toprule
+\multicolumn{11}{c}{\textbf{ Gtt 0-lepton}}\\
+\multicolumn{11}{c}{Criteria common to all regions: ${\pt}^\mathrm{jet} > 30$~GeV} \\\midrule
+Targeted kinematics & Type & $N_\mathrm{lepton}$ & $\nbjet$& $\njet$&  $\dphimin$ & $\mt$ & $\mtb$ & $\met$ & $\meffi$ & $\mjsum$ \\ \midrule
+\multirow{3}{*}{\begin{minipage}{3cm}\centering Region B\\
+              (Boosted, Large \msplit) \end{minipage}} 
+& SR & $= 0$  & $\ge 3$ & $\ge 7$ & $>0.4$ & $-$ & $> 60 $ & $> 350 $ & $> 2600$ & $> 300$\\ 
+& CR & $= 1$  & $\ge 3$ & $\ge 6$ & $-$ & $<150$ & $-$ & $> 275 $ & $> 1800$ & $> 300$\\ 
+& VR & $= 0$  & $\ge 3$ & $\ge 6$ & $>0.4$ & $-$ & $-$ & $> 250 $ & $> 2000$ & $< 300$\\ \midrule
+\multirow{3}{*}{\begin{minipage}{3cm}\centering Region M\\
+              (Moderate \msplit) \end{minipage}} 
+& SR & $= 0$  & $\ge 3$ & $\ge 7$ & $>0.4$ & $-$ & $> 120 $ & $> 500 $ & $> 1800$ & $> 200$\\ 
+& CR & $= 1$  & $\ge 3$ & $\ge 6$ & $-$ & $<150$ & $-$ & $> 400 $ & $> 1700$ & $> 200$\\ 
+& VR & $= 0$  & $\ge 3$ & $\ge 6$ & $>0.4$ & $-$ & $-$ & $> 450 $ & $> 1400$ & $< 200$\\ \midrule
+\multirow{3}{*}{\begin{minipage}{3cm}\centering Region C\\
+              (Compressed, moderate \msplit) \end{minipage}} 
+& SR & $= 0$  & $\ge 4$ & $\ge 8$ & $>0.4$ & $-$ & $> 120 $ & $> 250 $ & $> 1000$ & $> 100$\\ 
+& CR & $= 1$  & $\ge 4$ & $\ge 7$ & $-$ & $<150$ & $-$ & $> 250 $ & $> 1000$ & $> 100$\\ 
+& VR & $= 0$  & $\ge 4$ & $\ge 7$ & $>0.4$ & $-$ & $-$ & $> 250 $ & $> 1000$ & $< 100$\\ 
+
+        \bottomrule
+      \end{tabular}
+ \end{table}
+
+
+
+
+
+
+\begin{landscape}
+\begin{table}[t]
+    \centering
+ \renewcommand{\arraystretch}{1.5}
+   \caption{Definitions of the Gbb SRs, CRs and VRs of the cut-and-count analysis.  All kinematic variables are
+   expressed in \gev\ except $\dphimin$, which is in radians. The jet \pt\ requirement is applied to the 
+   four leading jets, a subset of which are $b$-tagged jets. The $\leadjet \neq b$  requirement specifies that 
+   the leading jet is not $b$-tagged.}
+    \label{tab:Gbb0LEvsel}
+         \begin{tabular}{c c c c c c c c c c}
+        \toprule
+\multicolumn{10}{c}{\textbf{ Gbb}}\\
+\multicolumn{10}{c}{Criteria common to all regions: $\njet \geq 4$,
+           ${\pt}^\mathrm{jet} > 30$~GeV } \\\midrule 
+Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\nbjet$ &  $\dphimin$ & $\mt$ & $\mtb$ & $\met$ & $\meff$ & Others  \\\midrule
+\multirow{3}{*}{\begin{minipage}{3cm}\centering Region B\\
+              (Boosted, Large \msplit) \end{minipage}} 
+& SR & $= 0$  & $\ge 3$ & $>0.4$ & $-$ & $- $ & $> 400 $ & $> 2800$ & $-$ \\ 
+& CR & $= 1$  & $\ge 3$ & $-$ & $< 150$ & $- $ & $> 400 $ & $> 2500$ & $-$ \\ 
+& VR & $= 0$  & $\ge 3$ & $>0.4$ & $-$ & $- $ & $> 350 $ & $1900$--$2800$ & $-$ \\\midrule
+\multirow{3}{*}{\begin{minipage}{3cm}\centering Region M\\
+              (Moderate \msplit) \end{minipage}} 
+& SR & $= 0$  & $\ge 4$ & $>0.4$ & $-$ & $>90$ & $> 450 $ & $> 1600$ & $-$ \\ 
+& CR & $= 1$  & $\ge 4$ & $-$ & $< 150$ & $- $ & $> 300 $ & $> 1600$ & $-$ \\ 
+& VR & $= 0$  & $\ge 4$ & $>0.4$ & $-$ & $>100$ & $250$--$450$ & $1600$--$1900$ & $-$ \\\midrule
+\multirow{3}{*}{\begin{minipage}{3cm}\centering Region C\\
+              (Compressed, small \msplit) \end{minipage}} 
+& SR & $= 0$  & $\ge 4$ & $>0.4$ & $-$ & $>155$ & $> 450 $ & $-$ & $-$ \\ 
+& CR & $= 1$  & $\ge 4$ & $-$ & $< 150$ & $- $ & $> 375 $ & $-$ & $-$ \\ 
+& VR & $= 0$  & $\ge 4$ & $>0.4$ & $-$ & $>125$ & $350$--$450$ & $-$ & $-$ \\\midrule
+\multirow{3}{*}{\begin{minipage}{3cm}\centering Region VC\\
+              (Very Compressed, very small \msplit) \end{minipage}} 
+& SR & $= 0$  & $\ge 3$ & $>0.4$ & $-$ & $>100$ & $> 600 $ & $-$ &
+                                                                   \multirow{3}{*}{\begin{minipage}{3cm}\centering $\pt^{\leadjet}>400$, $\leadjet \neq b$, $\dphilead>2.5$\end{minipage}} \\ 
+& CR & $= 1$  & $\ge 3$ & $-$ & $< 150$ & $- $ & $> 600 $ & $-$ \\ 
+& VR & $= 0$  & $\ge 3$ & $>0.4$ & $-$ & $>100$ & $225$--$600$ & $-$ \\
+      \bottomrule
+    \end{tabular}
+ \end{table}
+\end{landscape}
+
+
+\clearpage
 
 \section{Exclusion Signal Regions}
 
+
+\begin{figure}[b]
+	\subfigure[]{\includegraphics[width=0.49\linewidth]{figures/strong_prod/paper/selections/selections_0lep.pdf}\label{fig:multibin_scheme_0l}}
+	\subfigure[]{\includegraphics[width=0.49\linewidth]{figures/strong_prod/paper/selections/selections_1lep.pdf}\label{fig:multibin_scheme_1l}}
+	\caption{Scheme of the multi-bin analysis for the \subref{fig:multibin_scheme_0l} 0-lepton 
+	and \subref{fig:multibin_scheme_1l} 1-lepton regions. 
+        The 0L-ISR region is represented with the broad red 
+	dashed line in \subref{fig:multibin_scheme_0l}. 
+      }
+	\label{fig:multibin_scheme}
+\end{figure}
+
+\begin{landscape}
+	\begin{table}[t]
+   		\centering
+        		\renewcommand{\arraystretch}{1.5}
+                        \caption{Definition of the high-$\njet$ SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
+                          expressed in \gev\ except $\dphimin$, which is in radians.}
+                        \label{tab:multibin_Hn}
+        		\begin{tabular}{c c c c c c c c c c}
+        			\toprule
+			\multicolumn{10}{c}{\textbf{ High-$\njet$ regions}}\\
+			\multicolumn{10}{c}{Criteria common to all regions: $\nbjet \geq 3$, ${\pt}^\mathrm{jet} > 30$~GeV } \\
+			\midrule 
+			Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\dphimin$ & $\mt$ & $\njet$ & $\mtb$ & $\mjsum$ & $\met$ & $\meff$  \\
+			\midrule
+			\multirow{5}{*}{\begin{minipage}{3cm}\centering High-\meff\ \\ (HH) \\ (Large \msplit) \end{minipage}} 
+			& SR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $\ge 7$		& $>100 $ 			& $>200$ 	& $> 400 $ 				& $> 2500$ \\ 
+			& SR-1L 	& $\ge 1$  	& $-$		& $> 150 $ 	& $\ge 6$		& $> 120$ 			& $>200$ 	& $> 500 $ 				& $> 2300$ \\ 
+			& CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $\ge 6$		& $> 60 $ 				& $>150$ 	& $> 300 $ 				& $> 2100$ \\ 
+			& VR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $\ge 7$		& $<100$ if $\met>300$ 	& $-$ 	& $< 300 $ if $\mtb > 100$ 	& $> 2100$ \\
+			& VR-1L 	& $\ge 1$  	& $-$ 		& $> 150$ 	& $\ge 6$		& $<140$ if $\meff>2300$	& $-$ 	& $< 500$  				& $> 2100$ \\
+			\midrule
+			\multirow{5}{*}{\begin{minipage}{3cm}\centering Intermediate-\meff\ \\ (HI) \\ (Intermediate \msplit) \end{minipage}} 
+			& SR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $\ge 9$		& $> 140$ 			& $>150$ 	& $> 300 $ 				& $[1800, 2500]$ \\ 
+			& SR-1L 	& $\ge 1$  	& $-$		& $> 150 $ 	& $\ge 8$		& $> 140$ 			& $>150$ 	& $> 300 $ 				& $[1800, 2300]$ \\ 
+			& CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $\ge 8$		& $> 60$ 				& $>150$ 	& $> 200 $ 				& $[1700, 2100]$ \\ 
+			& VR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $\ge 9$		& $<140$ if $\met>300$ 	& $-$ 	& $< 300 $ if $\mtb > 140$ 	& $[1650, 2100]$ \\
+			& VR-1L 	& $\ge 1$  	& $-$ 		& $> 150$ 	& $\ge 8$		& $<140$ if $\met>300$	& $-$ 	& $< 300 $ if $\mtb > 140$	& $[1600, 2100]$ \\
+			\midrule
+			\multirow{5}{*}{\begin{minipage}{3cm}\centering Low-\meff\ \\ (HL) \\ (Small \msplit) \end{minipage}} 
+			& SR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $\ge 9$		& $> 140$ 			& $-$ 	& $> 300 $ 				& $[900, 1800]$ \\ 
+			& SR-1L 	& $\ge 1$  	& $-$		& $> 150 $ 	& $\ge 8$		& $> 140$ 			& $-$ 	& $> 300 $ 				& $[900, 1800]$ \\ 
+			& CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $\ge 8$		& $> 130$ 			& $-$ 	& $> 250 $ 				& $[900, 1700]$ \\ 
+			& VR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $\ge 9$		& $<140$				& $-$ 	& $> 300 $ 				& $[900, 1650]$ \\
+			& VR-1L 	& $\ge 1$  	& $-$ 		& $> 150$ 	& $\ge 8$		& $<140$				& $-$ 	& $> 225 $			 	& $[900, 1650]$ \\
+      			\bottomrule
+    		\end{tabular}
+ 	\end{table}
+\end{landscape}
+
+\clearpage
+
+\begin{landscape}
+	\begin{table}[t]
+		\small
+   		\centering
+        		\renewcommand{\arraystretch}{1.5}
+                        \caption{Definition of the intermediate-$\njet$ SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
+                          expressed in \gev\ except $\dphimin$, which is in radians. The $\leadjet = b$  requirement specifies that 
+                          the leading jet is $b$-tagged.}
+                        \label{tab:multibin_In}
+        		\begin{tabular}{c c c c c c c c c c c}
+        			\toprule
+			\multicolumn{11}{c}{\textbf{ Intermediate-$\njet$ regions}}\\
+			\multicolumn{11}{c}{Criteria common to all regions: $\nbjet \geq 3$, ${\pt}^\mathrm{jet} > 30$~GeV } \\
+			\midrule 
+			Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\dphimin$ & $\mt$ & $\njet$ & $\leadjet = b$ or $\dphilead \leq 2.9$ & $\mtb$ & $\mjsum$  & $\met$ & $\meff$  \\
+			\midrule
+			\multirow{5}{*}{\begin{minipage}{3cm}\centering Intermediate-\meff\ \\ (II) \\ (Intermediate \msplit) \end{minipage}} 
+			& SR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[7,8]$		& \cmark		& $> 140 $ 			& $>150$ 		& $> 300 $ 				& $[1600,2500]$ \\ 
+			& SR-1L 	& $\ge 1$  	& $-$		& $> 150 $ 	& $[6,7]$		& $-$ 		& $> 140$ 			& $>150$ 		& $> 300 $ 				& $[1600,2300]$ \\ 
+			& CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $[6,7]$		& \cmark 		& $> 110 $ 			& $>150$ 		& $> 200 $ 				& $[1600,2100]$ \\ 
+			& VR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[7,8]$		& \cmark		& $<140$ 				& $-$ 		& $> 300 $ 				& $[1450,2000]$ \\
+			& VR-1L 	& $\ge 1$  	& $-$ 		& $> 150$ 	& $[6,7]$		& $-$		& $<140$				& $-$ 		& $> 225 $  				& $[1450,2000]$ \\
+			\midrule
+			\multirow{5}{*}{\begin{minipage}{3cm}\centering Low-\meff\ \\ (IL) \\ (Low \msplit) \end{minipage}} 
+			& SR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[7,8]$		& \cmark		& $> 140 $ 			& $-$ 		& $> 300 $ 				& $[800,1600]$ \\ 
+			& SR-1L 	& $\ge 1$  	& $-$		& $> 150 $ 	& $[6,7]$		& $-$ 		& $> 140$ 			& $-$ 		& $> 300 $ 				& $[800,1600]$ \\ 
+			& CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $[6,7]$		& \cmark 		& $> 130 $ 			& $-$ 		& $> 300 $ 				& $[800,1600]$ \\ 
+			& VR-0L 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[7,8]$		& \cmark		& $<140$ 				& $-$ 		& $> 300 $ 				& $[800,1450]$ \\
+			& VR-1L 	& $\ge 1$  	& $-$ 		& $> 150$ 	& $[6,7]$		& $-$		& $<140$				& $-$ 		& $> 300 $  				& $[800,1450]$ \\
+      			\bottomrule
+    		\end{tabular}
+ 	\end{table}
+\end{landscape}
+
+\clearpage
+
+\begin{landscape}
+	\begin{table}[t]
+   		\centering
+        		\renewcommand{\arraystretch}{1.5}
+                        \caption{Definition of the low-$\njet$ and ISR SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
+                          expressed in \gev\ except $\dphimin$, which is
+                          in radians. The $\leadjet = b$ ($\leadjet \neq b$) requirement specifies that 
+                          the leading jet is (not) $b$-tagged.}
+                        \label{tab:multibin_Ln}
+                        \label{tab:multibin_ISR}		
+        		\begin{tabular}{c c c c c c c c c c c }
+        			\toprule
+			\multicolumn{11}{c}{\textbf{ Low-$\njet$ regions}}\\
+			\multicolumn{11}{c}{Criteria common to all regions: $\nbjet \geq 3$, ${\pt}^\mathrm{jet} > 30$~GeV } \\
+			\midrule 
+			Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\dphimin$ & $\mt$ & $\njet$ & $\leadjet = b$ or $\dphilead \leq 2.9$ & $\pt^{\fourthjet}$ & $\mtb$ & $\met$ & $\meff$  \\
+			\midrule
+			\multirow{3}{*}{\begin{minipage}{3cm}\centering High-\meff\ \\ (LH) \\ (Large \msplit) \end{minipage}} 
+			& SR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,6]$		& $-$		& $>90$					& $-$ 			& $> 300 $ 				& $> 2400$ \\ 
+			& CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $[4,5]$		& $-$ 	 	& -						& $-$ 			& $> 200 $ 				& $> 2100$ \\ 
+			& VR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,6]$		& $-$ 		& $>90$ if $\met < 300$		& $-$			& $> 200 $ 				& $[2000,2400]$ \\
+			\midrule
+			\multirow{3}{*}{\begin{minipage}{3cm}\centering Intermediate-\meff\ \\ (LI) \\ (Intermediate \msplit) \end{minipage}} 
+			& SR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,6]$		& \cmark		& $>90$				& $>140$ 		& $> 350 $ 				& $[1400,2400]$ \\ 
+			& CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $[4,5]$		& \cmark 	 	& $>70$				& $-$ 		& $> 300 $ 				& $[1400,2000]$ \\ 
+			& VR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,6]$		& \cmark		& $>90$				& $<140$ 		& $> 300 $ 				& $[1250,1800]$ \\
+			\midrule
+			\multirow{3}{*}{\begin{minipage}{3cm}\centering Low-\meff\ \\ (LL) \\ (Low \msplit) \end{minipage}} 
+			& SR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,6]$		& \cmark		& $>90$				& $>140$ 		& $> 350 $ 				& $[800,1400]$ \\ 
+			& CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $[4,5]$		& \cmark 	 	& $>70$				& $-$ 		& $> 300 $ 				& $[800,1400]$ \\ 
+			& VR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,6]$		& \cmark		& $>90$				& $<140$ 		& $> 300 $ 				& $[800,1250]$ \\
+      			\bottomrule
+    		\end{tabular}
+		
+		\par\medskip
+		
+    		\begin{tabular}{K{1.5cm} K{1.5cm} K{1.5cm} K{1.5cm} K{1.5cm} K{1.5cm} K{1.5cm} K{1.5cm} }
+        			\toprule
+			\multicolumn{8}{c}{\textbf{ ISR regions}}\\
+			\multicolumn{8}{c}{Criteria common to all regions: $\nbjet \geq 3$, $\dphilead > 2.9$, ${\pt}^\leadjet > 400$~\gev, ${\pt}^\mathrm{jet} > 30$~GeV, $\leadjet \neq b$} \\
+			\midrule 
+			Type & $N_\mathrm{lepton}$ & $\dphimin$ & $\mt$ & $\njet$ & $\mtb$ & $\met$ & $\meff$  \\
+			\midrule
+			SR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,8]$		& $>100$ 			& $> 600 $ 				& $<2200$ \\ 
+			CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $[4,7]$		& $-$ 			& $> 400 $ 				& $<2000$ \\ 
+			VR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,8]$		& $>100$ 			& $> 250 $ 				& $<2000$ \\
+      			\bottomrule
+    		\end{tabular}
+ 	\end{table}
+\end{landscape}
+
 \section{Systematic Uncertainties}
+\label{sec:strong:syst}
 
 \section{Results}
 
+\begin{figure}[htbp]
+	\centering
+	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_CRs_17_06_23_singlebin.pdf}\label{fig:pullCR_discovery}}
+	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_CRs_multichannel_17_06_23.pdf}\label{fig:pullCR_exclusion}}
+	\caption{Pre-fit event yield in control regions and related \ttbar
+          normalization factors after the background-only fit for
+          \subref{fig:pullCR_discovery} 
+		the cut-and-count and \subref{fig:pullCR_exclusion} the multi-bin analyses. The upper panel shows 
+		the observed number of events and the predicted background yield before the fit.
+		The background category \ttbar+X includes \ttbar+W/Z, \ttbar+H and \ttbar\ttbar events. All of these
+                regions require at least one signal lepton, for which the
+                multijet background is negligible. All uncertainties describes in Section \ref{sec:strong:syst} are included in the uncertainty band.
+		The \ttbar normalisation is obtained from the fit
+                and is displayed in the bottom panel. 
+	} 
+	\label{fig:pullCR}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_VRs_17_06_23_singlebin.pdf}\label{fig:pullVR_discovery}}\\
+	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_VRs_multichannel_17_06_23.pdf}\label{fig:pullVR_exclusion}}\\
+	\caption{Results of the background-only fit extrapolated to the VRs of \subref{fig:pullVR_discovery} the cut-and-count and \subref{fig:pullVR_exclusion}
+		the multi-bin analyses. The \ttbar normalisation 
+		is obtained from the fit to the CRs shown in Figure~\ref{fig:pullCR}. The upper panel shows 
+		the observed number of events and the predicted background yield.
+		All uncertainties  defined in Section~\ref{sec:syst} are included in the 
+		uncertainty band. The background category \ttbar+X includes \ttbar+W/Z, 
+		\ttbar+H and \ttbar\ttbar events. The lower panel shows the pulls in 
+		each VR. 
+	} 
+	\label{fig:pullVR}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_SRs_17_06_23_singlebin.pdf}\label{fig:pullSR_discovery}}\\
+	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_SRs_multichannel_17_06_23.pdf}\label{fig:pullSR_exclusion}}\\
+	\caption{Results of the background-only fit extrapolated to the SRs for \subref{fig:pullSR_discovery}
+	the cut-and-count and \subref{fig:pullSR_exclusion} the multi-bin analyses. The data in the  SRs are 
+	not included in the fit.  The upper panel shows the observed number of events and the predicted background 
+	yield. All uncertainties  defined in Section~\ref{sec:syst} are included in the uncertainty band. The background 
+	category $\ttbar+X$ includes $\ttbar W/Z$, $\ttbar H$ and $\ttbar \ttbar$ events. The lower panel shows the 
+	pulls in each SR.} 
+	\label{fig:pullSR}
+\end{figure}
 
 \section{Interpretation}
 
