@@ -4,7 +4,23 @@
 
 \section{Signal Model}
 
-The simplified models used to optimize this analysis are the two gluino-pair-production models shown in Fig. \ref{fig:strong_diagram}
+The simplified models used to optimize this analysis are the two gluino-pair-production models shown in Fig. \ref{fig:strong_diagram}. 
+Figure \ref{fig:diagram_Gtt} shows a schematic diagram of the Gtt model: 
+each of the pair-produced gluinos decays with 100\% \gls{br} to two top quarks and the lightest neutralino (\ninoone).
+In the Gbb model, shown in Figure \ref{fig:diagram_Gbb}, the decay happens through an off-shell sbottom and each gluino transforms into 
+two bottom quarks and the \ninoone. Both models assume R-parity conservation, so the \ninoone, which in this case is the \gls{lsp} is stable 
+and escapes undetected, giving rise to \met in the event. In both cases, the three body decay is realized through an off-shell squark, 
+and it involves two interaction vertexes. The first one is a strong-interaction vertex, in the case of the Gtt model:
+
+\begin{equation*}
+\gluino \to t \stop^{(*)} \; .
+\end{equation*}
+
+\noindent The second is an electroweak vertex, originating from the decay of the \stop (or \sbottom in the case of the Gbb model):
+
+\begin{equation*}
+\stop \to t \ninoone
+\end{equation*}
 
 \begin{figure*}[h]
 \centering 
@@ -14,7 +30,21 @@ The simplified models used to optimize this analysis are the two gluino-pair-pro
 }\label{fig:strong_diagram}
 \end{figure*}
 
+In the Gtt and Gbb models, since the \stop and \sbottom are assumed to have very high mass, the only parameters are the mass and production cross section of the gluino, and the mass of the \gls{lsp}. While the Gtt and Gbb models are used both to optimize and interpret the analysis, a further interpretation is provided also in terms of a slightly more complicated model. If we allow also the lightest chargino (\chinoonepm) to have a reachable mass, another decay chain opens, where the virtual stop or sbottom decays to a \chinoonepm:
 
+\begin{equation*}
+\begin{split}
+\stop &\to \bar{b} \chinoonem \; , \\
+\sbottom &\to t \chinoonem \; .
+\end{split}
+\end{equation*}  
+
+The charge-conjugate processes are also possible, and in both cases the overall decay chain of the gluino leads to $\gluino \to t b \chinoonem$, which we refer to as Gtb model.
+The model used to re-interpret this analysis assumes the decay $\chinoonepm \to \ninoone W^{\pm}$, where the W boson can be off-shell if the mass difference between the \chinoonepm and the \ninoone is not large enough to produce an on-shell W boson. 
+This mass difference becomes a further parameter of the model. The model considered in this analysis assumes that the \chinoonepm and the \ninoone 
+are almost degenerate (in the \gls{mc} simulation, they are generated with a mass difference of 2 GeV); in this case the W boson is virtual and results into soft fermions, that most of the time are not reconstructed. This small difference is often verified in models where the \chinoonepm and the \ninoone are part of an approximate $SU(2)$ multiplet, and setting it to a fixed value allows to reduce the number of parameters of the model. 
+This analysis provides an interpretation of the result in terms of \gls{br} of the gluino into the Gtt, Gbb and Gtb models. 
+A schematic diagram of the possible decay chains in this mixed-\gls{br} interpretation, in addition to the ones shown in Fig. \ref{fig:strong_diagram}, is shown in Fig. \ref{fig:strong_diagram_br}.
 
 \begin{figure*}[h]
 \centering 
@@ -27,6 +57,9 @@ The simplified models used to optimize this analysis are the two gluino-pair-pro
 }\label{fig:strong_diagram_br}
 \end{figure*}
 
+
+These gluino decay chains that lead to final states rich in heavy-flavour quarks are dominant in \gls{susy} models where the squarks 
+from the first two generations are significantly heavier than stop and sbottom, or also in cases when the \ninoone is dominated by the higgsino component. 
 
 \section{Previous Limits}
 
