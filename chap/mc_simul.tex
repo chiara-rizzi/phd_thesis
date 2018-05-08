@@ -5,7 +5,8 @@
 \Gls{pp} interactions at the \gls{lhc} are complex processes that span very different energy scales. 
 In order to interpret the experimental data it is essential to develop a good understanding of the physics involved in the \gls{pp} collisions, and the ability to simulate the various processes is also crucial to be able to compare the observed data with the patterns predicted by the theory, first of all the \gls{sm}.
 Section \ref{sec:ppint} focuses on the description of our understanding of a \gls{pp} collision, while Section \ref{sec:eventsimul} 
-discusses the event-simulation process and the main \gls{mc} generators used in the \gls{atlas} Collaboration. 
+discusses the event-simulation process; 
+the main \gls{mc} generators used in the \gls{atlas} Collaboration are described in Section \ref{sec:mcgen}, and Sections \ref{sec:detsim} and \ref{sec:datacorr} touch briefly on the topics of detector simulation and data-driven corrections.
 
 
 
@@ -34,8 +35,8 @@ This picture is further complicated by the fact that also initial-state quarks a
 \label{sec:ppint:hardscatter}
 
 The hard scattering between the partons inside the proton is in a kinematic regime where the \gls{qcd} coupling constant, $\alpha_s$, 
-is small and therefore the partonic cross sections can be computed in perturbation theory. 
-Thanks to the factorization theorem \cite{doi:10.1146}, the generic production cross section for a final state $X$ can be expressed in terms of the partonic cross section $\hat\sigma$ as:
+is small and therefore the partonic cross-sections can be computed in perturbation theory. 
+Thanks to the factorization theorem \cite{doi:10.1146}, the generic production cross-section for a final state $X$ can be expressed in terms of the partonic cross-section $\hat\sigma$ as:
 
 \begin{equation}
   \sigma(pp\rightarrow X) = \sum_{i,j} \int dx_1 dx_2\, 
@@ -45,10 +46,10 @@ Thanks to the factorization theorem \cite{doi:10.1146}, the generic production c
 \end{equation}
 The $i$ and $j$ indexes run on all the possible partons, and $f_{i}(x_1,\mu_F^2)$ is the \gls{partdf} for the $i$-th parton, representing 
 the distribution of probability for that parton to carry a fraction $x_1$ of the proton momentum when the proton is probed at a scale $\mu_F$
-(factorization scale). $\hat\sigma_{ij\rightarrow X}$ is the partonic cross section, computer at the partonic center of mass energy \cmpart;   
+(factorization scale). $\hat\sigma_{ij\rightarrow X}$ is the partonic cross-section, computed at the partonic center of mass energy \cmpart;   
 it has to be noted that \cmpart is lower than the total center of mass energy, as its square is the product of square of the center of mass energy times
 the fraction of the proton momentum that is carried by each of the two partons, $x_1$ and $x_2$. 
-While, when considered at all orders in perturbative \gls{qcd}, the partonic cross section does not depend on $\mu_F$,
+While, when considered at all orders in perturbative \gls{qcd}, the partonic cross-section does not depend on $\mu_F$,
 this dependence appears at any fixed order. $\hat\sigma$ depends also on the renormalization scale, $\mu_R$, which is the scale used for the evaluation of $\alpha_s$.
 
 
@@ -94,7 +95,7 @@ and $\otimes$ is a symbol for the convolution integral:
 P \otimes f \equiv \int^1_x\frac{dy}{y}f_q(y)~P\left(\frac{x}{y}\right).
 \end{equation}
 
-As mentioned above, the $x$ dependence has to be extracted experimentally. This is done by several collaborations through fits (with typically 10 to 30 parameters) to data of \gls{dis}. As an example, Figure \ref{fig:sim:pp} shows the \gls{nlo} \glspl{partdf} obtained by the MSTW Collaboration for two different scales, Q$^2$ = 10 GeV$^2$ and Q$^2$ = 10$^4$ GeV$^2$. It is possible to notice how, with the increase of Q$^2$, the shape of the \glspl{partdf} changes to favor lower $x$ values. At low $x$ values the gluon \gls{pdf} is dominating (and this effect increases with Q$^2$), while for high $x$ values the \glspl{partdf} of the valence quarks are more relevant.
+As mentioned above, the $x$ dependence has to be extracted experimentally. This is done by several collaborations through fits (with typically 10 to 30 parameters) to data of \gls{dis}. As an example, Figure \ref{fig:sim:pp} shows the \gls{nlo} \glspl{partdf} obtained by the MSTW Collaboration for two different scales, Q$^2$ = 10 GeV$^2$ and Q$^2$ = 10$^4$ GeV$^2$. It is possible to notice how, with the increase of Q$^2$, the shape of the \glspl{partdf} changes to favor lower $x$ values. At low $x$ values the gluon \gls{partdf} is dominating (and this effect increases with Q$^2$), while for high $x$ values the \glspl{partdf} of the valence quarks are more relevant.
 
 \begin{figure}[h]
 \begin{center}
@@ -110,42 +111,42 @@ As mentioned above, the $x$ dependence has to be extracted experimentally. This 
 
 The main steps in the simulation of \gls{pp} collision events consists of:
 \begin{itemize}
-\item Computation of the matrix element for the hard process.
-\item \gls{psh} and matching between \gls{psh} and matrix element.
+\item Computation of the \glspl{me} for the hard process.
+\item \Gls{psh} and matching between \gls{psh} and \glspl{me}.
 \item Hadronization and decay of unstable particles.
-\item Simulation of the underlying event.
+\item Simulation of the underlying event and pileup.
 \end{itemize}
 In the next sections, each step is summarized in its main features.
 
 \subsection{Matrix Element}
 
-As discussed e.g. in Ref \cite{Skands:2011pf}, the partonic cross section for the production of the final state $X$ starting from the partons $i$ and $j$, necessary to compute
+As discussed e.g. in Ref \cite{Skands:2011pf}, the partonic cross-section for the production of the final state $X$ starting from the partons $i$ and $j$, necessary to compute
 Equation \ref{eq:general-cross-section}, can be expressed at all orders as:
 \begin{equation}
-\hat\sigma_{ij\rightarrow X} = \sum_{k=0}^\infty \int d\Phi_{X+k} |\sum_{l=0}^\infty \mathcal{M}_{X+k}^{(l)}|^2 \; .
+\hat\sigma_{ij\rightarrow X} = \sum_{k=0}^\infty \int d\Phi_{X+k} | \sum_{l=0}^\infty \mathcal{M}_{X+k}^{(l)}|^2 \; .
 \label{eq:xsec_matrix}
 \end{equation}
-\noindent In this expression, the $k$ represents the number of final state quarks and gluons produced in addition to $X$ and $\mathcal{M}_{X+k}^{(l)}$
-the amplitude to produce the final state $X+k$ computed with $l$ virtual loops. To compute a cross section is not possible to extend these sums to infinity, and the number of extra partons and the number of loops identify the 
-perturbative order of the cross section. In particular:
+\noindent In this expression, the $k$ represents the number of final state quarks and gluons produced in addition to $X$ (legs) and $\mathcal{M}_{X+k}^{(l)}$
+the amplitude to produce the final state $X+k$ computed with $l$ virtual loops. To compute a cross-section is not possible to extend these sums to infinity, and the number of extra partons and the number of loops identify the 
+perturbative order of the cross-section. In particular:
 \begin{itemize}
 \item The lowest possible order for the production of $X$ is the \gls{lo}, where $k=l=0$.
 \item $l=0$, $k=n$ represents the \gls{lo} computation for the production of $X$ + $n$ jets.
 \item $k+l \leq n$ corresponds to a N$^n$LO prediction for the production of $X$, while N$^{n-k}$LO for the production of $X$ in association with $k$ jets.
 \end{itemize}
 
-At each order, the computation of the matrix element implies a choice of the factorization and renormalization scales.
+At each order, the computation of the \glspl{me} implies a choice of the factorization and renormalization scales.
 $\mu_F$ and $\mu_R$ are not predetermined, and are typically set to values related to the scale of the considered physical process. 
-The impact of this subjective choice is taken into account by evaluating each production cross section at different scales (typically a variation of a factor two up and down), and assigning the difference as a systematic uncertainty on the cross section estimate.
+The impact of this subjective choice is taken into account by evaluating each production cross-section at different scales (typically a variation of a factor two up and down), and assigning the difference as a systematic uncertainty on the cross-section estimate.
 
 
 \subsection{Parton Shower}
 
 The theorem from Kinoshita, Lee and Nauenberg (KLN theorem) \cite{Kinoshita:1962ur,Lee:1964is} guarantees that, 
-when computing inclusive cross sections, the logarithmic divergences arising from collinear splitting cancel against the virtual corrections order by order in perturbation theory. 
-This does not hold anymore when we are interested in the computation of a differential cross section, for example with a specific number of accompanying final-state extra partons, 
+when computing inclusive cross-sections, the logarithmic divergences arising from collinear splitting cancel against the virtual corrections order by order in perturbation theory. 
+This does not hold anymore when we are interested in the computation of a differential cross-section, for example with a specific number of accompanying final-state extra partons, 
 as it could be the case $l=0, k=1$ in Equation \ref{eq:xsec_matrix}. 
-In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}, that generate an ordered sequence of emissions with decreasing angle and energy; the \gls{psh} approximation consists in retaining only the largest matrix elements, namely the ones corresponding to low angles and energies, obtaining a \gls{ll} accuracy.
+In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}, that generate an ordered sequence of emissions with decreasing angle or energy; the \gls{psh} approximation consists in retaining only the largest \glspl{me}, namely the ones corresponding to low angles and energies, obtaining a \gls{ll} accuracy.
 There are three types of processes that need to be taken care of by the \gls{psh}: $g \rightarrow q\bar{q}$, $g \rightarrow gg$ and $q \rightarrow q g$.
 The probability for a parton to evolve from an energy $t$ to a lower energy $t'$ without splitting is encoded in the Sudakov form factor:
 \begin{equation}
@@ -162,34 +163,34 @@ Also incoming particles can emit extra partons, giving rise to \gls{isr}. While 
 
 \subsection{Matching}
 
-When a process F is simulated with \gls{lo} matrix element plus \gls{psh}, as illustrated in the left diagram in Figure \ref{fig:sim:matching} (following the discussion in Ref. \cite{Skands:2011pf}), the hardest extra jet is at \gls{ll} accuracy. 
-One might wish to improve the accuracy of the description of the event by adding the \gls{lo} matrix element for the process F with the addition of one extra parton (F+1), as in the second diagram in Figure \ref{fig:sim:matching}. In this figure, the boxes are only partially filled to indicate the phase-space restriction necessary to deal with the divergence of the F+1 matrix element. Adding naively these two pieces leads to double counting, as illustrated in the third diagram of Figure \ref{fig:sim:matching}. 
-This double-counting problem worsens with the increase of the number of extra legs that we want to add at matrix element.
+When a process F is simulated with \gls{lo} \glspl{me} plus \gls{psh}, as illustrated in the left diagram in Figure \ref{fig:sim:matching} (following the discussion in Ref. \cite{Skands:2011pf}), the hardest extra jet is at \gls{ll} accuracy. 
+One might wish to improve the accuracy of the description of the event by adding the \gls{lo} \glspl{me} for the process F with the addition of one extra parton (F+1), as in the second diagram in Figure \ref{fig:sim:matching}. In this figure, the boxes are only partially filled to indicate the phase-space restriction necessary to deal with the divergence of the F+1 \glspl{me}. Adding naively these two pieces leads to double counting, as illustrated in the third diagram of Figure \ref{fig:sim:matching}. 
+This double-counting problem worsens with the increase of the number of extra legs that we want to add to the \glspl{me}.
 
 \begin{figure}[h]
 \begin{center}
     \includegraphics[width=\textwidth]{figures/simul/matching}
 \end{center}
-\caption{Illustration of the source of possible double-counting originating from adding matrix elements with different number of legs. Figure from Ref. \cite{Skands:2011pf}.}
+\caption{Illustration of the source of possible double-counting originating from adding \glspl{me} with different number of legs. Figure from Ref. \cite{Skands:2011pf}.}
  \label{fig:sim:matching}
 \end{figure}
 
-Different methods have been designed to match matrix elements to showers such that, for each order in perturbation theory, double-counting is avoided. The three main strategies are \cite{Giele:2011cb}:
+Different methods have been designed to match \glspl{me} to showers such that, for each order in perturbation theory, double-counting is avoided. The three main strategies are \cite{Giele:2011cb}:
 \begin{description}
-\item[Unitarity] This approach consists in correcting the shower splitting functions by multiplicative factors obtained as the ration of matrix elements to shower approximation:
+\item[Unitarity] This approach consists in correcting the shower splitting functions by multiplicative factors obtained as the ratio of \gls{me} to \gls{ps} approximation:
 $$
 \rm{Matched} = \rm{Approximate}\frac{\rm{Exact}}{Approximate} \; .
 $$
-\noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 matrix element, without actually adding the F+1 sample. This strategy has traditionally been worked out only for one extra parton emission. 
+\noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 \glspl{me}, without actually adding the F+1 sample. This strategy has traditionally been worked out only for one extra parton emission. 
 
-\item[Subtraction] The subtraction approach consists in correcting the \gls{psh} by the difference between \gls{psh} and matrix element:
+\item[Subtraction] The subtraction approach consists in correcting the \gls{psh} by the difference between \gls{psh} and \glspl{me}:
 $$
 \rm{Matched} = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \; .
 $$
 
-\noindent With this strategy, the corrections are not resummed and the events are weighted. This is the strategy used in MC\@NLO \cite{Frixione:2002ik,Frixione:2003ei,Frixione:2008ym}, and the POWHEG method \cite{Frixione:2007vw} is an hybrid between this and the unitarity approach.
+\noindent With this strategy, the corrections are not resummed and the events are weighted. This is the strategy used in \mcatnlo \cite{Frixione:2002ik,Frixione:2003ei,Frixione:2008ym}, and the \Powheg method \cite{Frixione:2007vw} is an hybrid between this and the unitarity approach.
 
-\item[Slicing] The slicing approach divides the phase space into two regions: one described mainly by the matrix elements (by vetoing shower emissions below a cutoff scale, the matching scale), and one mainly by the \gls{psh}:
+\item[Slicing] The slicing approach divides the phase space into two regions: one described mainly by the \glspl{me} (by vetoing shower emissions below a cutoff scale, the matching scale), and one mainly by the \gls{psh}:
 \begin{equation*}
 \begin{split}
  {\rm{Matched (above \; matching \;  scale)}} &\approx {\rm{Exact}} (1 + {\mathcal{O}} ( \alpha_s)) \; , \\
@@ -199,14 +200,14 @@ $$
 \end{equation*}
 
 
-\noindent where the last approximation holds because, below the matching scale, the matrix element and the \gls{psh} give similar results. 
+\noindent where the last approximation holds because, below the matching scale, the \glspl{me} and the \gls{psh} give similar results. 
 With the slicing strategy, the corrections are not resummed and the events are weighted, but the weights are all positive. This approach can be extended beyond the first extra emission. 
 Examples of this approach are the CKKW \cite{Catani:2001cc} and MLM \cite{Mangano:2006rw,Mrenna:2003if} prescriptions. The MLM approach at \gls{nlo} is known as FxFx \cite{Frederix:2012ps}. 
 
 \end{description}
 
 
-\subsection{Hadronization and Hadron Decays}
+\subsection{Hadronization}
 
 At the end of the shower we have emissions at very low energy and angles, which correspond to high values of the \gls{qcd} coupling constant. 
 When the strong coupling becomes of order unit, the interaction is very strong and this is presumably what gives rise to hadronization, the process where colored partons, after parton shower, become a set of colorless hadrons (primary hadrons), 
@@ -214,7 +215,7 @@ that can in turn decay into secondary hadrons. This transition is described thro
 Two main hadronization models are used in \gls{mc} generators:
 
 \begin{description}
-\item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). This terms comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
+\item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). The term "string model" comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
 A color string forms that joins the the final state in a string configuration of field energies, and hadrons originate from the breakups of the string. The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm.
 The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two and have therefore a rate for hadron production double than that of quarks. 
 % chiara: describe the main steps of the string model hadronization
@@ -246,10 +247,10 @@ When the simulation of the events stops before hadronization, it is referred to 
 
 \subsection{Underlying Event}
 
-Protons contain more than one quark, and they can undergo interactions as well, giving origin to multiple parton interactions in the same collision.
-These secondary interactions are in general of lower momentum, since the matrix element is larger for low momentum transfer, and will contribute to the activity along the beam direction, less in the transverse plane. 
+Protons contain more than one parton; the partons that do not participate to the hard scattering can undergo interactions as well, giving origin to multiple parton interactions in the same collision (underlying event).
+These secondary interactions are in general of lower momentum, since the \glspl{me} is larger for low momentum transfer, and will contribute to the activity along the beam direction, less in the transverse plane. 
 When the two protons pass through each other the likelihood of having multiple interactions depends on the overlap between the two protons. 
-To model the underlying event, the assumption is made that these processes are $2\rightarrow2$ scattering; the matrix element for these diverges at small angle, so the modelling is dependent on the chosen \pt cutoff. 
+To model the underlying event, the assumption is made that these processes are $2\rightarrow2$ scattering; the \glspl{me} for these diverges at small angle, so the modelling is dependent on the chosen \pt cutoff. 
 Because of the low-\pt nature of the underlying event, its description is based on phenomenological models \cite{ATL-PHYS-PUB-2014-021,Skands:2010ak}.
 To model the data, color reconnection between the primary interaction and the underlying event is needed. 
 
@@ -260,6 +261,7 @@ The presence of pileup challenges the reconstruction of the event, as it gives r
 for out-of-time pileup, similar methods are used but simulating the time response of the detector electronics to collisions from the previous bunch crossing. 
 
 \section{MC Generators}
+\label{sec:mcgen}
 
 The simulations described in the above sections are carried out by event generators, that can be either general purpose, 
 if they can reproduce all of the steps of the event generation, or specialized to one functionality. 
@@ -270,31 +272,32 @@ In this section the main characteristics of the generators used in the analyses 
 Several independent codes allow to study the effects of different modelling of the hadronization and different choices for the parton shower. The three main general-purpose event generators are:
 
 \begin{description}
-\item[\PY] \cite{Sjostrand:2006za,Sjostrand:2014zea} \PY is a general purpose generator that uses \gls{lo} matrix elements for $2\rightarrow n $ ($n \leq 3$) processes; 
+\item[\PY] \cite{Sjostrand:2006za,Sjostrand:2014zea} \PY is a general purpose generator that uses \gls{lo} \glspl{me} for $2\rightarrow n $ ($n \leq 3$) processes; 
 it is capable to simulate both hard and soft interactions, including \gls{isr} and \gls{fsr} and multiple parton interactions.
-It uses a \pt-ordered parton shower and the Lund string hadronization model. It is commonly used as a \gls{psh} generator, interfaced with a different generator that computes the matrix element.
+It uses a \pt-ordered parton shower and the Lund string hadronization model. It is commonly used as a \gls{psh} generator, interfaced with a different generator that computes the \glspl{me}.
 
-\item[\HW] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp} It computes $2\rightarrow 2$ \gls{lo} matrix elements.
+\item[\HW] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp} It computes $2\rightarrow 2$ \gls{lo} \glspl{me}.
  The partons shower is ordered by the anlge of the emitted parton. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. 
-While Pythia uses a method that takes these affects into account only partially \cite{Webber:1987uy}, Herwig uses one that fully includes spin correlations \cite{Collins:1987cp}. The hadronization is based on the cluster model.
+While \PY uses a method that takes these affects into account only partially \cite{Webber:1987uy}, \HW uses one that fully includes spin correlations \cite{Collins:1987cp}. The hadronization is based on the cluster model.
 
-\item[\Sherpa] \cite{Gleisberg:2008ta} The \Sherpa event generator can provide multi-leg matrix elements both at \gls{lo} (up to four extra partons) and at \gls{nlo} (up to two extra partons). 
-The matching between matrix elements and the dipole-type parton shower \cite{Schumann:2007mg} follows the CKKW prescription.
+\item[\Sherpa] \cite{Gleisberg:2008ta} The \Sherpa event generator can provide multi-leg \glspl{me} both at \gls{lo} (up to four extra partons) and at \gls{nlo} (up to two extra partons). 
+The matching between \glspl{me} and the dipole-type parton shower \cite{Schumann:2007mg} follows the CKKW prescription.
 It uses a cluster hadronization model. 
 
 \end{description}
 
-The recent versions of all three generators are coded in c++, but Herwig and Pythia were originally developed in Fortran.  
+The recent versions of all three generators are coded in c++, but \HW and \PY were originally developed in Fortran.  
 
 \subsection{Matrix Elements Generators}
 
 The generators described in this section do not provide a full description of the event, but aim instead at improving the 
-computation of the matrix element, and can be afterwards interfaced to a general purpose generator to simulate parton shower, underlying event and pielup. The most common matrix element generators are:
+computation of the \glspl{me}, and can be afterwards interfaced to a general purpose generator to simulate parton shower, underlying event and pielup. The most common \glspl{me} generators are:
 
 \begin{description}
-\item[\PowhegBox] \cite{Nason:2004rx} In this framework it is possible to implement \gls{nlo} matrix element computations, using the 5 flavour scheme. 
+\item[\PowhegBox] \cite{Nason:2004rx} In this framework it is possible to implement \gls{nlo} \glspl{me} computations, using the 5 flavour scheme.
+It uses the \Powheg method for matching. 
 
-\item[\aNLO] \cite{Alwall:2014hca} This generator can compute matrix elements at \gls{lo} for any user-specified lagrangian, and at \gls{nlo} accuracy for selected processes. It includes up to two additional partons and is then interfaced to a parton shower using the CKKW-L method. 
+\item[\aNLO] \cite{Alwall:2014hca} This generator can compute \glspl{me} at \gls{lo} for any user-specified lagrangian, and at \gls{nlo} accuracy for selected processes. It includes up to two additional partons and is then interfaced to a parton shower using the CKKW-L method. 
 
 \end{description}
 
@@ -303,9 +306,9 @@ computation of the matrix element, and can be afterwards interfaced to a general
 The specialized generators provide a better description of one specific aspect of the \gls{mc} simulation. Some of them are:
 
 \begin{description}
-\item[\evtgen] \cite{Lange:2001uf} This package simulates the decay of heavy flavour particles, in particular B and D mesons. 
+\item[\evtgen] \cite{Lange:2001uf} This package simulates the decay of heavy flavour particles, in particular B and D hadrons. 
 In the simulation of the decay it uses decay amplitudes instead of probabilities and it includes spin correlations. 
-When interfaced with other event generators, it can be used to re-decay the heavy flavour particles, substituting the mode sophisticated decay chains simulated by \evtgen to the original ones.
+When interfaced with other event generators, it can be used to re-decay the heavy flavour particles, substituting the more sophisticated decay chains simulated by \evtgen to the original ones.
 
 \item[\tauola] \cite{Jadach:1990mz} General purpose event generators treat tau leptons as stable particles. 
 The tau decays are then handled by separated packages like \tauola, which includes leptonic and semileptonic decays, paying attention to the tau polarization. Since the format of the tau-related information is generator-dependent and the results of the original generator need to be replaces, also the input and output formats of \tauola depend on the generator it is interfaced with.
@@ -317,14 +320,15 @@ The tau decays are then handled by separated packages like \tauola, which includ
 
 
 \section{Detector Simulation}
+\label{sec:detsim}
 
 The outcome of the event simulation are the four-vectors of all the stable particles produced in the final state of the event, stored in the standard HepMC format \cite{Dobbs:2001ck}.
 When this information is used directly, the analysis is referred to as "particle level" analysis; furthermore, if we want to filter the simulated events based on the final state, this can be done at this stage. 
-While the event generation can already provide information on the kinematic of the event, is is not enough to compare the \gls{mc} simulations with the 
+While the event generation can already provide information on the kinematic of the event, it is not enough to compare the \gls{mc} simulations with the 
 data collected by the \gls{atlas} detector. 
 After the event simulation, the \gls{atlas} simulation chain \cite{Aad:2010ah} (described in Figure \ref{fig:sim:chain}) proceeds with the emulation of the
 interaction of the particles with the detector and the signal generated in each of the detector's subsystems, 
-which is done with the Geant4 package \cite{Agostinelli:2002hh}. The configuration of the detector, including any misalignment, can be set at run time, and the energy depositions are recorded as hits. The digitalization step takes the input hits from the hard scattering, underlying event and pileup and transforms them into detector signals, adding also detector noise. The response of the \gls{lone} trigger (described in Section \ref{sec:cern:trigger}) is simulated at this stage as well. The final output of the digitalization is the \gls{rdo} file, to which the output of the \gls{atlas} detector itself, which is in "bytestream" format, can be converted as well. The \gls{hlt} trigger and the event reconstruction run on the \gls{rdo} data format. After the detector simulation, the \gls{mc} simulated events are treated in the same manner as data, going through the object reconstruction procedures
+which is done with the \geant package \cite{Agostinelli:2002hh}. The configuration of the detector, including any misalignment, can be set at run time, and the energy depositions are recorded as hits. The digitalization step takes the input hits from the hard scattering, underlying event and pileup and transforms them into detector signals, adding also detector noise. Also the response of the \gls{lone} trigger (described in Section \ref{sec:cern:trigger}) is simulated at this stage. The final output of the digitalization is the \gls{rdo} file, to which the output of the \gls{atlas} detector itself, which is in "bytestream" format, can be converted as well. The \gls{hlt} decision and the event reconstruction run on the \gls{rdo} data format. After the detector simulation, the \gls{mc} simulated events are treated in the same manner as data, going through the object reconstruction procedures
 describes in Chapter \ref{sec:event:reco}.
 
 \begin{figure}[h]
@@ -338,16 +342,17 @@ describes in Chapter \ref{sec:event:reco}.
 The full simulation of the interaction of particles with the \gls{atlas} detector is a CPU-intensive task. 
 ATLFAST-II \cite{Aad:2010ah} is a fast simulation method aiming at simulating the large amount of \gls{mc} events required by \gls{atlas} analyses by making use of a simplified detector description. 
 ATLFAST-II has two components: the Fast ATLAS Tracking Simulation (Fatras) \cite{Edmonds:2008zz}, to emulate the response of the \gls{id} and of the muon system, 
-and the Fast calorimeter Simulation (FastCaloSim) \cite{ATLAS:1300517}, that takes care of the simulation of the calorimeters. The default ATLFAST-II simulation uses the full Geant4 simulation for the \gls{id} and the muon spectrometer, 
+and the Fast calorimeter Simulation (FastCaloSim) \cite{ATLAS:1300517}, that takes care of the simulation of the calorimeters. The default ATLFAST-II simulation uses the full \geant simulation for the \gls{id} and the muon spectrometer, 
 while it uses FastCaloSim to emulate the energy deposited in the calorimeters using a parametrization of the longitudinal and lateral energy profile. 
 ATLFAST-IIF uses both FastCaloSim for the calorimeters and Fatras for the tracking systems. 
-The output of ATLFAST-II includes all the properties necessary to run the same event reconstruction as with Geant4 or the real data.
+The output of ATLFAST-II includes all the properties necessary to run the same event reconstruction as with \geant or the real data.
 
 
 
 \section{Data-driven Corrections}
+\label{sec:datacorr}
 
-After begin simulated, the \gls{mc} events are normalized to the highest-available-order cross section, and are reweighted so that the simulated pileup distribution matches the one observed in the data that will be compared with the simulation.
+After begin simulated, the \gls{mc} events are normalized to the highest-available-order cross-section, and are reweighted so that the simulated pileup distribution matches the one observed in the data that will be compared with the simulation.
 Despite the accurate simulation, residual differences can be present in the reconstruction and selection efficiency in data and \gls{mc} simulation. 
 These differences are corrected for by multiplying the \gls{mc} simulation by \glspl{sf}, defined as the ratio of the efficiency (of a reconstruction or a selection) in data and \gls{mc}:
 \begin{equation}
