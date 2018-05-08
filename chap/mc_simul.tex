@@ -1,4 +1,4 @@
-\chapter{p-p interactions and their Simulation}
+\chapter{p-p Interactions and their Simulation}
 \label{chap:event:MC}
 \glsunset{atlas}
 
@@ -190,12 +190,14 @@ $$
 \noindent With this strategy, the corrections are not resummed and the events are weighted. This is the strategy used in MC\@NLO \cite{Frixione:2002ik,Frixione:2003ei,Frixione:2008ym}, and the POWHEG method \cite{Frixione:2007vw} is an hybrid between this and the unitarity approach.
 
 \item[Slicing] The slicing approach divides the phase space into two regions: one described mainly by the matrix elements (by vetoing shower emissions below a cutoff scale, the matching scale), and one mainly by the \gls{psh}:
-$$
- {\rm{Matched (above \; matching \;  scale)}} \approx {\rm{Exact}} (1 + {\mathcal{O}} ( \alpha_s)) \; , 
-$$
-$$
-\rm{Matched (below \; matching \;  scale)}  = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \approx Approximate    \; ,
-$$
+\begin{equation*}
+\begin{split}
+ {\rm{Matched (above \; matching \;  scale)}} &\approx {\rm{Exact}} (1 + {\mathcal{O}} ( \alpha_s)) \; , \\
+{\rm{Matched (below \; matching \;  scale)} } &= {\rm{Approximate}} + ({\rm{Exact}}- {\rm{Approximate}})  \\
+& \approx {\rm{Approximate}}    \; ,
+\end{split}
+\end{equation*}
+
 
 \noindent where the last approximation holds because, below the matching scale, the matrix element and the \gls{psh} give similar results. 
 With the slicing strategy, the corrections are not resummed and the events are weighted, but the weights are all positive. This approach can be extended beyond the first extra emission. 
@@ -268,15 +270,15 @@ In this section the main characteristics of the generators used in the analyses 
 Several independent codes allow to study the effects of different modelling of the hadronization and different choices for the parton shower. The three main general-purpose event generators are:
 
 \begin{description}
-\item[\PY] \cite{Sjostrand:2006za,Sjostrand:2014zea} This is a general purpose generator that uses \gls{lo} matrix elements for $2\rightarrow n $ ($n \leq 3$) processes; 
+\item[\PY] \cite{Sjostrand:2006za,Sjostrand:2014zea} \PY is a general purpose generator that uses \gls{lo} matrix elements for $2\rightarrow n $ ($n \leq 3$) processes; 
 it is capable to simulate both hard and soft interactions, including \gls{isr} and \gls{fsr} and multiple parton interactions.
-It uses a \pt-ordered parton shower and the Lund string hadronization model.
+It uses a \pt-ordered parton shower and the Lund string hadronization model. It is commonly used as a \gls{psh} generator, interfaced with a different generator that computes the matrix element.
 
 \item[\HW] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp} It computes $2\rightarrow 2$ \gls{lo} matrix elements.
  The partons shower is ordered by the anlge of the emitted parton. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. 
 While Pythia uses a method that takes these affects into account only partially \cite{Webber:1987uy}, Herwig uses one that fully includes spin correlations \cite{Collins:1987cp}. The hadronization is based on the cluster model.
 
-\item[\Sherpa] \cite{Gleisberg:2008ta} The Sherpa event generator can provide multi-leg matrix elements both at \gls{lo} and at \gls{nlo}. 
+\item[\Sherpa] \cite{Gleisberg:2008ta} The \Sherpa event generator can provide multi-leg matrix elements both at \gls{lo} (up to four extra partons) and at \gls{nlo} (up to two extra partons). 
 The matching between matrix elements and the dipole-type parton shower \cite{Schumann:2007mg} follows the CKKW prescription.
 It uses a cluster hadronization model. 
 
@@ -290,11 +292,28 @@ The generators described in this section do not provide a full description of th
 computation of the matrix element, and can be afterwards interfaced to a general purpose generator to simulate parton shower, underlying event and pielup. The most common matrix element generators are:
 
 \begin{description}
-\item[\PowhegBox] \cite{Nason:2004rx}
-\item[\aNLO] \cite{Alwall:2014hca}
+\item[\PowhegBox] \cite{Nason:2004rx} In this framework it is possible to implement \gls{nlo} matrix element computations, using the 5 flavour scheme. 
+
+\item[\aNLO] \cite{Alwall:2014hca} This generator can compute matrix elements at \gls{lo} for any user-specified lagrangian, and at \gls{nlo} accuracy for selected processes. It includes up to two additional partons and is then interfaced to a parton shower using the CKKW-L method. 
+
 \end{description}
 
 \subsection{Specialized Generators}
+
+The specialized generators provide a better description of one specific aspect of the \gls{mc} simulation. Some of them are:
+
+\begin{description}
+\item[\evtgen] \cite{Lange:2001uf} This package simulates the decay of heavy flavour particles, in particular B and D mesons. 
+In the simulation of the decay it uses decay amplitudes instead of probabilities and it includes spin correlations. 
+When interfaced with other event generators, it can be used to re-decay the heavy flavour particles, substituting the mode sophisticated decay chains simulated by \evtgen to the original ones.
+
+\item[\tauola] \cite{Jadach:1990mz} General purpose event generators treat tau leptons as stable particles. 
+The tau decays are then handled by separated packages like \tauola, which includes leptonic and semileptonic decays, paying attention to the tau polarization. Since the format of the tau-related information is generator-dependent and the results of the original generator need to be replaces, also the input and output formats of \tauola depend on the generator it is interfaced with.
+
+\item[\photos] \cite{Barberio:1990ms} This generator handles electromagnetic radiation, estimating the size of the \gls{qed} bremsstrahlung in the collinear approximation, and is used by \tauola. 
+
+
+\end{description}
 
 
 \section{Detector Simulation}
