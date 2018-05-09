@@ -25,10 +25,17 @@ this comparison, performed with the statistical methods discussed in Chapter \re
 The estimate of the expected background events can be performed with different techniques. In particular, in these thesis three types of techniques are used:
 \begin{itemize}
 \item A first option is to take the background estimate directly from \gls{mc} simulation. 
-\item The \gls{mc} estimate can be improved by normalizing each process in a dedicated \gls{cr}, which is a region non overlapping with the \gls{sr} but kinematically close to it, enriched in the background process that we want to normalize and with a very low expected signal fraction.
+\item The \gls{mc} estimate can be improved by normalizing each process in a dedicated \gls{cr}, which is a region non overlapping with the \gls{sr} but kinematically close to it, enriched in the background process that we want to normalize and with a very low expected signal fraction. Since \gls{cr} and \gls{sr} must be non-overlapping, some of the selection of the \gls{sr} are inverted to design the \gls{cr}; the extrapolation of the background normalization factor form the \gls{cr} to the \gls{sr} is tested in dedicated \glspl{vr}. A simplified example of how the usage of \glspl{cr} can improve the analysis also from the point of view of systematic uncertainties is discussed in Section \ref{sec:example_cr}.
 \item In some cases, a background estimate that relies only on data and not on \gls{mc} simulation is preferred. In these cases we speak of data-driven background estimate.
 \end{itemize}
  
+In each of the analyses described in the next two chapters, two different analysis strategies are carried out in parallel:
+\begin{description}
+\item[Cut-and-count] Several \glspl{sr} are designed, each optimized to maximize the discovery significance to a specific region of the phase space, represented by one benchmark model. 
+
+\item[Multi-bin] In this case, the \glspl{sr} are non-overlapping. This requirement conflicts with the simple choice of the best selection to maximize the significance, which means that the individual discovery power of each \gls{sr} is smaller than in the case of cut-and-count \glspl{sr}. On the other hand, having non-overlapping \glspl{sr} allows to statistically combine them in the Likelihood fit, leading to a stronger model-dependent expected exclusion. The increase in expected exclusion obtained with the combination of several regions is shown in Section \ref{sec:example_combi}.
+ 
+\end{description}
 
 
 
