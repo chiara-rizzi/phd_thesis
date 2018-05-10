@@ -2,6 +2,8 @@
 \label{chap:multib_general}
 
 The main results presented in this thesis are the two analyses described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. While these analyses target two different \gls{susy} models they have many commonalities, since they both target \gls{susy} models leading to final states rich in b-jets and \met. This Chapter highlights these common aspects: Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design the signal models, Section \ref{sec:common_backgrounds} focuses on the background sources from \gls{sm} processes and how they are modeled in the analyses. 
+Section \ref{sec:common_obj_def} focuses on the definition of the physic objects, and Section \ref{sec:common_syst} introduces the main sources of 
+systematic uncertainties.
 
 \section{Simplified Models}
 \label{sec:simplified_models}
@@ -52,14 +54,23 @@ In each of the analyses described in the next two chapters, two different analys
 This section describes the main background processes from the \gls{sm} in the analysis regions and the way they are 
 modeled in the analyses discussed in the next two chapters. In general, the modelling is based on \gls{mc} simulations for
 all the backgrounds, except multi-jet which is emulated with a data-driven technique.
-For the main background, pair production of top quark pairs, the shape of the different distributions is obtained from \gls{mc}
+For the main background, pair production of top quark pairs (\ttbar), the shape of the different distributions is obtained from \gls{mc}
 but the normalization is data-driven, derived in specifically designed \gls{cr} as described in Section \ref{sec:analyses:cr}.
-Section \ref{sec:common_obj_def} focuses on the definition of the physic objects, and Section \ref{sec:common_syst} introduces the main sources of 
-systematic uncertainties.
+
 
 \subsection{Top quark pair production}
 
-Top quark pair production constitutes the main source of background in all the analysis regions. 
+Given the presence of several b-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Fig. \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Fig. \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
+is about 2.6\%. At these low fractions, the \gls{partdf} of the gluon is higher than the \gls{partdf} of quarks and much higher than the \gls{pdf} of the antiquarks, so gluon-gluon fusion is the dominant \ttbar production mode at the \gls{lhc}.
+
+\begin{figure}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttbar_4}\label{fig:ttbar_prod_qq}}\\
+\subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttbar_1}\label{fig:ttbar_prod_gg_1}}
+\subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttbar_3}\label{fig:ttbar_prod_gg_2}}
+\subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttbar_2}\label{fig:ttbar_prod_gg_3}}
+\caption{\gls{lo} Feynman diagram for the production of top quark pairs initiated by \subref{fig:ttbar_prod_qq} quark-antiquark annihilation and \subref{fig:ttbar_prod_gg_1}-\subref{fig:ttbar_prod_gg_3} gluon-gluon fusion.}\label{fig:ttbar_prod}
+\end{figure}
 
 \subsubsection{Truth-level classification: \ttbar decays}
 
@@ -69,6 +80,9 @@ Top quark pair production constitutes the main source of background in all the a
 \label{sec:analyses:cr}
 
 \subsection{Single top quark production}
+
+While the production of a \ttbar pair is mediated by strong interaction, in the case of a single top quark the production occurs through electroweak 
+couplings. There are three possible production channels, illustrated in Fig. \ref{fig:single_top_prod}: the Wt-channel, where a top quark and a W boson are produced, the t-channel, and the s-channel. 
 
 \subsection{Vector boson}
 
