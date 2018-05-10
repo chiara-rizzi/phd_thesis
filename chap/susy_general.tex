@@ -61,7 +61,7 @@ but the normalization is data-driven, derived in specifically designed \gls{cr} 
 \subsection{Top quark pair production}
 
 Given the presence of several b-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Fig. \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Fig. \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
-is about 2.6\%. At these low fractions, the \gls{partdf} of the gluon is higher than the \gls{partdf} of quarks and much higher than the \gls{pdf} of the antiquarks, so gluon-gluon fusion is the dominant \ttbar production mode at the \gls{lhc}.
+is about 2.6\%. At these low fractions, the \gls{partdf} of the gluon is higher than the \gls{partdf} of quarks and much higher than the \gls{partdf} of the antiquarks, so gluon-gluon fusion is the dominant \ttbar production mode at the \gls{lhc}.
 
 \begin{figure}[h]
 \centering 
@@ -69,7 +69,7 @@ is about 2.6\%. At these low fractions, the \gls{partdf} of the gluon is higher 
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttbar_1}\label{fig:ttbar_prod_gg_1}}
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttbar_3}\label{fig:ttbar_prod_gg_2}}
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttbar_2}\label{fig:ttbar_prod_gg_3}}
-\caption{\gls{lo} Feynman diagram for the production of top quark pairs initiated by \subref{fig:ttbar_prod_qq} quark-antiquark annihilation and \subref{fig:ttbar_prod_gg_1}-\subref{fig:ttbar_prod_gg_3} gluon-gluon fusion.}\label{fig:ttbar_prod}
+\caption{\Gls{lo} Feynman diagram for the production of top quark pairs initiated by \subref{fig:ttbar_prod_qq} quark-antiquark annihilation and \subref{fig:ttbar_prod_gg_1}-\subref{fig:ttbar_prod_gg_3} gluon-gluon fusion.}\label{fig:ttbar_prod}
 \end{figure}
 
 \subsubsection{Truth-level classification: \ttbar decays}
@@ -84,13 +84,40 @@ is about 2.6\%. At these low fractions, the \gls{partdf} of the gluon is higher 
 While the production of a \ttbar pair is mediated by strong interaction, in the case of a single top quark the production occurs through electroweak 
 couplings. There are three possible production channels, illustrated in Fig. \ref{fig:single_top_prod}: the Wt-channel, where a top quark and a W boson are produced, the t-channel, and the s-channel. 
 
+\begin{figure}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_2}\label{fig:st_prod_Wt1}}
+\subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_3}\label{fig:st_prod_Wt2}} \\
+\subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_4}\label{fig:st_prod_3}}
+\subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_5}\label{fig:st_prod_4}}
+\caption{\Gls{lo} Feynman diagram for single top production. \subref{fig:st_prod_Wt1}-\subref{fig:st_prod_Wt2} Wt-channel. 
+\subref{fig:st_prod_Wt2} s-channel. \subref{fig:st_prod_4} t-channel.}\label{fig:single_top_prod}
+\end{figure}
+
 \subsection{Vector boson}
 
 \subsection{Multi-bonson}
 
 \subsection{\ttbar + V production}
 
-\subsection{Multi-jet}
+\subsection{QCD Multi-jet}
+
+Multi-jet production is by far the process with the largest cross-section at the \gls{lhc} ($\mathcal{O}$(mb)). 
+Most of the \gls{qcd} events are $2 \to 2$ processes, for which some example \gls{lo} Feynman diagrams are shown in Fig. \ref{fig:qcd_prod}, but higher order processes ($2 \to n$) are possible as well. 
+Multi-jet processes do not have real \met, and therefore can be a background in analyses that require high \met only if one or more of the jets are mismeasured, leading to an energy imbalance in the transverse plane that is reconstructed as \met. 
+These processes do not produce any lepton either, so also a contribution to analyses requiring leptons must origin from a jet misreconstructed as a lepton. 
+Since the probability for a multi-jet event to both have a fake high \met and a fake lepton is very small, multi-jet processes are considered as background only in the analysis regions with a veto on the presence of leptons. 
+
+\subsubsection{Jet Smearing}
+
+The usage of \gls{mc} simulation to model the multi-jet background presents two main drawbacks.
+First of all, the production cross-section for multi-jet production is very difficult to access. 
+It is feasible to model the $2 \to 2$ di-jet production, 
+but every additional parton in a $2 \to n$ process brings into the computation a further $\alpha_{\rm{s}}$ factor, 
+and the energy scale of the interaction is low enough to be at the limit of the validity of the perturbative expansion, limiting the validity of the \gls{lo} order computation. The inclusion of corrections of higher order can improve the description, but the number of extra diagrams that should be included makes this option unrealistic (just the \gls{lo} computation for the $2 \to 2$ process only comprises 10 different diagrams).
+
+A second problem is of practical nature: the high cross-section for multi-jet production implies a huge number of \gls{mc} events that need to be simulated in order not to have a huge statistical uncertainty. 
+
 
 
 \section{Object Definition}
