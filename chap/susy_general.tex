@@ -57,7 +57,7 @@ and high \met.
 In general, the modelling is based on \gls{mc} simulations for
 all the backgrounds, except multi-jet which is emulated with a data-driven technique.
 For the main background, pair production of top quark pairs (\ttbar), the shape of the different distributions is obtained from \gls{mc}
-but the normalization is data-driven, derived in specifically designed \glspl{cr} as described in Section \ref{sec:analyses:cr}.
+but the normalization is data-driven, derived in specifically designed \glspl{cr} and tested in \glspl{vr} as described above.
 
 
 \subsection{Top quark pair production}
@@ -78,17 +78,37 @@ At these low fractions, the \gls{partdf} of the gluon is higher than the \gls{pa
 In the \gls{sm}, the top quark decays $\approx 99.8$\% of the times to a W boson and a b-quark. 
 Beside the pair of b-quarks, that are always present, the final state can be characterized based on the decay of the two W bosons, leading to three different categories:
 \begin{description}
-\item[dilepton]
-\item[single-lepton]
-\item[all-hadronic]
+\item[Dilepton]  Both W bosons decay to a lepton ($e$, $\mu$, $\tau$) and a neutrino (10.5\%).
+\item[Single-lepton] One W boson decays to lepton and neutrino, the other decays hadronically (43.8\%).
+\item[All-hadronic] Both W bosons decay hadrinically (45.7\%).
 \end{description}
+
+All the analysis regions considered in this thesis have a tight \met selection (the loosest one is $\met > 200$ GeV). Since the all-hadronic component 
+of the \ttbar background does not have any neutrino in the final state, it does not fulfill the \met requirement unless one or more jets are not measured correctly; this case produces a negligible background in the analysis regions, and is anyway included in the multi-jet estimate with the jet-smearing method described in Section \ref{sec:jet_smearing}.
+The \ttbar components that is dominating the background estimate are the dilepton and single-lepton one, both in the analysis regions that require reconstructed leptons as well as in the analysis regions that have a lepton veto.
+In the second case, the dominating component is the single-lepton one, where one lepton has a \pt too low to be reconstructed or falls out of acceptance. 
+The \gls{mc} generator used to simulate \ttbar events produced in association with high-\pt jets is \PowhegBox v2 with the CT10 \gls{partdf} set \cite{Lai:2010vv} and interfaced with \PY v6.428 \cite{Sjostrand:2006za} for the parton shower and hadronization. 
+The normalization is derived in \glspl{cr} designed to be kinematically as close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross section computed with the highest
+available accuracy (NNLO+NNLL \cite{Czakon:2011xx}).
 
 \subsubsection{Truth-level classification: \ttbar decays}
 
 \subsubsection{Truth-level classification: flavour of the associated jets}
 
-\subsection{Control Regions}
-\label{sec:analyses:cr}
+
+\subsubsection{Modelling Uncertainties}
+
+The normalization of \ttbar events is derived in the \glspl{cr}, therefore modelling uncertainties affect only the extrapolation from 
+the \gls{cr} to the corresponding \glspl{sr} and \glspl{vr}, and not the overall normalization. 
+The modelling uncertainties are therefore estimated by comparing the expected values for the \glspl{tf}, defined as the ratio of expected yields in the \gls{sr} or \gls{vr} over the expected yields in the corresponding \gls{cr}. 
+The modelling uncertainties considered in this thesis are:
+\begin{description}
+\item[Generator] The uncertainty associated with the choice of a specific \gls{mc} generator are accessed by comparing \PowhegBox with \aNLO, both interfaced with \HWpp v2.7.1 with the UEEE5 underlying-event tune.
+\item[Parton Shower]
+\item[ISR/FSR]
+\end{description}
+
+
 
 \subsection{Single top quark production}
 
@@ -159,6 +179,7 @@ Since the probability for a multi-jet event to both have a fake high \met and a 
 \end{figure}
 
 \subsubsection{Jet Smearing}
+\label{sec:jet_smearing}
 
 The usage of \gls{mc} simulation to model the multi-jet background presents two main drawbacks.
 First of all, the production cross-section for multi-jet production is very difficult to access. 
