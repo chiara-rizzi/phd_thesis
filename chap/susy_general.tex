@@ -1,7 +1,7 @@
-\chapter{Common Aspects to Multi-b SUSY Searches}
+\chapter{Common Aspects to Multi-b+\met SUSY Searches}
 \label{chap:multib_general}
 
-The main results presented in this thesis are the two analyses described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. While these analyses target two different \gls{susy} models they have many commonalities, since they both target \gls{susy} models leading to final states rich in b-jets and \met. This Chapter highlights these common aspects: Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design the signal models, Section \ref{sec:common_backgrounds} focuses on the background sources from \gls{sm} processes and how they are modeled in the analyses. 
+The main results presented in this thesis are the two analyses described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. While these analyses target two different \gls{susy} models they have many commonalities, since they both target \gls{susy} models leading to final states rich in b-jets and missing transverse momentum (\met). This Chapter highlights these common aspects: Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design the signal models, Section \ref{sec:common_backgrounds} focuses on the background sources from \gls{sm} processes and how they are modeled in the analyses. 
 Section \ref{sec:common_obj_def} focuses on the definition of the physic objects, and Section \ref{sec:common_syst} introduces the main sources of 
 systematic uncertainties.
 
@@ -52,16 +52,19 @@ In each of the analyses described in the next two chapters, two different analys
 \label{sec:common_backgrounds}
 
 This section describes the main background processes from the \gls{sm} in the analysis regions and the way they are 
-modeled in the analyses discussed in the next two chapters. In general, the modelling is based on \gls{mc} simulations for
+modeled in the analyses discussed in the next two chapters, which are characterized by the selection of events with a high number of b-jets 
+and high \met. 
+In general, the modelling is based on \gls{mc} simulations for
 all the backgrounds, except multi-jet which is emulated with a data-driven technique.
 For the main background, pair production of top quark pairs (\ttbar), the shape of the different distributions is obtained from \gls{mc}
-but the normalization is data-driven, derived in specifically designed \gls{cr} as described in Section \ref{sec:analyses:cr}.
+but the normalization is data-driven, derived in specifically designed \glspl{cr} as described in Section \ref{sec:analyses:cr}.
 
 
 \subsection{Top quark pair production}
 
-Given the presence of several b-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Fig. \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Fig. \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
-is about 2.6\%. At these low fractions, the \gls{partdf} of the gluon is higher than the \gls{partdf} of quarks and much higher than the \gls{partdf} of the antiquarks, so gluon-gluon fusion is the dominant \ttbar production mode at the \gls{lhc}.
+Given the presence of several b-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production, which at the \gls{lhc} at 13 TeV has a cross section of $831.8^{+19.8 + 35.1}_{-29.2-35.1}$ pb \cite{Czakon:2013goa}, is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Fig. \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Fig. \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
+is about 2.6\%, assuming a top quark mass of 173.1 GeV \cite{Patrignani:2016xqp}. 
+At these low fractions, the \gls{partdf} of the gluon is higher than the \gls{partdf} of quarks and much higher than the \gls{partdf} of the antiquarks, so gluon-gluon fusion is the dominant \ttbar production mode at the \gls{lhc}.
 
 \begin{figure}[h]
 \centering 
@@ -71,6 +74,14 @@ is about 2.6\%. At these low fractions, the \gls{partdf} of the gluon is higher 
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttbar_2}\label{fig:ttbar_prod_gg_3}}
 \caption{\Gls{lo} Feynman diagram for the production of top quark pairs initiated by \subref{fig:ttbar_prod_qq} quark-antiquark annihilation and \subref{fig:ttbar_prod_gg_1}-\subref{fig:ttbar_prod_gg_3} gluon-gluon fusion.}\label{fig:ttbar_prod}
 \end{figure}
+
+In the \gls{sm}, the top quark decays $\approx 99.8$\% of the times to a W boson and a b-quark. 
+Beside the pair of b-quarks, that are always present, the final state can be characterized based on the decay of the two W bosons, leading to three different categories:
+\begin{description}
+\item[dilepton]
+\item[single-lepton]
+\item[all-hadronic]
+\end{description}
 
 \subsubsection{Truth-level classification: \ttbar decays}
 
@@ -96,6 +107,7 @@ couplings. There are three possible production channels, illustrated in Fig. \re
 
 \subsection{Vector Boson in Association with Jets}
 
+
 \begin{figure}[h]
 \centering 
 \subfigure[]{\includegraphics[width=0.25\textwidth]{figures/susy_common/feynman/W_1}\label{fig:W_prod_1}}
@@ -105,6 +117,7 @@ couplings. There are three possible production channels, illustrated in Fig. \re
 
 \subsection{Boson Pair Production}
 
+Beside the production of a single vector boson, also a pair production is possible.
 The \gls{lo} Feynman diagrams for the production of a boson pair are shown in Fig. \ref{fig:dib_prod}.
 
 \begin{figure}[h]
