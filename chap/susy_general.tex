@@ -145,11 +145,22 @@ For each jet, the probability to be b-tagged can be expressed as a function of t
  \end{split}
 \end{equation} 
  
+\noindent This procedure can be extended to an arbitrary number of b-tagged jets by summing over all the possible permutations that lead to the desired number of b-tagged jets ($n$) to derive the exclusive probability and then subtract it from the $P_{\geq n}$ probability to have the inclusive probability for $\geq n+1$ b-tagged jets.
+ 
 Beside decreasing the statistical uncertainty on the expected number of events, the other advantage of using truth tagging on particle-level samples is that it allows to emulate the reconstruction-level efficiency of the b-tagging algorithm: 
 at particle-level a jet is considered a b-tagged if it is matched to a b-quark in the \gls{mc} record within a certain cone. This criterion has 
 almost 100\% efficiency for real b-jets, and it leads to a null mistag rate. Instead with truth tagging, if the efficiency map used in Equation \ref{eq:susy_common:btageff} corresponds to the b-tagging efficiency measured for reconstructed jets, 
 it is possible to obtain the same efficiency to a b-tagging selection as in a reconstructed-level analysis. 
 
+Some analysis variables are build using explicitly the kinematic characteristics of the b-tagged jets, for example the invariant mass of a $b$-$\bar{b}$ system. The truth tagging method allows to choose which jets in the event should be considered as b-tagged: in an event with $N$ jets, each permutation with a $n$ jets considered as b-tagged and $N-n$ jets considered as non b-tagged contributed is characterized by an individual weight $w_i$. If we define $S$ the sum of all these individual weights, a pseudo-random number generated with uniform probability between 0 and $S$ will indicate which permutation to choose and consequently which jets to consider as b-tagged; this procedure is illustrated in Figure \ref{fig:susy_common_trf_perm}. 
+
+\begin{figure}[h]
+\centering 
+%\subfigure[]{
+\includegraphics[width=0.4\textwidth]{figures/susy_common/trf_perm}
+%}
+\caption{Example schema to choose the selected permutation with truth tagging.}\label{fig:susy_common_trf_perm}
+\end{figure}
 
 
 \subsection{Single top quark production}
