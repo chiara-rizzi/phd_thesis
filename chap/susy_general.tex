@@ -115,7 +115,40 @@ The modelling uncertainties are therefore estimated by comparing the expected va
 
 The main limitation for the estimate of the uncertainties is the statistical uncertainty of the \gls{mc} samples for the systematic variations, as these samples have in general less simulated events than the nominal sample. 
 More statistics is available at particle level, where the simulation of the interaction of the particles with the detector and the following event reconstruction (discussed in Section \ref{sec:detsim}) is not performed, so the evaluation of the \ttbar modelling uncertainties is carried out 
-comparing samples at particle level, with the assumption that the detector simulation has a similar effect on all the samples, independently of the \gls{mc} generator used. 
+comparing samples at particle level, with the assumption that the detector simulation has a similar effect on all the samples, 
+independently of the \gls{mc} generator used. Two further strategies are in place to allow enough statistics in the comparison of the different samples. 
+One consists in relaxing or removing some selections to both the \glspl{cr} and the corresponding \glspl{sr}/\glspl{vr}. 
+Another is to substitute the selection on the number of b-jets with truth-tagging, described in the next section.
+
+\subsubsection{Truth Tagging}
+
+With truth tagging, instead of keeping only the events that satisfy a certain criterion on the number of b-jets, all the events are kept and weighted. The weight is the probability that, out of all the jets in the event,
+a certain number pass the b-tagging identification.
+A different weight is computed for each b-tagging requirement, for example the probability for the event to have at least three b-tagged jets will be different form the probability of having exactly two. 
+For each jet, the probability to be b-tagged can be expressed as a function of the jet flavour ($f$), \pt and $\eta$:
+
+\begin{equation}
+\varepsilon \left(f,|\eta|,p_{\mathrm{T}}\right) \; .
+\label{eq:susy_common:btageff}
+\end{equation}
+
+\noindent If an event has $N$ jets, the probability of containing exactly one $b$-tag jet can be expressed as:
+\begin{equation}
+        P_{=1} = \sum\limits_{i=1}^N \left( \varepsilon_{i} \prod\limits_{i \neq j} \left( 1 - \varepsilon_{j} \right) \right) \,
+\end{equation}
+
+\noindent and in the same way, we can compute the probability for an inclusive b-tagging selection:
+\begin{equation}
+ \begin{split}
+        P_{=0} &= \prod\limits_{i=1}^N \left( 1 - \varepsilon_{j} \right) \; ,\\
+        P_{\geq 1} &= 1 - P_{=0} \; .
+ \end{split}
+\end{equation} 
+ 
+Beside decreasing the statistical uncertainty on the expected number of events, the other advantage of using truth tagging on particle-level samples is that it allows to emulate the reconstruction-level efficiency of the b-tagging algorithm: 
+at particle-level a jet is considered a b-tagged if it is matched to a b-quark in the \gls{mc} record within a certain cone. This criterion has 
+almost 100\% efficiency for real b-jets, and it leads to a null mistag rate. Instead with truth tagging, if the efficiency map used in Equation \ref{eq:susy_common:btageff} corresponds to the b-tagging efficiency measured for reconstructed jets, 
+it is possible to obtain the same efficiency to a b-tagging selection as in a reconstructed-level analysis. 
 
 
 
