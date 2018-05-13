@@ -95,6 +95,13 @@ available accuracy (NNLO+NNLL \cite{Czakon:2011xx}).
 
 \subsubsection{Truth-level classification: flavour of the associated jets}
 
+A truth-level classification is in place to study the \ttbar+jets background based on the flavour of the associated jets.
+This is done starting from the \gls{mc} information at particle level; stable particles are grouped into jets using the anti-k$_t$ algorithm 
+described in Section \ref{sec:obj:jetfinding} with R=0.4; only particle jets with $\pt > 15$ GeV and $|\eta|<2.5$ are considered. 
+he flavour of the jet is determined by matching them with the B- and C-hadrons that are in a cone of $\Delta R = 0.4$ from the jet. 
+If the event contains at least one jet matched to one or more B-hadrons, excluding the ones originating from the decay of the top quarks, the event 
+is classified as \ttbb. Otherwise, if at least one jet is matched to C-hadrons, excluding the ones from the decay of the top quarks or the W bosons, the event is classified as \ttcc. The remaining events are classified as \ttlight.
+
 
 \subsubsection{Modelling Uncertainties}
 
@@ -157,7 +164,7 @@ Some analysis variables are build using explicitly the kinematic characteristics
 \begin{figure}[h]
 \centering 
 %\subfigure[]{
-\includegraphics[width=0.4\textwidth]{figures/susy_common/trf_perm}
+\includegraphics[width=0.6\textwidth]{figures/susy_common/trf_perm}
 %}
 \caption{Example schema to choose the selected permutation with truth tagging.}\label{fig:susy_common_trf_perm}
 \end{figure}
