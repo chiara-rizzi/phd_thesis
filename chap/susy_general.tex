@@ -98,19 +98,24 @@ available accuracy (NNLO+NNLL \cite{Czakon:2011xx}).
 
 \subsubsection{Modelling Uncertainties}
 
-The normalization of \ttbar events is derived in the \glspl{cr}, therefore modelling uncertainties affect only the extrapolation from 
-the \gls{cr} to the corresponding \glspl{sr} and \glspl{vr}, and not the overall normalization. 
-The modelling uncertainties are therefore estimated by comparing the expected values for the \glspl{tf}, defined as the ratio of expected yields in the \gls{sr} or \gls{vr} over the expected yields in the corresponding \gls{cr}. 
-The modelling uncertainties considered in this thesis are:
+The modelling uncertainties on the \ttbar background considered in this thesis are:
 \begin{description}
 \item[Generator] The uncertainty associated with the choice of a specific \gls{mc} generator are accessed by comparing \PowhegBox with \aNLO, both interfaced with \HWpp v2.7.1 with the UEEE5 underlying-event tune.
 
 \item[Parton shower and hadronization] Also the choice of the generator that emulates the \gls{psh} and the hadronization is associated to an uncertainty, that is evaluated by comparing the nominal sample, generated with \PowhegBox and showered with \PY, to another sample generated again with \PowhegBox but showered with \HWpp v2.7.1. 
 
-\item[ISR/FSR] The systematic uncertainty deriving from the modelling of the \gls{isr} and \gls{fsr} is estimated by comparing samples
+\item[Radiation] The systematic uncertainty deriving from the modelling of the \gls{isr} and \gls{fsr} is estimated by comparing samples
 generated with \PowhegBox interfaced with two versions of \PY v6.428 with two different settings. One uses the PERUGIA2012radHi tune, has $h_{\rm{dump}}$ parameter set to twice the top mass and the renormalization and factorization scales set to twice the nominal value; these settings lead to an overall larger amount of radiation. The second sample uses a version of \PY with the PERUGIA2012radLo tune, has $h_{\rm{dump}}$ set to the top mass and the renormalization and factorization scales set to half of the nominal value, leading to a description of the event with less additional jets. 
 
 \end{description}
+
+The normalization of \ttbar events is derived in the \glspl{cr}, therefore modelling uncertainties affect only the extrapolation from 
+the \gls{cr} to the corresponding \glspl{sr} and \glspl{vr}, and not the overall normalization. 
+The modelling uncertainties are therefore estimated by comparing the expected values for the \glspl{tf}, defined as the ratio of expected yields in the \gls{sr} or \gls{vr} over the expected yields in the corresponding \gls{cr}. 
+
+The main limitation for the estimate of the uncertainties is the statistical uncertainty of the \gls{mc} samples for the systematic variations, as these samples have in general less simulated events than the nominal sample. 
+More statistics is available at particle level, where the simulation of the interaction of the particles with the detector and the following event reconstruction (discussed in Section \ref{sec:detsim}) is not performed, so the evaluation of the \ttbar modelling uncertainties is carried out 
+comparing samples at particle level, with the assumption that the detector simulation has a similar effect on all the samples, independently of the \gls{mc} generator used. 
 
 
 
