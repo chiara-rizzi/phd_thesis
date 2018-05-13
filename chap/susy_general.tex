@@ -86,12 +86,16 @@ Beside the pair of b-quarks, that are always present, the final state can be cha
 All the analysis regions considered in this thesis have a tight \met selection (the loosest one is $\met > 200$ GeV). Since the all-hadronic component 
 of the \ttbar background does not have any neutrino in the final state, it does not fulfill the \met requirement unless one or more jets are not measured correctly; this case produces a negligible background in the analysis regions, and is anyway included in the multi-jet estimate with the jet-smearing method described in Section \ref{sec:jet_smearing}.
 The \ttbar components that is dominating the background estimate are the dilepton and single-lepton one, both in the analysis regions that require reconstructed leptons as well as in the analysis regions that have a lepton veto.
-In the second case, the dominating component is the single-lepton one, where one lepton has a \pt too low to be reconstructed or falls out of acceptance. 
+In the second case, the dominating component is the single-lepton one, where one lepton is an hadronically decaying tau, has a \pt too low to be reconstructed or falls out of acceptance. 
 The \gls{mc} generator used to simulate \ttbar events produced in association with high-\pt jets is \PowhegBox v2 with the CT10 \gls{partdf} set \cite{Lai:2010vv} and interfaced with \PY v6.428 \cite{Sjostrand:2006za} for the \gls{psh} and hadronization. 
 The normalization is derived in \glspl{cr} designed to be kinematically as close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross section computed with the highest
 available accuracy (NNLO+NNLL \cite{Czakon:2011xx}).
 
 \subsubsection{Truth-level classification: \ttbar decays}
+
+When considering events at particle level,
+the \gls{mc} information can be used to reconstruct the decay chains that lead to the stable particles in the final state. 
+Subsequent decays of the $\tau$ lepton are not considered. 
 
 \subsubsection{Truth-level classification: flavour of the associated jets}
 
@@ -100,7 +104,7 @@ This is done starting from the \gls{mc} information at particle level; stable pa
 described in Section \ref{sec:obj:jetfinding} with R=0.4; only particle jets with $\pt > 15$ GeV and $|\eta|<2.5$ are considered. 
 he flavour of the jet is determined by matching them with the B- and C-hadrons that are in a cone of $\Delta R = 0.4$ from the jet. 
 If the event contains at least one jet matched to one or more B-hadrons, excluding the ones originating from the decay of the top quarks, the event 
-is classified as \ttbb. Otherwise, if at least one jet is matched to C-hadrons, excluding the ones from the decay of the top quarks or the W bosons, the event is classified as \ttcc. The remaining events are classified as \ttlight.
+is classified as \ttbb. Otherwise, if at least one jet is matched to C-hadrons, excluding the ones from the decay of the top quarks or the W bosons, the event is classified as \ttcc. \ttbb and \ttbb events are categorized together as \tthf events, where HF stands for heavy flavour, while the remaining ones are classified as \ttlight.
 
 
 \subsubsection{Modelling Uncertainties}
