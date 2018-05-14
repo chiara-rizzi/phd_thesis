@@ -146,7 +146,7 @@ For each jet, the probability to be b-tagged can be expressed as a function of t
 
 \noindent If an event has $N$ jets, the probability of containing exactly one $b$-tag jet can be expressed as:
 \begin{equation}
-        P_{=1} = \sum\limits_{i=1}^N \left( \varepsilon_{i} \prod\limits_{i \neq j} \left( 1 - \varepsilon_{j} \right) \right) \,
+        P_{=1} = \sum\limits_{i=1}^N \left( \varepsilon_{i} \prod\limits_{i \neq j} \left( 1 - \varepsilon_{j} \right) \right) \; ,
 \end{equation}
 
 \noindent and in the same way, we can compute the probability for an inclusive b-tagging selection:
@@ -179,6 +179,8 @@ Some analysis variables are build using explicitly the kinematic characteristics
 
 While the production of a \ttbar pair is mediated by strong interaction, in the case of a single top quark the production occurs through electroweak 
 couplings. There are three possible production channels, illustrated in Fig. \ref{fig:single_top_prod}: the Wt-channel, where a top quark and a W boson are produced, the t-channel, and the s-channel. 
+The Wt- and s-channels are simulated with the same generator choice as \ttbar: \PowhegBox v2, shwered with \PY v6.428.
+Single top events produced through t-channel processes are simulated with \PowhegBox v1, which uses the four-flavour scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set, with the four-flavour scheme as well, and the top quarks are decayed with \MadSpin \cite{Artoisenet:2012st}.
 
 \begin{figure}[h]
 \centering 

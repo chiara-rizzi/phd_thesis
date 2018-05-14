@@ -1,19 +1,19 @@
 \chapter{Standard Model and Supersymmetry}
 \label{chap:SMSUSY}
 
-This chapter presents an introduction to the \gls{sm} of particle physics, the theory that nowadays best describes the subatomic world. In Section \ref{sec:smsusy:sm} a general overview of the \gls{sm} is given. Section \ref{sec:smsusy:bsm} discusses the limitations of the SM, and some of the theoretical extensions proposed to overcome them. Finally Section \ref{sec:smsusy:susy} focuses on \gls{susy}, one of the most promising of these extensions. Throughout this Chapter (as well as in the rest of this thesis) we use Natural units; we will thus use energy units to describe masses, as the speed of light ($c$) and the Plank constant ($\hslash$) are set to unity.
+This chapter presents an introduction to the \gls{sm} of particle physics, the theory that nowadays best describes the subatomic world. In Section \ref{sec:smsusy:sm} a general overview of the \gls{sm} is given. Section \ref{sec:smsusy:bsm} discusses the limitations of the SM, and some of the theoretical extensions proposed to overcome them. Finally Section \ref{sec:smsusy:susy} focuses on \gls{susy}, arguably one of the most promising of these extensions. Throughout this chapter (as well as in the rest of this thesis) we will use natural units; we will thus use energy units to describe masses, as the speed of light ($c$) and the Planck constant ($\hslash$) are set to unity.
 
 
 \section{The Standard Model of Particle Physics}
 \label{sec:smsusy:sm}
 
-\gls{sm} is a renormalizable gauge quantum field theory based on the group $SU(3) \times SU(2) \times U(1)$. It has been developed in the second half of the 20th century \cite{Glashow:1961tr, Weinberg:1967tq, Salam:1980jd}, and since then the description that it gives of the elementary particles and of their interactions has been accurately tested by several experiments. Many experimental discoveries have been guided by the \gls{sm} predictions, including the discovery of the top quark \cite{Abachi:1994td, PhysRevLett.74.2626} and up to the latest one, the observation of the Higgs boson at the LHC in July 2012 \cite{Aad:2012tfa, Chatrchyan:2012xdj}. 
+The \gls{sm} is a renormalizable gauge quantum field theory based on the group $SU(3) \times SU(2) \times U(1)$. It was developed in the second half of the 20th century \cite{Glashow:1961tr, Weinberg:1967tq, Salam:1980jd}, and since then the description that it gives of the elementary particles and of their interactions has been accurately tested by several experiments. Many experimental discoveries have been guided by the \gls{sm} predictions, including the discovery of the top quark \cite{Abachi:1994td, PhysRevLett.74.2626} and up to the latest one, the observation of the Higgs boson at the \gls{lhc} in July 2012 \cite{Aad:2012tfa, Chatrchyan:2012xdj}. 
 
 \subsection{Particle Content of the Standard Model}
 
-In the \gls{sm}, particles are described as fields excitations. In the following sections, we introduce the quantum filed theory descriptions of fermions and bosons.
+In the \gls{sm}, particles are described as excitations of quantum fields. In the following sections, we introduce the quantum field theory descriptions of fermions and bosons.
 
-\subsubsection{Fermions}
+\subsubsection*{Fermions}
 
 Matter constituents are half-integer spin fields (\textit{fermions}). Fermions are further divided into two categories based on the type of interaction they experience:
 \begin{itemize}
@@ -21,7 +21,7 @@ Matter constituents are half-integer spin fields (\textit{fermions}). Fermions a
 \item \textit{Quarks} experience both the electroweak and the strong interaction
 \end{itemize}
 
-Both leptons and quarks come in three generations, and conventionally the numbering of these generations follows an order of increasing mass. While it is possible to observe free leptons, quarks exist only in bound states (\textit{hadrons}); this is because of confinement, discussed in Section \ref{sec:strong}. Hadrons built of three quarks have spin $\frac{1}{2}$ and are named \textit{barions}, while \textit{mesons} are formed by two quarks and have integer spin.
+Both leptons and quarks come in three generations, and conventionally the numbering of these generations follows an order of increasing mass. A summary of the \gls{sm} fermions is presented in Table \ref{tab:sm_fermions}. While it is possible to observe free leptons, quarks exist only in bound states (\textit{hadrons}); this is because of the confinement property of the strong interaction, discussed in Section \ref{sec:strong}. Hadrons built of three quarks have spin $\frac{1}{2}$ and are named \textit{barions}, while \textit{mesons} are formed by two quarks and have integer spin.
 
 
 The free Lagrangian of a fermion is given by:
@@ -31,7 +31,7 @@ The free Lagrangian of a fermion is given by:
  \label{eq:sm:dirac}
 \end{equation}
 
-\noindent where $\psi$ is the fermion field, $m$ its mass, $\gamma$ are the Dirac matrices and $\partial_{\mu}$ is the four-momentum derivative. A summary of the \gls{sm} fermions is presented in Table \ref{tab:sm_fermions}.
+\noindent where $\psi$ is the fermion field, $m$ its mass, $\gamma$ are the Dirac matrices and $\partial_{\mu}$ is the four-momentum derivative. 
 
 \begin{table}[h]
 \centering
@@ -43,14 +43,14 @@ The free Lagrangian of a fermion is given by:
 Generation & Flavour & Charge & Mass [GeV] & Flavour & Charge & Mass [GeV]\\
 \hline
 \hline
-\multirow{2}*{$1^{st}$} & $\nu_e$ & 0   & $< 2 \times 10^{-9}$  & u & 2/3 & $2.2 \times 10^-3$ \\
-                        & $e$     & -1  & $5.1 \times 10^{-10}$ & d & -1/3 & $4.8 \times 10^-3$ \\
+\multirow{2}*{$1^{st}$} & $\nu_e$ & 0   & $< 2 \times 10^{-9}$  & u & +2/3 & $2.2 \times 10^{-3}$ \\
+                        & $e$     & -1  & $5.1 \times 10^{-10}$ & d & -1/3 & $4.8 \times 10^{-3}$ \\
 \hline  
-\multirow{2}*{$2^{nd}$} & $\nu_\mu$ & 0   & $< 2 \times 10^{-9}$  & c & 2/3 & $ 1.275 $ \\
+\multirow{2}*{$2^{nd}$} & $\nu_\mu$ & 0   & $< 2 \times 10^{-9}$  & c & +2/3 & $ 1.275 $ \\
                         & $\mu$     & -1  & $ 0.10566  $ & s & -1/3 & $ 0.095 $ \\
 \hline                 
-\multirow{2}*{$3^{rf}$} & $\nu_\tau$ & 0   & $< 2 \times 10^{-9}$  & c & 2/3 & $ 173.5 $ \\
-                        & $\tau$     & -1  & $ 1.77 $ & s & -1/3 & $ 4.65 $ \\
+\multirow{2}*{$3^{rd}$} & $\nu_\tau$ & 0   & $< 2 \times 10^{-9}$  & t & +2/3 & $ 173.5 $ \\
+                        & $\tau$     & -1  & $ 1.77 $ & b & -1/3 & $ 4.65 $ \\
 \hline  
                  
 %\multirow{2}*{Weak} & $W^{+}$, $W^{-}$    &  +1, -1 &  	$80.385$ $\pm0.015$ \\%  & $10^{-6}$\\
@@ -61,7 +61,7 @@ Generation & Flavour & Charge & Mass [GeV] & Flavour & Charge & Mass [GeV]\\
 \end{table}
 
 
-\subsubsection{Bosons}
+\subsubsection*{Bosons}
 
 Particles with integer spin are referred to as \textit{bosons}. In the \gls{sm}, force carriers are described through spin-1 fields. 
 The \gls{sm} includes also a spin-0 particle, the Higgs boson. Is the interaction with the Higgs boson field that allows all the other elementary particles to acquire mass, as described in Section \ref{sec:smsusy:ew}.
@@ -69,21 +69,21 @@ The \gls{sm} includes also a spin-0 particle, the Higgs boson. Is the interactio
 The Klein-Gordon Lagrangian governs the kinematics of spin-0 neutral particles:
 
 \begin{equation}
-\mathcal{L}_{free} = \frac{1}{2} \partial^\mu \phi \partial_\mu \phi - \frac{1}{2} m^2 \phi ^2 ,
+\mathcal{L}_{\rm{free}} = \frac{1}{2} \partial^\mu \phi \partial_\mu \phi - \frac{1}{2} m^2 \phi ^2 ,
 \end{equation}
 
  
-\noindent while in the case of charged particles (described through a complex filed) the Lagrangian becomes:
+\noindent while in the case of charged particles (described through a complex field) the Lagrangian becomes:
 
 \begin{equation}
-\mathcal{L}_{free} =  \partial^\mu \phi \partial_\mu \phi^* -  m^2 \phi \phi^* .
+\mathcal{L}_{\rm{free}} =  \partial^\mu \phi \partial_\mu \phi^* -  m^2 \phi \phi^* .
 \end{equation}
 
 
-\noindent The two equations above describe scalar particles. In the case of a vector filed $A^\mu$, the expression of the Lagrangian is the following: 
+\noindent The two equations above describe scalar particles. In the case of a vector field $A^\mu$, the expression of the Lagrangian is the following: 
 
 \begin{equation}
-\mathcal{L}_{free} =  - \frac{1}{4} F^{\mu \nu}F_{\mu \nu} +  \frac{1}{2} m^2 A^\mu A_\mu \, .
+\mathcal{L}_{\rm{free}} =  - \frac{1}{4} F^{\mu \nu}F_{\mu \nu} +  \frac{1}{2} m^2 A^\mu A_\mu \, .
 \label{eq:lproca}
 \end{equation}
 
@@ -99,7 +99,7 @@ The Klein-Gordon Lagrangian governs the kinematics of spin-0 neutral particles:
 
 \subsection{Interactions and Gauge Invariance}
 
-The \gls{sm} describes all the interactions among elementary particles, except for gravity, for which nowadays no renormalizable quantum field theory is formulated. Table \ref{tab:sm_interazioni} presents a summary of the \gls{sm} interactions and the properties of the corresponding force carriers. More details about the strong and electroweak sectors are given in the following sections.
+The \gls{sm} describes all the interactions among elementary particles, except for gravity, for which nowadays no renormalizable quantum field theory is formulated. Table \ref{tab:sm_interazioni} presents a summary of the \gls{sm} interactions and the properties of the corresponding force carriers. More details about the strong and electroweak interactions are given in the following sections.
 
 \begin{table}[h]
 \centering
@@ -112,8 +112,8 @@ Strong & Gluons (g)  & 0 & 0 \\ % & 10 \\
 \hline
 Electromagnetic & Photon ($\gamma$) & $< 10^{-27}$ & 0 \\%& $10^{-2}$ \\
 \hline
-\multirow{2}*{Weak} & $W^{+}$, $W^{-}$    &  +1, -1 &  	$80.385$ $\pm0.015$ \\%  & $10^{-6}$\\
- & $Z^{0}$  & 0 &  	$91.1876$ $\pm0.0021$ \\% &  \\
+\multirow{2}*{Weak} & $W^{+}$, $W^{-}$    &  +1, -1 &  	$80.385$  \\% $\pm0.015$  & $10^{-6}$\\
+ & $Z^{0}$  & 0 &  	$91.1876$  \\% & $\pm0.0021$ \\
 \hline
 \end{tabular}
 \caption[Interaction in the Standard Model]{Interaction in the Standard Model. Here the different force carriers are listed, with their electric charges and masses \cite{Patrignani:2016xqp}.} %; $\alpha$ is the coupling constant of the different interactions.}
@@ -124,23 +124,23 @@ Electromagnetic & Photon ($\gamma$) & $< 10^{-27}$ & 0 \\%& $10^{-2}$ \\
 The interaction terms in the \gls{sm} Lagrangian are introduced by promoting an already existing global symmetry of the Lagrangian ($\theta$) to a \textit{local} one ($\theta(x)$) function of the space-time coordinates. 
 In general, given a Lagrangian globally invariant under a symmetry group, the fields transform as:
 \begin{equation}
-\psi \rightarrow e^{ig\theta_k \tau_k} \psi  
+\psi \rightarrow e^{ig\theta_k \tau_k} \psi  \; ,
 \end{equation}
 
 \noindent where $\tau_k$ are the generators of the group and obey commutation relations: 
 \begin{equation}
-\left[ \tau_i, \tau_j \right] = i f_{ijk} \tau^k \, . \
+\left[ \tau_i, \tau_j \right] = i f_{ijk} \tau^k \; . 
 \end{equation}
 
-\noindent $f_{ijk}$ is the structure constant of the group and is always zero for Abelian groups. Promoting this invariance to a global one ($\theta_k \rightarrow \theta_k(x)$) implies adding to the theory:
+\noindent $f_{ijk}$ is the structure constant of the group and is always zero for Abelian groups. Promoting this gauge invariance to a global one ($\theta_k \rightarrow \theta_k(x)$) implies adding to the theory:
 \begin{itemize}
 \item A number of massless gauge fields $W^\mu_k$ equal to the number of generators of the symmetry group, that transform as 
 \begin{equation}
-W^\mu_k \rightarrow W^\mu_k - \partial^\mu \theta_k - g \epsilon_{klm} \theta^m W^\mu_m 
+W^\mu_k \rightarrow W^\mu_k - \partial^\mu \theta_k - g \epsilon_{klm} \theta^m W^\mu_m \; .
 \end{equation}
 \item A \textit{covariant derivative}: 
 \begin{equation}
-D^\mu = \partial^\mu + ig\tau^kW^\mu_k 
+D^\mu = \partial^\mu + ig\tau^kW^\mu_k \; ,
 \end{equation}
 
 \noindent that substitutes the standard derivative in the Lagrangian.
@@ -152,26 +152,26 @@ F^{\mu \nu}_k = \partial_\mu W_k^\nu - \partial_\nu W_k^\mu - g f_k^{lm} W^\mu_l
 \end{itemize}
 
 
-The \gls{sm} is a theory invariant under $SU(3)_\mathrm{C} \times SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$. Imposing local invariance under $SU(3)_\mathrm{C}$ leads to the theory of strong interactions, while $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ is the symmetry whose breaking gives origin to the electroweak interactions. 
+The \gls{sm} is a theory invariant under $SU(3)_{C} \times SU(2)_{L} \times U(1)_{Y}$. Imposing local invariance under $SU(3)_{C}$ leads to the theory of strong interactions, while $SU(2)_{L} \times U(1)_{Y}$ is the symmetry whose breaking gives origin to the electroweak interactions. 
 
 \subsection{Strong Interaction}
 \label{sec:strong}
 
-\gls{qcd} is the theory that describes strong interactions, and it is invariant under the symmetry group $SU(3)_\mathrm{C}$, where the subscript C refers to the \textit{color}, the quantum number associated with these interactions; this can assume three possible values denoted with red, blue and green. The observable states, hadrons, are color singlets, while quarks (anti-quarks) carry only one color (anti-color) charge. Since the symmetry group is non-Abelian, also the corresponding eight gauge bosons (\textit{gluons}) carry a color charge (bi-color, with one color and one different anti-color) and therefore interact not only with quarks but also among themselves. Since $SU(3)_\mathrm{C}$ is believed to be an exact symmetry,  gluons are massless. 
+\gls{qcd} is the theory that describes strong interactions, based on the symmetry group $SU(3)_\mathrm{C}$, where the subscript C refers to the \textit{color}, the quantum number associated with these interactions; this can assume three possible values denoted with red, blue and green. The observable states, hadrons, are color singlets, while quarks (anti-quarks) carry only one color (anti-color) charge. Since the symmetry group is non-Abelian, also the corresponding eight gauge bosons (\textit{gluons}) carry a color charge (bi-color, with one color and one different anti-color) and therefore interact not only with quarks but also among themselves. Since $SU(3)_\mathrm{C}$ is believed to be an exact symmetry,  gluons are massless. 
 
-The renormalization of a gauge theory leads to the definition of \textit{running coupling constants}, whose value depend on the energy scale where they are evaluated. In \gls{qcd}, at leading order the dependence of the coupling constant from the energy scale is given by:
+The renormalization of a gauge theory leads to the definition of running coupling constants, whose value depend on the energy scale at which they are evaluated. In \gls{qcd}, at leading order the dependence of the coupling constant on the energy scale $Q$ is given by:
 
 \begin{equation}
-\alpha_\mathrm{s}(Q^2)=\frac{12\pi}{\left(11N_\mathrm{C}-2n_\mathrm{f}\right)\log{\frac{Q^2}{\Lambda_\mathrm{QCD}^2}}} 
+\alpha_\mathrm{s}(Q^2)=\frac{12\pi}{\left(11N_\mathrm{C}-2n_\mathrm{f}\right)\log{\frac{Q^2}{\Lambda_\mathrm{QCD}^2}}} \; , 
 \label{eq:alfaQCD}
 \end{equation}
 
-\noindent where $N_\mathrm{C}$ is the number of colors, $n_\mathrm{f}$ is the number of quark flavors that are active (i.e. whose mass is lower than the energy scale) and $\Lambda_\mathrm{QCD}$ is the infrared cutoff scale that sets the limit of validity of the perturbative approximation. In \gls{qcd} $N_\mathrm{C} = 3$, so for $n_\mathrm{f}<16$ the coupling constants decreases with the increase of the energy scale of the process considered. This structure has important consequences on the properties of quarks and gluons:
+\noindent where $N_\mathrm{C}$ is the number of colors, $n_\mathrm{f}$ is the number of quark flavors that are active (i.e. whose mass is lower than the energy scale) and $\Lambda_\mathrm{QCD}$ is the infrared cutoff scale that sets the limit of validity of the perturbative approximation. In \gls{qcd} $N_\mathrm{C} = 3$, so for $n_\mathrm{f}<16$ the coupling constant decreases with the increase of the energy scale of the process considered. This behavior has important consequences on the properties of the strong interaction:
 
 \begin{itemize}
-\item At high $Q^2$ ($\rightarrow$ small distances), $\alpha_\mathrm{s}$ becomes small enough for the perturbative approximation to be correct. In this case quarks and gluons behave as free particles (\textit{asymptotic freedom}) \cite{PhysRevLett.30.1343, PhysRevLett.30.1346}.
-\item When the momentum transfer is small ($\rightarrow$ large distances) $\alpha_\mathrm{s}$ is large; this gives rise to \textit{confinement}: quarks can not be observed as isolated particles, as it is not possible to extract individual quarks from hadrons. When the distance between two quarks is increased, the potential energy increases as well, up to the point when it is energetically more favorable to create from the vacuum a quark-antiquark pair and thus a new hadron is formed.
-\item In a collider experiment, quarks and gluons will create a collimated spray of hadrons (\textit{jets}).
+\item At high $Q^2$ ($\rightarrow$ small distances), $\alpha_\mathrm{s}$ becomes small enough for the perturbative approximation to be correct. In this case quarks and gluons behave as free particles (asymptotic freedom) \cite{PhysRevLett.30.1343, PhysRevLett.30.1346}.
+\item When the momentum transfer is small ($\rightarrow$ large distances) $\alpha_\mathrm{s}$ is large; this gives rise to confinement: quarks can not be observed as isolated particles, as it is not possible to extract individual quarks from hadrons. When the distance between two quarks is increased, the potential energy increases as well, up to the point when it is energetically more favorable to create from the vacuum a quark-antiquark pair and thus a new hadron is formed.
+\item In a collider experiment, quarks and gluons will create a collimated spray of hadrons (jets).
 \end{itemize}
 
 The evolution of the \gls{qcd} coupling constant with the energy scale has been verified experimentally, as shown in Fig. \ref{fig:sm:alphas} \cite{Bethke:2012jm}.
@@ -198,7 +198,7 @@ The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions,
 \label{eq:sm:LR}
 \end{equation}
 
-\noindent where $\gamma_5$ is defined as $\gamma_5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3 $. Looking back at Eq. \ref{eq:sm:dirac}, it can be noted that, if we decompose the fermion filed into its left-handed and right-handed components, the derivative term keeps $\psi_L$ and $\psi_R$ separated, while the mass term mixes them:
+\noindent where $\gamma_5$ is defined as $\gamma_5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3 $. Looking back at Eq. \ref{eq:sm:dirac}, it can be noted that, if we decompose the fermion field into its left-handed and right-handed components, the derivative term keeps $\psi_L$ and $\psi_R$ separated, while the mass term mixes them:
 \begin{equation}
 -m \bar \psi \psi = -m \bar \psi P_L^2 \psi - m \bar \psi P_R^2 \psi
 	= -m \bar \psi_R \psi_L - m \bar \psi_L \psi_R \; .
@@ -207,7 +207,7 @@ The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions,
 
 \noindent The covariant derivative for the  $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ group is:
 \begin{equation}
-\mathcal{D}^{\mu} = \partial^{\mu} + i \frac{g'}{2} B^\mu Y + ig W^\mu_k T^k
+\mathcal{D}^{\mu} = \partial^{\mu} + i \frac{g'}{2} B^\mu Y + ig W^\mu_k T^k \; ,
 \label{eq:sm:covD}
 \end{equation}
 
@@ -225,24 +225,24 @@ Q = \frac{Y}{2} + T_3
 
 \noindent where $Y$ is the hypercharge quantum number and $T_3$ is the quantum number of the third component of the isospin. 
 
-In the case of an $SU(2)$ symmetry, it is not possible to add directly to the lagrangian a mass term for the vector bosons of the form in Eq. \ref{eq:lproca}, as it would spoil the $SU(2)$ local invariance. The Higgs-Englert-Brout mechanism \cite{Englert:1964et, Higgs:1964pj, Higgs:1964ia} solves this problem through \gls{ssb} of the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ invariance. The \gls{ssb} is obtained by adding to the theory one extra isospin doublet of complex scalar components (\textit{Higgs field}):
+In the case of an $SU(2)$ symmetry, it is not possible to add directly to the Lagrangian a mass term for the vector bosons of the form in Eq. \ref{eq:lproca}, as it would spoil the $SU(2)$ local invariance. The Higgs-Englert-Brout mechanism \cite{Englert:1964et, Higgs:1964pj, Higgs:1964ia} solves this problem through \gls{ssb} of the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ invariance. The \gls{ssb} is obtained by adding to the theory one extra isospin doublet of complex scalar components (\textit{Higgs field}):
 
 \begin{equation}
-	\Phi = \left( \begin{array}{c} \phi^+  \\ \phi^0 \end{array} \right) \;
+	\Phi = \left( \begin{array}{c} \phi^+  \\ \phi^0 \end{array} \right) \; .
 \end{equation}
 %	= \frac{1}{\sqrt{2}} \left( \begin{array}{c} \phi_1 + i \phi_2 \\ \phi_3 + i \phi_4 \end{array} \right)
 
-\noindent This doublet has hypercharge Y=1 and isospin $T=\frac{1}{2}$; the first component is positively charged, while the second one is electrically neutral. The Lagrangian for this new field includes a kinetic and a potential term:
+\noindent This doublet has hypercharge $Y=1$ and isospin $T=\frac{1}{2}$; the first component has positive electric charge, while the second one is electrically neutral. The Lagrangian for this new field includes a kinetic and a potential term:
 
 \begin{equation}
-	\mathcal{L}_{\Phi} = ( \mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi) - V(\Phi) 
+	\mathcal{L}_{\Phi} = ( \mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi) - V(\Phi) \; ,
 	\label{eq:LHiggs}
 \end{equation}
 
 \noindent where $\mathcal{D}_{\mu}$ is the covariant derivative defined in Eq. \ref{eq:sm:covD} and the potential $V(\Phi)$ is given by:
 
 \begin{equation}
- V(\Phi) =  \mu^2 \Phi^{\dagger} \Phi + \lambda (\Phi^{\dagger} \Phi)^2 \, . \
+ V(\Phi) =  \mu^2 \Phi^{\dagger} \Phi + \lambda (\Phi^{\dagger} \Phi)^2 \, . 
 	\label{eq:hpot}
 \end{equation}
 
@@ -252,7 +252,7 @@ In the case of an $SU(2)$ symmetry, it is not possible to add directly to the la
 \item If $\lambda > 0$ and $\mu^2 > 0$ there is only one solution to the minimization of the potential, $\Phi=0$. This case is shown in Fig. \ref{fig:sm:HiggsV}(a).
 \item If $\lambda > 0$ and $\mu^2 < 0$, the field acquires a \gls{vev} as the minima is not at zero; it lies instead on the points of the circumference such that:
 \begin{equation}
-\Phi^{\dagger} \Phi = \frac{\mu^2}{2 \lambda}  \equiv \frac{v^2}{2} \;
+\Phi^{\dagger} \Phi = \frac{\mu^2}{2 \lambda}  \equiv \frac{v^2}{2} \; .
 \end{equation}
 \noindent Fig. \ref{fig:sm:HiggsV}(b) illustrates this case.
 \end{itemize}
@@ -260,20 +260,20 @@ In the case of an $SU(2)$ symmetry, it is not possible to add directly to the la
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.49\textwidth]{produce_plots/sm/higgs_posmu2.pdf}}
-\subfigure[]{\includegraphics[width=0.49\textwidth]{produce_plots/sm/higgs_negmu2.pdf}}
-\caption{Higgs potential in the case $\lambda > 0$ and $\mu^2 > 0$ (a) and $\lambda > 0$ and $\mu^2 < 0$ (b).}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{produce_plots/sm/higgs_posmu2.pdf}\label{fig:sm:HiggsV_1}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{produce_plots/sm/higgs_negmu2.pdf}\label{fig:sm:HiggsV_2}}
+\caption{Higgs potential in the case \subref{fig:sm:HiggsV_1} $\lambda > 0$ and \subref{fig:sm:HiggsV_2} $\mu^2 > 0$ and $\lambda > 0$ and $\mu^2 < 0$.}
 \label{fig:sm:HiggsV}
 \end{figure}
 
-Up to this point the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ symmetry is still intact, but the explicit choice of one of the infinite possible vacuum states for the Higgs field breaks the symmetry. According to the Goldstone theorem \cite{Goldstone:1962es}, the breaking of a continuous symmetry leads to the appearance of new massless scalar particles as allowed excitations. These new degrees of freedom can be absorbed by the existing gauge bosons, thus giving them mass. To meet the experimental requirement of a massless photon, the choice of the Higgs vacuum has not to break the electromagnetic symmetry ($U(1)_{EM}$), so the component of the Higgs doublet that acquires a \gls{vev} is the neutral one:
+Up to this point the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ symmetry is still intact, but the explicit choice of one of the infinite possible vacuum states for the Higgs field breaks the symmetry. According to the Goldstone theorem \cite{Goldstone:1962es}, the breaking of a continuous symmetry leads to the appearance of new massless scalar particles as field excitations. These new degrees of freedom are absorbed by the existing gauge bosons, thus giving them mass. To meet the experimental requirement of a massless photon, the choice of the Higgs vacuum has not to break the electromagnetic symmetry ($U(1)_{EM}$), so the component of the Higgs doublet that acquires a \gls{vev} is the neutral one:
 
 \begin{equation}
 	\Phi_0 = \frac{1}{\sqrt{2}} \left( \begin{array}{c} 0 \\ v  \end{array} \right) \, . \
 \label{eq:hvphi}
 \end{equation}
 
-We can then expand small excitations around the minimum:
+We can then expand the field $\Phi$ considering small excitations around the minimum:
 
 \begin{equation}
 	\Phi = \frac{e^{i \vec{\sigma} \cdot \vec{\theta}(x)/v }}{\sqrt{2}} \left( \begin{array}{c} 0 \\ v + \phi(x) \end{array} \right) \, . \
@@ -312,7 +312,7 @@ The $(\mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi)$ term in Eq. \r
 + \frac{1}{2}\, m_Z^2\, Z_\mu Z^\mu \right\}\, +\, \mathcal{L}_H\, 
 \end{equation}
 
-\noindent where $\mathcal{L}_H$ denotes all the terms in $\mathcal{L}_{\Phi}$ that involve only the Higgs filed: Higgs mass, cubic and quadratic self-interaction. Note that the coupling of the gauge bosons with the Higgs filed is proportional to the square of the boson mass.
+\noindent where $\mathcal{L}_H$ denotes all the terms in $\mathcal{L}_{\Phi}$ that involve only the Higgs field: Higgs mass, cubic and quadratic self-interaction. Note that the coupling of the gauge bosons with the Higgs field is proportional to the square of the boson mass.
 At tree level the resulting masses of the gauge bosons are:
 
 \begin{equation}
@@ -324,7 +324,7 @@ m_W &= \frac{vg}{2} =  \cos\theta_W m_Z \, .s
 \end{equation}
 
 
-The Higgs-Englert-Brout mechanism generates automatically a mass term for the gauge bosons, that does not break the global underlying $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ symmetry. The Higgs field is used also to make fermion mass terms arise, but in this case it is necessary to add the couplings by hand. The fermion masses are assumed to be proportional to the strength of the coupling and, unlike what happens with the masses of the gauge bosons, they are not related to other parameters of the theory. While the Higgs filed itself is enough to give mass to down-type fermions, the mass term for the down type ones requires the introduction of the complex conjugate of the Higgs field ($\Phi_C$):
+The Higgs-Englert-Brout mechanism generates automatically a mass term for the gauge bosons, that does not break the global underlying $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ symmetry. The Higgs field is used also to make fermion mass terms arise, but in this case it is necessary to add the couplings by hand. The fermion masses are assumed to be proportional to the strength of the coupling and, unlike what happens with the masses of the gauge bosons, they are not related to other parameters of the theory. While the Higgs field itself is enough to give mass to down-type fermions, the mass term for the down type ones requires the introduction of the complex conjugate of the Higgs field ($\Phi_C$):
 
 \begin{equation}
  \Phi_C = i \sigma^2 \Phi^* 
@@ -388,9 +388,9 @@ Also the production cross section is found to be in agreement with the \gls{sm} 
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/CMS-HIG-15-002_Figure_019}}
-\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/CMS-HIG-15-002_Figure_007}}
-\caption{(a) Best fit values as a function of particle mass for the combination of ATLAS and CMS data. (b) Best fit value of Higgs production cross section times branchng fraction in different production and decay modes. Figure from \cite{Khachatryan:2016vau}.}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/CMS-HIG-15-002_Figure_019}\label{fig:sm:h_mass}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/CMS-HIG-15-002_Figure_007}\label{fig:sm:h_xsec}}
+\caption{\subref{fig:sm:h_mass} Best fit values as a function of particle mass for the combination of ATLAS and CMS data. \subref{fig:sm:h_xsec} Best fit value of Higgs production cross section times branchng fraction in different production and decay modes. Figure from \cite{Khachatryan:2016vau}.}
 \label{fig:sm:h_couplings_mass}
 \end{figure}
 
@@ -413,7 +413,7 @@ Neutrino oscillations \cite{PhysRevLett.81.1562} are possible only if there is a
 
 \subsubsection*{Dark Matter and Dark Energy}
 
-The \gls{sm} describes only baryonic matter; this accounts for about 5\% of the universe composition. Even though no direct observation of it has been made so far, we know there is also another type of matter, that does not participate to electroweak interactions and  accounts for about 27\% of the universe composition.  Since this type of matter does not reflect light, it is known as \textit{dark matter}. The presence of dark matter has been postulated for the first time from the rotational velocity of galaxies \cite{Zwicky:1937zza}, but this evidence has now been confirmed also by other observations, including the analysis of the cosmic microwave background from the WMAP and Plank collaborations \cite{Larson:2010gs} \cite{Ade:2013zuv}. The sum of baryonic and dark matter describes about 32\% of the universe. The remaining part is the energy responsible for the accelerated expansion of the universe, \textit{dark energy}. While some extensions of the \gls{sm} provide candidates for dark matter, at the moment no theory provides one for dark energy.
+The \gls{sm} describes only baryonic matter; this accounts for about 5\% of the universe composition. Even though no direct observation of it has been made so far, we know there is also another type of matter, that does not participate to electroweak interactions and  accounts for about 27\% of the universe composition.  Since this type of matter does not reflect light, it is known as \textit{dark matter}. The presence of dark matter has been postulated for the first time from the rotational velocity of galaxies \cite{Zwicky:1937zza}, but this evidence has now been confirmed also by other observations, including the analysis of the cosmic microwave background from the WMAP and Planck collaborations \cite{Larson:2010gs} \cite{Ade:2013zuv}. The sum of baryonic and dark matter describes about 32\% of the universe. The remaining part is the energy responsible for the accelerated expansion of the universe, \textit{dark energy}. While some extensions of the \gls{sm} provide candidates for dark matter, at the moment no theory provides one for dark energy.
 
 
 \subsubsection*{CP Violation}
@@ -422,7 +422,7 @@ CP-violating processes are needed in order to produce asymmetry between the matt
 
 \subsubsection*{Gravity}
 
-Gravity is the only force acting on elementary particles that is not described by the \gls{sm}. In fact, not only is not described by the \gls{sm}, but the simple attempt to quantize gravity through a spin-2  mediator (\textit{graviton}) leads to a non-renormalizable theory. The strength of gravity is expected to be comparable to the one of the other forces at the \textit{Plank scale} ($\Lambda_{Plank}$, $10^{19}$ GeV). 
+Gravity is the only force acting on elementary particles that is not described by the \gls{sm}. In fact, not only is not described by the \gls{sm}, but the simple attempt to quantize gravity through a spin-2  mediator (\textit{graviton}) leads to a non-renormalizable theory. The strength of gravity is expected to be comparable to the one of the other forces at the \textit{Planck scale} ($\Lambda_{Planck}$, $10^{19}$ GeV). 
 
 \subsection{Aesthetic Shortcomings}
 \label{sec:sm:aesthetics}
@@ -439,7 +439,7 @@ The expression for the mass of the Higgs boson in Eq. \ref{eq:sm:Higgsmass} cont
 \label{eq:divhf}
 \end{equation}
 
-where $\Lambda_{UV}^2$ is the cut-off scale, identified with the limit of validity of the theory. If we assume that no physics \gls{bsm} is present up to $\Lambda_{Plank}$, having corrections to the mass proportional to $\Lambda_{Plank}$ requires a fine tuning of the parameters of the order of $\frac{m_H}{\Lambda_{Plank}} \approx 10^{-17}$. This is due to the strong hierarchy of the scales involved (\textit{hierarchy problem}) \cite{Weinberg:1975gm, PhysRevD.20.2619, PhysRevD.14.1667, tHooft:1979rat}. Since the correction to the mass is proportional to the Yukawa coupling of the fermion, it is clear that the most important correction is the one given by the top quark, whose Yukawa coupling is $y_t \approx 0.996$. 
+where $\Lambda_{UV}^2$ is the cut-off scale, identified with the limit of validity of the theory. If we assume that no physics \gls{bsm} is present up to $\Lambda_{Planck}$, having corrections to the mass proportional to $\Lambda_{Planck}$ requires a fine tuning of the parameters of the order of $\frac{m_H}{\Lambda_{Planck}} \approx 10^{-17}$. This is due to the strong hierarchy of the scales involved (\textit{hierarchy problem}) \cite{Weinberg:1975gm, PhysRevD.20.2619, PhysRevD.14.1667, tHooft:1979rat}. Since the correction to the mass is proportional to the Yukawa coupling of the fermion, it is clear that the most important correction is the one given by the top quark, whose Yukawa coupling is $y_t \approx 0.996$. 
 
 Despite this, it can still be argued that the appearance of the $\Lambda_{UV}$ divergence is connected more to the regularization schema rather than the theory itself. But even in this case, the value of 125 GeV for the Higgs mass remains difficult to justify. The \gls{sm} Lagrangian does not have any symmetry that prevents the Higgs boson to couple to new \gls{bsm} particles. If we assume the existence of a complex scalar that couples with the Higgs field through $ -y_S|\phi|^2 |S|^2$, the correction to the Higgs propagator, shown in Fig. \ref{fig:sm:h_corr}(b), is given by:
 
@@ -451,14 +451,14 @@ Despite this, it can still be argued that the appearance of the $\Lambda_{UV}$ d
 \label{eq:divhs}
 \end{equation}
 
-\noindent Beside the first term, proportional to $\Lambda_{UV}^2$, that can be thought as a consequence of the cut-off regularization, we also have a second  term proportional to $m_S^2$. If we assume that \gls{bsm} physics exists and that, since it has not yet been observed, $m_S$ must be large, this contribution drives $m_H$ to high values. A similar argument applies even if the new \gls{bsm} sector and the Higgs filed do not couple directly but, for example, share a gauge interaction.
+\noindent Beside the first term, proportional to $\Lambda_{UV}^2$, that can be thought as a consequence of the cut-off regularization, we also have a second  term proportional to $m_S^2$. If we assume that \gls{bsm} physics exists and that, since it has not yet been observed, $m_S$ must be large, this contribution drives $m_H$ to high values. A similar argument applies even if the new \gls{bsm} sector and the Higgs field do not couple directly but, for example, share a gauge interaction.
 
 \begin{figure}[ht]
 \centering
 \subfigure[]
-{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_f.pdf}}
-\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_s.pdf}}
-\caption{Correction to the Higgs boson propagator form the interaction with a fermion (a) and with a scalar (b), figure from Ref. \cite{Martin:1997ns}.}
+{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_f.pdf}\label{fig:sm:h_corr_fermion}}
+\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/theory/h_corr_s.pdf}\label{fig:sm:h_corr_scalar}}
+\caption{Correction to the Higgs boson propagator form the interaction with \subref{fig:sm:h_corr_fermion} a fermion and \subref{fig:sm:h_corr_scalar} a scalar, figure from Ref. \cite{Martin:1997ns}.}
 \label{fig:sm:h_corr}
 \end{figure}
 
@@ -536,7 +536,7 @@ Q |{\rm fermion}\rangle = |{\rm boson }\rangle \; .
 The irreducible representations of the \gls{susy} algebra are the \textit{supermultiplets}, that contain both bosons and fermions. Particles within the same supermultiplet are known as \textit{superpartners} of each others. Superpartners of the \gls{sm} particles are indicated with the same letter but with a $\sim$ on top of it. Depending on their particle content, supermultiplets are classified in different categories:
 
 \begin{itemize}
-\item \textit{Chiral supermultiplets} are the ones containing the \gls{sm} fermions and their superpartners. Each Dirac fermionic filed can be seen as two separate Weyl filed, each of which has two degrees of freedom and is associated with a complex scalar as a superpartner. The name given to superpartners of fermions is \textit{sfermions} (e.g. the superpartner of the top is the \textit{stop} and the superpartner of the bottom is the \textit{sbottom}). Since chiral supermultiplets are formed by spin-0 and spin-$\frac{1}{2}$ particles, they contain also the \gls{susy} extended Higgs sector, as described in Section \ref{sec:susy:Higgs}.
+\item \textit{Chiral supermultiplets} are the ones containing the \gls{sm} fermions and their superpartners. Each Dirac fermionic field can be seen as two separate Weyl field, each of which has two degrees of freedom and is associated with a complex scalar as a superpartner. The name given to superpartners of fermions is \textit{sfermions} (e.g. the superpartner of the top is the \textit{stop} and the superpartner of the bottom is the \textit{sbottom}). Since chiral supermultiplets are formed by spin-0 and spin-$\frac{1}{2}$ particles, they contain also the \gls{susy} extended Higgs sector, as described in Section \ref{sec:susy:Higgs}.
 
 \item \textit{Gauge supermultiplets} contain gauge bosons and their superpartners. Each spin-1 \gls{sm} boson is associated to a spin-$\frac{1}{2}$ Weyl fermion, as before the electroweak symmetry breaking all the gauge bosons are massless and have only two degrees of freedom. The name of the superpartners of the gauge bosons is the same as the corresponding \gls{sm} particle but with a -ino suffix (e.g. the gluon superpartner is the \textit{gluino}). 
 
@@ -698,7 +698,7 @@ Once the \gls{mssm} particles are introduced the computation of the evolution of
 \label{fig:susy:gut}
 \end{figure}
 
-\subsubsection{MSSM Higgs Sector}
+\subsubsection*{MSSM Higgs Sector}
 \label{sec:susy:Higgs}
 
 To maintain an holomorphic superpotential, \gls{susy} requires at least two SU(2) doublets: one to give mass to up-type quarks ($H_u$) and one to give mass to the the down-type quarks ($H_d$). The two doublets provide 8 degrees of freedom. Three of them are the ones needed to give masses to the gauge bosons, while the other 5 become observable particles:
@@ -709,7 +709,7 @@ To maintain an holomorphic superpotential, \gls{susy} requires at least two SU(2
 \end{itemize}
 
 
-\subsubsection{R-parity}
+\subsubsection*{R-parity}
 
 The \gls{mssm} does not include all the possible terms that are gauge- and \gls{susy}-invariant, to avoid interactions that would violate the lepton or baryon number. \textit{Matter parity}, defined as:
 
@@ -764,7 +764,7 @@ Not all the superpartners have the same relevance in the contribution to the Hig
 %\label{eq:tune}
 %-\frac{m_Z^2}{2} = |\mu|^2 + m_{H_u}^2.
 %\end{equation}
-%Where $\mu$ is the Higgsino mass parameter and $m_{H_u}$ the mass term for the Higgs filed that gives mass to down-type quarks. While \ref{eq:tune} holds only at tree level, it still means that if the masses of the superpartners in the Higgs sector are too large, fine-tuned loop corrections will be required to bring the left side of the equation down to the observed value of the $Z$-boson mass.
+%Where $\mu$ is the Higgsino mass parameter and $m_{H_u}$ the mass term for the Higgs field that gives mass to down-type quarks. While \ref{eq:tune} holds only at tree level, it still means that if the masses of the superpartners in the Higgs sector are too large, fine-tuned loop corrections will be required to bring the left side of the equation down to the observed value of the $Z$-boson mass.
 
 %\begin{equation}
 %\Delta \equiv \frac{2\delta m_{H}^{2}}{m_{h}^{2}}.
@@ -837,18 +837,18 @@ When \gls{susy} is treated as a local symmetry, it has to include also gravity, 
 m_{\frac{3}{2}} \approx \frac{\langle F \rangle}{\Lambda_P} \; ,
 \label{mgrav}
 \end{equation}
-\noindent where $\langle F \rangle$ is the \gls{vev} of the \gls{susy}-breaking $F$-term, as it has to vanish both if \gls{susy} is an exact symmetry and if the Plank scale is extremely high (and thus gravity is negligible). 
+\noindent where $\langle F \rangle$ is the \gls{vev} of the \gls{susy}-breaking $F$-term, as it has to vanish both if \gls{susy} is an exact symmetry and if the Planck scale is extremely high (and thus gravity is negligible). 
 
 For any \gls{susy}-breaking mechanism, the \gls{mssm} soft term do not appear at tree level, but are generated through radiative corrections. \gls{susy} breaking happens in a \textit{hidden sector}, while the \gls{mssm} particle live in the visible sector, and experiment the consequences of the spontaneous \gls{susy} breaking happening in the hidden sector through interactions that couple both sectors. Depending on which interaction is driving the communication between the \gls{susy}-breaking sector and the \gls{mssm}, we can distinguish two main mechanisms.
 
 \subsubsection*{PMSB} 
 
-If supergravity and the other new physics effects that arise at the Plank scale are the responsible of the connection of the hidden sector with the \gls{mssm} sector, then the order of magnitude of the soft parameters in the \gls{mssm} is:
+If supergravity and the other new physics effects that arise at the Planck scale are the responsible of the connection of the hidden sector with the \gls{mssm} sector, then the order of magnitude of the soft parameters in the \gls{mssm} is:
 \begin{equation}
 m_{soft} \approx \frac{\langle F \rangle}{\Lambda_P} \; .
 \label{msoft_PMSB}
 \end{equation}
-\noindent This ratio is motivated by the observation that $m_{soft}$ should vanish both in the limit where \gls{susy} is an exact symmetry, as well as in the limit where the Plank mass is very large and the interactions mediated by gravity are not anymore sizable. We refer to this scenario as Plank-scale-mediated-supersymmetry-breaking (PMSB) \cite{PhysRevLett.49.970, BARBIERI1982343, IBANEZ198273, PhysRevD.27.2359}. In PMSB models, the gravitino mass has the same order of magnitude as the mass of the other superpartners (as we can notice by comparing Eq.\ref{mgrav} and Eq. \ref{msoft_PMSB}), and it can not therefore be particularly light. 
+\noindent This ratio is motivated by the observation that $m_{soft}$ should vanish both in the limit where \gls{susy} is an exact symmetry, as well as in the limit where the Planck mass is very large and the interactions mediated by gravity are not anymore sizable. We refer to this scenario as Planck-scale-mediated-supersymmetry-breaking (PMSB) \cite{PhysRevLett.49.970, BARBIERI1982343, IBANEZ198273, PhysRevD.27.2359}. In PMSB models, the gravitino mass has the same order of magnitude as the mass of the other superpartners (as we can notice by comparing Eq.\ref{mgrav} and Eq. \ref{msoft_PMSB}), and it can not therefore be particularly light. 
 
 \subsubsection*{GMSB}
 
@@ -858,7 +858,7 @@ m_{soft} \approx \frac{\langle F \rangle}{M_\mathrm{mediator}} \; .
 \label{msoft_GMSB}
 \end{equation}
 \gls{sm} gauge bosons are not affected by the loop corrections induced by the mediators as their mass is protected by the gauge symmetry.
-If we compare Eq. \ref{msoft_GMSB} with Eq. \ref{mgrav}, we can see that as long as the mass of the mediators is lower than the Plank scale, the gravitino can be significantly lighter than the rest of the superpartners spectrum. In most GMSB models the gravitino is the \gls{lsp}, and all particles decay to it. While we could expect the decay rate to a $\stilde{G}$ to be low because of the weakness of the gravitational interaction, this is not the case as the gravitino inherits the gauge interactions of the goldstino it absorbs during the spontaneous supersymmetry breaking.  
+If we compare Eq. \ref{msoft_GMSB} with Eq. \ref{mgrav}, we can see that as long as the mass of the mediators is lower than the Planck scale, the gravitino can be significantly lighter than the rest of the superpartners spectrum. In most GMSB models the gravitino is the \gls{lsp}, and all particles decay to it. While we could expect the decay rate to a $\stilde{G}$ to be low because of the weakness of the gravitational interaction, this is not the case as the gravitino inherits the gauge interactions of the goldstino it absorbs during the spontaneous supersymmetry breaking.  
 
 
 \subsection{Phenomenological MSSM}
