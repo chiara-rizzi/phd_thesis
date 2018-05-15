@@ -61,6 +61,7 @@ but the normalization is data-driven, derived in specifically designed \glspl{cr
 
 
 \subsection{Top quark pair production}
+\label{sec:susy_general:ttbar}
 
 Given the presence of several b-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production, which at the \gls{lhc} at 13 TeV has a cross-section of $831.8^{+19.8 + 35.1}_{-29.2-35.1}$ pb \cite{Czakon:2013goa}, is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Fig. \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Fig. \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
 is about 2.6\%, assuming a top quark mass of 173.1 GeV \cite{Patrignani:2016xqp}. 
@@ -117,7 +118,7 @@ The modelling uncertainties on the \ttbar background considered in this thesis a
 \item[Parton shower and hadronization] Also the choice of the generator that emulates the \gls{psh} and the hadronization is associated to an uncertainty, that is evaluated by comparing the nominal sample, generated with \PowhegBox and showered with \PY, to another sample generated again with \PowhegBox but showered with \HWpp v2.7.1. 
 
 \item[Radiation] The systematic uncertainty deriving from the modelling of the \gls{isr} and \gls{fsr} is estimated by comparing samples
-generated with \PowhegBox interfaced with two versions of \PY v6.428 with two different settings. One uses the PERUGIA2012radHi tune, has $h_{\rm{dump}}$ parameter set to twice the top mass and the renormalization and factorization scales set to twice the nominal value; these settings lead to an overall larger amount of radiation. The second sample uses a version of \PY with the PERUGIA2012radLo tune, has $h_{\rm{dump}}$ set to the top mass and the renormalization and factorization scales set to half of the nominal value, leading to a description of the event with less additional jets. 
+generated with \PowhegBox interfaced with two versions of \PY v6.428 with two different settings. One uses the PERUGIA2012radHi tune, has $h_{\rm{dump}}$ parameter set to twice the top mass and the renormalization and factorization scales set to twice the nominal value; these settings lead to an overall larger amount of radiation. The second sample uses a version of \PY with the PERUGIA2012radLo tune, has $h_{\rm{dump}}$ set to the top mass and the renormalization and factorization scales set to half of the nominal value, leading to a description of the event with less additional jets.
 
 \end{description}
 
@@ -243,6 +244,16 @@ Instead, two additional samples are generated with the same settings as the $WWb
 
 \subsubsection*{Modelling uncertainties}
 
+The modelling uncertainties on the single top background are estimated at particle level, 
+like in the case of the uncertainties on the \ttbar background, but with the difference that in this case the uncertainty is computed based on the difference of expected yields in \glspl{sr} and \glspl{vr} and not based on the difference in the \glspl{tf}; 
+this is because in the analyses discussed in this thesis the single top backgrounds is normalized to its theoretical cross section and does not have a data-driven normalization. Truth tagging is used also in this case to increase the available \gls{mc} statistics and to provide a description of the b-tagging efficiency closer to the one that we have on reconstructed events. The modelling uncertainties considered are: 
+
+\begin{description}
+\item[Interference] The uncertainty deriving from the treatment of the interference between \ttbar and single top in the Wt channel is obtained comparing the sum of single-resonance and double-resonance contributions to the total $WWbb$ sample, using the samples described in the previous paragraph.
+
+\item[Radiation] The systematic uncertainty on the modelling of the extra radiation is estimated with dedicated samples generated with the same set of varied parameters used to generate the variation samples for \ttbar, described in Section \ref{sec:susy_general:ttbar}. 
+
+\end{description}
 
 \subsection{Vector boson in association with jets}
 
