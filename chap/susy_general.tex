@@ -199,6 +199,14 @@ when \gls{nlo} diagrams are considered it is possible to reach the same final st
 Considering the two processes separately leads necessarily to an improper treatment of the quantum interference between them.
 \PowhegBox allows to approach this problem with two different strategies, \gls{dr} and \gls{dr}; while none of them reproduces the quantum interference between single top and \ttbar, they allow to mitigate the size of the effect. 
 
+\begin{figure}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.25\textwidth]{figures/susy_common/feynman/ttbar_decay}\label{fig:ttbar_decay}}
+\subfigure[]{\includegraphics[width=0.25\textwidth]{figures/susy_common/feynman/Wt}\label{fig:Wt_nlo}} 
+\caption{Two example diagrams that lead to a $WWbb$ final state. \subref{fig:ttbar_decay} double resonance, both $Wb$ pairs form a top quark. \subref{fig:Wt_nlo} single resonance, only one $Wb$ pair forms a top quark.}\label{fig:WWbb}
+\end{figure}
+
+
 We can write the matrix element for the production of the $WWbb$ final state as:
 
 \begin{equation}
@@ -218,7 +226,10 @@ the last term represent the interference between the two processes and, unless s
 
 In the \gls{dr} approach, all the diagrams where a W boson and a b quark form a top quark are removed from the matrix element used to compute the single top cross section in the Wt channel. While this approach is not gauge invariant, it is found to have negligible dependence on the gauge choice.
 
-Instead in the \gls{ds} approach an extra subtraction term is added to cancel the overlapping contributions from \ttbar. 
+Instead in the \gls{ds} approach an extra subtraction term is added directly to the differential cross section to cancel the contribution of the 
+production of two on-shell top quarks. Acting at the cross-section level and not at the matrix-element level, this approach aims at accounting also for the interference term. 
+
+Which one of the twp strategies gives a better description of the data depends on the phase space under consideration. In this thesis the nominal single top estimate for the Wt channel is obtained with the \gls{dr} strategy.  
 
 
 \subsubsection*{Modelling uncertainties}
