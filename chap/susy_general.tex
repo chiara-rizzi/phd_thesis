@@ -62,7 +62,7 @@ but the normalization is data-driven, derived in specifically designed \glspl{cr
 
 \subsection{Top quark pair production}
 
-Given the presence of several b-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production, which at the \gls{lhc} at 13 TeV has a cross section of $831.8^{+19.8 + 35.1}_{-29.2-35.1}$ pb \cite{Czakon:2013goa}, is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Fig. \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Fig. \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
+Given the presence of several b-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production, which at the \gls{lhc} at 13 TeV has a cross-section of $831.8^{+19.8 + 35.1}_{-29.2-35.1}$ pb \cite{Czakon:2013goa}, is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Fig. \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Fig. \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
 is about 2.6\%, assuming a top quark mass of 173.1 GeV \cite{Patrignani:2016xqp}. 
 At these low fractions, the \gls{partdf} of the gluon is higher than the \gls{partdf} of quarks and much higher than the \gls{partdf} of the antiquarks, so gluon-gluon fusion is the dominant \ttbar production mode at the \gls{lhc}.
 
@@ -88,7 +88,7 @@ of the \ttbar background does not have any neutrino in the final state, it does 
 The \ttbar components that is dominating the background estimate are the dilepton and single-lepton one, both in the analysis regions that require reconstructed leptons as well as in the analysis regions that have a lepton veto.
 In the second case, the dominating component is the single-lepton one, where one lepton is an hadronically decaying tau, has a \pt too low to be reconstructed or falls out of acceptance. 
 The \gls{mc} generator used to simulate \ttbar events produced in association with high-\pt jets is \PowhegBox v2 with the CT10 \gls{partdf} set \cite{Lai:2010vv} and interfaced with \PY v6.428 \cite{Sjostrand:2006za} for the \gls{psh} and hadronization. 
-The normalization is derived in \glspl{cr} designed to be kinematically as close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross section computed with the highest
+The normalization is derived in \glspl{cr} designed to be kinematically as close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross-section computed with the highest
 available accuracy (NNLO+NNLL \cite{Czakon:2011xx}).
 
 \subsubsection*{Truth-level classification: \ttbar decays}
@@ -224,12 +224,21 @@ When computing the squared amplitude, this becomes:
 While the first two term are properly taken into account by the individual \ttbar and single top \gls{mc} simulations, 
 the last term represent the interference between the two processes and, unless special care to avoid this is taken, is completely ignored if the two processes are simulated independently. 
 
-In the \gls{dr} approach, all the diagrams where a W boson and a b quark form a top quark are removed from the matrix element used to compute the single top cross section in the Wt channel. While this approach is not gauge invariant, it is found to have negligible dependence on the gauge choice.
+In the \gls{dr} approach, all the diagrams where a W boson and a b quark form a top quark are removed from the matrix element used to compute the single top cross-section in the Wt channel. While this approach is not gauge invariant, it is found to have negligible dependence on the gauge choice.
 
-Instead in the \gls{ds} approach an extra subtraction term is added directly to the differential cross section to cancel the contribution of the 
-production of two on-shell top quarks. Acting at the cross-section level and not at the matrix-element level, this approach aims at accounting also for the interference term. 
+Instead in the \gls{ds} approach an extra subtraction term is added directly to the differential cross-section to cancel the contribution of the 
+production of two on-shell top quarks, which is more accurate the more the invariant mass of the non-resonant $Wb$ system tends to the top quark mass. 
+Acting at the cross-section level and not at the matrix-element level, this approach aims at accounting also for the interference term. 
 
-Which one of the twp strategies gives a better description of the data depends on the phase space under consideration. In this thesis the nominal single top estimate for the Wt channel is obtained with the \gls{dr} strategy.  
+Which one of the twp strategies gives a better description of the data depends on the phase space under consideration. 
+In this thesis the nominal single top estimate for the Wt channel is obtained with the \gls{dr} strategy.  
+
+To evaluate the uncertainty associate with the strategy chosen to account for the interference between \ttbar and single top
+we use a dedicated $WWbb$ sample generated at particle level with \aNLO showered with \PY v8, that takes fully into account the interference.
+This sample is produced at \gls{lo} and using the four-flavour scheme, where b quarks are treated as massive and processes that require a b quark in the initial state (which is the case for Wt production) are initiated by a gluon splitting into a $b\bar{b}$ pair. 
+Because of the \gls{lo} accuracy, the comparison with the sum of the two nominal samples for \ttbar and Wt, generated with \PowhegBox and showered with \PY, does not lead to sensible 
+results as the \gls{nlo} corrections to the \ttbar sample are larger than the effect of the interference. 
+Instead, two additional samples are generated with the same settings as the $WWbb$ sample to simulate the double-resonance and the single-resonance samples: the former requires the presence of two resonant top quarks, the latter requires one resonant top quark and two b quarks in the \gls{me}, vetoing the presence of a second resonant top quark.  
 
 
 \subsubsection*{Modelling uncertainties}
