@@ -127,7 +127,7 @@ In general, given a Lagrangian globally invariant under a symmetry group, the fi
 \psi \rightarrow e^{ig\theta_k \tau_k} \psi  \; ,
 \end{equation}
 
-\noindent where $\tau_k$ are the generators of the group and obey commutation relations: 
+\noindent where $g$ is the coupling constant of the filed $\psi$ under the interaction and $\tau_k$ are the generators of the group and obey commutation relations: 
 \begin{equation}
 \left[ \tau_i, \tau_j \right] = i f_{ijk} \tau^k \; . 
 \end{equation}
@@ -188,7 +188,7 @@ The evolution of the \gls{qcd} coupling constant with the energy scale has been 
 
 The theory of electroweak interactions is based on the symmetry group $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$. This symmetry breaks at a scale around 100 GeV giving rise to the electromagnetic interaction, mediated by the photon, and to the weak interaction, mediated by the $Z$ (neutral currents) and $W^{\pm}$ bosons (charged currents). The number of mediators, four, is the same as the number of generators of the symmetry group. 
 
-The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions, and the suffix L indicates that only left-handed particles participate to them. Left-handed and right-handed fields ($\psi_L$ and $\psi_R$ respectively) are defined through the chirality projectors $P_L$ and $P_R$:
+The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions, and the subscript L indicates that only left-handed particles participate to them. Left-handed and right-handed fields ($\psi_L$ and $\psi_R$ respectively) are defined through the chirality projectors $P_L$ and $P_R$:
 
 \begin{equation}
 \begin{aligned}
@@ -360,7 +360,10 @@ m_H = 125.09 \pm 0.21 (\mathrm{stat.}) \pm 0.11 (\mathrm{syst.}) \;\; \mathrm{Ge
 \noindent This result uses the full Run1 ATLAS and CMS data, analyzed in the $H \rightarrow \gamma \gamma$ and $H \rightarrow ZZ \rightarrow 4 \; \mathrm{leptons}$ channels.
 
 
-The discussion of the Higgs mechanism in Section \ref{sec:smsusy:ew} highlights interesting properties of the interactions involving the Higgs boson. In particular, the strength of its coupling with fermions and bosons is proportional respectively to the mass and the square of the mass of the particle involved. This is reflected on the branching fractions: they are high for the decay to particles with the highest mass that are kinematically allowed, and for the decays that happen through a loop of top quarks. The theoretical decay fractions for a Higgs boson mass of 125.09 GeV are reported in Table \ref{tab:SMBranchingFractions}. 
+The discussion of the Higgs mechanism in Section \ref{sec:smsusy:ew} highlights interesting properties of the interactions involving the Higgs boson. In particular, the strength of its coupling with fermions and bosons is proportional respectively to the mass and the square of the mass of the particle involved. 
+This is reflected on the \glspl{br}: they are high for the decay to particles with the highest mass that are kinematically allowed.
+While the top quark mass is too large to have the decay $H \to t\bar{t}$, the large top Yukawa coupling leads to loop-induced couplings of the Higgs boson to massless particles (gluons and photons); these are of phenomenological interest as they lead to the main production mode (gluon-gluon fusion) and to the $H \to \gamma \gamma$ decay mode, which has a low \gls{br} but leads to a very clean signature and was one of the key channels for the Higgs boson discovery. 
+The theoretical \glspl{br} for a Higgs boson mass of 125.09 GeV are reported in Table \ref{tab:SMBranchingFractions}. 
 
 \begin{table}[htbp]
 \begin{center}
@@ -380,17 +383,17 @@ The discussion of the Higgs mechanism in Section \ref{sec:smsusy:ew} highlights 
 \hline
 \end{tabular} 
 \end{center}
-\caption{Standard Model predictions for the decay branching fractions of a Higgs boson with a mass of 125.09~GeV, together with their uncertainties~\cite{Heinemeyer:2013tqa}. Table follows Ref. \cite{Khachatryan:2016vau}.}
+\caption{Standard Model predictions for the decay \glspl{br} of a Higgs boson with a mass of 125.09~GeV, together with their uncertainties~\cite{Heinemeyer:2013tqa}. Table follows Ref. \cite{Khachatryan:2016vau}.}
 \label{tab:SMBranchingFractions}
 \end{table} 
 
-The production cross section is found to be in agreement with the \gls{sm} predictions within uncertainties. Figure \ref{fig:sm:h_xsec} shows the best fit value of Higgs production cross section times branching fraction in the different production and decay modes \cite{Khachatryan:2016vau}. Also the relation between the fermion or boson mass and the Higgs coupling has been verified experimentally, as show in Fig. \ref{fig:sm:h_mass}. 
+The production cross section is found to be in agreement with the \gls{sm} predictions within uncertainties. Figure \ref{fig:sm:h_xsec} shows the best fit value of Higgs production cross section times \gls{br} in the different production and decay modes \cite{Khachatryan:2016vau}. Also the relation between the fermion or boson mass and the Higgs coupling has been verified experimentally, as show in Fig. \ref{fig:sm:h_mass}. 
 
 \begin{figure}[ht]
 \centering
 \subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/CMS-HIG-15-002_Figure_007}\label{fig:sm:h_xsec}}
 \subfigure[]{\includegraphics[width=0.49\textwidth]{figures/theory/CMS-HIG-15-002_Figure_019}\label{fig:sm:h_mass}}
-\caption{\subref{fig:sm:h_mass} Best-fit values as a function of particle mass for the combination of Run 1 ATLAS and CMS data. \subref{fig:sm:h_xsec} Best-fit value of Higgs production cross section times branching fraction in different production and decay modes. Figure from Ref.  \cite{Khachatryan:2016vau}.}
+\caption{\subref{fig:sm:h_mass} Best-fit values as a function of particle mass for the combination of Run 1 ATLAS and CMS data. \subref{fig:sm:h_xsec} Best-fit value of Higgs production cross section times \gls{br} in different production and decay modes. Figure from Ref.  \cite{Khachatryan:2016vau}.}
 \label{fig:sm:h_couplings_mass}
 \end{figure}
 
