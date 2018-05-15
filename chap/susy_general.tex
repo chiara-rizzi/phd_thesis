@@ -1,11 +1,11 @@
-\chapter{Common Aspects to Multi-b+\met SUSY Searches}
+\chapter{Common sspects to multi-b+\met SUSY searches}
 \label{chap:multib_general}
 
 The main results presented in this thesis are the two analyses described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. While these analyses target two different \gls{susy} models they have many commonalities, since they both target \gls{susy} models leading to final states rich in b-jets and missing transverse momentum (\met). This Chapter highlights these common aspects: Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design the signal models, Section \ref{sec:common_backgrounds} focuses on the background sources from \gls{sm} processes and how they are modeled in the analyses. 
 Section \ref{sec:common_obj_def} focuses on the definition of the physic objects, and Section \ref{sec:common_syst} introduces the main sources of 
 systematic uncertainties.
 
-\section{Simplified Models}
+\section{Simplified models}
 \label{sec:simplified_models}
 
 Even with the simplifying assumptions of the \gls{pmssm}, discussed in Section \ref{sec:theory:pmssm}, a \gls{susy} model has to take into account a large number of free parameters, whose values can impact the characteristics of the particle production and decay. 
@@ -17,7 +17,7 @@ The \glspl{br} of the new particles can be a parameter of the simplified model a
 When simplified models are used to discover or exclude a certain topology, it is important to connect the results obtained to more general models, 
 which can be done for example relaxing the restrictions on the \gls{br} of the \gls{bsm} particles or allowing more particles to take part to the interaction.
 
-\section{Analysis Strategy}
+\section{Analysis strategy}
 
 The analysis strategy is based on the definition of the \glspl{sr}, signal-enriched regions defined by selections on the relevant kinematic variables with the goal of maximizing the sensitivity to specific benchmark models. 
 After the \glspl{sr} are defined, the central point of the analysis is an accurate estimate of the number of events expected from \gls{sm} processes (background events) in these regions, and of the associated uncertainty. 
@@ -48,7 +48,7 @@ In each of the analyses described in the next two chapters, two different analys
 
 
 
-\section{Background Processes and their modelling}
+\section{Background processes and their modelling}
 \label{sec:common_backgrounds}
 
 This section describes the main background processes from the \gls{sm} in the analysis regions and the way they are 
@@ -91,14 +91,14 @@ The \gls{mc} generator used to simulate \ttbar events produced in association wi
 The normalization is derived in \glspl{cr} designed to be kinematically as close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross section computed with the highest
 available accuracy (NNLO+NNLL \cite{Czakon:2011xx}).
 
-\subsubsection{Truth-level classification: \ttbar decays}
+\subsubsection*{Truth-level classification: \ttbar decays}
 
 When considering events at particle level,
 the \gls{mc} information can be used to reconstruct the decay chains that lead to the stable particles in the final state. 
 Starting from each top quark in the event, it is possible to follow its decay chain and classify the event first of all into dilepton or single-lepton, or also with a finer classification based on the flavour of the lepton. 
 Subsequent decays of the $\tau$ lepton are not considered, and hadronically decaying taus are fully considered as leptons in this classification. 
 
-\subsubsection{Truth-level classification: flavour of the associated jets}
+\subsubsection*{Truth-level classification: flavour of the associated jets}
 
 A truth-level classification is in place to study the \ttbar+jets background based on the flavour of the associated jets.
 This is done starting from the \gls{mc} information at particle level; stable particles are grouped into jets using the anti-k$_t$ algorithm 
@@ -108,7 +108,7 @@ If the event contains at least one jet matched to one or more B-hadrons, excludi
 is classified as \ttbb. Otherwise, if at least one jet is matched to C-hadrons, excluding the ones from the decay of the top quarks or the W bosons, the event is classified as \ttcc. \ttbb and \ttbb events are categorized together as \tthf events, where HF stands for heavy flavour, while the remaining ones are classified as \ttlight.
 
 
-\subsubsection{Modelling Uncertainties}
+\subsubsection*{Modelling uncertainties}
 
 The modelling uncertainties on the \ttbar background considered in this thesis are:
 \begin{description}
@@ -132,7 +132,7 @@ independently of the \gls{mc} generator used. Two further strategies are in plac
 One consists in relaxing or removing some selections to both the \glspl{cr} and the corresponding \glspl{sr}/\glspl{vr}. 
 Another is to substitute the selection on the number of b-jets with truth-tagging, described in the next section.
 
-\subsubsection{Truth Tagging}
+\subsubsection*{Truth b-tagging}
 
 With truth tagging, instead of keeping only the events that satisfy a certain criterion on the number of b-jets, all the events are kept and weighted. The weight is the probability that, out of all the jets in the event,
 a certain number pass the b-tagging identification.
@@ -192,7 +192,7 @@ Single top events produced through t-channel processes are simulated with \Powhe
 \subref{fig:st_prod_Wt2} s-channel. \subref{fig:st_prod_4} t-channel.}\label{fig:single_top_prod}
 \end{figure}
 
-\subsection{Vector Boson in Association with Jets}
+\subsection{Vector boson in association with jets}
 
 
 \begin{figure}[h]
@@ -202,7 +202,7 @@ Single top events produced through t-channel processes are simulated with \Powhe
 \caption{\gls{lo} Feynman diagrams for the production of a W boson in associatino with one jet.}\label{fig:W_prod}
 \end{figure}
 
-\subsection{Boson Pair Production}
+\subsection{Boson pair production}
 
 Beside the production of a single vector boson, also a pair production is possible.
 The \gls{lo} Feynman diagrams for the production of a boson pair are shown in Fig. \ref{fig:dib_prod}.
@@ -216,7 +216,7 @@ The \gls{lo} Feynman diagrams for the production of a boson pair are shown in Fi
 \end{figure}
 
 
-\subsection{\ttbar + X Production}
+\subsection{\ttbar + X production}
 
 \begin{figure}[h]
 \centering 
@@ -227,7 +227,7 @@ The \gls{lo} Feynman diagrams for the production of a boson pair are shown in Fi
 \caption{\Gls{lo} Feynman diagram for the production of \subref{fig:ttW_prod} ttW, \subref{fig:ttZ_prod} ttZ, \subref{fig:tth_prod} tth, \subref{fig:fourtop_prod} \fourtop.}\label{fig:ttX_prod}
 \end{figure}
 
-\subsection{QCD Multi-jet}
+\subsection{QCD multi-jet}
 
 Multi-jet production is by far the process with the largest cross-section at the \gls{lhc} ($\mathcal{O}$(mb)). 
 Most of the \gls{qcd} events are $2 \to 2$ processes, for which some example \gls{lo} Feynman diagrams are shown in Fig. \ref{fig:qcd_prod_1} and Fig \ref{fig:qcd_prod_2}, but higher order processes ($2 \to n$) are possible as well (an example of $2 \to 3$ process is shown in Fig. \ref{fig:qcd_prod_3}). 
@@ -245,7 +245,7 @@ Since the probability for a multi-jet event to both have a fake high \met and a 
 \subref{fig:qcd_prod_3} \gls{lo} $2 \to 3$ process.}\label{fig:qcd_prod}
 \end{figure}
 
-\subsubsection{Jet Smearing}
+\subsubsection*{Jet smearing}
 \label{sec:jet_smearing}
 
 The usage of \gls{mc} simulation to model the multi-jet background presents two main drawbacks.
@@ -257,13 +257,13 @@ and the energy scale of the interaction is low enough to be at the limit of the 
 A second problem is of practical nature: the high cross-section for multi-jet production implies a huge number of \gls{mc} events that need to be simulated in order not to have a huge statistical uncertainty. 
 
 
-\section{Object Definition}
+\section{Object definition}
 \label{sec:common_obj_def}
 
-\section{Systematic Uncertainties}
+\section{Systematic uncertainties}
 \label{sec:common_syst}
 
-\subsection{Experimental Systematic Uncertainties}
+\subsection{Experimental systematic uncertainties}
 
-\subsection{Modeling Uncertainties} 
+\subsection{Modeling uncertainties} 
 

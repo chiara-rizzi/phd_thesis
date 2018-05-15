@@ -1,11 +1,11 @@
-\chapter{Physics Objects Reconstruction}
+\chapter{Physics objects reconstruction}
 \label{sec:event:reco}
 
 The particles produced in the \gls{pp} collisions in the center of the \gls{atlas} detector, interact with the detector material as discussed in Chapter \ref{chap:cern}. As a result of these interactions, electrical currents are recorded. \textit{Event reconstruction} is the process of recombining these digital signals and interpreting them as tracks and energy deposits in the calorimeters. A further step consists in analyzing the characteristics of the candidate tracks and calorimeter clusters and identify them as signs of the passage of specific particles.
 This chapter describes the reconstruction and identification of the objects used in the analyses discussed in this thesis: tracks and vertices, hadronic jets, muons, electrons and missing transverse momentum. 
 
 
-\section{Tracks and Primary Vertices}
+\section{Tracks and primary vertices}
 \label{sec:reco:tracks}
 
 In \gls{atlas} the identification of tracks from charged particles relies on the information collected by the \gls{id}. The tracking information is crucial to the reconstruction and identification of many types of particles, including electrons, muons, and the jest originating from the hadronization of a b-quark. The precision on the position measurement of the track depends on the granularity of the different subsystems of the \gls{id} and, since the \gls{id} is surrounded by a solenoidal magnetic field, the charged particles follow an helical trajectory. After the point of closest approach (perigee) to a given reference is defined, the trajectory of the track can be described by five parameters: 
@@ -29,7 +29,7 @@ Random groups of hits can be wrongly reconstructed as belonging to the helical t
 Tracks are the starting point for the identification of vertices. \glspl{pv} are reconstructed through a vertex finding algorithm \cite{Fruhwirth:2007hz}, and then the vertex fitting algorithm identifies the vertex position and refits the tracks adding the constraint of the reconstructed interaction point. Once all the \glspl{pv} are reconstructed, the one with the highest sum of the squared transverse momenta of its associated tracks ($\sum_i^{N-tracks}p_{T,i}^2$) is identified as the hard scattering vertex, and $d_0$ and $z_0$ are recomputed with respect to its coordinates. The other vertices are named pileup vertices, and their number is correlated  to the number of interactions per bunch crossing.
 
 
-\section{Hadronic Jets}
+\section{Hadronic jets}
 
 Because of confinement, quarks and gluons produced in the collisions give origin to a collimated spray of hadrons (\textit{jets}) that move in the direction of the original parton. When jets interact with the detector, they loose most of their energy as deposits in the calorimeter systems, which are then grouped together aiming at reconstructing the characteristics of the original parton. 
 
@@ -44,7 +44,7 @@ The first step in the jet reconstruction is the procedure that groups the calori
 \label{fig:obj:topocluster}
 \end{figure}
  
-\subsection{Jet-finding Algorithms}
+\subsection{Jet-finding algorithms}
 \label{sec:obj:jetfinding}
 
 The topoclusters are then grouped together by a jet-finding algorithm. Different algorithm are available, and in particular the algorithms of the $k_T$-family merge clusters according to the metric $d_{i,j}$, defined as:
@@ -83,7 +83,7 @@ The choice of a particular algorithm results in different shapes of the jets, re
 \label{fig:jetsalg}
 \end{figure}
 
-\subsection{Jet Calibration}
+\subsection{Jet calibration}
 \label{sec:obj:jetcalib}
 
 As mentioned above, the inputs to the jet-finding algorithms are calibrated at the \gls{em} scale, and its coordinate refer to the center of the detector. To access a more precise measurement of the jet energy and kinematics, a sequence of calibration stages are applied; for the 2015-2016 dataset, the standard \gls{atlas} corrections are \cite{PhysRevD.96.072002}:
@@ -101,7 +101,7 @@ As mentioned above, the inputs to the jet-finding algorithms are calibrated at t
  
 \end{description}
 
-\subsubsection{Jet Calibration Uncertainties}
+\subsubsection*{Jet calibration uncertainties}
 
 The calibration procedure described above implies a set of uncertainties. In particular, 
 the \gls{atlas} \gls{jes} Run-2 calibration includes a set of 80 systematic uncertainties; 
@@ -185,7 +185,7 @@ while Fig. \ref{fig:obj:jvt_data} shows the comparison of the \gls{jvt} distribu
   \label{fig:obj:jvt}
 \end{figure}
 
-\subsection{Jet Cleaning}
+\subsection{Jet cleaning}
 
 Beside pileup jest, other spurious jets come from the \gls{ncb}; this type of background includes muons originating from secondary cascades from beam losses, in whcih case we speak of \gls{bib}, and from cosmic rays. These muons leave energy deposits in the calorimeters while traversing the detector, that can be interpreted as jets. Also coherent noise from the calorimeters can give rise to fake jets. In \gls{atlas} a set of quality criteria are designed to reject jets not originating from \gls{pp} collisions \cite{TheATLAScollaboration:2015ofz}. These quality criteria are rely on variables based on:
 \begin{itemize}
@@ -196,7 +196,7 @@ Beside pileup jest, other spurious jets come from the \gls{ncb}; this type of ba
 
 Different thresholds for the selections on these variable distinguish the two working points, \textit{BadLoose} and \textit{BadTight}, which have an efficiency respectively of 99.5\% and 95\% for jets with $\pt > 20$ GeV (while for jets with $\pt > 100$ GeV the efficiency of the two working points increases to 99.9\% and 99.5\%). 
 
-\subsection{Re-clustered Jets}
+\subsection{Re-clustered jets}
 
 The angular separation between the decay products of a particle with mass $m^P$ and transverse momentum 
 $p_T^P$ scales as:
@@ -293,7 +293,7 @@ Table \ref{tab:obj:mv2op} shows the \glspl{op} of the MV2c10 algorithm.
   \label{tab:obj:mv2op}
 \end{table}
 
-\subsection{B-tagging Calibration and Uncertainties}
+\subsection{B-tagging calibration and uncertainties}
 
 The b-tagging efficiency can be different in \gls{mc} simulation and data. The b-tagging efficiency, 
 c-tagging efficiency and light mistag rate are measured in data for the \glspl{op} of Table \ref{tab:obj:mv2op}, 
@@ -356,7 +356,7 @@ As an example, Figure \ref{fig:obj:btagSF} shows the b-tagging \gls{sf} for c-je
 
 Muon reconstruction and identification \cite{Aad:2016jkr} is based on the information collected by the \gls{id}, where muons are reconstructed as charged tracks, and by the \gls{ms}. 
 
-\subsection{Muon Reconstruction}
+\subsection{Muon reconstruction}
 
 Both the \gls{id} and the \gls{ms} perform the reconstruction
 of muon candidates independently and then the information is combined to build the muon candidates used in physics analyses. 
@@ -373,7 +373,7 @@ Reconstructed muons can belong to four different types, depending on the subdete
 
 When multiple types of muon are reconstructed for the same physical object, the redundant ones are removed with an \gls{or} procedure that, when muons share the same \gls{id} tracks, gives priority to combined muons, and then to segment-tagged muons over combined muons. The \gls{or} with extrapolated muons gives preference to the \gls{ms} track with the best quality.
 
-\subsection{Muon Identification}
+\subsection{Muon identification}
 
 The reconstructed muons have to fulfill identification criteria that help rejecting the background constituted mostly by decays of pions and kaons. 
 The variables used in the identification are the significance of the difference of the charge-over-momentum ratios measured by the \gls{id} and by the \gls{ms} ($\frac{q}{p}$ significance),
@@ -386,7 +386,7 @@ Loose, Medium and Tight are inclusive categories with increasingly tighter requi
 The Medium identification criteria is the default in \gls{atlas}, and is the one that minimizes the systematic uncertainties associated with 
 the muon reconstruction and calibration. In the pseudorapidity region with $|\eta|<2.5$, Medium muons are required to be combined muons with $\geq$ 3 hits in at least two \gls{mdt} layers (unless $|\eta|<0.1$, in which case the requirement becomes on one \gls{mdt} layer, but with a hole veto), while extrapolated muons are used when $2.5<|\eta|<2.7$. To suppress muons from hadron decays, the $\frac{q}{p}$ significance is required to be less than seven. 
 
-\subsection{Muon Efficiency Measurement}
+\subsection{Muon efficiency measurement}
 
 In the regions with $|\eta|<2.5$, where the information from both the \gls{id} and the \gls{ms} is available, 
 the reconstruction efficiency is measured with a tag-and-probe method, performed on $J/\Psi \rightarrow \mu \mu$ and $Z\rightarrow \mu \mu$ events for low-\pt and high-\pt muons respectively. 
@@ -411,7 +411,7 @@ The efficiency for high-$\eta$ muons, for which the \gls{id} information is not 
   \label{fig:obj:muon}
 \end{figure}
 
-\subsection{Muon Isolation}
+\subsection{Muon isolation}
 \label{sec:muoniso}
 
 While muons originating from semileptonic decays of hadrons are very close to the axis of a jet, prompt muons are typically well separated from other physics objects in the event (isolated). The isolation requirements help therefore suppressing further the background from semileptonically decaying hadrons. Different isolation requirements are available and calibrated in \gls{atlas}, defined to be optimal for different analyses. 
@@ -419,7 +419,7 @@ The \gls{op} used in the analyses described in this thesis is the one labeled $L
 variable \ptvar over the muon \pt (\ptmu), where \ptvar is defined as the scalar sum of the momenta of the tracks with $\pt>1$ GeV in the cone with 
 $\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\ptmu , \, 0.3\right) $. The \pt-dependent size of the isolation cone helps in recovering efficiency for muons deriving from the decay of boosted particles. The efficiency of the isolation \glspl{op} is calibrated on $Z\rightarrow \mu \mu$ with the tag-and-probe method. The $LooseTrackOnly$ \gls{op} has an efficiency of 99\%, almost constant in $\eta$ and \pt, as shown in Fig. \ref{fig:obj:muon_iso}. 
 
-\subsection{Muon Energy Calibration}
+\subsection{Muon energy calibration}
 A set of corrections applied to the \gls{mc} simulation, such that after the correction the simulation describes the muon momentum and momentum resolution in data with a precision of the order of few per-mill and few percent respectively. 
 The corrections are derived in $J/\Psi \rightarrow \mu \mu$ and $Z\rightarrow \mu \mu$ events, with a binned maximum-likelihood fit of the di-muon 
 invariant mass distribution. 
@@ -428,7 +428,7 @@ invariant mass distribution.
 
 When electrons traverse the \gls{atlas} detector, they leave a track in the \gls{id} and then the energy of their \gls{em} shower is absorbed in the \gls{ecal}.
 
-\subsection{Electron Reconstruction}
+\subsection{Electron reconstruction}
 
 The electron reconstruction \cite{ATLAS:2011lah,Aad:2014nim,ATLAS:2016iqc} starts with the identification of clusters in the \gls{ecal}. 
 The \gls{ecal} can be divided in a grid of towers of size $0.025\times0.025$ in $\eta$ and $\phi$, and the tower energy is the sum of the 
@@ -450,7 +450,7 @@ Selections on the parameters of the primary track are applied to ensure that the
 In particular, in Run 2 analyses these selections are: \dzero/$\sigma_\dzero < 0.5$ and  $\zzerost < 0.5$ mm.
 
 
-\subsection{Electron Identification}
+\subsection{Electron identification}
 
 After the electron candidates are reconstructed, a likelihood-based discriminant is used to reject the background, 
 constituted mostly by hadronic jets and converted photons. 
@@ -498,7 +498,7 @@ The signal and background efficiency in \gls{mc} samples is shown in Fig. \ref{f
 \end{figure}
 
 
-\subsection{Electron Isolation}
+\subsection{Electron isolation}
 
 As already discussed in the case of muons in Section \ref{sec:muoniso}, prompt signal electrons are in general more isolated than 
 electrons candidates originating from hadron decays, from light hadrons misidentified as electrons or from photon conversion. 
@@ -506,7 +506,7 @@ The analyses described in this thesis use a track-based isolation criterion, bas
 of the tracks satisfying quality requirements in a cone with $\Delta\mathrm{R} < \min \left(  10 \, \mathrm{GeV}/\et , \, 0.2\right)$, where \et is the transverse energy of the electron candidate and the sum excludes the electron track. The operating point used is $LooseTrackOnly$, 
 that applies a selection on the ratio \ptvarele/\et to have an efficiency of 99\% on simulated $Z\rightarrow e e$ events, constant as a function of \et.
 
-\subsection{Electron Efficiency Measurement}
+\subsection{Electron efficiency measurement}
 
 The measurement of the electron efficiency in data relies on the tag-and-probe method, applied to $Z\rightarrow e e$ and $J/\Psi \rightarrow e e$ events, for the high-\et ($> 15$ GeV) and low-\et (typically 7-20 GeV) regions respectively. One of the two electrons is identified with strict criteria and, after kinematic requirements, the second one is used to measure the efficiency.
 The electron efficiency is a product of the reconstruction, identification and isolation efficiency 
@@ -554,7 +554,7 @@ It is measured with a method similar to the $Z_\mathrm{mass}$ method, but with t
 Also the isolation efficiency is measured with a tag-and-probe method derived from the $Z_\mathrm{mass}$ one, but with a lower \et threshold for the 
 probe electrons. For each isolation \gls{op}, the efficiency is derived with respect to each identification \gls{op}.
 
-\subsection{Electron Energy Scale and Resolution}
+\subsection{Electron energy scale and resolution}
 \label{sec:obj:ele_energy}
 
 The electron energy calibration follows three steps \cite{Aad:2014nim,ATL-PHYS-PUB-2016-015}:
@@ -571,7 +571,7 @@ residual differences in electron energy scale and resolution between data and \g
 
 
 
-\section{Missing Transverse Momentum}
+\section{Missing transverse momentum}
 
 Particles that interact only weakly with the detector, such as neutrinos or \gls{bsm} particles like neutralinos, are not reconstructed directly.  
 Their presence is instead inferred by measuring the total momentum imbalance in the event. 
@@ -608,7 +608,7 @@ The systematic uncertainties on the energy scale and resolution of all the physi
 The only systematic uncertainties affecting only \met are the ones related to the soft term, which are measured in events with very small 
 \met (for example $Z \rightarrow \mu \mu events$) exploiting the balance between the soft term and the hard part of the \met computation.
 
-\subsection{\met Trigger}
+\subsection{\met trigger}
 
 The data used in this thesis are selected with \met triggers.
 The version of \met used in the trigger is calorimeter-based, which means that the muons are not included in the computation of \met and are 

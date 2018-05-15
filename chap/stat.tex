@@ -1,9 +1,9 @@
-\chapter{Statistics Tool Box}
+\chapter{Statistics tool box}
 \label{chap:stat}
 
 The data we collect is stochastic: quantum mechanics is not deterministic, the particle content result of an interaction follows probabilistic laws. Furthermore, experimental effects need to be taken into account. Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. This chapter does not aim at being an exhaustive reference for statistics, but it describes the main statistical procedures that are used to obtain the results described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. After a brief introduction to statistical inference in Section \ref{sec:stat:intro}, the two main topics discussed are parameter estimation (Section \ref{sec:stat:pe}), that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing (Section \ref{sec:stat:ht}), that checks the plausibility of models against the observed data. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Statistical Inference}
+\section{Statistical inference}
 \label{sec:stat:intro}
 
 Statistical inference uses a data sample to make probabilistic statements on the population from which the sample is extracted. The generalization from the properties of the sample to the properties of the entire population comes with a certain degree of uncertainty, that can also be accesses through statistical methods.
@@ -34,7 +34,7 @@ As mentioned above, an hypothesis is statement based on which one can access the
 
 Given a certain hypothesis $H$, the probability of observing the data $x$ is $P(x|H)$. This probability can be considered also as a function of the hypothesis, for fixed data, and in this case it is assigned the name of \textit{likelihood} ($L$). In the case of a composite hypothesis, the value of the likelihood depends on the value of the parameters necessary to specify the hypothesis, and it takes the name of \textit{likelihood function}: $L(\theta)=P(x|\theta)$.
 
-\section{Parameter Estimation}
+\section{Parameter estimation}
 \label{sec:stat:pe}
 
 Parameter estimation, also know as \textit{fitting}, is the technique that allows to derive the best values of some parameters from data.
@@ -80,7 +80,7 @@ The efficiency of an estimator is high when its variance ($V[\hat{\vec{\theta}}]
 An estimator is robust if it is not sensitive to small changes in the assumptions in the \pdf
 
 
-\subsection{The Maximum Likelihood Estimator}
+\subsection{The maximum Likelihood estimator}
 \label{sec:stat:MLE}
 
 The maximum likelihood estimate (MLE) of the parameters $\theta_i$, first introduced by Fisher \cite{fisher1911absolute}\cite{aldrich1997}, is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. At an intuitive level this corresponds to the choice for which the observed data $\vec{x}$ are more probable. 
@@ -104,16 +104,16 @@ There are two types of maximum likelihood fits that can be performed:
 
 In this chapter the focus will be on the second type of fit.
 
-\subsubsection*{Variance of the Maximum Likelihood Estimator}
+\subsubsection*{Variance of the maximum Likelihood estimator}
 
 Given a data sample, to the estimate of a parameter is associated an uncertainty. If we would repeat the same parameter estimate on a different data sample, we would obtain a different values of the best estimate. If we repeat N times the same estimate on independent data samples, the best estimates will have a distribution that tends to a Gaussian for large N. There are two main methods to access the variance (and therefore the standard deviation) of this distribution.
 
-\paragraph{Monte Carlo Method} Once the parameter is estimated from the experimental results, the experiment can be simulated N times with Monte Carlo simulations. For each simulation the best value of the parameter can be estimated with the maximum likelihood method, and from the distribution of these values it is possible to compute the variance.
+\paragraph{Monte Carlo method} Once the parameter is estimated from the experimental results, the experiment can be simulated N times with Monte Carlo simulations. For each simulation the best value of the parameter can be estimated with the maximum likelihood method, and from the distribution of these values it is possible to compute the variance.
 
 
-\paragraph{Graphical Method} With the increase of the size of the data sample, the likelihood function tends to a Gaussian, and the $\logl$ tends to a parabola.  
+\paragraph{Graphical method} With the increase of the size of the data sample, the likelihood function tends to a Gaussian, and the $\logl$ tends to a parabola.  
 
-\subsection{Binned Likelihood with Systematic Uncertainties}
+\subsection{Binned Likelihood with systematic uncertainties}
 
 If we consider the representation of the observed data given by the binned distribution of a certain variable, the expected number of events in each bin of the distribution is given by:
 
@@ -150,11 +150,11 @@ e^{- (\mu s_{i} + b_{i}(\vec{\theta})) }   \;\;
 Where $\rho( \theta_k)$ is the constraint term for the parameter $\theta_k$. Note that the treatment of an uncertainty through the addition of a constraint term, from the pure frequentist point of view is justified only for sources of uncertainty of experimental nature, where there is indeed an auxiliary measurement. The same approach is instead used also for theoretical uncertainties, where the frequentist prescription would be to have a result that depends on these parameters. While in the Bayesian view the constrain term would easily be interpreted as a prior on the value of the theoretical parameter, in the frequentist approach this is equivalent to assigning also to the theoretical uncertainties a fictitious auxiliary measurement. 
 
 
-\subsubsection*{Functional Forms of the Constraining Terms}
+\subsubsection*{Functional forms of the constraining terms}
 
 Depending on the underlying auxiliary measurement, different functional types can be used for the constraining terms.
 
-\paragraph{Gaussian Constraint}
+\paragraph{Gaussian constraint}
 
 This is the default constrain type for systematic uncertainties, and its usage is justified by the central limit theorem. In general, it is safe to use this constraint as long as the MLE of the nuisance parameter from the corresponding auxiliary measurement follows a Gaussian distribution. The functional form is:
 
@@ -165,7 +165,7 @@ This is the default constrain type for systematic uncertainties, and its usage i
 
 \noindent Technically, the function implemented in the likelihood is a truncated Gaussian, in order to avoid non-zero probability for non-physical values of the nuisance parameter. This truncated Gaussian is normalized to still have unit area.
 
-\paragraph{Poisson Constraint}
+\paragraph{Poisson constraint}
 
 This constraint is often referred to as "Gamma" constraint because, when using it in a Bayesian approach, if combined with a uniform prior it gives rise to a Gamma posterior. It is used for nuisance parameters related to event count and to model the MC statistical uncertainty. If we assume that the background yield predicted from MC is $n$ background events, deriving from $N$ MC events with a multiplicative scale $\alpha$, then the constraint term is:
 
@@ -174,7 +174,7 @@ This constraint is often referred to as "Gamma" constraint because, when using i
 \rho(n) = \frac{1}{\alpha} \frac{(n/\alpha)^N}{N!} \exp\left( -n/\alpha \right)
 \end{equation}
 
-\paragraph{Log-normal Constraint} Log-normal is the distribution of a variable whose logarithm is distributed according to a Gaussian distribution. When random variables are multiplied, their product follows a log-normal distribution:
+\paragraph{Log-normal constraint} Log-normal is the distribution of a variable whose logarithm is distributed according to a Gaussian distribution. When random variables are multiplied, their product follows a log-normal distribution:
 
 \begin{equation}
 \label{eq:stat:lognorm}
@@ -184,7 +184,7 @@ This constraint is often referred to as "Gamma" constraint because, when using i
 \noindent The advantage of this constraint is that it never assumes negative values.
 
 
-\subsubsection*{Evaluation of the Response}
+\subsubsection*{Evaluation of the response}
 
 Let’s consider one single bin of a distribution, and the effect that a systematic uncertainty has on it. For example, we can consider the jet energy resolution (JER) uncertainty. The physical meaning of this uncertainty will be described in more details in chapter \ref{section_on_systematics}, but for the moment we focus on the effect that this calibration uncertainty has on the likelihood of a single bin counting experiment. The JER uncertainty is calibrated with an auxiliary measurement, whose likelihood we include by the simplification of a Gaussian constraint term, $G( \tilde{\theta} | \theta, \sigma_\theta)$, where $\tilde{\theta}$ is the nominal value of the calibration, $\theta$ the underlying real value and $\sigma_\theta$ the uncertainty. Stating that the uncertainty on JER is 10\%, means that the width of the Gaussian is 10\%. 
 
@@ -231,7 +231,7 @@ b + \theta (b - b^-) \;\;\;\;\;\; \theta < 0
 
 \noindent where $b$ is the nominal background prediction and $b^\pm$ correspond to the background yields for the $\pm 1 \sigma$ variation of the nuisance parameter. This interpolation technique has the clear advantage of simplicity, but it has the cons of presenting a discontinuity for $\theta=0$. For large uncertainties, it can also lead to negative $b(\theta)$.
 
-\paragraph{Piecewise Exponential} The piecewise exponential interpolation is given by:
+\paragraph{Piecewise exponential} The piecewise exponential interpolation is given by:
 
 \begin{equation}
 \label{eq:stat:interp_linear}
@@ -244,15 +244,15 @@ b \left( \frac{b^-}{b}\right)^{-\theta}  \;\;\;\; \theta < 0
 
 \noindent In this case, $b(\theta)$ is bound to be positive. The discontinuity at $\theta=0$ is still present, and in this case it appears also when $b^+$ and $b^-$ are symmetric with respect to $b$. Note that, once this is inserted into the likelihood, the combination of a Gaussian constraint with exponential interpolation is equivalent to a log-normal constraint with a linear extrapolation. This strategy avoids the discontinuity for $\theta=0$, but it can introduce problems with the sign of the variation, for example sign inversion if $b-b^+$ and $b-b^-$ have the same sign.
 
-\paragraph{Quadratic Interpolation and Linear Extrapolation} In this case the interpolation between the $\pm 1 \sigma$ response is given by the parabola passing through $b^-$, $b^+$ and $b$, while outside this range the extrapolation is given by the line tangent to the parabola in $b^+$ and $b^-$. 
+\paragraph{Quadratic interpolation and linear extrapolation} In this case the interpolation between the $\pm 1 \sigma$ response is given by the parabola passing through $b^-$, $b^+$ and $b$, while outside this range the extrapolation is given by the line tangent to the parabola in $b^+$ and $b^-$. 
 
-\paragraph{Polynomial Interpolation and Exponential Extrapolation} The extrapolation outside the range of the $\pm 1 \sigma$ response is given by the formula in Eq. \ref{eq:stat:interp_exp}, while the interpolation is obtained with a polynomial of sixth degree, bound to pass through $b^-$, $b^+$ and $b$ and to match in value, first and second derivative the exponential extrapolation at the $\pm 1 \sigma$ boundaries. This strategy avoids both the discontinuity at $\theta=0$ and the possibility of negative $b(\theta)$.
-
-
+\paragraph{Polynomial interpolation and exponential extrapolation} The extrapolation outside the range of the $\pm 1 \sigma$ response is given by the formula in Eq. \ref{eq:stat:interp_exp}, while the interpolation is obtained with a polynomial of sixth degree, bound to pass through $b^-$, $b^+$ and $b$ and to match in value, first and second derivative the exponential extrapolation at the $\pm 1 \sigma$ boundaries. This strategy avoids both the discontinuity at $\theta=0$ and the possibility of negative $b(\theta)$.
 
 
 
-\subsubsection*{Correlation and Profiling}
+
+
+\subsubsection*{Correlation and profiling}
 
 The post-fit values of the NPs can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified MC will have a better agreement with data than the original one. If the post-fit uncertainty on one NP is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty on that NP.
 % The effect of a specific systematic is not compatible with the range allowed by the data statistics 
@@ -273,7 +273,7 @@ As it was discussed in section \ref{sec:stat:MLE}, rather than maximizing the $\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Hypothesis Testing}
+\section{Hypothesis testing}
 \label{sec:stat:ht}
 
 Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion a BSM theory. When the alternative between two hypotheses is presented, they are typically indicted as \textit{null hypothesis} and \textit{alternative hypothesis}. If what we want to do is to proof the discovery of a new BSM signal by excluding the SM only hypothesis, we have that:
@@ -285,7 +285,7 @@ Hypothesis testing is the statistical procedure that allows to confirm or reject
 
 \noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section scaling; $\mu$=1 corresponds to the BSM process with its theoretical cross section, while $\mu$=0 is the SM.
 
-\subsection{Test Statistics and p-value}
+\subsection{Test statistics and p-value}
 
  A \textit{test statistic} $t$ is single real-value quantity, function of all the collected data. The probability density function (PDF) of the test statistic is different if we assume the null hypothesis or the alternative hypothesis to be true.
 
@@ -332,7 +332,7 @@ Discovery of New Physics & $2.9 \times 10^{-7}$ & 5 \\
 
 
 
-\subsection{Test Statistics Using the PRL}
+\subsection{Test statistics using the PRL}
 
 While a test statistic can be any real-valued function of the data, the Neyman-Pearson lemma \cite{Neyman} ensures that the ones based on a likelihood ratio are the most statistically powerful. This means that, for a given signal efficiency, they provide the decision criterion that minimizes the misidentification probability. The PRL defined in Eq. \ref{eq:stat:prl} is the most used at the LHC, and it gives origin to this test statistic:
 
@@ -351,7 +351,7 @@ d t_{\mu} \;,
 
 Different variations of this test statistic are used for discovery and exclusion.
 
-\subsubsection*{Test Statistic for Discovery}
+\subsubsection*{Test statistic for discovery}
 
 The discovery test statistics $q_{0}$ used to quantify the level of disagreement of data with the B-only hypothesis in case of an excess is defined as:
 
@@ -373,7 +373,7 @@ q_{0} =
 p_{0} = \int_{q_{0,{\rm obs}}}^{\infty} f(q_{0} | 0 ) \, d q_{0} \;.
 \end{equation}
 
-\subsubsection*{Test Statistics for Exclusion}
+\subsubsection*{Test statistics for exclusion}
 
 When investigating the exclusion of the test hypothesis, we want a test statistics that does not penalize an excess. The exclusion test statistics \qmu is therefore defined as:
 
@@ -400,7 +400,7 @@ p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \, d q_{\mu} \;.
 % credo che dipenda dal fatto che la L sia simmetrica rispetto a eccessi o deficit
 %\noindent Note that, despite the very similar integration formula in \ref{eq:stat:p0} and \ref{eq:stat:pmu}, $p_{\mu, \mu=0}$ is different from \pzero because of the difference in definition between the exclusion and discovery test statistics.
 
-\subsubsection*{Uncapped Test Statistics}
+\subsubsection*{Uncapped test statistics}
 
 The strategy described above leads to a loss of information when the test statistic is set to 0. A solution is obtained by uncapping the test statistic and, instead of assigning a 0 to the situations we do not want to penalize, assign them a negative value. This is achieved with the $r_0$ and $r_\mu$ test statistics. As an example, the definition for $r_\mu$ is:
 \begin{equation}
@@ -414,7 +414,7 @@ r_{\mu} =
 \end{equation}
 
  
-\subsubsection*{Allow Only Positive Signals}
+\subsubsection*{Allow only positive signals}
 
 The alternate PRL, $\tilde{\lambda}({\mu})$, is designed to take into account the fact that, in most physical cases, only positive $\mu$ have a physical meaning. In this case, when $\hat{\mu} < 0$ , the best physical value is 0, and the alternate PRL is defined as: 
 
@@ -453,7 +453,7 @@ The alternate PRL, $\tilde{\lambda}({\mu})$, is designed to take into account th
 \end{equation}
 \fi
 
-\subsection{The CLs Method}
+\subsection{The CLs method}
 
 If we consider a situation where $H_0$ and $H_1$ give similar distribution of the exclusion test statistic (e.g. because the signal cross section is
 small) and we observe a downward fluctuation in data, we could end up excluding the test hypothesis, even if almost indistinguishable from the null hypothesis. The \cls method \cite{JUNK1999435} recovers from this situations by defining:
@@ -473,7 +473,7 @@ small) and we observe a downward fluctuation in data, we could end up excluding 
 \label{fig:stat:pmu_pb}
 \end{figure}
 
-\subsection{Distribution of the Test Statistic}
+\subsection{Distribution of the test statistic}
 
 To compute the p-value associated with the observed value of a test statistics $t$, we need the PDF of $t$ assuming that the signal hypothesis $H_\mu$ is true, $ f(t | \mu ) $. The distribution of the test statistics can be obtained with pseudo-experiments or, in the case of large statistics, with the asymptotic approximation. 
 
@@ -489,7 +489,7 @@ The distribution of the test statistic can be obtained by sampling the likelihoo
 
 This is done twice: a first time using as expected number of events the one predicted by the null hypothesis, and a second time the one predicted by the alternate hypothesis. The integral of the two resulting distributions is used to compute the p-values.
 
-\subsubsection*{Asymptotic Approximation}
+\subsubsection*{Asymptotic approximation}
 For large number of events, the asymptotic approximation \cite{Cowan2011} can be used to determine the \pdf of the test statistic without having to simulate a large number of pseudo-experiments. This technique is based on  Wald's theorem \cite{Wald1943}, which states that $t_{\mu} = -2 \ln \lambda(\mu)$ is parabolic up to corrections that scale with the inverse of the square root of the sample size:
 
 \begin{equation}
@@ -518,11 +518,11 @@ f(t_{\mu};\Lambda) = \frac{1}{2 \sqrt{t_{\mu}}} \frac{1}{\sqrt{2 \pi}}
 
 The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values.
 
-\section{Simplified Examples}
+\section{Simplified examples}
 
-\subsection{CRs to Constrain Uncertainties}
+\subsection{CRs to constrain uncertainties}
 \label{sec:example_cr}
 
-\subsection{Improving the Sensitivity by Combining Regions}
+\subsection{Improving the sensitivity by combining regions}
 \label{sec:example_combi}
 

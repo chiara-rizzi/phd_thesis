@@ -1,9 +1,9 @@
-\section{Detectors for Collider Physics}
+\section{Detectors for collider Physics}
 \label{sec:detectors}
 
 In this section we review the basic concepts that drive the design of the \gls{lhc} detectors, including ATLAS.
 
-\subsection{Identification of Particles}
+\subsection{Identification of particles}
 \label{sec:detectors:identification}
 
 
@@ -18,7 +18,7 @@ The ability to accurately identify particles and reconstruct their energy and tr
 \end{figure}
 
 
-\subsection{Tracking and Spectrometry}
+\subsection{Tracking and spectrometry}
 \label{sec:dec:tracking}
 A tracking device measures the traces left by charged particles passing through it. To allow the determination of the momentum and the charge of a particle, a tracking device needs to be accompanied by a magnetic field (and in this case we speak of a \textit{magnetic spectrometer}): once the magnetic field is known, the measure of the radius of curvature of the particle is equivalent to a measure of its momentum, according to Eq. \ref{eq:cern:p03br}. In a typical particle detector as the one in the schema in Fig. \ref{fig:detector:interaction}, both the inner tracking system and the muon system are magnetic spectrometers.
 
@@ -39,7 +39,7 @@ There are three main configurations of magnetic fields for momentum spectrometer
 
 The track left by the charged particles curving because of the magnetic field is reconstructed by the tracking detectors. The two most common categories of tracking devices are gas and silicon detectors, described in the next two sections.
 
-\subsubsection*{Gas Detectors}
+\subsubsection*{Gas detectors}
 
 In gas detectors, the passage of a charged particle ionizes the atoms and creates \textit{electron-ion pairs}. Once the electron and the ion are created, they can be separated (thus creating a current) by applying an electric field. This induces signal on an electrode added to the material, read through a readout system. The basic principle of most of gas detectors relies on a tube with a wire in the center, which is an anode with an high electric field. When the particle crosses the gas, the electrons drift toward the anode and can be collected. Without electric field, the electron and ion move in the system by thermal diffusion. The effect of an electric field is to make the electron and ion to move in opposite directions, allowing us to measure them. Since not many electrons are produced in gas, they need to be amplified. Inside the tube, the electric field decreases with the inverse of the distance from the anode wire. When the electrons reach a distance of a few micrometers from the wire, the electric field is very large and the electrons gain more energy than the ionization energy; this leads to secondary ionization and an exponential growth of the electron-ion pairs (\textit{avalanche effect}). 
 
@@ -49,7 +49,7 @@ In general the main problems of gas detectors based on ionization are the spatia
 
 All the gas detectors described above are based on the electron-ion pairs created by the ionization induced by the charged particle. A different principle is used in \gls{trd}. \glspl{trd} are based on detecting the electromagnetic radiation emitted by particles that cross boundaries between different media below Cherenkov threshold \cite{1402-4896-1982-T2A-024}. The energy radiated increases with the energy of the incoming particle. These detectors are less common for tracking, but are mentioned here as the main example of a modern \gls{trd} in high-energy physics is the \gls{trt} in the inner detector of the ATLAS Experiment.
 
-\subsubsection*{Solid-state Detectors}
+\subsubsection*{Solid-state detectors}
 
 Seimiconductor (and in particular silicon) detectors are the main type of solid-state detectors, and are currently the most used for the inner tracking, where you need high precision and low occupancy \cite{Hartmann:2009zza}. These detectors detectors are also based on the ionization of the material but in this case, since the structure is a crystal, we talk about electrons and \textit{electron holes}. 
 
@@ -88,7 +88,7 @@ Calorimeters can measure the energy of both charged and neutral particles throug
 When the incident particle interacts with the material of the calorimeter it develops a cascade of particles (\textit{shower}), with different characteristics for electromagnetic and hadronic interactions, described in the next two sections. Different types of calorimeters are necessary to capture the two typologies. The energy of the shower is decreased by the interactions happening in the \textit{absorber} material, while the \textit{active} material provides the conversion of the energy in a charge or light signal. In \textit{sampling calorimeters} layers of absorber and active material are alternated in sequence, while in \textit{homogeneous calorimeters} a single material carries out both functions.
 
 
-\subsubsection*{Electromagnetic Calorimeters}
+\subsubsection*{Electromagnetic calorimeters}
 
 The type of interaction that electromagnetically-interacting particles have with the detector depends on their energy. The average fractional energy loss in lead for electrons and positrons and the photon interaction cross section in lead are shown in Fig. \ref{fig:det:xsec_elec} (a) and (b) respectively. 
 
@@ -141,7 +141,7 @@ The first term of the sum in quadrature reflects the \textit{stochastic} nature 
 
 
 
-\subsubsection*{Hadronic Calorimeters}
+\subsubsection*{Hadronic calorimeters}
 
 The difference between electromagnetic calorimeters and hadronic calorimeters finds its origin in the more complicated nature of strong interactions compared to the electromagnetic ones. 
 
@@ -197,7 +197,7 @@ In general $\frac{\eta_{em}}{\eta_{h}}>1$. Since the value of the electromagneti
 In modern non-compensating calorimeters the value of the constant is about 0.4, while it can be as low as 0.2 in the case of compensating calorimeters.
 
 
-\subsection{Detecting Photons}
+\subsection{Detecting photons}
 
 As already mentioned in the previous sections, photons are often the effect of the passage of a particle; this is the case for example in \glspl{trd} or in calorimeters with scintillator as active material. This sections is an overview of how these photon can generate a detectable current; for a more extensive discussion see for example Ref. \cite{lightdetection,Grupen:2012zpa}. The typical process of photon detection can be summarized in three different steps: first of all, the incident photon generates a photoelectron or an electron-hole pair through photoelectric or photoconductive effect. Then the signal of the electron needs to be amplified, and finally collected. Important properties to classify photon-detecting devices are \cite{Patrignani:2016xqp}:
 \begin{description}[font=\normalfont]
@@ -214,7 +214,7 @@ As already mentioned in the previous sections, photons are often the effect of t
 
 Photon detectors can be broadly classified into three categories: vacuum, gaseous and solid-state detectors, described in the following paragraphs.
 
-\subsubsection*{Photomultiplier Tubes}  
+\subsubsection*{Photomultiplier tubes}  
 
 \glspl{pmt} are the most common type of vacuum photon detector. A sketch of the structure of a \gls{pmt} is shown in Fig. \ref{fig:det:pmt}. It consists of a vacuum tube with an input window, a photocatode, a focusing electrode, electron multipliers and an anode  \cite{hamamatsu}. The photons enter the device through the window and excite the electrons in the valence band of the photocatode, which is a semiconductor; in \textit{transmission-type} \glspl{pmt} the photocatode is deposited on the inside of the window, while in \textit{reflection-type} \glspl{pmt} is on a separate surface. The excited electrons diffuse to the surface of the semiconductor and, if they have enough energy to overcame the vacuum level barrier, are emitted as photoelectrons. These are accelerated and focused by the electrode toward the multi-stage dynodes, a system of electrodes coated with a secondary emissive material, where the incident electrons are multiplied. The gain $G$ of the \gls{pmt} depends on the applied voltage $V$ as $G=AV^{kn}$, where $A$ and $k$ are constants and $n$ is the number of multiplicative stages. Typical values for the gain are $10^5-10^6$. After the last stage of multiplication, the electrons are collected by the anode that then outputs the current to the external circuit.
 
@@ -227,10 +227,10 @@ Photon detectors can be broadly classified into three categories: vacuum, gaseou
 
 Beside \glspl{pmt}, other examples of vacuum photon detectors are \gls{mcp} and \gls{hpd}. \glspl{mcp} are based on the same principle as \glspl{pmt} but substitute the discrete multiplicative stages of the dynodes with continuous multiplication in cylindrical holes of a few $\mu$m. The decreased size of a \gls{mcp} comes at the price of a large recovery time, shorter lifetime and smaller gain (the typical gain of a \gls{mcp} is about $10^4$). In \glspl{hpd} photoelectrons are accelerated onto a silicon sensor, allowing higher resolution in space and energy; this type of sensors are used for example in the CMS hadronic calorimeter.
 
-\subsubsection*{Gaseous Photon Detectors}
+\subsubsection*{Gaseous photon detectors}
 In \textit{gaseous photon detectors} the photoelectrons are multiplied through the avalanche effect in an high-field region, similarly to what happens in gaseous tracking detectors. The photoelectrons are generated by the interaction of the photon either with a solid photocatode or with a photosensitive molecule vaporized and mixed in the gas itself. 
 
-\subsubsection*{Solid-State Photon Detectors}
+\subsubsection*{Solid-State photon detectors}
 \textit{Solid state photon detectors} are devices where the production and detection of the photoelectrons takes place in the same semiconductor material. They are in rapid development (see e.g. Ref. \cite{Renker:2009zz}) as they provide a smaller and often cheaper option to \glspl{pmt} and gaseous detectors, especially when the area to be covered is small. Silicon photodiodes are devices used in many applications from high-energy physics to solar cells, based on a reverse-biased p-n junction. Photons passing through the silicon create electron-hole pairs through the photoconductive effect, and these electron-hole pairs are then collected respectively at the positive and negative side of the chip. 
 
  %Advances in solid state photon detectors
