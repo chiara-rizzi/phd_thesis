@@ -201,7 +201,20 @@ Considering the two processes separately leads necessarily to an improper treatm
 
 We can write the matrix element for the production of the $WWbb$ final state as:
 
+\begin{equation}
+\mathcal{M}_{WWbb} = \mathcal{M}_{\rm{double-res}} + \mathcal{M}_{\rm{sin-res}} \; ,
+\end{equation}
 
+\noindent where the first term represent the contribution from \ttbar production (double resonance) and the second term the contribution from 
+\gls{nlo} corrections to the Wt single top production, where only one of the two $Wb$ systems is resonant (single resonance). 
+When computing the squared amplitude, this becomes:
+
+\begin{equation}
+|\mathcal{M}_{WWbb}|^2 = |\mathcal{M}_{\rm{double-res}}|^2 + |\mathcal{M}_{\rm{sin-res}}|^2 + 2 \mathcal{R}\left(\mathcal{M}_{\rm{double-res}}\times \mathcal{M}_{\rm{sin-res}}^* \right) \; .
+\end{equation}
+
+While the first two term are properly taken into account by the individual \ttbar and single top \gls{mc} simulations, 
+the last term represent the interference between the two processes and, unless special care to avoid this is taken, is completely ignored if the two processes are simulated independently. 
 
 In the \gls{dr} approach, all the diagrams where a W boson and a b quark form a top quark are removed. 
 Instead in the \gls{ds} approach an extra subtraction term is added to cancel the overlapping contributions from \ttbar. 
