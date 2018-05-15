@@ -1,4 +1,4 @@
-\chapter{p-p Interactions and their Simulation}
+\chapter{p-p interactions and their simulation}
 \label{chap:event:MC}
 \glsunset{atlas}
 
@@ -10,7 +10,7 @@ the main \gls{mc} generators used in the \gls{atlas} Collaboration are described
 
 
 
-\section{p-p Interactions}
+\section{p-p interactions}
 \label{sec:ppint}
 
 In hard-scattering processes, where the momentum transfer is much higher than the proton mass \cite{Butterworth:2012fj}, 
@@ -31,7 +31,7 @@ collectively referred to as partons. A schematic view of \gls{pp} event is shown
 As in can be understood from the figure, the hard process, which can be computed in perturbation theory, takes place between two of the proton partons; the probability that a gluon or a specific quark type takes part to the hard scattering is described the \glspl{partdf}, discussed in Section \ref{sec:ppint:hardscatter}. If the products of the hard scattering are quarks or gluons, after loosing energy by radiating other gluons (which in turn can generate quarks through gluon splitting) in the process of parton shower, they evolve into stable hadrons in the lower-energy hadronization process, which we can describe only through phenomenological models.
 This picture is further complicated by the fact that also initial-state quarks and gluons can radiate. Also, the other partons not contributing to the hard scattering can interact, originating what is referred to as underlying event. 
 
-\subsection{Factorization Theorem}
+\subsection{Factorization theorem}
 \label{sec:ppint:hardscatter}
 
 The hard scattering between the partons inside the proton is in a kinematic regime where the \gls{qcd} coupling constant, $\alpha_s$, 
@@ -72,7 +72,7 @@ this dependence appears at any fixed order. $\hat\sigma$ depends also on the ren
 %  \label{fig:sim:pp}
 %\end{figure}
 
-\subsection{Parton Density Functions}
+\subsection{Parton density functions}
 \label{sec:protpdf}
 
 The partons inside the proton can not be observed as free particles, and therefore their \glspl{partdf} can not be computed with
@@ -106,7 +106,7 @@ As mentioned above, the $x$ dependence has to be extracted experimentally. This 
 \end{figure}
 
 
-\section{Event Simulation}
+\section{Event simulation}
 \label{sec:eventsimul}
 
 The main steps in the simulation of \gls{pp} collision events consists of:
@@ -118,7 +118,7 @@ The main steps in the simulation of \gls{pp} collision events consists of:
 \end{itemize}
 In the next sections, each step is summarized in its main features.
 
-\subsection{Matrix Element}
+\subsection{Matrix element}
 
 As discussed e.g. in Ref \cite{Skands:2011pf}, the partonic cross-section for the production of the final state $X$ starting from the partons $i$ and $j$, necessary to compute
 Equation \ref{eq:general-cross-section}, can be expressed at all orders as:
@@ -140,7 +140,7 @@ $\mu_F$ and $\mu_R$ are not predetermined, and are typically set to values relat
 The impact of this subjective choice is taken into account by evaluating each production cross-section at different scales (typically a variation of a factor two up and down), and assigning the difference as a systematic uncertainty on the cross-section estimate.
 
 
-\subsection{Parton Shower}
+\subsection{Parton shower}
 
 The theorem from Kinoshita, Lee and Nauenberg (KLN theorem) \cite{Kinoshita:1962ur,Lee:1964is} guarantees that, 
 when computing inclusive cross-sections, the logarithmic divergences arising from collinear splitting cancel against the virtual corrections order by order in perturbation theory. 
@@ -245,7 +245,7 @@ The fragmentation function determines the probability of a given hadron to carry
 These two hadronization models have been developed in the 1980's, and since then there has been no fundamental progress in the theoretical understanding of hadronization. 
 When the simulation of the events stops before hadronization, it is referred to as "parton-level".
 
-\subsection{Underlying Event}
+\subsection{Underlying event}
 
 Protons contain more than one parton; the partons that do not participate to the hard scattering can undergo interactions as well, giving origin to multiple parton interactions in the same collision (underlying event).
 These secondary interactions are in general of lower momentum, since the \glspl{me} is larger for low momentum transfer, and will contribute to the activity along the beam direction, less in the transverse plane. 
@@ -260,14 +260,14 @@ The term pileup refers to additional \gls{pp} interactions happening in the same
 The presence of pileup challenges the reconstruction of the event, as it gives rise to extra activity overlapping with the products of the hard-scattering. The techniques used to model in-time pileup are the same as for the underlying event; 
 for out-of-time pileup, similar methods are used but simulating the time response of the detector electronics to collisions from the previous bunch crossing. 
 
-\section{MC Generators}
+\section{Monte Carlo generators}
 \label{sec:mcgen}
 
 The simulations described in the above sections are carried out by event generators, that can be either general purpose, 
 if they can reproduce all of the steps of the event generation, or specialized to one functionality. 
 In this section the main characteristics of the generators used in the analyses described in this thesis are reviewed.
 
-\subsection{General Purpose Generators}
+\subsection{General purpose generators}
 
 Several independent codes allow to study the effects of different modelling of the hadronization and different choices for the parton shower. The three main general-purpose event generators are:
 
@@ -288,7 +288,7 @@ It uses a cluster hadronization model.
 
 The recent versions of all three generators are coded in c++, but \HW and \PY were originally developed in Fortran.  
 
-\subsection{Matrix Elements Generators}
+\subsection{Matrix elements generators}
 
 The generators described in this section do not provide a full description of the event, but aim instead at improving the 
 computation of the \glspl{me}, and can be afterwards interfaced to a general purpose generator to simulate parton shower, underlying event and pielup. The most common \glspl{me} generators are:
@@ -301,7 +301,7 @@ It uses the \Powheg method for matching.
 
 \end{description}
 
-\subsection{Specialized Generators}
+\subsection{Specialized generators}
 
 The specialized generators provide a better description of one specific aspect of the \gls{mc} simulation. Some of them are:
 
@@ -319,7 +319,7 @@ The tau decays are then handled by separated packages like \tauola, which includ
 \end{description}
 
 
-\section{Detector Simulation}
+\section{Detector simulation}
 \label{sec:detsim}
 
 The outcome of the event simulation are the four-vectors of all the stable particles produced in the final state of the event, stored in the standard HepMC format \cite{Dobbs:2001ck}.
@@ -349,7 +349,7 @@ The output of ATLFAST-II includes all the properties necessary to run the same e
 
 
 
-\section{Data-driven Corrections}
+\section{Data-driven corrections}
 \label{sec:datacorr}
 
 After begin simulated, the \gls{mc} events are normalized to the highest-available-order cross-section, and are reweighted so that the simulated pileup distribution matches the one observed in the data that will be compared with the simulation.
