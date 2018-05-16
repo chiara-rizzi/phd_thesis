@@ -47,6 +47,9 @@ In each of the analyses described in the next two chapters, two different analys
 \end{description}
 
 
+\section{Object definition}
+\label{sec:common_obj_def}
+
 
 \section{Background processes and their modelling}
 \label{sec:common_backgrounds}
@@ -198,7 +201,7 @@ Single top events produced through t-channel processes are simulated with \Powhe
 While the \gls{lo} diagrams for Wt-channel single-top production in Figures \ref{fig:st_prod_Wt1}-\ref{fig:st_prod_Wt2} show a clear signature characterized by one single heavy-flavour quark in the final state,
 when \gls{nlo} diagrams are considered it is possible to reach the same final state as with \ttbar production, namely $WWbb$, as shown in Fig. \ref{}. 
 Considering the two processes separately leads necessarily to an improper treatment of the quantum interference between them.
-\PowhegBox allows to approach this problem with two different strategies, \gls{dr} and \gls{dr}; while none of them reproduces the quantum interference between single top and \ttbar, they allow to mitigate the size of the effect. 
+\PowhegBox allows to approach this problem with two different strategies, \gls{dr} and \gls{ds}; while none of them reproduces the quantum interference between single top and \ttbar, they allow to mitigate the size of the effect. 
 
 \begin{figure}[h]
 \centering 
@@ -257,6 +260,12 @@ this is because in the analyses discussed in this thesis the single top backgrou
 
 \subsection{Vector boson in association with jets}
 
+The production of a vector boson (W or Z boson) in association with jets is modeled in \gls{atlas} with the \Sherpa generator in version 2.2.0: \glspl{me} are 
+computed with \comix \cite{Gleisberg:2008fv} and \OL \cite{Cascioli:2011va}, and merged with the \Sherpa parton shower with the CKKW prescription; the \gls{pdf} set used is NNPDF 3.0, and the expected number of events is normalized to the \gls{nnlo} cross-section \cite{Catani:2009sm}.
+%For \gls{pp} collisions at 13 TeV, this corresponds to a cross-section of 20080 pb for $W+$jets and 
+The \gls{lo} Feynman diagrams for the production of a W boson in association with one jet are shown in Fig. \ref{fig:W_prod}. 
+The diagrams for the production of a Z boson in association with one jet are the same, except that in the case of the Z boson the 
+two quarks in Fig. \ref{fig:W_prod_1} and the quark and antiquark in Fig. \ref{fig:W_prod_2} have the same flavour. 
 
 \begin{figure}[h]
 \centering 
@@ -264,6 +273,28 @@ this is because in the analyses discussed in this thesis the single top backgrou
 \subfigure[]{\includegraphics[width=0.25\textwidth]{figures/susy_common/feynman/W_2}\label{fig:W_prod_2}} 
 \caption{\gls{lo} Feynman diagrams for the production of a W boson in associatino with one jet.}\label{fig:W_prod}
 \end{figure}
+
+Our selections require high \met and the presence of b-jets, therefore most of the W+jets events that fulfill the selection are the ones where the $W$ boson decays to a electron, muon or tau lepton 
+and the associated neutrino (to produce some \met) and the b-tagging requirement is satisfied because of the the production of extra heavy-flavour jets, or because the jet form the hadronic decay of the $\tau$
+lepton is wrongly tagged as a b-jet together with other associated jets. 
+W+jets events can therefore be present both in analysis regions with a lepton requirement and in those with a veto on the presence of leptons. 
+In the case of Z+jets events, most of the events that enter the analysis regions have a $Z \to \nu \nu$ decay (which has a \gls{br} of about 20\%), and are produced in association with 
+heavy-flavour jets or jets that are then mitagged; these events contribute almost exclusively to the analysis regions with a lepton veto. 
+
+\subsubsection{Modeling uncertainties}
+
+The modelling uncertainties considered in the case of the simulation of vector boson production in association with jets are related to the choice of parameters in the \Sherpa generator. 
+
+\begin{description}
+\item[Renormalization scale]
+\item[Matching scale]
+\item[Factorization scale]
+\item[Resummation scale]
+\end{description}
+
+In order to derive the response to these systematic uncertainties, the analyses described in this thesis do not use a direct comparison of the nominal samples with the ones implementing the systematic variations.
+
+
 
 \subsection{Boson pair production}
 
@@ -319,9 +350,6 @@ and the energy scale of the interaction is low enough to be at the limit of the 
 
 A second problem is of practical nature: the high cross-section for multi-jet production implies a huge number of \gls{mc} events that need to be simulated in order not to have a huge statistical uncertainty. 
 
-
-\section{Object definition}
-\label{sec:common_obj_def}
 
 \section{Systematic uncertainties}
 \label{sec:common_syst}
