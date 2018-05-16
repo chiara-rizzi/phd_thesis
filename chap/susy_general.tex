@@ -50,9 +50,14 @@ In each of the analyses described in the next two chapters, two different analys
 \section{Object definition}
 \label{sec:common_obj_def}
 
+Physics objects used in the analyses are defined in two steps:
+a first set of looser selections defines the baseline objects, that are used as input for the overlap removal algorithm that, in the steps defined below 
+solves the double-counting of the objects (e.g. electrons reconstructed also as jets); objects that survive the overlap removal procedure are then subject to 
+tighter selections to define the signal objects. The specific selections applied to jets, electrons and muons are:
+
 \begin{description}
 
-\item[Jets] Baseline jets are reconstructed with the anti-$k_T$ algorithm (described in Section \ref{sec:obj:jetfinding}) with radius parameter $R-0.4$ 
+\item[Jets] Baseline jets are reconstructed with the anti-$k_T$ algorithm (described in Section \ref{sec:obj:jetfinding}) with radius parameter $R=0.4$ 
 and use the calibration procedure discussed in Section \ref{sec:obj:jetcalib}. 
 The kinematic selection on baseline candidate jets is  $\pt > 20$ GeV and $|\eta|<2.8$; 
 In order to suppress fake jets originating from pileup interactions, jets with $\pt<60$ GeV are required to have \gls{jvt} > 0.59 and satisfy the cleaning criteria discussed in Section \ref{sec:jetcleaning} with the \textit{BadLoose} \gls{op}.
@@ -73,12 +78,12 @@ Electrons are matched to the \gls{pv} by requiring \dzero/$\sigma_\dzero < 5$ an
 
 \item[Muons] Baseline muons are required to satisfy the Medium identification \gls{op} (Section \ref{sec:muon_id}) and to have $\pt > 20$ GeV and $|\eta|<2.5$. 
 After overlap removal, signal muons are required to satisfy the $LooseTrackOnly$ isolation \gls{op}.
-Muons are also matched to the \gls{pv} by requiring \dzero/$\sigma_\dzero < 3$ and  $\zzerost < 0.5$ mm. 
-
-\item[\met] The missing transverse momentum is defined considering all the calibrated objects in the event, as described in Section \ref{sec:met}, and uses the \gls{tst} to account for the contribution of
-detector signals not associated to reconstructed objects. 
+Muons are also matched to the \gls{pv} by requiring \dzero/$\sigma_\dzero < 3$ and  $\zzerost < 0.5$ mm; muons that do not satisfy this selection as considered as cosmic muons, and the events with at least one cosmic muons are vetoed.
 
 \end{description}
+
+The missing transverse momentum is defined considering all the calibrated objects in the event, as described in Section \ref{sec:met}, and uses the \gls{tst} to account for the contribution of
+detector signals not associated to reconstructed objects. 
 
 \subsubsection{Overlap removal}
 
