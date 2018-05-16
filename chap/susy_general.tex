@@ -52,7 +52,7 @@ In each of the analyses described in the next two chapters, two different analys
 
 \begin{description}
 
-\item[Jets] Candidate jets are reconstructed with the anti-$k_T$ algorithm (described in Section \ref{sec:obj:jetfinding}) with radius parameter $R-0.4$ 
+\item[Jets] Baseline jets are reconstructed with the anti-$k_T$ algorithm (described in Section \ref{sec:obj:jetfinding}) with radius parameter $R-0.4$ 
 and use the calibration procedure discussed in Section \ref{sec:obj:jetcalib}. 
 The kinematic selection on baseline candidate jets is  $\pt > 20$ GeV and $|\eta|<2.8$; 
 In order to suppress fake jets originating from pileup interactions, jets with $\pt<60$ GeV are required to have \gls{jvt} > 0.59 and satisfy the cleaning criteria discussed in Section \ref{sec:jetcleaning} with the \textit{BadLoose} \gls{op}.
@@ -63,20 +63,29 @@ Jets are considered b-tagged based on the output of the MV2c10 algorithm (Sectio
 \ttbar events, which corresponds to a rejection factor of 6, 22 and 134 against jets originating from c quarks, hadronic decays of $\tau$ leptons and light jets respectively. 
 
 
-\item[Reclustered jets] Baseline candidate jets that survive the overlap removal are re-clustered with the anti-$k_T$ algorithm into large-R jets of radius $R=0.4$, as described in Section \ref{sec:reclustering}. 
+\item[Reclustered jets] Baseline jets that survive the overlap removal are re-clustered with the anti-$k_T$ algorithm into large-R jets of radius $R=0.4$, as described in Section \ref{sec:reclustering}. 
 Re-clustered jets are trimmed removing the constituents whose \pt falls below 10\% of the \pt of the re-clustered jet, and are then required to have $\pt>100$ GeV and $|\eta|<2.0$.
 
-\item[Electrons]
+\item[Electrons] Baseline electrons have to satisfy the Loose identification \gls{op} described in Section \ref{sec:elec_id} and required to have $\pt > 20$ GeV and $|\eta|<2.47$. 
+After overlap removal, signal electrons are required to satisfy the Tight identification \gls{op} and the $LooseTrackOnly$ isolation \gls{op}.
+Electrons are matched to the \gls{pv} by requiring \dzero/$\sigma_\dzero < 5$ and  $\zzerost < 0.5$ mm.
 
-\item[Muons]
 
-\item[\met]
+\item[Muons] Baseline muons are required to satisfy the Medium identification \gls{op} (Section \ref{sec:muon_id}) and to have $\pt > 20$ GeV and $|\eta|<2.5$. 
+After overlap removal, signal muons are required to satisfy the $LooseTrackOnly$ isolation \gls{op}.
+Muons are also matched to the \gls{pv} by requiring \dzero/$\sigma_\dzero < 3$ and  $\zzerost < 0.5$ mm. 
+
+\item[\met] The missing transverse momentum is defined considering all the calibrated objects in the event, as described in Section \ref{sec:met}, and uses the \gls{tst} to account for the contribution of
+detector signals not associated to reconstructed objects. 
 
 \end{description}
 
 \subsubsection{Overlap removal}
 
+Potential overlaps between jets, electrons and muons are resolved sequentially with the overlap removal procedure. 
 
+\subsection{Experimental systematic uncertainties}
+\label{sec:common_syst}
 
 
 \section{Background processes and their modelling}
@@ -404,10 +413,6 @@ and the energy scale of the interaction is low enough to be at the limit of the 
 A second problem is of practical nature: the high cross-section for multi-jet production implies a huge number of \gls{mc} events that need to be simulated in order not to have a huge statistical uncertainty. 
 
 
-\section{Systematic uncertainties}
-\label{sec:common_syst}
 
-\subsection{Experimental systematic uncertainties}
 
-\subsection{Modeling uncertainties} 
 

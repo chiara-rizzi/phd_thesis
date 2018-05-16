@@ -378,6 +378,7 @@ Reconstructed muons can belong to four different types, depending on the subdete
 When multiple types of muon are reconstructed for the same physical object, the redundant ones are removed with an \gls{or} procedure that, when muons share the same \gls{id} tracks, gives priority to combined muons, and then to segment-tagged muons over combined muons. The \gls{or} with extrapolated muons gives preference to the \gls{ms} track with the best quality.
 
 \subsection{Muon identification}
+\label{sec:muon_id}
 
 The reconstructed muons have to fulfill identification criteria that help rejecting the background constituted mostly by decays of pions and kaons. 
 The variables used in the identification are the significance of the difference of the charge-over-momentum ratios measured by the \gls{id} and by the \gls{ms} ($\frac{q}{p}$ significance),
@@ -451,10 +452,11 @@ original electron energy with multivariate techniques \cite{Aad:2014nim}, as wil
 derive from the primary associated track.
 
 Selections on the parameters of the primary track are applied to ensure that the electron is compatible with the \gls{pv} interaction. 
-In particular, in Run 2 analyses these selections are: \dzero/$\sigma_\dzero < 0.5$ and  $\zzerost < 0.5$ mm.
+In particular, in Run 2 analyses these selections are: \dzero/$\sigma_\dzero < 5$ and  $\zzerost < 0.5$ mm.
 
 
 \subsection{Electron identification}
+\label{sec:elec_id}
 
 After the electron candidates are reconstructed, a likelihood-based discriminant is used to reject the background, 
 constituted mostly by hadronic jets and converted photons. 
@@ -576,6 +578,7 @@ residual differences in electron energy scale and resolution between data and \g
 
 
 \section{Missing transverse momentum}
+\label{sec:met}
 
 Particles that interact only weakly with the detector, such as neutrinos or \gls{bsm} particles like neutralinos, are not reconstructed directly.  
 Their presence is instead inferred by measuring the total momentum imbalance in the event. 
