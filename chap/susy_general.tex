@@ -83,6 +83,23 @@ detector signals not associated to reconstructed objects.
 \subsubsection{Overlap removal}
 
 Potential overlaps between jets, electrons and muons are resolved sequentially with the overlap removal procedure. 
+First of all, electrons that are likely to originate form muon bremsstrahlung, i.e. those that lie within $\dR < 0.01$ from a muon candidate, are removed.
+
+Overlaps between jet candidates and electron arise mostly from two reasons. Electrons are reconstructed from deposits in the calorimeter, and are therefore reconstructed as jets as well.
+In this case we want to preserve the electron and remove the jet, so we remove any non-b-tagged jet that lies within $\dR < 0.2$ from an electron candidate;
+an exception is done for b-tagged jets, since in this case the electron is likely to originate from a semi-leptonic B-hadron decay. 
+Electron candidates that are close to the surviving jets are likely to have been produced in the decay of an hadron inside the jet, and are therefore removed
+if they lie within $\dR<0.4$ from a jet and their energy is lower than 50 GeV, or if their energy is higher than 50 GeV and the \dR from the jet 
+is lower than min$(0.4, 0.04 + 10 \, {\rm{GeV}}/E_{\rm{T}})$. 
+Having an energy-dependent \dR selection aims at increasing the acceptance for lepton originating from the decay of boosted top quarks.
+
+Unlike electrons, muons are unlikely to be reconstructed as jets. Therefore, the first step in the overlap removal procedure between muons candidates and jets 
+aims primarily at removing the muons that originate from the decay of hadrons inside the jets. 
+Muons and jets can also be close if the jet is originating from muon bremsstrahlung; these jets typically have a small number of associated \gls{id} tracks.
+Therefore jets that lie within $dR < 0.2$ from a muon are removed if they are not b-tagged and if they have less than three matching \gls{id} tracks. 
+Muons in close proximity to the surviving jets are removed if they are with a \pt-dependent threshold from jets that, similarly to what used for electrons, is 
+0.4 for muons with \pt below 50 GeV and min$(0.4, 0.04 + 10 \, {\rm{GeV}}/\pt)$ above 50 GeV. 
+
 
 \subsection{Experimental systematic uncertainties}
 \label{sec:common_syst}
