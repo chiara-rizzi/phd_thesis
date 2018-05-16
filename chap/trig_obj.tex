@@ -137,6 +137,7 @@ and the \glspl{np} within a single component are added in quadrature; this leads
 Jets with the same true energy can have different reconstructed energies; the distribution of the difference between true and reconstructed energy of a jet is modeled with a Gaussian, whose width is defined as \gls{jer}. The measurements for the in-situ calibrations can be used also to access the differences in \gls{jer} between data and \gls{mc} \cite{TheATLAScollaboration:2015ofv,ATLAS:2015uwa}, and result into an additional \gls{np}.
 
 \subsection{Jet Vertex Tagger}
+\label{sec:jvt}
 
 It has already been discussed in Sec. \ref{sec:obj:jetcalib} how pileup is taken into account in the calibration of the \gls{jes}. Beside affecting the jet energy, high levels of pileup can also lead to the reconstruction of spurious jets not originating from the hard-scattering interaction. In \gls{atlas} track-based algorithms are used for the identification of pileup jets \cite{Aad:2015ina,ATLAS:2014cva}. 
 Tracks are matched to calorimeter jets by ghost-association \cite{Soyez:2012hv}. Once the hard-scattering \gls{pv} (\gls{pv}$_0$) is identified, 
@@ -186,6 +187,7 @@ while Fig. \ref{fig:obj:jvt_data} shows the comparison of the \gls{jvt} distribu
 \end{figure}
 
 \subsection{Jet cleaning}
+\label{sec:jetcleaning}
 
 Beside pileup jest, other spurious jets come from the \gls{ncb}; this type of background includes muons originating from secondary cascades from beam losses, in whcih case we speak of \gls{bib}, and from cosmic rays. These muons leave energy deposits in the calorimeters while traversing the detector, that can be interpreted as jets. Also coherent noise from the calorimeters can give rise to fake jets. In \gls{atlas} a set of quality criteria are designed to reject jets not originating from \gls{pp} collisions \cite{TheATLAScollaboration:2015ofz}. These quality criteria are rely on variables based on:
 \begin{itemize}
@@ -197,6 +199,7 @@ Beside pileup jest, other spurious jets come from the \gls{ncb}; this type of ba
 Different thresholds for the selections on these variable distinguish the two working points, \textit{BadLoose} and \textit{BadTight}, which have an efficiency respectively of 99.5\% and 95\% for jets with $\pt > 20$ GeV (while for jets with $\pt > 100$ GeV the efficiency of the two working points increases to 99.9\% and 99.5\%). 
 
 \subsection{Re-clustered jets}
+\label{sec:reclustering}
 
 The angular separation between the decay products of a particle with mass $m^P$ and transverse momentum 
 $p_T^P$ scales as:
@@ -227,6 +230,7 @@ Re-clustered jets can be \textit{trimmed} by removing the constituent small-R je
 \end{figure}
 
 \section{Jets from B-hadrons}
+\label{sec:btagging}
 
 Jets originating from the hadronization of a b-quark (\textit{b-jets}) can be identified thanks to the lifetime of B-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the B-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a B-hadron is shown in Fig. \ref{fig:btag}. 
 \begin{figure}[h]

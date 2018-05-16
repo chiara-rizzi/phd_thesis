@@ -50,6 +50,34 @@ In each of the analyses described in the next two chapters, two different analys
 \section{Object definition}
 \label{sec:common_obj_def}
 
+\begin{description}
+
+\item[Jets] Candidate jets are reconstructed with the anti-$k_T$ algorithm (described in Section \ref{sec:obj:jetfinding}) with radius parameter $R-0.4$ 
+and use the calibration procedure discussed in Section \ref{sec:obj:jetcalib}. 
+The kinematic selection on baseline candidate jets is  $\pt > 20$ GeV and $|\eta|<2.8$; 
+In order to suppress fake jets originating from pileup interactions, jets with $\pt<60$ GeV are required to have \gls{jvt} > 0.59 and satisfy the cleaning criteria discussed in Section \ref{sec:jetcleaning} with the \textit{BadLoose} \gls{op}.
+After overlap removal, signal jets are required to have $\pt>30 (20)$ GeV for the analysis discussed in Chapter \ref{chap:strong_prod} (\ref{chap:ewk_prod}); the difference on the \pt threshold 
+in the two analyses is related to differences in the kinematic of the signal, and will be discussed more in detail in the specific chapters.
+
+Jets are considered b-tagged based on the output of the MV2c10 algorithm (Section \ref{sec:btagging}); in both analyses the \gls{op} used leads to an average efficiency of 77\% on b-jets from simulated  
+\ttbar events, which corresponds to a rejection factor of 6, 22 and 134 against jets originating from c quarks, hadronic decays of $\tau$ leptons and light jets respectively. 
+
+
+\item[Reclustered jets] Baseline candidate jets that survive the overlap removal are re-clustered with the anti-$k_T$ algorithm into large-R jets of radius $R=0.4$, as described in Section \ref{sec:reclustering}. 
+Re-clustered jets are trimmed removing the constituents whose \pt falls below 10\% of the \pt of the re-clustered jet, and are then required to have $\pt>100$ GeV and $|\eta|<2.0$.
+
+\item[Electrons]
+
+\item[Muons]
+
+\item[\met]
+
+\end{description}
+
+\subsubsection{Overlap removal}
+
+
+
 
 \section{Background processes and their modelling}
 \label{sec:common_backgrounds}
@@ -281,7 +309,7 @@ W+jets events can therefore be present both in analysis regions with a lepton re
 In the case of Z+jets events, most of the events that enter the analysis regions have a $Z \to \nu \nu$ decay (which has a \gls{br} of about 20\%), and are produced in association with 
 heavy-flavour jets or jets that are then mitagged; these events contribute almost exclusively to the analysis regions with a lepton veto. 
 
-\subsubsection{Modeling uncertainties}
+\subsubsection*{Modeling uncertainties}
 
 The modelling uncertainties considered in the case of the simulation of vector boson production in association with jets are related to the choice of parameters in the \Sherpa generator. 
 In particular, the parameters whose choice can influence the description of the events are:
@@ -307,8 +335,15 @@ and on the transverse momentum of the vector boson \cite{Anders:2291836}.
 
 \subsection{Boson pair production}
 
-Beside the production of a single vector boson, also a pair production is possible.
-The \gls{lo} Feynman diagrams for the production of a boson pair are shown in Fig. \ref{fig:dib_prod}.
+Beside the production of a single vector boson, also a pair production is possible: 
+the \gls{lo} Feynman diagrams for the production of a boson pair are shown in Fig. \ref{fig:dib_prod}.
+The cross-section is suppressed by more than three order of magnitude with respect to the 
+single-vector-boson case, therefore despite that presence of two bosons leads an higher acceptance into the analysis regions,
+the overall contribution diboson processes to the total \gls{sm} background is small. 
+The diboson \gls{mc} samples are generated with \Sherpa v2.1.1, and their cross section is computed at \gls{nlo} \cite{ATL-PHYS-PUB-2016-002,ATL-PHYS-PUB-2017-005}.
+A flat 50\% uncertainty is applied to the predicted number of events for this background, to take into account 
+systematic uncertainties on its modelling. This conservative uncertainty is found to be negligible in the analysis results. 
+
 
 \begin{figure}[h]
 \centering 
@@ -320,6 +355,15 @@ The \gls{lo} Feynman diagrams for the production of a boson pair are shown in Fi
 
 
 \subsection{\ttbar + X production}
+
+A pair of top quarks can be produced also in association with a vector boson o a Higgs boson, as shown in Figures \ref{fig:ttW_prod}-\ref{fig:tth_prod}.
+In this thesis, these processes constitute a minor background and are grouped in the category $\ttbar+X$, together with four-top production,
+for which an example \gls{lo} Feynman diagram is shown in Figure \ref{fig:fourtop_prod}. 
+The production of a \ttbar pair in association with a vector boson and four-top production is modeled with \aNLO showered with \PY v8, while for $\ttbar+H$ the same 
+\gls{me} generator is used but the \gls{psh} processes is performed with \HWpp. 
+All of these samples are normalized to the \gls{nlo} cross-section.
+As described above for the diboson background, a conservative 50\% uncertainty is applied also to the 
+$\ttbar+X$ background, and also in this case it is found to have negligible impact on the analysis. 
 
 \begin{figure}[h]
 \centering 
