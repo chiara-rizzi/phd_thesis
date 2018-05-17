@@ -85,7 +85,7 @@ Muons are also matched to the \gls{pv} by requiring \dzero/$\sigma_\dzero < 3$ a
 The missing transverse momentum is defined considering all the calibrated objects in the event, as described in Section \ref{sec:met}, and uses the \gls{tst} to account for the contribution of
 detector signals not associated to reconstructed objects. 
 
-\subsubsection{Overlap removal}
+\subsubsection*{Overlap removal}
 
 Potential overlaps between jets, electrons and muons are resolved sequentially with the overlap removal procedure. 
 First of all, electrons that are likely to originate form muon bremsstrahlung, i.e. those that lie within $\dR < 0.01$ from a muon candidate, are removed.
@@ -106,11 +106,43 @@ Muons in close proximity to the surviving jets are removed if they are with a \p
 0.4 for muons with \pt below 50 GeV and min$(0.4, 0.04 + 10 \, {\rm{GeV}}/\pt)$ above 50 GeV. 
 
 
-\subsection{Experimental systematic uncertainties}
+\section{Experimental systematic uncertainties}
 \label{sec:common_syst}
 
-All the selection in the definition of the objects described in Section \ref{sec:common_obj_def} result into a systematic uncertainty on the modelling of that selection in 
-the \gls{mc} simulation. 
+All the selection in the definition of the objects described in Section \ref{sec:common_obj_def} result into an experimental systematic uncertainty on the modelling of that selection in 
+the \gls{mc} simulation. The experimental systematic uncertainties that are more relevant for analyses targeting final states with multiple b-jets and \met are:
+
+\begin{description}
+
+\item[JES and JER] As discussed in Section \ref{sec:obj:jetcalib}, the processes of calibration of \gls{jes} and \gls{jer} allows to both calibrate the jet energy from the \gls{em} to the
+hadronic scale, and also to correct \gls{mc} simulations to describe better the data; the uncertainties on these corrections propagate to the analyses. 
+For the \gls{jes}, reduced sets of uncertainties are available that reduce the number of \glspl{np} to be included in the analysis at the cost of potential loss in correlation; 
+the analyses discussed in this thesis use a strongly reduced set with three \glspl{np}. 
+Uncertainties on \gls{jes} and \gls{jer} are the leading source of experimental uncertainties, as they can change the kinematic of the jets in the event, and therefore also the number
+of jets that fulfill certain selections.
+
+\item[b-tagging] The uncertainties on the b-tagging calibration procedure (Section \ref{sec:obj:btaggingcalib}) are included through uncertainties on the b-tagging \gls{sf}. 
+They are divided into one \gls{np} for the uncertainty on the efficiency of tagging jets originating from b quarks, one for the mistagging of the jets originating from 
+c quarks, one for light jets and finally one additional \gls{np} that inflates the uncertainties in the high-\pt region, where the b-tagging calibration is not available and the central 
+value of the \gls{sf} is taken from the closest calibrated \pt region. 
+The uncertainties on b-tagging play a relevant role in the analyses in this thesis, as they rely heavily on the selection of events containing b-tagged jets.
+
+\item[\met] All the uncertainties on the reconstructed objects are propagated to the \met computation. In addition, three \met-specific \glspl{np} are added to take into
+account the uncertainty on the scale and the parallel and perpendicular resolution of the \met soft term. The soft-term uncertainties have usually a very small impact on
+the analyses. 
+
+\item[Leptons] 
+
+
+\item[Luminosity]
+
+
+\end{description}
+
+
+
+
+
 
 \section{Background processes and their modelling}
 \label{sec:common_backgrounds}
@@ -189,6 +221,8 @@ generated with \PowhegBox interfaced with two versions of \PY v6.428 with two di
 The normalization of \ttbar events is derived in the \glspl{cr}, therefore modelling uncertainties affect only the extrapolation from 
 the \gls{cr} to the corresponding \glspl{sr} and \glspl{vr}, and not the overall normalization. 
 The modelling uncertainties are therefore estimated by comparing the expected values for the \glspl{tf}, defined as the ratio of expected yields in the \gls{sr} or \gls{vr} over the expected yields in the corresponding \gls{cr}. 
+The uncertainties on the \glspl{tf} obtained from the different sources listed above are summed in quadrature in each region, and are treated as uncorrelated across regions to avoid 
+constraints from the fit. 
 
 The main limitation for the estimate of the uncertainties is the statistical uncertainty of the \gls{mc} samples for the systematic variations, as these samples have in general less simulated events than the nominal sample. 
 More statistics is available at particle level, where the simulation of the interaction of the particles with the detector and the following event reconstruction (discussed in Section \ref{sec:detsim}) is not performed, so the evaluation of the \ttbar modelling uncertainties is carried out 
