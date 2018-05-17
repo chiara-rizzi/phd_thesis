@@ -1,4 +1,4 @@
-\chapter{Common sspects to multi-b+\met SUSY searches}
+\chapter{Common aspects to multi-b+\met SUSY searches}
 \label{chap:multib_general}
 
 The main results presented in this thesis are the two analyses described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. While these analyses target two different \gls{susy} models they have many commonalities, since they both target \gls{susy} models leading to final states rich in b-jets and missing transverse momentum (\met). This Chapter highlights these common aspects: Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design the signal models, Section \ref{sec:common_backgrounds} focuses on the background sources from \gls{sm} processes and how they are modeled in the analyses. 
@@ -51,7 +51,7 @@ In each of the analyses described in the next two chapters, two different analys
 \label{sec:common_obj_def}
 
 Physics objects used in the analyses are defined in two steps:
-a first set of looser selections defines the baseline objects, that are used as input for the overlap removal algorithm that, in the steps defined below 
+a first set of looser selections defines the baseline objects, that are used as input for the overlap removal algorithm that, in the steps defined in the next paragraph,
 solves the double-counting of the objects (e.g. electrons reconstructed also as jets); objects that survive the overlap removal procedure are then subject to 
 tighter selections to define the signal objects. The specific selections applied to jets, electrons and muons are:
 
@@ -71,13 +71,13 @@ Jets are considered b-tagged based on the output of the MV2c10 algorithm (Sectio
 \item[Reclustered jets] Baseline jets that survive the overlap removal are re-clustered with the anti-$k_T$ algorithm into large-R jets of radius $R=0.4$, as described in Section \ref{sec:reclustering}. 
 Re-clustered jets are trimmed removing the constituents whose \pt falls below 10\% of the \pt of the re-clustered jet, and are then required to have $\pt>100$ GeV and $|\eta|<2.0$.
 
-\item[Electrons] Baseline electrons have to satisfy the Loose identification \gls{op} described in Section \ref{sec:elec_id} and required to have $\pt > 20$ GeV and $|\eta|<2.47$. 
-After overlap removal, signal electrons are required to satisfy the Tight identification \gls{op} and the $LooseTrackOnly$ isolation \gls{op}.
+\item[Electrons] Baseline electrons have to satisfy the Loose identification \gls{op} described in Section \ref{sec:elec_id} and required to have $\pt > 20 (5)$ GeV the analysis discussed in Chapter \ref{chap:strong_prod} (\ref{chap:ewk_prod}) and $|\eta|<2.47$. 
+After overlap removal, signal electrons are required to satisfy the Tight identification \gls{op} and the $LooseTrackOnly$ isolation \gls{op}, and  to have $\pt > 20$ GeV.
 Electrons are matched to the \gls{pv} by requiring \dzero/$\sigma_\dzero < 5$ and  $\zzerost < 0.5$ mm.
 
 
-\item[Muons] Baseline muons are required to satisfy the Medium identification \gls{op} (Section \ref{sec:muon_id}) and to have $\pt > 20$ GeV and $|\eta|<2.5$. 
-After overlap removal, signal muons are required to satisfy the $LooseTrackOnly$ isolation \gls{op}.
+\item[Muons] Baseline muons are required to satisfy the Medium identification \gls{op} (Section \ref{sec:muon_id}) and to have $\pt > 20 (5)$ GeV in the analysis discussed in Chapter \ref{chap:strong_prod} (\ref{chap:ewk_prod}) and $|\eta|<2.5$. 
+After overlap removal, signal muons are required to satisfy the $LooseTrackOnly$ isolation \gls{op} and to have $\pt > 20$ GeV.
 Muons are also matched to the \gls{pv} by requiring \dzero/$\sigma_\dzero < 3$ and  $\zzerost < 0.5$ mm; muons that do not satisfy this selection as considered as cosmic muons, and the events with at least one cosmic muons are vetoed.
 
 \end{description}
@@ -131,10 +131,12 @@ The uncertainties on b-tagging play a relevant role in the analyses in this thes
 account the uncertainty on the scale and the parallel and perpendicular resolution of the \met soft term. The soft-term uncertainties have usually a very small impact on
 the analyses. 
 
-\item[Leptons] 
+\item[Leptons] The 
 
 
-\item[Luminosity]
+\item[Luminosity] Beside the ones deriving from the object selections, another experimental uncertainty that is taken into account in the analysis is 
+the uncertainty on the collected luminosity, whose measurement is described in Section \ref{sec:lumimeas}; for the 2015-2016 dataset the luminosity uncertainty corresponds 
+to 3.2\% and is derived with a strategy similar to that described in Ref. \cite{Aaboud:2016hhf}. 
 
 
 \end{description}
