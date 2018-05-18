@@ -159,11 +159,45 @@ background process we need to suppress and are therefore in common between the t
 
 \subsubsection*{Effective mass}
 
+\begin{equation}
+\meffi = \sum_{i\leq n} {\pt}^{j_i}  + \sum_{j\leq m} {\pt}^{\ell_j}  + \met.
+\end{equation}
 
 \subsubsection*{Transverse mass}
 
+The transverse mass between lepton and \met (\mt) is defined for events with at least one selected signal lepton as: 
+
+\begin{equation}
+\mt = \sqrt{2\pt^{\rm{lep}}\met(1-\cos\Delta\phi(\met,\pt^{\rm{lep}}))} \; ,
+\end{equation}
+
+\noindent where $\pt^{\rm{lep}}$ is the transverse momentum of the leading signal lepton in the event. 
+For events where this lepton and the entire \met derive from the decay of a parent particle with mass m$_{\rm{parent}}$, \mt presents an endpoint at m$_{\rm{parent}}$. 
+This is the case when the lepton and \met derive form the leptonic decay of a W boson, in W+jets events or in semileptonic \ttbar events; 
+note that dileptonic \ttbar events do not present the same endpoint at the W-boson mass, as it is not possible to completely disentangle the energy of the two neutrinos. Events from W+jets or semileptonic \ttbar processes can have values of \mt higher than the kinematic endpoint only if some of the objects in the event are not properly reconstructed (e.g. fake \met from mismeasured jets, jets misidentified as leptons or leptons out of acceptance).
+
+Another variable useful to suppress the \ttbar background is the transverse mass between \met and the b-jets in the event:
+
+\begin{equation}
+\mtb =  \mathrm{min}_{i\leq 3}  \sqrt{(\met+p_T^{j_i})^2 - ({\met}_x+p_x^{j_i})^2 - ({\met}_y+p_y^{j_i})^2 } \; ,
+\end{equation}
+
+\noindent where the minimum is taken over the transverse mass computed with the three leading b-tagged jets in the event. 
+In semileptonic \ttbar events, this variable presents an endpoint near the top-quark mass, as this is the endpoint that we would have if \met originating from the neutrino is perfectly measured and the b-jet produced in the decay of the same top quark as the neutrino is among the three leading b-tagged jets. 
 
 
+\subsubsection*{Total jet mass}
+
+
+\begin{equation}
+\mjsum = \sum_{i \leq 4} m_{J,i}
+\end{equation}
+
+\subsubsection*{QCD suppression}
+
+\begin{equation}
+\dphimin = \textrm{min}(|\phi_1 - \phi_{\met}|,...,|\phi_4 - \phi_{\met}|)
+\end{equation}
 
 \section{Background processes and their modelling}
 \label{sec:common_backgrounds}
