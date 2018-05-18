@@ -536,9 +536,19 @@ First of all, the production cross-section for multi-jet production is very diff
 It is feasible to model the $2 \to 2$ di-jet production, 
 but every additional parton in a $2 \to n$ process brings into the computation a further $\alpha_{\rm{s}}$ factor, 
 and the energy scale of the interaction is low enough to be at the limit of the validity of the perturbative expansion, limiting the validity of the \gls{lo} order computation. The inclusion of corrections of higher order can improve the description, but the number of extra diagrams that should be included makes this option unrealistic (just the \gls{lo} computation for the $2 \to 2$ process only comprises 10 different diagrams).
-
 A second problem is of practical nature: the high cross-section for multi-jet production implies a huge number of \gls{mc} events that need to be simulated in order not to have a huge statistical uncertainty. 
 
+The jet smearing method overcomes these problems by providing a data-driven estimate of the multi-jet background, through the following steps:
+\begin{itemize}
+\item A sample of well-measured multi-jet seed events, with low values of \met, is selected in data.
+
+\item Each jet in each seed event is smeared: its four-momentum is multiplied by a random number thrown based on the jet response function, that quantifies the fluctuations in the \pt reconstruction of the jets. The response, defined as the ratio E$_{\rm{T}}^{\rm{reco}}$/E$_{\rm{T}}^{\rm{truth}}$, is determined from \gls{mc} simulations and is then corrected to match data measurements. 
+A different response function is used for b-jets. 
+
+\item The smearing procedure is repeated an high number of times, $\mathcal{O}(1000)$, for each event, and every time \met is recomputed with the smeared jets as input; some of these smeared events will have high \met values and will satisfy the analysis selection.
+
+\item The number of events that satisfy the analysis selections is arbitrary and depends on the choice of the seed events and on the number of smears for each event. The normalization is derived in a specifically designed \gls{qcd} \gls{cr}, that relies on a tight upper selection on \dphimin ($\dphimin < 0.1$). All the zero-lepton analysis regions have the requirement $\dphimin < 0.4$, which makes them orthogonal to the \gls{qcd} \gls{cr} and allows also to have \glspl{vr} in the intermediate region. 
+\end{itemize}
 
 
 
