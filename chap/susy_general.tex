@@ -164,7 +164,9 @@ Even just the multiplicity of the objects defined in Section \ref{sec:common_obj
 \item[\nlep] Number of signal leptons (electrons and muons) in the event.
 \end{description}
 
-\noindent In addition to multiplicity variables, we can also use the energy of the individual objects as a discriminating variable; for example we can consider only jets with \pt above a certain threshold if we expect high-\pt jets from our signal. 
+\noindent In addition to multiplicity variables, we can also use the energy of the individual objects as a discriminating variable; 
+for example we always consider events with a minimum \met of 200 GeV (the selection is tighter in some analysis regions), 
+or we can consider only jets with \pt above a certain threshold if we expect high-\pt jets from our signal. 
 
 \subsubsection*{Effective mass}
 
@@ -201,9 +203,15 @@ In semileptonic \ttbar events, this variable presents an endpoint near the top-q
 
 \subsubsection*{QCD suppression}
 
+\gls{sm} background events without any neutrino in the decay chain can still have a sizable amount of reconstructed \met if one of the jets in the 
+event is mismeasured, leading to a fake energy imbalance in the event. In these cases, the resulting \met will have a value of the azimuthal angle ($\phi$) to the one of the mismeasured jet. The variable \dphimin is defined as the minimum difference in azimuthal angle between \met and the the four jets with the highest \pt in the event:
+
 \begin{equation}
-\dphimin = \textrm{min}_{i \leq 4}(|\phi_{{\rm{jet},}i} - \phi_{\met}|)
+\dphimin = \textrm{min}_{i \leq 4}(|\phi_{{\rm{jet},}i} - \phi_{\met}|) \; .
 \end{equation}
+
+\noindent Requiring high values of this variable helps rejecting evens with no real \met. 
+
 
 \section{Background processes and their modelling}
 \label{sec:common_backgrounds}
