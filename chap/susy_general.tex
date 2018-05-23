@@ -264,6 +264,21 @@ the \gls{mc} information can be used to reconstruct the decay chains that lead t
 Starting from each top quark in the event, it is possible to follow its decay chain and classify the event first of all into dilepton or single-lepton, or also with a finer classification based on the flavour of the lepton. 
 Subsequent decays of the $\tau$ lepton are not considered, and hadronically decaying taus are fully considered as leptons in this classification. 
 
+\begin{figure}[h]
+\centering 
+\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_mT_1L_3b_tt_dec.pdf}
+\caption{\ttbar decay type as a function of the \mt value  in a selection requiring at least four jets, at least three b-jets, $\met>200$ GeV and at least one signal lepton.}\label{fig:ttbar_decay_mT_1L}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_mTb_min_1L_3b_tt_dec.pdf}\label{fig:ttbar_dec_mTb_min_1L}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_mTb_min_0L_3b_tt_dec.pdf}\label{fig:ttbar_dec_mTb_min_0L}}
+\caption{\ttbar decay type as a function of the \mtb value  in a selection requiring at least four jets, at least three b-jets, $\met>200$ GeV and \subref{fig:ttbar_dec_mTb_min_1L} at least one signal lepton \subref{fig:ttbar_dec_mTb_min_0L} exactly zero lepton and $\dphimin > 0.4$.}\label{fig:ttbar_decay_mTb_min}
+\end{figure}
+
+
 \subsubsection*{Truth-level classification: flavour of the associated jets}
 
 A truth-level classification is in place to study the \ttbar+jets background based on the flavour of the associated jets.
@@ -272,6 +287,13 @@ described in Section \ref{sec:obj:jetfinding} with R=0.4; only particle jets wit
 he flavour of the jet is determined by matching them with the B- and C-hadrons that are in a cone of $\Delta R = 0.4$ from the jet. 
 If the event contains at least one jet matched to one or more B-hadrons, excluding the ones originating from the decay of the top quarks, the event 
 is classified as \ttbb. Otherwise, if at least one jet is matched to C-hadrons, excluding the ones from the decay of the top quarks or the W bosons, the event is classified as \ttcc. \ttbb and \ttbb events are categorized together as \tthf events, where HF stands for heavy flavour, while the remaining ones are classified as \ttlight.
+
+\begin{figure}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_bjets_n_1L_2b_HF.pdf}\label{fig:ttbar_HF_bjets_1L}}
+\subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_bjets_n_0L_2b_HF.pdf}\label{fig:ttbar_HF_bjets_0L}}
+\caption{Evolution of the flavour of the jets produced in association with \ttbar in a selection requiring at least four jets, at least two b-jets, $\met>200$ GeV and \subref{fig:ttbar_HF_bjets_1L} at least one signal lepton \subref{fig:ttbar_HF_bjets_0L} exactly zero lepton and $\dphimin > 0.4$.}\label{fig:ttbar_HF_bjets}
+\end{figure}
 
 
 \subsubsection*{Modelling uncertainties}
