@@ -459,7 +459,18 @@ production of two on-shell top quarks, which is more accurate the more the invar
 Acting at the cross-section level and not at the matrix-element level, this approach aims at accounting also for the interference term. 
 
 Which one of the twp strategies gives a better description of the data depends on the phase space under consideration. 
-In this thesis the nominal single top estimate for the Wt channel is obtained with the \gls{dr} strategy.  
+In this thesis the nominal single top estimate for the Wt channel is obtained with the \gls{dr} strategy. 
+As an example, Figure \ref{fig:st_1L} shows how the choice of the \gls{dr} or \gls{ds} approach can change the distribution of two key variables 
+in the analyses, \met and \mtb. 
+
+\begin{figure}[h!]
+\centering 
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_met.pdf}\label{fig:st_met_1L}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_mTb_min.pdf}\label{fig:st_mtb_1L}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_jets_n.pdf}\label{fig:st_nj_1L}}
+\caption{Distribution of \subref{fig:st_met_1L} \met,  \subref{fig:st_mtb_1L} \mtb and \subref{fig:st_nj_1L} number of signal jets in the single top \gls{mc} sample obtained with the \gls{dr} and \gls{ds} approaches (pink and blue line respectively), in a selection requiring at least four jets, at least two b-jets, $\met>200$ GeV and at least one lepton. 
+}\label{fig:st_1L}
+\end{figure}
 
 To evaluate the uncertainty associate with the strategy chosen to account for the interference between \ttbar and single top
 we use a dedicated $WWbb$ sample generated at particle level with \aNLO showered with \PY v8, that takes fully into account the interference.
@@ -527,6 +538,35 @@ In order to derive the response to these systematic uncertainties, the analyses 
 samples with the ones implementing the systematic variations.
 Instead, the comparison is implemented through weights with a 2D parametrization based on the number of jets present in the event at particle level 
 and on the transverse momentum of the vector boson \cite{Anders:2291836}.
+As an example, the impact of these systematic uncertainties on the shapes of the distributions of \met in a selection with a lepton veto is shown in Figure \ref{fig:Z_met_0L_syst} for the Z+jets sample and in Figure \ref{fig:W_met_0L_syst} for the W+jets sample.  
+
+\begin{figure}[h!]
+\centering 
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/Z_syst_ren/0L_3b/compare_met_Z_scale.pdf}\label{fig:Z_met_0L_ren}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/Z_syst_fac/0L_3b/compare_met_Z_scale.pdf}\label{fig:Z_met_0L_fac}}\\
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/Z_syst_match/0L_3b/compare_met_Z_scale.pdf}\label{fig:Z_met_0L_match}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/Z_syst_res/0L_3b/compare_met_Z_scale.pdf}\label{fig:Z_met_0L_res}}
+\caption{Distribution normalized to unity of the \pt of the leading signal jet in the Z+jets \gls{mc} sample in a selection requiring at least four jets, at least two b-jets, $\met>200$ GeV and exactly zero lepton. 
+\subref{fig:Z_met_0L_ren} Comparison of nominal and renormalization uncertainties.
+\subref{fig:Z_met_0L_fac} Comparison of nominal and factorization uncertainties.
+\subref{fig:Z_met_0L_match} Comparison of nominal and matching uncertainties.
+\subref{fig:Z_met_0L_res} Comparison of nominal and resummation uncertainties.
+}\label{fig:Z_met_0L_syst}
+\end{figure}
+
+\begin{figure}[h!]
+\centering 
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/W_syst_ren/0L_3b/compare_met_W_scale.pdf}\label{fig:W_met_0L_ren}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/W_syst_fac/0L_3b/compare_met_W_scale.pdf}\label{fig:W_met_0L_fac}}\\
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/W_syst_match/0L_3b/compare_met_W_scale.pdf}\label{fig:W_met_0L_match}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/W_syst_res/0L_3b/compare_met_W_scale.pdf}\label{fig:W_met_0L_res}}
+\caption{Distribution normalized to unity of the \pt of the leading signal jet in the Z+jets \gls{mc} sample in a selection requiring at least four jets, at least two b-jets, $\met>200$ GeV and exactly zero lepton. 
+\subref{fig:W_met_0L_ren} Comparison of nominal and renormalization uncertainties.
+\subref{fig:W_met_0L_fac} Comparison of nominal and factorization uncertainties.
+\subref{fig:W_met_0L_match} Comparison of nominal and matching uncertainties.
+\subref{fig:W_met_0L_res} Comparison of nominal and resummation uncertainties.
+}\label{fig:W_met_0L_syst}
+\end{figure}
 
 
 \subsection{Boson pair production}
@@ -541,7 +581,7 @@ A flat 50\% uncertainty is applied to the predicted number of events for this ba
 systematic uncertainties on its modelling. This conservative uncertainty is found to be negligible in the analysis results. 
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering 
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/dib_1}\label{fig:dib_prod_1}}
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/dib_2}\label{fig:dib_prod_2}} 
@@ -561,7 +601,7 @@ All of these samples are normalized to the \gls{nlo} cross-section.
 As described above for the diboson background, a conservative 50\% uncertainty is applied also to the 
 $\ttbar+X$ background, and also in this case it is found to have negligible impact on the analysis. 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering 
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttW}\label{fig:ttW_prod}}
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/ttZ}\label{fig:ttZ_prod}} \\
@@ -579,7 +619,7 @@ These processes do not produce any lepton either, so also a contribution to anal
 Since the probability for a multi-jet event to both have a fake high \met and a fake lepton is very small, multi-jet processes are considered as background only in the analysis regions with a veto on the presence of leptons. 
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering 
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/qcd_1}\label{fig:qcd_prod_1}}
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/qcd_2}\label{fig:qcd_prod_2}} 
