@@ -9,11 +9,11 @@ all: _base_
 
 _base_:
 	@$(BASIC_BUILD) #&>/dev/null
-	#@$(BUILD_BIBLIOGRAPHY)
-	#@$(BUILD_GLOSSARY)
-	#@$(BASIC_BUILD) #&>/dev/null
-	#@$(BASIC_BUILD) #&>/dev/null
-	#@$(CLEAN)
+	@$(BUILD_BIBLIOGRAPHY)
+	@$(BUILD_GLOSSARY)
+	@$(BASIC_BUILD) #&>/dev/null
+	@$(BASIC_BUILD) #&>/dev/null
+	@$(CLEAN)
 
 clean:
 	@$(CLEAN)
