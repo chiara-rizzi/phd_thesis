@@ -1,37 +1,40 @@
-\chapter{LHC and ATLAS}
+\chapter{LHC and \gls{atlas}}
 \label{chap:cern}
 
-The analyses presented in this thesis use the data collected by the ATLAS Experiment in 2015, 2016 and 2017 at \cmtre TeV; the ATLAS experiment is one of the four main experiments at the \gls{lhc} at the \gls{cern}. Section \ref{sed:cern:lhc} of this chapter describes the \gls{lhc} accelerator complex, followed by a general description of the detectors used in high-energy physics in Section \ref{sec:detectors}. The ATLAS detector is discussed in Section \ref{sed:cern:atlas}.
+The analyses presented in this thesis use the \gls{pp} collision data at a center-of-mass energy \cmtre TeV 
+collected by the \gls{atlas} experiment in 2015, 2016 and 2017. 
+
+The \gls{atlas} experiment is one of the four main experiments at the \gls{lhc} at the \gls{cern}. Section \ref{sed:cern:lhc} of this chapter describes the \gls{lhc} accelerator complex. This is followed by a general description of the detectors used in high-energy physics in Section \ref{sec:detectors}. The \gls{atlas} detector is discussed in Section \ref{sed:cern:atlas}.
 
 %%%%%%%%%%%%%%%%%% LHC
 
 \section{The Large Hadron Collider}
 \label{sed:cern:lhc}
 
-In this section we give a brief introduction to the \gls{lhc} \cite{1748-0221-3-08-S08001}, at the moment the largest and most powerful particle accelerator in the world, hosted by \gls{cern} and active since September 2008.
+In this section we give a brief introduction to the \gls{lhc} \cite{1748-0221-3-08-S08001}, at the moment the largest and most powerful particle accelerator in the world, hosted by \gls{cern} and in operation since September 2008.
 
 
 \subsection{A circular hadron collider}
 
-The \gls{lhc} is a circular hadron accelerator, located in a 26.7-km-long underground tunnel (with a depth ranging between 50 and 140 meters) that was previously hosting the \gls{lep}, a \gls{cern} accelerator active from 1989 to 2000. The \gls{lhc} can accelerate protons up to a design center-of-mass energy of 13 TeV. Accelerating particles to very high energies is necessary to both study the structure of the particles themselves at smaller scales, and to create heavy states in collisions. Cosmic rays provide a source of particles with energies up to $10^7$ times more than what the \gls{lhc} is capable of, but these extremely energetic rays are very rare, and the flux is not controlled. Accelerators provide a well controlled flux of particles of a specific type in a specific location, and this allows the study of these particles with dedicated detectors.
+The \gls{lhc} is a circular hadron accelerator, located in a 26.7-km-long underground tunnel (with a depth ranging between 50 and 140 meters) that was previously hosting the \gls{lep}, a \gls{cern} accelerator that was operational from 1989 to 2000. The \gls{lhc} can accelerate protons up to a design center-of-mass energy of 13 TeV. Accelerating particles to very high energies is necessary both to study the structure of the particles themselves at smaller scales, and to create heavy states in collisions. Cosmic rays provide a source of particles with energies up to $10^7$ times more than what the \gls{lhc} is capable of, but these extremely energetic rays are very rare, and the flux is not controlled. Accelerators provide a well controlled flux of particles of a specific type in a specific location, and this allows the study of these particles with dedicated detectors.
 
-A circular accelerator simplifies the acceleration of the particles, as this can happen over several revolutions. When a charged particle travels on an orbit of radius r under the effect of a magnetic field B, its momentum p is given by:
+A circular accelerator simplifies the acceleration of particles, as this can happen over several revolutions. When a charged particle travels on an orbit of radius $r$ under the effect of a magnetic field $B$, its momentum $p$ is given by:
 \begin{equation}
 \label{eq:cern:p03br}
 p = 0.3 r B,
 \end{equation}
 \noindent where the momentum is expressed in GeV, B in Tesla and the radius of the orbit in meters. For a given magnetic field, a larger radius allows to reach higher energies. 
 
-The choice of a collider over a fixed-target experiment is motivated by the possibility of reaching an higher energy in the center of mass system: while in a fixed-target experiment this is proportional to the square root of the energy of the incoming particle, in a collider is the sum of the energies of the two beams.
+The choice of a collider over a fixed-target experiment is motivated by the possibility of reaching a higher energy in center-of-mass of the system: while in a fixed-target experiment this is proportional to the square root of the energy of the incoming particle, in a collider it is the sum of the energies of the two beams.
 
 
 Suitable particles for a collider experiment need to fulfill two criteria: they need to be charged, in order to be accelerated and guided through electric and magnetic fields, and they need to be stable enough not to decay before being used for collisions. These criteria effectively limit the choice to protons, electrons, their antiparticles and ions. 
 
-At the \gls{lhc} it has been chosen to study collisions with protons and lead ions. Three types of collisions are studied: proton-proton ($p-p$), lead-lead ($Pb-Pb$) and also proton-lead ($Pb-p$). The main reason to prefer protons over electrons is the energy loss that affects charged particles accelerated in a circular trajectory (\textit{syncrotron radiation}), that decreases with the fourth power of the mass of the particle:
+At the \gls{lhc} it has been chosen to study collisions with protons and lead ions. Three types of collisions are studied: proton-proton ($p-p$), lead-lead ($Pb-Pb$) and also proton-lead ($Pb-p$). The main reason to prefer protons over electrons is the energy loss that affects charged particles accelerated in a circular trajectory (\textit{syncrotron radiation}), which decreases with the fourth power of the mass of the particle:
 
 \begin{equation}
 \label{eq:cern:sync}
-\frac{dE}{dt} \propto \frac{E^4}{m^4 r^2}
+\frac{dE}{dt} \propto \frac{E^4}{m^4 r^2} \; .
 \end{equation}
 
 The larger mass of a proton with respect to an electron leads to a decrease of a factor $10^{12}$ of the energy lost for syncrotron radiation. This choice comes with a price: proton-proton collisions lead to less clean events, where a lot of soft interactions covering the interesting hard interactions and the center of mass is unknown as the particles taking part in hard interactions are not the protons themselves but their constituents.
@@ -160,14 +163,14 @@ Peak luminosity [$10^{34} cm^{-2}s^{-1}$] & 0.51 & 1.4 & 1.7(1.9) & 1.0 \\
 \end{table}
 
 
-The luminosity profile changes over time, and different experiments have different luminosity needs. ATLAS and CMS profit form having the maximum luminosity possible, while LHCb and ALICE have their top functionality at lower luminosity, and therefore apply a \textit{luminosity leveling} that consists in changing the offset of the beams during the run, to maintain a constant (low) value of the instantaneous luminosity.
+The luminosity profile changes over time, and different experiments have different luminosity needs. \gls{atlas} and CMS profit form having the maximum luminosity possible, while LHCb and ALICE have their top functionality at lower luminosity, and therefore apply a \textit{luminosity leveling} that consists in changing the offset of the beams during the run, to maintain a constant (low) value of the instantaneous luminosity.
 
-An high number of particles participating in a single bunch crossing creates an elevated number of simultaneous interactions (\textit{pile-up}). In 2012 the \gls{lhc} operated with a bunch spacing of 50 ns, leading to a pile-up of about 35 events per bunch crossing. With the increase in energy from Run1 to Run2, the same settings would have implied more than 100 events, above the limit for the proper functioning of the detectors. This is what motivated the choice to move from the 50 ns bunch spacing used in Run1 to the 25 ns in Run2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up. Figure \ref{fig:atlas:pu} shows the luminosity-weighted distribution of the mean number of interactions per crossing during 2015-2017 as recorded by the ATLAS Experiment.
+An high number of particles participating in a single bunch crossing creates an elevated number of simultaneous interactions (\textit{pile-up}). In 2012 the \gls{lhc} operated with a bunch spacing of 50 ns, leading to a pile-up of about 35 events per bunch crossing. With the increase in energy from Run1 to Run2, the same settings would have implied more than 100 events, above the limit for the proper functioning of the detectors. This is what motivated the choice to move from the 50 ns bunch spacing used in Run1 to the 25 ns in Run2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up. Figure \ref{fig:atlas:pu} shows the luminosity-weighted distribution of the mean number of interactions per crossing during 2015-2017 as recorded by the \gls{atlas} experiment.
 
 \begin{figure}[ht]
 \centering
 \subfigure{\includegraphics[width=0.53\textwidth]{figures/atlas/lumi/pu_profile}}
-\caption{Luminosity-weighted distribution of the mean number of interactions per crossing. All data recorded by ATLAS during stable beams is shown. The mean number of interactions per crossing $\mu$ corresponds to the mean of the Poisson distribution of the number of interactions per crossing calculated for each bunch. It is calculated from the instantaneous per bunch luminosity as 
+\caption{Luminosity-weighted distribution of the mean number of interactions per crossing. All data recorded by \gls{atlas} during stable beams is shown. The mean number of interactions per crossing $\mu$ corresponds to the mean of the Poisson distribution of the number of interactions per crossing calculated for each bunch. It is calculated from the instantaneous per bunch luminosity as 
 $\mu = \frac{\mathcal{L}_{bunch}\times \sigma_{inel}}{f}$, where $\mathcal{L}_{bunch}$ is the per bunch instantaneous luminosity, $\sigma_{inel}$ is the inelastic cross section which is taken to be 80 mb for 13 TeV collisions, and $f$ is the \gls{lhc} revolution frequency. Figure from Ref. \cite{LumiTwiki}.}
 \label{fig:atlas:pu}
 \end{figure}
@@ -197,10 +200,10 @@ The accelerator complex of \gls{cern} is shown in Fig. \ref{fig:lhc:acc}. The ac
 \subsection{Experiments at the LHC}
 
 Seven experiments are build along the \gls{lhc} circumference and collect the data produced during the collisions. Each experiment is run by an independent collaboration that comprises several universities and research institutes. 
-\textit{ATLAS} \cite{atlas:atlas} and \textit{CMS} \cite{cms:cms} are the two largest and general purpose experiments, located at two opposite sides of the \gls{lhc} ring, in correspondence of two of the four interaction points. Their goal is to study a large variety of SM processes and to perform an extensive search program for BSM physics. The independent design of the two detectors, as well as of the separation between the two collaborations running them, is essential to provide a validation of the \gls{lhc} results. Since the data used in this thesis is collected with the ATLAS detector, a more extensive description of this experiment is given in Sec. \ref{sed:cern:atlas}. 
+\textit{\gls{atlas}} \cite{atlas:atlas} and \textit{CMS} \cite{cms:cms} are the two largest and general purpose experiments, located at two opposite sides of the \gls{lhc} ring, in correspondence of two of the four interaction points. Their goal is to study a large variety of SM processes and to perform an extensive search program for BSM physics. The independent design of the two detectors, as well as of the separation between the two collaborations running them, is essential to provide a validation of the \gls{lhc} results. Since the data used in this thesis is collected with the \gls{atlas} detector, a more extensive description of this experiment is given in Sec. \ref{sed:cern:atlas}. 
 The \textit{LHCb} \cite{lhcb:lhcb} and \textit{ALICE} \cite{alice:alice} experiments are located at the other two \gls{lhc} interaction points. LHCb is a single-arm forward spectrometer, designed to perform high-precision studies of heavy flavour physics. The ALICE experiment is dedicated to the study of $Pb-Pb$ collisions, that at the \gls{lhc} happen with a center-of-mass energy of 2.6 TeV per nucleon pair; in this energy regime, quarks and gluons are expected to form the quark-gluon plasma.
 The position of the four main experiments on the \gls{lhc} ring is shown in Fig. \ref{fig:lhc:acc}.
-Other three smaller experiments are positioned along the \gls{lhc} circumference: TOTEM \cite{totem:totem}, LHCf \cite{lhcf:lhcf} and MoEDAL \cite{moedal:moedal}. TOTEM is located at the same interaction point as CMS, and measures the total $p-p$ cross section, as well as elastic and inelastic scattering. LHCf is installed in the same interaction point as ATLAS and has two detectors, at 140 m from each side of the collision point, aiming at the study of particles produced in the "froward" region (very close to the beam axis). MoEDAL is installed in the LHCb cavern and is designed to search for magnetic monopoles.  
+Other three smaller experiments are positioned along the \gls{lhc} circumference: TOTEM \cite{totem:totem}, LHCf \cite{lhcf:lhcf} and MoEDAL \cite{moedal:moedal}. TOTEM is located at the same interaction point as CMS, and measures the total $p-p$ cross section, as well as elastic and inelastic scattering. LHCf is installed in the same interaction point as \gls{atlas} and has two detectors, at 140 m from each side of the collision point, aiming at the study of particles produced in the "froward" region (very close to the beam axis). MoEDAL is installed in the LHCb cavern and is designed to search for magnetic monopoles.  
 
 
 %%%%%%%%%%%%%%%%%% 
