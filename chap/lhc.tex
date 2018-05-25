@@ -60,7 +60,7 @@ Beside dipoles and quadrupoles, in the \gls{lhc} there are about 600 higher-orde
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.45\textwidth]{figures/lhc/figures_quad}
-\caption{A schematic cross-section of a quadrupole magnet. The red arrows indicate the direction of the force on the particle. Figure from Ref. \cite{Kain:2016aly}.}
+\caption{A schematic cross-section of a quadrupole magnet. The red arrows indicate the direction of the force experienced by the particle. Figure from Ref. \cite{Kain:2016aly}.}
 \label{fig:lhc:quad}
 \end{figure}
 
@@ -68,21 +68,22 @@ Beside dipoles and quadrupoles, in the \gls{lhc} there are about 600 higher-orde
 
 While the orbit of particles is governed by the magnetic fields, longitudinal electric fields are used for acceleration. In the \gls{lhc} the electric filed is provided by \gls{rf} cavities. There are overall 16 \gls{rf} cavities, eight per beam, hosted in four cryo-modules. Each cavity can provide an accelerating field of 5 MV/m, and oscillates with a frequency of 400 MHz. Since the electric field changes over time with the oscillations, particles passing through the same point of a \gls{rf} cavity at different times experience a different voltage; this produces a non-trivial longitudinal dynamics, where particles oscillate around the ideal synchronous particle with changes in momentum and phase (\textit{Synchrotron oscillations}). If we define the \textit{slip factor} $\eta$ as the relative change in frequency in Synchrotron oscillations with the relative change in momentum:
 \begin{equation}
-\eta = \frac{\Delta f / f}{\Delta p / p}
+\eta = \frac{\Delta f / f}{\Delta p / p} \; ,
 \end{equation}
 
-and the compaction factor $\alpha$ as the relative change in frequency in orbit length with the relative change in momentum:
+\noindent and the compaction factor $\alpha$ as the relative change in frequency in orbit length with the relative change in momentum:
 
 \begin{equation}
 \alpha = \frac{\Delta L / L}{\Delta p / p} \; ,
 \end{equation}
 
-the following relation holds:
+\noindent the following relation holds:
+
 \begin{equation}
 \eta = \frac{1}{\gamma^2} - \alpha \; ,
 \end{equation}
 
-where $\gamma$ is the Lorentz factor of the particle. This means that while the energy of the particle is low ($\eta>0$) an increase in momentum leads to an increase in frequency, while it leads to a decrease in frequency for $\eta<0$. At the transition energy a previously stable synchrotron phase becomes unstable and vice versa; this requires a rapid change in \gls{rf} phase. This situation is illustrated in Fig. \ref{fig:lhc:phase}(a). For example, a particle corresponding to the phase point M1 will arrive in the \gls{rf} cavity after one corresponding to the stability point P1, and will experiment higher voltage and increase in momentum; if $\eta>0$ this increase in momentum will translate in an increase in frequency and the particle will, at the following revolution, arrive earlier, while if $\eta<0$ the frequency will further decrease and the particle will be eventually lost.  The transition energy in the \gls{lhc} is 53 GeV, well below the injection energy of 450 GeV, so the \gls{lhc} is always above transition. 
+where $\gamma$ is the Lorentz factor of the particle. This means that while the energy of the particle is low ($\eta>0$) an increase in momentum leads to an increase in frequency, while it leads to a decrease in frequency for $\eta<0$. At the transition energy, a previously stable synchrotron phase becomes unstable and vice versa; this requires a rapid change in \gls{rf} phase. This situation is illustrated in Fig. \ref{fig:lhc:phase}(a). For example, a particle corresponding to the phase point M1 will arrive in the \gls{rf} cavity after one corresponding to the stability point P1, and will experiment higher voltage and increase in momentum; if $\eta>0$ this increase in momentum will translate in an increase in frequency and the particle will, at the following revolution, arrive earlier, while if $\eta<0$ the frequency will further decrease and the particle will be eventually lost.  The transition energy in the \gls{lhc} is 53 GeV, well below the injection energy of 450 GeV, so the \gls{lhc} is always above transition. 
 
 \begin{figure}[ht]
 \centering
@@ -98,7 +99,7 @@ The areas of stable motion are identified as \textit{bucket}, and the area of th
 
 \subsection{Luminosity and operational parameters}
 
-The amount of data collected by an accelerator is quantified by the \textit{integrated luminosity} $\mathcal{L}_{int}$.
+The amount of data delivered by an accelerator is quantified by the \textit{integrated luminosity} $\mathcal{L}_{int}$.
 Given a certain process with production cross section $\sigma$, the total number of events for that process is the product of cross section and integrated luminosity:
 
 \begin{equation}
@@ -110,31 +111,31 @@ The integrated luminosity is the time integral of the \textit{instantaneous lumi
 
 \begin{equation}
 \label{eq:cern:intlumi}
-\mathcal{L}_{int} = \int \mathcal{L} \, dt
+\mathcal{L}_{int} = \int \mathcal{L} \, dt \; ,
 \end{equation}
 
-and, assuming Gaussian particle distribution and same characteristics for the two beams, the instantaneous luminosity can be expressed as:
+\noindent which, assuming a Gaussian particle distribution and the same characteristics for the two beams, can be expressed as:
 
 \begin{equation}
 \mathcal{L}=\frac{f N_b n^2}{4 \pi \sigma_{x}\sigma_{y} } \; ,
 \label{eq:cern:lumi}
 \end{equation}
 
-where $f$ is the revolution frequency, $N_b$ the number of bunches in each beam, $n$ the number of protons in each bunch and $\sigma_{x(y)}$  is the transverse beam size at the interaction point in the x(y) direction . 
+\noindent where $f$ is the revolution frequency, $N_b$ the number of bunches in each beam, $n$ the number of protons in each bunch and $\sigma_{x(y)}$  is the transverse beam size at the interaction point in the $x$($y$) direction . 
 
-The instantaneous luminosity defined in Eq. \ref{eq:cern:lumi} needs to be corrected for two factors. First of all, this formula assumes a head-on collision between the bunches; in reality, to avoid unwanted interactions the beams collide with a crossing angle, and a large crossing angle decreases the instantaneous luminosity. The second correction is related to the transverse size, that can be expressed as:
+The instantaneous luminosity defined in Eq. \ref{eq:cern:lumi} needs to be corrected for two effects. First of all, this formula assumes a head-on collision between the bunches; in reality, to avoid unwanted interactions the beams collide with a crossing angle, and a large crossing angle decreases the instantaneous luminosity. The second correction is related to the beam transverse size, that can be expressed as:
 \begin{equation}
 \sigma_{x,y} = \sqrt{  \epsilon \beta^* } \; ,
 \end{equation}
-where $\epsilon$ is the beam emittance and $\beta^*$ the \textit{beta function}. Beam collisions happen in \textit{minibeta insertions}, drift spaces with a beta waist in the center, where the beam size is as small as possible. In the vicinity of the minimum, the beta function evolves like:
+where $\epsilon$ is the beam emittance and $\beta^*$ is the \textit{beta function}. Beam collisions happen in \textit{minibeta insertions}, drift spaces with a beta waist in the center, where the beam size is as small as possible. In the vicinity of the minimum, the beta function evolves like:
 
 \begin{equation}
 \beta(s) = \beta^* + \frac{s^2}{\beta^*} \; .
 \end{equation}
 
-From this it is possible to see that the smaller the beta function, the larger the dependence with s, so a bunch with a finite size will not have the same beta function as a whole (\textit{hour glass effect}). This correction becomes more important with the decrease of the $\beta^*$ value. With the \gls{lhc} design parameters, the effect of crossing angle and hour glass changes the the instantaneous luminosity by about 20\%.
+From this it is possible to see that the smaller the beta function, the larger the dependence with $s$, so a bunch with a finite size will not have the same beta function as a whole (\textit{hour glass effect}). This correction becomes more important with the decrease of the $\beta^*$ value. With the \gls{lhc} design parameters, the effect of crossing angle and hour glass changes the the instantaneous luminosity by about 20\%.
 
-The main limitations in the choice of the parameters that regulate the luminosity are \textit{collective effects}, that could cause beam instabilities if the number of bunches or the number of proton per bunch is too high, and the limitations in the available aperture in the minbeta quadrupoles, that impacts $\beta^*$. The summary of the \gls{lhc} operational parameters during Run2 is reported in Table \ref{tab:lhc:param}.
+The main limitations in the choice of the parameters that regulate the luminosity are \textit{collective effects}, which could cause beam instabilities if the number of bunches or the number of protons per bunch is too high, and the limitations in the available aperture in the minbeta quadrupoles, that impacts $\beta^*$. The summary of the \gls{lhc} operational parameters during Run 2 is reported in Table \ref{tab:lhc:param}.
 
 
 \begin{table}[ht]
@@ -158,14 +159,14 @@ Peak luminosity [$10^{34} cm^{-2}s^{-1}$] & 0.51 & 1.4 & 1.7(1.9) & 1.0 \\
 \hline
 \end{tabular}
 \end{center}
-\caption{\gls{lhc} operational parameters in Run2 and their design value.}
+\caption{\gls{lhc} operational parameters in Run 2 and their design value.}
 \label{tab:lhc:param}
 \end{table}
 
 
-The luminosity profile changes over time, and different experiments have different luminosity needs. \gls{atlas} and CMS profit form having the maximum luminosity possible, while LHCb and ALICE have their top functionality at lower luminosity, and therefore apply a \textit{luminosity leveling} that consists in changing the offset of the beams during the run, to maintain a constant (low) value of the instantaneous luminosity.
+The luminosity profile changes over time, and different experiments have different luminosity needs. \gls{atlas} and CMS profit from having the maximum luminosity possible, while LHCb and ALICE have their top functionality at lower luminosity, and therefore apply a \textit{luminosity leveling} that consists in changing the offset of the beams during the run, to maintain a constant (low) value of the instantaneous luminosity.
 
-An high number of particles participating in a single bunch crossing creates an elevated number of simultaneous interactions (\textit{pile-up}). In 2012 the \gls{lhc} operated with a bunch spacing of 50 ns, leading to a pile-up of about 35 events per bunch crossing. With the increase in energy from Run1 to Run2, the same settings would have implied more than 100 events, above the limit for the proper functioning of the detectors. This is what motivated the choice to move from the 50 ns bunch spacing used in Run1 to the 25 ns in Run2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up. Figure \ref{fig:atlas:pu} shows the luminosity-weighted distribution of the mean number of interactions per crossing during 2015-2017 as recorded by the \gls{atlas} experiment.
+An high number of particles participating in a single bunch crossing creates an elevated number of simultaneous interactions (\textit{pile-up}). In 2012 the \gls{lhc} operated with a bunch spacing of 50 ns, leading to a pile-up of about 35 events per bunch crossing. With the increase in energy from Run 1 to Run 2, the same settings would have implied more than 100 events, above the limit for the proper functioning of the detectors. This is what motivated the choice to move from the 50 ns bunch spacing used in Run 1 to the 25 ns in Run 2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up. Figure \ref{fig:atlas:pu} shows the luminosity-weighted distribution of the mean number of interactions per crossing during 2015-2017 as recorded by the \gls{atlas} experiment.
 
 \begin{figure}[ht]
 \centering
