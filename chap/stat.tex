@@ -264,10 +264,10 @@ This strategy avoids the discontinuity for $\theta=0$, but it can introduce prob
 
 \begin{figure}[hbt]
 \centering 
-\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/stat/interp_1.pdf}\label{fig:interp_1}}
-\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/stat/interp_2.pdf}\label{fig:interp_2}}
-\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/stat/interp_3.pdf}\label{fig:interp_3}}
-\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/stat/interp_4.pdf}\label{fig:interp_4}}
+\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_1.pdf}\label{fig:interp_1}}
+\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_2.pdf}\label{fig:interp_2}}
+\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_3.pdf}\label{fig:interp_3}}
+\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_4.pdf}\label{fig:interp_4}}
 \caption{Comparison of the four interpolation options described in the text. $\alpha$ represents the variation of the \gls{np} in units of standard deviations, and $\eta$ the response relative to the nominal value; the three white markers are the points where the response is measured (nominal and $\pm$ one sigma), while the colored lines show the interpolating function.
 \subref{fig:interp_1} $\eta(-1) = 0.8$, $\eta(+1) = 1.2$.
 \subref{fig:interp_2} $\eta(-1) = 1.1$, $\eta(+1) = 1.5$.
@@ -303,18 +303,18 @@ Once we divide the parameters in the likelihood into \glspl{poi} and \glspl{np},
 \section{Hypothesis testing}
 \label{sec:stat:ht}
 
-Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion a \gls{bsm} theory. When the alternative between two hypotheses is presented, they are typically indicted as null hypothesis and alternative hypothesis. If what we want to do is to proof the discovery of a new \gls{bsm} signal by excluding the SM only hypothesis, we have that:
+Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion a \gls{bsm} theory. When the alternative between two hypotheses is presented, they are typically indicted as null hypothesis and alternative hypothesis. If what we want to do is to proof the discovery of a new \gls{bsm} signal by excluding the SM only hypothesis, the following symbols are used:
 
 \begin{itemize}
 \item[H$_0$] The null hypothesis, corresponds to SM only.
-\item[H$_1$] The alternative hypothesis, corresponds to the SM with the addition of the \gls{bsm} processes under test.
+\item[H$_1$] The alternative hypothesis, corresponds to the SM with the addition of the \gls{bsm} process under test.
 \end{itemize}
 
 \noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section scaling; $\mu$=1 corresponds to the \gls{bsm} process with its theoretical cross section, while $\mu$=0 is the SM.
 
 \subsection{Test statistics and p-value}
 
- A test statistic $t$ is single real-value quantity, function of all the collected data. The probability density function (PDF) of the test statistic is different if we assume the null hypothesis or the alternative hypothesis to be true.
+ A test statistic $t$ is single real-value quantity, function of all the collected data. The \gls{pdf} of the test statistic is different if we assume the null hypothesis or the alternative hypothesis to be true.
 
 To quantify the compatibility of the observed data with a specific model, a p-value can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given an observation, the p-value corresponds to the probability of having another observation more extreme than the current one:
 
@@ -324,9 +324,9 @@ p_{\mu} = \int_{t_{{\rm obs}}}^{\infty} f(t | \mu ) \,
 d t \; ,
 \end{equation}
 
-The p-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the p-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% confidence level (CL). Note that excluding an alternate hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
+The p-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the p-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% \gls{cl}. Note that excluding an alternate hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
 
-The threshold to exclude the null hypothesis (SM only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (\gls{bsm}). Assuming that the B-only hypothesis as true, the 0.05 threshold would lead to 5\% of the \gls{bsm} searches to declare a discovery. Instead, the convention is to declare evidence for New Physics when the p-value for the B-only hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it's lower than $2.9 \times 10^{-7}$.
+The threshold to exclude the null hypothesis (SM only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (\gls{bsm}). The 0.05 threshold would lead to 5\% of the \gls{bsm} searches to declare a discovery even in the absence of any real \gls{bsm} signal. Instead, the convention is to declare evidence for New Physics when the p-value for the B-only hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it is lower than $2.9 \times 10^{-7}$.
 
 The significance $Z$ of the p-value can be evaluated by transforming it in the equivalent number of standard deviations of a standard Gaussian needed to have an upper-tail integral equal to the p-value:
 
@@ -483,14 +483,14 @@ The alternate \gls{prl}, $\tilde{\lambda}({\mu})$, is designed to take into acco
 \subsection{The CLs method}
 
 If we consider a situation where $H_0$ and $H_1$ give similar distribution of the exclusion test statistic (e.g. because the signal cross section is
-small) and we observe a downward fluctuation in data, we could end up excluding the test hypothesis, even if almost indistinguishable from the null hypothesis. The \cls method \cite{JUNK1999435} recovers from this situations by defining:
+small) and we observe a downward fluctuation in data, we could end up excluding the test hypothesis, even if almost indistinguishable from the null hypothesis. The \gls{cls} method \cite{JUNK1999435} recovers from this situations by defining:
 
 \begin{equation}
 \label{eq:stat:cls}
 \cls = \dfrac{\pmu}{1 - p_b} , 
 \end{equation}
 
-\noindent where $p_b = 1 - p_{\mu, \mu=0}$, as shown in Fig. \ref{fig:stat:pmu_pb}. With the CLs method, the test hypothesis is excluded at 95\% CL if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Eq \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \cls method is the default procedure used in this thesis to define the exclusion of a signal model. 
+\noindent where $p_b = 1 - p_{\mu, \mu=0}$, as shown in Fig. \ref{fig:stat:pmu_pb}. With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Eq \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \gls{cls} method is the default procedure used in this thesis to decide on the exclusion of a signal model. 
 
 
 \begin{figure}
@@ -502,7 +502,7 @@ small) and we observe a downward fluctuation in data, we could end up excluding 
 
 \subsection{Distribution of the test statistic}
 
-To compute the p-value associated with the observed value of a test statistics $t$, we need the PDF of $t$ assuming that the signal hypothesis $H_\mu$ is true, $ f(t | \mu ) $. The distribution of the test statistics can be obtained with pseudo-experiments or, in the case of large statistics, with the asymptotic approximation. 
+To compute the p-value associated with the observed value of a test statistics $t$, we need the \gls{pdf} of $t$ assuming that the signal hypothesis $H_\mu$ is true, $ f(t | \mu ) $. The distribution of the test statistics can be obtained with pseudo-experiments or, in the case of large statistics, with the asymptotic approximation. 
 
 \subsubsection*{Pseudo-experiments}
 
