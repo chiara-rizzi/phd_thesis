@@ -6,36 +6,40 @@ print "ciao Chiara"
 c = TCanvas()
 c.cd()
 
+gStyle.SetOptStat(0)
+gStyle.SetOptTitle(0)
 
-tc = 2
 
-#fb = TF1("fb","TMath::Gaus(x,95,30,true)",0,150);
-#fb = TF1("fb","Math::noncentral_chisquared_pdf(x,1,1)",0,15);
-fb = TF1("fb","ROOT::Math::noncentral_chisquared_pdf(x,1,15)",0,15);
+tc = 3
+
+#fb = TF1("fb","TMath::Gaus(x,95,30,true)",0,150); #fb = TF1("fb","Math::noncentral_chisquared_pdf(x,1,1)",0,15);
+fb = TF1("fb","ROOT::Math::noncentral_chisquared_pdf(x,4,2)",1,8);
 fb.SetLineColor(kRed)
 #fb.SetFillColorAlpha(kRed, 0.5)
-fb.GetXaxis().SetTitle("t")
-fb.GetXaxis().SetTitleSize(0.06)
-fb.GetXaxis().SetTitleOffset(0.4)
-fb.GetYaxis().SetTitle("f(t)")
-fb.GetYaxis().SetTitleSize(0.06)
-fb.GetYaxis().SetTitleOffset(0.4)
-fb.GetXaxis().SetLabelSize(0)
-fb.GetYaxis().SetLabelSize(0)
-fb.GetXaxis().SetTickLength(0)
-fb.GetYaxis().SetTickLength(0)
-
 
 #fs = TF1("fs","TMath::Gaus(x,60,20,true)",0,15);
-fs = TF1("fs","ROOT::Math::chisquared_pdf(x,1,0)", 0, 15);
+fs = TF1("fs","ROOT::Math::chisquared_pdf(x,1,0)", 1, 8);
 fs.SetLineColor(kBlue)
+
+fs.GetXaxis().SetTitle("t")
+fs.GetXaxis().SetTitleSize(0.06)
+fs.GetXaxis().SetTitleOffset(0.4)
+fs.GetYaxis().SetTitle("f(t)")
+fs.GetYaxis().SetTitleSize(0.06)
+fs.GetYaxis().SetTitleOffset(0.4)
+fs.GetXaxis().SetLabelSize(0)
+fs.GetYaxis().SetLabelSize(0)
+fs.GetXaxis().SetTickLength(0)
+fs.GetYaxis().SetTickLength(0)
+
+
 #mymax = max(fb.GetMaximum(), fb.GetMaximum())
 #print mymax
-fb.SetMaximum(2.5)
-fb.Draw("")
-fs.Draw("same")
+#fb.SetMaximum(2.5)
+fs.Draw("")
+fb.Draw("same")
 
-tcut = TLine(tc, 0, tc,  1.2)
+tcut = TLine(tc, 0, tc,  fs.GetMaximum())
 tcut.SetLineStyle(3)
 tcut.Draw()
 
@@ -58,10 +62,10 @@ g_pb.Draw("f same")
 
 
 t = TLatex()
-t.DrawLatex(tc - tc/30, -0.002, "t_{obs}")
+t.DrawLatex(tc - tc/30, -0.02, "t_{obs}")
 
 
-leg = TLegend(0.7,0.6,0.89,0.8)
+leg = TLegend(0.7,0.65,0.89,0.85)
 leg.AddEntry(fs,"f(q_{#mu}|#mu=1)","l")
 leg.AddEntry(fb,"f(q_{#mu}|#mu=0)","l")
 leg.AddEntry(g_pmu,"p_{#mu}","f")
@@ -69,6 +73,19 @@ leg.AddEntry(g_pb,"p_{b}","f")
 leg.SetLineWidth(0)
 
 leg.Draw()
+
+text =  TLatex()
+text.SetNDC()
+text.SetTextAlign( 11 )
+text.SetTextFont( 42 )
+text.SetTextSize( 0.045 )
+text.SetTextColor( 1 )
+y = 0.82
+write=["C. Rizzi PhD Thesis"]
+for t in write:
+    text.DrawLatex(0.37,y, t)
+    y = y-0.06
+
 
 #print fs.Integral(0,15)
 #%print fb.Integral(0,15)
