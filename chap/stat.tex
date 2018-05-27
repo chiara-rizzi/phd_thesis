@@ -252,9 +252,10 @@ b \left( \frac{b^-}{b}\right)^{-\theta}  \;\;\;\; \theta < 0
 \end{cases} \, , \
 \end{equation}
 
-\noindent In this case, $b(\theta)$ is bound to be positive. The discontinuity at $\theta=0$ is still present, and in this case it appears also when $b^+$ and $b^-$ are symmetric with respect to $b$. Note that, once this is inserted into the likelihood, the combination of a Gaussian constraint with exponential interpolation is equivalent to a log-normal constraint with a linear extrapolation. This strategy avoids the discontinuity for $\theta=0$, but it can introduce problems with the sign of the variation, for example sign inversion if $b-b^+$ and $b-b^-$ have the same sign.
+\noindent In this case, $b(\theta)$ is bound to be positive. The discontinuity at $\theta=0$ is still present, and in this case it appears also when $b^+$ and $b^-$ are symmetric with respect to $b$. Note that, once this is inserted into the likelihood, the combination of a Gaussian constraint with exponential interpolation is equivalent to a log-normal constraint with a linear extrapolation. 
 
 \item[Quadratic interpolation and linear extrapolation] In this case the interpolation between the $\pm 1 \sigma$ response is given by the parabola passing through $b^-$, $b^+$ and $b$, while outside this range the extrapolation is given by the line tangent to the parabola in $b^+$ and $b^-$. 
+This strategy avoids the discontinuity for $\theta=0$, but it can introduce problems with the sign of the variation, for example sign inversion if $b-b^+$ and $b-b^-$ have the same sign.
 
 \item[Polynomial interpolation and exponential extrapolation] The extrapolation outside the range of the $\pm 1 \sigma$ response is given by the formula in Eq. \ref{eq:stat:interp_exp}, while the interpolation is obtained with a polynomial of sixth degree, bound to pass through $b^-$, $b^+$ and $b$ and to match in value, first and second derivative the exponential extrapolation at the $\pm 1 \sigma$ boundaries. This strategy avoids both the discontinuity at $\theta=0$ and the possibility of negative $b(\theta)$.
 
@@ -286,14 +287,14 @@ Once we divide the parameters in the likelihood into \glspl{poi} and \glspl{np},
 \section{Hypothesis testing}
 \label{sec:stat:ht}
 
-Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion a BSM theory. When the alternative between two hypotheses is presented, they are typically indicted as null hypothesis and alternative hypothesis. If what we want to do is to proof the discovery of a new BSM signal by excluding the SM only hypothesis, we have that:
+Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion a \gls{bsm} theory. When the alternative between two hypotheses is presented, they are typically indicted as null hypothesis and alternative hypothesis. If what we want to do is to proof the discovery of a new \gls{bsm} signal by excluding the SM only hypothesis, we have that:
 
 \begin{itemize}
-\item H$_0$, the null hypothesis, corresponds to SM only
-\item H$_1$, the alternative hypothesis, corresponds to the SM with the addition of the BSM processes under test
+\item[H$_0$] The null hypothesis, corresponds to SM only.
+\item[H$_1$] The alternative hypothesis, corresponds to the SM with the addition of the \gls{bsm} processes under test.
 \end{itemize}
 
-\noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section scaling; $\mu$=1 corresponds to the BSM process with its theoretical cross section, while $\mu$=0 is the SM.
+\noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section scaling; $\mu$=1 corresponds to the \gls{bsm} process with its theoretical cross section, while $\mu$=0 is the SM.
 
 \subsection{Test statistics and p-value}
 
@@ -304,18 +305,18 @@ To quantify the compatibility of the observed data with a specific model, a p-va
 \begin{equation}
 \label{eq:stat:pval}
 p_{\mu} = \int_{t_{{\rm obs}}}^{\infty} f(t | \mu ) \,
-d t \;,
+d t \; ,
 \end{equation}
 
 The p-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the p-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% confidence level (CL). Note that excluding an alternate hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
 
-The threshold to exclude the null hypothesis (SM only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (BSM). Assuming that the B-only hypothesis as true, the 0.05 threshold would lead to 5\% of the BSM searches to declare a discovery. Instead, the convention is to declare evidence for New Physics when the p-value for the B-only hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it's lower than $2.9 \times 10^{-7}$.
+The threshold to exclude the null hypothesis (SM only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (\gls{bsm}). Assuming that the B-only hypothesis as true, the 0.05 threshold would lead to 5\% of the \gls{bsm} searches to declare a discovery. Instead, the convention is to declare evidence for New Physics when the p-value for the B-only hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it's lower than $2.9 \times 10^{-7}$.
 
 The significance $Z$ of the p-value can be evaluated by transforming it in the equivalent number of standard deviations of a standard Gaussian needed to have an upper-tail integral equal to the p-value:
 
 \begin{equation}
 \label{eq:stat:sig}
-Z = \Phi^{-1}(1-p) \
+Z = \Phi^{-1}(1-p) \; ,
 \end{equation} 
 
 
@@ -348,7 +349,7 @@ While a test statistic can be any real-valued function of the data, the Neyman-P
 
 \begin{equation}
 \label{eq:stat:tmu}
-t_{\mu} = -2 \log \prl
+t_{\mu} = -2 \log \prl \; ,
 \end{equation}
 
 \noindent and the corresponding p-value:
@@ -356,10 +357,10 @@ t_{\mu} = -2 \log \prl
 \begin{equation}
 \label{eq:stat:pmu}
 p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \,
-d t_{\mu} \;,
+d t_{\mu} \; .
 \end{equation}
 
-Different variations of this test statistic are used for discovery and exclusion.
+\noindent Different variations of this test statistic are used for discovery and exclusion.
 
 \subsubsection*{Test statistic for discovery}
 
@@ -380,7 +381,7 @@ q_{0} =
 
 \begin{equation}
 \label{eq:stat:p0}
-p_{0} = \int_{q_{0,{\rm obs}}}^{\infty} f(q_{0} | 0 ) \, d q_{0} \;.
+p_{0} = \int_{q_{0,{\rm obs}}}^{\infty} f(q_{0} | 0 ) \, d q_{0} \; .
 \end{equation}
 
 \subsubsection*{Test statistics for exclusion}
