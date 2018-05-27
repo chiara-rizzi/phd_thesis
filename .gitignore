@@ -14,3 +14,8 @@
 *.DS_Store
 chapters_sent_to_aurelio/
 main.pdf
+*_v0.pdf
+*_v1.pdf
+feynman/*.pdf
+test_plots/
+thesis_current.pdf
