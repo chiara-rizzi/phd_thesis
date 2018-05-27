@@ -83,7 +83,7 @@ While the orbit of particles is governed by the magnetic fields, longitudinal el
 \eta = \frac{1}{\gamma^2} - \alpha \; ,
 \end{equation}
 
-where $\gamma$ is the Lorentz factor of the particle. This means that while the energy of the particle is low ($\eta>0$) an increase in momentum leads to an increase in frequency, while it leads to a decrease in frequency for $\eta<0$. At the transition energy, a previously stable synchrotron phase becomes unstable and vice versa; this requires a rapid change in \gls{rf} phase. This situation is illustrated in Fig. \ref{fig:lhc:phase}(a). For example, a particle corresponding to the phase point M1 will arrive in the \gls{rf} cavity after one corresponding to the stability point P1, and will experiment higher voltage and increase in momentum; if $\eta>0$ this increase in momentum will translate in an increase in frequency and the particle will, at the following revolution, arrive earlier, while if $\eta<0$ the frequency will further decrease and the particle will be eventually lost.  The transition energy in the \gls{lhc} is 53 GeV, well below the injection energy of 450 GeV, so the \gls{lhc} is always above transition. 
+where $\gamma$ is the Lorentz factor of the particle. This means that while the energy of the particle is low ($\eta>0$) an increase in momentum leads to an increase in frequency, while it leads to a decrease in frequency for $\eta<0$. At the transition energy, a previously stable synchrotron phase becomes unstable and vice versa; this requires a rapid change in \gls{rf} phase. This situation is illustrated in Figure \ref{fig:lhc:phase}(a). For example, a particle corresponding to the phase point M1 will arrive in the \gls{rf} cavity after one corresponding to the stability point P1, and will experiment higher voltage and increase in momentum; if $\eta>0$ this increase in momentum will translate in an increase in frequency and the particle will, at the following revolution, arrive earlier, while if $\eta<0$ the frequency will further decrease and the particle will be eventually lost.  The transition energy in the \gls{lhc} is 53 GeV, well below the injection energy of 450 GeV, so the \gls{lhc} is always above transition. 
 
 \begin{figure}[ht]
 \centering
@@ -95,7 +95,7 @@ where $\gamma$ is the Lorentz factor of the particle. This means that while the 
 
 
 In the \gls{lhc} beams particles are not distributed continuously, as this would now be allowed by phase instabilities, but are divided in \textit{bunches}. 
-The areas of stable motion are identified as \textit{bucket}, and the area of the bucket is the beam \textit{longitudinal acceptance}. The beam bunches fill only a part of the bucket, and the area of the beam bunches is the \textit{longitudinal beam emittance}. Fig. \ref{fig:lhc:phase}(b) shows a schematic view of the bucket and the bunch area for the case of a beam above the transition energy. 
+The areas of stable motion are identified as \textit{bucket}, and the area of the bucket is the beam \textit{longitudinal acceptance}. The beam bunches fill only a part of the bucket, and the area of the beam bunches is the \textit{longitudinal beam emittance}. Figure \ref{fig:lhc:phase}(b) shows a schematic view of the bucket and the bunch area for the case of a beam above the transition energy. 
 
 \subsection{Luminosity and operational parameters}
 
@@ -145,7 +145,7 @@ The main limitations in the choice of the parameters that regulate the luminosit
 Parameter & 2015 & 2016 & 2017 & Design \\ 
 \hline 
 \hline
-Prtons per bunch (n) [$10^{11}$ p] & $\approx$ 1.2 & $\approx$ 1.1 & $\approx$ 1.2 & 1.15 \\ 
+Protons per bunch (n) [$10^{11}$ p] & $\approx$ 1.2 & $\approx$ 1.1 & $\approx$ 1.2 & 1.15 \\ 
 \hline 
 Number of bunches (N$_b$) & 2244 & 2220 & $\approx$ 2250 & 2780 \\ 
 \hline 
@@ -159,20 +159,20 @@ Peak luminosity [$10^{34} cm^{-2}s^{-1}$] & 0.51 & 1.4 & 1.7(1.9) & 1.0 \\
 \hline
 \end{tabular}
 \end{center}
-\caption{\gls{lhc} operational parameters in Run 2 and their design value.}
+\caption{\gls{lhc} operational parameters in Run 2 compared to their design value.}
 \label{tab:lhc:param}
 \end{table}
 
 
 The luminosity profile changes over time, and different experiments have different luminosity needs. \gls{atlas} and CMS profit from having the maximum luminosity possible, while LHCb and ALICE have their top functionality at lower luminosity, and therefore apply a \textit{luminosity leveling} that consists in changing the offset of the beams during the run, to maintain a constant (low) value of the instantaneous luminosity.
 
-An high number of particles participating in a single bunch crossing creates an elevated number of simultaneous interactions (\textit{pile-up}). In 2012 the \gls{lhc} operated with a bunch spacing of 50 ns, leading to a pile-up of about 35 events per bunch crossing. With the increase in energy from Run 1 to Run 2, the same settings would have implied more than 100 events, above the limit for the proper functioning of the detectors. This is what motivated the choice to move from the 50 ns bunch spacing used in Run 1 to the 25 ns in Run 2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up. Figure \ref{fig:atlas:pu} shows the luminosity-weighted distribution of the mean number of interactions per crossing during 2015-2017 as recorded by the \gls{atlas} experiment.
+A high number of particles participating in a single bunch crossing can lead to a large number of multiple proton-proton collisions (\textit{pileup}). In 2012 the \gls{lhc} operated with a bunch spacing of 50 ns, leading to a pileup of about 35 events per bunch crossing. With the increase in energy from Run 1 to Run 2, the same settings would have implied more than 100 events, above the limit for the proper functioning of the detectors. This is what motivated the choice to move from the 50 ns bunch spacing used in Run 1 to the 25 ns in Run 2: with this setup, for the same instantaneous luminosity is possible to have a lower "luminosity per bunch" and therefore a lower pile up. Figure \ref{fig:atlas:pu} shows the luminosity-weighted distribution of the mean number of interactions per crossing during 2015-2017 as recorded by the \gls{atlas} experiment.
 
 \begin{figure}[ht]
 \centering
 \subfigure{\includegraphics[width=0.53\textwidth]{figures/atlas/lumi/pu_profile}}
-\caption{Luminosity-weighted distribution of the mean number of interactions per crossing. All data recorded by \gls{atlas} during stable beams is shown. The mean number of interactions per crossing $\mu$ corresponds to the mean of the Poisson distribution of the number of interactions per crossing calculated for each bunch. It is calculated from the instantaneous per bunch luminosity as 
-$\mu = \frac{\mathcal{L}_{bunch}\times \sigma_{inel}}{f}$, where $\mathcal{L}_{bunch}$ is the per bunch instantaneous luminosity, $\sigma_{inel}$ is the inelastic cross section which is taken to be 80 mb for 13 TeV collisions, and $f$ is the \gls{lhc} revolution frequency. Figure from Ref. \cite{LumiTwiki}.}
+\caption{Luminosity-weighted distribution of the mean number of interactions per crossing. All data recorded by \gls{atlas} during stable beams is shown. The mean number of interactions per crossing $\mu$ corresponds to the mean of the Poisson distribution of the number of interactions per crossing calculated for each bunch. It is calculated from the instantaneous per-bunch luminosity as 
+$\mu = \frac{\mathcal{L}_{bunch}\times \sigma_{inel}}{f}$, where $\mathcal{L}_{bunch}$ is the per-bunch instantaneous luminosity, $\sigma_{inel}$ is the inelastic cross section which is taken to be 80 mb for 13 TeV collisions, and $f$ is the \gls{lhc} revolution frequency. Figure from Ref. \cite{LumiTwiki}.}
 \label{fig:atlas:pu}
 \end{figure}
 
@@ -189,22 +189,22 @@ Protons are injected in the \gls{lhc} only after being accelerated to 450 GeV by
 \item The \gls{lhc} is the last step of this chain, and it accelerates the protons form 450 GeV to 6.5 TeV (the design energy is 7 TeV); while in the \gls{lhc} the protons gain about 0.5 MeV per turn, so it takes about 15 minutes to reach 6.5 TeV.
 \end{itemize}
 
-The accelerator complex of \gls{cern} is shown in Fig. \ref{fig:lhc:acc}. The acceleration chain for lead ions is the same, except that the extraction and first acceleration is performed by \textit{Linac3} instead than by Linac2.
+The accelerator complex of \gls{cern} is shown in Figure \ref{fig:lhc:acc}. The acceleration chain for lead ions is the same, except that the extraction and first acceleration is performed by \textit{Linac3} instead than by Linac2.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=1\textwidth]{figures/lhc/acc_complex.pdf}
-\caption{\gls{cern} accelerator complex \cite{Christiane:1260465}.}
+\caption{ Schematic view of the \gls{cern} accelerator complex. The four main \gls{lhc} experiments are shown at the interaction points. Figure from Ref. \cite{Christiane:1260465}.}
 \label{fig:lhc:acc}
 \end{figure}
 
 \subsection{Experiments at the LHC}
 
-Seven experiments are build along the \gls{lhc} circumference and collect the data produced during the collisions. Each experiment is run by an independent collaboration that comprises several universities and research institutes. 
-\textit{\gls{atlas}} \cite{atlas:atlas} and \textit{CMS} \cite{cms:cms} are the two largest and general purpose experiments, located at two opposite sides of the \gls{lhc} ring, in correspondence of two of the four interaction points. Their goal is to study a large variety of SM processes and to perform an extensive search program for BSM physics. The independent design of the two detectors, as well as of the separation between the two collaborations running them, is essential to provide a validation of the \gls{lhc} results. Since the data used in this thesis is collected with the \gls{atlas} detector, a more extensive description of this experiment is given in Sec. \ref{sed:cern:atlas}. 
-The \textit{LHCb} \cite{lhcb:lhcb} and \textit{ALICE} \cite{alice:alice} experiments are located at the other two \gls{lhc} interaction points. LHCb is a single-arm forward spectrometer, designed to perform high-precision studies of heavy flavour physics. The ALICE experiment is dedicated to the study of $Pb-Pb$ collisions, that at the \gls{lhc} happen with a center-of-mass energy of 2.6 TeV per nucleon pair; in this energy regime, quarks and gluons are expected to form the quark-gluon plasma.
-The position of the four main experiments on the \gls{lhc} ring is shown in Fig. \ref{fig:lhc:acc}.
-Other three smaller experiments are positioned along the \gls{lhc} circumference: TOTEM \cite{totem:totem}, LHCf \cite{lhcf:lhcf} and MoEDAL \cite{moedal:moedal}. TOTEM is located at the same interaction point as CMS, and measures the total $p-p$ cross section, as well as elastic and inelastic scattering. LHCf is installed in the same interaction point as \gls{atlas} and has two detectors, at 140 m from each side of the collision point, aiming at the study of particles produced in the "froward" region (very close to the beam axis). MoEDAL is installed in the LHCb cavern and is designed to search for magnetic monopoles.  
+Seven experiments are built along the \gls{lhc} circumference and collect the data produced during the collisions. Each experiment is run by an independent collaboration that comprises several universities and research institutes. 
+\textit{\gls{atlas}} \cite{atlas:atlas} and \textit{CMS} \cite{cms:cms} are the two largest and general purpose experiments, located at two opposite sides of the \gls{lhc} ring, in correspondence with two of the four interaction points. Their goal is to study a large variety of SM processes and to perform an extensive search program for \gls{bsm} physics. The independent design of the two detectors, as well as of the separation between the two collaborations running them, is essential to provide a validation of the \gls{lhc} results. Since the data used in this thesis is collected with the \gls{atlas} detector, a more extensive description of this experiment is given in Section \ref{sed:cern:atlas}. 
+The \textit{LHCb} \cite{lhcb:lhcb} and \textit{ALICE} \cite{alice:alice} experiments are located at the other two \gls{lhc} interaction points. LHCb is a single-arm forward spectrometer, designed to perform high-precision studies of heavy flavour physics. The ALICE experiment is dedicated to the study of $Pb-Pb$ collisions, which at the \gls{lhc} happen with a center-of-mass energy of 2.6 TeV per nucleon pair; in this energy regime, quarks and gluons are expected to form a quark-gluon plasma.
+The position of the four main experiments on the \gls{lhc} ring is shown in Figure \ref{fig:lhc:acc}.
+Other three smaller experiments are installed along the \gls{lhc} circumference: TOTEM \cite{totem:totem}, LHCf \cite{lhcf:lhcf} and MoEDAL \cite{moedal:moedal}. TOTEM is located at the same interaction point as CMS, and measures the total $p-p$ cross section, as well as elastic and inelastic scattering. LHCf is installed in the same interaction point as \gls{atlas} and has two detectors, at 140 m from each side of the collision point, aiming at the study of particles produced in the "forward" region (very close to the beam axis). MoEDAL is installed in the LHCb cavern and is designed to search for magnetic monopoles.  
 
 
 %%%%%%%%%%%%%%%%%% 

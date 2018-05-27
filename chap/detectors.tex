@@ -8,7 +8,7 @@ In this section we review the basic concepts that drive the design of the \gls{l
 
 
 
-The ability to accurately identify particles and reconstruct their energy and trajectory is what drives the design of detectors for high energy physics. In a detector, different sub-systems are able to capture different types of particle interaction, and the combination of the information collected by each of them allows to identify particles (or at least assign them to families, such as neutral or charged hadrons). A typical schema of the subdetectors sequence is shown in Fig. \ref{fig:detector:interaction}. The innermost layer, closer to the interaction point, is the \textit{tracking system}, dedicated to the measurement of the signed charge and momentum of charged particles. The following layers are the electromagnetic and hadronic \textit{calorimeters}, that measure the energy of particles with electromagnetic and hadronic interactions respectively. The outermost layer is dedicated to the \textit{muon system}: because of their large mass (about 200 times more than electrons) muons do not produce electromagnetic showers and are therefore easy to identify as they are the only detectable particles that reach the external part of the detector.
+The ability to accurately identify particles and reconstruct their energy and trajectory is what drives the design of detectors for high energy physics. In a detector, different sub-systems are able to capture different types of particle interactions, and the combination of the information collected by each of them allows to identify particles (or at least assign them to families, such as neutral or charged hadrons). A typical schema of the subdetectors sequence is shown in Fig. \ref{fig:detector:interaction}. The innermost layer, closer to the interaction point, is the \textit{tracking system}, dedicated to the measurement of the signed charge and momentum of charged particles. The following layers are the electromagnetic and hadronic \textit{calorimeters}, that measure the energy of particles with electromagnetic and hadronic interactions respectively. The outermost layer is dedicated to the \textit{muon system}: because of their large mass (about 200 times more than electrons) muons do not produce electromagnetic showers and are therefore easy to identify as they are the only detectable particles that reach the external part of the detector.
 
 \begin{figure}[ht]
 \centering
@@ -28,16 +28,18 @@ The relative uncertainty on the momentum is given by:
 \label{eq:tracking:reso}
 \end{equation}
 
-The first term, whose relative importance increases for high-momentum particles, derives from the angular measurement resolution. Typical values for $a$ are between 0.01\% and 1\%. The constant term in Eq. \ref{eq:tracking:reso} accounts for the impact of multiple Coulomb scattering, that broadens the distribution of the transverse momentum perpendicular to the direction of motion. This terms is important only at low energies, while is negligible for high-energy particles.
+The first term, whose relative importance increases for high-momentum particles, derives from the resolution in the measurement of the curvature. Typical values for $a$ are between 0.01\% and 1\%. The constant term in Eq. \ref{eq:tracking:reso} accounts for the impact of multiple Coulomb scattering, which broadens the distribution of the transverse momentum perpendicular to the direction of motion. This terms is important only at low energies, while it is negligible for high-energy particles.
 
-There are three main configurations of magnetic fields for momentum spectrometers:
+There are three main configurations of magnetic fields typically used in momentum spectrometers:
 \begin{itemize}
-\item A \textit{dipole} field leads to a rectangular symmetry; if we think of a circular collider with a coordinate system where $z$ is the direction along the beam trajectory and ($x$,$y$) define a Cartesian system in the transverse plane, a dipole  field in the $x$ direction will cause a deflection in the ($y,z$) plane. This is the configuration adopted by forward spectrometers like LHCb, where the tracking devices are arranged in sequence in the z direction. As an example, the integral of the LHCb dipole field over the detector length is 4 Tm.
+\item A \textit{dipole} field leads to a rectangular symmetry; if we think of a circular collider with a coordinate system where $z$ is the direction along the beam trajectory and ($x$,$y$) define a Cartesian system in the transverse plane, a dipole  field in the $x$ direction will cause a deflection in the ($y,z$) plane. This is the configuration adopted by forward spectrometers like LHCb, where the tracking devices are arranged in sequence in the $z$ direction. As an example, the integral of the LHCb dipole field over the detector length is 4 Tm.
+
 \item A \textit{solenoidal} field leads to a cylindrical symmetry and, if the field lines are along the $z$ direction, the deflection is in the ($x,y$) plane. This is the typical configuration of the spectrometers in the central barrel, where the detectors are arranged in cylindrical layers. The CMS solenoid field is 4 T, while the \gls{atlas} one is 2 T. 
-\item A \textit{toroidal} field leads to an azymuthal symmetry: the direction of the field lines is a circle in the transverse plane, and a deflection is in the ($r,z$) plane. This configuration is adopted by the \gls{atlas} muon spectrometer, with a magnetic field of 4 T. As in the case of the solenoidal field, the detectors are arranged in cylindrical shells.
+
+\item A \textit{toroidal} field leads to an azymuthal symmetry: the direction of the field lines is a circle in the transverse plane, and the deflection is in the ($r,z$) plane. This configuration is adopted by the \gls{atlas} muon spectrometer, with a magnetic field of 4 T. As in the case of the solenoidal field, the detectors are arranged in cylindrical shells.
 \end{itemize}
 
-The track left by the charged particles curving because of the magnetic field is reconstructed by the tracking detectors. The two most common categories of tracking devices are gas and silicon detectors, described in the next two sections.
+The track left by a charged particle curving because of the magnetic field is reconstructed by the tracking detectors. The two most common categories of tracking devices are gas and silicon detectors, described in the next two sections.
 
 \subsubsection*{Gas detectors}
 
