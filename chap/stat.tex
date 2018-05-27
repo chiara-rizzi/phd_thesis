@@ -207,8 +207,8 @@ If we consider only one bin of the likelihood in Eq. \ref{eq:stat:lik_no_sys}, c
 L(\mu, \theta) =
 \frac{ (\mu s +
 b \left( \frac{\theta}{\tilde{\theta}} \right) 2 )^{n} }{ n! }
-e^{- (\mu  + b\left(\frac{\theta}{\tilde{\theta} }\right)2)}   \; .
-G( \tilde{\theta} | \theta, \sigma_\theta) \ 
+e^{- (\mu  + b\left(\frac{\theta}{\tilde{\theta} }\right)2)}   \; 
+G( \tilde{\theta} | \theta, \sigma_\theta) \; .
 \end{equation}
 
 \noindent The change $b \rightarrow b\frac{\theta}{\tilde{\theta} }2$ encodes exactly the fact that a 10\% change in \gls{jer} leads to a 20\% change in background yields. To simplify this expression, the auxiliary measurement can be normalized to a standard Gaussian: $G( \tilde{\theta} | \theta, \sigma_\theta) \rightarrow G( 0 | \theta, 1)$, where also $\theta$ has been normalized such that the values $\theta = \pm 1$ correspond to the nominal uncertainty. The likelihood then becomes:
@@ -542,7 +542,29 @@ f(t_{\mu};\Lambda) = \frac{1}{2 \sqrt{t_{\mu}}} \frac{1}{\sqrt{2 \pi}}
 \Lambda = \frac{(\mu - \mu^{\prime})^2}{\sigma^2} \; .
 \end{equation}
 
-The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values. Plugging this back into Equation \ref{eq:stat:ftmulambda} allows to obtain a functional form of the distribution of the test statistic.
+\noindent The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values. Plugging this back into Equation \ref{eq:stat:ftmulambda} allows to obtain a functional form of the distribution of the test statistic. Figure \ref{fig:stat:asymtoys1} compares the distribution of the test statistic $q_1$ with pseudo-experiments and with the asymptotic approximation in the case of the background-only hypothesis and in the signal-plus-background hypothesis
+in a cut-and-count experiment with nine background events and six signal events; 
+it can be observed that a dataset of this size leads to a good agreement of the asymptotic approximation with the \gls{pdf} obtained with pseudo-experiments.
+Figure \ref{fig:stat:asymtoys2} shows a further investigation of this comparison: the discovery significance obtained for $q_0=16$ with pseudo-experiments and with the asymptotic approximation is compared as a function of the number of events. 
+Even if the approximations used to derive the asymptotic formulae hold in the case of a large data sample, 
+the agreement between this method and pseudo-experiments is at the level of $\approx 10\%$ even for an expected background of three events. 
+
+
+\begin{figure}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/stat/q11_s6_b9_pdf-eps-converted-to.pdf}\label{fig:stat:asymtoys1}}
+\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/stat/Z4-eps-converted-to.pdf}\label{fig:stat:asymtoys2}}
+\caption{
+\subref{fig:stat:asymtoys1} \glspl{pdf} for $q_1$ in the case of the background-only hypothesis and in the signal-plus-background hypothesis
+in a cut-and-count experiment with nine background events and six signal events.
+The solid curves show the asymptotic approximation, while the histograms are the distributions obtained with pseudo-experiments. 
+\subref{fig:stat:asymtoys2} Discovery significance obtained for $q_0=16$ with pseudo-experiments (black points) and with the asymptotic approximation, that leads to a nominal value of $Z_0 = \sqrt{q_0} =4$, as a function of the number of background events. 
+Figures from Ref. \cite{Cowan2011}.
+}
+\label{fig:stat:interp}
+\end{figure}
+
+
 
 \section{Simplified examples}
 \label{sec:stat:examples}
