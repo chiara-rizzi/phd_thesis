@@ -388,9 +388,8 @@ q_{0} =
 \left\{ \! \! \begin{array}{ll}
                - 2 \ln \lambda(0)
                & \quad \hat{\mu} \ge 0 \;, \\*[0.3 cm]
-               0 & \quad \hat{\mu} < 0  \;,
-              \end{array}
-       \right.
+               0 & \quad \hat{\mu} < 0  \;.
+              \end{array} \; \right.
 \end{equation}
  
 \noindent The reason to assign the value 0 to the test statistic when $\hat{\mu} < 0$ is to avoid excluding the B-only hypothesis in case of a deficit. In fact, $\hat{\mu} < 0$ can indeed be symptomatic of a non correct B-only hypothesis (e.g. a systematic error), but it does not indicate the presence of a signal, which is what we want to highlight with this test statistics. Note that, since \gls{prl} assumes values between 0 and 1, \qzero is positive definite. The associated discovery p-value $p_{0}$ is:
@@ -409,7 +408,7 @@ When investigating the exclusion of the test hypothesis, we want a test statisti
 q_{\mu} =
 \left\{ \! \! \begin{array}{ll}
                - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
-               0 & \hat{\mu} > \mu \;,
+               0 & \hat{\mu} > \mu \;.
               \end{array}
        \right.
 \end{equation}
@@ -435,7 +434,7 @@ The strategy described above leads to a loss of information when the test statis
 r_{\mu} =
 \left\{ \! \! \begin{array}{ll}
                - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
-               + 2 \ln \lambda(\mu)  & \hat{\mu} > \mu  \;,
+               + 2 \ln \lambda(\mu)  & \hat{\mu} > \mu  \;.
               \end{array}
        \right.
 \end{equation}
@@ -508,16 +507,16 @@ To compute the p-value associated with the observed value of a test statistics $
 
 The distribution of the test statistic can be obtained by sampling the likelihood function with \gls{mc} simulations (pseudo-experiments). This is obtained by repeating many times the following steps:
 \begin{itemize}
-\item The nominal value of all the \glspl{np} is varied randomly by sampling their constraining terms 
-\item The new value of the \glspl{np} is used to compute a new expected value for the yields
-\item The observed value is substituted by a Poisson fluctuation of the expected yields
-\item The test statistic for this "observed" value is computed
+\item The nominal value of all the \glspl{np} is varied by sampling randomly their constraining terms.
+\item The new value of the \glspl{np} is used to compute a new expected value for the yields.
+\item The observed value is substituted by a Poisson fluctuation of the expected yields.
+\item The test statistic for this "observed" value is computed.
 \end{itemize}
 
 This is done twice: a first time using as expected number of events the one predicted by the null hypothesis, and a second time the one predicted by the alternate hypothesis. The integral of the two resulting distributions is used to compute the p-values.
 
 \subsubsection*{Asymptotic approximation}
-For large number of events, the asymptotic approximation \cite{Cowan2011} can be used to determine the \gls{pdf} of the test statistic without having to simulate a large number of pseudo-experiments. This technique is based on  Wald's theorem \cite{Wald1943}, which states that $t_{\mu} = -2 \ln \lambda(\mu)$ is parabolic up to corrections that scale with the inverse of the square root of the sample size:
+For large number of events, the asymptotic approximation \cite{Cowan2011} can be used to determine the \gls{pdf} of the test statistic without having to simulate several pseudo-experiments. This technique is based on  Wald's theorem \cite{Wald1943}, which states that $t_{\mu} = -2 \ln \lambda(\mu)$ is parabolic up to corrections that scale with the inverse of the square root of the sample size:
 
 \begin{equation}
 \label{eq:wald}
@@ -536,14 +535,14 @@ f(t_{\mu};\Lambda) = \frac{1}{2 \sqrt{t_{\mu}}} \frac{1}{\sqrt{2 \pi}}
 \right) \right] \;,
 \end{equation}
 
-\noindent where the noncentrality parameter $\Lambda$ is
+\noindent where the noncentrality parameter $\Lambda$ is:
 
 \begin{equation}
 \label{eq:stat:noncentrality}
 \Lambda = \frac{(\mu - \mu^{\prime})^2}{\sigma^2} \; .
 \end{equation}
 
-The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values.
+The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values. Plugging this back into Equation \ref{eq:stat:ftmulambda} allows to obtain a functional form of the distribution of the test statistic.
 
 \section{Simplified examples}
 \label{sec:stat:examples}
