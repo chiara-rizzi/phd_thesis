@@ -4,11 +4,13 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--cr', default=2000, type=float)
+parser.add_argument('--sr', default=3000, type=float)
 parser.add_argument('--unc', default=0.3, type=float)
 parser.add_argument('--scale', default=0.76, type=float)
 
 args = parser.parse_args()
 cr=args.cr
+sr=args.sr
 rel_unc=args.unc
 
 r.gStyle.SetOptStat(0)
@@ -86,22 +88,38 @@ text.SetNDC(0)
 tcr = r.TLine(cr, 0, cr,  hb.GetMaximum()*0.05)
 tcr.SetLineStyle(3)
 tcr.Draw()
-ar1 = r.TArrow(cr+10,hb.GetMaximum()*0.05,cr-500 -10, hb.GetMaximum()*0.05, 0.02)
+ar1 = r.TArrow(cr-10,hb.GetMaximum()*0.01,cr-500 +10, hb.GetMaximum()*0.01, 0.02)
 ar1.Draw()
+text.DrawLatex(cr-700, hb.GetMaximum()*0.02, "CR")
 
-text.DrawLatex(cr-400, hb.GetMaximum()*0.06, "CR")
+tsr = r.TLine(sr, 0, sr,  hs.GetMaximum()*9)
+tsr.SetLineStyle(3)
+tsr.Draw()
+ar2 = r.TArrow(sr +10,hs.GetMaximum()*5,sr+500 -10, hs.GetMaximum()*5, 0.02)
+ar2.Draw()
+text.DrawLatex(sr+50, hs.GetMaximum()*6, "SR")
 
 
 bin1 = int((cr - xmin)/((xmax-xmin)/nbins))+1
 print "bin1",bin1
+bin2 = int((sr - xmin)/((xmax-xmin)/nbins))+1
+print "bin2",bin2
+
 
 s_cr = hs.Integral(-1,bin1)
 b_cr = hb.Integral(-1,bin1)
+s_sr = hs.Integral(bin2,10000)
+b_sr = hb.Integral(bin2,10000)
 
-print "Rates"
+print "Rates CR"
 print "Sig:", s_cr
 print "Bkg", b_cr
 print "S/B:", s_cr/b_cr
+print ""
+print "Rates SR"
+print "Sig:", s_sr
+print "Bkg", b_sr
+print "S/B:", s_sr/b_sr
 
 
 c.Update()
