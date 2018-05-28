@@ -1,8 +1,21 @@
 import ROOT as r
 import math
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--sr1', default=2900, type=float)
+parser.add_argument('--sr2', default=3300, type=float)
+parser.add_argument('--unc', default=0.3, type=float)
+parser.add_argument('--scale', default=4, type=float)
+
+args = parser.parse_args()
+sr1=args.sr1
+sr2=args.sr2
+rel_unc=args.unc
 
 r.gStyle.SetOptStat(0)
 r.gStyle.SetOptTitle(0)
+r.gROOT.SetBatch()
 
 fb = r.TFile.Open("/eos/atlas/user/c/crizzi/susy_multib/HFinputs_merged/SUSYHF_tag2.4.28-0-0/Bkg_2.4.28-0-0_skim_3b_with_wei.root","READ")
 fs = r.TFile.Open("/eos/atlas/user/c/crizzi/susy_multib/HFinputs_merged/SUSYHF_tag2.4.28-0-0/Sig_2.4.28-0-0_with_wei.root","READ")
@@ -15,12 +28,16 @@ if not tb:
 if not ts:
     print "no sig"
 
-hb = r.TH1F("hb","hb",20,2000,4000)
-hs = r.TH1F("hs","hs",20,2000,4000)
+nbins = 20
+xmin = 2100
+xmax = 4100
+
+hb = r.TH1F("hb","hb",nbins,xmin,xmax)
+hs = r.TH1F("hs","hs",nbins,xmin,xmax)
 
 sel="(bjets_n>=3 && met>200)*(weight_mc*weight_lumi)*3600"
-tb.Draw("meff_incl>>hb",sel,"goff")
-ts.Draw("meff_incl>>hs",sel+"*1.5","goff")
+tb.Draw("meff_incl>>hb",sel+"*8","goff")
+ts.Draw("meff_incl>>hs",sel+"*8*"+str(args.scale),"goff")
 
 c = r.TCanvas()
 #c.SetLogy()
@@ -31,14 +48,14 @@ hs.SetLineColor(r.kPink)
 hb.SetLineWidth(2)
 hs.SetLineWidth(2)
 
-hb.GetXaxis().SetTitle("m_{eff} [GeV]")
-hb.GetXaxis().SetTitleSize(0.06)
-hb.GetXaxis().SetTitleOffset(0.4)
+hb.GetXaxis().SetTitle("m_{eff}")
+#hb.GetXaxis().SetTitleSize(0.06)
+#hb.GetXaxis().SetTitleOffset(0.4)
 hb.GetYaxis().SetTitle("Events")
-hb.GetYaxis().SetTitleSize(0.06)
-hb.GetYaxis().SetTitleOffset(0.4)
-hb.GetXaxis().SetLabelSize(0)
-hb.GetYaxis().SetLabelSize(0)
+#hb.GetYaxis().SetTitleSize(0.06)
+#hb.GetYaxis().SetTitleOffset(0.4)
+#hb.GetXaxis().SetLabelSize(0)
+#hb.GetYaxis().SetLabelSize(0)
 hb.GetXaxis().SetTickLength(0)
 hb.GetYaxis().SetTickLength(0)
 
@@ -64,8 +81,6 @@ for t in write:
     text.DrawLatex(0.21,y, t)
     y = y-0.06
 
-sr1=2800
-sr2=3400
 text.SetNDC(0)
 
 tsr1 = r.TLine(sr1, 0, sr1,  hb.GetMaximum()*0.8)
@@ -87,18 +102,24 @@ ar2 = r.TArrow(sr2 + 10 ,hb.GetMaximum()*0.5,sr2+200 -10, hb.GetMaximum()*0.5, 0
 ar2.Draw()
 text.DrawLatex(sr2+20, hb.GetMaximum()*0.55, "SR2")
 
-s_sr = hs.Integral(9,10000)
-s_sr1 = hs.Integral(9,14)
-s_sr2 = hs.Integral(15,1000)
+bin1 = int((sr1 - xmin)/((xmax-xmin)/nbins))+1
+bin2 = int((sr2 - xmin)/((xmax-xmin)/nbins))+1
+print "bin1",bin1
+print "bin2",bin2
 
-b_sr = hb.Integral(9,10000)
-b_sr1 = hb.Integral(9,14)
-b_sr2 = hb.Integral(15,1000)
+s_sr = hs.Integral(bin1,10000)
+s_sr1 = hs.Integral(bin1, bin2-1)
+s_sr2 = hs.Integral(bin2,1000)
+
+b_sr = hb.Integral(bin1,10000)
+b_sr1 = hb.Integral(bin1, bin2-1)
+b_sr2 = hb.Integral(bin2, 1000)
 
 print "Signal rates"
 print "SR:", s_sr
 print "SR1:", s_sr1
 print "SR2:", s_sr2
+print "sum", s_sr1+s_sr2
 
 print ""
 
@@ -106,14 +127,28 @@ print "Background rates"
 print "SR:", b_sr
 print "SR1:", b_sr1
 print "SR2:", b_sr2
+print "sum", b_sr1+b_sr2
 
+"""
 print ""
-
-print "Significances"
+print "S/sqrt(B)"
 print "SR:", s_sr/math.sqrt(b_sr)
 print "SR1:", s_sr1/math.sqrt(b_sr1)
 print "SR2:", s_sr2/math.sqrt(b_sr2)
+"""
+print ""
+r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr, b_sr, rel_unc)
+print "significance"
+print "SR:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr, b_sr, rel_unc)
+print "SR1:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr1, b_sr1, rel_unc)
+print "SR2:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr2, b_sr2, rel_unc)
+print "qaud:", math.sqrt(r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr1, b_sr1, rel_unc)*r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr1, b_sr1, rel_unc) + r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr2, b_sr2, rel_unc)*r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr2, b_sr2, rel_unc)    )
 
+print ""
+
+print "**************"
+print "SR:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr, b_sr, rel_unc)
+print "**************"
 
 c.Update()
 c.SaveAs("sig_bkg.pdf")
