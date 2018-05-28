@@ -570,20 +570,46 @@ Figures from Ref. \cite{Cowan2011}.
 \label{sec:stat:examples}
 
 In this section we present a few simplified examples that illustrate the concepts described in the previous sections.
+In particular, Section \ref{sec:example_cr} discussed the principle followed in optimizing \glspl{sr} and the advantages of using \glspl{cr},
+while Section \ref{sec:example_combi} focuses on limit setting and how to improve limits by combining several \glspl{sr}.
 
 \subsection{Signal Regions and Control Regions}
 \label{sec:example_cr}
 
 \begin{figure}[h]
 \centering 
-\subfigure[]{\includegraphics[width=0.48\textwidth]{produce_plots/stat/sig_bkg_CR.pdf}\label{fig:stat:example1}}
+%\subfigure[]{
+\includegraphics[width=0.65\textwidth]{produce_plots/stat/sig_bkg_CR.pdf}
+%\label{fig:stat:example1}}
 %\subfigure[]{\includegraphics[width=0.48\textwidth]{produce_plots/stat/sig_bkg.pdf}\label{fig:stat:example2}}
-\caption{
-Distribution of a discriminating variable (\meff) for the signal and background in the example in the text. 
+\caption{Distribution of a discriminating variable (\meff) for the signal and background in the example in the text. 
 The arrows indicate the \gls{sr} defined by maximizing the expected significance and the \gls{cr} where the background is normalized. 
 }
 \label{fig:stat:example}
 \end{figure}
+
+Let's consider a situation where we want to use only one discriminating variable (e.g. \meff) to separate signal and background, 
+and they are distributed as in Figure \ref{fig:stat:example}. 
+We can see that the background, which in this case we consider as constituted by only one single physical process, 
+tends to have lower values of \meff with respect to the signal; 
+this means that, to define a \gls{sr}, we will apply a lower selection on the value of \meff.
+There are different criteria that can be used to choose the value of \meff that defines the boundary of the \gls{sr}. 
+The one used in this thesis is the maximization of the expected significance, computed through the function \binexpZ in \roostats, 
+assuming a 30\% uncertainty on the background yields. With this definition, the significance is the equivalent number of standard deviations of a Gaussian of a p-value defined as:
+
+\begin{equation}
+\label{eq:binomexpp}
+p(N_s, N_b, \sigma_b) = \mathcal{I} \left( \frac{1}{1+ \frac{1}{N_b \sigma_b^2}}; N_s + N_b; \frac{1}{\sigma_b^2} +1  \right)
+\end{equation}
+
+\noindent where $N_s$ ($N_b$) is the expected number of signal (background) events, and $\sigma_b$ the relative uncertainty on the background yields and $\mathcal{I}$ the regularized beta function. 
+
+In the case of the signal and background models shown in Figure \ref{fig:stat:example}, values of \meff between 2 TeV and 4 TeV have been tested in steps of 100 GeV, and the optimal value has been found to be $\meff > 3000$ TeV. This selection leads to a \gls{sr} with  9.5 signal events, 10.5 background events and an expected significance of 1.58 $\sigma$. 
+The portion of the \meff spectrum that is not occupied by the \gls{sr}, can be used to define a \gls{cr} and a \gls{vr}.
+In this example we use the region with $\meff < 2$ TeV as \gls{cr} for the background. 
+In order to evaluate the effect of the inclusion of a \gls{cr} in the background estimate, we need to compare the number of expected and observed background event in the \gls{cr}. 
+In these examples, the data sample is substituted by a pseudo-data sample generated with a Poisson fluctuation 
+of the bin-content of a histogram built as the sum of the background histogram with a scale factor of 0.87 and the signal histogram with a scale factor of 0.5. 
 
 \subsection{Improving the sensitivity by combining regions}
 \label{sec:example_combi}
@@ -591,12 +617,15 @@ The arrows indicate the \gls{sr} defined by maximizing the expected significance
 \begin{figure}[h]
 \centering 
 %\subfigure[]{\includegraphics[width=0.48\textwidth]{produce_plots/stat/sig_bkg_CR.pdf}\label{fig:stat:example1}}
-\subfigure[]{\includegraphics[width=0.48\textwidth]{produce_plots/stat/sig_bkg.pdf}\label{fig:stat:example2}}
+%\subfigure[]{
+\includegraphics[width=0.65\textwidth]{produce_plots/stat/sig_bkg.pdf}
+%\label{fig:stat:example2}}
 \caption{
 Distribution of a discriminating variable (\meff) for the signal and background in the example in the text.
-\subref{fig:stat:example2} The arrows indicate the definition of the \glspl{sr}; the one named "SR" is the region that maximizes the expected significance, while SR1 and SR2 are the orthogonal bins in which SR is divided.
+%\subref{fig:stat:example2} 
+The arrows indicate the definition of the \glspl{sr}; the one named "SR" is the region that maximizes the expected significance, while SR1 and SR2 are the orthogonal bins in which SR is divided.
 }
-\label{fig:stat:example}
+\label{fig:stat:example2}
 \end{figure}
 In this section we show with a simple example how combining different regions can increase the sensitivity. We are going to use the same 
 
