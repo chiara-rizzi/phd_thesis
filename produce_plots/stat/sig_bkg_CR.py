@@ -5,12 +5,14 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--cr', default=2000, type=float)
 parser.add_argument('--sr', default=3000, type=float)
+parser.add_argument('--sr2', default=3500, type=float)
 parser.add_argument('--unc', default=0.3, type=float)
 parser.add_argument('--scale', default=0.76, type=float)
 
 args = parser.parse_args()
 cr=args.cr
 sr=args.sr
+sr2=args.sr2
 rel_unc=args.unc
 
 r.gStyle.SetOptStat(0)
@@ -117,26 +119,67 @@ bin1 = int((cr - xmin)/((xmax-xmin)/nbins))+1
 print "bin1",bin1
 bin2 = int((sr - xmin)/((xmax-xmin)/nbins))+1
 print "bin2",bin2
+bin3 = int((sr2 - xmin)/((xmax-xmin)/nbins))+1
+print "bin3",bin3
 
 
 s_cr = hs.Integral(-1,bin1)
 b_cr = hb.Integral(-1,bin1)
 d_cr = hd.Integral(-1,bin1)
+
+s_vr = hs.Integral(bin1+1,bin2-1)
+b_vr = hb.Integral(bin1+1,bin2-1)
+d_vr = hd.Integral(bin1+1,bin2-1)
+
 s_sr = hs.Integral(bin2,10000)
 b_sr = hb.Integral(bin2,10000)
 d_sr = hd.Integral(bin2,10000)
 
+s_sr1 = hs.Integral(bin2, bin3-1)
+b_sr1 = hb.Integral(bin2, bin3-1)
+d_sr1 = hd.Integral(bin2, bin3-1)
+
+s_sr2 = hs.Integral(bin3,10000)
+b_sr2 = hb.Integral(bin3,10000)
+d_sr2 = hd.Integral(bin3,10000)
+
+
+r.RooStats.NumberCountingUtils.BinomialExpZ( s_cr, b_cr, 0.3)
+
 print "Rates CR"
-print "Sig:", s_cr
 print "Bkg", b_cr
-print "Data", d_cr
+print "Sig:", s_cr
 print "S/B:", s_cr/b_cr
+print "signif:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_cr, b_cr, 0.3)
+print "Data", d_cr
+print ""
+print "Rates VR"
+print "Bkg", b_vr
+print "Sig:", s_vr
+print "S/B:", s_vr/b_vr
+print "signif:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_vr, b_vr, 0.3)
+print "Data", d_vr
 print ""
 print "Rates SR"
-print "Sig:", s_sr
 print "Bkg", b_sr
-print "Data", d_sr
+print "Sig:", s_sr
 print "S/B:", s_sr/b_sr
+print "signif:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr, b_sr, 0.3)
+print "Data", d_sr
+print ""
+print "Rates SR1"
+print "Bkg", b_sr1
+print "Sig:", s_sr1
+print "S/B:", s_sr1/b_sr1
+print "signif:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr1, b_sr1, 0.3)
+print "Data", d_sr1
+print ""
+print "Rates SR2"
+print "Bkg", b_sr2
+print "Sig:", s_sr2
+print "S/B:", s_sr2/b_sr2
+print "signif:", r.RooStats.NumberCountingUtils.BinomialExpZ( s_sr2, b_sr2, 0.3)
+print "Data", d_sr2
 
 c.Update()
 c.SaveAs("sig_bkg_CR.pdf")
