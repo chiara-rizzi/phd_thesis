@@ -39,10 +39,6 @@ sel="(bjets_n>=3 && met>200)*(weight_mc*weight_lumi)*3600"
 tb.Draw("meff_incl>>hb",sel+"*8","goff")
 ts.Draw("meff_incl>>hs",sel+"*8*"+str(args.scale),"goff")
 
-c = r.TCanvas()
-c.SetLogy()
-c.cd()
-
 hb.SetMaximum(50*hb.GetMaximum())
 
 hb.SetLineColor(r.kAzure)
@@ -61,12 +57,29 @@ hb.GetYaxis().SetTitle("Events")
 hb.GetXaxis().SetTickLength(0)
 hb.GetYaxis().SetTickLength(0)
 
+trand = r.TRandom3(5555)
+hd = hb.Clone("Data")
+for i in range(0, hd.GetNbinsX()+2):
+    mean = 0.87* hb.GetBinContent(i) + 0.3*hs.GetBinContent(i)     
+    d_entry = trand.Poisson( mean)
+    print mean, d_entry
+    hd.SetBinContent(i, d_entry)
+hd.SetLineColor(r.kBlack)
+
+c = r.TCanvas()
+c.SetLogy()
+c.cd()
+
 hb.Draw()
 hs.Draw("same")
+hd.SetMarkerStyle(20)
+#hd.Draw('same')
+#hb.Draw("same")
 
 leg = r.TLegend(0.7,0.68,0.89,0.89)
 leg.AddEntry(hb,"Background","l")
 leg.AddEntry(hs,"Signal","l")
+#leg.AddEntry(hd,"Pseudo-data","l")
 leg.SetLineWidth(0)
 leg.Draw()
 
@@ -108,19 +121,23 @@ print "bin2",bin2
 
 s_cr = hs.Integral(-1,bin1)
 b_cr = hb.Integral(-1,bin1)
+d_cr = hd.Integral(-1,bin1)
 s_sr = hs.Integral(bin2,10000)
 b_sr = hb.Integral(bin2,10000)
+d_sr = hd.Integral(bin2,10000)
 
 print "Rates CR"
 print "Sig:", s_cr
 print "Bkg", b_cr
+print "Data", d_cr
 print "S/B:", s_cr/b_cr
 print ""
 print "Rates SR"
 print "Sig:", s_sr
 print "Bkg", b_sr
+print "Data", d_sr
 print "S/B:", s_sr/b_sr
-
 
 c.Update()
 c.SaveAs("sig_bkg_CR.pdf")
+
