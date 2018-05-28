@@ -640,14 +640,25 @@ and extrapolate it to \glspl{vr} and \glspl{sr}. A background estimate based on 
 
 \begin{itemize}
 \item First of all, the usage of a \gls{cr} allows to eliminate mismodellings in the normalization of the backgorund sample in a phase space 
-kinematically close to the \gls{sr}. This is implemented through the inclusion in the likelihood of a normalization \gls{np} with a flat constraint. 
+kinematically close to the \gls{sr}. This is implemented through the inclusion in the likelihood of a normalization \gls{np} with a flat constraint.
+The improvement in the description of the data in the \gls{vr} is shown in Figure \ref{fig:stat:VRclosure}: the central value of the bottom panel,
+showing the ratio of the pseudo-data to the \gls{mc} simulation, is close to one after the fit.
 
 \item The inclusion of a \gls{cr} in the fit plays a key role also in the evaluation of the systematic uncertainties. 
 When computing the impact of a systematic uncertainty in a \gls{sr} or \gls{vr} for a background normalized in a \gls{cr}, 
 this does not depend on the full change in yields between the nominal and the systematic variation in that \gls{sr} or \gls{cr},
-but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}.
+but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}. Figure \ref{fig:stat:VRclosure} shows the reduction of the systematic uncertainty as well: after the fit, the shaded band indicating the uncertainty on the background estimate is smaller.
 
 \end{itemize}
+
+\begin{figure}[h]
+\centering 
+\subfigure[VR pre-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/VR_cuts_beforeFit.pdf}\label{fig:stat:VRprefit}}
+\subfigure[VR post-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/VR_cuts_afterFit.pdf}\label{fig:stat:VRpostfit}}\caption{
+Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefit} before and \subref{fig:stat:VRpostfit} after the fit in the \gls{cr}.
+}
+\label{fig:stat:VRclosure}
+\end{figure}
 
 
 \subsection{Improving the sensitivity by combining regions}
