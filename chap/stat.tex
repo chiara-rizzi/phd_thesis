@@ -566,15 +566,15 @@ Figures from Ref. \cite{Cowan2011}.
 
 
 
-\section{Simplified examples}
+\section{Walk-trough examples}
 \label{sec:stat:examples}
 
-In this section we present a few simplified examples that illustrate the concepts described in the previous sections.
-In particular, Section \ref{sec:example_cr} discussed the principle followed in optimizing \glspl{sr} and the advantages of using \glspl{cr},
+In this section we present a few simplified examples that illustrate the concepts described in the previous sections and how they are applied in physics analyses that search for \gls{bsm} signals.
+In particular, Section \ref{sec:example_sr} discussed the principle followed in optimizing \glspl{sr}, Section \ref{sec:example_cr} the advantages of using \glspl{cr},
 while Section \ref{sec:example_combi} focuses on limit setting and how to improve limits by combining several \glspl{sr}.
 
-\subsection{Signal Regions and Control Regions}
-\label{sec:example_cr}
+\subsection{Region Definition}
+\label{sec:example_sr}
 
 \begin{figure}[h]
 \centering 
@@ -632,7 +632,22 @@ Pseudo-data & 4788 & 70 & 15 & 10 & 5 \\
 \label{tab:stat:exampleyeilds}
 \end{table}
 
+\subsection{Background-only fit and control regions}
+\label{sec:example_cr}
 
+\glspl{cr} are used first of all in the so called "background-only fit", where the likelihood comprises only the \glspl{cr} and any signal contamination is neglected. The goal of the background-only fit is to extract from the \glspl{cr} data information on the modelling of the background 
+and extrapolate it to \glspl{vr} and \glspl{sr}. A background estimate based on a \gls{cr} has two main advantages with respect to the plain \gls{mc} prediction:
+
+\begin{itemize}
+\item First of all, the usage of a \gls{cr} allows to eliminate mismodellings in the normalization of the backgorund sample in a phase space 
+kinematically close to the \gls{sr}. This is implemented through the inclusion in the likelihood of a normalization \gls{np} with a flat constraint. 
+
+\item The inclusion of a \gls{cr} in the fit plays a key role also in the evaluation of the systematic uncertainties. 
+When computing the impact of a systematic uncertainty in a \gls{sr} or \gls{vr} for a background normalized in a \gls{cr}, 
+this does not depend on the full change in yields between the nominal and the systematic variation in that \gls{sr} or \gls{cr},
+but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}.
+
+\end{itemize}
 
 
 \subsection{Improving the sensitivity by combining regions}
