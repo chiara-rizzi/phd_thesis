@@ -3,10 +3,10 @@ import math
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--sr1', default=2900, type=float)
-parser.add_argument('--sr2', default=3300, type=float)
+parser.add_argument('--sr1', default=3000, type=float)
+parser.add_argument('--sr2', default=3500, type=float)
 parser.add_argument('--unc', default=0.3, type=float)
-parser.add_argument('--scale', default=4, type=float)
+parser.add_argument('--scale', default=0.76, type=float)
 
 args = parser.parse_args()
 sr1=args.sr1
