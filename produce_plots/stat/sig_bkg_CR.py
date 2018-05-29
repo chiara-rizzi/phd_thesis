@@ -8,6 +8,8 @@ parser.add_argument('--sr', default=3000, type=float)
 parser.add_argument('--sr2', default=3500, type=float)
 parser.add_argument('--unc', default=0.3, type=float)
 parser.add_argument('--scale', default=0.76, type=float)
+cr_low=1600
+bin0=12
 
 args = parser.parse_args()
 cr=args.cr
@@ -15,7 +17,7 @@ sr=args.sr
 sr2=args.sr2
 rel_unc=args.unc
 
-bin0=14
+
 
 r.gStyle.SetOptStat(0)
 r.gStyle.SetOptTitle(0)
@@ -50,7 +52,7 @@ hs.SetLineColor(r.kPink)
 hb.SetLineWidth(2)
 hs.SetLineWidth(2)
 
-hb.GetXaxis().SetTitle("m_{eff}")
+hb.GetXaxis().SetTitle("m_{eff} [GeV]")
 #hb.GetXaxis().SetTitleSize(0.06)
 #hb.GetXaxis().SetTitleOffset(0.4)
 hb.GetYaxis().SetTitle("Events")
@@ -105,16 +107,23 @@ text.SetNDC(0)
 tcr = r.TLine(cr, 0, cr,  hb.GetMaximum()*0.05)
 tcr.SetLineStyle(3)
 tcr.Draw()
-ar1 = r.TArrow(cr-10,hb.GetMaximum()*0.01,cr-500 +10, hb.GetMaximum()*0.01, 0.02)
+tcr2 = r.TLine(cr_low, 0, cr_low,  hb.GetMaximum()*0.05)
+tcr2.SetLineStyle(3)
+tcr2.Draw()
+ar1 = r.TArrow(cr-10,hb.GetMaximum()*0.01,cr_low +10, hb.GetMaximum()*0.01, 0.02, '<>')
 ar1.Draw()
-text.DrawLatex(cr-700, hb.GetMaximum()*0.02, "CR")
+text.DrawLatex(cr-400, hb.GetMaximum()*0.02, "CR")
 
-tsr = r.TLine(sr, 0, sr,  hs.GetMaximum()*9)
+tsr = r.TLine(sr, 0, sr,  hs.GetMaximum()*100)
 tsr.SetLineStyle(3)
 tsr.Draw()
 ar2 = r.TArrow(sr +10,hs.GetMaximum()*5,sr+500 -10, hs.GetMaximum()*5, 0.02)
 ar2.Draw()
 text.DrawLatex(sr+50, hs.GetMaximum()*6, "SR")
+
+ar3 = r.TArrow(cr+10,hb.GetMaximum()*0.002,sr-10, hb.GetMaximum()*0.002, 0.02, '<>')
+ar3.Draw()
+text.DrawLatex(cr+300, hs.GetMaximum()*50, "VR")
 
 print "bin0",bin0
 print "starting at:", hb.GetBinLowEdge(bin0)
