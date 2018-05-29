@@ -642,12 +642,26 @@ and extrapolate it to \glspl{vr} and \glspl{sr}. A background estimate based on 
 \item First of all, the usage of a \gls{cr} allows to eliminate mismodellings in the normalization of the backgorund sample in a phase space 
 kinematically close to the \gls{sr}. This is implemented through the inclusion in the likelihood of a normalization \gls{np} with a flat constraint.
 The improvement in the description of the data in the \gls{vr} is shown in Figure \ref{fig:stat:VRclosure}: the central value of the bottom panel,
-showing the ratio of the pseudo-data to the \gls{mc} simulation, is close to one after the fit.
+showing the ratio of the pseudo-data to the \gls{mc} simulation, is closer to one after the fit.
 
 \item The inclusion of a \gls{cr} in the fit plays a key role also in the evaluation of the systematic uncertainties. 
 When computing the impact of a systematic uncertainty in a \gls{sr} or \gls{vr} for a background normalized in a \gls{cr}, 
 this does not depend on the full change in yields between the nominal and the systematic variation in that \gls{sr} or \gls{cr},
-but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}. Figure \ref{fig:stat:VRclosure} shows the reduction of the systematic uncertainty as well: after the fit, the shaded band indicating the uncertainty on the background estimate is smaller.
+but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}. Figure \ref{fig:stat:VRclosure} shows the reduction of the systematic uncertainty as well: after the fit, the shaded band indicating the uncertainty on the background estimate is smaller. 
+In this example, the following event yields are attributed to a common systematic uncertainty fully correlated across regions:
+\begin{description}
+\item[CR] Nominal: 5775.6, up variation: 6930.7, down variation: 4620.5 (a 20\% up and down variation).
+\item[VR] Nominal: 83.8, up variation: 125.7, down variation: 41.9 (a 50\% up and down variation).
+\end{description}
+
+\noindent While the pre-fit uncertainty on the \gls{vr} is large, the variation of the transfer factor is smaller:
+\begin{equation}
+\begin{split}
+TF^{nominal}_{VR} &= \frac{83.8}{5775.6} = 0.0145 \\
+TF^{up}_{VR} &= \frac{125.7}{6930.7} = 0.0181 \\
+TF^{down}_{VR} &= \frac{41.9}{4620.5} = 0.0091 \\
+\end{split}
+\end{equation}
 
 \end{itemize}
 
