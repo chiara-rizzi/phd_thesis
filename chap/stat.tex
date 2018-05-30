@@ -648,7 +648,7 @@ showing the ratio of the pseudo-data to the \gls{mc} simulation, is closer to on
 \centering 
 \subfigure[VR pre-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/nosys/VR_cuts_beforeFit.pdf}\label{fig:stat:VRprefit}}
 \subfigure[VR post-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/nosys/VR_cuts_afterFit.pdf}\label{fig:stat:VRpostfit}}\caption{
-Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefit} before and \subref{fig:stat:VRpostfit} after the fit in the \gls{cr}.
+Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefit} before and \subref{fig:stat:VRpostfit} after the fit in the \gls{cr}. No systematic uncertainties are included in the fit. 
 }
 \label{fig:stat:VRclosure}
 \end{figure}
@@ -668,23 +668,26 @@ This leads to the following yields in the \gls{cr} and \gls{vr}:
 \item[VR] Nominal: 62.9, up variation: 83.2, down variation: 42.5.
 \end{description}
 
-\noindent While the pre-fit uncertainty on the \gls{vr} is large, the variation of the transfer factor is smaller:
+\noindent When a background is normalized in a \gls{cr}, is the relative change in the \gls{tf} and not the change in yields that determines the size of the systematic uncertainty.
+This is because the normalization of the background in the \gls{cr} absorbs the normalization uncertainty, and the effect of the uncertainty on the \gls{vr} depends only on the change in shape of the distribution. 
+In this example, while the pre-fit uncertainty on the \gls{vr} is large, the variation of the transfer factor is smaller:
 \begin{equation}
 \begin{split}
-TF^{nominal}_{VR} &= \frac{62.9}{279.1} = 0.225 \; ,\\
-TF^{up}_{VR} &= \frac{83.2}{360.3} = 0.231 \; , \\
-TF^{down}_{VR} &= \frac{42.5}{197.8} = 0.215 \; . \\
+\rm TF^{nominal}_{VR} &= \frac{62.9}{279.1} = 0.225 \; ,\\
+\rm TF^{up}_{VR} &= \frac{83.2}{360.3} = 0.231 \; , \\
+\rm TF^{down}_{VR} &= \frac{42.5}{197.8} = 0.215 \; . \\
 \end{split}
 \end{equation}
 
-\noindent This is because the normalization of the background in the \gls{cr} absorbs the normalization uncertainty, and the effect of the uncertainty on the \gls{vr} depends only on the change in shape of the distribution. This example was carried out on a \gls{vr}, but the same is true for the uncertainty on the \gls{sr}.
-Figure \ref{fig:stat:VRunc} shows the reduction of the systematic uncertainty: after the fit in the \gls{cr}, the shaded band indicating the uncertainty on the background estimate is smaller. 
+\noindent This leads to an overall reduction of the impact of the systematic uncertainty, as shown in Figure \ref{fig:stat:VRunc}:  
+after the fit in the \gls{cr}, the shaded band indicating the uncertainty on the background estimate is smaller. 
+This example was carried out on a \gls{vr}, but the same is true for the uncertainty on the \gls{sr}.
 
 \begin{figure}[h]
 \centering 
 \subfigure[VR pre-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/syst/VR_cuts_beforeFit.pdf}\label{fig:stat:VRprefitSys}}
 \subfigure[VR post-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/syst/VR_cuts_afterFit.pdf}\label{fig:stat:VRpostfitSys}}\caption{
-Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefitSys} before and \subref{fig:stat:VRpostfitSys} after the fit in the \gls{cr}.
+Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefitSys} before and \subref{fig:stat:VRpostfitSys} after the fit in the \gls{cr}. The large pre-fit systematic uncertainty is reduced by the fit in the \gls{cr}.
 }
 \label{fig:stat:VRunc}
 \end{figure}
@@ -696,6 +699,9 @@ Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefitS
 
 \subsection{Improving the sensitivity by combining regions}
 \label{sec:example_combi}
+
+In this section we show with a simple example how combining different regions can increase the sensitivity. We are going to use the same 
+
 
 \begin{figure}[h]
 \centering 
@@ -710,7 +716,6 @@ The arrows indicate the definition of the \glspl{sr}; the one named "SR" is the 
 }
 \label{fig:stat:example2}
 \end{figure}
-In this section we show with a simple example how combining different regions can increase the sensitivity. We are going to use the same 
 
 
 
