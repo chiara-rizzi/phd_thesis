@@ -697,12 +697,47 @@ Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefitS
 
 \subsection{Inclusion of the signal region in the fit and limits}
 
+Once the background model has been derived with the fit in the \gls{cr} and validated in the \gls{vr}, 
+it is possible to set model-dependent limits by including also the \gls{sr} in the Likelihood ("exclusion fit").
+
+\begin{figure}[h]
+\centering 
+\subfigure[VR pre-fit]{\includegraphics[width=0.48\textwidth]{figures/stat/examples/upperlimit_cls_poi_Signal_Asym_CLs_grid_ts3.pdf}\label{fig:stat:CLscan:toys}}
+\subfigure[VR post-fit]{\includegraphics[width=0.48\textwidth]{figures/stat/examples/upperlimit_cls_poi_Signal_Asym_CLs_grid_ts3.pdf}\label{fig:stat:CLscan:asym}}
+\caption{
+Scan of the \gls{cls} for different values of the signal strength with \subref{fig:stat:CLscan:toys} 5000 pseudo experiments and \subref{fig:stat:CLscan:asym} the asymptotic approximation.
+}
+\label{fig:stat:CLscan}
+\end{figure}
+
+The value of the upper limit for the signal strength can be extracted as the point where the expected line, the observed line and the uncertainty bands cross the horizontal line at 0.05, since this is the threshold we are using to set the limit.
+The numerical values resulting from these \gls{cls} scans are reported in Table \ref{tab:stat:exampleUL}.
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+ & Observed  & Expected &  -1 $\sigma$ & + 1 $\sigma$ & - 2 $\sigma$ &  + 2 $\sigma$ \\ 
+\hline 
+Asymptotic & 1.1527 & 0.694774 & 0.484272 & 1.01047 & 0.353102 & 1.42716 \\ 
+\hline 
+Pseudo-experiments & • & • & • & • & • & • \\ 
+\hline 
+\end{tabular} 
+\caption{Expected and observed upper limit for the example in the text, computed with the asymptotic approximation and with 5000 pseudo-experiments.}
+\label{tab:stat:exampleUL}
+\end{table}
+
 
 
 \subsection{Improving the sensitivity by combining regions}
 \label{sec:example_combi}
 
-In this section we show with a simple example how combining different regions can increase the sensitivity. We are going to use the same 
+In this section we show with a simple example how combining different regions can increase the sensitivity. 
+For this we use the same signal sample as in the previous examples. Just, in this case we divide the \gls{sr} into 
+two mutually exclusive regions, named SR1 (with \meff between 3 and 3.5 TeV) and SR2 ($\meff > 3.5$ TeV); 
+the two regions are shown in Figure \ref{fig:stat:example2}, which shows a zoomed version of the background and signal distributions of 
+Figure \ref{fig:stat:example}.
 
 
 \begin{figure}[h]
