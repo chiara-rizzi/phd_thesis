@@ -632,7 +632,7 @@ Pseudo-data & 231 & 52 & 15 & 10 & 5 \\
 \label{tab:stat:exampleyeilds}
 \end{table}
 
-\subsection{Background-only fit and control regions}
+\subsection{Advantages of the control regions}
 \label{sec:example_cr}
 
 \glspl{cr} are used first of all in the so called "background-only fit", where the likelihood comprises only the \glspl{cr} and any signal contamination is neglected. The goal of the background-only fit is to extract from the \glspl{cr} data information on the modelling of the background 
@@ -644,35 +644,54 @@ kinematically close to the \gls{sr}. This is implemented through the inclusion i
 The improvement in the description of the data in the \gls{vr} is shown in Figure \ref{fig:stat:VRclosure}: the central value of the bottom panel,
 showing the ratio of the pseudo-data to the \gls{mc} simulation, is closer to one after the fit.
 
+\begin{figure}[h]
+\centering 
+\subfigure[VR pre-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/nosys/VR_cuts_beforeFit.pdf}\label{fig:stat:VRprefit}}
+\subfigure[VR post-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/nosys/VR_cuts_afterFit.pdf}\label{fig:stat:VRpostfit}}\caption{
+Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefit} before and \subref{fig:stat:VRpostfit} after the fit in the \gls{cr}.
+}
+\label{fig:stat:VRclosure}
+\end{figure}
+
 \item The inclusion of a \gls{cr} in the fit plays a key role also in the evaluation of the systematic uncertainties. 
 When computing the impact of a systematic uncertainty in a \gls{sr} or \gls{vr} for a background normalized in a \gls{cr}, 
 this does not depend on the full change in yields between the nominal and the systematic variation in that \gls{sr} or \gls{cr},
-but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}. Figure \ref{fig:stat:VRclosure} shows the reduction of the systematic uncertainty as well: after the fit, the shaded band indicating the uncertainty on the background estimate is smaller. 
-In this example, the following event yields are attributed to a common systematic uncertainty fully correlated across regions:
+but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}. 
+Let's include in the previous example a systematic variation that impacts both the shape and the normalization of the \meff distribution: 
+we define a systematic that increases the normalization of the sample by 20\% and also changes the shape of the \meff distribution by 
+assigning to each event a weight corresponding to the \meff value (expressed in GeV) divided by 20000; the uncertainty is then symmetrized. 
+
+This leads to the following yields in the \gls{cr} and \gls{vr}:
+
 \begin{description}
-\item[CR] Nominal: 5775.6, up variation: 6930.7, down variation: 4620.5 (a 20\% up and down variation).
-\item[VR] Nominal: 83.8, up variation: 125.7, down variation: 41.9 (a 50\% up and down variation).
+\item[CR] Nominal: 279.1, up variation: 360.3, down variation: 197.8.
+\item[VR] Nominal: 62.9, up variation: 83.2, down variation: 42.5.
 \end{description}
 
 \noindent While the pre-fit uncertainty on the \gls{vr} is large, the variation of the transfer factor is smaller:
 \begin{equation}
 \begin{split}
-TF^{nominal}_{VR} &= \frac{83.8}{5775.6} = 0.0145 \\
-TF^{up}_{VR} &= \frac{125.7}{6930.7} = 0.0181 \\
-TF^{down}_{VR} &= \frac{41.9}{4620.5} = 0.0091 \\
+TF^{nominal}_{VR} &= \frac{62.9}{279.1} = 0.225 \; ,\\
+TF^{up}_{VR} &= \frac{83.2}{360.3} = 0.231 \; , \\
+TF^{down}_{VR} &= \frac{42.5}{197.8} = 0.215 \; . \\
 \end{split}
 \end{equation}
 
-\end{itemize}
+\noindent This is because the normalization of the background in the \gls{cr} absorbs the normalization uncertainty, and the effect of the uncertainty on the \gls{vr} depends only on the change in shape of the distribution. This example was carried out on a \gls{vr}, but the same is true for the uncertainty on the \gls{sr}.
+Figure \ref{fig:stat:VRunc} shows the reduction of the systematic uncertainty: after the fit in the \gls{cr}, the shaded band indicating the uncertainty on the background estimate is smaller. 
 
 \begin{figure}[h]
 \centering 
-\subfigure[VR pre-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/VR_cuts_beforeFit.pdf}\label{fig:stat:VRprefit}}
-\subfigure[VR post-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/VR_cuts_afterFit.pdf}\label{fig:stat:VRpostfit}}\caption{
-Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefit} before and \subref{fig:stat:VRpostfit} after the fit in the \gls{cr}.
+\subfigure[VR pre-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/syst/VR_cuts_beforeFit.pdf}\label{fig:stat:VRprefitSys}}
+\subfigure[VR post-fit]{\includegraphics[width=0.4\textwidth]{figures/stat/examples/syst/VR_cuts_afterFit.pdf}\label{fig:stat:VRpostfitSys}}\caption{
+Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefitSys} before and \subref{fig:stat:VRpostfitSys} after the fit in the \gls{cr}.
 }
-\label{fig:stat:VRclosure}
+\label{fig:stat:VRunc}
 \end{figure}
+
+\end{itemize}
+
+
 
 
 \subsection{Improving the sensitivity by combining regions}
