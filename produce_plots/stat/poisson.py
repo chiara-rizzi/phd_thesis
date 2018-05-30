@@ -61,6 +61,17 @@ g_pb.SetFillColorAlpha(kRed,0.5)
 g_pb.Draw("f same")
 
 
+g_CLb = TGraph()
+g_CLb.SetPoint(g_CLb.GetN(), tc-0.000001, 0)
+for i in [step*0.01 for step in range(tc, 800)]:
+    #print i
+    g_CLb.SetPoint(g_CLb.GetN(), tc+i, fb.Eval(tc+i))
+g_CLb.SetPoint(g_CLb.GetN(), 8, 0)
+g_CLb.SetFillColorAlpha(kRed,0.5)
+g_CLb.SetFillStyle(3004)
+g_CLb.Draw("f same")
+
+
 t = TLatex()
 t.DrawLatex(tc - tc/30, -0.02, "t_{obs}")
 
@@ -70,6 +81,7 @@ leg.AddEntry(fs,"f(q_{#mu}|#mu=1)","l")
 leg.AddEntry(fb,"f(q_{#mu}|#mu=0)","l")
 leg.AddEntry(g_pmu,"p_{#mu}","f")
 leg.AddEntry(g_pb,"p_{b}","f")
+leg.AddEntry(g_CLb,"1 - p_{b}","f")
 leg.SetLineWidth(0)
 
 leg.Draw()
