@@ -4,8 +4,8 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--cr', default=2200, type=float)
-parser.add_argument('--sr', default=3000, type=float)
-parser.add_argument('--sr2', default=3500, type=float)
+parser.add_argument('--sr', default=2600, type=float)
+parser.add_argument('--sr2', default=3000, type=float)
 parser.add_argument('--unc', default=0.3, type=float)
 parser.add_argument('--scale', default=0.76, type=float)
 cr_low=1600
@@ -16,7 +16,6 @@ cr=args.cr
 sr=args.sr
 sr2=args.sr2
 rel_unc=args.unc
-
 
 
 r.gStyle.SetOptStat(0)
@@ -68,7 +67,7 @@ hd = hb.Clone("Data")
 for i in range(0, hd.GetNbinsX()+2):
     mean = 0.87* hb.GetBinContent(i) + 0.3*hs.GetBinContent(i)     
     d_entry = trand.Poisson( mean)
-    print mean, d_entry
+    #print mean, d_entry
     hd.SetBinContent(i, d_entry)
 hd.SetLineColor(r.kBlack)
 
