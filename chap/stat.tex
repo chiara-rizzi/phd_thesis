@@ -645,9 +645,9 @@ Signal & 6.3 & 14.6 & 9.5 \\
 \hline 
 S/B [\%] & 2.2 & 23 & 91 \\ 
 \hline 
-Significance & 0 & 0.48 \\ 
+Significance & 0 & 0.48 & 1.58 \\ 
 \hline 
-Pseudo-data & 231 & 52 \\ 
+Pseudo-data & 231 & 52 & 15 \\ 
 \hline 
 \end{tabular} 
 \caption{Pre-fit background yields, signal yields, signal-to-background ratio, significance and pseudo-data yields in the regions used in the examples in the text.}
@@ -752,14 +752,14 @@ Scan of the \gls{cls} for different values of the signal strength with \subref{f
 \label{fig:stat:CLscan}
 \end{figure}
 
-A second step consists in deriving an upper limit on the signal strength $\mu_{\rm SIG}$, which means finding by how much the 
+A second step consists in deriving an \gls{ul} on the signal strength $\mu_{\rm SIG}$, which means finding by how much the 
 nominal cross section of the signal should be scaled to find a \gls{cls} of exactly 0.05. This is obtained by performing multiple times the same hypothesis test just described, each time scaling the signal by a different factor. 
 Also in this case, each point of this scan can be obtained either with the asymptotic approximation or with pseudo-experiments (some examples are shown in Figure \ref{fig:stat:CLscan}); note that in this case the "data" sample we are using is a pseudo-data sample built from a Poisson sampling 
 of the sum of background scaled by 0.87 and signal scaled by 0.5, so the observed value of the test statistic is "signal-like".
 The interpolation of these \gls{cls} values  allows to determine the signal strength where \gls{cls}$=0.05$; 
 this is shown in Figure \ref{fig:stat:CLscan:toys}, where the p-values are determined based on pseudo-experiments, 
 and in Figure \ref{fig:stat:CLscan:asym}, where instead the asymptotic approximation is used.
-The numerical upper limit values resulting from these \gls{cls} scans are reported in Table \ref{tab:stat:exampleUL}.
+The numerical \gls{ul} values resulting from these \gls{cls} scans are reported in Table \ref{tab:stat:exampleUL}.
 
 
 \begin{table}
@@ -783,10 +783,15 @@ Pseudo-experiments & 1.14487 & 0.70775 & 0.51309 & 0.994556 & 0.402432 & 1.35439
 \label{sec:example_combi}
 
 In this section we show example how combining different regions can increase the sensitivity. 
-For this we use the same signal sample as in the previous examples. Just, in this case we divide the \gls{sr} into 
-two mutually exclusive regions by introducing another discriminating variable, the number of leptons. We define SR1L with the 
-same requirements as the original SR but in addition the requirement of at least one lepton, and the complementary SR0L with instead
-a lepton veto. 
+For this we use the same signal sample as in the previous examples. 
+The \meff value that defines the \gls{sr} has been determined by optimizing the expected significance. 
+Since, in this case, the signal has a harder \meff spectrum than the background, the phase-space region 
+with \meff below this threshold has a lower signal fraction. Nevertheless, it can still provide information useful to
+discriminate signal and background. If we consider for example the region with \meff between 2.6 and 3.0 TeV (which is non-overlapping with 
+the previous \gls{sr} definition), here we expect 17.1 background events and 7.4 signal events;
+assuming a 30\% uncertainty on the background, this corresponds to an expected significance of 0.82, far below the significance of 1.58 in the 
+\gls{sr} previously defined. 
+If we include this region as well into the likelihood of the exclusion fit and perform an upper-limit scan (in this case, for simplicity, only with the asymptotic approximation), we have that the expected \gls{ul} on $\mu_{\rm SIG}$ is 0.62. This corresponds to an improvement of about 10\% on the expected \gls{ul}, obtained just by adding to the fit a region with limited sensitivity. This effect is increased when the regions that are considered simultaneously in the fit all offer a good sensitivity and have different signal fractions. 
 
 
 
