@@ -567,12 +567,12 @@ Figures from Ref. \cite{Cowan2011}.
 
 
 
-\section{Walk-trough examples}
+\section{Simplified examples}
 \label{sec:stat:examples}
 
 In this section we present a few simplified examples that illustrate the concepts described in the previous sections and how they are applied in physics analyses that search for \gls{bsm} signals.
 In particular, Section \ref{sec:example_sr} discussed the principle followed in optimizing \glspl{sr}, Section \ref{sec:example_cr} the advantages of using \glspl{cr},
-while Section \ref{sec:example_combi} focuses on limit setting and how to improve limits by combining several \glspl{sr}.
+while Sections \ref{sec:stat:example:limits} and \ref{sec:example_combi} focus respectively on limit setting and on how to improve limits by combining several \glspl{sr}.
 
 \subsection{Region Definition}
 \label{sec:example_sr}
@@ -593,8 +593,8 @@ Let's consider a situation where we want to use only one discriminating variable
 and they are distributed as in Figure \ref{fig:stat:example}. 
 We can see that the background, which in this case we consider as constituted by only one single physical process, 
 tends to have lower values of \meff with respect to the signal; 
-this means that, to define a \gls{sr}, we will apply a lower selection on the value of \meff.
-There are different criteria that can be used to choose the value of \meff that defines the boundary of the \gls{sr}. 
+this means that the \gls{sr} will be defined by a lower boundary on the value of \meff.
+There are different criteria that can be used to choose the value of \meff that defines the \gls{sr}. 
 The one used in this thesis is the maximization of the expected significance, computed through the function \binexpZ in \roostats, 
 assuming a 30\% uncertainty on the background yields. With this definition, the significance is the equivalent number of standard deviations of a Gaussian of a p-value defined as:
 
@@ -677,7 +677,7 @@ Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefit}
 
 \item The inclusion of a \gls{cr} in the fit plays a key role also in the evaluation of the systematic uncertainties. 
 When computing the impact of a systematic uncertainty in a \gls{sr} or \gls{vr} for a background normalized in a \gls{cr}, 
-this does not depend on the full change in yields between the nominal and the systematic variation in that \gls{sr} or \gls{cr},
+this does not depend on the full change in yields between the nominal and the systematic variation in that \gls{sr} or \gls{vr},
 but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}. 
 Let's include in the previous example a systematic variation that impacts both the shape and the normalization of the \meff distribution: 
 we define a systematic that increases the normalization of the sample by 20\% and also changes the shape of the \meff distribution by 
@@ -718,6 +718,7 @@ Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefitS
 
 
 \subsection{Inclusion of the signal region in the fit and limits}
+\label{sec:stat:example:limits}
 
 Once the background model has been derived with the fit in the \gls{cr} and validated in the \gls{vr}, 
 it is possible to set model-dependent limits by including also the \gls{sr} in the Likelihood ("exclusion fit").
@@ -782,7 +783,7 @@ Pseudo-experiments & 1.14487 & 0.70775 & 0.51309 & 0.994556 & 0.402432 & 1.35439
 \subsection{Improving the sensitivity by combining regions}
 \label{sec:example_combi}
 
-In this section we show example how combining different regions can increase the sensitivity. 
+In this section we show how combining different regions can increase the sensitivity. 
 For this we use the same signal sample as in the previous examples. 
 The \meff value that defines the \gls{sr} has been determined by optimizing the expected significance. 
 Since, in this case, the signal has a harder \meff spectrum than the background, the phase-space region 
@@ -790,8 +791,9 @@ with \meff below this threshold has a lower signal fraction. Nevertheless, it ca
 discriminate signal and background. If we consider for example the region with \meff between 2.6 and 3.0 TeV (which is non-overlapping with 
 the previous \gls{sr} definition), here we expect 17.1 background events and 7.4 signal events;
 assuming a 30\% uncertainty on the background, this corresponds to an expected significance of 0.82, far below the significance of 1.58 in the 
-\gls{sr} previously defined. 
-If we include this region as well into the likelihood of the exclusion fit and perform an upper-limit scan (in this case, for simplicity, only with the asymptotic approximation), we have that the expected \gls{ul} on $\mu_{\rm SIG}$ is 0.62. This corresponds to an improvement of about 10\% on the expected \gls{ul}, obtained just by adding to the fit a region with limited sensitivity. This effect is increased when the regions that are considered simultaneously in the fit all offer a good sensitivity and have different signal fractions. 
+\gls{sr} previously defined. Note that this region overlaps with the \gls{vr} defined in Section \ref{sec:example_sr}, which in the case of this last example would need to be modified.
+
+If we include this new region as well into the likelihood of the exclusion fit and perform an upper-limit scan (in this case, for simplicity, only with the asymptotic approximation), we have that the expected \gls{ul} on $\mu_{\rm SIG}$ is 0.62. This corresponds to an improvement of about 10\% on the expected \gls{ul}, obtained just by adding to the fit a region with limited sensitivity. This effect is increased when the regions that are considered simultaneously in the fit all offer a good sensitivity and have different signal fractions. 
 
 
 
