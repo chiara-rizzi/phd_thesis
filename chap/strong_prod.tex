@@ -61,24 +61,34 @@ A schematic diagram of the possible decay chains in this mixed-\gls{br} interpre
 These gluino decay chains that lead to final states rich in heavy-flavour quarks are dominant in \gls{susy} models where the squarks 
 from the first two generations are significantly heavier than stop and sbottom, or also in cases when the \ninoone is dominated by the higgsino component. 
 
-\section{Previous limits}
-
-
+%\section{Previous limits}
 
 \section{Kinematic variables specific to this analysis}
 
+Most of the kinematic variables used in this analysis to discriminate between signal and background 
+are in common with the electroweak-production analysis and have already been discussed in Section \ref{sec:common_variables}.
+Two other variables, used only in this analysis, are introduced in this section.
+
 \subsubsection*{Total jet mass}
 
+The total jet mass is the sum of the masses of the four leading reclustered jets in the event:
+
 \begin{equation}
-\mjsum = \sum_{i \leq 4} m_{J,i}
+\mjsum = \sum_{i \leq 4} m_{J,i} \; .
 \end{equation}
+
+\noindent This variable is particularly useful in the case of boosted Gtt signals, where the four top quarks are produced with high momentum and can be reconstructed as re-clustered jets with high mass. 
 
 \subsubsection*{ISR jet}
 
+In the case of Gbb models, when the mass of the neutralino is close to the mass of the gluino the neutralino is produced almost at rest and the event does not have a sizable \met; this reduces the sensitivity of the analysis to these cases. 
+Also for these signal samples, a sizable value of \met can be present in events where the gluino system is recoiling against a hard jet from \gls{isr}; if we assume that the \gls{isr} jet is the most energetic jet in the event, there will be an angular separation between this jet and \met larger than the average. The variable \dphilead, defined as:
+
 \begin{equation}
-|{\Delta}{\phi}(j1, \met)|
+\dphilead = |{\Delta}{\phi}(j1, \met)| \; ,
 \end{equation}
 
+\noindent helps therefore in selecting signal events where the \met derives from a neutralino boosted by an \gls{isr} jet. 
 
 
 \section{Pre-fit data-MC}
@@ -418,15 +428,6 @@ Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\nbjet$ &  $\dphimin$ & $\m
 
 \begin{table}[t]
         \centering
-        \caption{The $p_0$-values and $Z$ (the number of equivalent Gaussian standard deviations), 
-        	the 95$\%$ CL upper limits on the visible cross-section
-                ($\sigma^{95}_\mathrm{vis}$),
-                and the observed and
-                expected 95$\%$ CL upper limits on the number of BSM events ($S_{\textrm
-                obs}^{95}$ and $S_{\textrm exp}^{95}$). The maximum
-              allowed $p_0$-value
-              is truncated at 0.5.}
-        \label{mod-ind-lim}
         \small
         \begin{tabular*}{0.6\textwidth}{@{\extracolsep{\fill}}lcccc}
                 \noalign{\smallskip}\toprule\noalign{\smallskip}
@@ -446,6 +447,15 @@ Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\nbjet$ &  $\dphimin$ & $\m
                 SR-Gbb-VC & $ 0.50~(0.00) $ &  $0.08$ &  $3.0$ & $ { 4.6 }^{ +2.0 }_{ -1.3 }$\\
                 \noalign{\smallskip}\midrule\noalign{\smallskip}
         \end{tabular*}
+                \caption{The $p_0$-values and $Z$ (the number of equivalent Gaussian standard deviations), 
+        	the 95$\%$ CL upper limits on the visible cross-section
+                ($\sigma^{95}_\mathrm{vis}$),
+                and the observed and
+                expected 95$\%$ CL upper limits on the number of BSM events ($S_{\textrm
+                obs}^{95}$ and $S_{\textrm exp}^{95}$). The maximum
+              allowed $p_0$-value
+              is truncated at 0.5.}
+        \label{mod-ind-lim}
 \end{table}
 
 \subsection{Model-dependent limits}
