@@ -105,18 +105,27 @@ design of corresponding \glspl{cr} for the normalization of the \ttbar backgroun
 As discussed in Section \ref{sec:analysisstrategy}, the cut-and-count \glspl{sr} are designed to maximize the significance to specific 
 signal benchmarks. 
 Since they are not meant to be statistically combined, they do not need to be mutually exclusive and each of them can be optimized independently.
-Three separate optimizations are performed:
+The variables considered in the optimization are chosen by selecting the ones that show the most vivid differences in shape between signal and background, and are \njet, \nbjet, \met, \meff, \mjsum, \mtb and, in the case of regions requiring at least one lepton, \mt.
+
+After selecting events with at lest four jet, at least three b-jets, that fired the \met trigger and with $\met>200$ GeV, three separate optimizations are performed:
+
 \begin{description}
-\item[Gtt-1L] A first optimization targets the Gtt signals (shown in Fig. \ref{fig:diagram_Gtt}) in the final states with at least one reconstructed 
-lepton.
+
+\item[Gtt-1L] A first set of regions targets the Gtt signals (shown in Fig. \ref{fig:diagram_Gtt}) in the final states with at least one reconstructed lepton. Three different \glspl{sr} are defined in this category: boosted (B), targeting signal models with high gluino mass 
+and a large mass difference between the gluino and the neutralino, medium (M), targeting signal models with intermediate mass splitting, and compressed (C), aiming at signal models where the mass of the neutralino is close to the mass of the gluino. 
 
 \item[Gtt-0L] A separate optimization is performed for the cases where the Gtt model leads to final states where there are no reconstructed leptons.
-
+Also in this case, three \glspl{sr} are defined and referred to as B, M and C depending on the signal models they are targeting. 
 All the Gtt \glspl{sr} are reported in Table \ref{tab:GttEvsel}, together with their \glspl{cr} and \glspl{sr} whose design is discussed in the next section. 
 
 \item[Gbb] The \glspl{sr} for the Gbb model (shown in Fig. \ref{fig:diagram_Gbb}) is performed separately. 
 This signal does not produce any prompt lepton in the final state, but the characteristics of this signal differ noticeably form 
 the case of Gtt-0L, particularly for the lower number of jets. 
+Four \glspl{sr} are optimized for the Gbb signals: boosted (B), medium (M), compressed (C) and very compressed (VC). 
+The last \gls{sr} targets compressed Gbb models, that fire the \met trigger because the gluino system is recoiling against 
+and \gls{isr} jet, giving additional boost to the neutralinos. To enhance this topology, this region requires that the leading jet is b-tagged, and 
+the variable \dphilead is included in the optimization. The selections resulting from the optimization of the Gbb \glspl{sr} are 
+reported in Table \ref{tab:Gbb0LEvsel}, together with the corresponding \glspl{cr} and \glspl{vr}.
 
 \end{description}
 
