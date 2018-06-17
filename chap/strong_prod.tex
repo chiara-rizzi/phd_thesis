@@ -105,18 +105,35 @@ design of corresponding \glspl{cr} for the normalization of the \ttbar backgroun
 As discussed in Section \ref{sec:analysisstrategy}, the cut-and-count \glspl{sr} are designed to maximize the significance to specific 
 signal benchmarks. 
 Since they are not meant to be statistically combined, they do not need to be mutually exclusive and each of them can be optimized independently.
+Three separate optimizations are performed:
+\begin{description}
+\item[Gtt-1L] A first optimization targets the Gtt signals (shown in Fig. \ref{fig:diagram_Gtt}) in the final states with at least one reconstructed 
+lepton.
 
+\item[Gtt-0L] A separate optimization is performed for the cases where the Gtt model leads to final states where there are no reconstructed leptons.
+
+All the Gtt \glspl{sr} are reported in Table \ref{tab:GttEvsel}, together with their \glspl{cr} and \glspl{sr} whose design is discussed in the next section. 
+
+\item[Gbb] The \glspl{sr} for the Gbb model (shown in Fig. \ref{fig:diagram_Gbb}) is performed separately. 
+This signal does not produce any prompt lepton in the final state, but the characteristics of this signal differ noticeably form 
+the case of Gtt-0L, particularly for the lower number of jets. 
+
+\end{description}
+
+The \glspl{sr} are define as the regions that maximize the expected significance for each benchmark model while fulfilling these requirements:
+\begin{itemize}
+\item At least 0.5 expected background events.
+\item \ttbar as major background component.
+\item \gls{mc} statistical uncertainty on the \ttbar component $<30$\%.
+\item At least 2 expected events for the benchmark signal considered. 
+\end{itemize}
 
 \begin{table}[t]
     \centering
  \renewcommand{\arraystretch}{1.5}
-   \caption{Definitions of the Gtt SRs, CRs and VRs of the cut-and-count analysis.  All kinematic variables are
-   expressed in \gev\ except $\dphimin$, which is in radians. The jet \pt\ requirement is also applied to 
-   $b$-tagged jets.}
-   \label{tab:GttEvsel}
          \begin{tabular}{c c c c c c c c}
         \toprule
-\multicolumn{8}{c}{\textbf{ Gtt 1-lepton}}\\
+\multicolumn{8}{c}{\textbf{ Gtt-1L}}\\
 \multicolumn{8}{c}{Criteria common to all regions: $\ge 1$ signal lepton, ${\pt}^\mathrm{jet} >  30~\gev$, $\nbjet \geq 3$} \\\midrule
 Targeted kinematics & Type & $\njet$ & $\mt$ & $\mtb$& $\met$ & $\meffi$ & $\mjsum$ \\ \midrule
 \multirow{4}{*}{\begin{minipage}{3cm}\centering Region B\\
@@ -140,7 +157,7 @@ Targeted kinematics & Type & $\njet$ & $\mt$ & $\mtb$& $\met$ & $\meffi$ & $\mjs
       \end{tabular}
          \begin{tabular}{c c c c c c c c c c c}
         \toprule
-\multicolumn{11}{c}{\textbf{ Gtt 0-lepton}}\\
+\multicolumn{11}{c}{\textbf{ Gtt-0L}}\\
 \multicolumn{11}{c}{Criteria common to all regions: ${\pt}^\mathrm{jet} > 30$~GeV} \\\midrule
 Targeted kinematics & Type & $N_\mathrm{lepton}$ & $\nbjet$& $\njet$&  $\dphimin$ & $\mt$ & $\mtb$ & $\met$ & $\meffi$ & $\mjsum$ \\ \midrule
 \multirow{3}{*}{\begin{minipage}{3cm}\centering Region B\\
@@ -159,24 +176,21 @@ Targeted kinematics & Type & $N_\mathrm{lepton}$ & $\nbjet$& $\njet$&  $\dphimin
 & CR & $= 1$  & $\ge 4$ & $\ge 7$ & $-$ & $<150$ & $-$ & $> 250 $ & $> 1000$ & $> 100$\\ 
 & VR & $= 0$  & $\ge 4$ & $\ge 7$ & $>0.4$ & $-$ & $-$ & $> 250 $ & $> 1000$ & $< 100$\\ 
 
-        \bottomrule
-      \end{tabular}
+\bottomrule
+\end{tabular}
+\caption{Definitions of the Gtt SRs, CRs and VRs of the cut-and-count analysis.  All kinematic variables are
+   expressed in \gev\ except $\dphimin$, which is in radians. The jet \pt\ requirement is also applied to 
+   $b$-tagged jets.}
+      \label{tab:GttEvsel}
  \end{table}
 
-
 \clearpage
-
 
 
 \begin{landscape}
 \begin{table}[t]
     \centering
  \renewcommand{\arraystretch}{1.3}
-%   \caption{Definitions of the Gbb SRs, CRs and VRs of the cut-and-count analysis.  All kinematic variables are
-%   expressed in \gev\ except $\dphimin$, which is in radians. The jet \pt\ requirement is applied to the 
-%   four leading jets, a subset of which are $b$-tagged jets. The $\leadjet \neq b$  requirement specifies that 
-%   the leading jet is not $b$-tagged.}
-    \label{tab:Gbb0LEvsel}
          \begin{tabular}{c c c c c c c c c c}
         \toprule
 \multicolumn{10}{c}{\textbf{ Gbb}}\\
@@ -206,13 +220,22 @@ Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\nbjet$ &  $\dphimin$ & $\m
 & VR & $= 0$  & $\ge 3$ & $>0.4$ & $-$ & $>100$ & $225$--$600$ & $-$ \\
       \bottomrule
     \end{tabular}
+      \caption{Definitions of the Gbb SRs, CRs and VRs of the cut-and-count analysis.  
+  All kinematic variables are expressed in \gev\ except $\dphimin$, which is in radians.
+   The jet \pt\ requirement is applied to the 
+   four leading jets, a subset of which are $b$-tagged jets. 
+   The $\leadjet \neq b$  requirement specifies that the leading jet is not $b$-tagged.
+   }
+       \label{tab:Gbb0LEvsel}
  \end{table}
 \end{landscape}
 
 
 \clearpage
 
-\subsubsection{Composition of the cut-and-count regions}
+\subsubsection*{Control and validation regions}
+
+\subsubsection*{Composition of the cut-and-count regions}
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_0L_bkg.pdf}
@@ -222,7 +245,18 @@ Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\nbjet$ &  $\dphimin$ & $\m
 
 \clearpage
 
-\section{Multi-bin signal regions}
+\section{Multi-bin analysis regions}
+
+\subsection*{Signal regions}
+
+\subsection*{Control regions and validation regions}
+
+As in the case of the cut-and-count strategy, all the \glspl{cr} require at least one signal lepton. 
+In the multi-bin strategy corresponding 0L and 1L \glspl{sr} share the same \gls{cr};
+This choice is motivated by the observation that 0L and 1L \glspl{sr} in the multi-bin approach are 
+closer in phase space than Gtt-0L and Gtt-1L regions targeting similar signal kinematic, 
+and also by the need to have \glspl{cr} that are either mutually exclusive or completely overlapping to 
+allow the simultaneous inclusion of all the regions in the fit. 
 
 
 \begin{figure}[h]
