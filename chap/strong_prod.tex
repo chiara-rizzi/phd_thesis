@@ -64,6 +64,7 @@ from the first two generations are significantly heavier than stop and sbottom, 
 %\section{Previous limits}
 
 \section{Kinematic variables specific to this analysis}
+\label{sec:variables-strong}
 
 Most of the kinematic variables used in this analysis to discriminate between signal and background 
 are in common with the electroweak-production analysis and have already been discussed in Section \ref{sec:common_variables}.
@@ -91,7 +92,16 @@ Also for these signal samples, a sizable value of \met can be present in events 
 \noindent helps therefore in selecting signal events where the \met derives from a neutralino boosted by an \gls{isr} jet. 
 
 
-%\section{Pre-fit data-MC}
+\section{Discriminating variables}
+
+In this section we show how the variables defined in Section \ref{sec:common_variables} and \ref{sec:variables-strong} allow to 
+identify a region of the phase space that is enriched in signal events. 
+
+
+\section{Pre-fit data-MC}
+
+In this section we show the pre-fit agreement between data and the \gls{mc} simulation before the fit in the \gls{cr}. 
+All the plots show in this section do not include systematic uncertainties and include all the relevant \gls{mc} \glspl{sf}. 
 
 \section{Cut-and-count analysis regions}
 
@@ -103,10 +113,16 @@ design of corresponding \glspl{cr} for the normalization of the \ttbar backgroun
 \subsection*{Signal regions}
 
 As discussed in Section \ref{sec:analysisstrategy}, the cut-and-count \glspl{sr} are designed to maximize the significance to specific 
-signal benchmarks. 
+signal benchmarks, where the significance is defined as the number of standard deviations in a Gaussian that give the p-value obtained with Eq. \ref{eq:binomexpp}.
 Since they are not meant to be statistically combined, they do not need to be mutually exclusive and each of them can be optimized independently.
 The variables considered in the optimization are chosen by selecting the ones that show the most vivid differences in shape between signal and background, and are \njet, \nbjet, \met, \meff, \mjsum, \mtb and, in the case of regions requiring at least one lepton, \mt.
-
+The \glspl{sr} are define as the set of selections that maximize the expected significance for each benchmark model while fulfilling these requirements:
+\begin{itemize}
+\item At least 0.5 expected background events.
+\item \ttbar as major background component.
+\item \gls{mc} statistical uncertainty on the \ttbar component $<30$\%.
+\item At least 2 expected events for the benchmark signal considered. 
+\end{itemize}
 After selecting events with at lest four jet, at least three b-jets, that fired the \met trigger and with $\met>200$ GeV, three separate optimizations are performed:
 
 \begin{description}
@@ -129,13 +145,6 @@ reported in Table \ref{tab:Gbb0LEvsel}, together with the corresponding \glspl{c
 
 \end{description}
 
-The \glspl{sr} are define as the regions that maximize the expected significance for each benchmark model while fulfilling these requirements:
-\begin{itemize}
-\item At least 0.5 expected background events.
-\item \ttbar as major background component.
-\item \gls{mc} statistical uncertainty on the \ttbar component $<30$\%.
-\item At least 2 expected events for the benchmark signal considered. 
-\end{itemize}
 
 \begin{table}[t]
     \centering
@@ -246,10 +255,27 @@ Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\nbjet$ &  $\dphimin$ & $\m
 
 \subsubsection*{Composition of the cut-and-count regions}
 
+The pre-fit background composition of the cut-and-count analysis regions is show in Figures \ref{fig:bkgcomp_Gtt1L} to \ref{fig:bkgcomp_Gbb}.
+It is possible to see how \ttbar is the dominant background in all the \glspl{sr}; the \glspl{cr} and the \glspl{vr} have a high \ttbar 
+purity by construction, since they are designed to respectively normalize this background and validate the extrapolation of this normalization to 
+a phase space closer to the \glspl{sr}.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_1L_bkg.pdf}
+\caption{Background composition of Gtt-1L regions.}
+	\label{fig:bkgcomp_Gtt1L}
+\end{figure}
+
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_0L_bkg.pdf}
 \caption{Background composition of Gtt-0L regions.}
-	\label{fig:multibin_scheme}
+	\label{fig:bkgcomp_Gtt0L}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gbb_bkg.pdf}
+\caption{Background composition of Gbb regions.}
+	\label{fig:bkgcomp_Gbb}
 \end{figure}
 
 \clearpage
