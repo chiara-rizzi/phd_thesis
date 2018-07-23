@@ -497,6 +497,22 @@ allow the simultaneous inclusion of all the regions in the fit.
 \section{Systematic uncertainties}
 \label{sec:strong:syst}
 
+The sources of systematic uncertainties discussed in Sections \ref{sec:common_syst} and \ref{sec:common_sys} are included in the analysis.
+The relative size of these uncertainties after the fit in the \glspl{cr} is shown in Figures \ref{fig:syst_cutandcount} and \ref{fig:syst_multibin},
+for the cut-and-count and multi-bin analyses respectively. 
+In the figure, the uncertainties are grouped into:
+\begin{itemize}
+\item Experimental uncertainties, that contain the sum in quadrature of the detector-related uncertainties 
+presented in Section \ref{sec:common_syst}. These are considered for both the background and signal \gls{mc} samples 
+
+\item Theoretical uncertainties, which are the sum in quadrature of the modelling systematics discussed in Section \ref{sec:common_sys}.
+\item \gls{mc} statistical uncertainty.
+\item Statistical uncertainty in the \glspl{cr}, that is reflected in the uncertainty on the \ttbar scale factor. 
+\end{itemize}
+
+The total uncertainty (black line in Figure \ref{fig:syst}) takes into account correlation effects across the different systematic sources, 
+and therefore is not the sum in quadrature of the individual components. 
+
 \begin{figure}[htbp]
 	\centering
 	\subfigure[]{\includegraphics[width=0.85\textwidth]{figures/strong_prod/paper/Cut_and_Count.pdf}\label{fig:syst_cutandcount}}\\
