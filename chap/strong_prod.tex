@@ -3,6 +3,7 @@
 
 
 \section{Signal model}
+\label{sec:strong:signalmodel}
 
 The simplified models used to optimize this analysis are the two gluino-pair-production models shown in Fig. \ref{fig:strong_diagram}. 
 Figure \ref{fig:diagram_Gtt} shows a schematic diagram of the Gtt model: 
@@ -461,17 +462,29 @@ of the same region type, composition is similar in corresponding regions, even i
 %\clearpage
 
 \section{Multi-bin analysis regions}
+\label{sec:strong:multibin}
+In this section we describe the definition of the \glspl{sr}, \gls{cr} and \gls{vr} 
+of the multi-bin analysis. 
 
 \subsection*{Signal regions}
 
-\subsection*{Control regions and validation regions}
+The goal of the multi-bin strategy is to provide a series of regions each optimized for a different signal model 
+but all mutually exclusive, so that they can be statistically combined to increase the exclusion power of the analysis.
 
-As in the case of the cut-and-count strategy, all the \glspl{cr} require at least one signal lepton. 
-In the multi-bin strategy corresponding 0L and 1L \glspl{sr} share the same \gls{cr};
-This choice is motivated by the observation that 0L and 1L \glspl{sr} in the multi-bin approach are 
-closer in phase space than Gtt-0L and Gtt-1L regions targeting similar signal kinematic, 
-and also by the need to have \glspl{cr} that are either mutually exclusive or completely overlapping to 
-allow the simultaneous inclusion of all the regions in the fit. 
+Figure \ref{fig:strong:sig:jets_n} shows that the number of jets provides a good handle to separate 
+between Gbb signal models, with lower number of jets, and the Gtt signal models, where the number of jets is instead higher;
+the Gtb model described in Section \ref{sec:strong:signalmodel} will have a number of jets intermediate between the Gtt and the Gtb case, 
+as well as the mixed-\gls{br} case where one of the two produced gluinos decays to $b \bar{b} \ninoone$ and the other to 
+$t \bar{t} \ninoone$.
+Within a single decay topology, the variable that discriminates the best between signals with different mass splitting between $\tilde{g}$ and
+\ninoone is \meff: as shown in Figure \ref{fig:strong:sig:meff_incl}, signal models with larger mass splitting tend to have higher values 
+of \meff, since the decay products are more boosted. 
+
+These two variables are therefore used, together with the number of signal leptons, to slice the phase space into mutually exclusive regions. 
+A schematic view of this slicing is given in Figure \ref{ig:multibin_scheme}, while the precise numerical values can be found 
+in tables \ref{tab:multibin_Hn} to \ref{tab:multibin_Ln}.
+
+
 
 
 \begin{figure}[h]
@@ -484,6 +497,18 @@ allow the simultaneous inclusion of all the regions in the fit.
       }
 	\label{fig:multibin_scheme}
 \end{figure}
+
+\subsection*{Control regions and validation regions}
+
+As in the case of the cut-and-count strategy, all the \glspl{cr} require at least one signal lepton. 
+In the multi-bin strategy corresponding 0L and 1L \glspl{sr} share the same \gls{cr};
+This choice is motivated by the observation that 0L and 1L \glspl{sr} in the multi-bin approach are 
+closer in phase space than Gtt-0L and Gtt-1L regions targeting similar signal kinematic, 
+and also by the need to have \glspl{cr} that are either mutually exclusive or completely overlapping to 
+allow the simultaneous inclusion of all the regions in the fit. 
+
+
+
 
 \clearpage
 
@@ -573,7 +598,7 @@ allow the simultaneous inclusion of all the regions in the fit.
                           in radians. The $\leadjet = b$ ($\leadjet \neq b$) requirement specifies that 
                           the leading jet is (not) $b$-tagged.}
                         \label{tab:multibin_Ln}
-                        \label{tab:multibin_ISR}		
+                        %\label{tab:multibin_ISR}		
         		\begin{tabular}{c c c c c c c c c c c }
         			\toprule
 			\multicolumn{11}{c}{\textbf{ Low-$\njet$ regions}}\\
