@@ -481,10 +481,10 @@ Within a single decay topology, the variable that discriminates the best between
 of \meff, since the decay products are more boosted. 
 
 These two variables are therefore used, together with the number of signal leptons, to slice the phase space into mutually exclusive regions. 
-A schematic view of this slicing is given in Figure \ref{ig:multibin_scheme}, while the precise numerical values can be found 
+A schematic view of this slicing is given in Figure \ref{fig:multibin_scheme}, while the precise numerical values can be found 
 in tables \ref{tab:multibin_Hn} to \ref{tab:multibin_Ln}.
-
-
+The naming convention for the multi-bin \glspl{sr} is the sequence of number of leptons, category for number of jets and category for \meff regime,
+where the categories for \njet and \meff are labeled as "L" (low), "I" (intermediate) and "H" (high).
 
 
 \begin{figure}[h]
@@ -516,9 +516,6 @@ allow the simultaneous inclusion of all the regions in the fit.
 	\begin{table}[t]
    		\centering
         		\renewcommand{\arraystretch}{1.5}
-                        \caption{Definition of the high-$\njet$ SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
-                          expressed in \gev\ except $\dphimin$, which is in radians.}
-                        \label{tab:multibin_Hn}
         		\begin{tabular}{c c c c c c c c c c}
         			\toprule
 			\multicolumn{10}{c}{\textbf{ High-$\njet$ regions}}\\
@@ -548,6 +545,9 @@ allow the simultaneous inclusion of all the regions in the fit.
 			& VR-1L 	& $\ge 1$  	& $-$ 		& $> 150$ 	& $\ge 8$		& $<140$				& $-$ 	& $> 225 $			 	& $[900, 1650]$ \\
       			\bottomrule
     		\end{tabular}
+    		 \caption{Definition of the high-$\njet$ SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
+                          expressed in \gev\ except $\dphimin$, which is in radians.}
+                        \label{tab:multibin_Hn}
  	\end{table}
 \end{landscape}
 
@@ -558,9 +558,6 @@ allow the simultaneous inclusion of all the regions in the fit.
 		\small
    		\centering
         		\renewcommand{\arraystretch}{1.5}
-                        \caption{Definition of the intermediate-$\njet$ SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
-                          expressed in \gev\ except $\dphimin$, which is in radians. The $\leadjet = b$  requirement specifies that 
-                          the leading jet is $b$-tagged.}
                         \label{tab:multibin_In}
         		\begin{tabular}{c c c c c c c c c c c}
         			\toprule
@@ -584,6 +581,9 @@ allow the simultaneous inclusion of all the regions in the fit.
 			& VR-1L 	& $\ge 1$  	& $-$ 		& $> 150$ 	& $[6,7]$		& $-$		& $<140$				& $-$ 		& $> 300 $  				& $[800,1450]$ \\
       			\bottomrule
     		\end{tabular}
+    \caption{Definition of the intermediate-$\njet$ SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
+                          expressed in \gev\ except $\dphimin$, which is in radians. The $\leadjet = b$  requirement specifies that 
+                          the leading jet is $b$-tagged.}
  	\end{table}
 \end{landscape}
 
@@ -592,13 +592,7 @@ allow the simultaneous inclusion of all the regions in the fit.
 \begin{landscape}
 	\begin{table}[t]
    		\centering
-        		\renewcommand{\arraystretch}{1.1}
-                        \caption{Definition of the low-$\njet$ and ISR SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
-                          expressed in \gev\ except $\dphimin$, which is
-                          in radians. The $\leadjet = b$ ($\leadjet \neq b$) requirement specifies that 
-                          the leading jet is (not) $b$-tagged.}
-                        \label{tab:multibin_Ln}
-                        %\label{tab:multibin_ISR}		
+        		\renewcommand{\arraystretch}{1.1}	
         		\begin{tabular}{c c c c c c c c c c c }
         			\toprule
 			\multicolumn{11}{c}{\textbf{ Low-$\njet$ regions}}\\
@@ -637,6 +631,12 @@ allow the simultaneous inclusion of all the regions in the fit.
 			VR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,8]$		& $>100$ 			& $> 250 $ 				& $<2000$ \\
       			\bottomrule
     		\end{tabular}
+\caption{Definition of the low-$\njet$ and ISR SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
+                          expressed in \gev\ except $\dphimin$, which is
+                          in radians. The $\leadjet = b$ ($\leadjet \neq b$) requirement specifies that 
+                          the leading jet is (not) $b$-tagged.}
+                        \label{tab:multibin_Ln}
+                        %\label{tab:multibin_ISR}	
  	\end{table}
 \end{landscape}
 
