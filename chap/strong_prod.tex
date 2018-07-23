@@ -120,7 +120,14 @@ It can be noted how while in \gls{sm} simulations all-hadronic \ttbar events do 
 A key variable in the suppression of the \ttbar background is \mtb, whose distribution is shown in Figure \ref{fig:strong:sig:mTb_min}.
 The kinematic endpoint that characterizes \ttbar events is not present for signal events, that tend to have a more uniform distribution.
 Despite not having a kinematic endpoint, not all signals have a \mtb distribution that reaches high values: this is more likely for 
-signals with a high mass splitting between the gluino and the neutralino masses, where the decay products are boosted. 
+signals with a high mass splitting between the gluino and the neutralino masses, where the decay products are boosted.
+
+The \meff distribution for signal and background events is shown in Figure \ref{fig:strong:sig:meff_incl}. 
+In this case it is possible to observe how signal models with a low neutralino mass (and therefore a large mass splitting)
+this variable can be extremely helpful in identifying the presence of signal. 
+Instead \meff does not offer a large discriminating power for signals that originate less energetic final states, as it is the 
+case for the region of the parameter space where the mass of the neutralino approaches the mass of the gluino.
+A similar argument can be made for \mjsum and \met, shown in Figures \ref{fig:strong:sig:MJSum_rc_r08pt10} and \ref{fig:strong:sig:met} respectively. 
 
 
 \begin{figure*}[h]
@@ -232,6 +239,23 @@ reported in Table \ref{tab:Gbb0LEvsel}, together with the corresponding \glspl{c
 
 \end{description}
 
+\subsubsection*{Control and validation regions}
+
+All the \glspl{cr} of the cut-and-count regions, including the ones for the Gbb \glspl{sr} and for the Gtt-1L \glspl{sr}
+require the presence of at least one signal lepton. 
+The orthogonality with the Gtt-1L \glspl{sr} is ensured by applying to all the \glspl{cr} an upper selection on $\mt < 150$ GeV.
+To have enough statistics in the \glspl{cr} to properly constrain the \ttbar background, the 
+\mtb selection is removed and other selections are relaxed to ensure at least 10 expected background events in each \gls{cr}.
+
+In the Gtt-1L regions the extrapolation between each pair of \gls{cr} and \gls{sr} is validated in two different \glspl{vr}:
+\gls{vr}-\mt is designed to verify the extrapolation to high \mt, and is maintained orthogonal to the \gls{sr} through an inverted \mjsum 
+selection. A second region, \gls{vr}-\mtb, tests the high-\mtb extrapolation by selecting events with high \mtb and low \mt; 
+this region is orthogonal to the corresponding \gls{cr} thanks to the exclusive jet multiplicity requirement that characterizes
+the Gtt-1L \glspl{cr}.
+
+In the case of the Gtt-0L regions, the main extrapolation between \gls{cr} and \gls{sr}
+
+
 
 \begin{table}[t]
     \centering
@@ -294,6 +318,7 @@ Targeted kinematics & Type & $N_\mathrm{lepton}$ & $\nbjet$& $\njet$&  $\dphimin
 
 \begin{landscape}
 \begin{table}[t]
+%\begin{sidewaystable}[t]
     \centering
  \renewcommand{\arraystretch}{1.3}
          \begin{tabular}{c c c c c c c c c c}
@@ -332,13 +357,13 @@ Targeted kinematics  & Type & $N_\mathrm{lepton}$ & $\nbjet$ &  $\dphimin$ & $\m
    The $\leadjet \neq b$  requirement specifies that the leading jet is not $b$-tagged.
    }
        \label{tab:Gbb0LEvsel}
+%\end{sidewaystable}
  \end{table}
 \end{landscape}
 
 
-\clearpage
 
-\subsubsection*{Control and validation regions}
+%\clearpage
 
 \subsubsection*{Composition of the cut-and-count regions}
 
@@ -346,6 +371,19 @@ The pre-fit background composition of the cut-and-count analysis regions is show
 It is possible to see how \ttbar is the dominant background in all the \glspl{sr}; the \glspl{cr} and the \glspl{vr} have a high \ttbar 
 purity by construction, since they are designed to respectively normalize this background and validate the extrapolation of this normalization to 
 a phase space closer to the \glspl{sr}.
+
+
+Figures \ref{fig:Gtt_1L_tt}, \ref{fig:Gtt_0L_tt} \ref{fig:Gbb_tt} show the decay type of the \ttbar background for  Gtt-1L, Gtt-0L and Gbb regions respectively.
+Looking at Figure \ref{fig:Gtt_1L_tt} we can see that the \glspl{cr} are dominated by single-lepton \ttbar, as well as the \glspl{vr} designed to check the \mtb extrapolation;
+this is because both these types of regions have an upper cut on \mt.
+Instead the SRs and the validation regions that check the \mt extrapolation occupy a phase space at high-\mt;
+this selection suppresses single-lepton \ttbar and therefore the SRs and VRs-\mt
+are dominated by dilepton \ttbar.
+
+In the case of Figures \ref{fig:Gtt_0L_tt} and \ref{fig:Gbb_tt} we see all regions are dominated by single-lepton \ttbar.
+In these cases, the CRs are 1-lepton regions with an upper cut on \mt and the SRs and VRs are 0-lepton regions,
+so in all of them the main component is  single-lepton \ttbar. In the case of SRs and VRs though, this single-lepton component
+is dominated by $\tau$+jets, since this category includes both hadronic and leptonic decays of the tau lepton.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_1L_bkg.pdf}
