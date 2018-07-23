@@ -97,12 +97,40 @@ Also for these signal samples, a sizable value of \met can be present in events 
 
 In this section we show how the variables defined in Section \ref{sec:common_variables} and \ref{sec:variables-strong} allow to 
 identify a region of the phase space that is enriched in signal events. 
+After selecting events with high \met ($> 200$ GeV), at least four signal jets and at least three b-tagged jets, events are
+divided into the 0-lepton category, that requires a lepton veto and also \dphimin $>0.4$, and the 1-lepton category, 
+with at least one signal lepton.
+Figures \ref{fig:strong:sig:bjets_n} to \ref{fig:strong:sig:met} show the distribution of some important kinematic variables for 
+the sum of the \gls{sm} backgrounds and for selected signal samples. 
+
+
+\begin{figure*}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_bjets_n.pdf}\label{fig:strong:sig:bjets_nA}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_bjets_n.pdf}\label{fig:strong:sig:bjets_nB}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_bjets_n.pdf}\label{fig:strong:sig:bjets_nC}}
+\caption{Distribution of number of b-tagged jets in background events and in \subref{fig:strong:sig:bjets_nA} Gtt signals in a 1-lepton selection,
+\subref{fig:strong:sig:bjets_nB} Gtt signals in a 0-lepton selection and
+\subref{fig:strong:sig:bjets_nC} Gbb signals in a 0-lepton selection.
+}\label{fig:strong:sig:bjets_n}
+\end{figure*}
+
+\begin{figure*}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_jets_n.pdf}\label{fig:strong:sig:jets_nA}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_jets_n.pdf}\label{fig:strong:sig:jets_nB}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_jets_n.pdf}\label{fig:strong:sig:jets_nC}}
+\caption{Distribution of number of jets in background events and in \subref{fig:strong:sig:jets_nA} Gtt signals in a 1-lepton selection,
+\subref{fig:strong:sig:jets_nB} Gtt signals in a 0-lepton selection and
+\subref{fig:strong:sig:jets_nC} Gbb signals in a 0-lepton selection.
+}\label{fig:strong:sig:jets_n}
+\end{figure*}
 
 \begin{figure*}[h]
 \centering 
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclA}}
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclB}}
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_meff_incl.pdf}\label{fig:strong:sig:meff_incl}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclC}}
 \caption{Distribution of \meff in background events and in \subref{fig:strong:sig:meff_inclA} Gtt signals in a 1-lepton selection, \subref{fig:strong:sig:meff_inclB} Gtt signals in a 0-lepton selection and \subref{fig:strong:sig:meff_inclC} Gbb signals in a 0-lepton selection.
 }\label{fig:strong:sig:meff_incl}
 \end{figure*}
@@ -111,21 +139,10 @@ identify a region of the phase space that is enriched in signal events.
 \centering 
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_mTb_min.pdf}\label{fig:strong:sig:mTb_minA}}
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_mTb_min.pdf}\label{fig:strong:sig:mTb_minB}}
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_mTb_min.pdf}\label{fig:strong:sig:mTb_min}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_mTb_min.pdf}\label{fig:strong:sig:mTb_minC}}
 \caption{Distribution of \mtb in  background events and in \subref{fig:strong:sig:mTb_minA} Gtt signals in a 1-lepton selection, 
 \subref{fig:strong:sig:mTb_minB} Gtt signals in a 0-lepton selection and \subref{fig:strong:sig:mTb_minC} Gbb signals in a 0-lepton selection.
 }\label{fig:strong:sig:mTb_min}
-\end{figure*}
-
-\begin{figure*}[h]
-\centering 
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_jets_n.pdf}\label{fig:strong:sig:jets_nA}}
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_jets_n.pdf}\label{fig:strong:sig:jets_nB}}
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_jets_n.pdf}\label{fig:strong:sig:jets_n}}
-\caption{Distribution of number of jets in background events and in \subref{fig:strong:sig:jets_nA} Gtt signals in a 1-lepton selection,
-\subref{fig:strong:sig:jets_nB} Gtt signals in a 0-lepton selection and
-\subref{fig:strong:sig:jets_nC} Gbb signals in a 0-lepton selection.
-}\label{fig:strong:sig:jets_n}
 \end{figure*}
 
 
@@ -133,7 +150,7 @@ identify a region of the phase space that is enriched in signal events.
 \centering 
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_MJSum_rc_r08pt10.pdf}\label{fig:strong:sig:MJSum_rc_r08pt10A}}
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_MJSum_rc_r08pt10.pdf}\label{fig:strong:sig:MJSum_rc_r08pt10B}}
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_MJSum_rc_r08pt10.pdf}\label{fig:strong:sig:MJSum_rc_r08pt10}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_MJSum_rc_r08pt10.pdf}\label{fig:strong:sig:MJSum_rc_r08pt10C}}
 \caption{Distribution of \mjsum in background events and in \subref{fig:strong:sig:MJSum_rc_r08pt10A} Gtt signals in a 1-lepton selection, 
 \subref{fig:strong:sig:MJSum_rc_r08pt10B} Gtt signals in a  0-lepton selection and
 \subref{fig:strong:sig:MJSum_rc_r08pt10C} Gbb signals in a  0-lepton selection.
@@ -145,7 +162,7 @@ identify a region of the phase space that is enriched in signal events.
 \centering 
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_met.pdf}\label{fig:strong:sig:metA}}
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_met.pdf}\label{fig:strong:sig:metB}}
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_met.pdf}\label{fig:strong:sig:met}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_met.pdf}\label{fig:strong:sig:metC}}
 \caption{Distribution of \met in  background events and in \subref{fig:strong:sig:metA} Gtt signals in a 1-lepton selection, 
 \subref{fig:strong:sig:metB} Gtt signals in a  0-lepton selection
  and \subref{fig:strong:sig:metC} Gbb signals in a  0-lepton selection.
