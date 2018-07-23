@@ -110,7 +110,18 @@ background events enough to be sensitive to the signal.
 
 Figure \ref{fig:strong:sig:jets_n} shows the distribution of the number of signal jets. 
 In this case, the result of the comparison between the shape of the distribution for signal and for backgrounds depends heavily 
-on the specific signal considered. In particular, Gbb signal models tend to have a lower number of jets than Gtt models, as expe
+on the specific signal considered. In particular, Gbb signal models tend to have a lower number of jets than Gtt models; 
+this is expected, since in Gtt models the decay of the top quark to a b-quark and a W-boson can lead to up to 12 jets originating from the 
+hard scattering process, while only four of such jest are present in Gbb signals. 
+Furthermore, Gtt events in the 0-lepton channel have more jets than Gttt-events in the 1-lepton channel, since the leptpnic decays of the W-boson 
+reduce the amount of hadronic activity in the final state. 
+It can be noted how while in \gls{sm} simulations all-hadronic \ttbar events do not enter our analysis regions because of the lack of real \met,  in signal events we can have events where all the top quarks decay hadronically, since the \met is provided by the neutralino. 
+
+A key variable in the suppression of the \ttbar background is \mtb, whose distribution is shown in Figure \ref{fig:strong:sig:mTb_min}.
+The kinematic endpoint that characterizes \ttbar events is not present for signal events, that tend to have a more uniform distribution.
+Despite not having a kinematic endpoint, not all signals have a \mtb distribution that reaches high values: this is more likely for 
+signals with a high mass splitting between the gluino and the neutralino masses, where the decay products are boosted. 
+
 
 \begin{figure*}[h]
 \centering 
@@ -136,21 +147,21 @@ on the specific signal considered. In particular, Gbb signal models tend to have
 
 \begin{figure*}[h]
 \centering 
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclA}}
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclB}}
-\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclC}}
-\caption{Distribution of \meff in background events and in \subref{fig:strong:sig:meff_inclA} Gtt signals in a 1-lepton selection, \subref{fig:strong:sig:meff_inclB} Gtt signals in a 0-lepton selection and \subref{fig:strong:sig:meff_inclC} Gbb signals in a 0-lepton selection.
-}\label{fig:strong:sig:meff_incl}
-\end{figure*}
-
-\begin{figure*}[h]
-\centering 
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_mTb_min.pdf}\label{fig:strong:sig:mTb_minA}}
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_mTb_min.pdf}\label{fig:strong:sig:mTb_minB}}
 \subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_mTb_min.pdf}\label{fig:strong:sig:mTb_minC}}
 \caption{Distribution of \mtb in  background events and in \subref{fig:strong:sig:mTb_minA} Gtt signals in a 1-lepton selection, 
 \subref{fig:strong:sig:mTb_minB} Gtt signals in a 0-lepton selection and \subref{fig:strong:sig:mTb_minC} Gbb signals in a 0-lepton selection.
 }\label{fig:strong:sig:mTb_min}
+\end{figure*}
+
+\begin{figure*}[h]
+\centering 
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/1L_3b/Gtt_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclA}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gtt_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclB}}
+\subfigure[]{\includegraphics[width=0.325\textwidth]{figures/strong_prod/sig_bkg_strong/0L_3b/Gbb_compare_meff_incl.pdf}\label{fig:strong:sig:meff_inclC}}
+\caption{Distribution of \meff in background events and in \subref{fig:strong:sig:meff_inclA} Gtt signals in a 1-lepton selection, \subref{fig:strong:sig:meff_inclB} Gtt signals in a 0-lepton selection and \subref{fig:strong:sig:meff_inclC} Gbb signals in a 0-lepton selection.
+}\label{fig:strong:sig:meff_incl}
 \end{figure*}
 
 
