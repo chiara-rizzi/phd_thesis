@@ -328,7 +328,7 @@ ma
 		is excluded. The upper right half of the plane is forbidden by the requirement that the sum of branching ratios does not exceed 100\%.}
 \end{figure}
 
-\FloatBarrier
+%\FloatBarrier
 
 \section{Comparison of cut-and-count and multi-bin strategies}
 
@@ -336,7 +336,28 @@ In this analysis, the results of the multi-bin analysis are used to set model-de
 Also the regions cut-and-count analysis, used to set the model-independent limits in Section \ref{sec:strong:modelindepUL}, 
 can be used to provide a statement on specific signal models. The different regions of the cut-and-count analysis are not orthogonal 
 and therefore can not be combined in a single statistical fit, but they can still be "visually combined" in a single exclusion contour 
-by selection for each mass point the cut-and-count region with the best expected sensitivity. 
+by selection for each mass point the cut-and-count region with the best expected sensitivity, and this contour can be compared 
+with the contour obtained with the multi-bin approach.
+This is shown in Figures \ref{fig:limits_Gtt_comp} and \ref{fig:limits_Gbb_comp} for the Gtt and Gbb models respectively.
+Since we want to make a statement on the sensitivity of the two strategies, we compare only the expected exclusion contours 
+(in blue for the cut-and-count analysis, in pink for the multi-bin analysis) and not the observed exclusion. 
+The grey numbers on the figures represent the relative difference in expected upper limit on the signal strength: 
+a negative number indicates a stronger limit from the multi-bin analysis. 
+In the case of the Gtt grid in Figure \ref{fig:limits_Gtt_comp}, the multi-bin approach provides an improvement in 
+expected upper limit of $\approx$30\% in the bulk of the mass plane, and up to $\approx$50\% for the more challenging 
+kinematic regime where the mass of the neutralino is closer to the mass of the gluino.
+In terms of exclusion contour, this translates in an expected limit about 70 GeV stronger for massless neutralino.
+In the case of the Gbb signal models, while it is still true that for most of the mass points the expected limit on the 
+signal strength is better with the multi-bin approach, for the region of the parameter space with intermediate gluino and 
+neutralino masses the cut-and-count analysis provides a stronger sensitivity.
+This is balanced by a better sensitivity of the multi-bin strategy for $m_{\gluino} \approx 2$ TeV, $m_{\ninoone} \approx 700$
+GeV (where the cut-and-count approach shows the drawback of a switch in best-expected region for neighboring mass points),
+and the two strategies have the same limit for massless neutralino. 
+The reason of the different relative performance of multi-bin and cut-and-count approaches in the Gtt and Gbb signal 
+models relies on the optimization strategy of the multi-bin analysis, that favors Gtt: the regions with intermediate 
+number of jets, that could still be sensitive to Gbb models, are optimized based on Gtt signal benchmarks.
+
+
 
 \begin{figure}[htbp]
 	\centering 
