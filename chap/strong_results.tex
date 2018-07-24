@@ -35,6 +35,7 @@ and therefore is not the sum in quadrature of the individual components.
 \end{figure}
 
 \section{Results}
+\label{sec:strongprod:results}
 
 The statistical procedures discussed in Chapter \ref{chap:stat} are used to compare the \gls{mc} simulation and the data and extract 
 quantitative information on their agreement and on the presence of \gls{bsm} signals. 
@@ -98,6 +99,9 @@ number of observed and expected events divided by the total uncertainty.
 The result of the fit extrapolated to the \glspl{sr} and the observed number of events in the \glspl{sr} is finally
 shown in Figures \ref{fig:pullSR_discovery} and \ref{fig:pullSR_exclusion} 
 for the cut-and-count and the multi-bin analyses respectively. 
+No significant excess is observed in the \glspl{sr}; the largest excess is observed in SR-0L-HH, 
+one of the regions of the multi-bin analysis, where the pull 2.3 standard deviations. 
+The numerical results in the cut-and-count \glspl{sr} are summarized in Table \ref{tab:yield_discovery}.
 
 \begin{figure}[htbp]
 	\centering
@@ -112,12 +116,106 @@ for the cut-and-count and the multi-bin analyses respectively.
 	\label{fig:pullSR}
 \end{figure}
 
+\begin{table*}[htbp]
+	\centering	
+	\renewcommand{\arraystretch}{1.0}
+	\begin{tabular}{lccc}
+	       \toprule
+	       & \multicolumn{3}{c}{SR-Gtt-1L} \\
+	       \midrule	
+	        Targeted kinematics & B            &   M         &   C               \\[-0.05cm]
+	       \midrule
+	       Observed events              &  0   &  1 & 2  \\
+	       \midrule
+	       Fitted background             & 0.5 $\pm$ 0.4 & 0.7 $\pm$ 0.4 & 2.1 $\pm$ 1.0\\
+	       \midrule
+	       \ttbar\              &  0.4 $\pm$ 0.4 & 0.5 $\pm$ 0.4 & 1.2 $\pm$ 0.8\\
+	       Single-top             & 0.04 $\pm$ 0.05 & 0.03 $\pm$ 0.06 & 0.35 $\pm$ 0.28\\
+	       $\ttbar+X$          & 0.08 $\pm$ 0.05 & 0.09 $\pm$ 0.06 & 0.50 $\pm$ 0.28\\
+	       $Z$+jets            & 0.049 $\pm$ 0.023 & 0.050 $\pm$ 0.023 & $<0.01$ \\
+	       $W$+jets              & $<0.01$  & $<0.01$  & 0.024 $\pm$ 0.026\\
+	       Diboson             & $<0.01$ & $<0.01$  & $<0.01$ \\
+ 	       \midrule
+	       MC-only background &  0.43 & 0.45 & 1.9 \\
+	       \bottomrule
+	\end{tabular}
+
+	\vspace{0.4cm}
+	
+        \begin{tabular}{lccc}
+		\toprule
+		& \multicolumn{3}{c}{SR-Gtt-0L} \\
+		\midrule	
+	       Targeted kinematics & B            &   M         &   C               \\[-0.05cm]
+	       \midrule
+	       Observed events              &  2 & 5 & 28 \\
+	       \midrule
+	       Fitted background             & 1.5 $\pm$ 0.5 & 3.5 $\pm$ 1.3 & 38 $\pm$ 8\phantom{0} \\
+	       \midrule
+	       \ttbar\              & 0.9 $\pm$ 0.4 & 1.8 $\pm$ 0.7 & 31 $\pm$ 8\phantom{0} \\
+	       Single-top             & 0.21 $\pm$ 0.14 & 0.6 $\pm$ 0.4 & 1.3 $\pm$ 1.1\\   
+	       $\ttbar+X$          & 0.12 $\pm$ 0.07 & 0.45 $\pm$ 0.25 & 3.0 $\pm$ 1.6\\
+	       $Z$+jets             & 0.06 $\pm$ 0.10 & 0.3 $\pm$ 0.9 & 0.49 $\pm$ 0.31\\
+	       $W$+jets            & 0.07 $\pm$ 0.06 & 0.18 $\pm$ 0.15 & 0.67 $\pm$ 0.22\\
+	       Diboson             &  0.06 $\pm$ 0.07 & 0.12 $\pm$ 0.07 & $<0.01$\\
+ 	       Multijet               &  0.09 $\pm$ 0.11 & 0.04 $\pm$ 0.05 & 1.3 $\pm$ 2.1\\
+          \midrule
+	       MC-only background &   1.3 & 3.3 & 23\\  
+	       \bottomrule
+	\end{tabular}
+
+	\vspace{0.4cm}
+	
+	\begin{tabular}{lcccc}
+		\toprule
+		& \multicolumn{4}{c}{SR-Gbb} \\
+		\midrule
+          Targeted kinematics & B            	&   	M   		&   C   &   VC                \\[-0.05cm]
+		\midrule
+		Observed events              & 2 & 2 & 5 & 0\\
+		\midrule
+		Fitted background           &   2.1 $\pm$ 0.7 & 3.0 $\pm$ 1.0 & 5.8 $\pm$ 1.9 & 4.7 $\pm$ 2.3\\
+		\midrule
+		\ttbar\            			& 1.2 $\pm$ 0.6 & 1.9 $\pm$ 0.7 & 3.8 $\pm$ 1.3 & 3.1 $\pm$ 1.3\\
+		Single-top             		& 0.31 $\pm$ 0.16 & 0.39 $\pm$ 0.16 & 0.46 $\pm$ 0.20 & 0.15 $\pm$ 0.18\\
+		$\ttbar+X$             		& 0.12 $\pm$ 0.06 & 0.33 $\pm$ 0.19 & 0.6 $\pm$ 0.4 & 0.19 $\pm$ 0.11\\
+		$Z$+jets             		& 0.15 $\pm$ 0.34 & 0.2 $\pm$ 0.6 & 0.6 $\pm$ 1.3 & 0.8 $\pm$ 1.9\\
+		$W$+jets             		& 0.12 $\pm$ 0.09 & 0.13 $\pm$ 0.12 & 0.29 $\pm$ 0.19 & 0.37 $\pm$ 0.30\\
+		Diboson             		& 0.06 $\pm$ 0.04 & $<0.01$ & $<0.01$ & 0.15 $\pm$ 0.08\\
+                Multijet              & 0.10 $\pm$ 0.12 & 0.022 $\pm$ 0.025 & 0.03 $\pm$ 0.04 & 0.016 $\pm$ 0.020\\
+		 \midrule
+ 		MC-only background & 1.9 & 2.7 & 4.4 & 3.9  \\  
+		\bottomrule
+	\end{tabular}
+\caption{Results of the background-only fit extrapolated to the Gtt 1-lepton, Gtt 0-lepton and Gbb SRs in
+	the cut-and-count analysis, for the total background prediction and breakdown of the main background sources. 
+	The uncertainties shown include all systematic uncertainties. The data in the SRs are not included in the fit. 
+	The background category $\ttbar+X$ includes $\ttbar W/Z$, $\ttbar H$ and $\ttbar \ttbar$ events.
+	The row ``MC-only background'' provides the total background prediction when the
+	$\ttbar$ normalisation is obtained from a theoretical
+	calculation~\cite{Czakon:2011xx}. 
+	}
+	\label{tab:yield_discovery}
+\end{table*}
+
+
 %\clearpage 
 \FloatBarrier
 
 \section{Interpretation}
+\label{sec:strongprod:limits}
+
+The results described in Section \ref{sec:strongprod:results} are used to set limits on the presence of \gls{bsm} 
+signal models. 
 
 \subsection{Model-independent limits}
+
+The results of the background-only fit in the cut-and-count \glspl{sr}
+are used to place model-independent limits on the number of \gls{bsm} events in the \glspl{sr}. 
+This limit is obtained with the \gls{cls} procedure; for each \gls{sr}, a fit similar to the background-only fit is performed 
+but the number of observed and expected events (with its uncertainty) is included in the fit as well. 
+Any signal contamination in the \glspl{cr} is neglected. 
+The limits reported in Table \ref{mod-ind-lim} are obtained with pseudo-experiments, as dissed in Section \ref{sec:stat:example:limits}.
 
 \begin{table}[htbp]
         \centering
@@ -152,6 +250,7 @@ for the cut-and-count and the multi-bin analyses respectively.
 \end{table}
 
 \subsection{Model-dependent limits}
+
 
 \begin{figure}[htbp]
 	\centering 
