@@ -264,7 +264,7 @@ two regions target signal models with a compressed mass spectrum, and therefore 
 
 
 
-\begin{table}[t]
+\begin{table}[htbp]
     \centering
  \renewcommand{\arraystretch}{1.5}
          \begin{tabular}{c c c c c c c c}
@@ -324,7 +324,7 @@ Targeted kinematics & Type & $N_\mathrm{lepton}$ & $\nbjet$& $\njet$&  $\dphimin
 
 
 \begin{landscape}
-\begin{table}[t]
+\begin{table}[htbp]
 %\begin{sidewaystable}[t]
     \centering
  \renewcommand{\arraystretch}{1.3}
@@ -379,19 +379,19 @@ It is possible to see how \ttbar is the dominant background in all the \glspl{sr
 purity by construction, since they are designed to respectively normalize this background and validate the extrapolation of this normalization to 
 a phase space closer to the \glspl{sr}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_1L_bkg.pdf}
 \caption{Background composition of Gtt-1L regions.}
 	\label{fig:bkgcomp_Gtt1L}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_0L_bkg.pdf}
 \caption{Background composition of Gtt-0L regions.}
 	\label{fig:bkgcomp_Gtt0L}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gbb_bkg.pdf}
 \caption{Background composition of Gbb regions.}
 	\label{fig:bkgcomp_Gbb}
@@ -411,19 +411,19 @@ so in all of them the main component is  single-lepton \ttbar. In the case of SR
 is dominated by $\tau$+jets, since this category includes both hadronic and leptonic decays of the tau lepton.
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_1L_tt.pdf}
 \caption{Decay mode of \ttbar background in Gtt-1L regions.}
 	\label{fig:ttcomp_Gtt1L}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_0L_tt.pdf}
 \caption{Decay mode of \ttbar background in Gtt-0L regions.}
 	\label{fig:ttcomp_Gtt0L}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gbb_tt.pdf}
 \caption{Decay mode of \ttbar background in Gbb regions.}
 	\label{fig:ttcomp_Gbb}
@@ -439,19 +439,19 @@ of the same region type, composition is similar in corresponding regions, even i
 \tthf is sometimes higher in the \glspl{sr}, especially in the case of Gtt-1L regions. 
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_1L_HF.pdf}
 \caption{Heavy-flavour composition of \ttbar background in Gtt-1L regions.}
 	\label{fig:HFcomp_Gtt1L}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gtt_0L_HF.pdf}
 \caption{Heavy-flavour composition of \ttbar background in Gtt-0L regions.}
 	\label{fig:HFcomp_Gtt0L}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/strong_prod/comp_plots/Gbb_HF.pdf}
 \caption{Heavy-flavour composition of \ttbar background in Gbb regions.}
 	\label{fig:HFcomp_Gbb}
@@ -459,7 +459,8 @@ of the same region type, composition is similar in corresponding regions, even i
 
 %%%%%
 
-\clearpage
+%\afterpage{\clearpage}
+\FloatBarrier
 
 \section{Multi-bin analysis regions}
 \label{sec:strong:multibin}
@@ -487,16 +488,7 @@ The naming convention for the multi-bin \glspl{sr} is the sequence of number of 
 where the categories for \njet and \meff are labeled as "L" (low), "I" (intermediate) and "H" (high). So e.g. SR-0L-IL is the \gls{sr} in the 0-lepton channel with intermediate number of jets and low \meff. Low \meff regions are defined only in the 0-lepton channel, since they 
 target Gbb signal models that do not produce final states with leptons. 
 
-In each of these mutually exclusive \gls{sr}, all the variables other than \njet, \nlep and \meff are optimized in a two-steps procedure:
-\begin{enumerate}
-\item First of all, in each region we define the set of selection that maximize the expected significance for a specific benchmark model. 
-These selections have to satisfy the same criteria as for the cut-and-count \glspl{sr}, described in Section \ref{sec:strong:cutandcount}.
-\item In  second step, we try to make the selections more uniform across all the regions, without penalizing the exclusion power. 
-For each desired simplification of the selection, the exclusion contour is computed and compared to the original one obtained with the selections from the first step. If the simplification of the selections does not bring any significant loss in the exclusion sensitivity, the simplification is adopted. This is the case e.g. for the \mt selection, which takes the value of $>150$ GeV for all the 1-lepton \glspl{sr}.
-\end{enumerate}
-
-
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\subfigure[]{\includegraphics[width=0.49\linewidth]{figures/strong_prod/paper/selections/selections_0lep.pdf}\label{fig:multibin_scheme_0l}}
 	\subfigure[]{\includegraphics[width=0.49\linewidth]{figures/strong_prod/paper/selections/selections_1lep.pdf}\label{fig:multibin_scheme_1l}}
 	\caption{Scheme of the multi-bin analysis for the \subref{fig:multibin_scheme_0l} 0-lepton 
@@ -507,6 +499,16 @@ For each desired simplification of the selection, the exclusion contour is compu
 	\label{fig:multibin_scheme}
 \end{figure}
 
+In each of these mutually exclusive \gls{sr}, all the variables other than \njet, \nlep and \meff are optimized in a two-steps procedure:
+\begin{enumerate}
+\item First of all, in each region we define the set of selection that maximize the expected significance for a specific benchmark model. 
+These selections have to satisfy the same criteria as for the cut-and-count \glspl{sr}, described in Section \ref{sec:strong:cutandcount}.
+\item In  second step, we try to make the selections more uniform across all the regions, without penalizing the exclusion power. 
+For each desired simplification of the selection, the exclusion contour is computed and compared to the original one obtained with the selections from the first step. If the simplification of the selections does not bring any significant loss in the exclusion sensitivity, the simplification is adopted. This is the case e.g. for the \mt selection, which takes the value of $>150$ GeV for all the 1-lepton \glspl{sr}.
+\end{enumerate}
+
+
+
 \subsection*{Control regions and validation regions}
 
 As in the case of the cut-and-count strategy, all the \glspl{cr} require at least one signal lepton. 
@@ -516,10 +518,22 @@ closer in phase space than Gtt-0L and Gtt-1L regions targeting similar signal ki
 and also by the need to have \glspl{cr} that are either mutually exclusive or completely overlapping to 
 allow the simultaneous inclusion of all the regions in the fit. 
 
+Also in the multi-bin approach, the \glspl{cr} relay on an inverted selection on \mt to maintain orthogonality with 
+the corresponding \glspl{sr}-1L. The requirement on the number of jets is the same as in the \glspl{sr}-1L, while the 
+\glspl{sr}-0L require one more jet. Selections on other variables are relaxed to allow enough expected \ttbar events in 
+each \gls{cr}.
+The extrapolation from the \gls{cr} to each \gls{sr} is tested with a dedicated \gls{vr}. 
+The \glspl{vr}-0L are orthogonal to the corresponding \glspl{sr} through inversion of the \mtb, \meff or \met selection;
+the \glspl{vr}-1L have the same \mt selection as the \glspl{sr} and are orthogonal to those thanks to
+an inverted \mtb selection.
 
+To allow enough statistics in all the \glspl{vr}, two of them (VR-1L-HI and VR-1L-HL) are not orthogonal.
+This does not constitute a problem since the \glspl{vr}
+are not included in the statistical fit and 
+the overlap has been quantified to be around 15\% of the events in these \glspl{vr}, therefore 
+the validity of the conclusions is not compromised. 
 
-
-\clearpage
+%\clearpage
 
 \begin{landscape}
 	\begin{table}[t]
@@ -560,7 +574,7 @@ allow the simultaneous inclusion of all the regions in the fit.
  	\end{table}
 \end{landscape}
 
-\clearpage
+%\clearpage
 
 \begin{landscape}
 	\begin{table}[t]
@@ -596,7 +610,7 @@ allow the simultaneous inclusion of all the regions in the fit.
  	\end{table}
 \end{landscape}
 
-\clearpage
+%\clearpage
 
 \begin{landscape}
 	\begin{table}[t]
@@ -637,7 +651,7 @@ allow the simultaneous inclusion of all the regions in the fit.
 			\midrule
 			SR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,8]$		& $>100$ 			& $> 600 $ 				& $<2200$ \\ 
 			CR 	& $\ge 1$  	& $-$ 		& $< 150$ 	& $[4,7]$		& $-$ 			& $> 400 $ 				& $<2000$ \\ 
-			VR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,8]$		& $>100$ 			& $> 250 $ 				& $<2000$ \\
+			VR 	& $= 0$  		& $>0.4$ 		& $-$ 		& $[4,8]$		& $>100$ 			& $[250,600] $ 				& $<2000$ \\
       			\bottomrule
     		\end{tabular}
 \caption{Definition of the low-$\njet$ and ISR SRs, CRs and VRs of the multi-bin analysis. All kinematic variables are
@@ -649,7 +663,10 @@ allow the simultaneous inclusion of all the regions in the fit.
  	\end{table}
 \end{landscape}
 
-\clearpage 
+%\afterpage{\clearpage}
+\FloatBarrier
+
+\subsection*{Composition of the multi-bin regions}
 
 \section{Pre-fit data-MC}
 \label{sec:strong:dataMC}
@@ -747,7 +764,8 @@ and therefore is not the sum in quadrature of the individual components.
 	\label{fig:pullSR}
 \end{figure}
 
-\clearpage 
+%\clearpage 
+\FloatBarrier
 
 \section{Interpretation}
 
@@ -833,4 +851,4 @@ and therefore is not the sum in quadrature of the individual components.
 	\label{fig:limits_GbbGtt_comp}
 \end{figure}
 
-\section{Results in the context of the ATLAS SUSY group}
+%\section{Results in the context of the ATLAS SUSY group}
