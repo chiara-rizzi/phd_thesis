@@ -37,9 +37,26 @@ All the plots in the rest of this section assume that the reweighting has alread
 
 \subsection*{Data-MC comparison after the reweighting}
 
+Figures \ref{fig:strong:datamc1L_a} and \ref{fig:strong:datamc1L_b} show the data-MC agreement in the 1-lepton preselection after the 
+kinematic reweighting described in the previous paragraph, while 
+the agreement in the 0-lepton preselection is shown in Figures \ref{fig:strong:datamc0L_a} and \ref{fig:strong:datamc0L_b}.
+The 1-lepton and 0-lepton preselection require:
+\begin{itemize}
+\item $\geq$ 4 jets,
+\item $\geq$ 2 b-jets,
+\item $\met > 200$ GeV
+\end{itemize}
+and respectively at least one signal lepton or a lepton veto and $\dphimin > 0.4$.
 
-%data_mc_dphi_1jet.pdf
-%data_mc_dphi_min.pdf
+In Figure \ref{fig:strong:datamc1L:meff_incl} it can be noted how the kinematic reweighting improves the data-MC agreement in
+the 1-lepton channel. 
+All the distributions shown appear well modelled, with the exception of the number of b-jets 
+that shows an underestimate of \gls{mc} with respect to the data that increases with the number of b-jets, both in 
+the 1-lepton channel and in the 0-lepton channel 
+(Figures \ref{fig:strong:datamc1L:bjets_n} and \ref{fig:strong:datamc0L:bjets_n} respectively).
+This mismodelling does not constitute a problem in this analysis, 
+since the \glspl{cr} have the same b-jet multiplicity as the corresponding \glspl{sr}.
+
 
 
 \begin{figure*}[htbp]
@@ -77,7 +94,7 @@ All the plots in the rest of this section assume that the reweighting has alread
 \label{fig:strong:datamc1L:pt_bjet_1}}
 \caption{Data-MC comparison in the 1-lepton preselection, after applying the kinematic reweighting.
 }
-\label{fig:strong:datamc1L_a}
+\label{fig:strong:datamc1L_b}
 \end{figure*}
 
 \begin{figure*}[htbp]
@@ -115,5 +132,5 @@ All the plots in the rest of this section assume that the reweighting has alread
 \label{fig:strong:datamc0L:pt_bjet_1}}
 \caption{Data-MC comparison in the 0-lepton preselection, after applying the kinematic reweighting.
 }
-\label{fig:strong:datamc0L_a}
+\label{fig:strong:datamc0L_b}
 \end{figure*}
