@@ -25,7 +25,7 @@ In this case the dominant uncertainties are the ones on the modelling of the \tt
 The total uncertainty (black line in Figure \ref{fig:syst}) takes into account correlation effects across the different systematic sources, 
 and therefore is not the sum in quadrature of the individual components. 
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\subfigure[]{\includegraphics[width=0.85\textwidth]{figures/strong_prod/paper/Cut_and_Count.pdf}\label{fig:syst_cutandcount}}\\
 	\subfigure[]{\includegraphics[width=0.85\textwidth]{figures/strong_prod/paper/Multi_bin.pdf}\label{fig:syst_multibin}}\\
@@ -36,7 +36,27 @@ and therefore is not the sum in quadrature of the individual components.
 
 \section{Results}
 
-\begin{figure}[ht]
+The statistical procedures discussed in Chapter \ref{chap:stat} are used to compare the \gls{mc} simulation and the data and extract 
+quantitative information on their agreement and on the presence of \gls{bsm} signals. 
+The first step is the background-only fit, a maximum-likelihood fit where only the \glspl{cr} are included, as described in Section 
+\ref{sec:example_cr}. 
+The \ttbar nomralization is a free parameter of the fit, and is therefore adjusted with the number of observed events in the \glspl{cr} 
+as constraint.
+This procedure accounts for potential mismodellings specific of the phase space close to each \gls{sr}, that are not necessarily 
+the same for all the regions in the analysis. Therefore each \gls{cr} is used to derive a normalization factor for the \ttbar background,
+independent from the normalization factors derived in the other \glspl{cr}, that is then used to derive the background prediction in the 
+corresponding \glspl{sr}. 
+
+The top panel of Figures \ref{fig:pullCR_discovery} and \ref{fig:pullCR_exclusion} shows the pre-fit data-MC agreement in the 
+\glspl{cr} of the cut-and-count and multi-bin analyses respectively. In the same figures, the bottom panel 
+shows the \ttbar normalization factor derived from the fit in the \glspl{cr} with its uncertainty, driven by the statistical uncertainty 
+in the \glspl{cr}.  The systematic uncertainties on the expected number of events are included in the fit as nuisance parameters.
+Note that in the case of the cut-and-count analysis the fit is performed separately in each \gls{cr}.
+Instead for the multi-bin analysis all the \glspl{cr} are included in the same fit, even though with independent parameters for the 
+\ttbar normalization. 
+ 
+
+\begin{figure}[htbp]
 	\centering
 	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_CRs_17_06_23_singlebin.pdf}\label{fig:pullCR_discovery}}
 	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_CRs_multichannel_17_06_23.pdf}\label{fig:pullCR_exclusion}}
@@ -54,8 +74,12 @@ and therefore is not the sum in quadrature of the individual components.
 	\label{fig:pullCR}
 \end{figure}
 
+Figures \ref{fig:pullVR_discovery} and \ref{fig:pullVR_exclusion} show the result of the background-only fit extrapolated to the \glspl{vr} of 
+the cut-and-count and multi-bin analysis respectively. The upper panel shows the comparison of the number of predicted and observed events, 
+while the bottom panel quantifies the difference between the expected and the observed with the pull, defined as the difference between 
+number of observed and expected events divided by the total uncertainty. 
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_VRs_17_06_23_singlebin.pdf}\label{fig:pullVR_discovery}}\\
 	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_VRs_multichannel_17_06_23.pdf}\label{fig:pullVR_exclusion}}\\
@@ -71,8 +95,11 @@ and therefore is not the sum in quadrature of the individual components.
 	\label{fig:pullVR}
 \end{figure}
 
+The result of the fit extrapolated to the \glspl{sr} and the observed number of events in the \glspl{sr} is finally
+shown in Figures \ref{fig:pullSR_discovery} and \ref{fig:pullSR_exclusion} 
+for the cut-and-count and the multi-bin analyses respectively. 
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_SRs_17_06_23_singlebin.pdf}\label{fig:pullSR_discovery}}\\
 	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_SRs_multichannel_17_06_23.pdf}\label{fig:pullSR_exclusion}}\\
@@ -92,7 +119,7 @@ and therefore is not the sum in quadrature of the individual components.
 
 \subsection{Model-independent limits}
 
-\begin{table}[t]
+\begin{table}[htbp]
         \centering
         \small
         \begin{tabular*}{0.6\textwidth}{@{\extracolsep{\fill}}lcccc}
@@ -126,7 +153,7 @@ and therefore is not the sum in quadrature of the individual components.
 
 \subsection{Model-dependent limits}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering 
 	\subfigure[]{\includegraphics[width=0.75\textwidth]{figures/strong_prod/paper/limits/Limits_Gtt.pdf}\label{fig:limits_Gtt}}
 	\subfigure[]{\includegraphics[width=0.75\textwidth]{figures/strong_prod/paper/limits/Limits_Gbb.pdf}\label{fig:limits_Gbb}}
@@ -146,7 +173,7 @@ and therefore is not the sum in quadrature of the individual components.
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering
 	\subfigure[]{\includegraphics[width=0.63\textwidth]{figures/strong_prod/paper/limits/triangle_UL_massless_neutralino.pdf}\label{fig:limit_br_fixed_neu}}
 	\subfigure[]{\includegraphics[width=0.63\textwidth]{figures/strong_prod/paper/limits/triangle_UL_1900_gluino.pdf}\label{fig:limit_br_fixed_glu}}
@@ -159,9 +186,11 @@ and therefore is not the sum in quadrature of the individual components.
 		is excluded. The upper right half of the plane is forbidden by the requirement that the sum of branching ratios does not exceed 100\%.}
 \end{figure}
 
+\FloatBarrier
+
 \section{Comparison of cut-and-count and multi-bin strategies}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 	\centering 
 	\subfigure[]{\includegraphics[width=0.75\textwidth]{figures/strong_prod/extra/UL_comp_combi_multich_Gtt.pdf}\label{fig:limits_Gtt_comp}}
 	\subfigure[]{\includegraphics[width=0.75\textwidth]{figures/strong_prod/extra/UL_comp_combi_multich_Gbb.pdf}\label{fig:limits_Gbb_comp}}
