@@ -4,8 +4,8 @@
 In this appendix we discuss in more details the kinematic reweighting mentioned in Section \ref{sec:strong:dataMC},
 designed to mitigate the effect of the mismodelling that affects all the energy-related variables in the 1-lepton channel,
 where we observe a downward trend in the data/MC ratio, clearly visible e.g. in the bottom panel of 
-Figure \ref{fig:strong:datamc:meff_prerw_1L}; this is not present in the 0-lepton channel, as can be seen in 
-Figure \ref{fig:strong:datamc:meff_prerw_0L}.
+Figure \ref{fig:strong:rwCR::datamc:meff_prerw_1L}; this is not present in the 0-lepton channel, as can be seen in 
+Figure \ref{fig:strong:rwCR::datamc:meff_prerw_0L}.
 This difference in trends is problematic for the analysis, since all of the \glspl{vr} require at least one signal lepton, 
 including the ones used to derive the prediction for 0-lepton \glspl{sr}.
 
@@ -23,6 +23,8 @@ The same trend in the ration data/MC in the \meff distribution has been observed
 therefore the reweighting is computed taking into account all backgrounds and applied to all backgrounds. 
 The binning of the reweighitng is chosen to be 50 GeV for most of the \meff spectrum, 
 while at high \meff the width of the bins is larger to allow $\approx$ 100 data events in each bin. 
+Before deriving the reweighting, the sum of the \gls{mc} predictions for the different backgrounds is scaled to the same integral as in data,
+so that the reweighting.
 The final reweighting for the 1-lepton channel is shown in the bottom panel of Figure \ref{fig:meff_in2b_no_corr}.
 
 \begin{figure}[htbp]
@@ -34,83 +36,103 @@ at least one lepton.}
 \label{fig:meff_in2b_no_corr}
 \end{figure}
 
+%\section{Validation of the reweighting}
+
+%The selection $\mtb$ $<$ 140 GeV in the region used to derive the reweighting allows at the same time to reduce the signal contamination 
+%and to have an orthogonal region, with $\mtb$ $>$ 140 GeV, where the reweighting can be validated.
+%Figures \ref{fig:strong:rwCR::datamc1L_a} to \ref{fig:strong:rwCR::datamc1L_d} show the distribution of the main kinematic variables
+%before and after the reweighting in a region with:
+%\begin{itemize}
+%\item At least one lepton,
+%\item $\met$ $>$ 200 GeV,
+%\item exactly 2 b-jets,
+%\item $\mtb$ $>$ 140 GeV.
+%\end{itemize}
+
 \section{Effect on other variables}
 
+Figures \ref{fig:strong:rwCR::datamc1L_a} to \ref{fig:strong:rwCR::datamc1L_d}
+show the effect of the reweighting on the main kinematic variables.
+We can see that the reweighting, derived using only the \meff distribution, improves the data-MC
+agreement in most of the energy-related variables.
+
 \begin{figure*}[htbp]
 \centering 
-\subfigure[\meff, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_meff_incl.pdf}
-\label{fig:strong:datamc1L:meff_incl}}
-\subfigure[\meff, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_meff_incl.pdf}
-\label{fig:strong:datamc1L:meff_incl}}\\
-\subfigure[\mjsum, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_MJSum_rc_r08pt10.pdf}
-\label{fig:strong:datamc1L:MJSum_rc_r08pt10}}
-\subfigure[\mjsum, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_MJSum_rc_r08pt10.pdf}
-\label{fig:strong:datamc1L:MJSum_rc_r08pt10}}\\
-\subfigure[\met, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_met.pdf}
-\label{fig:strong:datamc1L:met}}
-\subfigure[\met, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_met.pdf}
-\label{fig:strong:datamc1L:met}}\\
-\caption{Data-MC comparison in the 1-lepton preselection, before and after applying the kinematic reweighting.
+\subfigure[\meff, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_meff_incl.pdf}
+\label{fig:strong:rwCR::datamc1L:meff_incl}}
+\subfigure[\meff, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_meff_incl.pdf}
+\label{fig:strong:rwCR::datamc1L:meff_incl}}\\
+\subfigure[\mjsum, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_MJSum_rc_r08pt10.pdf}
+\label{fig:strong:rwCR::datamc1L:MJSum_rc_r08pt10}}
+\subfigure[\mjsum, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_MJSum_rc_r08pt10.pdf}
+\label{fig:strong:rwCR::datamc1L:MJSum_rc_r08pt10}}\\
+\subfigure[\met, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_met.pdf}
+\label{fig:strong:rwCR::datamc1L:met}}
+\subfigure[\met, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_met.pdf}
+\label{fig:strong:rwCR::datamc1L:met}}\\
+\caption{Data-MC comparison in the reweighting region, before and after applying the kinematic reweighting.
 }
-\label{fig:strong:datamc1L_a}
+\label{fig:strong:rwCR::datamc1L_a}
 \end{figure*}
 
 \begin{figure*}[htbp]
 \centering 
-\subfigure[$\phi$(\met), before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_met_phi.pdf}
-\label{fig:strong:datamc1L:met_phi}}
-\subfigure[$\phi$(\met), after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_met_phi.pdf}
-\label{fig:strong:datamc1L:met_phi}}\\
-\subfigure[\mt, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_mT.pdf}
-\label{fig:strong:datamc1L:mT}}
-\subfigure[\mt, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_mT.pdf}
-\label{fig:strong:datamc1L:mT}}\\
-\subfigure[\mtb, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_mTb_min.pdf}
-\label{fig:strong:datamc1L:mTb_min}}
-\subfigure[\mtb, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_mTb_min.pdf}
-\label{fig:strong:datamc1L:mTb_min}}
-\caption{Data-MC comparison in the 1-lepton preselection, before and after applying the kinematic reweighting.
+\subfigure[$\phi$(\met), before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_met_phi.pdf}
+\label{fig:strong:rwCR::datamc1L:met_phi}}
+\subfigure[$\phi$(\met), after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_met_phi.pdf}
+\label{fig:strong:rwCR::datamc1L:met_phi}}\\
+\subfigure[\mt, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_mT.pdf}
+\label{fig:strong:rwCR::datamc1L:mT}}
+\subfigure[\mt, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_mT.pdf}
+\label{fig:strong:rwCR::datamc1L:mT}}\\
+\subfigure[\mtb, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_mTb_min.pdf}
+\label{fig:strong:rwCR::datamc1L:mTb_min}}
+\subfigure[\mtb, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_mTb_min.pdf}
+\label{fig:strong:rwCR::datamc1L:mTb_min}}
+\caption{Data-MC comparison in the reweighting region, before and after applying the kinematic reweighting.
 }
-\label{fig:strong:datamc1L_b}
+\label{fig:strong:rwCR::datamc1L_b}
 \end{figure*}
 
 \begin{figure*}[htbp]
 \centering 
-\subfigure[\njet, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_jets_n.pdf}
-\label{fig:strong:datamc1L:jets_n}}
-\subfigure[\njet, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_jets_n.pdf}
-\label{fig:strong:datamc1L:jets_n}}\\
-\subfigure[\nbjet, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_bjets_n.pdf}
-\label{fig:strong:datamc1L:bjets_n}}
-\subfigure[\nbjet, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_bjets_n.pdf}
-\label{fig:strong:datamc1L:bjets_n}}\\
-\subfigure[\pt jet$_1$, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_pt_jet_1.pdf}
-\label{fig:strong:datamc1L:pt_jet_1}}
-\subfigure[\pt jet$_1$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_pt_jet_1.pdf}
-\label{fig:strong:datamc1L:pt_jet_1}}\\
-\caption{Data-MC comparison in the 1-lepton preselection, after applying the kinematic reweighting.
+\subfigure[\njet, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_jets_n.pdf}
+\label{fig:strong:rwCR::datamc1L:jets_n}}
+\subfigure[\njet, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_jets_n.pdf}
+\label{fig:strong:rwCR::datamc1L:jets_n}}\\
+\subfigure[\nbjet, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_bjets_n.pdf}
+\label{fig:strong:rwCR::datamc1L:bjets_n}}
+\subfigure[\nbjet, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_bjets_n.pdf}
+\label{fig:strong:rwCR::datamc1L:bjets_n}}\\
+\subfigure[\pt jet$_1$, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_pt_jet_1.pdf}
+\label{fig:strong:rwCR::datamc1L:pt_jet_1}}
+\subfigure[\pt jet$_1$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_pt_jet_1.pdf}
+\label{fig:strong:rwCR::datamc1L:pt_jet_1}}\\
+\caption{Data-MC comparison in the reweighting region, after applying the kinematic reweighting.
 }
-\label{fig:strong:datamc1L_c}
+\label{fig:strong:rwCR::datamc1L_c}
 \end{figure*}
 
 \begin{figure*}[htbp]
 \centering 
-\subfigure[\pt jet$_2$, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_pt_jet_2.pdf}
-\label{fig:strong:datamc1L:pt_jet_2}}
-\subfigure[\pt jet$_2$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_pt_jet_2.pdf}
-\label{fig:strong:datamc1L:pt_jet_2}}\\
-\subfigure[\pt lep$_1$, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_pt_lep_1.pdf}
-\label{fig:strong:datamc1L:ptlep1}}
-\subfigure[\pt lep$_1$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_pt_lep_1.pdf}
-\label{fig:strong:datamc1L:ptlep1}}\\
-\subfigure[\pt b-jet$_1$, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin/data_mc_pt_bjet_1.pdf}
-\label{fig:strong:datamc1L:pt_bjet_1}}
-\subfigure[\pt b-jet$_1$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rw/data_mc_pt_bjet_1.pdf}
-\label{fig:strong:datamc1L:pt_bjet_1}}
-\caption{Data-MC comparison in the 1-lepton preselection, after applying the kinematic reweighting.
+\subfigure[\pt jet$_2$, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_pt_jet_2.pdf}
+\label{fig:strong:rwCR::datamc1L:pt_jet_2}}
+\subfigure[\pt jet$_2$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_pt_jet_2.pdf}
+\label{fig:strong:rwCR::datamc1L:pt_jet_2}}\\
+\subfigure[\pt lep$_1$, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_pt_lep_1.pdf}
+\label{fig:strong:rwCR::datamc1L:ptlep1}}
+\subfigure[\pt lep$_1$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_pt_lep_1.pdf}
+\label{fig:strong:rwCR::datamc1L:ptlep1}}\\
+\subfigure[\pt b-jet$_1$, before reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR/data_mc_pt_bjet_1.pdf}
+\label{fig:strong:rwCR::datamc1L:pt_bjet_1}}
+\subfigure[\pt b-jet$_1$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_pt_bjet_1.pdf}
+\label{fig:strong:rwCR::datamc1L:pt_bjet_1}}
+\caption{Data-MC comparison in the reweighting region, after applying the kinematic reweighting.
 }
-\label{fig:strong:datamc1L_d}
+\label{fig:strong:rwCR::datamc1L_d}
 \end{figure*}
 
-\section{Validation in orthogonal region}
+
+
+
 
