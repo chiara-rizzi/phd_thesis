@@ -20,3 +20,8 @@ feynman/*.pdf
 test_plots/
 thesis_current.pdf
 *#*
+main.glg
+main.glo
+main.gls
+main.ist
+
