@@ -10,7 +10,20 @@ and then orders based on \pt. Practically, this results in the following criteri
 \item If there are less than four b-tagged jets, the selected ones are the b-tagged ones and the non-tagged ones with highest \pt.
 \end{itemize} 
 
-\section{Analysis Variables}
+Once the four jets have been selected, they are grouped in two pairs, each one constituting a candidate Higgs bosons. 
+Different algorithms to pair the jets have been tested, and the chosen one is based on minimizing the angular separation 
+between the two jets associated to the same Higgs boson candidate. 
+In particular, the permutation chosen is the one that minimizes:
+\begin{equation}
+\dRmax = \mathrm{max}(\Delta R(h_1), \Delta R(h_2)) \; ,
+\end{equation}
+
+\noindent where $\Delta R(h)$ is the distance in the $\eta-\phi$ space between the two jest from the same candidate.
+This choice has a good efficiency in reconstructing the Higgs bosons in the signal, 
+and at the same time avoids creating artificial peaks in the background in correspondence of the Higgs boson mass. 
+
+
+\section{Discriminating Variables}
 
 
 \section{Pre-fit Data-MC}
