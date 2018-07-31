@@ -1,4 +1,5 @@
-\section{Higgs Reconstruction}
+\section{Higgs reconstruction}
+\label{sec:ewk:higgsreco}
 
 A key ingredient of the analysis is the reconstruction of the two Higgs bosons form the decay of the Higgsinos.
 Since this analysis targets events where both Higgs bosons decay to a $b\bar{b}$ pair, the reconstruction starts 
@@ -22,8 +23,32 @@ In particular, the permutation chosen is the one that minimizes:
 This choice has a good efficiency in reconstructing the Higgs bosons in the signal, 
 and at the same time avoids creating artificial peaks in the background in correspondence of the Higgs boson mass. 
 
+\section{Kinematic variables specific to this analysis}
 
-\section{Discriminating Variables}
+Beside the variables described in Section \ref{sec:common_variables}, a few other discriminating variables particularly 
+effective for this signal model are described in this section.
+
+\subsubsection*{Candidate Higgs bosons}
+
+The invariant mass of the two Higgs boson candidates built following the procedure outlined in Section \ref{sec:ewk:higgsreco} 
+are used as discriminating variable. In particular, we refer to m($h_1$) and m($h_2$) respectively for the mass of the Higgs candidate with 
+the leading and sub-leading mass.
+
+The variable \dRmax, defined in the previous section, is used to choose the pairing of the jets while reconstructing 
+the Higgs boson candidates but also as a discriminating variable to separate signal and background. 
+
+\subsubsection*{Modified Effective mass}
+
+In the signal model, only four jets come from the hard scattering process, and are therefore expected to be more energetic than the 
+remaining jets in the event. Therefore the \meff definition is modified to include only the jets that are selected 
+as originating from a Higgs boson; the modified definition is therefore:
+\begin{equation}
+\meffb = \sum_{i=1,..,4} {\pt}^{j_i} + \met
+\end{equation}
+\noindent where the sum runs over the jets selected according to the ordering procedure presented in Section \ref{sec:ewk:higgsreco}. 
+
+
+\section{Discriminating variables}
 
 In this section we show how the variables defined in Section \ref{sec:common_variables} and the ones related
 to the Higgs boson reconstruction (\dRmax defined in the previous section, and the mass of the reconstructed Higgs boson candidates)
@@ -35,7 +60,7 @@ Figures \ref{fig:strong:sig:bjets_n} to \ref{fig:strong:sig:met} show the distri
 the sum of the \gls{sm} backgrounds and for selected signal samples. 
 
 
-\section{Signal Regions}
+\section{Signal regions}
 
 \begin{figure}[htbp]
 	\centering
