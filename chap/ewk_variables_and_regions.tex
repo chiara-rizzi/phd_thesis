@@ -161,12 +161,41 @@ $m(h_2)$ &    \multicolumn{5}{|c|}{90--140}\\
 
 \section{Control and validation regions}
 
+The \ttbar background is normalized in specifically designed \glspl{cr}.
+A different \gls{cr} is built for each bin in \meffb and b-tagging multiplicity. 
+These \glspl{cr} are built using side-bands both in m($h_1$) and m($h_2$). 
+The extrapolation between \glspl{cr} and \glspl{sr} is tested in the \glspl{vr}, which take advantage of events
+where only one between m($h_1$) and m($h_2$) is in the \gls{sr} mass range, 
+as shown in Figure \ref{fig:binning_crvr}.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.490\textwidth]{figures/ewk_prod/varie/schema-1}
 	\caption{The division of signal, control, and validation regions using the $m(h_1)$ and $m(h_2)$ variables in the high-mass analysis.}
 	\label{fig:binning_crvr}
 \end{figure}
+
+Some of the selections of the \glspl{sr} are modified when moving to the \glspl{cr} or \glspl{vr}
+ to allow enough statistics and low signal contamination.
+The main extrapolation between \glspl{cr} and \glspl{sr} are:
+
+\begin{itemize}
+\item In the CR, both m($h_1$) and m($h_2$) are required to be outside the SR mass ranges.
+\item \dRmax is relaxed to $<$4 (or removed).
+\item \mtb is relaxed by 30 GeV in 3b-meff3 and by 50 GeV in 3b-meff1 and 3b-meff2.
+\end{itemize}
+
+To allow enough statistics in the VRs, the VRs are \textbf{non orthogonal}. Since these regions do not enter the fit, but are only used to validate the background prediction, non-orthogonality is not an issue here. 
+The selections that remove the orthogonality between the different \glspl{vr} are:
+\begin{itemize}
+\item The edges of \meffb selection are relaxed by 50 GeV up and down.
+\item The edges of the \dRmax bins are relaxed and, when two \dRmax bins are present for the same type of regions, they are partially overlapping.
+\end{itemize}
+
+With respect to the \glspl{sr}, the \mtb selection (where present) is relaxed as well by 50 GeV. 
+Note that \glspl{cr} and \glspl{vr} do not have extrapolation in \nbjet or \njet with respect to the SRs.
+The selections for all the \glspl{cr} and \glspl{vr} are summarized respectively in Tables \ref{tab:ewk:CR} and \ref{tab:ewk:VR}.
+
 
 \begin{table}[htbp]
 \begin{center}
@@ -197,7 +226,7 @@ $m(h_1)$, $m(h_2)$  &  \multicolumn{5}{|c|}{ ($m(h_1)<$80, $m(h_2)<$80) or ($m(h
 \caption{Control region definitions in the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. 
 %These variables are defined in Section~\ref{high_event_selection}.
 }
-\label{tab:CR}
+\label{tab:ewk:CR}
 \end{center}
 \end{table}
 
@@ -254,9 +283,13 @@ $m(h_1)$, $m(h_2)$  &  \multicolumn{4}{|c|}{   (80<$m(h_1)$<150, $m(h_2)$<80) or
 \caption{Validation region definitions in the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. 
 %These variables are defined in Section~\ref{high_event_selection}.
 }
-\label{tab:VR}
+\label{tab:ewk:VR}
 \end{center}
 \end{table}
+
+\section{Composition of the analysis regions}
+
+\FloatBarrier
 
 \section{Pre-fit Data-MC}
 
