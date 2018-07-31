@@ -150,8 +150,37 @@ This makes it more convenient to define the selection that maximize the expected
 as a single-bin region, to concentrate as much as possible the signal events in one single \gls{sr}, 
 instead of diluting it in several \glspl{sr}.% to try to exploit shape information.
 The optimal selection for the high-m(\hino) benchmark signal occupies the highest \meffb bin,
-and is determined my maximizing the expected significance over all the other discriminating variables.
+and is determined my maximizing the expected significance over all the other discriminating variables,
+leading to the selection:
+\meffb $>$ 1100 GeV, \mtb$>$130 GeV, \dRmax $<$ 1.4, \met $>$200, $\geq$ 3 b-jets (77\% WP), 
+4-5 jets, m($h_1$) in 110-150 GeV, m($h_2$) in 90-140 GeV.
 
+Considering the separation power of the different variables shown in Figure  \ref{fig:ewk:separation} 
+and the signal-to-background comparison in Figure \ref{fig:ewk:sig:1}, 
+\dRmax is chosen as second binning variable. 
+%to gain signal acceptance also for signals less boosted than the 800 GeV mass one, where the angular separation between the two b-jets originating from the same higgs is larger.
+Once the selections for the high-\meffb \gls{sr} have been defined, 
+a similar procedure is repeated for the other \meffb ranges: 600-850 GeV and 850-1100 GeV. 
+These two bins with lower \meffb are also split according to the number of b-jets: exactly 3 and $\geq$4. 
+The two bins in b-jet multiplicity are optimized separately. 
+For each of the four remaining regions, the following steps are taken:
+
+\begin{enumerate}
+\item Optimize for one specific signal benchmark: 300, 500 GeV respectively for the 600-850 and 850-1100 GeV \meffb bins.
+\item  Where possible with a loss in significance $<$ 15\%, the selections are made uniform. 
+This results to be the case for the m(h1) and m(h2) ranges, for the selection in \met, for the first bin in \dRmax, 
+and for the number of jets. In the case of this last variable, it is possible to make it uniform (4-5 jets) 
+without consistent loss in sensitivity in all bins except in the 4b-meff2 bin, where a veto on a 6th jet is penalizing; 
+in this region, the selection on the number of jets is 4-6.
+\item Use \dRmax to define further bins.
+\end{enumerate}
+
+It is found that a second bin in \dRmax is really helpful only in the regions with low and intermediate \meffb, and  $\geq$ 4 b-jets. 
+This is because the highest \meffb region is particularly sensitive to high-mass signals, where \dRmax is small. 
+For signals with lower masses, the signal-to-background ratio in regions with exactly 3 b-jets and high \dRmax is too low, 
+while the requirement of a fourth b-jet suppresses the \gls{sm} background further and gives good sensitivity 
+also to the region of phase space with higher \dRmax.
+The final \glspl{sr} selections are summarized in Table \ref{tab:SR}.
 
 \begin{table}[htbp]
 \begin{center}
@@ -213,6 +242,37 @@ $m(h_2)$ &    \multicolumn{5}{|c|}{90--140}\\
 \label{tab:SR}
 \end{center}
 \end{table}
+
+\subsection{Cut-and-count regions}
+
+The analysis strategy described above leads to a good sensitivity for exclusion across the entire mass spectrum, 
+but the constraint of building orthogonal regions makes it hard to have an high discovery significance 
+for signals with intermediate masses. 
+To solve this problem cut-and-count \glspl{sr} are defined as well, with the goal of
+providing robust regions capable of discovery of \gls{susy} signatures, 
+and allowing an easier re-interpretation of the results.
+
+The upper selection on \meffb, that makes the different \glspl{sr} orthogonal, 
+limits the most the sensitivity of the individual \glspl{sr}.
+In the exclusion fit this is not a problem, as the sensitivity lost in one bin is reovered in the neighbouring one. 
+To define the discovery regions, all the individual \glspl{sr} are considered without the upper cut on \meffb
+and the expected significance for some benchmark signal models is computed in each. 
+The expected significance is computed as discussed in Section \ref{sec:example_sr}, 
+assuming 36.1 \ifb of data and a flat 30\% background uncertainty. 
+
+Figure \ref{fig:ewk:disc_sig} shows the expected significance for all the multi-bin analysis regions once the upper \meffb 
+selection is removed. 
+Using only the modified versions of SR-4b-meff1-A and SR-3b-meff3 (orange and green line respectively in the figure) allow us to have good expected sensitivity for the entire mass spectrum. 
+This is always $>$3 for all the masses in the 300-600 GeV range, and $\approx$ 2.5 for the 800 GeV signal. 
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/ewk_prod/discovery/significances_hh_regions.pdf}
+\label{fig:ewk:disc_sig}
+\caption{Expected significance for the multi-bin regions after removing the upper \meffb selection. 
+}
+\end{figure*}
+
 
 \section{Control and validation regions}
 
