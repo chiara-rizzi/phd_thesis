@@ -98,6 +98,30 @@ Therefore, the analysis selection are optimized to maximize the expected sensiti
 and all the \glspl{sr} require both boson candidates to have masses compatible with the Higgs mass (the specific mass range is chosen during the optimization). 
 %The target signal model is shown in Figure \ref{fig:opt_sighh4b}.
 
+The optimization aims at constructing several orthogonal \glspl{sr}, that can be combined in a fit. 
+The general strategy adopted follows these steps:
+\begin{enumerate}
+\item A first variable (var1) is chosen to define a coarse binning (3 or 4 bins). 
+    This variables should provide both a good signal-to-background discrimination and discrimination between signal 
+    with different Higgsino masses.
+\item For each of these bins in var1, a \gls{cr} is defined to normalize the \ttbar background in a kinematic regime close to the corresponding \gls{sr}.
+\item Each bin based on var1 is further split based on a second variable, var2 (in this case all the bins based on the second variable share the same \gls{cr}).
+\item The selections on the remaining kinematic variables are optimized independently in each var1-bin (i.e. all the regions sharing the same CR have the same selections on all the variables except var2).
+\end{enumerate}
+
+\noindent As described above, var1 must be able to provide at the same time a good separation between signal and background 
+and a good separation between signals with different \hino masses. 
+The latter is necessary in order to be able to optimize each bin in var1 based on a different signal mass, 
+providing in the end a good sensitivity to the entire mass spectrum. 
+In order to understand which variable works best for this scope, the separation algorithm provided by the TMVA toolkit \footnote{TMVA is a toolkit designed for multivariate analyses, this in not the case here: it's only used as a quick way to access the discrimination power of the individual variables.} \cite{Hocker:2007ht} is used, defined as:
+
+\begin{equation}
+          \mathrm{separation} = \frac{1}{2} \int\frac{\left(y_s(x) - y_b(x)\right)^2}{y_s(x) + y_b(x)} dx \; , 
+\label{eq:separation}
+\end{equation}
+\noindent where $y_s$ and $y_b$ are the signal and background PDFs of $y$. 
+
+
 \begin{table}[htbp]
 \begin{center}
 %\resizebox{1.\textwidth}{!}{
