@@ -101,31 +101,57 @@ implies a decrease in production cross section, which will be the limiting facto
 \begin{table}[h]
 \caption{Signal region definitions for the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. These variables are defined in Section~\ref{high_event_selection}.}
 \begin{center}
-\resizebox{1.\textwidth}{!}{
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+%\resizebox{1.\textwidth}{!}{
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{|l|c|c|c|}
 \hline
-  & SR-3b-meff1-A & SR-3b-meff2-A & SR-3b-meff3-A & SR-4b-meff1-A & SR-4b-meff1-B & SR-4b-meff2-A & SR-4b-meff2-B  & SR-4b-meff1-A-disc \\
+  & SR-3b-meff1-A & SR-3b-meff2-A & SR-3b-meff3-A\\
  \hline
-\nbjet &  $=$3 &  $=$3 &  $\geq$3 &  $\geq$4 &  $\geq$4 &  $\geq$4 &  $\geq$4  & $\geq4$\\
+\nbjet &  $=$3 &  $=$3 &  $\geq$3 \\
  \hline
-\met & \multicolumn{8}{|c|}{$>$ 200}\\
+\met & \multicolumn{3}{|c|}{$>$ 200}\\
 \hline
-\dphimin    & \multicolumn{8}{|c|}{$>$0.4}\\
+\dphimin    & \multicolumn{3}{|c|}{$>$0.4}\\
  \hline
-\njet &  4--5 &  4--5 &  4--5 &  4--5 &  4--5 &  4--6 &  4--6 & 4--5\\
+\njet &  4--5 &  4--5 &  4--5 \\
  \hline
-\mtb &  $>$150 &  $>$150 &  $>$130 & - & - & - & - & - \\
+\mtb &  $>$150 &  $>$150 &  $>$130 \\
  \hline
-$m(h_1)$ &    \multicolumn{8}{|c|}{110--150}\\
+$m(h_1)$ &    \multicolumn{3}{|c|}{110--150}\\
  \hline
-$m(h_2)$ &    \multicolumn{8}{|c|}{90--140}\\
+$m(h_2)$ &    \multicolumn{3}{|c|}{90--140}\\
  \hline
-\dRmax &  0.4--1.4 &  0.4--1.4 &  0.4--1.4 &  0.4--1.4 &  1.4--2.4 &  0.4--1.4 &  1.4--2.4 & 0.4--1.4 \\
+\dRmax &  0.4--1.4 &  0.4--1.4 &  0.4--1.4 \\
  \hline
-\meffb &  600--850 &  850--1100 &  $>$1100 &  600--850 &  600--850 &  850--1100 &  850--1100 & $>600$ \\
+\meffb &  600--850 &  850--1100 &  $>$1100  \\
  \hline
 \end{tabular} 
-}
+
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+   & SR-4b-meff1-A & SR-4b-meff1-B & SR-4b-meff2-A & SR-4b-meff2-B  & SR-4b-meff1-A-disc \\
+ \hline
+\nbjet &  $\geq$4 &  $\geq$4 &  $\geq$4 &  $\geq$4  & $\geq4$\\
+ \hline
+\met & \multicolumn{5}{|c|}{$>$ 200}\\
+\hline
+\dphimin    & \multicolumn{5}{|c|}{$>$0.4}\\
+ \hline
+\njet & 4--5 &  4--5 &  4--6 &  4--6 & 4--5\\
+ \hline
+\mtb &   - & - & - & - & - \\
+ \hline
+$m(h_1)$ &    \multicolumn{5}{|c|}{110--150}\\
+ \hline
+$m(h_2)$ &    \multicolumn{5}{|c|}{90--140}\\
+ \hline
+\dRmax &   0.4--1.4 &  1.4--2.4 &  0.4--1.4 &  1.4--2.4 & 0.4--1.4 \\
+ \hline
+\meffb &  600--850 &  600--850 &  850--1100 &  850--1100 & $>600$ \\
+ \hline
+\end{tabular} 
+
+%}
 
 \label{tab:SR}
 \end{center}
@@ -136,7 +162,8 @@ $m(h_2)$ &    \multicolumn{8}{|c|}{90--140}\\
 \begin{table}[h]
 \caption{Control region definitions in the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. These variables are defined in Section~\ref{high_event_selection}.}
 \begin{center}
-\resizebox{0.75\textwidth}{!}{
+%\resizebox{0.75\textwidth}{!}{
+\renewcommand{\arraystretch}{1.1}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
   & CR-3b-meff1 & CR-3b-meff2 & CR-3b-meff3 & CR-4b-meff1 & CR-4b-meff2 \\
@@ -158,7 +185,7 @@ $m(h_1)$, $m(h_2)$  &  \multicolumn{5}{|c|}{ ($m(h_1)<$80, $m(h_2)<$80) or ($m(h
 \meffb &  600--850 &  850--1100 &  $>$1100 &  600--850 &  850--1100 \\
  \hline
 \end{tabular} 
-} 
+%} 
 \label{tab:CR}
 \end{center}
 \end{table}
