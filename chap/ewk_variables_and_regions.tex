@@ -103,7 +103,7 @@ implies a decrease in production cross section, which will be the limiting facto
 %\resizebox{1.\textwidth}{!}{
 \renewcommand{\arraystretch}{1.1}
 \begin{tabular}{|l|c|c|c|}
-\hline
+\toprule
   & SR-3b-meff1-A & SR-3b-meff2-A & SR-3b-meff3-A\\
  \hline
 \nbjet &  $=$3 &  $=$3 &  $\geq$3 \\
@@ -123,11 +123,13 @@ $m(h_2)$ &    \multicolumn{3}{|c|}{90--140}\\
 \dRmax &  0.4--1.4 &  0.4--1.4 &  0.4--1.4 \\
  \hline
 \meffb &  600--850 &  850--1100 &  $>$1100  \\
- \hline
+\bottomrule
 \end{tabular} 
 
+\vspace{0.4cm}
+
 \begin{tabular}{|l|c|c|c|c|c|}
-\hline
+\toprule
    & SR-4b-meff1-A & SR-4b-meff1-B & SR-4b-meff2-A & SR-4b-meff2-B  & SR-4b-meff1-A-disc \\
  \hline
 \nbjet &  $\geq$4 &  $\geq$4 &  $\geq$4 &  $\geq$4  & $\geq4$\\
@@ -147,9 +149,8 @@ $m(h_2)$ &    \multicolumn{5}{|c|}{90--140}\\
 \dRmax &   0.4--1.4 &  1.4--2.4 &  0.4--1.4 &  1.4--2.4 & 0.4--1.4 \\
  \hline
 \meffb &  600--850 &  600--850 &  850--1100 &  850--1100 & $>600$ \\
- \hline
+\bottomrule
 \end{tabular} 
-
 %}
 \caption{Signal region definitions for the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. These variables are defined in Section~\ref{high_event_selection}.}
 \label{tab:SR}
@@ -163,7 +164,7 @@ $m(h_2)$ &    \multicolumn{5}{|c|}{90--140}\\
 %\resizebox{0.75\textwidth}{!}{
 \renewcommand{\arraystretch}{1.1}
 \begin{tabular}{|l|c|c|c|c|c|}
-\hline
+\toprule
   & CR-3b-meff1 & CR-3b-meff2 & CR-3b-meff3 & CR-4b-meff1 & CR-4b-meff2 \\
  \hline
 \nbjet &  $=$3 &  $=$3 &  $\geq$3 &  $\geq$4 &  $\geq$4 \\
@@ -181,7 +182,7 @@ $m(h_1)$, $m(h_2)$  &  \multicolumn{5}{|c|}{ ($m(h_1)<$80, $m(h_2)<$80) or ($m(h
 \dRmax &  0.4--4 &  0.4--4 &  0.4--4 &  0.4--4 &  $\geq$ 0.4 \\
  \hline
 \meffb &  600--850 &  850--1100 &  $>$1100 &  600--850 &  850--1100 \\
- \hline
+\bottomrule
 \end{tabular} 
 %} 
 \caption{Control region definitions in the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. These variables are defined in Section~\ref{high_event_selection}.}
@@ -189,32 +190,57 @@ $m(h_1)$, $m(h_2)$  &  \multicolumn{5}{|c|}{ ($m(h_1)<$80, $m(h_2)<$80) or ($m(h
 \end{center}
 \end{table}
 
-\begin{table}[h]
-\caption{Validation region definitions in the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. These variables are defined in Section~\ref{high_event_selection}.}
+\begin{table}[htbp]
 \begin{center}
-\resizebox{1\textwidth}{!}{
-\begin{tabular}{|l|c|c|c|c|c|c|c|}
-\hline
-  & VR-3b-meff1-A & VR-3b-meff2-A & VR-3b-meff3-A & VR-4b-meff1-A & VR-4b-meff1-B & VR-4b-meff2-A & VR-4b-meff2-B \\
+\renewcommand{\arraystretch}{1.1}
+%\resizebox{1\textwidth}{!}{
+\begin{tabular}{|l|c|c|c|}
+\toprule
+  & VR-3b-meff1-A & VR-3b-meff2-A & VR-3b-meff3-A \\
  \hline
-\nbjet &  $=$3 &  $=$3 &  $\geq$3 &  $\geq$4 &  $\geq$4 &  $\geq$4 &  $\geq$4 \\
+\nbjet &  $=$3 &  $=$3 &  $\geq$3  \\
  \hline
-\met  &  \multicolumn{7}{|c|}{$>$200}\\
+\met  &  \multicolumn{3}{|c|}{$>$200}\\
  \hline
-\dphimin &  \multicolumn{7}{|c|}{$>$0.4}\\
+\dphimin &  \multicolumn{3}{|c|}{$>$0.4}\\
  \hline
-\njet &  4--5 &  4--5 &  4--5 &  4--5 &  4--5 &  4--6 &  4--6 \\
+\njet &  4--5 &  4--5 &  4--5 \\
  \hline
-\mtb  & $>$120   & $>$100  & $>$80  & -  &  - & -  & -  \\
+\mtb  & $>$120   & $>$100  & $>$80 \\
  \hline
-$m(h_1)$, $m(h_2)$  &  \multicolumn{7}{|c|}{   (80<$m(h_1)$<150, $m(h_2)$<80) or ($m(h_1)$>150, 90<$m(h_2)$<140)   }\\
+$m(h_1)$, $m(h_2)$  &  \multicolumn{3}{|c|}{   (80<$m(h_1)$<150, $m(h_2)$<80) or ($m(h_1)$>150, 90<$m(h_2)$<140)   }\\
  \hline
-\dRmax &  0.4--1.5 &  0.4--1.7 &  0.4--1.7 &  0.4--1.7 &  1.4--3 &  0.4--1.7 &  1.4--3 \\
+\dRmax &  0.4--1.5 &  0.4--1.7 &  0.4--1.7  \\
  \hline
-\meffb   & 550--900   & 800--1150  & $>$1050  & 550--900  & 550--900  & 800--1150  & 800--1150  \\
- \hline
+\meffb   & 550--900   & 800--1150  & $>$1050    \\
+\bottomrule
 \end{tabular} 
-} 
+
+\vspace{0.4cm}
+
+\begin{tabular}{|l|c|c|c|c|}
+\toprule
+  &  VR-4b-meff1-A & VR-4b-meff1-B & VR-4b-meff2-A & VR-4b-meff2-B \\
+ \hline
+\nbjet &   $\geq$4 &  $\geq$4 &  $\geq$4 &  $\geq$4 \\
+ \hline
+\met  &  \multicolumn{4}{|c|}{$>$200}\\
+ \hline
+\dphimin &  \multicolumn{4}{|c|}{$>$0.4}\\
+ \hline
+\njet &   4--5 &  4--5 &  4--6 &  4--6 \\
+ \hline
+\mtb   &  \multicolumn{4}{|c|}{-}\\
+ \hline
+$m(h_1)$, $m(h_2)$  &  \multicolumn{4}{|c|}{   (80<$m(h_1)$<150, $m(h_2)$<80) or ($m(h_1)$>150, 90<$m(h_2)$<140)   }\\
+ \hline
+\dRmax &   0.4--1.7 &  1.4--3 &  0.4--1.7 &  1.4--3 \\
+ \hline
+\meffb   &  550--900  & 550--900  & 800--1150  & 800--1150  \\
+\bottomrule
+\end{tabular} 
+%} 
+\caption{Validation region definitions in the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. These variables are defined in Section~\ref{high_event_selection}.}
 \label{tab:VR}
 \end{center}
 \end{table}
