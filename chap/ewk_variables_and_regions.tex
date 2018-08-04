@@ -467,7 +467,7 @@ this section therefore focuses on the variables specific to Higgs boson reconstr
 The data-\gls{mc} agreement for the variables already shown in Section \ref{sec:strong:dataMC} but with the object definitions 
 specific to this analysis are shown in Appendix \ref{app:ewk:datamc}.
 There is nevertheless a notable exception: in the analysis described in this chapter, the data-\gls{mc} agreement in the 
-distribution of the number of b-jets is improved, as can be appreciated comparing Figure \ref{fig:strong:datamc0L:bjets_n} with Figure \ref{fig:ewk:datamc:bjets_n}.
+distribution of the number of b-jets is improved, as can be appreciated comparing Figure \ref{fig:strong:datamc0L:bjets_n} with Figure \ref{fig:ewk:datamc_bjets}.
 This is the result of the improvement in the b-tagging calibration, discussed in Section \ref{sec:obj:btaggingcalib}.
 The other important difference with respect to the strong-production analysis is that in this case the analysis is performed 
 only in regions with a lepton veto; it is not therefore sensitive to the mismodelling in the 1-lepton channel discussed in Section 
@@ -478,10 +478,16 @@ agreement between data and the \gls{mc} simulation.
 
 \begin{figure*}[htbp]
 \centering 
-%\subfigure[\njet]{\includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_jets_n.pdf}
-%\label{fig:ewk:datamc:jets_n}}
-\subfigure[\nbjet]{\includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_bjets_n.pdf}
-\label{fig:ewk:datamc:bjets_n}}\\
+%\subfigure[\nbjet]{
+\includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_bjets_n.pdf}
+%\label{fig:ewk:datamc:bjets_n}}\\
+\caption{Data-MC comparison of the number of b-jets in the preselection described in the text.
+}
+\label{fig:ewk:datamc_bjets}
+\end{figure*}
+
+\begin{figure*}[htbp]
+\centering 
 \subfigure[m($h_1$)]{\includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_mass_h2_min_dR.pdf}
 \label{fig:ewk:datamc:mass_h2_min_dR}}
 \subfigure[m($h_2$)]{\includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_mass_h2_min_dR.pdf}
@@ -490,7 +496,10 @@ agreement between data and the \gls{mc} simulation.
 \label{fig:ewk:datamc:dRmax_dR}}
 \subfigure[\meffb]{\includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_meff_4bj.pdf}
 \label{fig:ewk:datamc:pt_meff_4bj}}
-\caption{Data-MC comparison in the preselection, described in the text.
+\caption{Data-MC comparison in the preselection described in the text.
 }
 \label{fig:ewk:datamc_a}
 \end{figure*}
+
+\clearpage
+
