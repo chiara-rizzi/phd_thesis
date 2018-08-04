@@ -7,7 +7,36 @@ have increasingly low \pt, and a low \pt \gravino does not produce enough \met t
 in the analysis. 
 To gain sensitivity also to the low-\mhino part of the mass spectrum, which is particularly interesting for Naturalness arguments, 
 this analysis is complemented by a second analysis that targets low-\met events, referred to as "low-mass" analysis. 
+This analysis selects events with at least four b-tagged jets, using a b-tagging \gls{op} with an efficiency of 70\%
+(tighter than the 77\% used in the high-mass analysis).
+The jets used to reconstruct the Higgs candidates are the four with the highest b-tagging score, and are paired minimizing the quantity 
+$D_{hh}$, defined as:
+\begin{equation}
+  D_{hh} = \left|m_{2j}^\textrm{lead} - \frac{120}{110}m_{2j}^\textrm{subl}\right| \; ,
+\end{equation}
+where $m_{2j}^\textrm{lead}$ and $m_{2j}^\textrm{subl}$ are the masses of the Higgs boson candidates with leading and subleading \pt respectively.
+This pairing choice tends to create two Higgs candidates with similar mass; 
+for low Higgsino masses the b-jets originating form the decay of the Higgs bosons are less collimated, 
+and this choice is therefore more effective than minimizing \dRmax. 
 
+The main background is constituted by multijet events and a small number of \ttbar events, as opposed to the
+high mass analysis, where multijet is an almost-negligible background after applying the \dphimin selection. 
+The background from \ttbar events is further reduced by requiring $X_{Wt}>1.8$, defined as:
+
+\begin{equation}
+ X_{Wt} = \sqrt{\left( \frac{m_W - 80.4\,\ \gev}{0.1 \times m_W} \right)^2 + \left( \frac{m_t - 172.5\,\ \gev}{0.1 \times m_t} \right)^2 } \;,
+\label{eqn:xwt}
+\end{equation}
+
+\noindent where the top and W-boson candidates are built as described in Ref \cite{Aaboud:2018htj}. 
+A low value of $X_{Wt}$ corresponds to a high probability of the event to be a \ttbar event. 
+
+The \gls{sr} is defined by requiring: 
+\begin{equation}
+X_{hh}^\textrm{SR} = \sqrt{ \left( \frac{m_{2j}^\textrm{lead} - 120\ \gev}{0.1\times m_{2j}^\textrm{lead}} \right)^2 + \left( \frac{m_{2j}^\textrm{subl} - 110\ \gev}{0.1\times m_{2j}^\textrm{subl}} \right)^2} \ <\ 1.6,
+\end{equation}
+\noindent where $0.1 \times m_{2j}^\textrm{lead}$ and $0.1 \times m_{2j}^\textrm{subl}$ approximate the mass resolution of the two Higgs 
+boson candidates. 
 
 
 \section{Combined Results}
