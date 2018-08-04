@@ -13,7 +13,7 @@ _base_:
 	@$(BUILD_GLOSSARY)
 	#@$(BASIC_BUILD) #&>/dev/null
 	#@$(BASIC_BUILD) #&>/dev/null
-	#@$(CLEAN)
+	@$(CLEAN)
 
 clean:
 	@$(CLEAN)
