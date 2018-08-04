@@ -25,10 +25,20 @@ If we compare with the equivalent result for the strong production analysis, in 
 to see that on average the \ttbar scale factors assume values closer to one. 
 This is again because of the improvement in the b-tagging scale factors that took place between the two analyses. 
 The fit in the \glspl{cr} is extrapolated to the \glspl{vr} and to the \glspl{sr}. 
-The post-fit data-\gls{mc} agreement in the \glspl{vr} is shown in Figure \ref{fig:pullVR}: the top panel of this figure 
+
+The post-fit data-\gls{mc} agreement in the \glspl{vr} is shown in Figure \ref{fig:ewk:pullVR}: the top panel of this figure 
 shows the post-fit predicted yields in each of the \glspl{vr} and the data yields, while the bottom panel quantifies the 
 difference between observed data and predictions in terms of the significance, defined as in Ref. \cite{Choudalakis:2011okv}. 
-Note that this is different from the pull definition adopted in Figure \ref{fig:pullCR}. 
+Note that this is different from the pull definition adopted in Figure \ref{fig:pullVR}. 
+The closure in the \glspl{vr} is good: all the bins have discrepancies with significance lower than 0.8. 
+
+The results in the \glspl{sr} are shown in Figure \ref{fig:ewk:pullSR}. As in Figure \ref{fig:ewk:pullVR}, the top panel shows the 
+predicted and observed yields in each \gls{sr}, and the bottom panel the significance of the discrepancy. 
+No significant excess is observed and the observations are in agreement with the \gls{sm} predictions. 
+The numerical results of the background-only fit extrapolated to the \glspl{sr} are presented also in Table \ref{tab:ewk:yieldsSR},
+where the background prediction is also broken down by component. 
+This table provides the total background prediction before the fit in the \glspl{cr}, which is labeled ``MC-only background''.
+
 
 \begin{figure}[htbp]
 	\centering
@@ -50,25 +60,26 @@ Note that this is different from the pull definition adopted in Figure \ref{fig:
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{figures/ewk_prod/etmiss_results/histpull_pulls_in_VR_qcdStrong}
-	\caption{Results of the background-only fit extrapolated to the VRs of the high-mass analysis. The $\ttbar$ normalization 
-		is obtained from the fit to the CRs shown in Figure~\ref{fig:pullCR}. The upper panel shows 
-		the observed number of events and the predicted background yield. The bottom panel shows the significance of any disagreement between the data and the background model~\cite{Choudalakis2012}.
-		All uncertainties  defined in Section~\ref{sec:syst_high} are included in the 
+	\caption{Results of the background-only fit extrapolated to the \glspl{vr}. 
+	    The $\ttbar$ normalization is obtained from the fit to the \glspl{cr} shown in Figure~\ref{fig:ewk:pullCR}. The upper panel shows 
+		the observed number of events and the predicted background yield. The bottom panel shows the significance of any disagreement between the data and the background model, computed as in Ref. \cite{Choudalakis2012}.
+		All uncertainties  shown in Figure \ref{fig:syst_etmiss} are included in the 
 		uncertainty band. The background category $\ttbar+X$ includes $\ttbar W/Z$, 
 		$\ttbar H$, and $\ttbar \ttbar$ events. }
-	\label{fig:pullVR}
+	\label{fig:ewk:pullVR}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	% \subfigure[]{\includegraphics[width=0.65\textwidth]{figures/etmiss_results/histpull_pulls_in_CR_qcdStrong}\label{fig:pullCR}}\\
 	\includegraphics[width=0.9\textwidth]{figures/ewk_prod/etmiss_results/histpull_pulls_in_SR_qcdStrong}
-	\caption{Results of the background only fit extrapolated to the SRs of the high-mass analysis. The $\ttbar$ normalization
-                is obtained from the fit to the CRs shown in Figure~\ref{fig:pullCR}. The data in the  SRs are 
+	\caption{Results of the background only fit extrapolated to the \glspl{sr}. 
+	The $\ttbar$ normalization is obtained from the fit to the CRs shown in Figure~\ref{fig:pullCR}. The data in the  SRs are 
 	not included in the fit.  The upper panel shows the observed number of events and the predicted background 
-	yield.  The bottom panel shows the significance of any disagreement between the data and the background model~\cite{Choudalakis2012}. All uncertainties  defined in Section~\ref{sec:syst_high} are included in the uncertainty band. The background
+	yield.  The bottom panel shows the significance of any disagreement between the data and the background model, computed as in Ref. \cite{Choudalakis2012}. All uncertainties  shown in Figure \ref{fig:syst_etmiss} are included in the uncertainty band. 
+	The background
 	category $\ttbar+X$ includes $\ttbar W/Z$, $\ttbar H$, and $\ttbar \ttbar$ events.} 
-	\label{fig:pullSR}
+	\label{fig:ewk:pullSR}
 \end{figure}
 
 \begin{table}
@@ -121,13 +132,13 @@ MC-only background & 2.6 $\pm$ 0.9 & 0.43 $\pm$ 0.27 & 1.3 $\pm$ 0.6 & 0.7 $\pm$
 	The row ``MC-only background'' provides the total background prediction when the
 	$\ttbar$ normalization is obtained from a theoretical
 	calculation~\cite{Czakon:2011xx}.}
-\label{tab:yieldsSR}
+\label{tab:ewk:yieldsSR}
 \end{table}
 
 
 
 
-\clearpage
+\FloatBarrier
 
 \section{Interpretation}
 \label{sec:ewk:interp}
