@@ -7,7 +7,8 @@ have increasingly low \pt, and a low \pt \gravino does not produce enough \met t
 in the analysis. 
 To gain sensitivity also to the low-\mhino part of the mass spectrum, which is particularly interesting for Naturalness arguments, 
 this analysis is complemented by a second analysis that targets low-\met events, referred to as "low-mass" analysis. 
-This analysis selects events with at least four b-tagged jets, using a b-tagging \gls{op} with an efficiency of 70\%
+Events are selected using b-jet triggers and are required to have at least four b-tagged jets, 
+using a b-tagging \gls{op} with an efficiency of 70\%
 (tighter than the 77\% used in the high-mass analysis).
 The jets used to reconstruct the Higgs candidates are the four with the highest b-tagging score, and are paired minimizing the quantity 
 $D_{hh}$, defined as:
@@ -28,7 +29,7 @@ The background from \ttbar events is further reduced by requiring $X_{Wt}>1.8$, 
 \label{eqn:xwt}
 \end{equation}
 
-\noindent where the top and W-boson candidates are built as described in Ref \cite{Aaboud:2018htj}. 
+\noindent where the top and W-boson candidates are built as described in Ref. \cite{Aaboud:2018htj}. 
 A low value of $X_{Wt}$ corresponds to a high probability of the event to be a \ttbar event. 
 
 The \gls{sr} is defined by requiring: 
@@ -47,6 +48,20 @@ and this is used as input in the statistical analysis. The binning used is:
 
 \noindent where the values are expressed in GeV.
 
+Two dedicated discovery regions have optimized selections to maximize the discovery significance for the mass points with \mhino = 150 and 300 GeV:
+\begin{description}
+\item[low-SR-MET0-meff440] \meffb $>$ 440 GeV
+\item[low-SR-MET150-meff440] \meffb $>$ 440 GeV, \met $>$ 150 GeV
+\end{description}
+
+The background estimate is fully data-driven and relies on a sample with exactly two b-tagged jets (orthogonal to the \gls{sr} and 
+with very low signal contamination). $m_{2j}^\textrm{lead}$ and $m_{2j}^\textrm{subl}$ are used to define a \gls{cr} and two \glspl{vr}, both in the 4-tags and in the 2-tags samples; all these regions exclude the $X_{hh}^\textrm{SR}<1.6$ area, to be orthogonal to the \gls{sr}.
+The 2-tag and 4-tag \glspl{cr} are used to derive a reweighting function to go from the 2-tag sample to the 4-tag sample, that consists in two steps:
+first of all an overall normalization correction is applied, and then 
+a reweighting based on boosted decision trees corrects for further kinematic differences. 
+This reweighting procedure is tested in the \glspl{vr} and then applied to the \glspl{vr}.
+More details on the background estimate and its validation are available in Ref. \cite{Aaboud:2018htj}.
+
 \section{Combined Results}
 
 \begin{figure}[htbp]
@@ -54,7 +69,7 @@ and this is used as input in the statistical analysis. The binning used is:
 \includegraphics[width=0.75\textwidth]{figures/ewk_prod/interpretation/GGMupperLimit_unblinded_jump}
 	\caption{The observed (solid) vs expected (dashed) 95\% upper limits on the \hino\ pair production cross-section as a function of \mhino.  The 1$\sigma$ and 2$\sigma$ uncertainty bands on the expected limit are shown as green and yellow, respectively. The theory cross-section and its uncertainty are shown in the solid and shaded red curve.
    The results of the low-mass analysis are used below $\mhino = 300$ GeV, while those of the high-mass analysis are used above. 
-   Figure from Ref \cite{Aaboud:2018htj}. } 
+   Figure from Ref. \cite{Aaboud:2018htj}. } 
 	\label{fig:exclusion}
 \end{figure}
 
@@ -64,7 +79,7 @@ and this is used as input in the statistical analysis. The binning used is:
     \includegraphics[width=0.75\textwidth]{figures/ewk_prod/interpretation/my_br_plot_unblind_yellow_band}\label{fig:exclusion_br}
 	\caption{The observed (solid) vs expected (dashed) 95\% limits in the \mhino\ vs $B(\hino\rightarrow h \tilde{G})$ plane, where $B(\hino\rightarrow h \tilde{G})$ denotes the branching ratio for the decay $\hino \rightarrow h \gravino$. The 1$\sigma$ uncertainty band is overlaid in green and the 2$\sigma$ in yellow.
 	The results of the low-mass analysis are used below $\mhino = 300$ GeV, while those of the high-mass analysis are used above.
-	 The regions above the lines are excluded by the analyses. Figure from Ref \cite{Aaboud:2018htj}. } 
+	 The regions above the lines are excluded by the analyses. Figure from Ref. \cite{Aaboud:2018htj}. } 
 	\label{fig:exclusion}
 \end{figure}
 
