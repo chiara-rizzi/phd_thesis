@@ -4,11 +4,24 @@
 In this chapter we discuss the interplay of the searched presented in the previous two chapters and the 
 wide program of \gls{susy} searched carried on by the \gls{atlas} and \gls{cms} collaborations. 
 
-\section{Gluino pair production}
+\section{Gluino pair production with decay through third generation squarks}
+
+In the \gls{atlas} Collaboration only the multi-b analysis provides an interpretation for the Gbb model 
+discussed in Chapter \ref{chap:strong_prod}.
+Instead, in the cases of the Gtt model, a second analysis is interpreted to provide sensitivity  to this 
+signal grid; this analysis, described in Ref \cite{Aaboud:2017dmy}, targets this model selecting final states with two same-charge 
+leptons (electrons or muons), high jet multiplicity ($\geq$ six jets), one or two b-tagged jets and different \met selections 
+(ranging from no \met selection to \met $>$ 200 GeV).
+Figure \ref{fig:summary_atlas_Gtt} shows the overlay of the limits obtained with the multi-b analysis and with the two-same-charge-leptons analysis.
+The latter has a very good sensitivity when the neutralino mass approaches the gluino mass,
+limiting the amount of \met in the final state.
+This analysis considers also signal models where the mass difference between the gluino and the neutralino 
+is not enough to produce two on-shell top quarks and one of them is off-shell; this is why the limit extends above 
+the "diagonal" where $m(\tilde{g}) = m(\ninoone) + 2 m(t)$.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.65\textwidth]{figures/summary_plots/ATLAS_SUSY_Gtt.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/summary_plots/ATLAS_SUSY_Gtt.pdf}
 	\caption{Exclusion limits at 95\% CL based on 13 TeV data in the (gluino, lightest neutralino) 
 	mass plane for the Gtt simplified model where a pair of gluinos decays promptly via off-shell top 
 	squarks to four top quarks and two lightest neutralinos. Theoretical signal cross section uncertainties are 
@@ -16,6 +29,26 @@ wide program of \gls{susy} searched carried on by the \gls{atlas} and \gls{cms} 
 	} 
 	\label{fig:summary_atlas_Gtt}
 \end{figure}
+
+In the case of the \gls{cms} Collaboration, several analyses provide an interpretation for both the Gtt and 
+the Gbb signal models, shown respectively in Figures \ref{fig:limits_Gtt_cms} and \ref{fig:limits_Gbb_cms}.
+The \htmiss analysis \cite{Sirunyan:2017cwe} provides the best sensitivity for both models in the case of massless 
+neutralino; this analysis performs a four-dimensional scan of zero-lepton events with at least two jets, binning them 
+based on the scalar sum of the \pt of the signal jets in the event (\Ht), the negative vector sum of the jets (\htmiss), 
+the number of jets and the number of b-jets. 
+
+In the case of the Gtt model, for high gluino mass and intermediate neutralino mass the most sensitive analysis is
+the 0-lepton analysis with reconstructed hadrinically decaying top quarks \cite{Sirunyan:2017pjw}, 
+that builds several \glspl{sr} based on the number of jets, the number of b-jet, the number of reconstructed top quark 
+candidates, \met, \Ht and \mttwo, a transverse-mass type variable designed to reduce the \ttbar background. 
+For signal models with small mass difference between the gluino and the neutralino, the most sensitive analysis 
+is also for \gls{cms} the same-sign analysis \cite{Sirunyan:2017uyt}, that selects events with two leptons with 
+the same charge and builds several \glspl{sr} based on number of jets, number of b-jets, \met, \Ht, and \mt. 
+
+\mttwo \cite{Sirunyan:2017kqq}
+
+The Gbb signal does not produce any prompt lepton, so in this case also when the neutralino mass approaches the kinematic 
+limit it is a 0-lepton analysis that provides the best sensitivity: the \alphat \cite{Sirunyan:2018vjp}
 
 \begin{figure}[htbp]
 	\centering 
@@ -33,6 +66,9 @@ wide program of \gls{susy} searched carried on by the \gls{atlas} and \gls{cms} 
 \FloatBarrier
 
 \section{RPV interpretation}
+
+Throughout this thesis, only models with R-parity conservation have been considered. 
+ 
 
 \begin{figure}[htbp]
 	\centering 
@@ -57,7 +93,7 @@ wide program of \gls{susy} searched carried on by the \gls{atlas} and \gls{cms} 
 
 \section{Higgsino pair production in GMSB models}
 
-The exclusion contours in the plane of m(\ninoone) \gls{br} plane are shown in Figures \ref{fig:summary_atlas_higgsino_GMSB} 
+The exclusion contours in the plane of \mhino-\gls{br} plane are shown in Figures \ref{fig:summary_atlas_higgsino_GMSB} 
 and \ref{fig:limits_higgsino_cms} for the \gls{atlas} and \gls{cms} collaborations respectively.
 
 \begin{figure}[htbp]
@@ -70,6 +106,12 @@ and \ref{fig:limits_higgsino_cms} for the \gls{atlas} and \gls{cms} collaboratio
 	\label{fig:summary_atlas_higgsino_GMSB}
 \end{figure}
 
+The \gls{cms} collaboration has a more extensive program covering this signal model for what concerns the analysis of the 
+2015-2016 dataset. 
+Different final states are exploited to be sensitive to the possible combinations of branching ratios, 
+providing a good sensitivity throughout the full plane: 
+the expected sensitivity is up to about 580 GeV in the case $B(\hino\rightarrow Z \tilde{G})=100$\% and 800 GeV for 
+$B(\hino\rightarrow h \tilde{G})=100$\%.
 
 \begin{figure}[htbp]
 	\centering 
