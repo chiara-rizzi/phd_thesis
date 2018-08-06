@@ -77,6 +77,7 @@ for the Gbb model the \htmiss analysis extends the sensitivity of the multi-b an
 \FloatBarrier
 
 \section{RPV interpretation}
+\label{sec:rpvrpc}
 
 Throughout this thesis, only models with R-parity conservation have been considered. 
 The analysis presented in Chapter \ref{chap:strong_prod} is optimized for 
@@ -191,12 +192,9 @@ where the very low background regions of the \gls{atlas} analysis provides bette
 
 \section{ATLAS mass reach}
 
-Figure \ref{fig:summary_atlas_summary} shown the mass reach of the \gls{atlas} \gls{susy} searches on 
-some representative signal models. 
-
-\begin{figure}[htbp]
+\begin{figure}[htb]
 	\centering
-	\includegraphics[width=1\textwidth]{figures/summary_plots/ATLAS_SUSY_Summary.pdf}
+	\includegraphics[width=1.1\textwidth]{figures/summary_plots/ATLAS_SUSY_Summary.pdf}
 	\caption{Mass reach of the ATLAS searches for Supersymmetry. 
 	A representative selection of the available search results is shown. Results are quoted for the nominal cross section 
 	in both a region of near-maximal mass reach and a demonstrative alternative scenario, in order to display the range in 
@@ -205,3 +203,47 @@ some representative signal models.
 	} 
 	\label{fig:summary_atlas_summary}
 \end{figure}
+
+Figure \ref{fig:summary_atlas_summary} shows the mass reach of the \gls{atlas} \gls{susy} searches on 
+some representative signal models, as of July 2018. 
+Signal models are divided by production mode and/or model assumptions into:
+\begin{description}
+
+\item[Inclusive searches] Analyses that look for direct production of squarks (except 3$^{rd}$ generation squarks)
+and gluinos, including the strong-production multi-b analysis, are grouped into this category. For the multi-b analysis,
+only the Gtt result is reported. The assumptions of this model lead to a spectacular final state, rich in jets and b-jets, that 
+allow us to effectively separate signal from background, leading to the gluino mass limit of 2 TeV for low neutralino mass.
+This should not be translated into the universal statement that gluinos with mass of 2 TeV are excluded: 
+as it has already been noticed in Chapter \ref{chap:strong_prod}, an higher neutralino mass weakens substantially the observed limit.
+From Figure \ref{fig:summary_atlas_summary} we can further learn that the assumptions on the gluino decay mode can alter the limits as well,
+and in fact the all the limits are weaker than the ones we obtain for decays to third generation particles.
+
+\item[3$^{rd}$ generation squark direct production] In natural \gls{susy} models third generation squarks are expected to be 
+relatively light, and this motivates the extensive \gls{atlas} program to search for stop and sbottom production. 
+Also in this case, Figure \ref{fig:summary_atlas_summary} shows how the limits set by the different analyses depend a lot from the 
+decay mode assumed; for example, in the case of m($\tilde{t}_1$), the observed limits range from 430 GeV in the case of a decay 
+to the charm quark to up to 1 TeV if the decay is instead to a top quark.
+
+\item[EW direct] The direct production of charginos, neutralinos and sleptons has the lowest limits due to the lower electroweak
+production cross section compared to processes mediated by the strong force. The strongest mass limit is places by the multi-b 
+electroweak analysis, that excludes Higgisnos up to 880 GeV. This wide exclusion range compared to the other electroweak analyses
+is due to the peculiar features of the final state and to the large Higgsino cross section (four different production modes that are equivalent 
+because of the degeneracy of \ninoone, \ninotwo, \chinoonepm). 
+
+\item[Long-lived particles] The analyses discussed in this thesis, as well as the models mentioned in the three points above, assume that 
+all \gls{susy} particles originate a chain of prompt decays to \gls{sm} particles and the \gls{lsp}.
+Including in the signal models a non-zero lifetime for \gls{susy} particles leads to very different signatures that can be exploited to 
+search for \gls{bsm} physics. In this case the range of exclusion depends on the lifetime itself, and in 
+favorable cases it can lead to stronger bounds than the ones obtained for prompt decays;
+this is the case for example for gluinos decaying to light quarks, that are excluded up to 2.4 TeV for a gluino lifetime of 0.2 ns.  
+
+\item[RPV] The reason why a large number of the \gls{atlas} \gls{susy} searches require the presence of \met is that in R-parity conserving models 
+the \gls{lsp} is long lived and therefore, if it has zero charge, it escapes detection. In \gls{rpv} models this is no longer the case,
+and the final states have less \met (originating only from neutrinos form \gls{sm} decays) and in general more visible decay products. 
+The limits placed in the case of \gls{rpv} models are similar or larges than the ones places for corresponding \gls{rpcsusy} scenarios, as it is 
+the case e.g. for the $\tilde{t}_1$, excluded between 400 GeV and 1.45 TeV if the $B-L$-conserving decay $\tilde{t}_1 \to b l$ is allowed. 
+As already discussed in Section \ref{sec:rpvrpc}, the strength of the \gls{rpv} couplings can change noticeably the sensitivity of the 
+analyses. 
+
+\end{description}
+
