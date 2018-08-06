@@ -3,12 +3,12 @@
 
 A key ingredient of the analysis is the reconstruction of the two Higgs bosons form the decay of the Higgsinos.
 Since this analysis targets events where both Higgs bosons decay to a $b\bar{b}$ pair, the reconstruction starts 
-from four jets, which are chosen according to an ordering criterion that favors b-tagged jets over non-tagged jets,
+from four jets, which are chosen according to an ordering that favors $b$-tagged jets over non-tagged jets,
 and then orders based on \pt. Practically, this results in the following criteria:
 \begin{itemize}
-\item If there are exactly four b-tagged jets in the event, those are used.
-\item If there are more than four b-tagged jets, the selected ones are the four b-tagged jest with highest \pt.
-\item If there are less than four b-tagged jets, the selected ones are the b-tagged ones and the non-tagged ones with highest \pt.
+\item If there are exactly four $b$-tagged jets in the event, those are used.
+\item If there are more than four $b$-tagged jets, the selected ones are the four $b$-tagged jest with highest \pt.
+\item If there are less than four $b$-tagged jets, the selected ones are the $b$-tagged ones and the non-tagged ones with highest \pt.
 \end{itemize} 
 
 Once the four jets have been selected, they are grouped in two pairs, each one constituting a candidate Higgs bosons. 
@@ -54,10 +54,9 @@ as originating from a Higgs boson; the modified definition is therefore:
 In this section we show how the variables defined in Section \ref{sec:common_variables} and the ones related
 to the Higgs boson reconstruction (\dRmax defined in the previous section, and the mass of the reconstructed Higgs boson candidates)
 allow to identify a region of the phase space that is enriched in signal events. 
-This study is performed after selecting events with high \met ($> 200$ GeV), at least four signal jets and, least three b-tagged jets, zero signal leptons and \dphimin $>0.4$.
-with at least one signal lepton.
+This study is performed after selecting events with high \met ($> 200$ GeV), at least four signal jets and, least three $b$-tagged jets, zero signal leptons and \dphimin $>0.4$.
 
-Figure \ref{ffig:ewk:sig:1} shows the distribution of the main kinematic variables for 
+Figure \ref{fig:ewk:sig:1} shows the distribution of the main kinematic variables for 
 the sum of the \gls{sm} backgrounds and for selected signal samples after these selections.
 Figures \ref{fig:ewk:sig:mass_h1_min_dR} and \ref{fig:ewk:sig:mass_h2_min_dR} show the distribution of the mass of the Higgs 
 candidate with the leading and sub-leading mass respectively. We can see how the distribution peaks at values around the Higgs mass for 
@@ -65,7 +64,7 @@ signals, while it is flatter for background.
 The distribution of \dRmax is shown in Figure \ref{fig:ewk:sig:dRmax_dR}. This variable assumes in general a lower value for 
 signal events, in particular for the high-mass signals, where the Higgs bosons are produced with higher \pt and thus have 
 more collimated decay products. Signal events tend also to have a lower number of signal jets, as can be observed in Figure 
-\ref{fig:ewk:sig:jets_n}, and they occupy mostly the bins with three and four b-jets in the 
+\ref{fig:ewk:sig:jets_n}, and they occupy mostly the bins with three and four $b$-jets in the 
 distribution of \nbjet (Figure \ref{fig:ewk:sig:bjets_n}). 
 The \met distribution, shown in Figure \ref{fig:ewk:sig:met}, displays the expected features: while signals with low-mass Higgsinos 
 have low \met values, the distribution tends to assume increasingly high values with the increase of the Higgsino mass. 
@@ -105,17 +104,18 @@ and all the \glspl{sr} require both boson candidates to have masses compatible w
 The optimization of the multi-bin \glspl{sr} aims at constructing several orthogonal \glspl{sr}, that can be combined in a fit. 
 The general strategy adopted follows these steps:
 \begin{enumerate}
-\item A first variable (var1) is chosen to define a coarse binning (3 or 4 bins). 
-    This variables should provide both a good signal-to-background discrimination and discrimination between signal 
+\item A first variable (var$_1$) is chosen to define a coarse binning. 
+    This variable should provide both a good signal-to-background discrimination and discrimination between signal 
     with different Higgsino masses.
-\item For each of these bins in var1, a \gls{cr} is defined to normalize the \ttbar background in a kinematic regime close to the corresponding \gls{sr}.
-\item Each bin based on var1 is further split based on a second variable, var2 (in this case all the bins based on the second variable share the same \gls{cr}).
-\item The selections on the remaining kinematic variables are optimized independently in each var1-bin (i.e. all the regions sharing the same CR have the same selections on all the variables except var2).
+\item For each of these bins in var$_1$, a \gls{cr} is defined to normalize the \ttbar background in a kinematic regime close to the corresponding \gls{sr}.
+\item Each bin based on var$_1$ is further split based on a second variable, var$_2$ (in this case all the bins based on the second variable share the same \gls{cr}).
+\item The selections on the remaining kinematic variables are optimized independently in each var$_1$ bin (i.e. all the regions sharing the same 
+\gls{cr} have the same selections on all the variables except var$_2$).
 \end{enumerate}
 
-\noindent As described above, var1 must be able to provide at the same time a good separation between signal and background 
+\noindent As described above, var$_1$ must be able to provide at the same time a good separation between signal and background 
 and a good separation between signals with different \hino masses. 
-The latter is necessary in order to be able to optimize each bin in var1 based on a different signal mass, 
+The latter is necessary in order to be able to optimize each bin in var$_1$ based on a different signal mass, 
 providing in the end a good sensitivity to the entire mass spectrum. 
 In order to understand which variable works best for this scope, the separation algorithm provided by the TMVA toolkit \footnote{TMVA is a toolkit designed for multivariate analyses, this in not the case here: it's only used as a quick way to access the discrimination power of the individual variables.} \cite{Hocker:2007ht} is used, defined as:
 
@@ -123,7 +123,7 @@ In order to understand which variable works best for this scope, the separation 
           \mathrm{separation} = \frac{1}{2} \int\frac{\left(y_s(x) - y_b(x)\right)^2}{y_s(x) + y_b(x)} dx \; , 
 \label{eq:separation}
 \end{equation}
-\noindent where $y_s$ and $y_b$ are the signal and background PDFs of $y$. 
+\noindent where $y_s$ and $y_b$ are the signal and background \glspl{pdf} of $y$. 
 
 The separation provided by the most promising analysis variables between background and 
 signals with m(\hino)=300, 500 and 800 GeV is shown in Figure \ref{fig:ewk:separation}.
@@ -155,33 +155,33 @@ instead of diluting it in several \glspl{sr}.% to try to exploit shape informati
 The optimal selection for the high-m(\hino) benchmark signal occupies the highest \meffb bin,
 and is determined my maximizing the expected significance over all the other discriminating variables,
 leading to the selection:
-\meffb $>$ 1100 GeV, \mtb$>$130 GeV, \dRmax $<$ 1.4, \met $>$200, $\geq$ 3 b-jets (77\% WP), 
-4-5 jets, m($h_1$) in 110-150 GeV, m($h_2$) in 90-140 GeV.
+\meffb $>$ 1100 GeV, \mtb$>$130 GeV, \dRmax $<$ 1.4, \met $>$200, $\geq$ 3 $b$-jets (77\% \gls{op}), 
+4-5 jets, m($h_1$) in the range 110-150 GeV, m($h_2$) in the range 90-140 GeV.
 
 Considering the separation power of the different variables shown in Figure  \ref{fig:ewk:separation} 
 and the signal-to-background comparison in Figure \ref{fig:ewk:sig:1}, 
 \dRmax is chosen as second binning variable. 
-%to gain signal acceptance also for signals less boosted than the 800 GeV mass one, where the angular separation between the two b-jets originating from the same higgs is larger.
+%to gain signal acceptance also for signals less boosted than the 800 GeV mass one, where the angular separation between the two $b$-jets originating from the same higgs is larger.
 Once the selections for the high-\meffb \gls{sr} have been defined, 
 a similar procedure is repeated for the other \meffb ranges: 600-850 GeV and 850-1100 GeV. 
-These two bins with lower \meffb are also split according to the number of b-jets: exactly 3 and $\geq$4. 
-The two bins in b-jet multiplicity are optimized separately. 
+These two bins with lower \meffb are also split according to the number of $b$-jets: exactly 3 and $\geq$4. 
+The two bins in $b$-jet multiplicity are optimized separately. 
 For each of the four remaining regions, the following steps are taken:
 
 \begin{enumerate}
-\item Optimize for one specific signal benchmark: 300, 500 GeV respectively for the 600-850 and 850-1100 GeV \meffb bins.
+\item Optimize for one specific signal benchmark: \mhino = 300, 500 GeV for the 600-850 and 850-1100 GeV \meffb bins respectively.
 \item  Where possible with a loss in significance $<$ 15\%, the selections are made uniform. 
-This results to be the case for the m(h1) and m(h2) ranges, for the selection in \met, for the first bin in \dRmax, 
+This results to be the case for the m($h_1$) and m($h_2$) ranges, for the selection in \met, for the first bin in \dRmax, 
 and for the number of jets. In the case of this last variable, it is possible to make it uniform (4-5 jets) 
 without consistent loss in sensitivity in all bins except in the 4b-meff2 bin, where a veto on a 6th jet is penalizing; 
 in this region, the selection on the number of jets is 4-6.
 \item Use \dRmax to define further bins.
 \end{enumerate}
 
-It is found that a second bin in \dRmax is really helpful only in the regions with low and intermediate \meffb, and  $\geq$ 4 b-jets. 
+It is found that a second bin in \dRmax is really helpful only in the regions with low and intermediate \meffb, and  $\geq$ 4 $b$-jets. 
 This is because the highest \meffb region is particularly sensitive to high-mass signals, where \dRmax is small. 
-For signals with lower masses, the signal-to-background ratio in regions with exactly 3 b-jets and high \dRmax is too low, 
-while the requirement of a fourth b-jet suppresses the \gls{sm} background further and gives good sensitivity 
+For signals with lower masses, the signal-to-background ratio in regions with exactly 3 $b$-jets and high \dRmax is too low, 
+while the requirement of a fourth $b$-jet suppresses the \gls{sm} background further and gives good sensitivity 
 also to the region of phase space with higher \dRmax.
 The final \glspl{sr} selections are summarized in Table \ref{tab:SR}.
 
@@ -240,6 +240,7 @@ $m(h_2)$ &    \multicolumn{5}{|c|}{90--140}\\
 \end{tabular} 
 %}
 \caption{Signal region definitions for the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. 
+Table from Ref. \cite{Aaboud:2018htj}.
 %These variables are defined in Section~\ref{high_event_selection}.
 }
 \label{tab:SR}
@@ -253,10 +254,10 @@ but the constraint of building orthogonal regions makes it hard to have an high 
 for signals with intermediate masses. 
 To solve this problem cut-and-count \glspl{sr} are defined as well, with the goal of
 providing robust regions capable of discovery of \gls{susy} signatures, 
-and allowing an easier re-interpretation of the results.
+and allowing an easier reinterpretation of the results.
 
 The upper selection on \meffb, that makes the different \glspl{sr} orthogonal, 
-limits the most the sensitivity of the individual \glspl{sr}.
+is the one limiting the most the sensitivity of the individual \glspl{sr}.
 In the exclusion fit this is not a problem, as the sensitivity lost in one bin is recovered in the neighbouring one. 
 To define the discovery regions, all the individual \glspl{sr} are considered without the upper cut on \meffb
 and the expected significance for some benchmark signal models is computed in each. 
@@ -266,14 +267,15 @@ assuming 36.1 \ifb of data and a flat 30\% background uncertainty.
 Figure \ref{fig:ewk:disc_sig} shows the expected significance for all the multi-bin analysis regions once the upper \meffb 
 selection is removed. 
 Using only the modified versions of SR-4b-meff1-A, referred to as SR-4b-meff1-A-disc, 
-and SR-3b-meff3 (orange and green line respectively in the figure) allow us to have good expected sensitivity for the entire mass spectrum. 
+and SR-3b-meff3 (orange and green line respectively in the figure) allow us to have good expected sensitivity for 
+all the signal considered.  
 This is always $>$3 for all the masses in the 300-600 GeV range, and $\approx$ 2.5 for the 800 GeV signal. 
 
 \begin{figure*}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{figures/ewk_prod/discovery/significances_hh_regions.pdf}
-\label{fig:ewk:disc_sig}
 \caption{Expected significance for the multi-bin regions after removing the upper \meffb selection. 
+\label{fig:ewk:disc_sig}
 }
 \end{figure*}
 
@@ -281,7 +283,7 @@ This is always $>$3 for all the masses in the 300-600 GeV range, and $\approx$ 2
 \section{Control and validation regions}
 
 The \ttbar background is normalized in specifically designed \glspl{cr}.
-A different \gls{cr} is built for each bin in \meffb and b-tagging multiplicity. 
+A different \gls{cr} is built for each bin in \meffb and $b$-tagging multiplicity. 
 These \glspl{cr} are built using side-bands both in m($h_1$) and m($h_2$). 
 The extrapolation between \glspl{cr} and \glspl{sr} is tested in the \glspl{vr}, which take advantage of events
 where only one between m($h_1$) and m($h_2$) is in the \gls{sr} mass range, 
@@ -343,6 +345,7 @@ $m(h_1)$, $m(h_2)$  &  \multicolumn{5}{|c|}{ ($m(h_1)<$80, $m(h_2)<$80) or ($m(h
 \end{tabular} 
 %} 
 \caption{Control region definitions in the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. 
+Table from Ref. \cite{Aaboud:2018htj}.
 %These variables are defined in Section~\ref{high_event_selection}.
 }
 \label{tab:ewk:CR}
@@ -400,6 +403,7 @@ $m(h_1)$, $m(h_2)$  &  \multicolumn{4}{|c|}{   (80<$m(h_1)$<150, $m(h_2)$<80) or
 \end{tabular} 
 %} 
 \caption{Validation region definitions in the high-mass analysis. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. 
+Table from Ref. \cite{Aaboud:2018htj}.
 %These variables are defined in Section~\ref{high_event_selection}.
 }
 \label{tab:ewk:VR}
@@ -409,8 +413,9 @@ $m(h_1)$, $m(h_2)$  &  \multicolumn{4}{|c|}{   (80<$m(h_1)$<150, $m(h_2)$<80) or
 \section{Composition of the analysis regions}
 
 The pre-fit background composition of the analysis regions is show in Figures \ref{fig:bkgcomp_hh3b} and \ref{fig:bkgcomp_hh4b}.
-It is possible to see how \ttbar is the dominant background in all the \glspl{sr}; the \glspl{cr} and the \glspl{vr} have a high \ttbar 
-purity by construction. %, since they are designed to respectively normalize this background and validate the extrapolation of this normalization to 
+It is possible to see how \ttbar is the dominant background in all the \glspl{sr}.
+%The \glspl{cr} and the \glspl{vr} have a high \ttbar purity by construction. 
+%, since they are designed to respectively normalize this background and validate the extrapolation of this normalization to 
 %a phase space closer to the \glspl{sr}.
 % chiara: change, sentence from paper
 The subdominant background contributions are Z($\to \nu \nu$)+jets and W($\to \nu$ lepton)+jets events.
@@ -422,37 +427,37 @@ in Figures \ref{fig:HFcomp_hh3b} and \ref{fig:HFcomp_hh3b}.
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_3b_bkg.pdf}
-\caption{Background composition of regions with exactly three b-jets.}
+\caption{Background composition of regions with exactly three $b$-jets.}
 	\label{fig:bkgcomp_hh3b}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_4b_bkg.pdf}
-\caption{Background composition of regions with at least four b-jets.}
+\caption{Background composition of regions with at least four $b$-jets.}
 	\label{fig:bkgcomp_hh4b}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_3b_tt.pdf}
-\caption{Decay mode of \ttbar background in regions with exactly three b-jets.}
+\caption{Decay mode of \ttbar background in regions with exactly three $b$-jets.}
 	\label{fig:ttcomp_hh3b}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_4b_tt.pdf}
-\caption{Decay mode of \ttbar background in regions with at least four b-jets.}
+\caption{Decay mode of \ttbar background in regions with at least four $b$-jets.}
 	\label{fig:ttcomp_hh4b}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_3b_HF.pdf}
-\caption{Heavy-flavour composition of \ttbar background in regions with exactly three b-jets.}
+\caption{Heavy-flavour composition of \ttbar background in regions with exactly three $b$-jets.}
 	\label{fig:HFcomp_hh3b}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_4b_HF.pdf}
-\caption{Heavy-flavour composition of \ttbar background in regions with at least four b-jets.}
+\caption{Heavy-flavour composition of \ttbar background in regions with at least four $b$-jets.}
 	\label{fig:HFcomp_hh4b}
 \end{figure}
 
@@ -467,13 +472,13 @@ this section therefore focuses on the variables specific to Higgs boson reconstr
 The data-\gls{mc} agreement for the variables already shown in Section \ref{sec:strong:dataMC} but with the object definitions 
 specific to this analysis are shown in Appendix \ref{app:ewk:datamc}.
 There is nevertheless a notable exception: in the analysis described in this chapter, the data-\gls{mc} agreement in the 
-distribution of the number of b-jets is improved, as can be appreciated comparing Figure \ref{fig:strong:datamc0L:bjets_n} with Figure \ref{fig:ewk:datamc_bjets}.
-This is the result of the improvement in the b-tagging calibration, discussed in Section \ref{sec:obj:btaggingcalib}.
+distribution of the number of $b$-jets is improved, as can be appreciated comparing Figure \ref{fig:strong:datamc0L:bjets_n} with Figure \ref{fig:ewk:datamc_bjets}.
+This is the result of the improvement in the $b$-tagging calibration, discussed in Section \ref{sec:obj:btaggingcalib}.
 The other important difference with respect to the strong-production analysis is that in this case the analysis is performed 
 only in regions with a lepton veto; it is not therefore sensitive to the mismodelling in the 1-lepton channel discussed in Section 
 \ref{sec:strong:kinrw} and no kinematic reweighting is required. 
 
-As show in Figure \ref{fig:ewk:datamc_a}, all the variables specific to this analysis show a good 
+As shown in Figure \ref{fig:ewk:datamc_a}, all the variables specific to this analysis show a good 
 agreement between data and the \gls{mc} simulation. 
 
 \begin{figure*}[htbp]
@@ -481,7 +486,7 @@ agreement between data and the \gls{mc} simulation.
 %\subfigure[\nbjet]{
 \includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_bjets_n.pdf}
 %\label{fig:ewk:datamc:bjets_n}}\\
-\caption{Data-MC comparison of the number of b-jets in the preselection described in the text.
+\caption{Data-MC comparison of the number of $b$-jets in the preselection described in the text.
 }
 \label{fig:ewk:datamc_bjets}
 \end{figure*}

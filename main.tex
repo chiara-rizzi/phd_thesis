@@ -240,12 +240,16 @@ headsepline, % Uncomment to get a line under the header
 %\glsresetall
 %\glsunset{atlas}
 %\include{chap/stat}
+%\glsresetall
+%\include{chap/strong_prod}
 \glsresetall
-\include{chap/strong_prod}
-%\glsresetall
-%\include{chap/ewk_prod}
-%\glsresetall
-%\include{chap/summary_susy}
+\glsunset{atlas}
+\glsunset{cms}
+\include{chap/ewk_prod}
+\glsresetall
+\glsunset{atlas}
+\glsunset{cms}
+\include{chap/summary_susy}
 %\include{chap/concl}
 
 
@@ -259,8 +263,8 @@ headsepline, % Uncomment to get a line under the header
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-\include{appendices/meff_rw}
-%\include{appendices/ewk_data_mc}
+%\include{appendices/meff_rw}
+\include{appendices/ewk_data_mc}
 %----------------------------------------------------------------------------------------
 %	LIST
 %----------------------------------------------------------------------------------------
