@@ -75,9 +75,28 @@ In this section we study this effect for the cells and the run numbers that are 
 calibration transfer analysis. 
 
 The \gls{tilecal} laser system is primarily used to calibrate the \gls{tilecal} readout. 
-The laser system can also be fired in the abort gaps during standard physics runs.
+The laser system can also be fired in the abort gaps during standard physics runs; in this case 
+one laser pulse is sent three times per second.
 
 The anchor run used in the calibration transfer analysis is 331085. 
+
+The \gls{pmt} response is analyzed in the following steps:
+\begin{enumerate}
+\item The response of the \glspl{pmt} is normalized to the response of the monitor diode D0 to remove fluctuations 
+due to laser instabilities.
+
+\item The distribution of the response each individual \gls{pmt} in groups of 25 \gls{lb} is considered. 
+Grouping together several \glspl{lb} is necessary to accumulate enough statistic: the frequency of laser pulses is 3 Hz, 
+which gives us only about 180 data points per minute. The value of 25 has been chosen for consistency with previous studies, 
+after checking that the size of the group of \glspl{lb} does not to affect the results 
+as long as it is large enough to provide sufficient statistic.
+
+\item The response for each cell family is computed by averaging over all the \glspl{pmt} 
+belonging to that family. We keep separate the left and right \glspl{pmt} and the A and C side 
+of \gls{tilecal}
+
+
+\end{enumerate} 
 
 \begin{figure}[htbp]
 \centering
@@ -109,7 +128,8 @@ The anchor run used in the calibration transfer analysis is 331085.
 \label{fig:apppmt:331085:variation_E3_E4}
 \end{figure}
 
-\FloarBarrier
+\FloatBarrier
+
 
 \section{Impact on calibration transfer uncertainty}
 
