@@ -17,7 +17,8 @@ the requirement on the Pixel holes (that have to be $\leq 1$ for the standard Ti
 furthermore there is a requirement on the impact parameter significance, $|d_0|/\sigma(d_0)<7$, and on 
 the pseudorapidity of the track, $|\eta|<1$. These criteria have been optimized to reduce the dependence on the Pixel conditions. 
 
-The procedure to determine the calibration transfer consists of three steps:
+The procedure to determine the calibration transfer assumes that the tracking luminosity measurement 
+does not have any dependence on $\mu$ or on the position in the train, and it consists of three steps:
 \begin{enumerate}
 \item The bunch-averaged track luminosity during the \gls{vdm} run is normalized to the LUCID luminosity (which in these runs 
 undergo the absolute calibration). The \gls{vdm} runs have low-$\mu$ isolated bunches.
@@ -41,6 +42,9 @@ the correction factor is as big as 11\% for $\mu \approx 50$.
 To assign an uncertainty to the calibration transfer, a similar procedure as what done with track is repeated using the 
 integrator system of the TileCal detector, and the relative difference between the luminosity measured by the tracking system and 
 by TileCal is used as uncertainty. 
+Just like in the case of the luminosity measurement from the tracking system, the TileCal luminosity measurement 
+relies on some assumptions, in particular perfect linearity of the \gls{pmt} response over a wide range of instantaneous luminosity, 
+that spans over three order of magnitude 
 
 
 
