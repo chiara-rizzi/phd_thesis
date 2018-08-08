@@ -95,8 +95,14 @@ as long as it is large enough to provide sufficient statistic.
 belonging to that family. We keep separate the left and right \glspl{pmt} and the A and C side 
 of \gls{tilecal}
 
+\item The distribution of the response is normalized to the last group of \glspl{lb} that 
+does not contain the \gls{lb} where "stable beams" is declared, which is used as reference.
 
 \end{enumerate} 
+
+Figure \ref{fig:apppmt:331085:variation_A13} shows the \gls{pmt} response for the cell family A13 during the anchor run, 
+while Figure \ref{fig:apppmt:331085:variation_E1_E2} shows the response for the cells of the families E1 and E2 
+and Figure \ref{fig:apppmt:331085:variation_E3_E4} for the families E3 and E4.
 
 \begin{figure}[htbp]
 \centering
@@ -127,6 +133,14 @@ of \gls{tilecal}
 \caption{\gls{pmt} response in cell E3 and E4 for the anchor run (run number 331085).}
 \label{fig:apppmt:331085:variation_E3_E4}
 \end{figure}
+
+The \gls{pmt} non-linearity is quantified in three different ways, that in the Figures are labeled as:
+\begin{description}
+\item[Jump] Relative difference between the first group of \glspl{lb} after "stable beams" declaration that does not contain the 
+\gls{lb} where "stable beams" is declared and the group of \glspl{lb} used as reference.
+\item[Average] Average of the response after "stable beams" is declared until the end of the run, relative to the reference.
+\item[Lumi-average] As above, but the average is weighted by the amount of luminosity collected in each group of \glspl{lb}.
+\end{description}
 
 \FloatBarrier
 
