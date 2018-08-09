@@ -46,7 +46,8 @@ Just like in the case of the luminosity measurement from the tracking system, th
 relies on some assumptions, in particular perfect linearity of the \gls{pmt} response over a wide range of instantaneous luminosity, 
 that spans over three order of magnitude. 
 The cells considered are all the E-type cells and A13.
-The difference between the track and the \gls{tilecal} measurement of the calibration transfer is performed as follows:
+One of the possible techniques of to estimate 
+the difference between the track and the \gls{tilecal} measurement of the calibration transfer is the following:
 \begin{enumerate}
 \item The luminosity of all the \gls{tilecal} cells used is individually calibrated to match the track luminosity 
 at a specific high-$\mu$ run (anchor run).
@@ -65,6 +66,9 @@ The next two sections focus on the analysis of this second point and on the corr
 on the \gls{tilecal} calibration transfer analysis; this allows to reduce the calibration transfer uncertainty on the 
 2017 luminosity, which is the dominant luminosity uncertainty for the 2016 dataset. 
 
+
+\section{TileCal laserII system}
+\label{sec:app:laser}
 
 \section{PMT response in empty bunches}
 \label{sec:app:pmtresponse}
@@ -176,6 +180,7 @@ show the effect of the correction derived for the cell families used in the comp
 calibration transfer uncertainty, for the A side and C side respectively. 
 
 
+
 \begin{figure}[htbp]
 \centering
 \subfigure{\includegraphics[width=0.48\textwidth]{figures/pmt_response/results/vdm_noPMTcorr_rel_track_mod_EBA.pdf}\label{fig:app:vdm_noPMTcorr_rel_track_mod_EBA}}
@@ -209,8 +214,31 @@ Only cell families from EBC are used.
 \label{fig:app:vdm_rel_track_mod_EBC}
 \end{figure}
 
+To quantify the improvement provided by the laser corrections, we can compute the integrated luminosity over the whole 
+\gks{vdm} run for the \gls{tilecal} cell families and compare it to the integrated luminosity from the tracking system.
+This comparison is shown in Figure \ref{}.
+If we define the uncertainty as the average difference between \gls{tilecal} and tracks, we can see 
+that the inclusion of the laser corrections reduces the uncertainty by more than 1\%.
+
+The final calibration transfer uncertainty for the 2017 data-taking period 
+is computed with a similar procedure but with some minor differences.
+In particular:
+\begin{itemize}
+\item The luminosity is re-anchored at the \gls{vdm} run, and the difference is evaluated at run 331085. 
+\item Only E-type cell families are considered.
+\item The anchoring is done considering only the first half of the \gls{vdm} run, where the 
+pedestal subtraction is more reliable.
+\end{itemize}
+
+Despite these differences, the uncertainty resulting from the average of the relative difference between 
+\gls{tilecal} and track for the different cell families is 1.3\%. Also in this case, ignoring the laser correction derived in 
+Section \ref{sec:app:pmtresponse} would lead to an average of the differences of about 1\% higher. 
+
+\FloatBarrier
 
 \section{Other sources of systematic uncertainty}
+
+The calibration transfer uncertainty is only one of the uncertainty sources that affect the luminosity determination. 
 
 \begin{figure}[ht]
 \centering
