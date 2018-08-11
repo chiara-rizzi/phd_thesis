@@ -215,13 +215,31 @@ Only cell families from EBC are used.
 \end{figure}
 
 To quantify the improvement provided by the laser corrections, we can compute the integrated luminosity over the whole 
-\gls{vdm} run for the \gls{tilecal} cell families and compare it to the integrated luminosity from the tracking system.
-This comparison is shown in Figure \ref{}.
-If we define the uncertainty as the average difference between \gls{tilecal} and tracks, we can see 
-that the inclusion of the laser corrections reduces the uncertainty by more than 1\%.
+\gls{vdm} run for the \gls{tilecal} cell families and compare it to the integrated luminosity from the tracking system; 
+this is shown in Figure \ref{fig:apppmt:totallumi}. 
+The average relative difference between \gls{tilecal} and tracks results to be:
+\begin{description}
+\item[no \gls{pmt} correction] 2.19\%
+\item[Jump] 1.19 \%
+\item[Average] 1.32 \%
+\item[Lumi-average] 1.25 \%
+\end{description}
 
-The final calibration transfer uncertainty for the 2017 data-taking period 
-is computed with a similar procedure but with some minor differences.
+If we define the uncertainty as the average difference between \gls{tilecal} and tracks, we can see 
+that the inclusion of the laser corrections reduces the uncertainty by about 1\%.
+
+\begin{figure}[ht]
+\centering
+\subfigure{\includegraphics[width=0.80\textwidth]{figures/pmt_response/lumi_integral.pdf}}
+\caption{Relative difference in total integrated luminosity for the \gls{vdm} run for the different types of 
+\gls{pmt} corrections. The dashed line shows the average of the difference over all the cell families considered, which 
+is used to estimate the calibration transfer uncertainty.}
+\label{fig:apppmt:totallumi}
+\end{figure}
+
+The calibration transfer uncertainty for the 2017 data-taking period used for the first public results 
+with the 2017 dataset 
+is computed with a similar procedure but with some small differences.
 In particular:
 \begin{itemize}
 \item The luminosity is re-anchored at the \gls{vdm} run, and the difference is evaluated at run 331085. 
@@ -230,18 +248,13 @@ In particular:
 pedestal subtraction is more reliable.
 \end{itemize}
 
+\nointend The numerical value for the laser correction used is the one labeled as "average" in Figures \ref{fig:apppmt:331085:variation_A13}
+ to\ref{fig:apppmt:331085:variation_E3_E4}.
+
 Despite these differences, the uncertainty resulting from the average of the relative difference between 
 \gls{tilecal} and track for the different cell families is 1.3\%. Also in this case, ignoring the laser correction derived in 
 Section \ref{sec:app:pmtresponse} would lead to an average of the differences of about 1\% higher. 
 
-\begin{figure}[ht]
-\centering
-\subfigure{\includegraphics[width=0.85\textwidth]{figures/pmt_response/lumi_integral.pdf}}
-\caption{Relative difference in total integrated luminosity for the \gls{vdm} run for the different types of 
-\gls{pmt} corrections. The dashed line shows the average of the difference over all the cell families considered, which 
-is used to estimate the calibration transfer uncertainty.}
-\label{fig:apppmt:totallumi}
-\end{figure}
 
 \FloatBarrier
 
