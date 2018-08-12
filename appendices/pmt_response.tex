@@ -74,17 +74,18 @@ on the \gls{tilecal} calibration transfer analysis; this allows to reduce the ca
 2017 luminosity, which is the dominant luminosity uncertainty for the 2016 dataset. 
 The cells we consider for this study are all the E-type cells and A13.
 
-It has previously been noticed (e.g. Ref. \cite{giulia:tesi}) that the \gls{tilecal} \gls{pmt} show a non-linearity in 
+It has previously been noticed (e.g. Ref. \cite{giulia:tesi}) that the \gls{tilecal} \glspl{pmt} show a non-linearity in 
 the response with the increase in luminosity. 
 In this section we study this effect for the cells and the run numbers that are of interest for the 
 calibration transfer analysis. 
+The anchor run used in the calibration transfer analysis is 331085, while the run number of the \gls{vdm} 
+run is 330875.
 
 The \gls{tilecal} laser system is primarily used to calibrate the \gls{tilecal} readout. 
 The laser system can also be fired in the abort gaps during standard physics runs; in this case 
 one laser pulse is sent three times per second.
 
-The anchor run used in the calibration transfer analysis is 331085, while the run number of the \gls{vdm} 
-run is 330875.
+
 
 The \gls{pmt} response is analyzed in the following steps:
 \begin{enumerate}
@@ -109,6 +110,9 @@ does not contain the \gls{lb} where "stable beams" is declared, which is used as
 Figure \ref{fig:apppmt:331085:variation_A13} shows the \gls{pmt} response for the cell family A13 during the anchor run, 
 while Figure \ref{fig:apppmt:331085:variation_E1_E2} shows the response for the cells of the families E1 and E2 
 and Figure \ref{fig:apppmt:331085:variation_E3_E4} for the families E3 and E4.
+While the origin of this discontinuity in the response is still under investigation, it is clear that 
+the drastic change in response happens in correspondence of the declaration of stable beam, when the 
+luminosity increases, and is therefore referred to as non-linearity of the \glspl{pmt}. 
 
 \begin{figure}[htbp]
 \centering
@@ -222,16 +226,16 @@ Only cell families from EBC are used.
 To quantify the improvement provided by the laser corrections, we can compute the integrated luminosity over the whole 
 \gls{vdm} run for the \gls{tilecal} cell families and compare it to the integrated luminosity from the tracking system; 
 this is shown in Figure \ref{fig:apppmt:totallumi}. 
-The average relative difference between \gls{tilecal} and tracks results to be:
+The average relative difference between \gls{tilecal} and tracks, averaged over all 
+the considered cell families, results to be:
 \begin{description}
-\item[no \gls{pmt} correction] 2.19\%
-\item[Jump] 1.19 \%
-\item[Average] 1.32 \%
-\item[Lumi-average] 1.25 \%
+\item[no \gls{pmt} correction] 2.19\%,
+\item[Jump] 1.19 \%,
+\item[Average] 1.32 \%,
+\item[Lumi-average] 1.25 \%.
 \end{description}
 
-If we define the uncertainty as the average difference between \gls{tilecal} and tracks, we can see 
-that the inclusion of the laser corrections reduces the uncertainty by about 1\%.
+\noindent We can see that the inclusion of the laser corrections reduces the uncertainty by about 1\%.
 
 \begin{figure}[ht]
 \centering
@@ -260,12 +264,22 @@ Despite these differences, the uncertainty resulting from the average of the rel
 \gls{tilecal} and track for the different cell families is 1.3\%. Also in this case, ignoring the laser correction derived in 
 Section \ref{sec:app:pmtresponse} would lead to an average of the differences of about 1\% higher. 
 
-
 \FloatBarrier
 
 \section{Other sources of systematic uncertainty}
 
 The calibration transfer uncertainty is only one of the uncertainty sources that affect the luminosity determination. 
+The other two main categories of systematic uncertainties on the \gls{atlas} luminosity are:
+\begin{description}
+\item[\gls{vdm} calibration] The uncertainty on the\gls{vdm} calibration derive from uncertainties on the 
+beam population, beam conditions and from instrumental effects. In 2017 this uncertainty is 1.6\%. 
+Figure \ref{fig:app:scantoscan} shows the scan-to-scan reproducibility, that belongs to the beam conditions category 
+and is the largest uncertainty on the \gls{vdm} calibration for 2017.   
+\item[Long term stability] The long term stability and consistency over the year is computed by comparing LUCID with
+ tracks, \gls{tilecal} D6 cells, FCal, and the LAr electromagnetic endcap (EMEC); 
+ it amounts to 1.3\% for the 2017 preliminary 
+luminosity estimate. This is shown in Figure \ref{fig:app:longterm}.
+\end{description}
 
 \begin{figure}[ht]
 \centering
@@ -278,12 +292,16 @@ The calibration transfer uncertainty is only one of the uncertainty sources that
 
 \section{Conclusion}
 
-The effect a non-linearity in the \gls{pmt} response with the increase in luminosity in the calibration transfer uncertainty from 
-\gls{tilecal} has been studies. 
 The calibration transfer uncertainty is one of the major sources of uncertainty in the \gls{atlas} luminosity 
 measurement, and it has a relevant impact for analyses that rely on a precise luminosity measurement. 
-A correction has been derived, that allowed to reduce the calibration transfer uncertainty by XX \%.
+The effect a non-linearity in the \gls{pmt} response with the increase in luminosity in the calibration transfer uncertainty from 
+\gls{tilecal} has been studied. 
+A correction has been derived, that allows to reduce the calibration transfer uncertainty by 1 \%.
 This correction has been applied to the computation of the luminosity uncertainty released in March 2018, 
-leading to a total luminosity uncertainty of 2.4\% on the 2017 data-taking periods. 
+leading to a calibration transfer uncertainty of 1.3 \%. 
+This is summed in quadrature with the other uncertainty sources and 
+the total luminosity uncertainty for the 2017 data-taking periods results to be 2.4\%. 
+
+
 
 
