@@ -50,11 +50,11 @@ that spans over three order of magnitude.
 \section{TileCal laserII system}
 \label{sec:app:laser}
 
-The \gls{tilecal} laser system is designed with the main purpose of calibrating the \glspl{pmt} and readout chain: 
+The \gls{tilecal} laser system \cite{system:2016tae} is designed with the main purpose of calibrating the \glspl{pmt} and readout chain: 
 in absence of collisions, a controlled amount of light is sent to each \gls{pmt}'s photocatode, 
 and the response is used to derive the laser calibration constant. 
 The laser system has been renewed for Run 2 and the new version (LaserII)
-has been installed in October 2014. 
+has been installed in October 2014 \cite{Scuri:2016ctn}. 
 During the calibration, that is performed every two or three days in the 
 pauses between the \gls{lhc} collisions,
 laser pulses with a wavelength of 532 nm are sent to all the \gls{pmt} cathodes 
@@ -70,7 +70,7 @@ The response of the \glspl{pmt} to the laser pulses sent in empty bunches in phy
 is used also to perform the analysis described in this appendix. 
 
 
-\section{PMT response in empty bunches}
+\section{PMT response to laser pulses in empty bunches}
 \label{sec:app:pmtresponse}
 
 One of the possible techniques of to estimate 
@@ -112,18 +112,18 @@ The \gls{pmt} response is analyzed in the following steps:
 \item The response of the \glspl{pmt} is normalized to the response of the monitor diode D0 to remove fluctuations 
 due to laser instabilities.
 
-\item The distribution of the response each individual \gls{pmt} in groups of 25 \gls{lb} is considered. 
-Grouping together several \glspl{lb} is necessary to accumulate enough statistic: the frequency of laser pulses is 3 Hz, 
+\item The distribution of the response each individual \gls{pmt} in groups of 25 \gls{lub} is considered. 
+Grouping together several \glspl{lub} is necessary to accumulate enough statistic: the frequency of laser pulses is 3 Hz, 
 which gives us only about 180 data points per minute. The value of 25 has been chosen for consistency with previous studies, 
-after checking that the size of the group of \glspl{lb} does not to affect the results 
+after checking that the size of the group of \glspl{lub} does not to affect the results 
 as long as it is large enough to provide sufficient statistic.
 
 \item The response for each cell family is computed by averaging over all the \glspl{pmt} 
 belonging to that family. We keep separate the left and right \glspl{pmt} and the A and C side 
 of \gls{tilecal}
 
-\item The distribution of the response is normalized to the last group of \glspl{lb} that 
-does not contain the \gls{lb} where "stable beams" is declared, which is used as reference.
+\item The distribution of the response is normalized to the last group of \glspl{lub} that 
+does not contain the \gls{lub} where "stable beams" is declared, which is used as reference.
 
 \end{enumerate} 
 
@@ -166,10 +166,10 @@ luminosity increases, and is therefore referred to as non-linearity of the \glsp
 
 The \gls{pmt} non-linearity is quantified in three different ways, that in the Figures are labeled as:
 \begin{description}
-\item[Jump] Relative difference between the first group of \glspl{lb} after "stable beams" declaration that does not contain the 
-\gls{lb} where "stable beams" is declared and the group of \glspl{lb} used as reference.
+\item[Jump] Relative difference between the first group of \glspl{lub} after "stable beams" declaration that does not contain the 
+\gls{lub} where "stable beams" is declared and the group of \glspl{lub} used as reference.
 \item[Average] Average of the response after "stable beams" is declared until the end of the run, relative to the reference.
-\item[Lumi-average] As above, but the average is weighted by the amount of luminosity collected in each group of \glspl{lb}.
+\item[Lumi-average] As above, but the average is weighted by the amount of luminosity collected in each group of \glspl{lub}.
 \end{description}
 
  Equivalent studies on run 330875 show that for the low luminosity of the \gls{vdm} run there is no discontinuity in the 
