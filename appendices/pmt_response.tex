@@ -50,16 +50,24 @@ that spans over three order of magnitude.
 \section{TileCal laserII system}
 \label{sec:app:laser}
 
-The \gls{tilecal} laser system is designed with the main purpose of calibrating the \glspl{pmt} and readout chain, and 
-it has been renewed for Run 2. 
+The \gls{tilecal} laser system is designed with the main purpose of calibrating the \glspl{pmt} and readout chain: 
+in absence of collisions, a controlled amount of light is sent to each \gls{pmt}'s photocatode, 
+and the response is used to derive the laser calibration constant. 
+The laser system has been renewed for Run 2 and the new version (LaserII)
+has been installed in October 2014. 
 During the calibration, that is performed every two or three days in the 
 pauses between the \gls{lhc} collisions,
 laser pulses with a wavelength of 532 nm are sent to all the \gls{pmt} cathodes 
 trough 400 100-meters long fibers. 
+The laser light is sent also to monitor photodiodes, to remove the dependence on the laser stability. 
 
 Laser pulses are also sent in the abort gaps during physics runs, with a frequency of 
 3 Hz. 
-This procedure is used to detect "time jumps" 
+This procedure is used to detect "time jumps", changes in the time settings of groups of channels 
+that in Run 1 were particularly frequent after a power restart of the Low Voltage Power
+Supply.
+The response of the \glspl{pmt} to the laser pulses sent in empty bunches in physics runs 
+is used also to perform the analysis described in this appendix. 
 
 
 \section{PMT response in empty bunches}
@@ -188,7 +196,7 @@ is used to correct for this undesired effect, with the net result of \gls{tileca
 for the luminosity measurement for the \gls{vdm} run, as schematically illustrated in Figure \ref{fig:apppmt:sketch}.
 
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \subfigure{\includegraphics[width=0.65\textwidth]{figures/pmt_response/sketch.pdf}}
 \caption{Schematic effect of the correction of the \gls{pmt} response on the \gls{tilecal} luminosity measurement.}
@@ -249,7 +257,7 @@ the considered cell families, results to be:
 
 \noindent We can see that the inclusion of the laser corrections reduces the uncertainty by about 1\%.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \subfigure{\includegraphics[width=0.80\textwidth]{figures/pmt_response/lumi_integral.pdf}}
 \caption{Relative difference in total integrated luminosity for the \gls{vdm} run for the different types of 
@@ -293,7 +301,7 @@ and is the largest uncertainty on the \gls{vdm} calibration for 2017.
 luminosity estimate. This is shown in Figure \ref{fig:app:longterm}.
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
 \subfigure{\includegraphics[width=0.43\textwidth]{figures/pmt_response/scan_to_scan.pdf}\label{fig:app:scantoscan}}
 \subfigure{\includegraphics[width=0.55\textwidth]{figures/pmt_response/long_term_stability.pdf}\label{fig:app:longterm}}
