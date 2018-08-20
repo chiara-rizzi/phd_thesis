@@ -20,7 +20,7 @@ The ability to accurately identify particles and reconstruct their energy and tr
 
 \subsection{Tracking and spectrometry}
 \label{sec:dec:tracking}
-A tracking device measures the traces left by charged particles passing through it. To allow the determination of the momentum and the charge of a particle, a tracking device needs to be accompanied by a magnetic field (and in this case we speak of a \textit{magnetic spectrometer}): once the magnetic field is known, the measure of the radius of curvature of the particle is equivalent to a measure of its momentum, according to Eq. \ref{eq:cern:p03br}. In a typical particle detector as the one in the schema in Fig. \ref{fig:detector:interaction}, both the inner tracking system and the muon system are magnetic spectrometers.
+A tracking device measures the traces left by charged particles passing through it. To allow the determination of the momentum and the charge of a particle, a tracking device needs to be accompanied by a magnetic field (in this case we speak of a \textit{magnetic spectrometer}): once the magnetic field is known, the measure of the radius of curvature of the particle is equivalent to a measure of its momentum, according to Eq. \ref{eq:cern:p03br}. In a typical particle detector as the one in the schema in Fig. \ref{fig:detector:interaction}, both the inner tracking system and the muon system are magnetic spectrometers.
 
 The relative uncertainty on the momentum is given by:
 \begin{equation}
@@ -72,24 +72,25 @@ The underlying principle is based on the \textit{band model} of solids, describi
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/band_structure}}
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/pn.pdf}}
-\caption{(a) Schema of band model of solids. (b) Top: schema of a p-n junction. Bottom: charge distribution in a p-n junction and extension of the depletion area. Figures from Ref. \cite{grupen_shwartz_2008}.}
+\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/band_structure}\label{fig:det:band:a}}
+\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/pn.pdf}\label{fig:det:band:b}}
+\caption{\subref{fig:det:band:a} Schema of band model of solids. \subref{fig:det:band:b} Top: schema of a p-n junction. Bottom: charge distribution in a p-n junction and extension of the depletion area. Figures from Ref. \cite{grupen_shwartz_2008}.}
 \label{fig:det:band}
 \end{figure}
 
 Semiconductors are materials where the conduction band is almost empty, but the energy gap is small ($\approx$ 1 eV, e.g. 1.07 eV for silicon), so the conduction band can be occupied by excited electrons from the valence band; this leaves holes in the valence band, that under the effect of an electric field can drift as well. Semiconductors with a pure composition have the same amount of electorns and holes. If the semiconductor is doped with an atom with one more electron in the valence band, this creates an excess of electrons and the material is referred to as a \textit{n-type} semiconductor. If instead the impurities are electron acceptors, the material has an excess of holes and is referred to as \textit{p-type} semiconductor. When a p-type and a n-type semiconductors are pulled together, the holes of the p-side drift into the n-side, and the electrons from the n-side into the p-side, as shown in Fig. \ref{fig:det:band}(b). This creates an electric field that takes charge carriers out of the area where it is present (\textit{depletion region}). When a charged particle passes through the semiconductor, it produces electron-hole pairs in the depletion region; these drift apart because of the electric field and can be collected by electrodes. The application of a negative potential difference between the p-side and the n-side can increase the depletion area.
 
-The density of silicon is about one thousand higher than the density of gases like argon, and silicon also needs a much lower energy to be ionized (3.6 eV for silicon, while it is about 250 times higher for argon). This leads to a much higher number of electron-holes pairs than the number of electron-ion pairs in gas detectors, so the signal needs very little amplification, and the size of the detector itself can be smaller. 
+The density of silicon is about one thousand times higher than that of gases like argon, and silicon also needs a much lower energy to be ionized (3.6 eV for silicon, while it is about 250 times higher for argon). This leads to a much higher number of electron-holes pairs than the number of electron-ion pairs in gas detectors, so the signal needs very little amplification, and the size of the detector itself can be smaller. 
 
 Different configurations of the silicon sensors are possible. Fig. \ref{fig:det:silicon_schema}(a) shows the schema of a \textit{single-sided strip} sensor, where the readout strips are at negative potential. The second coordinate can be determined if also the n-side is divided into strips in a direction orthogonal to the ones in the p-side, as shown in Fig. \ref{fig:det:silicon_schema}(b). The grid structure of this \textit{double-sided strip} sensors can still lead to ambiguities when the number of hits is elevated; a true two-dimensional sensitivity is offered only by the \textit{pixel} modules, schematically shown in Fig. \ref{fig:det:silicon_schema}(c), where the module is divided in a matrix-like shape.
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/single-sided-AC-coupled-silicon-strip.pdf}}
-\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/double-sided-silicon-strip.pdf}}
-\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/pixel-schema.pdf}}
-\caption{Schematic view of a single-sided strip sensor (a), double-sided strip sensor (b) and pixel module (c). }
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/single-sided-AC-coupled-silicon-strip.pdf}\label{fig:det:silicon_schema:a}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/double-sided-silicon-strip.pdf}\label{fig:det:silicon_schema:b}}
+\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/pixel-schema.pdf}\label{fig:det:silicon_schema:c}}
+\caption{Schematic view of \subref{fig:det:silicon_schema:a} a single-sided strip sensor,
+\subref{fig:det:silicon_schema:b} a double-sided strip sensor and \subref{fig:det:silicon_schema:c} a pixel module. }
 \label{fig:det:silicon_schema}
 \end{figure}
 
@@ -98,14 +99,14 @@ Different configurations of the silicon sensors are possible. Fig. \ref{fig:det:
 \subsection{Calorimetry}
 \label{sec:dec:calo}
 
-Calorimeters can measure the energy of both charged and neutral particles through a destructive measurement: the energy of the particles is deposited in the detector material and transformed into a measurable quantity. Because of their sensitivity to a wide variety of particles, good energy resolution and relatively small size, they are very attractive devices for accelerator physics experiments \cite{RevModPhys.75.1243} \cite{Wigmans:2000vf}.
+Calorimeters can determine the energy of both charged and neutral particles through a destructive measurement: the energy of the particles is deposited in the detector material and transformed into a measurable quantity. Because of their sensitivity to a wide variety of particles, good energy resolution and relatively small size, they are very attractive devices for accelerator physics experiments \cite{RevModPhys.75.1243,Wigmans:2000vf}.
 
-When the incident particle interacts with the material of the calorimeter it develops a cascade of particles (\textit{shower}), with different characteristics for electromagnetic and hadronic interactions, described in the next two sections. Different types of calorimeters are necessary to capture the two typologies. The energy of the shower is decreased by the interactions happening in the \textit{absorber} material, while the \textit{active} material provides the conversion of the energy in a charge or light signal. In \textit{sampling calorimeters} layers of absorber and active material are alternated in sequence, while in \textit{homogeneous calorimeters} a single material carries out both functions.
+When the incident particle interacts with the material of the calorimeter it develops a cascade of particles (\textit{shower}), with different characteristics for electromagnetic and hadronic interactions, described in the next two sections. Different types of calorimeters are necessary to capture the two typologies. The energy of the shower is decreased by the interactions happening in the \textit{absorber} material, while the \textit{active} material provides the conversion of the energy into a charge or light signal. In \textit{sampling calorimeters} layers of absorber and active material are alternated in sequence, while in \textit{homogeneous calorimeters} a single material carries out both functions.
 
 
 \subsubsection*{Electromagnetic calorimeters}
 
-The type of interaction that electromagnetically-interacting particles have with the detector depends on their energy. The average fractional energy loss in lead for electrons and positrons and the photon interaction cross section in lead are shown in Fig. \ref{fig:det:xsec_elec} (a) and (b) respectively. 
+The type of interaction that electromagnetically interacting particles have with the detector depends on their energy. The average fractional energy loss in lead for electrons and positrons and the photon interaction cross section in lead are shown in Fig. \ref{fig:det:xsec_elec} (a) and (b) respectively. 
 
 \begin{figure}[ht]
 \centering
@@ -120,9 +121,10 @@ When electrons, positrons and photons with energies above 1 GeV traverse a block
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/elec_shower}}
-\subfigure[]{\includegraphics[width=0.52\textwidth]{figures/detector/elec_shower_lateral}}
-\caption{(a) Sketch of the evolution of an electromagnetic shower. (b) Lateral and longitudianl evolution of the shower form 6-GeV electons. Figure from Ref. \cite{grupen_shwartz_2008}.}
+\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/elec_shower} \label{fig:det:shower_elec:a}}
+\subfigure[]{\includegraphics[width=0.52\textwidth]{figures/detector/elec_shower_lateral}\label{fig:det:shower_elec:b}}
+\caption{\subref{fig:det:shower_elec:a} Sketch of the evolution of an electromagnetic shower. 
+\subref{fig:det:shower_elec:b} Lateral and longitudinal evolution of the shower from electrons with an energy of 6 GeV. Figure from Ref. \cite{grupen_shwartz_2008}.}
 \label{fig:det:shower_elec}
 \end{figure}
 
@@ -132,7 +134,7 @@ The main parameter to describe the evolution of an electromagnetic shower is the
 X_0 [\frac{g}{cm^2}] = \frac{716 \frac{g}{ cm^2} A }{Z(Z+1) \ln\left(287/\sqrt{Z}\right)} \; ,
 \end{equation}
 
-where $A$ and $Z$ are the atomic and mass number of the material. If we define $t = \frac{x}{X_0}$ as the shower depth relative to the radiation length, the maximum number of produced particles occurs at:
+\noindent where $A$ and $Z$ are the atomic and mass number of the material. If we define $t = \frac{x}{X_0}$ as the shower depth relative to the radiation length, the maximum number of produced particles occurs at:
 \begin{equation}
 t_{max} = \frac{\ln\left(E_0/E_c\right)}{ln\left(2\right)} \;.
 \end{equation}
