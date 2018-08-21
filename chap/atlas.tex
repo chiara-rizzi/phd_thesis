@@ -3,25 +3,29 @@
 \section{The ATLAS experiment}
 \label{sed:cern:atlas}
 
-\gls{atlas} \cite{atlas:atlas} is the largest of the \gls{lhc} detectors: as it is shown in Fig. \ref{fig:atlas:atlas} it measures 44 meters in length and 25 meters in height, and its weights is about 700 tons. To be fully functional in the \gls{lhc} environment,  \gls{atlas} needs to be fast as it needs to be able to resolve the collisions resulting from consecutive bunches (which are interspaced by 25 ns) and radiation resistant. 
+\gls{atlas} \cite{atlas:atlas}, shown in Fig. \ref{fig:atlas:atlas}, is the largest of the \gls{lhc} detectors, 
+measuring 44 meters in length and 25 meters in height, and weighting about 700 tons. 
+To be fully functional in the \gls{lhc} environment,  the \gls{atlas} detector needs to be fast in order to resolve the collisions resulting from consecutive bunches (which are interspaced by 25 ns) and radiation resistant. 
 
 \begin{figure}[ht]
 \centering
 \subfigure{\includegraphics[width=0.85\textwidth]{figures/atlas/atlas}}
-\caption{Computer-generated image of the \gls{atlas} detector. Figure from Ref. \cite{atlas:atlas}}
+\caption{Drawing of the \gls{atlas} detector showing the different subdetectors and
+the magnet systems. Figure from Ref. \cite{atlas:atlas}.}
 \label{fig:atlas:atlas}
 \end{figure}
 
 The \gls{atlas} physics program covers a large variety of topics: 
 \begin{itemize}
 \item \textit{Standard Model} processes can be measured at the \gls{lhc} at energies never reached before, and being sensitive to them is essential both to provide accurate measurements and to use them as candles to calibrate the detector. 
-\item The discovery of the \textit{Higgs boson} was one of the main goals of the \gls{lhc}, and after its observation in 2013 the focus moved on measuring its properties. 
-\item \textit{Top quarks} are produced in large amount at the \gls{lhc}, and the study of the properties of this particle can both probe the \gls{sm} and set limits on \gls{bsm} theories.
-\item The \gls{lhc} offers an incredible opportunity to discover \textit{\gls{bsm} physics}, and \gls{atlas} needs to be ready to identify its signs.
-\item Despite the ALICE detector is specifically designed to study heavy-ion collisions, \gls{atlas} also carries out an \textit{heavy-ion program}.
+\item The discovery of the \textit{Higgs boson} was one of the main goals of the \gls{lhc} and, after its observation in 2012, the focus moved onto measuring its properties. 
+\item Compared to the Tevatron, the \gls{lhc} is a true \textit{top-quark} factory, 
+and the study of the properties of this particle can both probe the \gls{sm} and set limits on \gls{bsm} theories.
+\item The \gls{lhc} offers an exciting opportunity to discover \textit{\gls{bsm} physics}, and \gls{atlas} needs to be ready to identify its signs.
+\item Despite the ALICE detector is specifically designed to study heavy-ion collisions, \gls{atlas} also carries out a \textit{heavy-ion program}.
 \end{itemize}
 
-To cope with the wide range of types and energies (from few GeV to several TeV) of the particles that need to be identified, \gls{atlas} relies on a sequence of subdetectors nested in a cylindrical geometry, that follow the general schema discussed in Section \ref{sec:detectors:identification}: close to the \gls{ip} we find the \gls{id}, embedded in a solenoidal magnetic field of 2 T. The following layers are the \gls{ecal} and \gls{hcal}, and the outermost part is occupied by the muon system, where muons are bent by a 4-T toroidal magnetic field. All of these components are described in the next sections.
+To cope with the wide range of types and energies (from few GeV to several TeV) of the particles that need to be identified, \gls{atlas} relies on a sequence of subdetectors nested in a cylindrical geometry, that follow the general schema discussed in Section \ref{sec:detectors:identification}: close to the \gls{ip} we find the \gls{id}, embedded in a solenoidal magnetic field of 2 T. The following layers are the \gls{ecal} and \gls{hcal}, and the outermost part is occupied by the muon system, where muons are bent by a 4 T toroidal magnetic field. All of these components are described in the next sections.
 
 \subsection{Coordinate system}
 
@@ -32,18 +36,23 @@ To cope with the wide range of types and energies (from few GeV to several TeV) 
 \eta = - \ln\tan\left(\frac{\theta}{2}\right) \; ,
 \end{equation}
 
-which, in the limit of massless particles, is equivalent to the \textit{rapidity}:
+\noindent which, in the limit of massless particles, is equivalent to the \textit{rapidity}:
 
 \begin{equation}
 \label{eq:cern:y}
 y = \frac{1}{2} \ln\left(\frac{E + p_z}{E - p_z}\right) \; ,
 \end{equation}
 
-where $E$ is the energy of the particle and $p_z$ its momentum projected on the $z$-axis. The $\eta$-$\phi$ plane is used to define the angular separation of two objects in the detector:
+\noindent where $E$ is the energy of the particle and $p_z$ its momentum projected on the $z$-axis. 
+The advantage of rapidity and pseudorapidity over the polar angle is that rapidity differences $\Delta y$ are boostinvariant
+along the $z$-axis, as well as pseudorapidity differences $\Delta \eta$ for massless particles.
+The pseudorapidity is usually preferred to the rapidity as it does not require
+knowing the particle’s mass but only its polar position.
+The $\eta$-$\phi$ plane is used to define the angular separation of two objects in the detector:
 
 \begin{equation}
 \label{eq:cern:dR}
-\Delta R = \sqrt{ \Delta \phi^2 + \Delta \eta^2  } \; .
+\Delta R = \sqrt{ (\Delta \eta)^2 + (\Delta \phi)^2  } \; .
 \end{equation}
 
 Since protons are composite particles, and the hard scattering happens between its constituents, the longitudinal momentum of the partons is unknown. It is therefore useful to define the \textit{transverse momentum} as the projection of the momentum on the ($x$,$y$) plane: 
@@ -53,8 +62,7 @@ Since protons are composite particles, and the hard scattering happens between i
 p_T = \sqrt{p_x^2 + p_y^2} \; ,
 \end{equation}
 
-where $p_{x(y)}$ are the projection of the momentum along the $x$-($y$-)axis.
-
+\noindent where $p_{x(y)}$ are the projection of the momentum along the $x$-($y$-)axis.
 
 
 
@@ -66,15 +74,16 @@ The two segments of the \gls{atlas} detector that are dedicated to tracking, the
 \begin{figure}[ht]
 \centering
 \subfigure{\includegraphics[width=0.45\textwidth]{figures/atlas/magnets}}
-\caption{Layout of the \gls{atlas} magnet system. Figure from Ref. \cite{Goodson}}
+\caption{Layout of the \gls{atlas} magnet system. Figure from Ref. \cite{Goodson}.}
 \label{fig:atlas:magnet}
 \end{figure}
 
-As discussed in Section \ref{sec:dec:tracking}, the magnetic field configurations that are more suitable for a detector with cylindrical symmetry are solenoidal and toroidal. The bending of the charged particles in the \gls{atlas} \gls{id} is caused by an axial 2-T solenoidal field, provided by the \textit{central solenoid} \cite{YAMAMOTO200853}. This magnet is 5.8-m long, has an inner diameter of 2.46 m and an outer diameter of 2.56. The wounded coil is made of an Al-stabilised NbTi conductor, and is powered with a 7.73 kA current. 
+As discussed in Section \ref{sec:dec:tracking}, the magnetic field configurations that are more suitable for a detector with cylindrical symmetry are solenoidal and toroidal. The bending of the charged particles in the \gls{atlas} \gls{id} is caused by an axial 2 T solenoidal field, provided by the \textit{central solenoid} \cite{YAMAMOTO200853}. This magnet is 5.8 m long, has an inner diameter of 2.46 m and an outer diameter of 2.56. The wounded coil is made of an Al-stabilised NbTi conductor, and is powered with a 7.73 kA current. 
 
 
-In the muon system, a solenoid would be disadvantageous in the measurement of forward muons, since the resultant magnetic field would not be perpendicular to the trajectory of those particles. The usage of a toroid to provide the outer magnetic field solves this problem. The main drawback of this choice is that, in order to obtain the same intensity of the magnetic field, a toroid needs more current than a solenoid (20.5 kA for 4 T).
-The \gls{atlas} toroid system is divided into two subsystems, to allows for an easier design, as well as access to the core part of the detector.
+In the muon system, a solenoid would be disadvantageous in the measurement of forward muons, since the resultant magnetic field would not be perpendicular to the trajectory of those particles. The usage of a toroid to provide the outer magnetic field solves this problem. The main drawback of this choice is that, in order to obtain the same strength of magnetic field, a toroid needs more current than a solenoid (20.5 kA for 4 T).
+The \gls{atlas} toroid system is divided into two subsystems, to allows for an easier design, 
+as well as to provide access to the core part of the detector.
 The \textit{barrel toroid} \cite{ATLAS:1997ac} provides a peak field of 3.9 T in the cylindrical shell between the calorimeters and the end of the muon spectrometer, and consists of eight coils contained in individual vacuum vessels.  
 The \textit{end-cap toroids} \cite{ATLAS:1997ab} provide the magnetic field necessary to bend the muons in the end-cap region of the spectrometer, and each of them consists of eight coils building a single cold mass, originating a peak field of 4.1 T. 
 
