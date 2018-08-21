@@ -222,18 +222,18 @@ and two providing fast event selection for the trigger system.
 \begin{figure}[ht]
 \centering
 \subfigure{\includegraphics[width=0.65\textwidth]{figures/atlas/muon}}
-\caption{Layout of the \gls{atlas} muon system. Figure from Ref. \cite{atlas:atlas}}
+\caption{Layout of the \gls{atlas} muon system. Figure from Ref. \cite{atlas:atlas}.}
 \label{fig:atlas:muon}
 \end{figure}
 
 The two systems dedicated to precision measurement are the \gls{mdt} and the \gls{csc}, both present in barrel and end caps. The \glspl{mdt} are proportional drift chambers covering the region $|\eta|<2.7$; they are made of aluminium tubes with a diameter of 30 mm and a length between 700 and 6300 mm, and a cathode wire made of an alloy of tungsten (97\%) and rhenium (3\%). The filling gas is a mixture of Ar, N$_2$, and CH$_4$ with percentages respectively of 91\%, 4\% and 5\%. The \glspl{csc} are multi-wire proportional chambers that cover the region with $2.0<|\eta|<2.7$, where the shorter drift time of this detector (30 ns compared to the 480 ns of the \glspl{mdt}) allows to better cope with the increase in particle flux in the forward region. The anode wires in the \glspl{csc} are made of the same tungsten-rhenium alloy of the \glspl{mdt} and have a 2.54 mm pitch, which is the same distance separating them from the copper cathode strips, creating a symmetric cell. The gas inside the chamber is a mixture of 30\% Ar, 50\% CO$_2$, and 20\% CF$_4$. The spatial resolution is 40 $\mu$m in the bending plane and 5 mm in the perpendicular plane.
 
-The muon trigger system needs to be able to identify events with energetic muons in a timescale compatible with assigning them to the correct bunch crossing, that at the nominal value are spaced by 25 ns. The two trigger chambers are the \gls{rpc} and the \gls{tgc}. The \glspl{rpc} are arranged in three layers in the barrel region, outside the outermost \gls{mdt} layer. Each narrow chamber consists of two parallel resistive bakelite plates and is filled with a mixture of 94.7\% C$_2$H$_2$F$_4$, 5\% Iso-C$_4$H$_{10}$, and 0.3\% SF$_6$. The signal is readout by metal plates through capacitive coupling, providing a time resolution of 1.5 ns, while the space resolution is about 1 cm. The \gls{rpc} also provides the $\phi$ coordinate for the track, which is not measured by the \glspl{mdt}. The \glspl{tgc} are multi-wire proportional chambers located in the end caps, filled with a mixture of 55\% CO$_2$ and 45\% n-C$_5$H$_{12}$; contrary to the \glspl{csc}, are characterized by a distance between the cathode and the anode shorter than the anode pitch. The pseudorapidity coverage is $1.05<|\eta|<2.7$ for tracking and $1.05<|\eta|<2.4$ for triggering; the time response is similar to the one of the \glspl{rpc}, while the spatial resolution is better: between 2 and 7 mm. 
+The muon trigger system needs to be able to identify events with energetic muons in a timescale compatible with assigning them to the correct bunch crossing, that are spaced by 25 ns. The two trigger chambers are the \gls{rpc} and the \gls{tgc}. The \glspl{rpc} are arranged in three layers in the barrel region, outside the outermost \gls{mdt} layer. Each narrow chamber consists of two parallel resistive bakelite plates and is filled with a mixture of 94.7\% C$_2$H$_2$F$_4$, 5\% Iso-C$_4$H$_{10}$, and 0.3\% SF$_6$. The signal is readout by metal plates through capacitive coupling, providing a time resolution of 1.5 ns, while the space resolution is about 1 cm. The \gls{rpc} also provides the $\phi$ coordinate for the track, which is not measured by the \glspl{mdt}. The \glspl{tgc} are multi-wire proportional chambers located in the end caps, filled with a mixture of 55\% CO$_2$ and 45\% n-C$_5$H$_{12}$. Contrary to the \glspl{csc}, the \glspl{tgc} are characterized by a distance between the cathode and the anode shorter than the anode pitch. The pseudorapidity coverage is $1.05<|\eta|<2.7$ for tracking and $1.05<|\eta|<2.4$ for triggering; the time response is similar to that of the \glspl{rpc}, while the spatial resolution is better: between 2 and 7 mm. 
 
 \subsection{Luminosity measurement}
 \label{sec:lumimeas}
 
-An accurate determination of the luminosity is important both for \gls{sm} measurements, where often the luminosity uncertainty is one of the most relevant ones, and for \gls{bsm} searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the \gls{atlas} detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Eq. \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{Aaboud:2016hhf} as product of the number of bunch crossings $N_b$ and the average luminosity per bunch cross $<\mathcal{L}_b>$:
+An accurate determination of the luminosity is important both for \gls{sm} measurements, where often the luminosity uncertainty can dominate in some cases, and for \gls{bsm} searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the \gls{atlas} detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Eq. \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{Aaboud:2016hhf} as product of the number of bunch crossings $N_b$ and the average luminosity per bunch cross $<\mathcal{L}_b>$:
 \begin{equation}
 \mathcal{L} = N_b <\mathcal{L}_b> = N_b \frac{f <\mu>}{\sigma_{\mathrm{inel}} } \; .
 \label{eq:atlas:lumi}
@@ -244,7 +244,7 @@ With respect to the nomenclature of Eq. \ref{eq:cern:lumi}, $<\mu>$ is the avera
 \mathcal{L}_b = \frac{f <\mu_\mathrm{vis}>}{\sigma_{\mathrm{vis}} } \; ,
 \end{equation}
 
-where $<\mu_\mathrm{vis}>$ and $\sigma_{\mathrm{vis}}$ are the product of the corresponding quantities in Eq. \ref{eq:atlas:lumi} and the acceptance and efficiency of the detector. Out of these two quantities, $<\mu_\mathrm{vis}>$ is directly measurable during the collisions, while $\sigma_{\mathrm{vis}}$ is determined with the \gls{vdm} method \cite{vanderMeer:296752}, carried out in the dedicated \gls{vdm} runs. These are special runs with low bunch intensity and number of bunches, where a variation (scan) of the overlap of the two beams in the $x$- and $y$-direction is performed; the beam parameters and the peak of visible interaction rate per bunch crossing during the scan can be used to determine the visible cross section and therefore calibrate each subsystem. 
+\noindent where $<\mu_\mathrm{vis}>$ and $\sigma_{\mathrm{vis}}$ are the product of the corresponding quantities in Eq. \ref{eq:atlas:lumi} and the acceptance and efficiency of the detector. Out of these two quantities, $<\mu_\mathrm{vis}>$ is directly measurable during the collisions, while $\sigma_{\mathrm{vis}}$ is determined with the \gls{vdm} method \cite{vanderMeer:296752}, carried out in the dedicated \gls{vdm} runs. These are special runs with low bunch intensity and number of bunches, where a variation (scan) of the overlap of the two beams in the $x$- and $y$-direction is performed; the beam parameters and the peak of visible interaction rate per bunch crossing during the scan can be used to determine the visible cross section and therefore calibrate each subsystem. 
 
 We can express the luminosity per bunch cross as:
 \begin{equation}
@@ -252,22 +252,22 @@ We can express the luminosity per bunch cross as:
 \label{eq:lumi_vdm1}
 \end{equation}
 
-where $\rho_1(x,y)$ and $\rho_2(x,y)$ are the particle densities in the two colliding bunches at the \gls{ip}. 
+\noindent where $\rho_1(x,y)$ and $\rho_2(x,y)$ are the particle densities in the two colliding bunches at the \gls{ip}. 
 Under the assumption that these densities can be factorized into the horizontal and vertical components, we can write Eq. \ref{eq:lumi_vdm1} as:
 \begin{equation}
 \mathcal{L}_b = n_1 n_2 f  \Omega_x(\rho_1(x), \rho_2(x)) \Omega_y(\rho_1(y), \rho_2(y))  \; ,
 \label{eq:lumi_vdm1}
 \end{equation}
 
-where $\Omega_{x/y}$ define the beam overlap in the x/y direction.
+\noindent where $\Omega_{x/y}$ defines the beam overlap in the $x$/$y$ direction.
 
-The relevant quantity in physics analyses is the integrated luminosity over a defined period of time. The basic time unit over which the integrated luminosity is computed and stored is the \gls{lub}, whose duration is defined by the \gls{atlas} trigger system and is typically about one minute. The data contained in each \gls{lub} is collected with the same detector conditions, and the integrated luminosity is computed as average instantaneous luminosity multiplied by the \gls{lub} time duration.
+The relevant quantity in physics analyses is the integrated luminosity over a defined period of time. The basic time unit over which the integrated luminosity is computed and stored is the \gls{lub}, whose duration is defined by the \gls{atlas} trigger system and is typically about one minute. The data contained in each \gls{lub} is collected with the same detector conditions, and the integrated luminosity is computed as the average instantaneous luminosity multiplied by the \gls{lub} time duration.
 
-\gls{atlas} has two primary specifically-designed luminosimeters, LUCID-2 (\textit{LUminosity measurements using Cherenkov Integrating Detector}) and BCM (\textit{Beam Conditions Monitor}), whose results are compared with the one obtained by other \gls{atlas} subsystem that measure luminosity through quantities that are sensitive to it, like the number of tracks or the flow of particles.
+\gls{atlas} has two primary specifically-designed luminometers, LUCID-2 (\textit{LUminosity measurements using Cherenkov Integrating Detector}) and BCM (\textit{Beam Conditions Monitor}), whose results are compared with the one obtained by other \gls{atlas} subsystems that measure luminosity through quantities that are sensitive to it, such as the number of tracks or the flow of particles.
 
 \subsubsection*{Bunch-by-bunch luminometers}
 
-The two dedicated luminosimeters are able to provide information for individual bunch crossing, each labeled by a \gls{bcid}.
+The two dedicated luminometers are able to provide information for individual bunch crossings, each labeled by a \gls{bcid}.
 
 BCM consists of four $8 \times 8$ mm$^2$ diamond sensors, located at $z= \pm 184$ m form the \gls{ip} and disposed in a cross shape around the beam pipe, at $|\eta| = 4.2$. Beside luminosity measurements, BCM is also used to recognize beam losses so that the beam can be dumped before damaging the silicon detectors. 
 
