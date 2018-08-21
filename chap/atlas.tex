@@ -81,7 +81,13 @@ The two segments of the \gls{atlas} detector that are dedicated to tracking, the
 As discussed in Section \ref{sec:dec:tracking}, the magnetic field configurations that are more suitable for a detector with cylindrical symmetry are solenoidal and toroidal. The bending of the charged particles in the \gls{atlas} \gls{id} is caused by an axial 2 T solenoidal field, provided by the \textit{central solenoid} \cite{YAMAMOTO200853}. This magnet is 5.8 m long, has an inner diameter of 2.46 m and an outer diameter of 2.56. The wounded coil is made of an Al-stabilised NbTi conductor, and is powered with a 7.73 kA current. 
 
 
-In the muon system, a solenoid would be disadvantageous in the measurement of forward muons, since the resultant magnetic field would not be perpendicular to the trajectory of those particles. The usage of a toroid to provide the outer magnetic field solves this problem. The main drawback of this choice is that, in order to obtain the same strength of magnetic field, a toroid needs more current than a solenoid (20.5 kA for 4 T).
+In the muon system, a solenoid would be disadvantageous in the measurement of forward muons, since the resultant magnetic field would not be perpendicular to the trajectory of those particles. The usage of a toroid to provide the outer magnetic field solves this problem. 
+The choice of the “open air” toroid configuration allows a good muon
+reconstruction performance without relying on the \gls{id}. 
+The toroids allow to efficiently generate the magnetic field over a large volume with a reduced amount
+of material. This minimizes the amount of multiple scattering, which represents one
+of the factors limiting the muon momentum resolution.
+The main drawback of the usage of a toroid is that, in order to obtain the same strength of magnetic field, a toroid needs more current than a solenoid (20.5 kA for 4 T).
 The \gls{atlas} toroid system is divided into two subsystems, to allows for an easier design, 
 as well as to provide access to the core part of the detector.
 The \textit{barrel toroid} \cite{ATLAS:1997ac} provides a peak field of 3.9 T in the cylindrical shell between the calorimeters and the end of the muon spectrometer, and consists of eight coils contained in individual vacuum vessels.  
@@ -92,20 +98,21 @@ The \textit{end-cap toroids} \cite{ATLAS:1997ab} provide the magnetic field nece
 \subsection{Inner detector}
 \label{sec:atlas:id}
 
-The main purposes of \gls{atlas} \gls{id} \cite{ATLAS:1997ag,ATLAS:1997af} are to provide a good momentum resolution of the charged particles produced in the collisions and to allow the determination of secondary vertexes. The size of the \gls{id} is determined on one side by the beam pipe and on the other side by the beginning of the \gls{ecal}. The total length is 5.4 m, that allows a coverage up to $|\eta|<$2.5.
-The \gls{id} is divided into a barrel \gls{id}, whose schema is shown in Fig. \ref{fig:atlas:id}, and two end-cap regions, covering respectively the pseudorapidity regions $|\eta|<$1.2 and 1.2$<|\eta|<$2.5. In both, a mixture of gaseous and silicon detectors is used to maximize the performance and reduce the costs. The three components that compose the \gls{id} are the pixel detector, the semi-conductor tracker and the transition radiation tracker, discussed in the following paragraphs.
+The main purposes of \gls{atlas} \gls{id} \cite{ATLAS:1997ag,ATLAS:1997af} are to provide a good momentum resolution of the charged particles produced in the collisions and to allow the determination of secondary vertices. The dimensions of the \gls{id} are determined on one side by the 
+radius of the beam pipe and on the other side by the beginning of the \gls{ecal}. The total length is 5.4 m, which provides a coverage up to $|\eta|<$2.5.
+The \gls{id} is divided into a barrel \gls{id}, whose schema is shown in Fig. \ref{fig:atlas:id}, and two end-cap regions, covering respectively the pseudorapidity regions $|\eta|<$1.2 and 1.2$<|\eta|<$2.5. In both, a mixture of gaseous and silicon detectors is used to maximize the performance and reduce the costs. The three components of the \gls{id} are the pixel detector, the semi-conductor tracker, and the transition radiation tracker, discussed in the following paragraphs.
 
 \begin{figure}[ht]
 \centering
 \subfigure{\includegraphics[width=0.65\textwidth]{figures/atlas/inner_detector}}
-\caption{Layout of the \gls{atlas} \gls{id}. Figure from Ref. \cite{Potamianos:2016ptf}}
+\caption{Layout of the \gls{atlas} \gls{id}. Figure from Ref. \cite{Potamianos:2016ptf}.}
 \label{fig:atlas:id}
 \end{figure}
 
 
 \subsubsection*{Pixel detector}
 \label{sec:atlas:pixel}
-The innermost layer of the \gls{id} is the \textit{pixel detector}, divided into barrel and end-cap regions. During the Long Shutdown after the \gls{lhc} Run1, the \gls{id} was subject to important upgrades \cite{Potamianos:2016ptf}. The main one is the addition of a fourth pixel layer in the barrel, in addition to the three already existing ones, the \gls{ibl} \cite{Capeans:1291633}, that is positioned 3.33 cm away from the \gls{ip}. In order to locate a detector so close to the \gls{ip}, the beam pipe had to be replaces with a thinner one. The \gls{ibl} is 72.4 cm long along the $z$-direction, and consists of 14 staves that provide full coverage in azimuthal angle. Each stave contains 20 modules, 12 with planar silicon sensors and 8 with 3D pixel sensors \cite{1748-0221-7-11-P11010}, and each module has 144$\times$328 pixels with the size of 50$\times$250 $\mu$m$^2$, for a total of over 12 million pixel in the entire \gls{ibl}. The size of the pixels leads to a resolution of 40 $\mu$m in the longitudinal direction and 8 $\mu$m in the perpendicular one. The three outer pixel layers are located at 5.05, 8.85 and 12.5 cm from the \gls{ip}. Each module contains 80 pixels of 50$\times$400 $\mu$m$^2$, leading to a spatial resolution of 115 and 10 $\mu$m respectively in the longitudinal and transverse direction. 
+The innermost layer of the \gls{id} is the \textit{pixel detector}, divided into barrel and end-cap regions. During the Long Shutdown after the \gls{lhc} Run1, the \gls{id} was subject to important upgrades \cite{Potamianos:2016ptf}. The main one is the addition of a fourth pixel layer in the barrel, in addition to the three already existing ones, the \gls{ibl} \cite{Capeans:1291633}, that is positioned 3.33 cm away from the \gls{ip}. In order to locate a detector so close to the \gls{ip}, the beam pipe had to be replaced with a thinner one. The \gls{ibl} is 72.4 cm long along the $z$-direction, and consists of 14 staves that provide full coverage in azimuthal angle. Each stave contains 20 modules, 12 with planar silicon sensors and eight with 3D pixel sensors \cite{1748-0221-7-11-P11010}, and each module has 144$\times$328 pixels with the size of 50$\times$250 $\mu$m$^2$, for a total of over 12 million pixels in the entire \gls{ibl}. The size of the pixels leads to a resolution of 40 and 8 $\mu$m respectively in the longitudinal and transverse direction. The three outer pixel layers are located at 5.05, 8.85 and 12.5 cm from the \gls{ip}. Each module contains 80 pixels of 50$\times$400 $\mu$m$^2$, leading to a spatial resolution of 115 and 10 $\mu$m respectively in the longitudinal and transverse direction. 
 The two end caps, on the two sides of the detector, consist of three wheels each, with a radius of 34 cm and located at 49.5, 58.8 and 65.0 cm from the \gls{ip}. 
 To ensure a good performance, the pixel detectors need to be kept at a low and stable temperature, between -15$^{\circ}$ C and 5$^{\circ}$ C for the \gls{ibl}, between -15$^{\circ}$ C and -10$^{\circ}$ C for the other layers.
 
