@@ -230,46 +230,47 @@ Two main hadronization models used in \gls{mc} generators are:
 \begin{description}
 \item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). The term "string model" comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
 A color string forms that joins the the final state in a string configuration of field energies, and hadrons originate from the breakups of the string. The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm.
-The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two and have therefore a rate for hadron production double than that of quarks. 
+The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two strings and have therefore a rate for hadron production twice that of quarks. 
 % chiara: describe the main steps of the string model hadronization
-The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent on the sequence of string breakups. The resulting function depends on the mass and \pt of the hadron, leading to heavier hadrons carrying on average an higher fraction of the momentum.
+The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent on the sequence of string breakups. The resulting function depends on the mass and \pt of the hadron, leading to heavier hadrons carrying on average a higher fraction of the momentum.
 
-\item[Cluster Model] The cluster model, sketched in Figure \ref{fig:cluster_model}, is based on preconfinement. The clusters of color and anti-color, instead of forming a string, at a sufficient low scale can decay directly into (possibly unstable) hadrons. The mass distribution of the preconfined clusters results to be independent on the scale and nature of the original hard process. This universal distribution of the cluster mass peaks below 1 GeV, with a tail that extends to above 10 GeV; these cluster with very high mass are decayed as a string.  
+\item[Cluster Model] The cluster model, sketched in Figure \ref{fig:cluster_model}, is based on preconfinement. The clusters of color and anti-color, instead of forming a string, at a sufficient low scale can decay directly into (possibly unstable) hadrons. The mass distribution of the preconfined clusters results to be independent on the scale and nature of the original hard process. This universal distribution of the cluster mass peaks below 1 GeV, with a tail that extends to above 10 GeV; these clusters with very high mass are decayed as a string.  
 
 \end{description}
 
 \begin{figure}[h]
 \begin{center}
   \subfigure[]{
-    \label{fig:string_model}
     \includegraphics[width=0.35\textwidth]{figures/simul/Figures_MonteCarlo_string_had.pdf}
+        \label{fig:string_model}
   }
     \subfigure[]{
-    \label{fig:cluster_model}
     \includegraphics[width=0.35\textwidth]{figures/simul/Figures_MonteCarlo_clustr_had.pdf}
+    \label{fig:cluster_model}
   }
 \end{center}
 % chiara note: check reference!
- \caption{Schematic view of string hadronization model \subref{fig:string_model} and cluster hadronization model \subref{fig:cluster_model}. Figure from Ref. \cite{Isildak:2013kfa}.}
+ \caption{Schematic view of \subref{fig:string_model} the string hadronization model and \subref{fig:cluster_model} the cluster hadronization model. 
+ Figure from Ref. \cite{Isildak:2013kfa}.}
   \label{fig:had_model}
 \end{figure}
 
 
-These two hadronization models have been developed in the 1980's, and since then there has been no fundamental progress in the theoretical understanding of hadronization. 
+These two hadronization models were developed in the 1980's, and since then there has been no fundamental progress in the theoretical understanding of hadronization. 
 When the simulation of the events stops before hadronization, it is referred to as "parton-level".
 
 \subsection{Underlying event}
 
-Protons contain more than one parton; the partons that do not participate to the hard scattering can undergo interactions as well, giving origin to multiple parton interactions in the same collision (underlying event).
-These secondary interactions are in general of lower momentum, since the \glspl{me} is larger for low momentum transfer, and will contribute to the activity along the beam direction, less in the transverse plane. 
-When the two protons pass through each other the likelihood of having multiple interactions depends on the overlap between the two protons. 
-To model the underlying event, the assumption is made that these processes are $2\rightarrow2$ scattering; the \glspl{me} for these diverges at small angle, so the modelling is dependent on the chosen \pt cutoff. 
+The partons from the colliding protons that do not participate in the hard scattering can undergo interactions as well, giving origin to multiple parton interactions in the same collision (underlying event).
+These secondary interactions are in general of lower momentum, since the \gls{me} is larger for low momentum transfer, and will contribute to the activity along the beam direction, less in the transverse plane. 
+When the two protons pass through each other the likelihood of having multiple parton interactions depends on the overlap between the two protons. 
+To model the underlying event, the assumption is made that these processes are $2\rightarrow2$ scattering; the \gls{me} for these diverges at small angle, so the modelling is dependent on the chosen \pt cutoff. 
 Because of the low-\pt nature of the underlying event, its description is based on phenomenological models \cite{ATL-PHYS-PUB-2014-021,Skands:2010ak}.
 To model the data, color reconnection between the primary interaction and the underlying event is needed. 
 
 \subsection{Pileup}
 
-The term pileup refers to additional \gls{pp} interactions happening in the same bunch crossing (in-time pileup) or in events in different bunch crossings (out-of-time pileup). 
+The term pileup refers to additional \gls{pp} interactions taking place in the same bunch crossing (in-time pileup) or in events in different bunch crossings (out-of-time pileup). 
 The presence of pileup challenges the reconstruction of the event, as it gives rise to extra activity overlapping with the products of the hard-scattering. The techniques used to model in-time pileup are the same as for the underlying event; 
 for out-of-time pileup, similar methods are used but simulating the time response of the detector electronics to collisions from the previous bunch crossing. 
 
@@ -286,28 +287,29 @@ Several independent codes allow to study the effects of different modelling of t
 
 \begin{description}
 \item[\PY] \cite{Sjostrand:2006za,Sjostrand:2014zea} \PY is a general purpose generator that uses \gls{lo} \glspl{me} for $2\rightarrow n $ ($n \leq 3$) processes; 
-it is capable to simulate both hard and soft interactions, including \gls{isr} and \gls{fsr} and multiple parton interactions.
+it is capable of simulating both hard and soft interactions, including \gls{isr} and \gls{fsr} and multiple parton interactions.
 It uses a \pt-ordered parton shower and the Lund string hadronization model. It is commonly used as a \gls{psh} generator, interfaced with a different generator that computes the \glspl{me}.
 
-\item[\HW] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp} It computes $2\rightarrow 2$ \gls{lo} \glspl{me}.
- The partons shower is ordered by the anlge of the emitted parton. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. 
+\item[\HW] \cite{Corcella:2000bw,Bahr:2008pv,Bellm:2015jjp} has the same capabilities as \PY with few small differences. 
+It computes $2\rightarrow 2$ \gls{lo} \glspl{me}.
+ The partons shower is ordered by the angle of the emitted parton. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. 
 While \PY uses a method that takes these affects into account only partially \cite{Webber:1987uy}, \HW uses one that fully includes spin correlations \cite{Collins:1987cp}. The hadronization is based on the cluster model.
 
 \item[\Sherpa] \cite{Gleisberg:2008ta} The \Sherpa event generator can provide multi-leg \glspl{me} both at \gls{lo} (up to four extra partons) and at \gls{nlo} (up to two extra partons). 
-The matching between \glspl{me} and the dipole-type parton shower \cite{Schumann:2007mg} follows the CKKW prescription.
+The matching between the \gls{me} and the dipole-type parton shower \cite{Schumann:2007mg} follows the CKKW prescription.
 It uses a cluster hadronization model. 
 
 \end{description}
 
-The recent versions of all three generators are coded in c++, but \HW and \PY were originally developed in Fortran.  
+The recent versions of all three generators are coded in C++, but \HW and \PY were originally developed in Fortran.  
 
 \subsection{Matrix elements generators}
 
 The generators described in this section do not provide a full description of the event, but aim instead at improving the 
-computation of the \glspl{me}, and can be afterwards interfaced to a general purpose generator to simulate parton shower, underlying event and pielup. The most common \glspl{me} generators are:
+computation of the \glspl{me}, and can be afterwards interfaced to a general purpose generator to simulate parton shower, underlying event and pileup. The most common \gls{me} generators are:
 
 \begin{description}
-\item[\PowhegBox] \cite{Alioli:2010xd} In this framework it is possible to implement \gls{nlo} \glspl{me} computations, using the 5 flavour scheme.
+\item[\PowhegBox] \cite{Alioli:2010xd} In this framework it is possible to implement \gls{nlo} \gls{me} computations, using the 5 flavour scheme.
 It uses the \Powheg method for matching. 
 
 \item[\aNLO] \cite{Alwall:2014hca} This generator can compute \glspl{me} at \gls{lo} for any user-specified lagrangian, and at \gls{nlo} accuracy for selected processes. It includes up to two additional partons and is then interfaced to a parton shower using the CKKW-L method. 
@@ -319,9 +321,10 @@ It uses the \Powheg method for matching.
 The specialized generators provide a better description of one specific aspect of the \gls{mc} simulation. Some of them are:
 
 \begin{description}
-\item[\evtgen] \cite{Lange:2001uf} This package simulates the decay of heavy flavour particles, in particular B and D hadrons. 
+\item[\evtgen] \cite{Lange:2001uf} This package simulates the decay of heavy flavour particles, in particular $B$ and $D$ hadrons. 
 In the simulation of the decay it uses decay amplitudes instead of probabilities and it includes spin correlations. 
-When interfaced with other event generators, it can be used to re-decay the heavy flavour particles, substituting the more sophisticated decay chains simulated by \evtgen to the original ones.
+When interfaced with other event generators, it can be used to re-decay the heavy flavour particles, 
+substituting original decay chains by the more sophisticated simulation by \evtgen.
 
 \item[\tauola] \cite{Jadach:1990mz} General purpose event generators treat tau leptons as stable particles. 
 The tau decays are then handled by separated packages like \tauola, which includes leptonic and semileptonic decays, paying attention to the tau polarization. Since the format of the tau-related information is generator-dependent and the results of the original generator need to be replaces, also the input and output formats of \tauola depend on the generator it is interfaced with.
@@ -342,13 +345,13 @@ data collected by the \gls{atlas} detector.
 After the event simulation, the \gls{atlas} simulation chain \cite{Aad:2010ah} (described in Figure \ref{fig:sim:chain}) proceeds with the emulation of the
 interaction of the particles with the detector and the signal generated in each of the detector's subsystems, 
 which is done with the \geant package \cite{Agostinelli:2002hh}. The configuration of the detector, including any misalignment, can be set at run time, and the energy depositions are recorded as hits. The digitalization step takes the input hits from the hard scattering, underlying event and pileup and transforms them into detector signals, adding also detector noise. Also the response of the \gls{lone} trigger (described in Section \ref{sec:cern:trigger}) is simulated at this stage. The final output of the digitalization is the \gls{rdo} file, to which the output of the \gls{atlas} detector itself, which is in "bytestream" format, can be converted as well. The \gls{hlt} decision and the event reconstruction run on the \gls{rdo} data format. After the detector simulation, the \gls{mc} simulated events are treated in the same manner as data, going through the object reconstruction procedures
-describes in Chapter \ref{sec:event:reco}.
+described in Chapter \ref{sec:event:reco}.
 
 \begin{figure}[h]
 \begin{center}
     \includegraphics[width=0.8\textwidth]{figures/simul/outline_v2}
 \end{center}
-\caption{The \gls{atlas} simulation software, compared with the processing of the recorded data; square-cornered boxes represent algorithms, while data objects are represented as rounded boxes. Figure from Ref. \cite{Aad:2010ah}.}
+\caption{The \gls{atlas} simulation chain, compared with the processing of the recorded data; square-cornered boxes represent algorithms, while data objects are represented as rounded boxes. Figure from Ref. \cite{Aad:2010ah}.}
  \label{fig:sim:chain}
 \end{figure}
 
@@ -360,20 +363,22 @@ while it uses FastCaloSim to emulate the energy deposited in the calorimeters us
 ATLFAST-IIF uses both FastCaloSim for the calorimeters and Fatras for the tracking systems. 
 The output of ATLFAST-II includes all the properties necessary to run the same event reconstruction as with \geant or the real data.
 
+%\section{Data-driven corrections}
+%\label{sec:datacorr}
 
-
-\section{Data-driven corrections}
-\label{sec:datacorr}
-
-After begin simulated, the \gls{mc} events are normalized to the highest-available-order cross-section, and are reweighted so that the simulated pileup distribution matches the one observed in the data that will be compared with the simulation.
+The simulated event samples are normalized to the highest-available-order cross-section, 
+and events are reweighted so that the simulated pileup distribution matches that observed in the data.
 Despite the accurate simulation, residual differences can be present in the reconstruction and selection efficiency in data and \gls{mc} simulation. 
-These differences are corrected for by multiplying the \gls{mc} simulation by \glspl{sf}, defined as the ratio of the efficiency (of a reconstruction or a selection) in data and \gls{mc}:
+The simulated reconstruction and selection efficiencies are corrected with multiplicative \glspl{sf}, defined as:
 \begin{equation}
-{\rm SF} = \frac{\epsilon_{\rm data}}{\epsilon_{\rm MC}} \; .
+{\rm SF} = \frac{\epsilon_{\rm data}}{\epsilon_{\rm MC}} \; ,
 \end{equation}
-\noindent These \glspl{sf} can be function of the kinematic of the objects in the event (often \pt and $\eta$). 
-Some examples of \glspl{sf} for the objects relevant for the analyses described in this thesis are given in Chapter \ref{sec:event:reco}.
-
+\noindent where $\epsilon_{\rm data}$ and $\epsilon_{\rm MC}$ are measured in dedicated data calibration samples 
+and in the equivalent \gls{mc} simulation, respectively.
+These \glspl{sf} can be function of the kinematic of the physics objects in the event (often \pt and $\eta$). 
+Some examples of \glspl{sf} for the physics objects relevant for the analyses described in this thesis are provided in Chapter \ref{sec:event:reco}.
+Analogously, energy scale and resolution of the different physics objects in the simulation are corrected 
+to match the corresponding measurements in data.
 
 
 
