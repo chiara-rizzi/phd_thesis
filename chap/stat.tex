@@ -84,8 +84,8 @@ The \gls{mle} of the parameters $\theta_i$, first introduced by Fisher \cite{fis
 
 The \gls{mle} is widely used because of the favorable properties that it reaches in the asymptotic limit of infinite number of events N:
 \begin{itemize}
-\item Consistent, which means that it satisfies Eq. \ref{eq:stat:consistency}.
-\item Unbiased, so the bias, defined in Eq. \ref{eq:stat:bias}, tends to zero.
+\item Consistent, which means that it satisfies Equation \ref{eq:stat:consistency}.
+\item Unbiased, so the bias, defined in Equation \ref{eq:stat:bias}, tends to zero.
 \item Efficient, as it reaches the minimum bound for the variance.
 \item It follows a Gaussian distribution.
 \end{itemize}
@@ -200,7 +200,7 @@ The \gls{jer} uncertainty is calibrated with an auxiliary measurement, whose lik
 To include this information in the likelihood, we need to evaluate the response to this uncertainty, i.e. the effect of a shift in \gls{jer} in the background efficiency of our region.
 In practice this means that we need to evaluate how much a one-sigma variation of \gls{jer} (10\% in our example) changes the number of expected events in the bin we are considering. 
 For this example, we assume that a 10\% shift in \gls{jer} causes a 20\% change in the background yields.
-If we consider only one bin of the likelihood in Eq. \ref{eq:stat:lik_no_sys}, consider only one systematic (\gls{jer} in this case) and write explicitly the effect of the systematic on the number of background events, we have:
+If we consider only one bin of the likelihood in Equation \ref{eq:stat:lik_no_sys}, consider only one systematic (\gls{jer} in this case) and write explicitly the effect of the systematic on the number of background events, we have:
 
 \begin{equation}
 \label{eq:stat:lik_one_bin_sys_pre}
@@ -225,7 +225,7 @@ G( 0 | \theta, 1) \; .
 
 \subsection*{Interpolation}
 
-The response of the efficiency to a $\pm 1 \sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Eq. \ref{eq:stat:lik_one_bin_sys_pre} and Eq. \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. 
+The response of the efficiency to a $\pm 1 \sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Equation \ref{eq:stat:lik_one_bin_sys_pre} and Equation \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. 
 Several interpolation strategies are possible; the ones described below and compared in Figure \ref{fig:stat:interp} are the ones supported by HistFactory \cite{Cranmer:1456844}.
  
 
@@ -258,7 +258,7 @@ b \left( \frac{b^-}{b}\right)^{-\theta}  \;\;\;\; \theta < 0
 \item[Quadratic interpolation and linear extrapolation] In this case the interpolation between the $\pm 1 \sigma$ response is given by the parabola passing through $b^-$, $b^+$ and $b$, while outside this range the extrapolation is given by the line tangent to the parabola in $b^+$ and $b^-$. 
 This strategy avoids the discontinuity for $\theta=0$, but it can introduce problems with the sign of the variation, for example sign inversion if $b-b^+$ and $b-b^-$ have the same sign, as shown in Figure \ref{fig:interp_2}.
 
-\item[Polynomial interpolation and exponential extrapolation] The extrapolation outside the range of the $\pm 1 \sigma$ response is given by the formula in Eq. \ref{eq:stat:interp_exp}, while the interpolation is obtained with a polynomial of sixth degree, bound to pass through $b^-$, $b^+$ and $b$ and to match in value, first and second derivative the exponential extrapolation at the $\pm 1 \sigma$ boundaries. This strategy avoids both the discontinuity at $\theta=0$ and the possibility of negative $b(\theta)$.
+\item[Polynomial interpolation and exponential extrapolation] The extrapolation outside the range of the $\pm 1 \sigma$ response is given by the formula in Equation \ref{eq:stat:interp_exp}, while the interpolation is obtained with a polynomial of sixth degree, bound to pass through $b^-$, $b^+$ and $b$ and to match in value, first and second derivative the exponential extrapolation at the $\pm 1 \sigma$ boundaries. This strategy avoids both the discontinuity at $\theta=0$ and the possibility of negative $b(\theta)$.
 
 \end{description}
 
@@ -362,7 +362,7 @@ Discovery of New Physics & $2.9 \times 10^{-7}$ & 5 \\
 \subsection{Test statistics using the PRL}
 \label{sec:teststat:prl}
 
-While a test statistic can be any real-valued function of the data, the Neyman-Pearson lemma \cite{Neyman} ensures that the ones based on a likelihood ratio are the most statistically powerful. This means that, for a given signal efficiency, they provide the decision criterion that minimizes the misidentification probability. The \gls{prl} defined in Eq. \ref{eq:stat:prl} is the most used at the LHC, and it gives origin to this test statistic:
+While a test statistic can be any real-valued function of the data, the Neyman-Pearson lemma \cite{Neyman} ensures that the ones based on a likelihood ratio are the most statistically powerful. This means that, for a given signal efficiency, they provide the decision criterion that minimizes the misidentification probability. The \gls{prl} defined in Equation \ref{eq:stat:prl} is the most used at the LHC, and it gives origin to this test statistic:
 
 \begin{equation}
 \label{eq:stat:tmu}
