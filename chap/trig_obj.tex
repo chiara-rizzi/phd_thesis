@@ -1,16 +1,18 @@
-\chapter{Physics objects reconstruction}
+\chapter{Event reconstruction}
 \label{sec:event:reco}
 
-The particles produced in the \gls{pp} collisions in the center of the \gls{atlas} detector, interact with the detector material as discussed in Chapter \ref{chap:cern}. As a result of these interactions, electrical currents are recorded. \textit{Event reconstruction} is the process of recombining these digital signals and interpreting them as tracks and energy deposits in the calorimeters. A further step consists in analyzing the characteristics of the candidate tracks and calorimeter clusters and identify them as signs of the passage of specific particles.
+The particles produced in the \gls{pp} collisions in the center of the \gls{atlas} detector interact with the detector material as discussed in Chapter \ref{chap:cern}. As a result of these interactions, electrical signals are recorded. \textit{Event reconstruction} is the process of recombining these digital signals and interpreting them as tracks and energy deposits in the calorimeters. Finally, a particle identification step
+is performed, where the information from the relevant subdetectors is combined to reconstruct as accurately
+as possible a candidate physics object.
 This chapter describes the reconstruction and identification of the objects used in the analyses discussed in this thesis: tracks and vertices, hadronic jets, muons, electrons and missing transverse momentum. 
 
 
 \section{Tracks and primary vertices}
 \label{sec:reco:tracks}
 
-In \gls{atlas} the identification of tracks from charged particles relies on the information collected by the \gls{id}. The tracking information is crucial to the reconstruction and identification of many types of particles, including electrons, muons, and the jest originating from the hadronization of a b-quark. The precision on the position measurement of the track depends on the granularity of the different subsystems of the \gls{id} and, since the \gls{id} is surrounded by a solenoidal magnetic field, the charged particles follow an helical trajectory. After the point of closest approach (perigee) to a given reference is defined, the trajectory of the track can be described by five parameters: 
+In \gls{atlas} the identification of tracks from charged particles relies on the information collected by the \gls{id}. The tracking information is crucial to the reconstruction and identification of many types of particles, including electrons, muons, and the jets originating from the hadronization of a b-quark. The precision on the position measurement of the track depends on the granularity of the different subsystems of the \gls{id} and, since the \gls{id} is surrounded by a solenoidal magnetic field, the charged particles follow an helical trajectory. After the point of closest approach (perigee) to a given reference is defined, the trajectory of the track can be described by five parameters: 
 \begin{equation}
-\theta, \; \phi, \; q/p \; d_0, \; z_0 \;,
+\theta, \; \phi, \; q/p, \; d_0, \; z_0 \;,
 \end{equation}
 \noindent where $\theta$ and $\phi$ are the azimuthal and polar angle, $q/p$ is the ratio of the charge of the track to the track momentum, and $d_0$ and $z_0$ are the distance to the perigee in the transverse plane and along the $z$-axis. 
 
@@ -189,7 +191,7 @@ while Fig. \ref{fig:obj:jvt_data} shows the comparison of the \gls{jvt} distribu
 \subsection{Jet cleaning}
 \label{sec:jetcleaning}
 
-Beside pileup jest, other spurious jets come from the \gls{ncb}; this type of background includes muons originating from secondary cascades from beam losses, in whcih case we speak of \gls{bib}, and from cosmic rays. These muons leave energy deposits in the calorimeters while traversing the detector, that can be interpreted as jets. Also coherent noise from the calorimeters can give rise to fake jets. In \gls{atlas} a set of quality criteria are designed to reject jets not originating from \gls{pp} collisions \cite{TheATLAScollaboration:2015ofz}. These quality criteria are rely on variables based on:
+Beside pileup jets, other spurious jets come from the \gls{ncb}; this type of background includes muons originating from secondary cascades from beam losses, in whcih case we speak of \gls{bib}, and from cosmic rays. These muons leave energy deposits in the calorimeters while traversing the detector, that can be interpreted as jets. Also coherent noise from the calorimeters can give rise to fake jets. In \gls{atlas} a set of quality criteria are designed to reject jets not originating from \gls{pp} collisions \cite{TheATLAScollaboration:2015ofz}. These quality criteria are rely on variables based on:
 \begin{itemize}
 \item Ionization signal shape in the LAr calorimeters, to remove mainly fake jets from calorimeter noise. 
 \item Ratios of energies, for example the ratio of the energy deposited in the electromagnetc calorimeter to the total energy, or the ratio of energy in different calorimeter layers, that can be used to discriminate against jets from \gls{bib} or calorimeter noise.
@@ -215,7 +217,7 @@ Each different value of the $R$ parameter requires a dedicated calibration follo
 Therefore, it is not always possible to choose the optimal value of the jet radius. 
 A possible solution to this problem comes from noticing that the same jet-finding algorithms used to group topoclusters can have different types of inputs. 
 In particular, jets themselves can be be used as input and grouped together, and in this case we speak of \textit{re-clustered jets} \cite{Nachman:2014kla}. 
-The re-clustered jest are automatically calibrated as long as the input jets are, and also the jet uncertainties can be propagated directly. 
+The re-clustered jets are automatically calibrated as long as the input jets are, and also the jet uncertainties can be propagated directly. 
 A comparison of the jet clustering obtained with $R$=1.0 anti-$k_T$ and by re-clustering anti-$k_T$ $R$=0.3 jets into anti-$k_T$ $R$=1.0
 is shown in Fig. \ref{fig:recluster}. It is possible to see how the jet axis is similar between the two cases, and how the $R$=1.0 anti-$k_T$ have more inputs away from the jet axis.
 Re-clustered jets can be \textit{trimmed} by removing the constituent small-R jets that have a \pt smaller than a defined fraction of the \pt of the original reclustered jet. 
@@ -311,7 +313,7 @@ The calibrations used in the analyses described in this thesis are:
 
 \begin{description}
 
-\item[b-jets] The default b-tagging calibration for b-jest is based on a \ttbar dileptonic sample. Events with exactly two opposite-sign leptons
+\item[b-jets] The default b-tagging calibration for b-jets is based on a \ttbar dileptonic sample. Events with exactly two opposite-sign leptons
 and two or three jets are selected, and a per-event likelihood is built containing the b-tagging weight \gls{pdf} for a jet of a given flavour;
 the \gls{pdf} for light-jets and c-jets is taken from \gls{mc}, while the \gls{pdf} for b-jets is the information that we want to extract from data.
 This last \gls{pdf} is described by a histogram with only two bins, one below and one above the threshold to b-tag a jet. 
