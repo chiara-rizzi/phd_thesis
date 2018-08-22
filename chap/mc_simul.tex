@@ -150,8 +150,8 @@ A theorem by Kinoshita, Lee and Nauenberg (KLN theorem) \cite{Kinoshita:1962ur,L
 when computing inclusive cross-sections, the logarithmic divergences arising from collinear splitting cancel against the virtual corrections order by order in perturbation theory. 
 This does not hold anymore when we are interested in the computation of a differential cross-section, for example with a specific number of accompanying final-state extra partons, 
 as it could be the case $l=0$, $k=1$ in Equation \ref{eq:xsec_matrix}. 
-In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}, that generate an ordered sequence of emissions with decreasing angle or energy; the \gls{psh} approximation consists in retaining only the largest \glspl{me}, namely the ones corresponding to low angles and energies, obtaining a \gls{ll} accuracy.
-There are three types of processes that need to be taken care of by the \gls{psh}: $g \rightarrow q\bar{q}$, $g \rightarrow gg$ and $q \rightarrow q g$.
+In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}, which generate an ordered sequence of emissions with decreasing angle or energy; the \gls{psh} approximation consists in retaining only singular parts of the \glspl{me}, namely those corresponding to low angles and energies, obtaining a \gls{ll} accuracy.
+There are three types of emission processes that are described by the \gls{psh}: $g \rightarrow q\bar{q}$, $g \rightarrow gg$ and $q \rightarrow q g$.
 The probability for a parton to evolve from an energy $t$ to a lower energy $t'$ without splitting is encoded in the Sudakov form factor:
 \begin{equation}
   \Delta_i(t,t')=\exp\left(-\sum_{j\in\{q,g\}}\,
@@ -163,12 +163,20 @@ The probability for a parton to evolve from an energy $t$ to a lower energy $t'$
 \noindent where $P_{ij}$ is the parton splitting function (described in Section \ref{sec:protpdf}).
 Equation \ref{eq:sudakov_intro} is sampled with \gls{mc} techniques to produce the sequence of splittings, until the hadronization scale is reached. 
 
-Also incoming particles can emit extra partons, giving rise to \gls{isr}. While in the case of \gls{fsr} the first emissions are harder than the following ones, for \gls{isr} the ordering is inverted, and the showering is performed with a backwards-evolution algorithm \cite{Sjostrand:1985xi}.
+Also incoming particles can emit extra partons, giving rise to \gls{isr}. 
+While in the case of \gls{fsr} the first emissions are harder than subsequent ones, 
+for \gls{isr} the ordering is inverted, and the showering is performed with a backwards-evolution algorithm \cite{Sjostrand:1985xi}.
 
 \subsection{Matching}
 
-When a process F is simulated with \gls{lo} \glspl{me} plus \gls{psh}, as illustrated in the left diagram in Figure \ref{fig:sim:matching} (following the discussion in Ref. \cite{Skands:2011pf}), the hardest extra jet is at \gls{ll} accuracy. 
-One might wish to improve the accuracy of the description of the event by adding the \gls{lo} \glspl{me} for the process F with the addition of one extra parton (F+1), as in the second diagram in Figure \ref{fig:sim:matching}. In this figure, the boxes are only partially filled to indicate the phase-space restriction necessary to deal with the divergence of the F+1 \glspl{me}. Adding naively these two pieces leads to double counting, as illustrated in the third diagram of Figure \ref{fig:sim:matching}. 
+When a process F is simulated with \gls{lo} \glspl{me} plus \gls{psh}, as illustrated in the left diagram in Figure \ref{fig:sim:matching}, 
+the hardest extra jet is described at \gls{ll} accuracy. 
+One might wish to improve the accuracy of the description of the event by adding the \gls{lo} \glspl{me} 
+for the process F with the addition of one extra parton (F+1), as in the second diagram in Figure \ref{fig:sim:matching}. 
+In this figure, the boxes are only partially filled to indicate the phase-space restriction 
+necessary to deal with the divergence of the F+1 \glspl{me}. 
+The naive addition of these two pieces leads to double counting of configurations, 
+as illustrated in the third diagram of Figure \ref{fig:sim:matching}. 
 This double-counting problem worsens with the increase of the number of extra legs that we want to add to the \glspl{me}.
 
 \begin{figure}[h]
@@ -181,7 +189,7 @@ This double-counting problem worsens with the increase of the number of extra le
 
 Different methods have been designed to match \glspl{me} to showers such that, for each order in perturbation theory, double-counting is avoided. The three main strategies are \cite{Giele:2011cb}:
 \begin{description}
-\item[Unitarity] This approach consists in correcting the shower splitting functions by multiplicative factors obtained as the ratio of \gls{me} to \gls{ps} approximation:
+\item[Unitarity] This approach consists in correcting the shower splitting functions by multiplicative factors obtained as the ratio of the \gls{me} to \gls{psh} approximation:
 $$
 \rm{Matched} = \rm{Approximate}\frac{\rm{Exact}}{Approximate} \; .
 $$
