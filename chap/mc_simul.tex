@@ -183,7 +183,8 @@ This double-counting problem worsens with the increase of the number of extra le
 \begin{center}
     \includegraphics[width=\textwidth]{figures/simul/matching}
 \end{center}
-\caption{Illustration of the source of possible double-counting originating from adding \glspl{me} with different number of legs. Figure from Ref. \cite{Skands:2011pf}.}
+\caption{Illustration of the source of possible double-counting originating from  adding cross sections involving matrix
+elements with dierent numbers of legs when interfaced to parton showers. Figure from Ref. \cite{Skands:2011pf}.}
  \label{fig:sim:matching}
 \end{figure}
 
@@ -195,12 +196,12 @@ $$
 $$
 \noindent When these correction factors are inserted in the shower evolution, they guarantee that the shower evolution of the process F describes correctly also the F+1 \glspl{me}, without actually adding the F+1 sample. This strategy has traditionally been worked out only for one extra parton emission. 
 
-\item[Subtraction] The subtraction approach consists in correcting the \gls{psh} by the difference between \gls{psh} and \glspl{me}:
+\item[Subtraction] The subtraction approach consists in correcting the \gls{psh} by the difference between the \glspl{me} and the \gls{psh}:
 $$
 \rm{Matched} = \rm{Approximate} + (\rm{Exact}- \rm{Approximate}) \; .
 $$
 
-\noindent With this strategy, the corrections are not resummed and the events are weighted. This is the strategy used in \mcatnlo \cite{Frixione:2002ik,Frixione:2003ei,Frixione:2008ym}, and the \Powheg method \cite{Frixione:2007vw} is an hybrid between this and the unitarity approach.
+\noindent With this strategy, the corrections are not resummed and the events are weighted. This is the strategy used in \mcatnlo \cite{Frixione:2002ik,Frixione:2003ei,Frixione:2008ym}, and the \Powheg method \cite{Frixione:2007vw} is a hybrid between this and the unitarity approach.
 
 \item[Slicing] The slicing approach divides the phase space into two regions: one described mainly by the \glspl{me} (by vetoing shower emissions below a cutoff scale, the matching scale), and one mainly by the \gls{psh}:
 \begin{equation*}
@@ -221,10 +222,10 @@ Examples of this approach are the CKKW \cite{Catani:2001cc} and MLM \cite{Mangan
 
 \subsection{Hadronization}
 
-At the end of the shower we have emissions at very low energy and angles, which correspond to high values of the \gls{qcd} coupling constant. 
-When the strong coupling becomes of order unit, the interaction is very strong and this is presumably what gives rise to hadronization, the process where colored partons, after parton shower, become a set of colorless hadrons (primary hadrons), 
-that can in turn decay into secondary hadrons. This transition is described through phenomenological models since the hadrinization scale, that corresponds also to the \gls{ir} cutoff of the parton shower, is outside the perturbative regime of \gls{qcd}. At the end of the shower, the color, flavour and momentum distribution is already organized, and the hadronization process can only do a local redistribution.
-Two main hadronization models are used in \gls{mc} generators:
+At the end of the shower we have emissions at very low energy, which correspond to high values of the strong coupling constant. 
+When the strong coupling becomes of order unity, the interaction is very strong and this is presumably what causes the confinement of the colored partons into colorless hadrons (primary hadrons), 
+that can in turn decay into secondary hadrons. This transition is described through phenomenological models since the hadronization scale, that corresponds also to the \gls{ir} cutoff of the parton shower, is outside the perturbative regime of \gls{qcd}. At the end of the shower, the color, flavour and momentum distribution is already organized, and the hadronization process can only cause a local redistribution.
+Two main hadronization models used in \gls{mc} generators are:
 
 \begin{description}
 \item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). The term "string model" comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
