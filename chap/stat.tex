@@ -617,7 +617,7 @@ p(N_s, N_b, \sigma_b) = \mathcal{I} \left( \frac{1}{1+ \frac{1}{N_b \sigma_b^2}}
 In the case of the signal and background models shown in Figure \ref{fig:stat:example}, values of \meff between 2 TeV and 4 TeV have been tested in steps of 100 GeV, and the optimal value has been found to be $\meff > 3000$ TeV. This selection leads to a \gls{sr} with  9.5 signal events, 10.5 background events and an expected significance of 1.58 $\sigma$. 
 The portion of the \meff spectrum that is not occupied by the \gls{sr}, can be used to define a \gls{cr} and a \gls{vr}.
 In this example we use the region with $\meff$ between 1.6 and 2.2 TeV as \gls{cr} for the background. 
-In order to evaluate the effect of the inclusion of a \gls{cr} in the background estimate, we need to compare the number of expected and observed background event in the \gls{cr}. 
+In order to evaluate the effect of the inclusion of a \gls{cr} in the background estimate, we need to compare the number of expected and observed background events in the \gls{cr}. 
 In these examples, the data sample is substituted by a pseudo-data sample generated with a Poisson fluctuation 
 of the bin-content of a histogram built as the sum of the background histogram with a scale factor of 0.87 and the signal histogram with a scale factor of 0.5. The summary of the pre-fit background yields, signal yields, signal-to-background ratio, significance and pseudo-data yields in all the regions is given in Table \ref{tab:stat:exampleyeilds}.
 
@@ -667,7 +667,7 @@ Pseudo-data & 231 & 52 & 15 \\
 \label{sec:example_cr}
 
 \glspl{cr} are used first of all in the so called "background-only fit", where the likelihood comprises only the \glspl{cr} and any signal contamination is neglected. The goal of the background-only fit is to extract from the \glspl{cr} data information on the modelling of the background 
-and extrapolate it to \glspl{vr} and \glspl{sr}. A background estimate based on a \gls{cr} has two main advantages with respect to the plain \gls{mc} prediction:
+and extrapolate it to \glspl{vr} and \glspl{sr}. A background estimate based on a \gls{cr} has two main advantages with respect to the nominal \gls{mc} prediction:
 
 \begin{itemize}
 \item First of all, the usage of a \gls{cr} allows to eliminate mismodellings in the normalization of the backgorund sample in a phase space 
@@ -689,7 +689,7 @@ When computing the impact of a systematic uncertainty in a \gls{sr} or \gls{vr} 
 this does not depend on the full change in yields between the nominal and the systematic variation in that \gls{sr} or \gls{vr},
 but it depends only on the change in the \gls{tf}, defined as the ratio of the predicted yields in each \gls{sr}/\gls{vr} to the yields in the \gls{cr}. 
 Let's include in the previous example a systematic variation that impacts both the shape and the normalization of the \meff distribution: 
-we define a systematic that increases the normalization of the sample by 20\% and also changes the shape of the \meff distribution by 
+we define a systematic uncertainty that increases the normalization of the sample by 20\% and also changes the shape of the \meff distribution by 
 assigning to each event a weight corresponding to the \meff value (expressed in GeV) divided by 20000; the uncertainty is then symmetrized. 
 
 This leads to the following yields in the \gls{cr} and \gls{vr}:
@@ -701,7 +701,7 @@ This leads to the following yields in the \gls{cr} and \gls{vr}:
 
 \noindent When a background is normalized in a \gls{cr}, is the relative change in the \gls{tf} and not the change in yields that determines the size of the systematic uncertainty.
 This is because the normalization of the background in the \gls{cr} absorbs the normalization uncertainty, and the effect of the uncertainty on the \gls{vr} depends only on the change in shape of the distribution. 
-In this example, while the pre-fit uncertainty on the \gls{vr} is large, the variation of the transfer factor is smaller:
+In this example, while the pre-fit uncertainty on the \gls{vr} is large, the variation of the transfer factor is significantly smaller:
 \begin{equation}
 \begin{split}
 \rm TF^{nominal}_{VR} &= \frac{62.9}{279.1} = 0.225 \; ,\\
@@ -804,6 +804,8 @@ assuming a 30\% uncertainty on the background, this corresponds to an expected s
 \gls{sr} previously defined. Note that this region overlaps with the \gls{vr} defined in Section \ref{sec:example_sr}, which in the case of this last example would need to be modified.
 
 If we include this new region as well into the likelihood of the exclusion fit and perform an upper-limit scan (in this case, for simplicity, only with the asymptotic approximation), we have that the expected \gls{ul} on $\mu_{\rm SIG}$ is 0.62. This corresponds to an improvement of about 10\% on the expected \gls{ul}, obtained just by adding to the fit a region with limited sensitivity. This effect is increased when the regions that are considered simultaneously in the fit all offer a good sensitivity and have different signal fractions. 
+This additional \gls{sr} would play a bigger role for signal models giving a less hard \meff spectrum, 
+which are therefore less trivial to discriminate from the background with a single selection. 
 
 
 
