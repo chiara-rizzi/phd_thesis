@@ -32,9 +32,17 @@ where $P(\mathrm{data}|\mathrm{theory})$ is the probability of the data given th
 
 In this chapter we discuss only about frequentist statistics, as only frequentist methods are applied to obtain the results presented in Chapters \ref{chap:strong_prod} and \ref{chap:ewk_prod}. 
 
-As mentioned above, a hypothesis is a statement based on which one can access the probability of the data. A hypothesis can be simple, when the data \gls{pdf} can be fully determined by stating if the hypothesis is true or false, or complex, when it depends on a number of parameters that in the following will be generally denoted with $\theta$. 
+As mentioned above, a hypothesis is a statement 
+that we want to test 
+against the observed data. A hypothesis can be simple, when the data \gls{pdf} can be fully determined by stating if the hypothesis is true or false, or complex, when it depends on a number of parameters that in the following will be generally denoted with $\theta$. 
 
-Given a certain hypothesis $H$, the probability of observing the data $x$ is $P(x|H)$. This probability can be considered also as a function of the hypothesis, for fixed data, and in this case it is assigned the name of likelihood ($L$). In the case of a composite hypothesis, the value of the likelihood depends on the value of the parameters necessary to specify the hypothesis, and it takes the name of likelihood function: $L(\theta)=P(x|\theta)$.
+Given a certain hypothesis $H$, the probability of observing the data $x$ is $P(x|H)$. This expression can be considered also as a function of the hypothesis, for fixed data, and in this case it is assigned the name of likelihood ($L$). In the case of a composite hypothesis, the value of the likelihood depends on the value of the parameters necessary to specify the hypothesis, and it takes the name of likelihood function: $L(\theta)=P(x|\theta)$. 
+Note that while $P(x|\theta)$ as a function of $x$ is a proper \gls{pdf} and it normalizes to unity, this is not the case for the likelihood 
+function, which depends on $\theta$:
+
+\begin{equation}
+\int L(\theta) \, d \theta \neq 1 \; . 
+\end{equation}
 
 \section{Parameter estimation}
 \label{sec:stat:pe}
@@ -73,7 +81,8 @@ Once the bias of a specific estimator is known, it is possible to build and unbi
 %V[\hat{\vec{\theta}}] \geq I[\vec{\theta}]^{-1}
 %\end{equation}
 
-\item[Robustness] An estimator is robust if it is not sensitive to small changes in the assumptions in the \gls{pdf}.
+\item[Robustness] An estimator is robust if it is not sensitive to small changes in the assumptions in the \gls{pdf} $f(x|\vec{\theta})$, 
+and is not 	excessively affected by outliers.
 \end{description}
 
 
@@ -170,7 +179,7 @@ Depending on the underlying auxiliary measurement, different functional types ca
 \rho( \theta) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left( -\frac{(\theta - \hat{\theta})^2}{2\sigma^2} \right) \; .
 \end{equation}
 
-\noindent Technically, the function implemented in the likelihood is a truncated Gaussian, in order to avoid non-zero probability for non-physical values of the \gls{np}. This truncated Gaussian is normalized to still have unit area.
+\noindent Technically, the function implemented in the likelihood is a truncated Gaussian, in order to avoid non-zero probability for non-physical values of the \gls{np} (e.g. values that correspond to a negative background prediction). This truncated Gaussian is normalized to still have unit area.
 
 \item[Poisson constraint] This constraint is often referred to as "Gamma" constraint because, when using it in a Bayesian approach, if combined with a uniform prior it gives rise to a Gamma posterior. It is used for \glspl{np} related to event count and to model the \gls{mc} statistical uncertainty. If we assume that the background yield predicted from \gls{mc} is $n$ background events, derived from $N$ \gls{mc} simulated events with a multiplicative scale $\alpha$, then the constraint term is:
 
@@ -192,7 +201,7 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 
 
-\subsubsection*{Evaluation of the response}
+\subsubsection*{Effect of a systematic uncertainty on the yield}
 
 Let’s consider a single bin of a distribution and the effect that a systematic uncertainty, 
 e.g. the \gls{jer}, has on the expected background yield in this bin. 
@@ -221,7 +230,7 @@ G( \tilde{\theta} | \theta, \sigma_\theta) \; .
 L(\mu, \theta) =
 \frac{ (\mu s +
 b(1 + 0.1\theta) )^{n} }{ n! }
-e^{- (\mu  + b (1 + 0.1\theta) )}   \;
+e^{- (\mu  + b (1 + 0.2\theta) )}   \;
 G( 0 | \theta, 1) \; .
 \end{equation}
 
