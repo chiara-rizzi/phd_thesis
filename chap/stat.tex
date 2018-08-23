@@ -118,17 +118,18 @@ There are two types of maximum likelihood fits that can be performed:
 
 \subsubsection*{Variance of the maximum Likelihood estimator}
 
-The estimate of a parameter based on a data sample is always associated with an uncertainty.
+The estimate of a parameter based on a data sample is always associated with a statistical uncertainty.
 If the same parameter estimate is performed on a different data sample, the values of the best estimate are different;
 if this is repeated N times on independent data samples, for large N the best estimates will have a distribution that tends to a Gaussian, 
-whose variance gives access to the statistical uncertainty on the \gls{mle}. The two ways to access this variance are:
+whose variance gives access to the statistical uncertainty on the \gls{mle}. There are two ways to access this variance:
 
-\begin{description}
-\item[Monte Carlo method] Once the parameter is estimated from the experimental results, the experiment can be simulated N times with \gls{mc}  simulations. For each simulation the best value of the parameter can be estimated with the maximum likelihood method, and from the distribution of these values it is possible to compute the variance.
+\begin{itemize}
 
-\item[Graphical method] With the increase of the size of the data sample, the likelihood function tends to a Gaussian, and the $\logl$ tends to a parabola, so the variance of the distribution can be obtained as the point where $-\logl = \frac{1}{2}$.
+\item Once the parameter is estimated from the experimental results, the experiment can be simulated N times with \gls{mc}  simulations. For each simulation the best value of the parameter can be estimated with the maximum likelihood method, and from the distribution of these values it is possible to compute the variance.
 
-\end{description}
+\item With the increase of the size of the data sample, the likelihood function tends to a Gaussian, and the $\logl$ tends to a parabola, so the variance of the distribution can be obtained as the point where $-\logl$ differs by $\frac{1}{2}$ with respect to its minimum.
+
+\end{itemize}
 
 
 \subsection{Binned Likelihood fit with systematic uncertainties}
