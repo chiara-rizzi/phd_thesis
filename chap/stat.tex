@@ -439,7 +439,7 @@ q_{\mu} =
        \right.
 \end{equation}
 
-\noindent This test statistic, also known as one-sided \gls{prl}, is the default one used in the analyses described in the next two chapters. \pmu is consequently defined as the integral above the observed value: 
+\noindent This test statistic, also known as one-sided \gls{prl}, is the default one used in the analyses described in Chapters \ref{chap:strong_prod} and  \ref{chap:ewk_prod}. \pmu is consequently defined as the integral above the observed value: 
 
 \begin{equation}
 \label{eq:stat:pmu}
@@ -512,10 +512,18 @@ small) and we observe a downward fluctuation in data, we could end up excluding 
 
 \begin{equation}
 \label{eq:stat:cls}
-\cls = \dfrac{\pmu}{1 - p_b} , 
+\cls = \dfrac{\pmu}{1 - p_b} \; , 
 \end{equation}
 
-\noindent where $p_b = 1 - p_{\mu, \mu=0}$, as shown in Figure \ref{fig:stat:pmu_pb}. With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Equation \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \gls{cls} method is the default procedure used in this thesis to decide on the exclusion of a signal model. 
+\noindent where, as shown in Figure \ref{fig:stat:pmu_pb}:
+
+\begin{equation}
+\label{eq:stat:pb}
+p_b = \int_{0}^{q_{\mu,{\rm obs}}} f(q_{\mu} | \mu ) \,
+d q_{\mu}  \; .
+\end{equation}
+
+With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Equation \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \gls{cls} method is the default procedure used in this thesis to decide on the exclusion of a signal model. 
 
 
 \begin{figure}
