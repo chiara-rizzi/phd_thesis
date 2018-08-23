@@ -1,28 +1,28 @@
-\chapter{Statistics tool box}
+\chapter{Statistical methods}
 \label{chap:stat}
 
 The result of a \gls{pp} interaction is not deterministic, as the statements that can be obtain from quantum field theory are of probabilistic nature. 
 Furthermore, uncertainties in our predictions related both to experimental effects and to the modelling of the physics processes need to be taken into account. 
 Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. 
 %This chapter does not aim at being an exhaustive reference for statistics, but it 
-This chapter describes the main statistical procedures that are used to obtain the results described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}. After a brief introduction to statistical inference in Section \ref{sec:stat:intro}, the two main topics discussed are parameter estimation, in Section \ref{sec:stat:pe}, that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing, in Section \ref{sec:stat:ht}, that checks the plausibility of models against the observed data. 
-Section \ref{sec:stat:examples} describes two simplified examples of applications of these statistical methods to physics analyses. 
+This chapter describes the main statistical methods that are used to obtain the results described in Chapters \ref{chap:strong_prod} and  \ref{chap:ewk_prod}. After a brief introduction to statistical inference in Section \ref{sec:stat:intro}, the two main topics discussed are parameter estimation, in Section \ref{sec:stat:pe}, that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing, in Section \ref{sec:stat:ht}, that checks the plausibility of models against the observed data. 
+For illustration purposes, section \ref{sec:stat:examples} describes two simplified examples of applications of these statistical methods to physics analyses. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical inference}
 \label{sec:stat:intro}
 
-Statistical inference uses a data sample to make probabilistic statements on the population from which the sample is extracted. The generalization from the properties of the sample to the properties of the entire population comes with a certain degree of uncertainty, that can also be accesses through statistical methods.
-There are two main approaches to statistical inference: Bayesian and frequentist.
+Statistical inference uses a data sample to make probabilistic statements on the population from which the sample is extracted. The generalization from the properties of the sample to the properties of the entire population comes with a certain degree of uncertainty, which can also be determined  through statistical methods.
+There are two main approaches to statistical inference: frequentist and Bayesian.
 
 \begin{description}
 \item[Frequentist] In the frequentist approach, probability is defined as the fraction of favorable outcomes of a repeatable experiment when the number of repetitions tends to infinity:
 \begin{equation}
 P(\mathrm{A}) = \lim_{N_{\mathrm{tot}} \rightarrow \infty} \frac{N_\mathrm{A}}{N_{\mathrm{tot}}} \; .
 \end{equation}
-In this case there is no probability for hypothesis or true values of the parameters: a theory is either true or false, and given a theory only the data has a certain probability or \gls{pdf}.
+In this case there is no probability for a hypothesis or true values of the parameters: a theory is either true or false, and given a theory only the data has a certain probability or \gls{pdf}.
 
-\item[Bayesian] In the Bayesian approach, probability is a more subjective notion, that incorporates the degree of belief in the from of priors. In this case it is meaningful to speak about \gls{pdf} not only for the observed data, but also for theories and parameters. Performing an experiment will modify the probability of a theory according to the Bayes formula:
+\item[Bayesian] In the Bayesian approach, probability is a more subjective notion, which incorporates the degree of belief in the from of priors. In this case it is meaningful to speak about the \gls{pdf} not only for the observed data, but also for theories and parameters. Performing an experiment will modify the probability of a theory according to the Bayes formula:
 \begin{equation}
 P(\mathrm{theory} | \mathrm{data}) = \frac{ P(\mathrm{data}|\mathrm{theory}) \times P(\mathrm{theory})}{P(\mathrm{data})} \; ,
 \end{equation}
@@ -30,21 +30,22 @@ where $P(\mathrm{data}|\mathrm{theory})$ is the probability of the data given th
 
 \end{description}
 
-In this chapter we discuss only about frequentist statistics, as only frequentist methods are applied to obtain the results presented in chapters \ref{chap:strong_prod} and chapter \ref{chap:ewk_prod}. 
+In this chapter we discuss only about frequentist statistics, as only frequentist methods are applied to obtain the results presented in Chapters \ref{chap:strong_prod} and \ref{chap:ewk_prod}. 
 
-As mentioned above, an hypothesis is a statement based on which one can access the probability of the data. An hypothesis can be simple, when the data \gls{pdf} can be fully determined by stating if the hypothesis is true or false, or complex, when it depends on a number of parameters that in the following will be generally denoted with $\theta$. 
+As mentioned above, a hypothesis is a statement based on which one can access the probability of the data. A hypothesis can be simple, when the data \gls{pdf} can be fully determined by stating if the hypothesis is true or false, or complex, when it depends on a number of parameters that in the following will be generally denoted with $\theta$. 
 
 Given a certain hypothesis $H$, the probability of observing the data $x$ is $P(x|H)$. This probability can be considered also as a function of the hypothesis, for fixed data, and in this case it is assigned the name of likelihood ($L$). In the case of a composite hypothesis, the value of the likelihood depends on the value of the parameters necessary to specify the hypothesis, and it takes the name of likelihood function: $L(\theta)=P(x|\theta)$.
 
 \section{Parameter estimation}
 \label{sec:stat:pe}
 
-Parameter estimation, also know as fitting, is the technique that allows to derive the best values of some parameters from data.
+Parameter estimation, also know as fitting, is the technique that allows to derive the best values, along with their uncertainties, 
+of some parameters from data.
 This sections describes parameter estimation and in particular the method based on the maximum likelihood.
 
 \subsection{Estimators}
 
-Consider a set of independent observations $\vec{x}=\{x_1, x_2, ..., x_\mathrm{N}\}$, distributed accordingly to a \gls{pdf} $f(x|\vec{\theta})$, where $\vec{\theta}=\{\theta_1, \theta_2, ..., \theta_\mathrm{M}\}$ are the M true parameters that specify the underlying theory. 
+Consider a set of $N$ independent observations $\vec{x}=\{x_1, x_2, ..., x_{N}\}$, distributed accordingly to a \gls{pdf} $f(x|\vec{\theta})$, where $\vec{\theta}=\{\theta_1, \theta_2, ..., \theta_{M}\}$ are the $M$ true parameters that specify the underlying theory. 
 A statistic is any function of the measured data $\vec{x}$, and an estimator $\hat{\vec{\theta}}$ is a statistic introduced to provide an estimate of $\vec{\theta}$.
 The characteristics used to evaluate the performance of an estimator are:
 
@@ -55,17 +56,17 @@ The characteristics used to evaluate the performance of an estimator are:
 \lim_{N \rightarrow \infty} \hat{\vec{\theta}} = \vec{\theta} \; .
 \end{equation}
 
-\item[Bias] The bias is the difference between the expectation value of the estimator ($E[\hat{\vec{\theta}}]$) and the true value:
+\item[Bias] For a given number $N$ of observations, the bias is the difference between the expectation value of the estimator ($E[\hat{\vec{\theta}}]$) and the true value:
 \begin{equation}
 \label{eq:stat:bias}
-b = E[\hat{\vec{\theta}}] - \theta \; .
+\vec{b} = E[\hat{\vec{\theta}}] - \vec{\theta} \; .
 \end{equation}
 Once the bias of a specific estimator is known, it is possible to build and unbiased one by defining 
 \begin{equation}
-\hat{\vec{\theta}}_{\mathrm{unbiased}} = \hat{\vec{\theta}} - b \; .
+\hat{\vec{\theta}}_{\mathrm{unbiased}} = \hat{\vec{\theta}} - \vec{b} \; .
 \end{equation}
 
-\item[Efficiency] The efficiency of an estimator is high when its variance ($V[\hat{\vec{\theta}}]$) is small. $V[\hat{\vec{\theta}}]$ has a lower bound, that is given by the Cramer-Rao inequality \cite{Cramer1946}\cite{Rao1992}.
+\item[Efficiency] The efficiency of an estimator is high when its variance ($V[\hat{\vec{\theta}}]$) is small. $V[\hat{\vec{\theta}}]$ has a lower bound, that is given by the Cramer-Rao inequality \cite{Cramer1946,Rao1992}.
 
 %, stating that the variance is larger than the inverse of the information matrix $I[\theta]$
 %\begin{equation}
@@ -77,26 +78,26 @@ Once the bias of a specific estimator is known, it is possible to build and unbi
 
 
 
-\subsection{The maximum Likelihood estimator}
+\subsection{The maximum likelihood estimator}
 \label{sec:stat:MLE}
 
-The \gls{mle} of the parameters $\theta_i$, first introduced by Fisher \cite{fisher1911absolute,aldrich1997}, is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. At an intuitive level this corresponds to the choice for which the observed data $\vec{x}$ are more probable. 
+The \gls{mle} of the parameters $\vec{\theta}$, first introduced by Fisher \cite{fisher1911absolute,aldrich1997}, is obtained by choosing the set of parameters that yields the global maximum of the likelihood function. At an intuitive level this corresponds to the choice for which the observed data $\vec{x}$ are more probable. 
 
 The \gls{mle} is widely used because of the favorable properties that it reaches in the asymptotic limit of infinite number of events N:
 \begin{itemize}
 \item Consistent, which means that it satisfies Equation \ref{eq:stat:consistency}.
-\item Unbiased, so the bias, defined in Equation \ref{eq:stat:bias}, tends to zero.
+\item Unbiased, so the bias, defined in Equation \ref{eq:stat:bias}, tends to zero as $N \rightarrow \infty$.
 \item Efficient, as it reaches the minimum bound for the variance.
 \item It follows a Gaussian distribution.
 \end{itemize}
 
-\noindent With a finite number of events, the estimator is biased and the bias is proportional to $\frac{1}{N}$. Also, the \gls{mle} is invariant under a functional transformation, which means that if $\hat{\theta}$ is the \gls{mle} for the parameter $\theta$, $g(\hat{\theta})$ is the \gls{mle} for the reparametrization $g(\theta)$, and it maintains therefore all the properties described above. This is not necessarily true for other estimators.
+\noindent With a finite number of events, the estimator is biased and the bias is proportional to $\frac{1}{N}$. Also, the \gls{mle} is invariant under a functional transformation, which means that if $\hat{\theta}$ is the \gls{mle} for the parameter $\theta$, $g(\hat{\theta})$ is the \gls{mle} for $g(\theta)$, and therefore it maintains all the properties described above. This is not necessarily true for other estimators.
 
-Practically, most of the times instead of maximizing the likelihood function is more convenient to minimize $-\logl$. This has the advantage to move from a maximization to a minimization because of the minus sign, but also to transform all the products into sums, which makes the minimization easier. As long as the likelihood is a monotonous function, its maxima are the same as the ones of the $\logl$.
+Practically, most of the times instead of maximizing the likelihood function it is more convenient to minimize $-\logl$. This has the advantage of moving from a maximization to a minimization because of the minus sign, but also to transform all the products into sums, which makes the minimization easier. As long as the likelihood is a monotonous function, its maxima are the same as the ones of the $\logl$.
 There are two types of maximum likelihood fits that can be performed:
 
 \begin{description}
-\item[Unbinned fits] Each event enters in the likelihood separately. This method is the optimal one from the statistics point of view, but it results to be computationally expensive.
+\item[Unbinned fits] Each event enters in the likelihood separately. This method is the optimal one from the statistics point of view, but it can be computationally expensive if the number of events is very large.
 \item[Binned fits] The events are grouped in bins of a histogram, and the quantity entering in the likelihood is the number of events in each bin.
 \end{description}
 
@@ -105,9 +106,9 @@ There are two types of maximum likelihood fits that can be performed:
 \subsubsection*{Variance of the maximum Likelihood estimator}
 
 The estimate of a parameter based on a data sample is always associated with an uncertainty.
-The the same parameter estimate is performed on a different data sample, the values of the best estimate are different;
+If the same parameter estimate is performed on a different data sample, the values of the best estimate are different;
 if this is repeated N times on independent data samples, for large N the best estimates will have a distribution that tends to a Gaussian, 
-whose variance gives access to the uncertainty on the \gls{mle}. The two ways to access this variance are:
+whose variance gives access to the statistical uncertainty on the \gls{mle}. The two ways to access this variance are:
 
 \begin{description}
 \item[Monte Carlo method] Once the parameter is estimated from the experimental results, the experiment can be simulated N times with \gls{mc}  simulations. For each simulation the best value of the parameter can be estimated with the maximum likelihood method, and from the distribution of these values it is possible to compute the variance.
@@ -117,7 +118,7 @@ whose variance gives access to the uncertainty on the \gls{mle}. The two ways to
 \end{description}
 
 
-\subsection{Binned Likelihood with systematic uncertainties}
+\subsection{Binned Likelihood fit with systematic uncertainties}
 
 If we consider the representation of the observed data given by the binned distribution of a certain variable, the expected number of events in each bin of the distribution is given by:
 
@@ -126,7 +127,7 @@ If we consider the representation of the observed data given by the binned distr
 E[n_i] = b_i + \mu s_i  \; ,
 \end{equation}
 
-\noindent where $b_i$ is the expected number of background events, $s_i$ the expected number of signal events and $\mu$ the signal strength.
+\noindent where $b_i$ is the expected number of background events, $s_i$ the expected number of signal events, normalized to a given benchmark cross section, and $\mu$ is a multiplicative factor of that cross section referred to as signal strength.
 If the observed data follow a Poisson distribution, the likelihood is given by:
 
 \begin{equation}
@@ -148,9 +149,9 @@ Assuming that data used to derive the constraints on the \glspl{np} is statistic
 \begin{equation}
 \label{eq:stat:lik_sys}
 L(\mu, \vec{\theta}) =
-\prod_{i=1}^N \frac{ (\mu s_{i} +
+\prod_{i=1}^N \frac{ (\mu s_{i}(\vec{\theta}) +
 b_{i}(\vec{\theta}) )^{n_{i}} }{ n_{i}! }
-e^{- (\mu s_{i} + b_{i}(\vec{\theta})) }   \;
+e^{- (\mu s_{i}(\vec{\theta}) + b_{i}(\vec{\theta})) }   \;
 \prod_{k=1}^M \rho( \theta_k) \; ,
 \end{equation}
 
@@ -171,7 +172,7 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 \noindent Technically, the function implemented in the likelihood is a truncated Gaussian, in order to avoid non-zero probability for non-physical values of the \gls{np}. This truncated Gaussian is normalized to still have unit area.
 
-\item[Poisson constraint] This constraint is often referred to as "Gamma" constraint because, when using it in a Bayesian approach, if combined with a uniform prior it gives rise to a Gamma posterior. It is used for \glspl{np} related to event count and to model the \gls{mc} statistical uncertainty. If we assume that the background yield predicted from \gls{mc} is $n$ background events, deriving from $N$ \gls{mc} simulated events with a multiplicative scale $\alpha$, then the constraint term is:
+\item[Poisson constraint] This constraint is often referred to as "Gamma" constraint because, when using it in a Bayesian approach, if combined with a uniform prior it gives rise to a Gamma posterior. It is used for \glspl{np} related to event count and to model the \gls{mc} statistical uncertainty. If we assume that the background yield predicted from \gls{mc} is $n$ background events, derived from $N$ \gls{mc} simulated events with a multiplicative scale $\alpha$, then the constraint term is:
 
 \begin{equation}
 \label{eq:stat:poisson}
@@ -182,7 +183,7 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 \begin{equation}
 \label{eq:stat:lognorm}
-\rho( \theta) = \frac{1}{\sqrt{2\pi}\ln{\sigma}}\exp\left( -\frac{(ln{\frac{\theta}{\hat{\theta}}})^2}{2(\ln{\sigma})^2} \right)\frac{1}{\theta} \; .
+\rho( \theta) = \frac{1}{\sqrt{2\pi}\ln{\sigma}}\exp\left( -\frac{(ln{\theta} - \ln{\hat{\theta}})^2}{2(\ln{\sigma})^2} \right)\frac{1}{\theta} \; .
 \end{equation}
 
 \noindent One of the advantages of this constraint is that it never assumes negative values.
@@ -193,8 +194,9 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 \subsubsection*{Evaluation of the response}
 
-Let’s consider one single bin of a distribution and the effect that a systematic uncertainty has on it, e.g. the \gls{jer} uncertainty. 
-Leaving aside the physical meaning of this uncertainty, we can focus on the effect that this calibration uncertainty has on the likelihood of a single bin counting experiment. 
+Let’s consider a single bin of a distribution and the effect that a systematic uncertainty, 
+e.g. the \gls{jer}, has on the expected background yield in this bin. 
+%Leaving aside the physical meaning of this uncertainty, we can focus on the effect that this calibration uncertainty has on the likelihood of a single bin counting experiment. 
 The \gls{jer} uncertainty is calibrated with an auxiliary measurement, whose likelihood we include by the simplification of a Gaussian constraint term, $G( \tilde{\theta} | \theta, \sigma_\theta)$, where $\tilde{\theta}$ is the nominal value of the calibration, $\theta$ the underlying real value and $\sigma_\theta$ the uncertainty. Stating that the uncertainty on \gls{jer} is 10\%, means that the width of the Gaussian is 10\%. 
 
 To include this information in the likelihood, we need to evaluate the response to this uncertainty, i.e. the effect of a shift in \gls{jer} in the background efficiency of our region.
@@ -225,7 +227,7 @@ G( 0 | \theta, 1) \; .
 
 \subsection*{Interpolation}
 
-The response of the efficiency to a $\pm 1 \sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Equation \ref{eq:stat:lik_one_bin_sys_pre} and Equation \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. 
+The dependence of the expected yield to a $\pm 1 \sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Equation \ref{eq:stat:lik_one_bin_sys_pre} and Equation \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. 
 Several interpolation strategies are possible; the ones described below and compared in Figure \ref{fig:stat:interp} are the ones supported by HistFactory \cite{Cranmer:1456844}.
  
 
@@ -240,7 +242,7 @@ b + \theta (b^+ -b)  \;\;\;\;\;\; \theta \geq 0\\
 b + \theta (b - b^-) \;\;\;\;\;\; \theta < 0
 \end{cases} \,  \
 \end{equation}
-\noindent where $b$ is the nominal background prediction and $b^\pm$ correspond to the background yields for the $\pm 1 \sigma$ variation of the \gls{np}. This interpolation technique has the clear advantage of simplicity, but it has the cons of presenting a discontinuity for $\theta=0$ visible when $b^+$ and $b^-$ are not symmetric with respect to $b$ as can be observed e.g. in Figure \ref{fig:interp_2}. For large uncertainties, it can also lead to negative $b(\theta)$, as shown in Fig. \ref{fig:interp_3}.
+\noindent where $b$ is the nominal background prediction and $b^\pm$ correspond to the background yields for the $\pm 1 \sigma$ variation of the \gls{np}. This interpolation technique has the clear advantage of simplicity, but it has the inconvenience of presenting a discontinuity at $\theta=0$ when $b^+$ and $b^-$ are not symmetric with respect to $b$ as illustrated in Figure \ref{fig:interp_2}. For large uncertainties, it can also lead to negative $b(\theta)$, as shown in Figure \ref{fig:interp_3}.
 
 \item[Piecewise exponential] The piecewise exponential interpolation is given by:
 
@@ -268,7 +270,10 @@ This strategy avoids the discontinuity for $\theta=0$, but it can introduce prob
 \subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_2.pdf}\label{fig:interp_2}}
 \subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_3.pdf}\label{fig:interp_3}}
 \subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_4.pdf}\label{fig:interp_4}}
-\caption{Comparison of the four interpolation options described in the text. $\alpha$ represents the variation of the \gls{np} in units of standard deviations, and $\eta$ the response relative to the nominal value; the three white markers are the points where the response is measured (nominal and $\pm$ one sigma), while the colored lines show the interpolating function.
+\caption{Comparison of the four interpolation strategies supported by HistFactory \cite{Cranmer:1456844}. 
+$\alpha$ represents the variation of the \gls{np} in units of standard deviations, and $\eta$ the response relative to the nominal value; 
+the three white markers are the points where the response is measured (nominal and $\pm$ one sigma), 
+while the colored lines show the interpolating function.
 \subref{fig:interp_1} $\eta(-1) = 0.8$, $\eta(+1) = 1.2$.
 \subref{fig:interp_2} $\eta(-1) = 1.1$, $\eta(+1) = 1.5$.
 \subref{fig:interp_3} $\eta(-1) = 0.2$, $\eta(+1) = 1.8$.
@@ -281,10 +286,10 @@ Figures from Ref. \cite{Cranmer:1456844}.
 
 \subsubsection*{Correlation and profiling}
 
-The post-fit values of the \glspl{np} can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified \gls{mc} will have a better agreement with data than the original one. If the post-fit uncertainty on one \gls{np} is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty on that \gls{np}.
+The post-fit values of the \glspl{np} can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified \gls{mc} prediction will have a better agreement with data than the original prediction. If the post-fit uncertainty on one \gls{np} is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty on that \gls{np}.
 % The effect of a specific systematic is not compatible with the range allowed by the data statistics 
 
-When multiple \glspl{np} have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by data. The individual effects can not be disentangled and constrained individually, but a correlation between them produce a total variation that is compatible with what observed in data. % chiarareco:;\ un po' copiato da Javier, rifrasare!
+When multiple \glspl{np} have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by the statistical precision of the data. The individual effects can not be disentangled and constrained individually, but a correlation between them produce a total variation that is compatible with what is observed in data. % chiarareco:;\ un po' copiato da Javier, rifrasare!
 
 
 \subsection{Profiled Likelihood Ratio}
@@ -296,27 +301,29 @@ Once we divide the parameters in the likelihood into \glspl{poi} and \glspl{np},
 \prl = \frac{ L(\mu, \hat{\hat{\theta}}) } {L(\hat{\mu}, \hat{\theta}) } \;.
 \end{equation}
 
-\noindent As it was discussed in section \ref{sec:stat:MLE}, rather than maximizing the \gls{prl} it is more convenient to minimize its negative logarithm, $- \loglr$.
+\noindent As it was discussed in Section \ref{sec:stat:MLE},
+in order to determine the best-fit value of the \gls{poi} it is more convenient to minimize the negative logarithm of the \gls{prl}, $- \loglr$, 
+rather than maximizing the \gls{prl} itself.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Hypothesis testing}
 \label{sec:stat:ht}
 
-Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion a \gls{bsm} theory. When the alternative between two hypotheses is presented, they are typically indicted as null hypothesis and alternative hypothesis. If what we want to do is to proof the discovery of a new \gls{bsm} signal by excluding the SM only hypothesis, the following symbols are used:
+Hypothesis testing is the statistical procedure that allows to confirm or reject a specific model. In the case of high-energy physics, a typical example is the identification of the type of a particle based on its energy deposits in the detector. Another example, that will be be used as main test case in this section, is the discovery or exclusion of a \gls{bsm} theory. When the alternative between two hypotheses is presented, they are typically referred to as null hypothesis and alternative hypothesis. If what we want to do is to proof the discovery of a new \gls{bsm} signal by excluding the \gls{sm} only hypothesis, the following symbols are used:
 
 \begin{itemize}
-\item[H$_0$] The null hypothesis, corresponds to SM only.
-\item[H$_1$] The alternative hypothesis, corresponds to the SM with the addition of the \gls{bsm} process under test.
+\item[H$_0$] The null hypothesis, corresponds to \gls[sm} only.
+\item[H$_1$] The alternative hypothesis, corresponds to the \gls[sm} with the addition of the \gls{bsm} process under test.
 \end{itemize}
 
-\noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section scaling; $\mu$=1 corresponds to the \gls{bsm} process with its theoretical cross section, while $\mu$=0 is the SM.
+\noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section modifier; $\mu$=1 corresponds to the \gls{sm} prediction plus the \gls{bsm} process with its theoretical cross section, while $\mu$=0 corresponds to the \gls{sm} only.
 
-\subsection{Test statistics and p-value}
+\subsection{Test statistics and $p$-value}
 
- A test statistic $t$ is single real-value quantity, function of all the collected data. The \gls{pdf} of the test statistic is different if we assume the null hypothesis or the alternative hypothesis to be true.
+ A test statistic $t$ is a single real-value quantity, function of all the collected data. The \gls{pdf} of the test statistic is different if we assume the null hypothesis or the alternative hypothesis to be true.
 
-To quantify the compatibility of the observed data with a specific model, a p-value can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given an observation, the p-value corresponds to the probability of having another observation more extreme than the current one:
+To quantify the compatibility of the observed data with a specific model, a $p$-value can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given the observed value of the test statistic, $t_{{\rm obs}}$, the $p$-value corresponds to the probability of having another observation more extreme than the current one:
 
 \begin{equation}
 \label{eq:stat:pval}
@@ -324,11 +331,11 @@ p_{\mu} = \int_{t_{{\rm obs}}}^{\infty} f(t | \mu ) \,
 d t \; ,
 \end{equation}
 
-The p-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the p-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% \gls{cl}. Note that excluding an alternate hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
+The $p$-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the $p$-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% \gls{cl}. Note that excluding a test hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
 
-The threshold to exclude the null hypothesis (SM only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (\gls{bsm}). The 0.05 threshold would lead to 5\% of the \gls{bsm} searches to declare a discovery even in the absence of any real \gls{bsm} signal. Instead, the convention is to declare evidence for New Physics when the p-value for the B-only hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it is lower than $2.9 \times 10^{-7}$.
+The threshold to exclude the null hypothesis (\gls{sm} only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (\gls{bsm}). The 0.05 threshold would lead to 5\% of the \gls{bsm} searches to declare a discovery even in the absence of any real \gls{bsm} signal. Instead, the convention is to declare evidence for New Physics when the $p$-value for the null hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it is lower than $2.9 \times 10^{-7}$.
 
-The significance $Z$ of the p-value can be evaluated by transforming it in the equivalent number of standard deviations of a standard Gaussian needed to have an upper-tail integral equal to the p-value:
+The significance $Z$ of the $p$-value can be evaluated by transforming it in the equivalent number of standard deviations of a standard Gaussian needed to have an upper-tail integral equal to the $p$-value:
 
 \begin{equation}
 \label{eq:stat:sig}
@@ -336,13 +343,13 @@ Z = \Phi^{-1}(1-p) \; ,
 \end{equation} 
 
 
-\noindent where $\Phi$ is the cumulative of the standard Gaussian. Table \ref{tab:stat:thresholds} summarized the conventional values for the exclusion of a signal hypothesis, the declaration of evidence or discovery of New Physics in terms of p-value and significance.
+\noindent where $\Phi$ is the cumulative of the standard Gaussian. Table \ref{tab:stat:thresholds} summarizes the conventional values for the exclusion of a signal hypothesis, the declaration of evidence or discovery of New Physics in terms of $p$-value and significance.
 
 \begin{table}
 \center
 \begin{tabular}{|c|c|c|}
 \hline 
- & p-value  & $Z$ \\ 
+ & $p$-value  & $Z$ \\ 
 \hline 
 \hline 
 Exclude test hypothesis & 0.05 & 1.64 \\ 
@@ -352,14 +359,14 @@ Evidence of New Physics & $1.3 \times 10^{-3}$ & 3 \\
 Discovery of New Physics & $2.9 \times 10^{-7}$ & 5 \\ 
 \hline 
 \end{tabular}
-\caption{Conventional p-value and significance thresholds to exclude a test hypothesis, declare evidence or discovery of New Physics.}
+\caption{Conventional $p$-value and significance thresholds to exclude a test hypothesis, declare evidence or discovery of New Physics.}
 \label{tab:stat:thresholds}
 \end{table}
 
 
 
 
-\subsection{Test statistics using the PRL}
+\subsection{Test statistic using the PRL}
 \label{sec:teststat:prl}
 
 While a test statistic can be any real-valued function of the data, the Neyman-Pearson lemma \cite{Neyman} ensures that the ones based on a likelihood ratio are the most statistically powerful. This means that, for a given signal efficiency, they provide the decision criterion that minimizes the misidentification probability. The \gls{prl} defined in Equation \ref{eq:stat:prl} is the most used at the LHC, and it gives origin to this test statistic:
@@ -369,7 +376,7 @@ While a test statistic can be any real-valued function of the data, the Neyman-P
 t_{\mu} = -2 \log \prl \; ,
 \end{equation}
 
-\noindent and the corresponding p-value:
+\noindent and the corresponding $p$-value:
 
 \begin{equation}
 \label{eq:stat:pmu}
@@ -381,7 +388,7 @@ d t_{\mu} \; .
 
 \subsubsection*{Test statistic for discovery}
 
-The discovery test statistics $q_{0}$ used to quantify the level of disagreement of data with the B-only hypothesis in case of an excess is defined as:
+The discovery test statistics $q_{0}$ used to quantify the level of disagreement of data with the background-only hypothesis in case of an excess is defined as:
 
 \begin{equation}
 \label{eq:stat:q0}
@@ -393,7 +400,7 @@ q_{0} =
               \end{array} \; \right.
 \end{equation}
  
-\noindent The reason to assign the value 0 to the test statistic when $\hat{\mu} < 0$ is to avoid excluding the B-only hypothesis in case of a deficit. In fact, $\hat{\mu} < 0$ can indeed be symptomatic of a non correct B-only hypothesis (e.g. a systematic error), but it does not indicate the presence of a signal, which is what we want to highlight with this test statistics. Note that, since \gls{prl} assumes values between 0 and 1, \qzero is positive definite. The associated discovery p-value $p_{0}$ is:
+\noindent The reason to assign the value 0 to the test statistic when $\hat{\mu} < 0$ is to avoid excluding the background-only hypothesis in case of a deficit. In fact, $\hat{\mu} < 0$ can indeed be symptomatic of a non correct background-only hypothesis (e.g. due to a systematic error), but it does not indicate the presence of a signal, which is what we want to highlight with this test statistics. Note that, since \gls{prl} assumes values between 0 and 1, \qzero is positive definite. The associated discovery $p$-value $p_{0}$ is:
 
 \begin{equation}
 \label{eq:stat:p0}
@@ -461,7 +468,7 @@ The alternate \gls{prl}, $\tilde{\lambda}({\mu})$, is designed to take into acco
        \right.
 \end{equation}
 
-\noindent The corresponding test statistics are indicated with $\tilde{q}$ and are defined as in Eq \ref{eq:stat:q0} and Eq \ref{eq:stat:qmu} after substituting $\lambda({\mu}) \rightarrow \tilde{\lambda}({\mu})$.
+\noindent The corresponding test statistics are indicated with $\tilde{q}$ and are defined as in Equations \ref{eq:stat:q0} and \ref{eq:stat:qmu} after substituting $\lambda({\mu}) \rightarrow \tilde{\lambda}({\mu})$.
 
 \iffalse
 % this equation in the original paper uses the notation t and not q
@@ -480,7 +487,7 @@ The alternate \gls{prl}, $\tilde{\lambda}({\mu})$, is designed to take into acco
 \end{equation}
 \fi
 
-\subsection{The CLs method}
+\subsection{The CL$_{\textrm{s}}$ method}
 
 If we consider a situation where $H_0$ and $H_1$ give similar distribution of the exclusion test statistic (e.g. because the signal cross section is
 small) and we observe a downward fluctuation in data, we could end up excluding the test hypothesis, even if almost indistinguishable from the null hypothesis. The \gls{cls} method \cite{JUNK1999435} recovers from this situations by defining:
@@ -490,7 +497,7 @@ small) and we observe a downward fluctuation in data, we could end up excluding 
 \cls = \dfrac{\pmu}{1 - p_b} , 
 \end{equation}
 
-\noindent where $p_b = 1 - p_{\mu, \mu=0}$, as shown in Fig. \ref{fig:stat:pmu_pb}. With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Eq \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \gls{cls} method is the default procedure used in this thesis to decide on the exclusion of a signal model. 
+\noindent where $p_b = 1 - p_{\mu, \mu=0}$, as shown in Figure \ref{fig:stat:pmu_pb}. With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Equation \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \gls{cls} method is the default procedure used in this thesis to decide on the exclusion of a signal model. 
 
 
 \begin{figure}
@@ -502,7 +509,7 @@ small) and we observe a downward fluctuation in data, we could end up excluding 
 
 \subsection{Distribution of the test statistic}
 
-To compute the p-value associated with the observed value of a test statistics $t$, we need the \gls{pdf} of $t$ assuming that the signal hypothesis $H_\mu$ is true, $ f(t | \mu ) $. The distribution of the test statistics can be obtained with pseudo-experiments or, in the case of large statistics, with the asymptotic approximation. 
+To compute the $p$-value associated with the observed value of a test statistics $t$, we need the \gls{pdf} of $t$ assuming that the signal hypothesis $H_\mu$ is true, $ f(t | \mu ) $. The distribution of the test statistics can be obtained with pseudo-experiments or, in the case of large statistics, with the asymptotic approximation. 
 
 \subsubsection*{Pseudo-experiments}
 
@@ -514,10 +521,10 @@ The distribution of the test statistic can be obtained by sampling the likelihoo
 \item The test statistic for this "observed" value is computed.
 \end{itemize}
 
-This is done twice: a first time using as expected number of events the one predicted by the null hypothesis, and a second time the one predicted by the alternate hypothesis. The integral of the two resulting distributions is used to compute the p-values.
+This is done twice: a first time using as expected number of events the one predicted by the null hypothesis, and a second time the one predicted by the test hypothesis. The integral of the two resulting distributions is used to compute the $p$-values.
 
 \subsubsection*{Asymptotic approximation}
-For large number of events, the asymptotic approximation \cite{Cowan2011} can be used to determine the \gls{pdf} of the test statistic without having to simulate several pseudo-experiments. This technique is based on  Wald's theorem \cite{Wald1943}, which states that $t_{\mu} = -2 \ln \lambda(\mu)$ is parabolic up to corrections that scale with the inverse of the square root of the sample size:
+For large number of events, the asymptotic approximation \cite{Cowan2011} can be used to determine the \gls{pdf} of the test statistic without having to simulate a large number of pseudo-experiments. This technique is based on  Wald's theorem \cite{Wald1943}, which states that $t_{\mu} = -2 \ln \lambda(\mu)$ is parabolic up to corrections that scale with the inverse of the square root of the sample size:
 
 \begin{equation}
 \label{eq:wald}
@@ -543,7 +550,9 @@ f(t_{\mu};\Lambda) = \frac{1}{2 \sqrt{t_{\mu}}} \frac{1}{\sqrt{2 \pi}}
 \Lambda = \frac{(\mu - \mu^{\prime})^2}{\sigma^2} \; .
 \end{equation}
 
-\noindent The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values. Plugging this back into Equation \ref{eq:stat:ftmulambda} allows to obtain a functional form of the distribution of the test statistic. Figure \ref{fig:stat:asymtoys1} compares the distribution of the test statistic $q_1$ with pseudo-experiments and with the asymptotic approximation in the case of the background-only hypothesis and in the signal-plus-background hypothesis
+\noindent The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values. 
+In practice the Asimov dataset is built by setting data equal to the nominal background prediction. 
+Plugging this back into Equation \ref{eq:stat:ftmulambda} allows to obtain a functional form of the distribution of the test statistic. Figure \ref{fig:stat:asymtoys1} compares the distribution of the test statistic $q_1$ with pseudo-experiments and with the asymptotic approximation in the case of the background-only hypothesis and in the signal-plus-background hypothesis
 in a cut-and-count experiment with nine background events and six signal events; 
 it can be observed that a dataset of this size leads to a good agreement of the asymptotic approximation with the \gls{pdf} obtained with pseudo-experiments.
 Figure \ref{fig:stat:asymtoys2} shows a further investigation of this comparison: the discovery significance obtained for $q_0=16$ with pseudo-experiments and with the asymptotic approximation is compared as a function of the number of events. 
@@ -571,7 +580,7 @@ Figures from Ref. \cite{Cowan2011}.
 \label{sec:stat:examples}
 
 In this section we present a few simplified examples that illustrate the concepts described in the previous sections and how they are applied in physics analyses that search for \gls{bsm} signals.
-In particular, Section \ref{sec:example_sr} discussed the principle followed in optimizing \glspl{sr}, Section \ref{sec:example_cr} the advantages of using \glspl{cr},
+In particular, Section \ref{sec:example_sr} is devoted to the principle followed in optimizing \glspl{sr}, Section \ref{sec:example_cr} discusses the  advantages of using \glspl{cr},
 while Sections \ref{sec:stat:example:limits} and \ref{sec:example_combi} focus respectively on limit setting and on how to improve limits by combining several \glspl{sr}.
 
 \subsection{Region Definition}
@@ -589,14 +598,14 @@ The arrows indicate the \gls{sr} defined by maximizing the expected significance
 \label{fig:stat:example}
 \end{figure}
 
-Let's consider a situation where we want to use only one discriminating variable (e.g. \meff) to separate signal and background, 
+Let's consider a situation where we want to use only one discriminating variable to separate signal and background, e.g. \meff, defined as the scalar sum of the momenta of all the objects in the event and missing transverse momentum, 
 and they are distributed as in Figure \ref{fig:stat:example}. 
 We can see that the background, which in this case we consider as constituted by only one single physical process, 
 tends to have lower values of \meff with respect to the signal; 
 this means that the \gls{sr} will be defined by a lower boundary on the value of \meff.
 There are different criteria that can be used to choose the value of \meff that defines the \gls{sr}. 
-The one used in this thesis is the maximization of the expected significance, computed through the function \binexpZ in \roostats, 
-assuming a 30\% uncertainty on the background yields. With this definition, the significance is the equivalent number of standard deviations of a Gaussian of a p-value defined as:
+The one used in this thesis is the maximization of the expected significance, computed through the function \binexpZ in \roostats \cite{Moneta:2010pm}, 
+assuming a 30\% uncertainty on the background yields. With this definition, the significance is the equivalent number of standard deviations of a Gaussian of a $p$-value defined as:
 
 \begin{equation}
 \label{eq:binomexpp}
@@ -745,8 +754,8 @@ Distribution of the test statistics for the background-only (blue) and signal-pl
 
 \begin{figure}[h]
 \centering 
-\subfigure[VR pre-fit]{\includegraphics[width=0.48\textwidth]{figures/stat/examples/upperlimit_cls_poi_Signal_Freq_CLs_grid_ts3.pdf}\label{fig:stat:CLscan:toys}}
-\subfigure[VR post-fit]{\includegraphics[width=0.48\textwidth]{figures/stat/examples/upperlimit_cls_poi_Signal_Asym_CLs_grid_ts3.pdf}\label{fig:stat:CLscan:asym}}
+\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/stat/examples/upperlimit_cls_poi_Signal_Freq_CLs_grid_ts3.pdf}\label{fig:stat:CLscan:toys}}
+\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/stat/examples/upperlimit_cls_poi_Signal_Asym_CLs_grid_ts3.pdf}\label{fig:stat:CLscan:asym}}
 \caption{
 Scan of the \gls{cls} for different values of the signal strength with \subref{fig:stat:CLscan:toys} 5000 pseudo experiments and \subref{fig:stat:CLscan:asym} the asymptotic approximation.
 }
@@ -758,7 +767,7 @@ nominal cross section of the signal should be scaled to find a \gls{cls} of exac
 Also in this case, each point of this scan can be obtained either with the asymptotic approximation or with pseudo-experiments (some examples are shown in Figure \ref{fig:stat:CLscan}); note that in this case the "data" sample we are using is a pseudo-data sample built from a Poisson sampling 
 of the sum of background scaled by 0.87 and signal scaled by 0.5, so the observed value of the test statistic is "signal-like".
 The interpolation of these \gls{cls} values  allows to determine the signal strength where \gls{cls}$=0.05$; 
-this is shown in Figure \ref{fig:stat:CLscan:toys}, where the p-values are determined based on pseudo-experiments, 
+this is shown in Figure \ref{fig:stat:CLscan:toys}, where the $p$-values are determined based on pseudo-experiments, 
 and in Figure \ref{fig:stat:CLscan:asym}, where instead the asymptotic approximation is used.
 The numerical \gls{ul} values resulting from these \gls{cls} scans are reported in Table \ref{tab:stat:exampleUL}.
 
@@ -769,12 +778,13 @@ The numerical \gls{ul} values resulting from these \gls{cls} scans are reported 
 \hline 
  & Observed  & Expected &  -1 $\sigma$ & + 1 $\sigma$ & - 2 $\sigma$ &  + 2 $\sigma$ \\ 
 \hline 
-Asymptotic & 1.1527 & 0.694774 & 0.484272 & 1.01047 & 0.353102 & 1.42716 \\ 
+Asymptotic & 1.15 & 0.69 & 0.48 & 1.01 & 0.35 & 1.43 \\ 
 \hline 
-Pseudo-experiments & 1.14487 & 0.70775 & 0.51309 & 0.994556 & 0.402432 & 1.35439 \\ 
+Pseudo-experiments & 1.14 & 0.71 & 0.51 & 0.99 & 0.40 & 1.35 \\ 
 \hline 
 \end{tabular} 
-\caption{Expected and observed upper limit for the example in the text, computed with the asymptotic approximation and with 5000 pseudo-experiments.}
+\caption{Expected and observed upper limit on $\mu_{\rm SIG}$ for the example in the text, 
+computed with the asymptotic approximation and with 5000 pseudo-experiments.}
 \label{tab:stat:exampleUL}
 \end{table}
 
