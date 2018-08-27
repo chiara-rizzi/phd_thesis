@@ -428,6 +428,8 @@ While the production of a \ttbar pair is mediated by the strong interaction, in 
 There are three possible production channels, illustrated in Fig. \ref{fig:single_top_prod}: the t-channel, the Wt-channel, where a top quark and a $W$ boson are produced, and the s-channel. 
 The Wt- and s-channel production mechanisms are simulated with the same generator choice as \ttbar: \PowhegBox v2, showered with \PY v6.428.
 Single top events produced through the t-channel process are simulated with \PowhegBox v1, which uses the four-flavor scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set, with the four-flavor scheme as well, and the top quarks are decayed with \MadSpin \cite{Artoisenet:2012st}.
+The cross section used for normalization is computed at \gls{nlo}+\gls{nnll} order 
+\cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}.
 
 \begin{figure}[h]
 \centering 
@@ -444,7 +446,7 @@ Single top events produced through the t-channel process are simulated with \Pow
 While the \gls{lo} diagrams for Wt-channel single-top production in Figures \ref{fig:st_prod_Wt1} and \ref{fig:st_prod_Wt2} show a clear signature characterized by one single heavy-flavor quark in the final state,
 when \gls{nlo} diagrams are considered it is possible to reach the same final state as with \ttbar production, namely $WWbb$, as shown in Fig. \ref{fig:WWbb_int}. 
 Considering the two processes separately leads necessarily to an improper treatment of the quantum interference between them.
-\PowhegBox allows to approach this problem with two different strategies, \gls{dr} and \gls{ds}; while none of them reproduces the quantum interference between single top and \ttbar, they allow to mitigate the size of the effect. 
+\PowhegBox allows to approach this problem with two different strategies, \gls{dr} and \gls{ds} \cite{Frixione:2005vw}; while none of them reproduces the quantum interference between single top and \ttbar, they allow to mitigate the size of the effect. 
 
 \begin{figure}[h]
 \centering 
@@ -617,7 +619,7 @@ In this thesis, these processes constitute a minor background and are grouped in
 for which an example \gls{lo} Feynman diagram is shown in Figure \ref{fig:fourtop_prod}. 
 The production of a \ttbar pair in association with a vector boson and four-top production is modeled with \aNLO showered with \PY v8, while for $\ttbar+H$ the same 
 \gls{me} generator is used but the \gls{psh} processes is performed with \HWpp. 
-All of these samples are normalized to the \gls{nlo} cross-section.
+All of these samples are normalized to the \gls{nlo} cross-section \cite{Alwall:2014hca,Heinemeyer:2013tqa}.
 As described above for the diboson background, a conservative 50\% normalization uncertainty is applied also to the 
 $\ttbar+X$ background, and also in this case it is found to have negligible impact in the analysis. 
 
