@@ -1,12 +1,12 @@
 \section{Systematic uncertainties}
 \label{sec:strong:syst}
 
-The sources of systematic uncertainties discussed in Sections \ref{sec:common_syst} and \ref{sec:common_backgrounds} are included in the analysis.
+The sources of systematic uncertainty discussed in Sections \ref{sec:common_syst} and \ref{sec:common_backgrounds} are included in the analysis.
 The relative size of these uncertainties after the fit in the \glspl{cr} is shown in Figures \ref{fig:syst_cutandcount} and \ref{fig:syst_multibin},
 for the cut-and-count and multi-bin analyses respectively. 
 In the figure, the uncertainties are grouped into:
 \begin{itemize}
-\item Experimental uncertainties, that contain the sum in quadrature of the detector-related uncertainties 
+\item Experimental uncertainties, which contain the sum in quadrature of the detector-related uncertainties 
 presented in Section \ref{sec:common_syst}. These are considered for both the background and signal \gls{mc} samples.
 The ranking of the different sources of uncertainty changes from region to region; in general the dominant ones are \gls{jes} (that has a 
 relative impact on the expected background between 4 and 35\% in the different \glspl{sr}), \gls{jer} (0-26\%) and the uncertainties on the 
@@ -28,7 +28,7 @@ and therefore is not the sum in quadrature of the individual components.
 	\centering
 	\subfigure[]{\includegraphics[width=0.85\textwidth]{figures/strong_prod/paper/Cut_and_Count.pdf}\label{fig:syst_cutandcount}}\\
 	\subfigure[]{\includegraphics[width=0.85\textwidth]{figures/strong_prod/paper/Multi_bin.pdf}\label{fig:syst_multibin}}\\
-	\caption{Relative systematic uncertainty in the background estimate for the \subref{fig:syst_cutandcount} cut-and-count and \subref{fig:syst_multibin} multi-bin analyses. The individual uncertainties can be correlated, such that the total background uncertainty is not necessarily their sum in quadrature.  Figure from Ref. \cite{Aaboud:2017hrg}.
+	\caption{Relative systematic uncertainty in the background estimate for \subref{fig:syst_cutandcount} the cut-and-count and \subref{fig:syst_multibin} the multi-bin analyses. The individual uncertainties can be correlated, such that the total background uncertainty is not necessarily their sum in quadrature.  Figure from Ref. \cite{Aaboud:2017hrg}.
 	} 
 	\label{fig:syst}
 \end{figure}
@@ -40,14 +40,15 @@ The statistical procedures discussed in Chapter \ref{chap:stat} are used to comp
 quantitative information on their agreement and on the presence of \gls{bsm} signals. 
 The first step is the background-only fit, a maximum-likelihood fit where only the \glspl{cr} are included, as described in Section 
 \ref{sec:example_cr}. 
-The \ttbar nomralization is a free parameter of the fit, and is therefore adjusted with the number of observed events in the \glspl{cr} 
+The \ttbar normalization is a free parameter of the fit, and is therefore adjusted with the number of observed events in the \glspl{cr} 
 as constraint.
-This procedure accounts for potential mismodellings specific of the phase space close to each \gls{sr}, that are not necessarily 
+This procedure accounts for potential mismodellings specific of the kinematic regime close to each \gls{sr}, which are not necessarily 
 the same for all the regions in the analysis. Therefore each \gls{cr} is used to derive a normalization factor for the \ttbar background,
 independent from the normalization factors derived in the other \glspl{cr}, that is then used to derive the background prediction in the 
 corresponding \glspl{sr}. 
 
-The top panel of Figures \ref{fig:pullCR_discovery} and \ref{fig:pullCR_exclusion} shows the pre-fit data-MC agreement in the 
+The top panel of Figures \ref{fig:pullCR_discovery} and \ref{fig:pullCR_exclusion} shows the 
+comparison between data and \gls{mc} simulation in the 
 \glspl{cr} of the cut-and-count and multi-bin analyses respectively. In the same figures, the bottom panel 
 shows the \ttbar normalization factor derived from the fit in the \glspl{cr} with its uncertainty, driven by the statistical uncertainty 
 in the \glspl{cr}.  The systematic uncertainties on the expected number of events are included in the fit as nuisance parameters.
@@ -212,7 +213,7 @@ signal models.
 
 The results of the background-only fit in the cut-and-count \glspl{sr}
 are used to place model-independent limits on the number of \gls{bsm} events in the \glspl{sr}. 
-This limit is obtained with the \gls{cls} procedure; for each \gls{sr}, a fit similar to the background-only fit is performed 
+This limit is obtained with the \gls{cls} method; for each \gls{sr}, a fit similar to the background-only fit is performed 
 but the number of observed and expected events in the \glspl{sr} (with its uncertainty) is included in the fit as well. 
 Any signal contamination in the \glspl{cr} is neglected. 
 The limits reported in Table \ref{mod-ind-lim} are obtained with pseudo-experiments, as dissed in Section \ref{sec:stat:example:limits}.
@@ -310,7 +311,7 @@ in the bottom left, where both $B(\gluino \to t \bar{t} \ninoone)$ and $B(\gluin
 is not excluded; none of the points are excluded for a gluino mass of 2.0 TeV. 
 
 Figure \ref{fig:limit_br_fixed_glu} shows instead three signal mass hypothesis with a gluino mass of 1.9 TeV 
-and $m(\ninoone) = 1$, 600 and 100 GeV. Also in this case the observed limits are less stringent than the expected, leaving 
+and $m(\ninoone) = 1$, 600 and 1000 GeV. Also in this case the observed limits are less stringent than the expected, leaving 
 not-excluded areas also for signals that we expect to exclude for any \gls{br}, such as the one with neutralino mass of 600 GeV.
 
 
@@ -354,8 +355,8 @@ This is balanced by a better sensitivity of the multi-bin strategy for $m(\gluin
 GeV (where the cut-and-count approach shows the drawback of a switch in best-expected region for neighboring mass points),
 and the two strategies have the same limit for massless neutralino. 
 The reason of the different relative performance of multi-bin and cut-and-count approaches in the Gtt and Gbb signal 
-models relies on the optimization strategy of the multi-bin analysis, that favors Gtt: the regions with intermediate 
-number of jets, that could still be sensitive to Gbb models, are optimized based on Gtt signal benchmarks.
+models relies on the optimization strategy of the multi-bin analysis, which favors Gtt: the regions with intermediate 
+number of jets, which could still be sensitive to Gbb models, are optimized based on Gtt signal benchmarks.
 
 
 
@@ -366,7 +367,8 @@ number of jets, that could still be sensitive to Gbb models, are optimized based
 	\caption{Exclusion limits in the $\ninoone$ and $\gluino$ mass plane
   		for the \subref{fig:limits_Gtt_comp} Gtt and  \subref{fig:limits_Gbb_comp} Gbb models obtained
 		in the context of the multi-bin analysis (pink line) and of the cut-and-count analysis (blue line). 
-		The gray numbers show the relative difference in expected \gls{ul} between the multi-bin and the cut-and-count analysis: a negative number shows a lower expected \gls{ul} for the multi-bin analysis. }
+		The gray numbers show the relative difference in expected \gls{ul} on the signal strength 
+		between the multi-bin and the cut-and-count analysis: a negative number shows a lower expected \gls{ul} for the multi-bin analysis. }
 	\label{fig:limits_GbbGtt_comp}
 \end{figure}
 

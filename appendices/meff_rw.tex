@@ -1,4 +1,4 @@
-\chapter{Kinematic reweighting in strong-production analysis}
+\chapter{Kinematic reweighting in the gluino search}
 \label{app:meffrw}
 
 In this appendix we discuss in more details the kinematic reweighting mentioned in Section \ref{sec:strong:dataMC},
@@ -11,19 +11,21 @@ including the ones used to derive the prediction for 0-lepton \glspl{sr}.
 
 To have a better estimate of the background in the high-$\meff$ regime, a reweighting has been derived to bring the MC prediction closer to the observed data. This reweighting is computed in a region that requires:
 \begin{itemize}
-\item At least one lepton,
-\item $\met$ $>$ 200 GeV,
+\item at least 4 jets,
 \item exactly 2 b-jets,
+\item $\met$ $>$ 200 GeV,
+\item at least one lepton,
 \item $\mtb$ $<$ 140 GeV.
 \end{itemize}
 
 This selection is orthogonal to \glspl{sr} and \glspl{cr} but has a similar background composition. 
 The $\mtb$ selection reduces further the signal contamination and allows for a validation region with exactly 2 b-jets and high $\mtb$. 
-The same trend in the ration data/MC in the \meff distribution has been observed also in other regions non $\ttbar$-domninated,
+The same trend in the data/MC ratio in the \meff distribution has been observed also in other regions non dominated by the 
+\ttbar background,
 therefore the reweighting is computed taking into account all backgrounds and applied to all backgrounds. 
-The binning of the reweighitng is chosen to be 50 GeV for most of the \meff spectrum, 
+The binning of the reweighting is chosen to be 50 GeV for most of the \meff spectrum, 
 while at high \meff the width of the bins is larger to allow $\approx$ 100 data events in each bin. 
-Before deriving the reweighting, the sum of the \gls{mc} predictions for the different backgrounds is scaled to the same integral as in data,
+Before deriving the reweighting, the sum of the \gls{mc} predictions for the different backgrounds is scaled to the same yield as in data,
 so that the reweighting.
 The final reweighting for the 1-lepton channel is shown in the bottom panel of Figure \ref{fig:meff_in2b_no_corr}.
 
@@ -31,8 +33,8 @@ The final reweighting for the 1-lepton channel is shown in the bottom panel of F
 \centering
 \subfigure[]{\includegraphics[width=0.55\textwidth]{figures/strong_prod/meff_rw/corr_meff_lowmTb_all_1L.pdf}}
 %\subfigure[0L]{\includegraphics[width=0.45\textwidth]{figures/meff_corr/no_meff_corr_2b/meff_incl_Presel_in2b_0l.pdf}}
-\caption{$\meff$ distribution in data and MC in a selection that requires exactly 2 b-jets, $\met$ $>$ 200 GeV, $\mtb$ $<$ 140 GeV and
-at least one lepton.}
+\caption{$\meff$ distribution in data and \gls{mc} simulation in a selection that requires at least 4 jets, exactly 2 b-jets, $\met$ $>$ 200 GeV,
+at least one lepton, and $\mtb$ $<$ 140 GeV.}
 \label{fig:meff_in2b_no_corr}
 \end{figure}
 
@@ -53,8 +55,9 @@ at least one lepton.}
 
 Figures \ref{fig:strong:rwCR::datamc1L_a} to \ref{fig:strong:rwCR::datamc1L_d}
 show the effect of the reweighting on the main kinematic variables.
-We can see that the reweighting, derived using only the \meff distribution, improves the data-MC
-agreement in most of the energy-related variables.
+We can see that the reweighting, derived using only the \meff distribution, improves the 
+comparison between data and the simulation 
+in most of the energy-related variables.
 
 \begin{figure*}[htbp]
 \centering 
@@ -70,7 +73,7 @@ agreement in most of the energy-related variables.
 \label{fig:strong:rwCR::datamc1L:met}}
 \subfigure[\met, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_met.pdf}
 \label{fig:strong:rwCR::datamc1L:met}}\\
-\caption{Data-MC comparison in the reweighting region, before and after applying the kinematic reweighting.
+\caption{Comparison between data and simulation in the reweighting region, before and after applying the kinematic reweighting.
 }
 \label{fig:strong:rwCR::datamc1L_a}
 \end{figure*}
@@ -89,7 +92,7 @@ agreement in most of the energy-related variables.
 \label{fig:strong:rwCR::datamc1L:mTb_min}}
 \subfigure[\mtb, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_mTb_min.pdf}
 \label{fig:strong:rwCR::datamc1L:mTb_min}}
-\caption{Data-MC comparison in the reweighting region, before and after applying the kinematic reweighting.
+\caption{Comparison between data and simulation in the reweighting region, before and after applying the kinematic reweighting.
 }
 \label{fig:strong:rwCR::datamc1L_b}
 \end{figure*}
@@ -108,7 +111,7 @@ agreement in most of the energy-related variables.
 \label{fig:strong:rwCR::datamc1L:pt_jet_1}}
 \subfigure[\pt jet$_1$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_pt_jet_1.pdf}
 \label{fig:strong:rwCR::datamc1L:pt_jet_1}}\\
-\caption{Data-MC comparison in the reweighting region, after applying the kinematic reweighting.
+\caption{Comparison between data and simulation in the reweighting region, after applying the kinematic reweighting.
 }
 \label{fig:strong:rwCR::datamc1L_c}
 \end{figure*}
@@ -127,7 +130,7 @@ agreement in most of the energy-related variables.
 \label{fig:strong:rwCR::datamc1L:pt_bjet_1}}
 \subfigure[\pt b-jet$_1$, after reweighting]{\includegraphics[width=0.45\textwidth]{figures/strong_prod/data_mc/1L_2bin_rwCR_rw/data_mc_pt_bjet_1.pdf}
 \label{fig:strong:rwCR::datamc1L:pt_bjet_1}}
-\caption{Data-MC comparison in the reweighting region, after applying the kinematic reweighting.
+\caption{Comparison between data and simulation in the reweighting region, after applying the kinematic reweighting.
 }
 \label{fig:strong:rwCR::datamc1L_d}
 \end{figure*}
