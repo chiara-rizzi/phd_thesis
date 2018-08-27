@@ -278,7 +278,7 @@ available accuracy (NNLO+NNLL \cite{Czakon:2011xx}).
 
 When considering events at particle level,
 the \gls{mc} information can be used to reconstruct the decay chains that lead to the stable particles in the final state. 
-Starting from each top quark in the event, it is possible to follow its decay chain and classify the event first of all into dilepton or single-lepton, or also with a finer classification based on the flavour of the lepton. 
+Starting from each top quark in the event, it is possible to follow its decay chain and classify the event first of all into dilepton or single-lepton, or also with a finer classification based on the flavor of the lepton. 
 Subsequent decays of the $\tau$ lepton are not considered, and hadronically decaying $\tau$ leptons are fully considered as leptons in this classification. 
 Figure \ref{fig:ttbar_decay_mT_1L} shows the \ttbar decay type as a function of the \mt value  in a selection requiring at least four jets, at least three $b$-jets, $\met>200$ GeV and at least one signal lepton. It is possible to see that, while at low \mt values the \ttbar component is dominated by events where one top quark decays leptonically and the other one decays hadronically, after the kinematic threshold imposed by the mass of the $W$ boson the dilepton component is dominant. 
 
@@ -301,15 +301,15 @@ Secondly, while in the case of \mt \ttbar events are dominating the background c
 %\end{figure}
 
 
-\subsubsection*{Truth-level classification: flavour of the associated jets}
+\subsubsection*{Truth-level classification: flavor of the associated jets}
 
-A truth-level classification is in place to study the \ttbar+jets background based on the flavour of the associated jets.
+A truth-level classification is in place to study the \ttbar+jets background based on the flavor of the associated jets.
 This is done starting from the \gls{mc} information at particle level; stable particles are grouped into jets using the anti-k$_t$ algorithm 
 described in Section \ref{sec:obj:jetfinding} with R=0.4; only particle jets with $\pt > 15$ GeV and $|\eta|<2.5$ are considered. 
-The flavour of the jets is determined by matching them with the $B$- and $D$-hadrons that are in a cone of $\Delta R = 0.4$ from the jet. 
+The flavor of the jets is determined by matching them with the $B$- and $D$-hadrons that are in a cone of $\Delta R = 0.4$ from the jet. 
 If the event contains at least one jet matched to one or more $B$-hadrons, excluding the ones originating from the decay of the top quarks, the event 
-is classified as \ttbb. Otherwise, if at least one jet is matched to $D$-hadrons, excluding the ones from the decay chain of the top quarks, the event is classified as \ttcc. \ttbb and \ttcc events are categorized together as \tthf events, where HF stands for heavy flavour, while the remaining ones are classified as \ttlight.
-Figure \ref{fig:ttbar_HF_bjets} shows the evolution of the flavour composition of the jets produced in association with \ttbar
+is classified as \ttbb. Otherwise, if at least one jet is matched to $D$-hadrons, excluding the ones from the decay chain of the top quarks, the event is classified as \ttcc. \ttbb and \ttcc events are categorized together as \tthf events, where HF stands for heavy flavor, while the remaining ones are classified as \ttlight.
+Figure \ref{fig:ttbar_HF_bjets} shows the evolution of the flavor composition of the jets produced in association with \ttbar
 as a function of the number of $b$-jets in the event. 
 As expected, as the number of $b$-jets increases, the \ttlight fraction decreases and the \ttbb fraction increases. 
 
@@ -317,7 +317,7 @@ As expected, as the number of $b$-jets increases, the \ttlight fraction decrease
 \centering 
 \subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_bjets_n_1L_2b_HF.pdf}\label{fig:ttbar_HF_bjets_1L}}
 \subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_bjets_n_0L_2b_HF.pdf}\label{fig:ttbar_HF_bjets_0L}}
-\caption{Evolution of the flavour of the jets produced in association with \ttbar in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and \subref{fig:ttbar_HF_bjets_1L} at least one signal lepton \subref{fig:ttbar_HF_bjets_0L} exactly zero lepton and $\dphimin > 0.4$.}\label{fig:ttbar_HF_bjets}
+\caption{Evolution of the flavor of the jets produced in association with \ttbar in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and \subref{fig:ttbar_HF_bjets_1L} at least one signal lepton \subref{fig:ttbar_HF_bjets_0L} exactly zero lepton and $\dphimin > 0.4$.}\label{fig:ttbar_HF_bjets}
 \end{figure}
 
 
@@ -383,7 +383,7 @@ With truth tagging, instead of keeping only the events that satisfy a certain cr
 a certain number pass the $b$-tagging identification.
 A different weight is computed for each $b$-tagging requirement; 
 for example, the probability for the event to have at least three $b$-tagged jets will be different from the probability of having exactly two. 
-For each jet, the probability to be $b$-tagged can be expressed as a function of the jet flavour ($f$), \pt and $\eta$:
+For each jet, the probability to be $b$-tagged can be expressed as a function of the jet flavor ($f$), \pt and $\eta$:
 
 \begin{equation}
 \varepsilon \left(f,|\eta|,p_{\mathrm{T}}\right) \; .
@@ -426,7 +426,7 @@ Some analysis variables are build using explicitly the kinematic characteristics
 While the production of a \ttbar pair is mediated by the strong interaction, in the case of a single top quark the production occurs via the electroweak interaction. 
 There are three possible production channels, illustrated in Fig. \ref{fig:single_top_prod}: the t-channel, the Wt-channel, where a top quark and a $W$ boson are produced, and the s-channel. 
 The Wt- and s-channel production mechanisms are simulated with the same generator choice as \ttbar: \PowhegBox v2, showered with \PY v6.428.
-Single top events produced through the t-channel process are simulated with \PowhegBox v1, which uses the four-flavour scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set, with the four-flavour scheme as well, and the top quarks are decayed with \MadSpin \cite{Artoisenet:2012st}.
+Single top events produced through the t-channel process are simulated with \PowhegBox v1, which uses the four-flavor scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set, with the four-flavor scheme as well, and the top quarks are decayed with \MadSpin \cite{Artoisenet:2012st}.
 
 \begin{figure}[h]
 \centering 
@@ -440,7 +440,7 @@ Single top events produced through the t-channel process are simulated with \Pow
 
 \subsubsection*{Wt-channel and \ttbar interference}
 
-While the \gls{lo} diagrams for Wt-channel single-top production in Figures \ref{fig:st_prod_Wt1}-\ref{fig:st_prod_Wt2} show a clear signature characterized by one single heavy-flavour quark in the final state,
+While the \gls{lo} diagrams for Wt-channel single-top production in Figures \ref{fig:st_prod_Wt1}-\ref{fig:st_prod_Wt2} show a clear signature characterized by one single heavy-flavor quark in the final state,
 when \gls{nlo} diagrams are considered it is possible to reach the same final state as with \ttbar production, namely $WWbb$, as shown in Fig. \ref{fig:WWbb_int}. 
 Considering the two processes separately leads necessarily to an improper treatment of the quantum interference between them.
 \PowhegBox allows to approach this problem with two different strategies, \gls{dr} and \gls{ds}; while none of them reproduces the quantum interference between single top and \ttbar, they allow to mitigate the size of the effect. 
@@ -492,7 +492,7 @@ in the analyses, \met and \mtb.
 
 To evaluate the uncertainty associate with the strategy chosen to account for the interference between \ttbar and single top
 we use a dedicated $WWbb$ sample generated at particle level with \aNLO showered with \PY v8, that takes fully into account the interference.
-This sample is produced at \gls{lo} and using the four-flavour scheme, where $b$-quarks are treated as massive and processes that require a $b$-quark in the initial state (which is the case for Wt production) are initiated by a gluon splitting into a $b\bar{b}$ pair. 
+This sample is produced at \gls{lo} and using the four-flavor scheme, where $b$-quarks are treated as massive and processes that require a $b$-quark in the initial state (which is the case for Wt production) are initiated by a gluon splitting into a $b\bar{b}$ pair. 
 Because of the \gls{lo} accuracy, the comparison with the sum of the two nominal samples for \ttbar and Wt, generated with \PowhegBox and showered with \PY, does not lead to sensible 
 results as the \gls{nlo} corrections to the \ttbar sample are larger than the effect of the interference. 
 Instead, two additional samples are generated with the same settings as the $WWbb$ sample to simulate the double-resonance and the single-resonance samples: the former requires the presence of two resonant top quarks, the latter requires one resonant top quark and two $b$-quarks in the \gls{me}, vetoing the presence of a second resonant top quark.  
@@ -518,7 +518,7 @@ computed with \comix \cite{Gleisberg:2008fv} and \OL \cite{Cascioli:2011va}, and
 %For \gls{pp} collisions at 13 TeV, this corresponds to a cross-section of 20080 pb for $W+$jets and 
 As an illustration, the \gls{lo} Feynman diagrams for the production of a $W$ boson in association with one jet are shown in Fig. \ref{fig:W_prod}. 
 The diagrams for the production of a $Z$ boson in association with one jet are the same, except that in the case of the $Z$ boson the 
-two quarks in Fig. \ref{fig:W_prod_1} and the quark and antiquark in Fig. \ref{fig:W_prod_2} have the same flavour. 
+two quarks in Fig. \ref{fig:W_prod_1} and the quark and antiquark in Fig. \ref{fig:W_prod_2} have the same flavor. 
 
 \begin{figure}[h]
 \centering 
@@ -528,11 +528,11 @@ two quarks in Fig. \ref{fig:W_prod_1} and the quark and antiquark in Fig. \ref{f
 \end{figure}
 
 Our analysis selections require high \met and the presence of $b$-jets, therefore most of the $W$+jets events that fulfill the selection are the ones where the $W$ boson decays to a electron, muon or $\tau$ lepton 
-and the associated neutrino (to produce some \met) and the $b$-tagging requirement is satisfied because of the production of extra heavy-flavour jets, or because the jet form the hadronic decay of the $\tau$
+and the associated neutrino (to produce some \met) and the $b$-tagging requirement is satisfied because of the production of extra heavy-flavor jets, or because the jet form the hadronic decay of the $\tau$
 lepton is incorrectly tagged as a $b$-jet together with other associated jets. 
 $W$+jets events can therefore be present both in analysis regions with a lepton requirement and in those with a veto on the presence of leptons. 
 In the case of $Z$+jets events, most of the events that enter the analysis regions have a $Z \to \nu \nu$ decay (which has a \gls{br} of about 20\%), and are produced in association with 
-heavy-flavour jets or jets that are mistagged; these events contribute almost exclusively to the analysis regions with a lepton veto. 
+heavy-flavor jets or jets that are mistagged; these events contribute almost exclusively to the analysis regions with a lepton veto. 
 
 \subsubsection*{Modeling uncertainties}
 
@@ -589,7 +589,7 @@ As an example, the impact of these systematic uncertainties on the shapes of the
 
 \subsection{Diboson production}
 
-Beside the production of a single vector boson, also a pair production is possible: 
+Beside the production of a single vector boson, also pair production is possible: 
 the \gls{lo} Feynman diagrams for the production of a boson pair are shown in Fig. \ref{fig:dib_prod}.
 The cross-section is suppressed by more than three orders of magnitude with respect to the 
 single-vector-boson case. 

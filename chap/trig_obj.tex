@@ -262,7 +262,7 @@ lifetime of $B$-hadrons, on average $b$-jets contain tracks with higher impact p
 The sign of the impact parameter is positive if the track extrapolation crosses the jet direction in front of the primary vertex, and negative otherwise. 
 The negative side of the impact-parameter distribution derives from the 
 impact-parameter resolution, and can be used to calibrate light-jets. In \gls{atlas}, two taggers make use of the information on the impact parameter
- \cite{ATLAS:2011qia}: IP2D, which is based on the significance of the transverse impact parameter (\dzero/$\sigma_{\dzero}$), and IP3D, which builds a two-dimensional template including also the significance of the longitudinal impact parameter (\zzerost/$\sigma_{\zzerost}$). The \gls{pdf} for each flavour hypothesis ($b$, $c$, and light) is derived from \gls{mc} simulation on a per-track basis, and then a \gls{llr} of the different probabilities is computed, including the contribution from all tracks associated to the jet. For example, the \gls{llr} discriminating $b$-jets from light-jets is of the form $\sum_{i=1}^{N}\log\frac{p_b}{p_{light}}$, where the index $N$ runs on all the tracks associated to the jet. 
+ \cite{ATLAS:2011qia}: IP2D, which is based on the significance of the transverse impact parameter (\dzero/$\sigma_{\dzero}$), and IP3D, which builds a two-dimensional template including also the significance of the longitudinal impact parameter (\zzerost/$\sigma_{\zzerost}$). The \gls{pdf} for each flavor hypothesis ($b$, $c$, and light) is derived from \gls{mc} simulation on a per-track basis, and then a \gls{llr} of the different probabilities is computed, including the contribution from all tracks associated to the jet. For example, the \gls{llr} discriminating $b$-jets from light-jets is of the form $\sum_{i=1}^{N}\log\frac{p_b}{p_{light}}$, where the index $N$ runs on all the tracks associated to the jet. 
 
 \item[Secondary Vertex Finding] The SV1 algorithm \cite{ATLAS:2011qia} explicitly looks for a secondary vertex within a jet. 
 All the track pairs in the jet are tested for a two-track vertex hypothesis, removing the pairs that are likely to originate from 
@@ -270,7 +270,7 @@ long-lived particles (e.g. K$_0$, $\Lambda$), photon conversion or hadronic inte
 If a two-track vertex remains, a new single vertex is fitted with the tracks passing this selection.
 
 \item[Identification of the Decay Chain] The $B$-hadrons inside $b$-jets decay with an electroweak interaction, 
-through which a $b$-quark decays preferentially into a $c$-quark, since the \gls{ckm} matrix element $|V_{cb}|^2$ is much larger than $|V_{ub}|^2$. Hadrons containing a $c$-quark ($D$-hadrons) subsequently decay as well, giving rise to a topology with two decay vertices. While the resolution is often not enough to reconstruct the two vertices individually, the JetFitter algorithm \cite{1742-6596-119-3-032032} operates assuming that they both lie on the same line, the flight axis of the $B$-hadron. The information on the event topology derived with JetFitter is then used in a likelihood function, from which three different templates (one for each flavour) are derived.
+through which a $b$-quark decays preferentially into a $c$-quark, since the \gls{ckm} matrix element $|V_{cb}|^2$ is much larger than $|V_{ub}|^2$. Hadrons containing a $c$-quark ($D$-hadrons) subsequently decay as well, giving rise to a topology with two decay vertices. While the resolution is often not enough to reconstruct the two vertices individually, the JetFitter algorithm \cite{1742-6596-119-3-032032} operates assuming that they both lie on the same line, the flight axis of the $B$-hadron. The information on the event topology derived with JetFitter is then used in a likelihood function, from which three different templates (one for each flavor) are derived.
 
 \end{description}
 
@@ -311,21 +311,21 @@ Table \ref{tab:obj:mv2op} shows the \glspl{op} of the MV2c10 algorithm.
 The $b$-tagging efficiency can be different in \gls{mc} simulation and data. The $b$-tagging efficiency, 
 $c$-tagging efficiency and light mistag rate are measured in data for the \glspl{op} of Table \ref{tab:obj:mv2op}, 
 and the \gls{mc} simulation is corrected with the \glspl{sf} derived as the ratio of the efficiency in data and in \gls{mc}. 
-The \glspl{sf} are derived on a per-jet basis in a parametric form based on jet \pt, $\eta$ and truth flavour. 
+The \glspl{sf} are derived on a per-jet basis in a parametric form based on jet \pt, $\eta$ and truth flavor. 
 For each \gls{mc} simulated event, an event-level \gls{sf} is derived by multiplying all the efficiency \glspl{sf} for the $b$-tagged jets 
 and all the inefficiency \glspl{sf} for the jets that are not $b$-tagged. Different techniques are used in \gls{atlas} to measure the $b$-tagging 
-efficiency in \gls{atlas} for the different jet flavours \cite{1748-0221-11-04-P04008}.
+efficiency in \gls{atlas} for the different jet flavors \cite{1748-0221-11-04-P04008}.
 The calibrations used in the analyses described in this thesis are:
 
 \begin{description}
 
 \item[$b$-jets] The default $b$-tagging calibration for $b$-jets is based on a \ttbar dileptonic sample. Events with exactly two opposite-sign leptons
-and two or three jets are selected, and a per-event likelihood is built containing the $b$-tagging weight \gls{pdf} for a jet of a given flavour;
+and two or three jets are selected, and a per-event likelihood is built containing the $b$-tagging weight \gls{pdf} for a jet of a given flavor;
 the \gls{pdf} for light-jets and $c$-jets is taken from \gls{mc}, while the \gls{pdf} for $b$-jets is the information that we want to extract from data.
 This last \gls{pdf} is described by a histogram with only two bins, one below and one above the threshold to $b$-tag a jet. 
 
 %\gls{bdt} based on 8 input variables 
-%Likelihood fit using per-jet flavour correlations. 
+%Likelihood fit using per-jet flavor correlations. 
 
 \item[$c$-jets] The analysis described in Chapter \ref{chap:strong_prod} uses a $c$-jet calibration based on events where a $W$ boson 
 is produced in association with a $c$-quark. The events selected are the ones where the $W$ boson decays into an electron and a neutrino,
