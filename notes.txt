@@ -4,7 +4,7 @@ move MET trigger
 add details on MET 
 Higgs matching, elaborate on the Higgs selection, and add plots with comparison
 understand CLs scan
-
+add to intro other activities
 
 Plots:
 QCD in linear scale
