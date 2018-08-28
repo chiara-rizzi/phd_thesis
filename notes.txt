@@ -2,9 +2,9 @@ Big corrections
 mc simul chapter
 move MET trigger
 add details on MET 
-elaborate on the Higgs selection, and add plots with comparison
+Higgs matching, elaborate on the Higgs selection, and add plots with comparison
 understand CLs scan
-Higgs matching 
+
 
 Plots:
 QCD in linear scale
