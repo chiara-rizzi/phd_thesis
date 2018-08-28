@@ -91,7 +91,9 @@ determined by the equations derived independently by Dokshitzer \cite{Dokshitzer
 \end{equation}
 
 \noindent In the expressions above, $q(x,Q^2)$ and $g(x,Q^2)$ denote the quark and gluon \glspl{partdf} respectively, 
-$P_{ij}$ describes the $i \to j$ parton splitting function
+$P_{ij}$ describes the $i \to j$ parton splitting function, 
+which corresponds to the probability of the outgoing parton $j$ 
+to be emitted at a virtuality scale $Q^2$ and carry a fraction $x$/$y$ of the mother parton momentum.
 and $\otimes$ is a symbol for the convolution integral:
 \begin{equation}
 P \otimes f \equiv \int^1_x\frac{dy}{y}f_q(y)~P\left(\frac{x}{y}\right).
@@ -150,17 +152,22 @@ when computing inclusive cross-sections, the logarithmic divergences arising fro
 This does not hold anymore when we are interested in the computation of a differential cross-section, for example with a specific number of accompanying final-state extra partons, 
 as it could be the case $l=0$, $k=1$ in Equation \ref{eq:xsec_matrix}. 
 In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}, which generate an ordered sequence of emissions with decreasing angle or energy; the \gls{psh} approximation consists in retaining only singular parts of the \glspl{me}, namely those corresponding to low angles and energies, obtaining a \gls{ll} accuracy.
-There are three types of emission processes that are described by the \gls{psh}: $g \rightarrow q\bar{q}$, $g \rightarrow gg$ and $q \rightarrow q g$.
+Starting from the cross section for the production of $n$ particles, the cross section for the production 
+of $n+1$ particles is calculated based on the parton splitting function $P_{ij}$ (described in Section \ref{sec:protpdf}):
+\begin{equation}
+d\sigma_{n+1} \approx d\sigma_n \, \frac{ \alpha_s }{2 \pi } \, \frac{dt}{t}  \,  P_{ij}(z, t) \, dz
+\end{equation}
 The probability for a parton to evolve from an energy $t$ to a lower energy $t'$ without splitting is encoded in the Sudakov form factor:
 \begin{equation}
   \Delta_i(t,t')=\exp\left(-\sum_{j\in\{q,g\}}\,
   \int_t^{t'}\frac{{\rm{d}}\bar{t}}{\bar{t}}\int_{z_{\rm min}}^{z_{\rm max}}{\rm{d}} z\,
-  \frac{ \alpha_s }{2 \pi } \, \frac{1}{2} \, P_{ij}(z) \right) \;,
+  \frac{ \alpha_s }{2 \pi } \, \frac{1}{2} \, P_{ij}(z, t) \right) \;,
   \label{eq:sudakov_intro}
 \end{equation}
 
-\noindent where $P_{ij}$ is the parton splitting function (described in Section \ref{sec:protpdf}).
-Equation \ref{eq:sudakov_intro} is sampled with \gls{mc} techniques to produce the sequence of splittings, until the hadronization scale is reached. 
+There are three types of emission processes that are described by the \gls{psh}: $g \rightarrow q\bar{q}$, $g \rightarrow gg$ and $q \rightarrow q g$.
+Equation \ref{eq:sudakov_intro} is sampled with \gls{mc} techniques to produce the sequence of splittings, until the hadronization scale is reached;
+this describes \gls{fsr}.
 
 Also incoming particles can emit extra partons, giving rise to \gls{isr}. 
 While in the case of \gls{fsr} the first emissions are harder than subsequent ones, 
@@ -228,12 +235,17 @@ Two main hadronization models used in \gls{mc} generators are:
 
 \begin{description}
 \item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). The term "string model" comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
-A color string forms that joins the the final state in a string configuration of field energies, and hadrons originate from the breakups of the string. The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm.
+A color string forms that joins the final state in a string configuration of field energies, and hadrons originate from the breakups of the string. The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm.
 The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two strings and have therefore a rate for hadron production twice that of quarks. 
 % chiara: describe the main steps of the string model hadronization
-The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent on the sequence of string breakups. The resulting function depends on the mass and \pt of the hadron, leading to heavier hadrons carrying on average a higher fraction of the momentum.
+The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent on the sequence of string breakups. The resulting function depends on the mass and transverse momentum (\pt) of the hadron, leading to heavier hadrons carrying on average a higher fraction of the momentum.
 
-\item[Cluster Model] The cluster model, sketched in Figure \ref{fig:cluster_model}, is based on preconfinement. The clusters of color and anti-color, instead of forming a string, at a sufficient low scale can decay directly into (possibly unstable) hadrons. The mass distribution of the preconfined clusters results to be independent on the scale and nature of the original hard process. This universal distribution of the cluster mass peaks below 1 GeV, with a tail that extends to above 10 GeV; these clusters with very high mass are decayed as a string.  
+\item[Cluster Model] The cluster model, sketched in Figure \ref{fig:cluster_model}, is based on the preconfinement property of \gls{qcd}. 
+Color-singlet combinations of partons, referred to as clusters, are formed during the parton shower,  
+and then decay into (possibly unstable) hadrons. 
+Heavier clusters may first split through non-perturbative processes, and decay first into a pair of clusters or into a cluster and a hadron; 
+this process continues until all clusters are transformed into hadrons. 
+The mass distribution of the preconfined clusters results to be independent on the scale and nature of the original hard process. This universal distribution of the cluster mass peaks below 1 GeV, with a tail that extends to above 10 GeV.
 
 \end{description}
 
@@ -293,6 +305,7 @@ It uses a \pt-ordered parton shower and the Lund string hadronization model. It 
 It computes $2\rightarrow 2$ \gls{lo} \glspl{me}.
  The partons shower is ordered by the angle of the emitted parton. Gluon splitting processes ($g \rightarrow q\bar{q}$ and $g \rightarrow gg$) in the collinear approximation are not symmetric in the azimuthal direction due to interference of positive and negative helicity states in the original gluon. 
 While \PY uses a method that takes these affects into account only partially \cite{Webber:1987uy}, \HW uses one that fully includes spin correlations \cite{Collins:1987cp}. The hadronization is based on the cluster model.
+\HW is typically interfaced with the standalone software \jimmy \cite{Butterworth:1996zw} that simulates the underlying event.
 
 \item[\Sherpa] \cite{Gleisberg:2008ta} The \Sherpa event generator can provide multi-leg \glspl{me} both at \gls{lo} (up to four extra partons) and at \gls{nlo} (up to two extra partons). 
 The matching between the \gls{me} and the dipole-type parton shower \cite{Schumann:2007mg} follows the CKKW prescription.
@@ -311,7 +324,10 @@ computation of the \glspl{me}, and can be afterwards interfaced to a general pur
 \item[\PowhegBox] \cite{Alioli:2010xd} In this framework it is possible to implement \gls{nlo} \gls{me} computations, using the 5 flavor scheme.
 It uses the \Powheg method for matching. 
 
-\item[\aNLO] \cite{Alwall:2014hca} This generator can compute \glspl{me} at \gls{lo} for any user-specified lagrangian, and at \gls{nlo} accuracy for selected processes. It includes up to two additional partons and is then interfaced to a parton shower using the CKKW-L method. 
+\item[\aNLO] \cite{Alwall:2014hca} This generator can compute \glspl{me} at \gls{lo} for any user-specified lagrangian, and at \gls{nlo} accuracy for selected processes. %It includes up to two additional partons and 
+The \gls{nlo} calculation implements the \mcatnlo method. 
+It is then interfaced to a parton shower using the 
+MLM prescriptions at \gls{lo} and the FxFx prescription at \gls{nlo}.
 
 \end{description}
 
@@ -328,7 +344,7 @@ substituting original decay chains by the more sophisticated simulation by \evtg
 \item[\tauola] \cite{Jadach:1990mz} General purpose event generators treat tau leptons as stable particles. 
 The tau decays are then handled by separated packages like \tauola, which includes leptonic and semileptonic decays, paying attention to the tau polarization. Since the format of the tau-related information is generator-dependent and the results of the original generator need to be replaces, also the input and output formats of \tauola depend on the generator it is interfaced with.
 
-\item[\photos] \cite{Barberio:1990ms} This generator handles electromagnetic radiation, estimating the size of the \gls{qed} bremsstrahlung in the collinear approximation, and is used by \tauola. 
+\item[\photos] \cite{Barberio:1990ms} This generator handles electromagnetic radiation, estimating the size of the \gls{qed} bremsstrahlung in the collinear approximation, and is used e.g. by \tauola. 
 
 
 \end{description}
