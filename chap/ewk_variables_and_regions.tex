@@ -1,14 +1,14 @@
-\section{Higgs reconstruction}
-\label{sec:ewk:higgsreco}
+\section{Discriminating variables}
+\label{sec:ewk:sigbkg}
 
-A key ingredient of the analysis is the reconstruction of the two Higgs bosons form the decay of the Higgsinos.
+A key ingredient of the analysis is the reconstruction of the two Higgs bosons from the decay of the Higgsinos.
 Since this analysis targets events where both Higgs bosons decay to a $b\bar{b}$ pair, the reconstruction starts 
 from four jets, which are chosen according to an ordering that favors $b$-tagged jets over non-tagged jets,
 and then orders based on \pt. Practically, this results in the following criteria:
 \begin{itemize}
 \item If there are exactly four $b$-tagged jets in the event, those are used.
 \item If there are more than four $b$-tagged jets, the selected ones are the four $b$-tagged jets with highest \pt.
-\item If there are less than four $b$-tagged jets, the selected ones are the $b$-tagged ones and the non-tagged ones with highest \pt.
+\item If there are less than four $b$-tagged jets, the selected ones are the $b$-tagged jets and the non-tagged jets with highest \pt.
 \end{itemize} 
 
 Once the four jets have been selected, they are grouped in two pairs, each one constituting a candidate Higgs bosons. 
@@ -23,10 +23,8 @@ In particular, the permutation chosen is the one that minimizes:
 This choice has a good efficiency in reconstructing the Higgs bosons in the signal, 
 and at the same time avoids creating artificial peaks in the background in correspondence of the Higgs boson mass. 
 
-\section{Kinematic variables specific to this analysis}
-
 Beside the variables described in Section \ref{sec:common_variables}, a few other discriminating variables particularly 
-effective for this signal model are described in this section.
+effective for this signal model are described below.
 
 \subsubsection*{Candidate Higgs bosons}
 
@@ -48,43 +46,45 @@ as originating from a Higgs boson; the modified definition is therefore:
 \noindent where the sum runs over the jets selected according to the ordering procedure presented in Section \ref{sec:ewk:higgsreco}. 
 
 
-\section{Discriminating variables}
-\label{sec:ewk:sigbkg}
-
-In this section we show how the variables defined in Section \ref{sec:common_variables} and the ones related
-to the Higgs boson reconstruction (\dRmax defined in the previous section, and the mass of the reconstructed Higgs boson candidates)
-allow to identify a region of the phase space that is enriched in signal events. 
+The variables defined above, together with the ones defined in Section \ref{sec:common_variables} 
+allow identifying a region of the phase space that is enriched in signal events. 
 This study is performed after selecting events with high \met ($> 200$ GeV), at least four signal jets and, least three $b$-tagged jets, zero signal leptons and \dphimin $>0.4$.
 
-Figure \ref{fig:ewk:sig:1} shows the distribution of the main kinematic variables for 
-the sum of the \gls{sm} backgrounds and for selected signal samples after these selections.
+Figures \ref{fig:ewk:sig:1} and \ref{fig:ewk:sig:2}  show the distribution of the main kinematic variables for 
+the sum of the \gls{sm} backgrounds and for different signal samples after these selections.
 Figures \ref{fig:ewk:sig:mass_h1_min_dR} and \ref{fig:ewk:sig:mass_h2_min_dR} show the distribution of the mass of the Higgs 
-candidate with the leading and sub-leading mass respectively. We can see how the distribution peaks at values around the Higgs mass for 
+candidate with the leading and sub-leading mass respectively. As can be appreciated, the distribution peaks at values around the Higgs mass for 
 signals, while it is flatter for background. 
 The distribution of \dRmax is shown in Figure \ref{fig:ewk:sig:dRmax_dR}. This variable assumes in general a lower value for 
 signal events, in particular for the high-mass signals, where the Higgs bosons are produced with higher \pt and thus have 
-more collimated decay products. Signal events tend also to have a lower number of signal jets, as can be observed in Figure 
+more collimated decay products. Signal events also tend to have a lower number of signal jets, as can be observed in Figure 
 \ref{fig:ewk:sig:jets_n}, and they occupy mostly the bins with three and four $b$-jets in the 
 distribution of \nbjet (Figure \ref{fig:ewk:sig:bjets_n}). 
 The \met distribution, shown in Figure \ref{fig:ewk:sig:met}, displays the expected features: while signals with low-mass Higgsinos 
 have low \met values, the distribution tends to assume increasingly high values with the increase of the Higgsino mass. 
 A similar feature is shown in Figures \ref{fig:ewk:sig:meff_4bj} and \ref{fig:ewk:sig:mTb_min} for the \meffb and \mtb distributions respectively: 
-the higher the Higgsino mass in the signal, the more signal events differ form background events. 
+the higher the Higgsino mass in the signal, the more signal events differ from background events. 
 While on the one hand this makes it easier to separate them from the \gls{sm} background, on the other hand the increase in signal mass 
 implies a decrease in production cross section, which will be the limiting factor in sensitivity to high-mass signals. 
 
 \begin{figure*}[htbp]
 \centering 
-\subfigure[m($h_1$)]{\includegraphics[width=0.325\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_mass_h1_min_dR.pdf}\label{fig:ewk:sig:mass_h1_min_dR}}
-\subfigure[m($h_2$)]{\includegraphics[width=0.325\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_mass_h2_min_dR.pdf}\label{fig:ewk:sig:mass_h2_min_dR}}
-\subfigure[\dRmax]{\includegraphics[width=0.325\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_dRmax_dR.pdf}\label{fig:ewk:sig:dRmax_dR}}\\
-\subfigure[\njet]{\includegraphics[width=0.325\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_jets_n.pdf}\label{fig:ewk:sig:jets_n}}
-\subfigure[\nbjet]{\includegraphics[width=0.325\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_bjets_n.pdf}\label{fig:ewk:sig:bjets_n}}
-\subfigure[\met]{\includegraphics[width=0.325\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_met.pdf}\label{fig:ewk:sig:met}}\\
-\subfigure[\meffb]{\includegraphics[width=0.325\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_meff_4bj.pdf}\label{fig:ewk:sig:meff_4bj}}
-\subfigure[\mtb]{\includegraphics[width=0.325\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_mTb_min.pdf}\label{fig:ewk:sig:mTb_min}}
+\subfigure[m($h_1$)]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_mass_h1_min_dR.pdf}\label{fig:ewk:sig:mass_h1_min_dR}}
+\subfigure[m($h_2$)]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_mass_h2_min_dR.pdf}\label{fig:ewk:sig:mass_h2_min_dR}} \\
+\subfigure[\dRmax]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_dRmax_dR.pdf}\label{fig:ewk:sig:dRmax_dR}}
+\subfigure[\meffb]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_meff_4bj.pdf}\label{fig:ewk:sig:meff_4bj}}
 \caption{Distribution of  the main kinematic variables in background and signal events after the selections described in the text.}
 \label{fig:ewk:sig:1}
+\end{figure*}
+
+\begin{figure*}[htbp]
+\centering
+\subfigure[\njet]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_jets_n.pdf}\label{fig:ewk:sig:jets_n}}
+\subfigure[\nbjet]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_bjets_n.pdf}\label{fig:ewk:sig:bjets_n}}\\
+\subfigure[\met]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_met.pdf}\label{fig:ewk:sig:met}}
+\subfigure[\mtb]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_mTb_min.pdf}\label{fig:ewk:sig:mTb_min}}
+\caption{Distribution of  the main kinematic variables in background and signal events after the selections described in the text.}
+\label{fig:ewk:sig:2}
 \end{figure*}
 
 \FloatBarrier
@@ -120,14 +120,14 @@ providing in the end a good sensitivity to the entire mass spectrum.
 In order to understand which variable works best for this scope, the separation algorithm provided by the TMVA toolkit \footnote{TMVA is a toolkit designed for multivariate analyses, this in not the case here: it's only used as a quick way to access the discrimination power of the individual variables.} \cite{Hocker:2007ht} is used, defined as:
 
 \begin{equation}
-          \mathrm{separation} = \frac{1}{2} \int\frac{\left(y_s(x) - y_b(x)\right)^2}{y_s(x) + y_b(x)} dx \; , 
+          \mathrm{separation} = \frac{1}{2} \int\frac{\left(f_s(x) - f_b(x)\right)^2}{f_s(x) + f_b(x)} dx \; , 
 \label{eq:separation}
 \end{equation}
-\noindent where $y_s$ and $y_b$ are the signal and background \glspl{pdf} of $y$. 
+\noindent where $f_s$ and $f_b$ are the signal and background \glspl{pdf} of $x$. 
 
 The separation provided by the most promising analysis variables between background and 
 signals with m(\hino)=300, 500 and 800 GeV is shown in Figure \ref{fig:ewk:separation}.
-It is possible to see that \meffb is the best variable for our requirements (even if there are individual bins where this is not the case).
+It is possible to see that \meffb is the best variable for our requirements (even if there are individual bins where this is not the case). 
 
 \begin{figure}[htpb]
 \begin{center}
@@ -139,7 +139,7 @@ It is possible to see that \meffb is the best variable for our requirements (eve
 \subfigure[]{\includegraphics[width=0.43\textwidth]{figures/ewk_prod/separation/saparation_mTbmin.pdf}}
 \subfigure[]{\includegraphics[width=0.43\textwidth]{figures/ewk_prod/separation/saparation_MET.pdf}}\\
 %\subfigure[]{\includegraphics[width=0.43\textwidth]{figures/ewk_prod/separation/saparation_MET_sig.pdf}}
-\caption{Separation offered by different analysis variables. The separation is defined as in eq. \ref{eq:separation}.}
+\caption{Separation offered by different analysis variables. The separation is defined as in Equation \ref{eq:separation}.}
 \label{fig:ewk:separation}
 \end{center}
 \end{figure}
@@ -148,10 +148,10 @@ Three regular bins with a width of 150 GeV each are defined in \meffb.
 The edges of the bins are defined starting from the one with the highest value. 
 At it has already been discussed in Section \ref{sec:ewk:sigbkg},
 signals with high m(\hino) have kinematic features that distinguish them clearly from the background, 
-but at the same time a low cross section (e.g. for m($\ninoone$) = 800 GeV, the cross section is about 0.003 pb). 
-This makes it more convenient to define the selection that maximize the expected significance for an high-mass benchmark point (800 GeV) 
+but at the same time a low cross section (e.g. for m($\ninoone$) = 800 GeV, the cross section is about 3 fb). 
+This makes it more convenient to define the selection that maximize the expected significance for a high-mass benchmark point (800 GeV) 
 as a single-bin region, to concentrate as much as possible the signal events in one single \gls{sr}, 
-instead of diluting it in several \glspl{sr}.% to try to exploit shape information.
+instead of diluting it in several \glspl{sr}. % to try to exploit shape information.
 The optimal selection for the high-m(\hino) benchmark signal occupies the highest \meffb bin,
 and is determined my maximizing the expected significance over all the other discriminating variables,
 leading to the selection:
@@ -215,27 +215,27 @@ $m(h_2)$ &    \multicolumn{3}{|c|}{90--140}\\
 
 \vspace{0.4cm}
 
-\begin{tabular}{|l|c|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|}
 \toprule
-   & SR-4b-meff1-A & SR-4b-meff1-B & SR-4b-meff2-A & SR-4b-meff2-B  & SR-4b-meff1-A-disc \\
+   & SR-4b-meff1-A & SR-4b-meff1-B & SR-4b-meff2-A & SR-4b-meff2-B  \\
  \hline
-\nbjet &  $\geq$4 &  $\geq$4 &  $\geq$4 &  $\geq$4  & $\geq4$\\
+\nbjet &  $\geq$4 &  $\geq$4 &  $\geq$4 &  $\geq$4 \\
  \hline
-\met & \multicolumn{5}{|c|}{$>$ 200}\\
+\met & \multicolumn{4}{|c|}{$>$ 200}\\
 \hline
-\dphimin    & \multicolumn{5}{|c|}{$>$0.4}\\
+\dphimin    & \multicolumn{4}{|c|}{$>$0.4}\\
  \hline
-\njet & 4--5 &  4--5 &  4--6 &  4--6 & 4--5\\
+\njet & 4--5 &  4--5 &  4--6 &  4--6 \\
  \hline
-\mtb &   - & - & - & - & - \\
+\mtb &   - & - & - & -  \\
  \hline
-$m(h_1)$ &    \multicolumn{5}{|c|}{110--150}\\
+$m(h_1)$ &    \multicolumn{4}{|c|}{110--150}\\
  \hline
-$m(h_2)$ &    \multicolumn{5}{|c|}{90--140}\\
+$m(h_2)$ &    \multicolumn{4}{|c|}{90--140}\\
  \hline
-\dRmax &   0.4--1.4 &  1.4--2.4 &  0.4--1.4 &  1.4--2.4 & 0.4--1.4 \\
+\dRmax &   0.4--1.4 &  1.4--2.4 &  0.4--1.4 &  1.4--2.4\\
  \hline
-\meffb &  600--850 &  600--850 &  850--1100 &  850--1100 & $>600$ \\
+\meffb &  600--850 &  600--850 &  850--1100 &  850--1100 \\
 \bottomrule
 \end{tabular} 
 %}
@@ -250,7 +250,7 @@ Table from Ref. \cite{Aaboud:2018htj}.
 \subsection{Cut-and-count regions}
 
 The analysis strategy described in Section \ref{sec:ewk:multibin} leads to a good sensitivity for exclusion across the entire mass spectrum, 
-but the constraint of building orthogonal regions makes it hard to have an high discovery significance 
+but the constraint of building orthogonal regions makes it hard to have a high discovery significance 
 for signals with intermediate masses. 
 To solve this problem cut-and-count \glspl{sr} are defined as well, with the goal of
 providing robust regions capable of discovery of \gls{susy} signatures, 
@@ -269,7 +269,8 @@ selection is removed.
 Using only the modified versions of SR-4b-meff1-A, referred to as SR-4b-meff1-A-disc, 
 and SR-3b-meff3 (orange and green line respectively in the figure) allow us to have good expected sensitivity for 
 all the signal considered.  
-This is always $>$3 for all the masses in the 300-600 GeV range, and $\approx$ 2.5 for the 800 GeV signal. 
+This is always $>$3 sigma for all the masses in the 300-600 GeV range, and $\approx$ 2.5 sigma for the 800 GeV signal. 
+The definition of SR-4b-meff1-A-disc is reported in Table \ref{tab:SR-disc}.
 
 \begin{figure*}[htbp]
 \centering
@@ -278,6 +279,41 @@ This is always $>$3 for all the masses in the 300-600 GeV range, and $\approx$ 2
 \label{fig:ewk:disc_sig}
 }
 \end{figure*}
+
+\begin{table}[htbp]
+\begin{center}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{|l|c|}
+\toprule
+   & SR-4b-meff1-A-disc \\
+ \hline
+\nbjet &  $\geq4$\\
+ \hline
+\met & $>$ 200\\
+\hline
+\dphimin    &$>$0.4\\
+ \hline
+\njet &  4--5\\
+ \hline
+\mtb &  - \\
+ \hline
+$m(h_1)$ &    110--150\\
+ \hline
+$m(h_2)$ &   90--140\\
+ \hline
+\dRmax &  0.4--1.4 \\
+ \hline
+\meffb &  $>600$ \\
+\bottomrule
+\end{tabular} 
+%}
+\caption{Definition of the high-mass analysis  SR-4b-meff1-A-disc. The units of \met, \mtb, $m(h_1)$, $m(h_2)$, and \meffb are GeV. 
+Table from Ref. \cite{Aaboud:2018htj}.
+%These variables are defined in Section~\ref{high_event_selection}.
+}
+\label{tab:SR-disc}
+\end{center}
+\end{table}
 
 
 \section{Control and validation regions}
@@ -410,7 +446,7 @@ Table from Ref. \cite{Aaboud:2018htj}.
 \end{center}
 \end{table}
 
-\section{Composition of the analysis regions}
+\section{Background composition}
 
 The pre-fit background composition of the analysis regions is show in Figures \ref{fig:bkgcomp_hh3b} and \ref{fig:bkgcomp_hh4b}.
 It is possible to see how \ttbar is the dominant background in all the \glspl{sr}.
@@ -418,7 +454,7 @@ It is possible to see how \ttbar is the dominant background in all the \glspl{sr
 %, since they are designed to respectively normalize this background and validate the extrapolation of this normalization to 
 %a phase space closer to the \glspl{sr}.
 % chiara: change, sentence from paper
-The subdominant background contributions are Z($\to \nu \nu$)+jets and W($\to \nu$ lepton)+jets events.
+The subdominant background contributions are $Z(\to \nu\nu)$+jets and $W(\to \ell\nu)$+jets events.
 %where for W+jets events the lepton is electron or muon that is not reconstructed or a hadronically decaying $\tau$-lepton. 
 %In the 1-lepton \glspl{sr}, the subdominant backgrounds are single-top, \ttbar+W and \ttbar+Z.
 Figures \ref{fig:ttcomp_hh3b} and \ref{fig:ttcomp_hh3b} show the decay type of the \ttbar background,
@@ -427,13 +463,13 @@ in Figures \ref{fig:HFcomp_hh3b} and \ref{fig:HFcomp_hh3b}.
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_3b_bkg.pdf}
-\caption{Background composition of regions with exactly three $b$-jets.}
+\caption{Background composition in the regions with exactly three $b$-jets.}
 	\label{fig:bkgcomp_hh3b}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_4b_bkg.pdf}
-\caption{Background composition of regions with at least four $b$-jets.}
+\caption{Background composition in the regions with at least four $b$-jets.}
 	\label{fig:bkgcomp_hh4b}
 \end{figure}
 
@@ -451,29 +487,30 @@ in Figures \ref{fig:HFcomp_hh3b} and \ref{fig:HFcomp_hh3b}.
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_3b_HF.pdf}
-\caption{Heavy-flavor composition of \ttbar background in regions with exactly three $b$-jets.}
+\caption{Heavy-flavor composition of the \ttbar background in regions with exactly three $b$-jets.}
 	\label{fig:HFcomp_hh3b}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=\textwidth]{figures/ewk_prod/comp_plots/hh_4b_HF.pdf}
-\caption{Heavy-flavor composition of \ttbar background in regions with at least four $b$-jets.}
+\caption{Heavy-flavor composition of the \ttbar background in regions with at least four $b$-jets.}
 	\label{fig:HFcomp_hh4b}
 \end{figure}
 
 \FloatBarrier
 
-\section{Pre-fit Data-MC}
+\section{Comparison between data and MC}
 
 The modelling of the main kinematic variables is very similar to what observed in Section \ref{sec:strong:dataMC} 
 for the strong-production multi-b analysis, as the few differences in object definitions are not enough to 
-lead to a substantial change in data-\gls{mc} agreement; 
+lead to a substantial change in the agreement between data and simulation; 
 this section therefore focuses on the variables specific to Higgs boson reconstruction.
-The data-\gls{mc} agreement for the variables already shown in Section \ref{sec:strong:dataMC} but with the object definitions 
+The comparison between data and simulation for the variables already shown in Section \ref{sec:strong:dataMC} but with the object definitions 
 specific to this analysis are shown in Appendix \ref{app:ewk:datamc}.
-There is nevertheless a notable exception: in the analysis described in this chapter, the data-\gls{mc} agreement in the 
+There is nevertheless a notable exception: in the analysis described in this chapter, the agreement between data and simulation in the 
 distribution of the number of $b$-jets is improved, as can be appreciated comparing Figure \ref{fig:strong:datamc0L:bjets_n} with Figure \ref{fig:ewk:datamc_bjets}.
-This is the result of the improvement in the $b$-tagging calibration, discussed in Section \ref{sec:obj:btaggingcalib}.
+This is the result of the improvement in the $b$-tagging calibration: as discussed in Section \ref{sec:obj:btaggingcalib}, 
+the calibration of $c$-jets used in this analysis is based on \ttbar events, rather than on $W+c$ events as in the gluino analysis.
 The other important difference with respect to the strong-production analysis is that in this case the analysis is performed 
 only in regions with a lepton veto; it is not therefore sensitive to the mismodelling in the 1-lepton channel discussed in Section 
 \ref{sec:strong:kinrw} and no kinematic reweighting is required. 
@@ -486,7 +523,7 @@ agreement between data and the \gls{mc} simulation.
 %\subfigure[\nbjet]{
 \includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_bjets_n.pdf}
 %\label{fig:ewk:datamc:bjets_n}}\\
-\caption{Data-MC comparison of the number of $b$-jets in the preselection described in the text.
+\caption{Comparison of the number of $b$-jets between data and simulation in the preselection described in the text.
 }
 \label{fig:ewk:datamc_bjets}
 \end{figure*}
@@ -501,7 +538,7 @@ agreement between data and the \gls{mc} simulation.
 \label{fig:ewk:datamc:dRmax_dR}}
 \subfigure[\meffb]{\includegraphics[width=0.45\textwidth]{figures/ewk_prod/data_mc/0L_3bin/data_mc_meff_4bj.pdf}
 \label{fig:ewk:datamc:pt_meff_4bj}}
-\caption{Data-MC comparison in the preselection described in the text.
+\caption{Comparison between data and simulation in the preselection described in the text.
 }
 \label{fig:ewk:datamc_a}
 \end{figure*}
