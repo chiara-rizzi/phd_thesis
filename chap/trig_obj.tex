@@ -205,7 +205,7 @@ Beside pileup jets, other spurious jets come from the non-collision background; 
 \item Tracks associated with the jets, and in particular variables similar to \RpT defined in Equation \ref{eq:obj:rpt}, that have in general lower value for fake jets than for jets originating from \gls{pp} collisions. 
 \end{itemize} 
 
-Different thresholds for the selections on these variable distinguish the two working points, \textit{BadLoose} and \textit{BadTight}, which have an efficiency respectively of 99.5\% and 95\% for jets with $\pt > 20$ GeV, while for jets with $\pt > 100$ GeV the efficiency of the two working points increases to 99.9\% and 99.5\%. 
+Different thresholds for the selections on these variable distinguish the two working points, \textit{BadLoose} and \textit{BadTight}, which have an efficiency respectively of 99.5\% and 95\% for jets with $\pt > 20$ GeV, while for jets with $\pt > 100$ GeV the efficiency of the two working points increases to 99.9\% and 99.5\%. The \gls{op} used in the searches discussed in Chapters \ref{chap:strong_prod} and \ref{chap:ewk_prod} is \textit{BadLoose}. 
 
 \subsection{Re-clustered jets}
 \label{sec:reclustering}
@@ -267,7 +267,11 @@ impact-parameter resolution, and can be used to calibrate light-jets. In \gls{at
 \item[Secondary Vertex Finding] The SV1 algorithm \cite{ATLAS:2011qia} explicitly looks for a secondary vertex within a jet. 
 All the track pairs in the jet are tested for a two-track vertex hypothesis, removing the pairs that are likely to originate from 
 long-lived particles (e.g. K$_0$, $\Lambda$), photon conversion or hadronic interaction with the detector material. 
-If a two-track vertex remains, a new single vertex is fitted with the tracks passing this selection.
+If a two-track vertex remains, a new single vertex is fitted with the tracks passing this selection. 
+Jets that are $b$-tagged for high values of a likelihood discriminant, built using several variables 
+including the decay-length signicance, the invariant mass of all tracks associated with the vertex, 
+the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet, 
+and the number of two-track vertices.
 
 \item[Identification of the Decay Chain] The $B$-hadrons inside $b$-jets decay with an electroweak interaction, 
 through which a $b$-quark decays preferentially into a $c$-quark, since the \gls{ckm} matrix element $|V_{cb}|^2$ is much larger than $|V_{ub}|^2$. Hadrons containing a $c$-quark ($D$-hadrons) subsequently decay as well, giving rise to a topology with two decay vertices. While the resolution is often not enough to reconstruct the two vertices individually, the JetFitter algorithm \cite{1742-6596-119-3-032032} operates assuming that they both lie on the same line, the flight axis of the $B$-hadron. The information on the event topology derived with JetFitter is then used in a likelihood function, from which three different templates (one for each flavor) are derived.
@@ -349,7 +353,8 @@ the negative-tag rate for $b$- and $c$-jets and the effect of long-lived particl
 
 The $b$-tagging scale factors are affected by multiple sources of uncertainty, which are reflected in uncertainties on the \glspl{sf}.
 As an example, Figure \ref{fig:obj:btagSF} shows the $b$-tagging \gls{sf} for $c$-jets derived with the \ttbar calibration for the
-77\% \gls{op}. \note{Plots for other calibrations will be added after CONF are public (should be LHCP)}.
+77\% \gls{op}. 
+%\note{Plots for other calibrations will be added after CONF are public (should be LHCP)}.
 
 \begin{figure}[h]
 \begin{center}
@@ -592,25 +597,18 @@ residual differences in electron energy scale and resolution between data and \g
 
 Particles that interact only weakly with the detector, such as neutrinos or \gls{bsm} particles like neutralinos, are not reconstructed directly.  
 Their presence is instead inferred by measuring the total momentum imbalance in the event. 
-The missing transverse momentum (\met) is defined as the negative vector sum of the \pt of all the reconstructed calibrated objects in the event, 
+The missing transverse momentum ($\bar{p}_{\rm{T}}^{\rm{miss}}$) is defined as the negative vector sum of the \pt of all the reconstructed calibrated objects in the event, 
 plus a term that groups all the energy that is not associated to any of the reconstructed objects (soft term) \cite{Aad:2016nrq}. 
 For each of the $X$ and $Y$ components, the missing energy in that direction is given by:
 
 \begin{equation}
-E_{X(Y)}^{miss} =  - \sum \pxy ^{e}  - \sum \pxy ^{\gamma} - \sum \pxy ^{\tau}    \nonumber \\
-- \sum \pxy ^{jets} - \sum \pxy   ^{\mu} - \sum \pxy  ^{soft-terms}   \;
+\bar{p}_{\rm{T}}^{\rm{miss}}=  - \sum \pt ^{e}  - \sum \pt ^{\gamma} - \sum \pt ^{\tau}    \nonumber \\
+- \sum \pt ^{jets} - \sum \pt   ^{\mu} - \sum \pt  ^{soft-terms}   \;
 \label{eq:etm} 
 \end{equation}
 
-The magnitude of the missing transverse momentum is defined as:
-\begin{equation}
-\met = \sqrt{(E_{X}^{miss})^{2}  +  (E_{Y}^{miss})^{2}} \;,
-\end{equation}
-
-\noindent and the azimuthal angle is:
-\begin{equation}
-\phi^{miss} = \arctan \left( \frac{E_Y^{miss}}{E_X^{miss}} \right) \; .
-\end{equation}
+\noindent The magnitude of the missing transverse momentum is the missing transverse energy (\met), and 
+its azimuthal angle is $\phi^{miss}$.
 
 The soft term includes all the detector signals that are not associated to muons, electrons, photons, taus or jets, and can receive contributions
 both from the hard scattering and from pileup interactions. 
