@@ -14,16 +14,31 @@ how they are modeled in the analyses and the uncertainties on this modelling.
 \section{Data sample}
 \label{sec:common:datasample}
 
-The data used in this thesis are selected with \met triggers.
+The data used in this thesis are \gls{pp} collisions produced by the \gls{lhc} 
+at a center-of-mass energy \cmtre TeV during 2015 and 2016 
+and collected by the \gls{atlas} detector, corresponding to an integrated luminosity of 36.1 \ifb 
+after the application of the \gls{grl}. 
+The gluino search described in Chapter \ref{chap:strong_prod} has also been updated with the data collected in 
+2017, and in this case the total dataset has an integrated luminosity of 78.9 \ifb. 
+
+Events are selected with \met triggers. 
 The version of \met used in the trigger is calorimeter-based, which means that the muons are not included in the computation of \met and are 
 therefore treated as invisible particles.  As described in Section \ref{sec:cern:trigger}, 
 trigger chains for physics analyses comprise first a \gls{lone} trigger selection, and then a selection from the \gls{hlt}.
 \begin{description}
 \item[L1] At \gls{lone} level, the computation of the \met is based on trigger towers of size $0.1\times0.1$ in the $\eta$, $\phi$ space. The towers are clustered in $4\times4$ group with a sliding-window algorithm, and these are used in the \met computation.
 \item[HLT] Many \gls{hlt} \met algorithms are available in \gls{atlas} and are described in Ref. \cite{Aaboud:2016leb}. 
-The one used in this thesis is the jet-based algorithm, where \met is computed as the negative sum of the \pt of the trigger-level jets in the event.
-
+The one used in this thesis is the jet-based algorithm, where \met is computed as the negative sum of the \pt of the trigger-level jets in the event. 
 \end{description}
+
+For each run, the \met trigger with the lowest available unprescaled threshold is used; this corresponds to a \gls{hlt} threshold of 
+70 GeV, 90 GeV, 100 GeV and 110 GeV for the 2015, early 2016, mid 2016 and late 2016/2017 respectively. 
+These triggers are fully efficient after requiring that the offline reconstructed \met exceeds 200 GeV and that there are at 
+least four jets in the event; these selections are applied in all the regions of the searches in this thesis. 
+
+Beside the trigger and \gls{grl} requirements, 
+events are required to have a reconstructed primary vertex with at least two associated tracks with $\pt > 0.4$ GeV. 
+
 
 \section{Simplified models}
 \label{sec:simplified_models}
