@@ -23,6 +23,8 @@ and after comma in list (in Italian there would be no comma)
 Altre cosette 
 comma before “and” in list
 spazi non sistemati in < 
+Higgs boson denoted as h and not H
+quando mettere le maiuscole negli acronimi 
 
 Misteri sull’analisi
 why don’t we consider Gtt models with oaf-shell stops like SS?

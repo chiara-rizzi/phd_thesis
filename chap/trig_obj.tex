@@ -597,17 +597,17 @@ residual differences in electron energy scale and resolution between data and \g
 
 Particles that interact only weakly with the detector, such as neutrinos or \gls{bsm} particles like neutralinos, are not reconstructed directly.  
 Their presence is instead inferred by measuring the total momentum imbalance in the event. 
-The missing transverse momentum ($\bar{p}_{\rm{T}}^{\rm{miss}}$) is defined as the negative vector sum of the \pt of all the reconstructed calibrated objects in the event, 
-plus a term that groups all the energy that is not associated to any of the reconstructed objects (soft term) \cite{Aad:2016nrq}. 
-For each of the $X$ and $Y$ components, the missing energy in that direction is given by:
+The missing transverse momentum vector ($\bar{E}_{\rm{T}}^{\rm{miss}}$) is defined as the negative vector sum of the \pt of all the reconstructed calibrated objects in the event, 
+plus a term that groups all the energy that is not associated to any of the reconstructed objects (soft term) \cite{Aad:2016nrq,Aaboud:2018tkc,ATLAS:2018ghb}. 
+The missing transverse momentum is given by:
 
 \begin{equation}
-\bar{p}_{\rm{T}}^{\rm{miss}}=  - \sum \pt ^{e}  - \sum \pt ^{\gamma} - \sum \pt ^{\tau}    \nonumber \\
+\bar{E}_{\rm{T}}^{\rm{miss}}=  - \sum \pt ^{e}  - \sum \pt ^{\gamma} - \sum \pt ^{\tau}    \nonumber \\
 - \sum \pt ^{jets} - \sum \pt   ^{\mu} - \sum \pt  ^{soft-terms}   \;
 \label{eq:etm} 
 \end{equation}
 
-\noindent The magnitude of the missing transverse momentum is the missing transverse energy (\met), and 
+\noindent The magnitude of $\bar{E}_{\rm{T}}^{\rm{miss}}$ is the missing transverse momentum (\met), and 
 its azimuthal angle is $\phi^{miss}$.
 
 The soft term includes all the detector signals that are not associated to muons, electrons, photons, taus or jets, and can receive contributions
@@ -619,9 +619,59 @@ this results at the same time in better pileup resistance but also in the loss o
 An alternative version of the soft term is the \gls{cst}, that instead uses energy deposits in the calorimeters not associated to hard physics objects. 
 Other algorithms are described in Ref. \cite{Aad:2016nrq}.
 
+Three different \met \gls{op} are available, which differ in the selections on the jets that are used in the $\sum \pt ^{jets} $ term in 
+Equation \ref{eq:etm} \cite{ATLAS:2018ghb}:
+
+\begin{description}
+\item[Loose] Includes all jets with $\pt>20$ GeV that pass the \gls{jvt} selection when the jet has $\pt<60$ GeV and $|\eta|<2.4$. This is the \gls{op} used in the searches presented in this thesis. 
+
+\item[Tight] In addition to Loose criteria, the forward jets with $|\eta|>2.4$ are required to have $\pt>30$ GeV to be included in the \met computation.
+
+\item[Forward-JVT] In addition to the Loose criteria, jets with $|\eta|>2.5$, $\pt<50$ GeV and failing the Loose fJVT criteria (described in Ref. \cite{Aaboud:2017pou}) are not included. 
+
+\end{description}
+
+The performance of the \met reconstruction is evaluated in data and \gls{mc} simulation, studying the mean, the width and the integral of the 
+tail of the \met distribution in different topologies. 
+In the 2015-2016 dataset, the \met performance has been evaluated using two different signatures. 
+$Z \rightarrow \ell \ell$ events are studies both \gls{mc} simulation and in data, since the leptonic decay of the $Z$ boson are 
+abundant and easy to trigger. 
+These events do not contain any real \met, therefore all the reconstructed \met can be assigned to mismeasurement effects. 
+The second signature used is vector boson fusion $h \rightarrow WW$ events, where both $W$ bosons decay to 
+a lepton and a neutrino; this topology is studied in \gls{mc} simulation only. 
+
+The \met resolution, defined as the \gls{rms} obtained from the combined distribution of the 
+$x$ and $y$ components, respectively $E_x^{\rm{miss}}$ and $E_y^{\rm{miss}}$, is shown in Figure \ref{fig:obj:met_fig_11} for 
+the Loose \gls{op}. 
+The simulation agrees well with data within the uncertainties.
+In the definition of the resolution, the \gls{rms} is preferred over the width of a Gaussian fit to the distribution  
+to preserve the information on the tail. 
 The systematic uncertainties on the energy scale and resolution of all the physics objects are propagated to the \met computation.
-The only systematic uncertainties affecting only \met are the ones related to the soft term, which are measured in events with very small 
-\met (for example $Z \rightarrow \mu \mu$ events) exploiting the balance between the soft term and the hard part of the \met computation.
+The only systematic uncertainties affecting only \met are the ones related to the soft term, which are measured 
+$Z \rightarrow \ell \ell$ events by comparing the simulation with data.
+
+
+
+\begin{figure}[h]
+\begin{center}
+  \subfigure[]{
+    \label{fig:obj:met_fig_11a}
+    \includegraphics[width=0.48\textwidth]{figures/objects/met_fig_11a} }
+  \subfigure[]{
+    \label{fig:obj:met_fig_11b}
+    \includegraphics[width=0.48\textwidth]{figures/objects/met_fig_11b}  
+    }
+\end{center}
+ \caption{
+ The \gls{rms} obtained from the combined distributions of \met using the Loose \met \gls{op} 
+ for data with EMTopo jets (circular marker) and PFlow jets (triangular marker) and \gls{mc} simulation
+with EMTopo jets (square marker) in a $Z \rightarrow ee$ event selection are shown versus \subref{fig:obj:met_fig_11a} $<\mu>$ and 
+\subref{fig:obj:met_fig_11b} number of primary vertices. 
+Figures from Ref. \cite{ATLAS:2018ghb}. 
+ }
+  \label{fig:obj:met_fig_11}
+\end{figure}
+
 
 \subsection{\met trigger}
 
