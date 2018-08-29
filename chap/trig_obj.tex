@@ -15,6 +15,14 @@ In \gls{atlas} the identification of tracks from charged particles relies on the
 \theta, \; \phi, \; q/p, \; d_0, \; z_0 \;,
 \end{equation}
 \noindent where $\theta$ and $\phi$ are the azimuthal and polar angle, $q/p$ is the ratio of the charge of the track to the track momentum, and $d_0$ and $z_0$ are the distance to the perigee in the transverse plane and along the $z$-axis. 
+The track perigee parameters are schematically shown in Figure \ref{tracks_param}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.60\textwidth]{figures/objects/track_param}
+\caption{Schematic view of the track perigee parameters. Figure from Ref. \cite{Salzburger:track:perigee}.}
+\label{fig:obj:tracks_param}
+\end{figure}
 
 Primary tracks, originating from charged particles with a life time longer that $3 \times 10^{-11}$ s produced directly in the hard-scatttering vertex, are reconstructed with an inside-out approach \cite{Cornelissen:1020106}: the seed of the reconstruction are three hits in the silicon detector, and then compatible hits in the outer layers of the \gls{id} are added with a Kalman Filter \cite{citeulike:347166,Fruhwirth:1987fm}. The \gls{trt} segments that are not associated with primary tracks are used as starting point to reconstruct tracks from long-lived particles or from material interaction, with a back-tracking that extrapolates the \gls{trt} information to the pixel hits. 
 
