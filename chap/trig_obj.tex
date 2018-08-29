@@ -10,12 +10,23 @@ This chapter describes the reconstruction and identification of the objects used
 \section{Tracks and primary vertices}
 \label{sec:reco:tracks}
 
-In \gls{atlas} the identification of tracks from charged particles relies on the information collected by the \gls{id}. The tracking information is crucial to the reconstruction and identification of many types of particles, including electrons, muons, and the jets originating from the hadronization of a $b$-quark. The precision on the position measurement of the track depends on the granularity of the different subsystems of the \gls{id} and, since the \gls{id} is surrounded by a solenoidal magnetic field, the charged particles follow an helical trajectory. After the point of closest approach (perigee) to a given reference is defined, the trajectory of the track can be described by five parameters: 
+In \gls{atlas} the identification of tracks from charged particles relies on the information collected by the \gls{id}. The tracking information is crucial to the reconstruction and identification of many types of particles, including electrons, muons, and the jets originating from the hadronization of a $b$-quark. 
+Charged particles traversing the \gls{id} deposit energy through ionization,  
+which is read out as hits; in the Pixel detector each hit corresponds to a space point, 
+while in the \gls{sct} the space points are obtained as pairs of hits from each side of the modules. 
+The space points are used to reconstruct the trajectory of the charged particles, which 
+is helicoidal and with radius inversely 
+proportional to their momentum, 
+since the \gls{id} is surrounded by a solenoidal magnetic field.
+The precision on the position measurement of the track depends on the granularity of the different subsystems of the \gls{id}.
+
+
+After the point of closest approach (perigee) to a given reference is defined, the trajectory of the track can be described by five parameters: 
 \begin{equation}
 \theta, \; \phi, \; q/p, \; d_0, \; z_0 \;,
 \end{equation}
 \noindent where $\theta$ and $\phi$ are the azimuthal and polar angle, $q/p$ is the ratio of the charge of the track to the track momentum, and $d_0$ and $z_0$ are the distance to the perigee in the transverse plane and along the $z$-axis. 
-The track perigee parameters are schematically shown in Figure \ref{tracks_param}.
+The track perigee parameters are schematically shown in Figure \ref{fig:obj:tracks_param}.
 
 \begin{figure}[htbp]
 \centering
@@ -36,7 +47,13 @@ Random groups of hits can be wrongly reconstructed as belonging to the helical t
 \label{fig:obj:tracks}
 \end{figure}
 
-Tracks are the starting point for the identification of vertices. \glspl{pv} are reconstructed through a vertex finding algorithm \cite{Fruhwirth:2007hz}, and then the vertex fitting algorithm identifies the vertex position and refits the tracks adding the constraint of the reconstructed interaction point. Once all the \glspl{pv} are reconstructed, the one with the highest sum of the squared transverse momenta of its associated tracks ($\sum_i^{N-tracks}p_{T,i}^2$) is identified as the hard scattering vertex, and $d_0$ and $z_0$ are recomputed with respect to its coordinates. The other vertices are named pileup vertices, and their number is correlated  to the number of interactions per bunch crossing.
+Tracks are the starting point for the identification of the interaction points, referred to as \glspl{pv}. 
+\glspl{pv} are reconstructed through a vertex finding algorithm \cite{Fruhwirth:2007hz}, 
+and then the vertex fitting algorithm identifies the vertex position and refits the tracks 
+adding the constraint of the reconstructed interaction point. 
+The \gls{lhc} operates in a high-luminosity regime, which makes it likely to have multiple \gls{pp} interactions per bunch crossing, 
+and therefore multiple reconstructed \gls{pv} candidates. 
+Once all the \gls{pv} candidates are reconstructed, the one with the highest sum of the squared transverse momenta of its associated tracks ($\sum_i^{N-tracks}p_{T,i}^2$) is identified as the hard scattering \gls{pv}, and the position of physics objects is recomputed with respect to its coordinates. The other vertices are named pileup vertices, and their number is correlated  to the number of interactions per bunch crossing.
 
 
 \section{Jets}
@@ -107,13 +124,22 @@ the standard \gls{atlas} corrections are \cite{PhysRevD.96.072002}:
 \begin{description}
 \item[Origin correction] The direction of the jet is changed to point to the reconstructed hard-scattering \gls{pv} rather than to the cented of the detector. This correction improves the $\eta$ resolution of the jets.
 
-\item[Pileup correction] Multiple collisions in the same bunch crossing (\textit{in-time pileup}), as well as residual energy from previous collisions (\textit{out-of-time pileup}), affect the jet energy reconstruction. The effect of pileup is corrected in two steps: a first correction \cite{Cacciari:2007fd,TheATLAScollaboration:2013pia}, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pileup events. A second correction based on the number of \glspl{pv} and on the number of interactions per bunch crossing is then applied to disentangle the effect of in-time pileup and out-of-time pileup.
+\item[Pileup correction] Multiple collisions in the same bunch crossing (\textit{in-time pileup}), as well as residual energy from previous collisions (\textit{out-of-time pileup}), affect the jet energy reconstruction. The effect of pileup is corrected in two steps 
+\cite{Cacciari:2007fd,TheATLAScollaboration:2013pia}: a first correction, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pileup events. 
+The jet area is measured with ghost-association: simulated ghost particles of infinitesimal momentum are added to the event uniformly in solid angle prior to jet reconstruction, and the jet area is computed from the fraction of ghost particles associated to the jet after the clusters are merged. 
+A second correction based on the number of \glspl{pv} and on the number of interactions per bunch crossing is then applied to disentangle the effect of in-time pileup and out-of-time pileup.
 
-\item[Absolute calibration] The absolute \gls{jes} and $\eta$ correction is derived comparing in \gls{mc} the truth energy of a jet with the reconstructed energy, and it also corrects for biases in the $\eta$ reconstruction \cite{Aad2015jets}.
+\item[Absolute calibration] The absolute \gls{jes} and $\eta$ correction is derived comparing in \gls{mc} the truth energy of a jet 
+(defined as the energy of the truth jet with $\Delta R<0.3$ from the calorimeter jet) 
+with the reconstructed energy, and it also corrects for biases in the $\eta$ reconstruction \cite{Aad2015jets}.
 
 \item[Global sequential calibration] The \gls{gsc} \cite{ATLAS:2015oia} improves the \gls{jes} resolution by deriving additional corrections based on individual jet properties, e.g. the number of associated tracks and the fraction of energy deposited in the various layers of the calorimeter.
 
-\item[In-situ calibration] As a last stage, the data-driven calibration (\textit{in-situ}) \cite{ATLAS:2015uwa} corrects for the differences between \gls{mc} simulation and data (arising e.g. from imperfect simulation of the detector response and material interaction). These corrections are derived from events where the jet \pt is balanced against other well measured objects. In the $\eta$-intercalibration, dijet events are used to correct the response of forward jets using well-measured central jets. The response of central jets is instead measured in $Z$+jets, $\gamma$+jets and multijet events. 
+\item[In-situ calibration] As a last stage, the data-driven calibration (\textit{in-situ}) \cite{ATLAS:2015uwa} corrects for the differences between \gls{mc} simulation and data (arising e.g. from imperfect simulation of the detector response and material interaction). These corrections are derived from events where the jet \pt is balanced against other well measured objects. In the $\eta$-intercalibration, dijet events are used to correct the response of forward jets (with $0.8 < |\eta| < 4.5$) using well-measured central jets (with $|\eta| < 0.8$). 
+The response of central jets is instead measured in $Z$+jets, $\gamma$+jets and multijet events; 
+in $Z$/$\gamma$+jets events, the \pt of the jet is measured against the \pt of a well measured $Z$ boson or photon, while 
+multijet events are used to calibrate central high-\pt jets ($300 < \pt < 2000$ GeV) against 
+well calibrated low-\pt central jets. 
  
 \end{description}
 
@@ -345,11 +371,12 @@ and the D-hadron originating from the fragmentation of the $c$-quark decays to a
 In $W+c$ production the electron and the muon in the final state have opposite charge, 
 while most of the background processes have an equal number of same-sign and opposite-sign events. The number of $W+c$ events can therefore 
 be obtained as the difference of these two categories.
-For the analysis described in Chapter \ref{chap:ewk_prod}, which was developed at a later time, a new calibration for $c$-jets, 
+For the Higgsino search described in Chapter \ref{chap:ewk_prod}, which was developed at a later time, a new calibration for $c$-jets, 
 based on \ttbar events \cite{ATLAS:2018bpl}, was available. 
 This calibration selects \ttbar events where one of the $W$ bosons decays leptonically and the other one decays to a $c$-quark and an s-quark. 
 
-\item[light-jets] The $b$-tagging efficiency of light-jets (mistag rate) is measured on an inclusive sample of jets, using the negative tag method.
+\item[light-jets] The $b$-tagging efficiency of light-jets (mistag rate) is measured on an inclusive sample of jets, using the negative tag method 
+\cite{ATLAS:2018xcf}. 
 The two main reasons that lead to $b$-tagged light-jets are the finite resolution of the impact parameter and the secondary vertices caused
 by long-lived particles and material interactions. If we consider only the first type of mistags, the signed impact parameter distribution 
 will be symmetric around zero. 
@@ -360,11 +387,12 @@ the negative-tag rate for $b$- and $c$-jets and the effect of long-lived particl
 \end{description}
 
 The $b$-tagging scale factors are affected by multiple sources of uncertainty, which are reflected in uncertainties on the \glspl{sf}.
-As an example, Figure \ref{fig:obj:btagSF} shows the $b$-tagging \gls{sf} for $c$-jets derived with the \ttbar calibration for the
-77\% \gls{op}. 
+As an example, Figure \ref{fig:obj:btagSF} shows the $b$-tagging \gls{sf} for $c$-jets derived with the \ttbar calibration 77\% \gls{op}, 
+and Figure \ref{fig:obj:mistagSF} shows the \glspl{sf} for light-jets derived with the negative tag calibration for the same \gls{op}.
+
 %\note{Plots for other calibrations will be added after CONF are public (should be LHCP)}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \begin{center}
   \subfigure[]{
     \label{fig:obj:ttSF}
@@ -375,6 +403,20 @@ As an example, Figure \ref{fig:obj:btagSF} shows the $b$-tagging \gls{sf} for $c
 \end{center}
  \caption{$B$-tagging \gls{sf} for $c$-jets for the \gls{op} corresponding to the 77\% \gls{op}. Figure from Ref. \cite{ATLAS:2018bpl}.}
   \label{fig:obj:btagSF}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+  \subfigure[]{
+    \label{fig:obj:mistag1}
+    \includegraphics[width=0.48\textwidth]{figures/objects/mistag_fig_05c.png}  }
+  \subfigure[]{
+    \label{fig:obj:mistag2}
+    \includegraphics[width=0.48\textwidth]{figures/objects/mistag_fig_05d.png} }
+\end{center}
+ \caption{$B$-tagging \gls{sf} for light-jets for the \gls{op} corresponding to the 77\% \gls{op} for \subref{fig:obj:mistag1} 
+ $|\eta|<1.2$ and \subref{fig:obj:mistag2} $1.2 < |\eta| < 2.5$. Figure from Ref. \cite{ATLAS:2018xcf}.}
+  \label{fig:obj:mistagSF}
 \end{figure}
 
 
