@@ -24,6 +24,10 @@ spazi non sistemati in <
 Higgs boson denoted as h and not H
 quando mettere le maiuscole negli acronimi 
 
+Misteri della teoria
+Why neutrino masses do not derive from Higgs mechanism?
+--> masse terms mix left and right firlds and neutrinos are only left
+
 Misteri sull’analisi
 why don’t we consider Gtt models with oaf-shell stops like SS?
 
