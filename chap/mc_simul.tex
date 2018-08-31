@@ -142,7 +142,7 @@ perturbative order of the cross-section. In particular:
 At each order, the computation of the \glspl{me} implies a choice of the factorization and renormalization scales 
 ($\mu_F$ and $\mu_R$, respectively). 
 These scales are not predetermined, and are typically set to values related to the characteristic energy scale of the considered physical process. 
-The impact of this subjective choice is taken into account by evaluating each production cross-section at different scales (typically varying the nominal scale by a factor of two up and down), and assigning the difference as a systematic uncertainty on the cross-section estimate.
+The impact of this subjective choice is taken into account by evaluating each production cross-section at different scales (typically varying the nominal scale by a factor of two up and down), and assigning the difference as a systematic uncertainty in the cross-section estimate.
 
 
 \subsection{Parton shower}
@@ -152,7 +152,7 @@ when computing inclusive cross-sections, the logarithmic divergences arising fro
 This does not hold anymore when we are interested in the computation of a differential cross-section, for example with a specific number of accompanying final-state extra partons, 
 as it could be the case $l=0$, $k=1$ in Equation \ref{eq:xsec_matrix}. 
 In this case, the kinematic of the basic inclusive event is simulated at fixed order, and the \gls{qcd} emission process (splitting) is carried out by the \gls{psh} algorithms \cite{Fox:1979ag}, which generate an ordered sequence of emissions with decreasing angle or energy; the \gls{psh} approximation consists in retaining only singular parts of the \glspl{me}, namely those corresponding to low angles and energies, obtaining a \gls{ll} accuracy.
-Starting from the cross section for the production of $n$ particles, the cross section for the production 
+Starting from the cross-section for the production of $n$ particles, the cross-section for the production 
 of $n+1$ particles is calculated based on the parton splitting function $P_{ij}$ (described in Section \ref{sec:protpdf}):
 \begin{equation}
 d\sigma_{n+1} \approx d\sigma_n \, \frac{ \alpha_s }{2 \pi } \, \frac{dt}{t}  \,  P_{ij}(z, t) \, dz
@@ -189,7 +189,7 @@ This double-counting problem worsens with the increase of the number of extra le
 \begin{center}
     \includegraphics[width=\textwidth]{figures/simul/matching}
 \end{center}
-\caption{Illustration of the source of possible double-counting originating from  adding cross sections involving matrix
+\caption{Illustration of the source of possible double-counting originating from  adding cross-sections involving matrix
 elements with dierent numbers of legs when interfaced to parton showers. Figure from Ref. \cite{Skands:2011pf}.}
  \label{fig:sim:matching}
 \end{figure}

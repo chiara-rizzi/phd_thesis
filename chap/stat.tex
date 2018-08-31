@@ -121,7 +121,7 @@ There are two types of maximum likelihood fits that can be performed:
 The estimate of a parameter based on a data sample is always associated with a statistical uncertainty.
 If the same parameter estimate is performed on a different data sample, the values of the best estimate are different;
 if this is repeated N times on independent data samples, for large N the best estimates will have a distribution that tends to a Gaussian, 
-whose variance gives access to the statistical uncertainty on the \gls{mle}. There are two ways to access this variance:
+whose variance gives access to the statistical uncertainty in the \gls{mle}. There are two ways to access this variance:
 
 \begin{itemize}
 
@@ -141,7 +141,7 @@ If we consider the representation of the observed data given by the binned distr
 E[n_i] = b_i + \mu s_i  \; ,
 \end{equation}
 
-\noindent where $b_i$ is the expected number of background events, $s_i$ the expected number of signal events, normalized to a given benchmark cross section, and $\mu$ is a multiplicative factor of that cross section referred to as signal strength.
+\noindent where $b_i$ is the expected number of background events, $s_i$ the expected number of signal events, normalized to a given benchmark cross-section, and $\mu$ is a multiplicative factor of that cross-section referred to as signal strength.
 If the observed data follow a Poisson distribution, the likelihood is given by:
 
 \begin{equation}
@@ -206,12 +206,12 @@ Depending on the underlying auxiliary measurement, different functional types ca
 
 
 
-\subsubsection*{Effect of a systematic uncertainty on the yield}
+\subsubsection*{Effect of a systematic uncertainty in the yield}
 
 Let’s consider a single bin of a distribution and the effect that a systematic uncertainty, 
 e.g. the \gls{jer}, has on the expected background yield in this bin. 
 %Leaving aside the physical meaning of this uncertainty, we can focus on the effect that this calibration uncertainty has on the likelihood of a single bin counting experiment. 
-The \gls{jer} uncertainty is calibrated with an auxiliary measurement, whose likelihood we include by the simplification of a Gaussian constraint term, $G( \tilde{\theta} | \theta, \sigma_\theta)$, where $\tilde{\theta}$ is the nominal value of the calibration, $\theta$ the underlying real value and $\sigma_\theta$ the uncertainty. Stating that the uncertainty on \gls{jer} is 10\%, means that the width of the Gaussian is 10\%. 
+The \gls{jer} uncertainty is calibrated with an auxiliary measurement, whose likelihood we include by the simplification of a Gaussian constraint term, $G( \tilde{\theta} | \theta, \sigma_\theta)$, where $\tilde{\theta}$ is the nominal value of the calibration, $\theta$ the underlying real value and $\sigma_\theta$ the uncertainty. Stating that the uncertainty in \gls{jer} is 10\%, means that the width of the Gaussian is 10\%. 
 
 To include this information in the likelihood, we need to evaluate the response to this uncertainty, i.e. the effect of a shift in \gls{jer} in the background efficiency of our region.
 In practice this means that we need to evaluate how much a one-sigma variation of \gls{jer} (10\% in our example) changes the number of expected events in the bin we are considering. 
@@ -302,7 +302,7 @@ Figures from Ref. \cite{Cranmer:1456844}.
 
 \subsubsection*{Correlation and profiling}
 
-The post-fit values of the \glspl{np} can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified \gls{mc} prediction will have a better agreement with data than the original prediction. If the post-fit uncertainty on one \gls{np} is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty on that \gls{np}.
+The post-fit values of the \glspl{np} can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified \gls{mc} prediction will have a better agreement with data than the original prediction. If the post-fit uncertainty in one \gls{np} is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty in that \gls{np}.
 % The effect of a specific systematic is not compatible with the range allowed by the data statistics 
 
 When multiple \glspl{np} have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by the statistical precision of the data. The individual effects can not be disentangled and constrained individually, but a correlation between them produce a total variation that is compatible with what is observed in data. % chiarareco:;\ un po' copiato da Javier, rifrasare!
@@ -335,7 +335,7 @@ Hypothesis testing is the statistical procedure that allows to confirm or reject
 \item[H$_1$] The alternative hypothesis, corresponds to the \gls{sm} with the addition of the \gls{bsm} process under test.
 \end{itemize}
 
-\noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section modifier; $\mu$=1 corresponds to the \gls{sm} prediction plus the \gls{bsm} process with its theoretical cross section, while $\mu$=0 corresponds to the \gls{sm} only.
+\noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section modifier; $\mu$=1 corresponds to the \gls{sm} prediction plus the \gls{bsm} process with its theoretical cross-section, while $\mu$=0 corresponds to the \gls{sm} only.
 
 \subsection{Test statistics and $p$-value}
 
@@ -507,7 +507,7 @@ The alternate \gls{prl}, $\tilde{\lambda}({\mu})$, is designed to take into acco
 
 \subsection{The CL$_{\textrm{s}}$ method}
 
-If we consider a situation where $H_0$ and $H_1$ give similar distribution of the exclusion test statistic (e.g. because the signal cross section is
+If we consider a situation where $H_0$ and $H_1$ give similar distribution of the exclusion test statistic (e.g. because the signal cross-section is
 small) and we observe a downward fluctuation in data, we could end up excluding the test hypothesis, even if almost indistinguishable from the null hypothesis. The \gls{cls} method \cite{JUNK1999435} recovers from this situations by defining:
 
 \begin{equation}
@@ -631,14 +631,14 @@ tends to have lower values of \meff with respect to the signal;
 this means that the \gls{sr} will be defined by a lower boundary on the value of \meff.
 There are different criteria that can be used to choose the value of \meff that defines the \gls{sr}. 
 The one used in this thesis is the maximization of the expected significance, computed through the function \binexpZ in \roostats \cite{Moneta:2010pm}, 
-assuming a 30\% uncertainty on the background yields. With this definition, the significance is the equivalent number of standard deviations of a Gaussian of a $p$-value defined as:
+assuming a 30\% uncertainty in the background yields. With this definition, the significance is the equivalent number of standard deviations of a Gaussian of a $p$-value defined as:
 
 \begin{equation}
 \label{eq:binomexpp}
 p(N_s, N_b, \sigma_b) = \mathcal{I} \left( \frac{1}{1+ \frac{1}{N_b \sigma_b^2}}; N_s + N_b; \frac{1}{\sigma_b^2} +1  \right)
 \end{equation}
 
-\noindent where $N_s$ ($N_b$) is the expected number of signal (background) events, and $\sigma_b$ the relative uncertainty on the background yields and $\mathcal{I}$ the regularized beta function. 
+\noindent where $N_s$ ($N_b$) is the expected number of signal (background) events, and $\sigma_b$ the relative uncertainty in the background yields and $\mathcal{I}$ the regularized beta function. 
 
 In the case of the signal and background models shown in Figure \ref{fig:stat:example}, values of \meff between 2 TeV and 4 TeV have been tested in steps of 100 GeV, and the optimal value has been found to be $\meff > 3000$ TeV. This selection leads to a \gls{sr} with  9.5 signal events, 10.5 background events and an expected significance of 1.58 $\sigma$. 
 The portion of the \meff spectrum that is not occupied by the \gls{sr}, can be used to define a \gls{cr} and a \gls{vr}.
@@ -727,7 +727,7 @@ This leads to the following yields in the \gls{cr} and \gls{vr}:
 
 \noindent When a background is normalized in a \gls{cr}, is the relative change in the \gls{tf} and not the change in yields that determines the size of the systematic uncertainty.
 This is because the normalization of the background in the \gls{cr} absorbs the normalization uncertainty, and the effect of the uncertainty on the \gls{vr} depends only on the change in shape of the distribution. 
-In this example, while the pre-fit uncertainty on the \gls{vr} is large, the variation of the transfer factor is significantly smaller:
+In this example, while the pre-fit uncertainty in the \gls{vr} is large, the variation of the transfer factor is significantly smaller:
 \begin{equation}
 \begin{split}
 \rm TF^{nominal}_{VR} &= \frac{62.9}{279.1} = 0.225 \; ,\\
@@ -737,8 +737,8 @@ In this example, while the pre-fit uncertainty on the \gls{vr} is large, the var
 \end{equation}
 
 \noindent This leads to an overall reduction of the impact of the systematic uncertainty, as shown in Figure \ref{fig:stat:VRunc}:  
-after the fit in the \gls{cr}, the shaded band indicating the uncertainty on the background estimate is smaller. 
-This example was carried out on a \gls{vr}, but the same is true for the uncertainty on the \gls{sr}.
+after the fit in the \gls{cr}, the shaded band indicating the uncertainty in the background estimate is smaller. 
+This example was carried out on a \gls{vr}, but the same is true for the uncertainty in the \gls{sr}.
 
 \begin{figure}[h]
 \centering 
@@ -758,7 +758,7 @@ Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefitS
 Once the background model has been derived with the fit in the \gls{cr} and validated in the \gls{vr}, 
 it is possible to set model-dependent limits by including also the \gls{sr} in the Likelihood ("exclusion fit").
 
-First of all, the \gls{cls} for the nominal signal cross section is computed based on the distribution of the exclusion test statistic \qmu 
+First of all, the \gls{cls} for the nominal signal cross-section is computed based on the distribution of the exclusion test statistic \qmu 
 (described in Section \ref{sec:teststat:prl}). This can be done using the \gls{pdf} for \qmu obtained with pseudo experiments, as shown in 
 Figure \ref{fig:stat:CLscan:toys:two}, or with the asymptotic approximation.
 
@@ -789,7 +789,7 @@ Scan of the \gls{cls} for different values of the signal strength with \subref{f
 \end{figure}
 
 A second step consists in deriving an \gls{ul} on the signal strength $\mu_{\rm SIG}$, which means finding by how much the 
-nominal cross section of the signal should be scaled to find a \gls{cls} of exactly 0.05. This is obtained by performing multiple times the same hypothesis test just described, each time scaling the signal by a different factor. 
+nominal cross-section of the signal should be scaled to find a \gls{cls} of exactly 0.05. This is obtained by performing multiple times the same hypothesis test just described, each time scaling the signal by a different factor. 
 Also in this case, each point of this scan can be obtained either with the asymptotic approximation or with pseudo-experiments (some examples are shown in Figure \ref{fig:stat:CLscan}); note that in this case the "data" sample we are using is a pseudo-data sample built from a Poisson sampling 
 of the sum of background scaled by 0.87 and signal scaled by 0.5, so the observed value of the test statistic is "signal-like".
 The interpolation of these \gls{cls} values  allows to determine the signal strength where \gls{cls}$=0.05$; 
@@ -826,7 +826,7 @@ Since, in this case, the signal has a harder \meff spectrum than the background,
 with \meff below this threshold has a lower signal fraction. Nevertheless, it can still provide information useful to
 discriminate signal and background. If we consider for example the region with \meff between 2.6 and 3.0 TeV (which is non-overlapping with 
 the previous \gls{sr} definition), here we expect 17.1 background events and 7.4 signal events;
-assuming a 30\% uncertainty on the background, this corresponds to an expected significance of 0.82, far below the significance of 1.58 in the 
+assuming a 30\% uncertainty in the background estimate, this corresponds to an expected significance of 0.82, far below the significance of 1.58 in the 
 \gls{sr} previously defined. Note that this region overlaps with the \gls{vr} defined in Section \ref{sec:example_sr}, which in the case of this last example would need to be modified.
 
 If we include this new region as well into the likelihood of the exclusion fit and perform an upper-limit scan (in this case, for simplicity, only with the asymptotic approximation), we have that the expected \gls{ul} on $\mu_{\rm SIG}$ is 0.62. This corresponds to an improvement of about 10\% on the expected \gls{ul}, obtained just by adding to the fit a region with limited sensitivity. This effect is increased when the regions that are considered simultaneously in the fit all offer a good sensitivity and have different signal fractions. 

@@ -8,7 +8,7 @@ Section \ref{sec:common:datasample} illustrates the data sample used in the anal
 Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design and interpret the searches. 
 Sections \ref{sec:common_obj_def} and \ref{sec:common_syst} focus on the definition of the physics objects and the experimental systematic uncertainties respectively; Section \ref{sec:common_variables} presents the main kinematic variables used in the analyses 
 while Section \ref{sec:common_backgrounds} describes the background sources from \gls{sm} processes, 
-how they are modeled in the analyses and the uncertainties on this modelling. 
+how they are modeled in the analyses and the uncertainties in this modelling. 
 
 
 \section{Data sample}
@@ -148,30 +148,30 @@ is lower than min$(0.4, 0.04 + 10 \, {\rm{GeV}}/\pt)$.
 \section{Experimental systematic uncertainties}
 \label{sec:common_syst}
 
-Each of the selections in the definition of the objects described in Section \ref{sec:common_obj_def} has an associated experimental systematic uncertainty on the modelling of that selection in 
+Each of the selections in the definition of the objects described in Section \ref{sec:common_obj_def} has an associated experimental systematic uncertainty in the modelling of that selection in 
 the \gls{mc} simulation. The experimental systematic uncertainties that are most relevant for analyses targeting final states with multiple $b$-jets and \met are:
 
 \begin{description}
 
 \item[JES and JER] As discussed in Section \ref{sec:obj:jetcalib}, the \gls{jes} and \gls{jer} calibration procedures allow to both calibrate the jet energy from the \gls{em} to the
-hadronic scale, and also to correct \gls{mc} simulations to describe better the data; the uncertainties on these corrections propagate to the analyses. 
+hadronic scale, and also to correct \gls{mc} simulations to describe better the data; the uncertainties in these corrections propagate to the analyses. 
 For the \gls{jes}, reduced sets of uncertainties are available that reduce the number of \glspl{np} to be included in the analysis at the cost of potential loss in correlation; 
 the analyses discussed in this thesis use a strongly reduced set with three \glspl{np}. 
-Uncertainties on \gls{jes} and \gls{jer} are the leading source of experimental uncertainties, as they can change the kinematic of the jets in the event, and therefore also the number
+Uncertainties in \gls{jes} and \gls{jer} are the leading source of experimental uncertainties, as they can change the kinematic of the jets in the event, and therefore also the number
 of jets that fulfill certain selections.
 
-\item[$b$-tagging] The uncertainties on the $b$-tagging calibration procedure (see Section \ref{sec:obj:btaggingcalib}) are included through uncertainties on the $b$-tagging \gls{sf}. 
-They are divided into one \gls{np} for the uncertainty on the efficiency of tagging jets originating from $b$-quarks, 
+\item[$b$-tagging] The uncertainties in the $b$-tagging calibration procedure (see Section \ref{sec:obj:btaggingcalib}) are included through uncertainties in the $b$-tagging \gls{sf}. 
+They are divided into one \gls{np} for the uncertainty in the efficiency of tagging jets originating from $b$-quarks, 
 one for the mistagging of the jets originating from 
 $c$-quarks, and one for light jets; 
 furthermore, one additional \gls{np} for the high-\pt extrapolation uncertainty, based on MC simulation studies, 
 increases the uncertainties in the high-\pt region, where the $b$-tagging calibration is not available and the central 
 value of the \gls{sf} is taken from the closest calibrated \pt region. 
-The uncertainties on $b$-tagging play a relevant role in the analyses in this thesis, as they rely heavily on the selection of events containing $b$-tagged jets.
+The uncertainties in $b$-tagging play a relevant role in the analyses in this thesis, as they rely heavily on the selection of events containing $b$-tagged jets.
 
 \item[Luminosity] Besides those uncertainties associated with the object selections, 
 another experimental uncertainty that is taken into account in the analysis is 
-the uncertainty on the integrated luminosity, whose measurement is described in Section \ref{sec:lumimeas}; for the 2015-2016 dataset the luminosity uncertainty corresponds 
+the uncertainty in the integrated luminosity, whose measurement is described in Section \ref{sec:lumimeas}; for the 2015-2016 dataset the luminosity uncertainty corresponds 
 to 3.2\% and is derived with a strategy similar to that described in Ref. \cite{Aaboud:2016hhf}. The impact of this uncertainty on the analyses discussed in this thesis is very small.
 
 \end{description}
@@ -179,11 +179,11 @@ to 3.2\% and is derived with a strategy similar to that described in Ref. \cite{
 \noindent The following systematic uncertainties have been explicitly tested to be negligible in the analyses and are therefore not included in the final results presented in this thesis:
 
 \begin{description}
-\item[Leptons] The uncertainties on the calibration and resolution of the energy (momentum) of electrons (muons).
+\item[Leptons] The uncertainties in the calibration and resolution of the energy (momentum) of electrons (muons).
 % have been tested to be negligible in all the analyses discussed in this thesis. 
 
 \item[\met] The three \glspl{np} that take into
-account the uncertainty on the scale and the parallel and perpendicular resolution of the \met soft term. 
+account the uncertainty in the scale and the parallel and perpendicular resolution of the \met soft term. 
 Note that, while the \met soft term uncertainties are not included in the final results, 
 the propagation of the \gls{jes} and \gls{jer} uncertainties to the \met computation 
 are always properly taken into account.
@@ -354,7 +354,7 @@ As expected, as the number of $b$-jets increases, the \ttlight fraction decrease
 
 \subsubsection*{Modelling uncertainties}
 
-The modelling uncertainties on the \ttbar background considered in this thesis are:
+The modelling uncertainties in the \ttbar background considered in this thesis are:
 \begin{description}
 \item[Generator] The uncertainty associated with the choice of a specific \gls{mc} generator is estimated by comparing \PowhegBox with \aNLO, both interfaced with \HWpp v2.7.1 with the UEEE5 underlying-event tune.
 
@@ -371,7 +371,7 @@ The normalization of \ttbar events is derived in the \glspl{cr}, therefore model
 the \gls{cr} to the corresponding \glspl{sr} and \glspl{vr}, and not the overall normalization. 
 The modelling uncertainties are therefore estimated by comparing the expected values for the \glspl{tf}, defined in Section \ref{sec:example_cr}.
 as the ratio of expected yields in the \gls{sr} or \gls{vr} over the expected yields in the corresponding \gls{cr}. 
-The uncertainties on the \glspl{tf} obtained from the different sources listed above are summed in quadrature in each region, and are treated as uncorrelated across regions to avoid 
+The uncertainties in the \glspl{tf} obtained from the different sources listed above are summed in quadrature in each region, and are treated as uncorrelated across regions to avoid 
 constraints from the fit. 
 
 
@@ -438,7 +438,7 @@ For each jet, the probability to be $b$-tagged can be expressed as a function of
  
 \noindent This procedure can be extended to an arbitrary number of $b$-tagged jets by summing over all the possible permutations that lead to the desired number of $b$-tagged jets ($n$) to derive the exclusive probability and then subtract it from the $P_{\geq n}$ probability to have the inclusive probability for $\geq n+1$ $b$-tagged jets.
  
-Beside decreasing the statistical uncertainty on the expected number of events, the other advantage of using truth tagging on particle-level samples is that it allows to emulate the reconstruction-level efficiency of the $b$-tagging algorithm: 
+Beside decreasing the statistical uncertainty in the expected number of events, the other advantage of using truth tagging on particle-level samples is that it allows to emulate the reconstruction-level efficiency of the $b$-tagging algorithm: 
 at particle-level a jet is considered a $b$-tagged if it is matched to a $b$-quark in the \gls{mc} record within a certain cone. This criterion has 
 almost 100\% efficiency for real $b$-jets, and it leads to a null mistag rate. Instead with truth tagging, if the efficiency map used in Equation \ref{eq:susy_common:btageff} corresponds to the $b$-tagging efficiency measured for reconstructed jets, 
 it is possible to obtain the same efficiency to a $b$-tagging selection as in a reconstructed-level analysis. 
@@ -460,7 +460,7 @@ While the production of a \ttbar pair is mediated by the strong interaction, in 
 There are three possible production channels, illustrated in Fig. \ref{fig:single_top_prod}: the t-channel, the Wt-channel, where a top quark and a $W$ boson are produced, and the s-channel. 
 The Wt- and s-channel production mechanisms are simulated with the same generator choice as \ttbar: \PowhegBox v2, showered with \PY v6.428.
 Single top events produced through the t-channel process are simulated with \PowhegBox v1, which uses the four-flavor scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set, with the four-flavor scheme as well, and the top quarks are decayed with \MadSpin \cite{Artoisenet:2012st}.
-The cross section used for normalization is computed at \gls{nlo}+\gls{nnll} order 
+The cross-section used for normalization is computed at \gls{nlo}+\gls{nnll} order 
 \cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}.
 
 \begin{figure}[h]
@@ -535,14 +535,14 @@ Instead, two additional samples are generated with the same settings as the $WWb
 
 \subsubsection*{Modelling uncertainties}
 
-The modelling uncertainties on the single top background are estimated at particle level, 
-like in the case of the uncertainties on the \ttbar background, but with the difference that in this case the uncertainty is computed based on the difference of expected yields in \glspl{sr} and \glspl{vr} and not based on the difference in the \glspl{tf}; 
-this is because in the analyses discussed in this thesis the single top backgrounds is normalized to its theoretical cross section and does not have a data-driven normalization. Truth tagging is used also in this case to increase the available \gls{mc} statistics and to provide a description of the $b$-tagging efficiency closer to the one that we have on reconstructed events. The modelling uncertainties considered are: 
+The modelling uncertainties in the single top background are estimated at particle level, 
+like in the case of the uncertainties in the \ttbar background, but with the difference that in this case the uncertainty is computed based on the difference of expected yields in \glspl{sr} and \glspl{vr} and not based on the difference in the \glspl{tf}; 
+this is because in the analyses discussed in this thesis the single top backgrounds is normalized to its theoretical cross-section and does not have a data-driven normalization. Truth tagging is used also in this case to increase the available \gls{mc} statistics and to provide a description of the $b$-tagging efficiency closer to the one that we have on reconstructed events. The modelling uncertainties considered are: 
 
 \begin{description}
 \item[Interference] The uncertainty deriving from the treatment of the interference between \ttbar and single top in the Wt channel is obtained comparing the sum of single-resonance and double-resonance contributions to the total $WWbb$ sample, using the samples described in the previous paragraph.
 
-\item[Radiation] The systematic uncertainty on the modelling of the extra radiation is estimated with dedicated samples generated with the same set of varied parameters used to generate the variation samples for \ttbar, described in Section \ref{sec:susy_general:ttbar}. 
+\item[Radiation] The systematic uncertainty in the modelling of the extra radiation is estimated with dedicated samples generated with the same set of varied parameters used to generate the variation samples for \ttbar, described in Section \ref{sec:susy_general:ttbar}. 
 
 \end{description}
 
@@ -630,9 +630,9 @@ The cross-section is suppressed by more than three orders of magnitude with resp
 single-vector-boson case. 
 Therefore, despite that presence of two bosons leads a higher acceptance into the analysis regions,
 the overall contribution diboson processes to the total \gls{sm} background is small. 
-The diboson \gls{mc} samples are generated with \Sherpa v2.2.1, and their cross sections are computed at \gls{nlo} \cite{ATL-PHYS-PUB-2016-002,ATL-PHYS-PUB-2017-005}.
+The diboson \gls{mc} samples are generated with \Sherpa v2.2.1, and their cross-sections are computed at \gls{nlo} \cite{ATL-PHYS-PUB-2016-002,ATL-PHYS-PUB-2017-005}.
 A 50\% normalization uncertainty is applied to the predicted number of events for this background, to take into account 
-systematic uncertainties on its modelling. This conservative uncertainty is found to have a negligible impact in the analysis results. 
+systematic uncertainties in its modelling. This conservative uncertainty is found to have a negligible impact in the analysis results. 
 
 
 \begin{figure}[h!]
@@ -687,7 +687,7 @@ Since the probability for a multijet event to both have a fake high \met and a f
 
 The usage of \gls{mc} simulation to model the multijet background presents two main drawbacks.
 First of all, the production cross-section for multijet production is very difficult to predict accurately. 
-It is feasible to model the $2 \to 2$ di-jet production, 
+It is feasible to model the $2 \to 2$ dijet production, 
 but every additional parton in a $2 \to n$ process brings into the computation a further $\alpha_{\rm{s}}$ factor, 
 and the energy scale of the interaction is low enough to be at the limit of the validity of the perturbative expansion, limiting the validity of a  \gls{lo} order computation. The inclusion of corrections of higher order can improve the description, but the number of extra diagrams that should be included makes this option unrealistic (just the \gls{lo} computation for the $2 \to 2$ process only comprises 10 different diagrams).
 A second problem is of practical nature: the high cross-section for multijet production implies a huge number of \gls{mc} events that need to be simulated in order not to have a huge statistical uncertainty. 
