@@ -404,9 +404,9 @@ constraints from the fit.
 
 
 The main limitation for the estimate of the uncertainties is the statistical uncertainty of the \gls{mc} samples for the systematic variations, as these samples have in general less simulated events than the nominal sample. 
-More statistics is available at particle level, where the simulation of the interaction of the particles with the detector and the following event reconstruction (discussed in Section \ref{sec:detsim}) is not performed, so the evaluation of the \ttbar modelling uncertainties is carried out 
+A higher number of simulated events is available at particle level, where the simulation of the interaction of the particles with the detector and the following event reconstruction (discussed in Section \ref{sec:detsim}) is not performed, so the evaluation of the \ttbar modelling uncertainties is carried out 
 comparing samples at particle level, with the assumption that the detector simulation has a similar effect on all the samples, 
-independently of the \gls{mc} generator used. Two further strategies are in place to allow enough statistics in the comparison of the different samples. 
+independently of the \gls{mc} generator used. Two further strategies are in place to reduce the statistical uncertainty in the comparison of the different samples. 
 One consists in relaxing or removing some selections to both the \glspl{cr} and the corresponding \glspl{sr}/\glspl{vr}. 
 Another is to substitute the selection on the number of $b$-jets with truth-tagging, described in the next section.
 
@@ -537,7 +537,9 @@ Instead, two additional samples are generated with the same settings as the $WWb
 
 The modelling uncertainties in the single top background are estimated at particle level, 
 like in the case of the uncertainties in the \ttbar background, but with the difference that in this case the uncertainty is computed based on the difference of expected yields in \glspl{sr} and \glspl{vr} and not based on the difference in the \glspl{tf}; 
-this is because in the analyses discussed in this thesis the single top backgrounds is normalized to its theoretical cross-section and does not have a data-driven normalization. Truth tagging is used also in this case to increase the available \gls{mc} statistics and to provide a description of the $b$-tagging efficiency closer to the one that we have on reconstructed events. The modelling uncertainties considered are: 
+this is because in the analyses discussed in this thesis the single top backgrounds is normalized to its theoretical cross-section and does not have a data-driven normalization. Truth tagging is used also in this case to 
+increase the available number of simulated events,  
+and to provide a description of the $b$-tagging efficiency closer to the one that we have on reconstructed events. The modelling uncertainties considered are: 
 
 \begin{description}
 \item[Interference] The uncertainty deriving from the treatment of the interference between \ttbar and single top in the Wt channel is obtained comparing the sum of single-resonance and double-resonance contributions to the total $WWbb$ sample, using the samples described in the previous paragraph.
