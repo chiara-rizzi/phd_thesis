@@ -1,6 +1,5 @@
 Big corrections
 mc simul chapter
-Higgs matching, elaborate on the Higgs selection, and add plots with comparison
 understand CLs scan
 add to intro other activities
 
@@ -8,7 +7,6 @@ Plots:
 QCD in linear scale
 CLs scan (maybe)
 Add arrow to pmt response scan
-More plots for choice of Higgs matching
 
 Cose da chiedere ad aurelio sulla tesi:
 come gestire il reset degli acronimi - ad ogni capitolo? 
@@ -26,33 +24,4 @@ quando mettere le maiuscole negli acronimi
 - dopo re, e.g. re-built?
 togliere il numero a tutte le eq non citate
 
-Misteri della teoria
-Why neutrino masses do not derive from Higgs mechanism?
---> masse terms mix left and right firlds and neutrinos are only left
 
-Misteri sull’analisi
-why don’t we consider Gtt models with oaf-shell stops like SS?
-
-Misteri della statistica 
-How to decide how many toys to use for upper limit scan? 
-
-Cose da controllare:
-non ho messo da nessuna parte le incertezze sul segnale 
-perche’ higgsino-like LSP favorisce una differenza di massa piccola tra chi1_0 e chi1_+
-add plot with signal cross section 
-difference between GGM and GMSB
-perche’ in generale nessuno si fila gli sneutrini? 
-EWK: perche’ i segnali con bassa massa hanno una distribuzione del numero di getti che picca a valori più alti? E’ perché’ sono ISR events? Fare plot di correlazione tra numero di getti e MET, tra MET e dphi-j1-met for signal events without preselections 
-
-Paper: gauge mediation at the LHC - not understood:
-how do I go from 100+ param in the MSSM to 8 param in GGM?
-“motivated by the higgs mass, we restrict ourselves to the regime with tanBeta>10“ —> res between tanBeta and Higgs mass?
-why in GGM At=0 at messenger scale? 
-page 12: why can’t the NLSP be a chargino? 
-why charged NLSP —> pair of highly ionising tracks —> background free? 
-Figure 3: why doesn’t it consider low messanger mass and mu<0?
-also in the case of wino LSP there is one charged state and one neutral one close in mass? why do we always say that this is common in the case of higgsino LSP (for the gluino analysis)? 
-
-Paper: gauge mediation at the LHC: main messages:
-GMSB in general doesn’t like light stops 
-From the experimental point of view neutralino1 LSP o neutralino1 NLSP con gravitino LSP ma NLSP long-lived sono identiche 
