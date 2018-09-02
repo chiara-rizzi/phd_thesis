@@ -13,10 +13,12 @@ are selected with the following criteria:
 \item If there are less than four $b$-tagged jets, the selected ones are the $b$-tagged jets and the non-tagged jets with highest \pt.
 \end{itemize}
 
-The fraction of events where this choice selects the four correct jets is shown in Figure \ref{fig:h_reco_match_possible} 
-for signals with different Higgsino masses. 
-Figure \ref{fig:h_reco_match_possible} shows also the fraction of events where it should be possible to select the four correct jets, 
-which corresponds to requiring four jets with \pt $>$25 GeV  matched in dR$<$0.3 with the 4 b-quarks coming from the two Higgs bosons.
+Figure  \ref{fig:h_reco_match_possible}  shows the fraction of signal events that have four reconstructed jets, the fraction 
+of signal events where it is possible to select the four correct jets originating from the decay of the Higgs bosons 
+(which corresponds to requiring four jets with \pt $>$25 GeV  matched in dR$<$0.3 with the 4 b-quarks coming from the two Higgs bosons), 
+and the fraction of signal events where the choice of jets described above selects the correct jets. 
+The four jets selected are the correct set of jets about 70-80\% of the times that the correct match is possible. 
+
 
 \begin{figure*}[h]
 \centering
@@ -42,12 +44,11 @@ m($h_1$)$>$m($h_2$).
 
 Figure \ref{fig:h_reco_best_match} shows the fraction of times that each of the algorithms 
 described above leads to the same pairs as the true matching, with respect to the number of events in which the true matching is possible. 
-For signals with a low mass the algorithms that are based on the mass information perform better, 
+For signals with low Higgsino mass the algorithm that minimize the mass difference performs better, 
 while at high signal masses, where the two Higgs bosons (and their decay products) are more boosted, 
-the min-dR algorithm performs the best. 
-Considering that the \met-based analysis focuses on signals with intermediate and high mass, 
-%and that the usage of the dR algorithm allows for an easy extension also to the case of the Z boson (to look for Zh and ZZ signals), 
-this algorithm was chosen and will be used in the following sections.
+the min-dR algorithm reproduces the true matching a higher fraction of times. 
+The max-\pt algorithm instead underperforms for all signal masses compared to the other 
+two. 
 
 \begin{figure*}[h]
 \centering
@@ -56,3 +57,33 @@ this algorithm was chosen and will be used in the following sections.
 \label{fig:h_reco_best_match}
 \end{figure*}
 
+Figures \ref{fig:ewk:h1_mass} and \ref{fig:ewk:h2_mass} show the distribution of m($h_1$) and m($h_2$) 
+respectively, for signal and background events normalized to unit area, 
+with Higgs boson candidates reconstructed with the min-dR and min-diff algorithms. 
+We can notice the different shape of the distributions with the two algorithms, especially in the case of m($h_2$). 
+Considering that the high-mass analysis focuses on signals with intermediate and high Higgsino mass, 
+the min-dR algorithm was chosen as baseline algorithm for the reconstruction of the candidate Higgs bosons. 
+This choice was confirmed by the optimization procedure described in Section \ref{sec:ewk:multibin}, 
+where the values of the candidate Higgs bosons reconstructed with both algorithms have been used as input and 
+the min-dR algorithm gave consistently better expected significances.  
+
+
+\begin{figure*}[htbp]
+\centering 
+\subfigure[min-dR]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/h_mass/hh_compare_mass_h1_min_dR_scale.pdf}\label{fig:ewk:h_mass:mass_h1_min_dR}}
+\subfigure[min-diff]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/h_mass/hh_compare_mass_h1_min_min_diff_scale.pdf}\label{fig:ewk:h_mass:mass_h1_min_diff}} 
+\caption{Distribution of m($h_1$) in signal and background. The Higgs candidates are reconstructed with 
+\subref{fig:ewk:h_mass:mass_h1_min_dR} the min-dR algorithm and 
+\subref{fig:ewk:h_mass:mass_h1_min_dR} the min-diff algorithm. All distributions are normalized to unit area.}
+\label{fig:ewk:h1_mass}
+\end{figure*}
+
+\begin{figure*}[htbp]
+\centering 
+\subfigure[min-dR]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/h_mass/hh_compare_mass_h2_min_dR_scale.pdf}\label{fig:ewk:h_mass:mass_h2_min_dR}}
+\subfigure[min-diff]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/h_mass/hh_compare_mass_h2_min_min_diff_scale.pdf}\label{fig:ewk:h_mass:mass_h2_min_diff}} 
+\caption{Distribution of m($h_2$) in signal and background. The Higgs candidates are reconstructed with 
+\subref{fig:ewk:h_mass:mass_h2_min_dR} the min-dR algorithm and 
+\subref{fig:ewk:h_mass:mass_h2_min_dR} the min-diff algorithm. All distributions are normalized to unit area.}
+\label{fig:ewk:h2_mass}
+\end{figure*}
