@@ -125,7 +125,7 @@ the standard \gls{atlas} corrections are \cite{PhysRevD.96.072002}:
 \item[Origin correction] The direction of the jet is changed to point to the reconstructed hard-scattering \gls{pv} rather than to the cented of the detector. This correction improves the $\eta$ resolution of the jets.
 
 \item[Pileup correction] Multiple collisions in the same bunch crossing (\textit{in-time pileup}), as well as residual energy from previous collisions (\textit{out-of-time pileup}), affect the jet energy reconstruction. The effect of pileup is corrected in two steps 
-\cite{Cacciari:2007fd,TheATLAScollaboration:2013pia}: a first correction, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pileup events. 
+\cite{Cacciari:2007fd,ATLAS-CONF-2013-083}: a first correction, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pileup events. 
 The jet area is measured with ghost-association: simulated ghost particles of infinitesimal momentum are added to the event uniformly in solid angle prior to jet reconstruction, and the jet area is computed from the fraction of ghost particles associated to the jet after the clusters are merged. 
 A second correction based on the number of \glspl{pv} and on the number of interactions per bunch crossing is then applied to disentangle the effect of in-time pileup and out-of-time pileup.
 
@@ -133,9 +133,9 @@ A second correction based on the number of \glspl{pv} and on the number of inter
 (defined as the energy of the truth jet with $\Delta R<0.3$ from the calorimeter jet) 
 with the reconstructed energy, and it also corrects for biases in the $\eta$ reconstruction \cite{Aad2015jets}.
 
-\item[Global sequential calibration] The \gls{gsc} \cite{ATLAS:2015oia} improves the \gls{jes} resolution by deriving additional corrections based on individual jet properties, e.g. the number of associated tracks and the fraction of energy deposited in the various layers of the calorimeter.
+\item[Global sequential calibration] The \gls{gsc} \cite{ATLAS-CONF-2015-002} improves the \gls{jes} resolution by deriving additional corrections based on individual jet properties, e.g. the number of associated tracks and the fraction of energy deposited in the various layers of the calorimeter.
 
-\item[In-situ calibration] As a last stage, the data-driven calibration (\textit{in-situ}) \cite{ATLAS:2015uwa} corrects for the differences between \gls{mc} simulation and data (arising e.g. from imperfect simulation of the detector response and material interaction). These corrections are derived from events where the jet \pt is balanced against other well measured objects. In the $\eta$-intercalibration, dijet events are used to correct the response of forward jets (with $0.8 < |\eta| < 4.5$) using well-measured central jets (with $|\eta| < 0.8$). 
+\item[In-situ calibration] As a last stage, the data-driven calibration (\textit{in-situ}) \cite{ATLAS-CONF-2015-017} corrects for the differences between \gls{mc} simulation and data (arising e.g. from imperfect simulation of the detector response and material interaction). These corrections are derived from events where the jet \pt is balanced against other well measured objects. In the $\eta$-intercalibration, dijet events are used to correct the response of forward jets (with $0.8 < |\eta| < 4.5$) using well-measured central jets (with $|\eta| < 0.8$). 
 The response of central jets is instead measured in $Z$+jets, $\gamma$+jets and multijet events; 
 in $Z$/$\gamma$+jets events, the \pt of the jet is measured against the \pt of a well measured $Z$ boson or photon, while 
 multijet events are used to calibrate central high-\pt jets ($300 < \pt < 2000$ GeV) against 
@@ -176,13 +176,13 @@ plus a sixth one which is the sum in quadrature of the remaining ones.
 A further reduction is in place to group the remaining \glspl{np} into three components, 
 and the \glspl{np} within a single component are added in quadrature; this leads to a correlation loss, whose effect is analysis dependent. 
 
-Jets with the same true energy can have different reconstructed energies; the distribution of the difference between true and reconstructed energy of a jet is modeled with a Gaussian, whose width is defined as \gls{jer}. The measurements for the in-situ calibrations can be used also to access the differences in \gls{jer} between data and \gls{mc} \cite{TheATLAScollaboration:2015ofv,ATLAS:2015uwa}, and result into an additional \gls{np}.
+Jets with the same true energy can have different reconstructed energies; the distribution of the difference between true and reconstructed energy of a jet is modeled with a Gaussian, whose width is defined as \gls{jer}. The measurements for the in-situ calibrations can be used also to access the differences in \gls{jer} between data and \gls{mc} \cite{ATLAS-CONF-2015-057,ATLAS-CONF-2015-017}, and result into an additional \gls{np}.
 
 \subsection{Jet Vertex Tagger}
 \label{sec:jvt}
 
 %It has already been discussed in Sec. \ref{sec:obj:jetcalib} how pileup is taken into account in the calibration of the \gls{jes}. 
-Beside affecting the jet energy, high levels of pileup can also lead to the reconstruction of spurious jets not originating from the hard-scattering interaction. In \gls{atlas} track-based algorithms are used for the identification of pileup jets \cite{Aad:2015ina,ATLAS:2014cva}. 
+Beside affecting the jet energy, high levels of pileup can also lead to the reconstruction of spurious jets not originating from the hard-scattering interaction. In \gls{atlas} track-based algorithms are used for the identification of pileup jets \cite{Aad:2015ina,ATLAS-CONF-2014-018}. 
 Tracks are matched to calorimeter jets by ghost-association \cite{Soyez:2012hv}. Once the hard-scattering \gls{pv} (\gls{pv}$_0$) is identified, 
 for each jet it is possible to compute the \gls{jvf}, the ratio of the scalar sum of the \pt of the tracks associated to the jet and originating from  \gls{pv}$_0$ to that of all the associated tracks:
 
@@ -225,14 +225,14 @@ while Figure \ref{fig:obj:jvt_data} shows the comparison of the \gls{jvt} distri
     \includegraphics[width=0.53\textwidth]{figures/objects/jvt_data.png}
   }
 \end{center}
- \caption{\subref{fig:obj:jvt_mc} Distribution of JVT for pileup and hard-scatter jets with $20 < \pt < 30$ GeV. Figure from Ref. \cite{ATLAS:2014cva}. \subref{fig:obj:jvt_data} The JVT distribution, in Powheg+Pythia8 MC and in 2015+2016 data, of jets balanced against Z bosons decaying to muons. Figure from Ref. \cite{jvtpublicplots}.}
+ \caption{\subref{fig:obj:jvt_mc} Distribution of JVT for pileup and hard-scatter jets with $20 < \pt < 30$ GeV. Figure from Ref. \cite{ATLAS-CONF-2014-018}. \subref{fig:obj:jvt_data} The JVT distribution, in Powheg+Pythia8 MC and in 2015+2016 data, of jets balanced against Z bosons decaying to muons. Figure from Ref. \cite{jvtpublicplots}.}
   \label{fig:obj:jvt}
 \end{figure}
 
 \subsection{Jet cleaning}
 \label{sec:jetcleaning}
 
-Beside pileup jets, other spurious jets come from the non-collision background; this type of background includes muons originating from secondary cascades from beam losses, in which case we speak of beam-induced background, and from cosmic rays. These muons leave energy deposits in the calorimeters while traversing the detector, which can be interpreted as jets. Also coherent noise from the calorimeters can give rise to fake jets. In \gls{atlas} a set of quality criteria are designed to reject jets not originating from \gls{pp} collisions \cite{TheATLAScollaboration:2015ofz}. These quality criteria are rely on variables based on:
+Beside pileup jets, other spurious jets come from the non-collision background; this type of background includes muons originating from secondary cascades from beam losses, in which case we speak of beam-induced background, and from cosmic rays. These muons leave energy deposits in the calorimeters while traversing the detector, which can be interpreted as jets. Also coherent noise from the calorimeters can give rise to fake jets. In \gls{atlas} a set of quality criteria are designed to reject jets not originating from \gls{pp} collisions \cite{ATLAS-CONF-2015-029}. These quality criteria are rely on variables based on:
 \begin{itemize}
 \item Ionization signal shape in the LAr calorimeters, to remove mainly fake jets from calorimeter noise. 
 \item Ratios of energies, e.g. the ratio of the energy deposited in the electromagnetic calorimeter to the total energy, or the ratio of energy in different calorimeter layers, that can be used to discriminate against jets from beam-induced background or calorimeter noise.
@@ -296,9 +296,9 @@ lifetime of $B$-hadrons, on average $b$-jets contain tracks with higher impact p
 The sign of the impact parameter is positive if the track extrapolation crosses the jet direction in front of the primary vertex, and negative otherwise. 
 The negative side of the impact-parameter distribution derives from the 
 impact-parameter resolution, and can be used to calibrate light-jets. In \gls{atlas}, two taggers make use of the information on the impact parameter
- \cite{ATLAS:2011qia}: IP2D, which is based on the significance of the transverse impact parameter (\dzero/$\sigma_{\dzero}$), and IP3D, which builds a two-dimensional template including also the significance of the longitudinal impact parameter (\zzerost/$\sigma_{\zzerost}$). The \gls{pdf} for each flavor hypothesis ($b$, $c$, and light) is derived from \gls{mc} simulation on a per-track basis, and then a \gls{llr} of the different probabilities is computed, including the contribution from all tracks associated to the jet. For example, the \gls{llr} discriminating $b$-jets from light-jets is of the form $\sum_{i=1}^{N}\log\frac{p_b}{p_{light}}$, where the index $N$ runs on all the tracks associated to the jet. 
+ \cite{ATLAS-CONF-2011-102}: IP2D, which is based on the significance of the transverse impact parameter (\dzero/$\sigma_{\dzero}$), and IP3D, which builds a two-dimensional template including also the significance of the longitudinal impact parameter (\zzerost/$\sigma_{\zzerost}$). The \gls{pdf} for each flavor hypothesis ($b$, $c$, and light) is derived from \gls{mc} simulation on a per-track basis, and then a \gls{llr} of the different probabilities is computed, including the contribution from all tracks associated to the jet. For example, the \gls{llr} discriminating $b$-jets from light-jets is of the form $\sum_{i=1}^{N}\log\frac{p_b}{p_{light}}$, where the index $N$ runs on all the tracks associated to the jet. 
 
-\item[Secondary Vertex Finding] The SV1 algorithm \cite{ATLAS:2011qia} explicitly looks for a secondary vertex within a jet. 
+\item[Secondary Vertex Finding] The SV1 algorithm \cite{ATLAS-CONF-2011-102} explicitly looks for a secondary vertex within a jet. 
 All the track pairs in the jet are tested for a two-track vertex hypothesis, removing the pairs that are likely to originate from 
 long-lived particles (e.g. K$_0$, $\Lambda$), photon conversion or hadronic interaction with the detector material. 
 If a two-track vertex remains, a new single vertex is fitted with the tracks passing this selection. 
@@ -372,11 +372,11 @@ In $W+c$ production the electron and the muon in the final state have opposite c
 while most of the background processes have an equal number of same-sign and opposite-sign events. The number of $W+c$ events can therefore 
 be obtained as the difference of these two categories.
 For the Higgsino search described in Chapter \ref{chap:ewk_prod}, which was developed at a later time, a new calibration for $c$-jets, 
-based on \ttbar events \cite{ATLAS:2018bpl}, was available. 
+based on \ttbar events \cite{ATLAS-CONF-2018-001}, was available. 
 This calibration selects \ttbar events where one of the $W$ bosons decays leptonically and the other one decays to a $c$-quark and an s-quark. 
 
 \item[light-jets] The $b$-tagging efficiency of light-jets (mistag rate) is measured on an inclusive sample of jets, using the negative tag method 
-\cite{ATLAS:2018xcf}. 
+\cite{ATLAS-CONF-2018-006}. 
 The two main reasons that lead to $b$-tagged light-jets are the finite resolution of the impact parameter and the secondary vertices caused
 by long-lived particles and material interactions. If we consider only the first type of mistags, the signed impact parameter distribution 
 will be symmetric around zero. 
@@ -401,7 +401,7 @@ and Figure \ref{fig:obj:mistagSF} shows the \glspl{sf} for light-jets derived wi
    % \label{fig:obj:mv2_b}
     %\includegraphics[width=0.48\textwidth]{figures/objects/mv2c10_b.pdf} }
 \end{center}
- \caption{$B$-tagging \gls{sf} for $c$-jets for the \gls{op} corresponding to the 77\% \gls{op}. Figure from Ref. \cite{ATLAS:2018bpl}.}
+ \caption{$B$-tagging \gls{sf} for $c$-jets for the \gls{op} corresponding to the 77\% \gls{op}. Figure from Ref. \cite{ATLAS-CONF-2018-001}.}
   \label{fig:obj:btagSF}
 \end{figure}
 
@@ -415,7 +415,7 @@ and Figure \ref{fig:obj:mistagSF} shows the \glspl{sf} for light-jets derived wi
     \includegraphics[width=0.48\textwidth]{figures/objects/mistag_fig_05d.png} }
 \end{center}
  \caption{$B$-tagging \gls{sf} for light-jets for the \gls{op} corresponding to the 77\% \gls{op} for \subref{fig:obj:mistag1} 
- $|\eta|<1.2$ and \subref{fig:obj:mistag2} $1.2 < |\eta| < 2.5$. Figures from Ref. \cite{ATLAS:2018xcf}.}
+ $|\eta|<1.2$ and \subref{fig:obj:mistag2} $1.2 < |\eta| < 2.5$. Figures from Ref. \cite{ATLAS-CONF-2018-006}.}
   \label{fig:obj:mistagSF}
 \end{figure}
 
