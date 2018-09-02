@@ -4,9 +4,9 @@ understand CLs scan
 add to intro other activities
 
 Plots:
-QCD in linear scale
 CLs scan (maybe)
 Add arrow to pmt response scan
+ewk optimization, separation
 
 Cose da chiedere ad aurelio sulla tesi:
 come gestire il reset degli acronimi - ad ogni capitolo? 
