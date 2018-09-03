@@ -10,11 +10,10 @@ ewk optimization, separation
 
 Cose da chiedere ad aurelio sulla tesi:
 come gestire il reset degli acronimi - ad ogni capitolo? 
-maiuscole negli acronimi 
 data mc: miei senza sistematiche vs HF con sistematiche 
 comparison plots in systematic section: scale to unity and show the shape or not
 perche’ b-quark ma W boson (niente trattino)
-and after comma in list (in Italian there would be no comma)
+
 
 Altre cosette 
 comma before “and” in list

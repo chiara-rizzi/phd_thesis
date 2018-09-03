@@ -61,7 +61,7 @@ Once all the \gls{pv} candidates are reconstructed, the one with the highest sum
 Because of confinement, quarks and gluons produced in the collisions give origin to a collimated spray of hadrons (\textit{jets}) that move in the direction of the original parton. When jets interact with the detector, they loose most of their energy as deposits in the calorimeter systems, which are then grouped together aiming at reconstructing the characteristics of the original parton. 
 
 \subsection{Clusters}
-The first step in the jet reconstruction is the procedure that groups the calorimeter cells in three dimensional objects referred to as topological clusters (\textit{topoclusters}) \cite{Lampl:2008zz,Aad:2016upy}. Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Figure \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
+The first step in the jet reconstruction is the procedure that groups the calorimeter cells in three dimensional objects referred to as topological clusters (\textit{topoclusters}) \cite{ATL-LARG-PUB-2008-002,Aad:2016upy}. Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Figure \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
 
 \begin{figure}[h]
 \begin{center}
@@ -371,7 +371,7 @@ and the D-hadron originating from the fragmentation of the $c$-quark decays to a
 In $W+c$ production the electron and the muon in the final state have opposite charge, 
 while most of the background processes have an equal number of same-sign and opposite-sign events. The number of $W+c$ events can therefore 
 be obtained as the difference of these two categories.
-For the Higgsino search described in Chapter \ref{chap:ewk_prod}, which was developed at a later time, a new calibration for $c$-jets, 
+For the higgsino search described in Chapter \ref{chap:ewk_prod}, which was developed at a later time, a new calibration for $c$-jets, 
 based on \ttbar events \cite{ATLAS-CONF-2018-001}, was available. 
 This calibration selects \ttbar events where one of the $W$ bosons decays leptonically and the other one decays to a $c$-quark and an s-quark. 
 
@@ -500,11 +500,11 @@ When electrons traverse the \gls{atlas} detector, they leave a track in the \gls
 
 \subsection{Electron reconstruction}
 
-The electron reconstruction \cite{ATLAS:2011lah,Aad:2014nim,ATLAS-CONF-2016-024} starts with the identification of clusters in the \gls{ecal}. 
+The electron reconstruction \cite{ATL-PHYS-PUB-2011-006,Aad:2014nim,ATLAS-CONF-2016-024} starts with the identification of clusters in the \gls{ecal}. 
 The \gls{ecal} can be divided in a grid of towers of size $0.025\times0.025$ in $\eta$ and $\phi$, and the tower energy is the sum of the 
 energy of all the cells belonging to the tower. 
 While, in the case of hadronic jets, the calorimeter clusters are created with a topological 
-algorithm, in the case of electrons the calorimeter clusters are based on a sliding-window algorithm \cite{Lampl:2008zz} 
+algorithm, in the case of electrons the calorimeter clusters are based on a sliding-window algorithm \cite{ATL-LARG-PUB-2008-002} 
 with a size of $3\times5$ in units of $0.025\times0.025$ in the ($\eta$, $\phi$) space, that searches for seed towers; these are the centers around which clusters are built.   
 
 The identified clusters are the starting point to reconstruct electrons, photons and converted photons. The key feature that allows to separate electrons from converted and unconverted photons is that, in the case of electrons, the calorimeter clusters are associated with a track from the \gls{id}; instead, in the case of converted photons the cluster is associated with a conversion vertex, while there is no track associated to an unconverted photon. Tracks from the \gls{id} are extrapolated to the second layer of the \gls{ecal}, and a track is considered loosely matched to a seed cluster if the $\eta$ difference between the track and the barycentre of the cluster is lower than 0.05 and the $\phi$ difference either lower than 0.2 (0.1 in the case of tracks deriving from hits only in the \gls{trt}) in the bending direction, or lower that 0.05 in the opposite direction. 
