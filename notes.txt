@@ -1,7 +1,6 @@
 Big corrections
 mc simul chapter
 understand CLs scan
-add to intro other activities
 
 Plots:
 CLs scan (maybe)
