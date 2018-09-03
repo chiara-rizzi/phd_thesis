@@ -298,7 +298,8 @@ Beside the pair of $b$-quarks, which are always present, the final state can be 
 
 All the analysis regions considered in this thesis have a tight \met selection (the loosest one is $\met > 200$ GeV). Since the all-hadronic component 
 of the \ttbar background does not have any neutrino in the final state, it does not fulfill the \met requirement unless one or more jets are mismeasured; 
-this case produces a negligible background in the analysis regions, and is anyway included in the multijet estimate with the jet-smearing method described in Section \ref{sec:jet_smearing}.
+this case produces a negligible background in the analysis regions, and 
+is estimated with the jet-smearing method (described in Section \ref{sec:jet_smearing}) together with the other processed that pass the selection due to mismeasured jets.
 The \ttbar components that is dominating the background estimate are the dilepton and single-lepton ones, both in the analysis regions that require reconstructed leptons as well as in the analysis regions that have a lepton veto.
 In the second case, the dominating component is the single-lepton component, where one lepton is a hadronically decaying $\tau$, has a \pt too low to be reconstructed, or falls out of acceptance. 
 The \gls{mc} generator used to simulate \ttbar events produced in association with high-\pt jets is \PowhegBox v2 with the CT10 \gls{partdf} set \cite{Lai:2010vv} and interfaced with \PY v6.428 \cite{Sjostrand:2006za} for the \gls{psh} and hadronization. 
@@ -362,7 +363,7 @@ The modeling uncertainties in the \ttbar background considered in this thesis ar
 
 \item[Radiation] The systematic uncertainty related to the modeling of the \gls{isr} and \gls{fsr} is estimated by comparing samples
 generated with \PowhegBox interfaced with two versions of \PY v6.428 with two different settings \cite{Skands:2010ak}. 
-One uses the PERUGIA2012radHi tune, has $h_{\rm{dump}}$ parameter set to twice the top mass and the renormalization and factorization scales set to twice the nominal value; these settings lead to an overall larger amount of radiation. The second sample uses a version of \PY with the PERUGIA2012radLo tune, has $h_{\rm{dump}}$ set to the top mass and the renormalization and factorization scales set to half of the nominal value, leading to a description of the event with less additional jets.
+One uses the PERUGIA2012radHi tune, has $h_{\rm{damp}}$ parameter set to twice the top mass and the renormalization and factorization scales set to twice the nominal value; these settings lead to an overall larger amount of radiation. The second sample uses a version of \PY with the PERUGIA2012radLo tune, has $h_{\rm{damp}}$ set to the top mass and the renormalization and factorization scales set to half of the nominal value, leading to a description of the event with less additional jets.
 
 \end{description}
 
