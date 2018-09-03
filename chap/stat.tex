@@ -2,7 +2,7 @@
 \label{chap:stat}
 
 The result of a \gls{pp} interaction is not deterministic, as the statements that can be obtain from quantum field theory are of probabilistic nature. 
-Furthermore, uncertainties in our predictions related both to experimental effects and to the modelling of the physics processes need to be taken into account. 
+Furthermore, uncertainties in our predictions related both to experimental effects and to the modeling of the physics processes need to be taken into account. 
 Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. 
 %This chapter does not aim at being an exhaustive reference for statistics, but it 
 This chapter describes the main statistical methods that are used to obtain the results described in Chapters \ref{chap:strong_prod} and  \ref{chap:ewk_prod}. After a brief introduction to statistical inference in Section \ref{sec:stat:intro}, the two main topics discussed are parameter estimation, in Section \ref{sec:stat:pe}, that has the aim to determine the value of the input parameters that allows to best describe data, and hypothesis testing, in Section \ref{sec:stat:ht}, that checks the plausibility of models against the observed data. 
@@ -157,7 +157,7 @@ e^{- (\mu s_{i} + b_{i}) } \; ,
 The prediction on the expected number of events in each bin is affected by systematic and statistical uncertainties, that are incorporated in the Likelihood in the form of \glspl{np}. 
 In the frequentistic approach, each \gls{np} has a true unknown value, whose \gls{mle} derived in auxiliary measurements. 
 While in principle the full likelihood of the auxiliary measurements should be included in the likelihood of our own measurement, 
-in most practical cases this is not feasible, and the auxiliary likelihood is modelled through constraining terms. 
+in most practical cases this is not feasible, and the auxiliary likelihood is modeled through constraining terms. 
 Assuming that data used to derive the constraints on the \glspl{np} is statistically independent from the data in the analysis and not affected by the potential presence of the signal under study, the combined likelihood assumes the factorized form:
 
 \begin{equation}
@@ -692,11 +692,11 @@ Pseudo-data & 231 & 52 & 15 \\
 \subsection{Background-only fit and advantages of the control regions}
 \label{sec:example_cr}
 
-\glspl{cr} are used first of all in the so called "background-only fit", where the likelihood comprises only the \glspl{cr} and any signal contamination is neglected. The goal of the background-only fit is to extract from the \glspl{cr} data information on the modelling of the background 
+\glspl{cr} are used first of all in the so called "background-only fit", where the likelihood comprises only the \glspl{cr} and any signal contamination is neglected. The goal of the background-only fit is to extract from the \glspl{cr} data information on the modeling of the background 
 and extrapolate it to \glspl{vr} and \glspl{sr}. A background estimate based on a \gls{cr} has two main advantages with respect to the nominal \gls{mc} prediction:
 
 \begin{itemize}
-\item First of all, the usage of a \gls{cr} allows to eliminate mismodellings in the normalization of the background sample in a phase space 
+\item First of all, the usage of a \gls{cr} allows to eliminate mismodelings in the normalization of the background sample in a phase space 
 kinematically close to the \gls{sr}. This is implemented through the inclusion in the likelihood of a normalization \gls{np} with a flat constraint.
 The improvement in the description of the data in the \gls{vr} is shown in Figure \ref{fig:stat:VRclosure}: the central value of the bottom panel,
 showing the ratio of the pseudo-data to the \gls{mc} simulation, is closer to one after the fit.
