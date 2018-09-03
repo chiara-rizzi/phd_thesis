@@ -500,7 +500,7 @@ When electrons traverse the \gls{atlas} detector, they leave a track in the \gls
 
 \subsection{Electron reconstruction}
 
-The electron reconstruction \cite{ATLAS:2011lah,Aad:2014nim,ATLAS:2016iqc} starts with the identification of clusters in the \gls{ecal}. 
+The electron reconstruction \cite{ATLAS:2011lah,Aad:2014nim,ATLAS-CONF-2016-024} starts with the identification of clusters in the \gls{ecal}. 
 The \gls{ecal} can be divided in a grid of towers of size $0.025\times0.025$ in $\eta$ and $\phi$, and the tower energy is the sum of the 
 energy of all the cells belonging to the tower. 
 While, in the case of hadronic jets, the calorimeter clusters are created with a topological 
@@ -508,7 +508,7 @@ algorithm, in the case of electrons the calorimeter clusters are based on a slid
 with a size of $3\times5$ in units of $0.025\times0.025$ in the ($\eta$, $\phi$) space, that searches for seed towers; these are the centers around which clusters are built.   
 
 The identified clusters are the starting point to reconstruct electrons, photons and converted photons. The key feature that allows to separate electrons from converted and unconverted photons is that, in the case of electrons, the calorimeter clusters are associated with a track from the \gls{id}; instead, in the case of converted photons the cluster is associated with a conversion vertex, while there is no track associated to an unconverted photon. Tracks from the \gls{id} are extrapolated to the second layer of the \gls{ecal}, and a track is considered loosely matched to a seed cluster if the $\eta$ difference between the track and the barycentre of the cluster is lower than 0.05 and the $\phi$ difference either lower than 0.2 (0.1 in the case of tracks deriving from hits only in the \gls{trt}) in the bending direction, or lower that 0.05 in the opposite direction. 
-The tracks loosely matched with these criteria are then re-fitted with a Gaussian Sum Filter algorithm \cite{ATLAS:2012dma}, that takes into account non-linear bremsstrahlung effects, and the re-fitted tracks are matched with 
+The tracks loosely matched with these criteria are then re-fitted with a Gaussian Sum Filter algorithm \cite{ATLAS-CONF-2012-047}, that takes into account non-linear bremsstrahlung effects, and the re-fitted tracks are matched with 
 the clusters with the same criteria as the loose matching, except from the $\phi$ difference in the direction of the bending, which is tightened to 0.1. If multiple tracks are associated to a cluster, only one is chosen as primary track based on the cluster-track distance.
 After the cluster-track matching, the cluster is re-built using groups of $3\times7$ ($5\times5$) towers in the barrel (endcaps). 
 
@@ -538,7 +538,7 @@ on the signal and background samples.
 \begin{center}
     \includegraphics[width=0.985\textwidth]{figures/objects/ele_var_tab.pdf}  
 \end{center}
- \caption{Definitions of electron discriminating variables. Table from Ref. \cite{ATLAS:2016iqc}.}
+ \caption{Definitions of electron discriminating variables. Table from Ref. \cite{ATLAS-CONF-2016-024}.}
   \label{tab:obj:elev_var}
 \end{table}
 
@@ -563,7 +563,7 @@ The signal and background efficiency in \gls{mc} samples is shown in Figure \ref
     \label{fig:obj:ele_eff_bkg}
     \includegraphics[width=0.48\textwidth]{figures/objects/ele_bkg_eff}  }
 \end{center}
- \caption{\subref{fig:obj:ele_eff_e} Electron identification efficiency in $Z\rightarrow e e$ events and \subref{fig:obj:ele_eff_bkg} background mis-identification in dijet events for the three \glspl{op} Loose, Medium and Tight. Figures from Ref. \cite{ATLAS:2016iqc}.
+ \caption{\subref{fig:obj:ele_eff_e} Electron identification efficiency in $Z\rightarrow e e$ events and \subref{fig:obj:ele_eff_bkg} background mis-identification in dijet events for the three \glspl{op} Loose, Medium and Tight. Figures from Ref. \cite{ATLAS-CONF-2016-024}.
  }
   \label{fig:obj:ele_eff}
 \end{figure}
@@ -584,7 +584,7 @@ The electron efficiency is a product of the reconstruction, identification and i
 (and also trigger efficiency, if the events are selected with an electron trigger).  The ratio between the efficiency expected from \gls{mc} simulations and the one measured in data, in the form of \glspl{sf} function of \et and $|\eta|$, is used to correct the simulations and its uncertainty is applied as a systematic variation. 
 
 The identification efficiency is measured with four methods, always with respect to reconstructed electrons. Two methods, $Z_\mathrm{mass}$ and $Z_\mathrm{iso}$, use $Z\rightarrow e e$ events. 
-In the $Z_\mathrm{mass}$ analysis, the tag-probe invariant mass is required to be within 15 GeV of the $Z$ boson mass, while in the $Z_\mathrm{iso}$ method the electron isolation is used to discriminate between signal and background. The other two methods \cite{ATLAS:2014wga}, $J/\Psi$ $\tau$-cut and $J/\Psi$ $\tau$-fit, use the distribution of a variable related to the $J/\Psi$ proper time (pseudo-proper time) to select $ee$ events. 
+In the $Z_\mathrm{mass}$ analysis, the tag-probe invariant mass is required to be within 15 GeV of the $Z$ boson mass, while in the $Z_\mathrm{iso}$ method the electron isolation is used to discriminate between signal and background. The other two methods \cite{ATLAS-CONF-2014-032}, $J/\Psi$ $\tau$-cut and $J/\Psi$ $\tau$-fit, use the distribution of a variable related to the $J/\Psi$ proper time (pseudo-proper time) to select $ee$ events. 
 The two $Z$-based methods and the two $J/\Psi$-based methods are combined, taking into account statistical and systematic correlations, to 
 derive \glspl{sf} in the high-\et and low-\et regions. 
 %As an example, the identification efficiency \glspl{sf} for Tight electrons in the 40-45 \et range, measured in the 2015 data are shown in Figure \ref{fig:obj:ele_sff_tight}. 
@@ -599,7 +599,7 @@ derive \glspl{sf} in the high-\et and low-\et regions.
 %    \label{fig:obj:ele_id2016}
 %    \includegraphics[width=0.4\textwidth]{figures/objects/ele_ideff_2016}  }
 %\end{center}
-% \caption{\subref{fig:obj:ele_sff_tight} Identification efficiency \glspl{sf} for Tight electrons in the 40-45 \et range, measured in the 2015 data. Figure from Ref. \cite{ATLAS:2016iqc}. \subref{fig:obj:ele_id2016} Electron identification efficiencies in $Z\rightarrow e e$ events. Figure from Ref. \cite{atlaselec2016}.
+% \caption{\subref{fig:obj:ele_sff_tight} Identification efficiency \glspl{sf} for Tight electrons in the 40-45 \et range, measured in the 2015 data. Figure from Ref. \cite{ATLAS-CONF-2016-024}. \subref{fig:obj:ele_id2016} Electron identification efficiencies in $Z\rightarrow e e$ events. Figure from Ref. \cite{atlaselec2016}.
 % }
 %  \label{fig:obj:ele_sf}
 %\end{figure}
@@ -617,7 +617,7 @@ It is measured with a method similar to the $Z_\mathrm{mass}$ method, but with t
     \includegraphics[width=0.5\textwidth]{figures/objects/ele_eff_pt_unc}  
     }
 \end{center}
- \caption{\subref{fig:obj:ele_eff_pt} Combined electron reconstruction and identification efficiency in $Z\rightarrow e e$ simulated events and in the 2015 data and \subref{fig:obj:ele_eff_pt_unc} absolute efficiency uncertainty, as a function of \et and inclusive in $\eta$. Figures from Ref. \cite{ATLAS:2016iqc}. 
+ \caption{\subref{fig:obj:ele_eff_pt} Combined electron reconstruction and identification efficiency in $Z\rightarrow e e$ simulated events and in the 2015 data and \subref{fig:obj:ele_eff_pt_unc} absolute efficiency uncertainty, as a function of \et and inclusive in $\eta$. Figures from Ref. \cite{ATLAS-CONF-2016-024}. 
  }
   \label{fig:obj:ele_eff}
 \end{figure}
