@@ -116,7 +116,7 @@ There are two types of maximum likelihood fits that can be performed:
 
 \noindent In this chapter the focus will be on the second type of fit, as it is the one used in this thesis.
 
-\subsubsection*{Variance of the maximum Likelihood estimator}
+\subsubsection*{Variance of the maximum likelihood estimator}
 
 The estimate of a parameter based on a data sample is always associated with a statistical uncertainty.
 If the same parameter estimate is performed on a different data sample, the values of the best estimate are different;
@@ -132,7 +132,7 @@ whose variance gives access to the statistical uncertainty in the \gls{mle}. The
 \end{itemize}
 
 
-\subsection{Binned Likelihood fit with systematic uncertainties}
+\subsection{Binned likelihood fit with systematic uncertainties}
 
 If we consider the representation of the observed data given by the binned distribution of a certain variable, the expected number of events in each bin of the distribution is given by:
 
@@ -154,7 +154,7 @@ e^{- (\mu s_{i} + b_{i}) } \; ,
 
 \noindent where the index $i$ runs on all the bins of the distribution.
 
-The prediction on the expected number of events in each bin is affected by systematic and statistical uncertainties, that are incorporated in the Likelihood in the form of \glspl{np}. 
+The prediction on the expected number of events in each bin is affected by systematic and statistical uncertainties, that are incorporated in the likelihood in the form of \glspl{np}. 
 In the frequentistic approach, each \gls{np} has a true unknown value, whose \gls{mle} derived in auxiliary measurements. 
 While in principle the full likelihood of the auxiliary measurements should be included in the likelihood of our own measurement, 
 in most practical cases this is not feasible, and the auxiliary likelihood is modeled through constraining terms. 
@@ -308,7 +308,7 @@ The post-fit values of the \glspl{np} can be compared to the pre-fit values. A c
 When multiple \glspl{np} have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by the statistical precision of the data. The individual effects can not be disentangled and constrained individually, but a correlation between them produce a total variation that is compatible with what is observed in data. % chiarareco:;\ un po' copiato da Javier, rifrasare!
 
 
-\subsection{Profiled Likelihood Ratio}
+\subsection{Profiled likelihood ratio}
 
 Once we divide the parameters in the likelihood into \glspl{poi}, 
 which are the ones we are interested in (typically the signal strength), 
@@ -756,7 +756,7 @@ Agreement between \gls{mc} simulation and pseudo-data \subref{fig:stat:VRprefitS
 \label{sec:stat:example:limits}
 
 Once the background model has been derived with the fit in the \gls{cr} and validated in the \gls{vr}, 
-it is possible to set model-dependent limits by including also the \gls{sr} in the Likelihood ("exclusion fit").
+it is possible to set model-dependent limits by including also the \gls{sr} in the likelihood ("exclusion fit").
 
 First of all, the \gls{cls} for the nominal signal cross-section is computed based on the distribution of the exclusion test statistic \qmu 
 (described in Section \ref{sec:teststat:prl}). This can be done using the \gls{pdf} for \qmu obtained with pseudo experiments, as shown in 
