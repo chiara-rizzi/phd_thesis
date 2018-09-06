@@ -2,7 +2,7 @@
 \label{chap:event:MC}
 
 Proton-proton interactions at the \gls{lhc} are complex processes that span very different energy scales. 
-In order to interpret the experimental data it is essential to develop a good understanding of the physics involved in the \gls{pp} collisions, and the ability to simulate the various processes is also crucial to be able to compare the observed data with the patterns predicted by the theory.
+In order to interpret the experimental data it is essential to develop a good understanding of the physics involved in \gls{pp} collisions, and the ability to simulate the various processes is also crucial to be able to compare the observed data with the patterns predicted by the theory.
 Section \ref{sec:ppint} focuses on the description of our understanding of a \gls{pp} collision, while Section \ref{sec:eventsimul} 
 discusses the event-simulation process; 
 the main \gls{mc} generators used in the \gls{atlas} Collaboration are described in Section \ref{sec:mcgen}, and Section \ref{sec:detsim} touches briefly on the topics of detector simulation and data-driven corrections.
@@ -14,7 +14,7 @@ the main \gls{mc} generators used in the \gls{atlas} Collaboration are described
 
 In hard-scattering processes, where the momentum transfer is much higher than the proton mass \cite{Butterworth:2012fj}, 
 a \gls{pp} collision is easier to understand in terms of interactions between the constituents of the protons, quarks and gluons, 
-collectively referred to as partons. A schematic view of \gls{pp} event is shown in Fig. \ref{fig:sim:pp2}. In this particular example, the interaction between a quark and a gluon leads to a final state with a $Z$ boson and jets. 
+collectively referred to as partons. A schematic view of a \gls{pp} event is shown in Fig. \ref{fig:sim:pp2}. In this particular example, the interaction between a quark and a gluon leads to a final state with a $Z$ boson and jets. 
 
 \begin{figure}[h]
 \begin{center}
@@ -93,7 +93,7 @@ determined by the equations derived independently by Dokshitzer \cite{Dokshitzer
 \noindent In the expressions above, $q(x,Q^2)$ and $g(x,Q^2)$ denote the quark and gluon \glspl{partdf} respectively, 
 $P_{ij}$ describes the $i \to j$ parton splitting function, 
 which corresponds to the probability of the outgoing parton $j$ 
-to be emitted at a virtuality scale $Q^2$ and carry a fraction $x$/$y$ of the mother parton momentum.
+to be emitted at a virtuality scale $Q^2$ and carry a fraction $x$/$y$ of the mother parton momentum, 
 and $\otimes$ is a symbol for the convolution integral:
 \begin{equation}
 P \otimes f \equiv \int^1_x\frac{dy}{y}f_q(y)~P\left(\frac{x}{y}\right).
@@ -113,7 +113,7 @@ As mentioned above, the \glspl{partdf} have to be determined experimentally. Thi
 \section{Event simulation}
 \label{sec:eventsimul}
 
-The main steps in the simulation of a \gls{pp} collision consists of:
+The main steps in the simulation of a \gls{pp} collision consist of:
 \begin{itemize}
 \item Computation of the \glspl{me} for the hard process.
 \item \Gls{psh} evolution and matching between \gls{psh} and \glspl{me}.
