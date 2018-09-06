@@ -371,9 +371,11 @@ described in Chapter \ref{sec:event:reco}.
 \end{figure}
 
 The full simulation of the interaction of particles with the \gls{atlas} detector is a CPU-intensive task. 
-ATLFAST-II \cite{Aad:2010ah} is a fast simulation method aiming at simulating the large amount of \gls{mc} events required by \gls{atlas} analyses by making use of a simplified detector description. 
-ATLFAST-II has two components: the Fast ATLAS Tracking Simulation (Fatras) \cite{Edmonds:2008zz}, to emulate the response of the \gls{id} and of the muon system, 
-and the Fast calorimeter Simulation (FastCaloSim) \cite{ATL-PHYS-PUB-2010-013}, that takes care of the simulation of the calorimeters. The default ATLFAST-II simulation uses the full \geant simulation for the \gls{id} and the muon spectrometer, 
+ATLFAST-II \cite{Aad:2010ah} is a fast simulation method 
+%aiming at simulating the large amount of \gls{mc} events required by \gls{atlas} analyses by 
+making use of a simplified detector description. 
+It has two components: the fast ATLAS tracking simulation (Fatras) \cite{Edmonds:2008zz}, to emulate the response of the \gls{id} and of the muon system, 
+and the fast calorimeter simulation (FastCaloSim) \cite{ATL-PHYS-PUB-2010-013}, that takes care of the simulation of the calorimeters. The default ATLFAST-II simulation uses the full \geant simulation for the \gls{id} and the muon spectrometer, 
 while it uses FastCaloSim to emulate the energy deposited in the calorimeters using a parametrization of the longitudinal and lateral energy profile. 
 ATLFAST-IIF uses both FastCaloSim for the calorimeters and Fatras for the tracking systems. 
 The output of ATLFAST-II includes all the properties necessary to run the same event reconstruction as with \geant or the real data.
