@@ -1,10 +1,9 @@
-Big corrections
-mc simul chapter
+Big corrections:
+mc simul chapter - how many partons at NLO and such
 understand CLs scan
 
 Plots:
 CLs scan (maybe)
-Add arrow to pmt response scan
 ewk optimization, separation
 
 Cose da chiedere ad aurelio sulla tesi:
