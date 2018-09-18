@@ -124,29 +124,29 @@ Electromagnetic & Photon ($\gamma$) & $< 10^{-27}$ & 0 \\%& $10^{-2}$ \\
 The interaction terms in the \gls{sm} Lagrangian are introduced by promoting an already existing global symmetry of the Lagrangian ($\theta$) to a local one ($\theta(x)$) function of the space-time coordinates. 
 In general, given a Lagrangian globally invariant under a symmetry group, the fields transform as:
 \begin{equation}
-\psi \rightarrow e^{ig\theta_k \tau_k} \psi  \; ,
+\psi \rightarrow e^{ig\theta^k \tau^k} \psi  \; ,
 \end{equation}
 
-\noindent where $g$ is the coupling constant of the filed $\psi$ under the interaction and $\tau_k$ are the generators of the group and obey commutation relations: 
+\noindent where $g$ is the coupling constant of the filed $\psi$ under the interaction and $\tau^k$ are the generators of the group and obey commutation relations: 
 \begin{equation}
-\left[ \tau_i, \tau_j \right] = i f_{ijk} \tau^k \; . 
+\left[ \tau^i, \tau^j \right] = i f^{ijk} \tau^k \; . 
 \end{equation}
 
-\noindent $f_{ijk}$ is the structure constant of the group and is always zero for Abelian groups. Promoting this gauge invariance to a global one ($\theta_k \rightarrow \theta_k(x)$) implies adding to the theory:
+\noindent In the equation above, $f_{ijk}$ is the structure constant of the group and is always zero for Abelian groups. Promoting this global  invariance to a local one ($\theta^k \rightarrow \theta^k(x)$) implies adding to the theory:
 \begin{itemize}
 \item A number of massless gauge fields $W^\mu_k$ equal to the number of generators of the symmetry group, that transform as 
 \begin{equation}
-W^\mu_k \rightarrow W^\mu_k - \partial^\mu \theta_k - g \epsilon_{klm} \theta^m W^\mu_m \; .
+W_\mu^k \rightarrow W_\mu^k + \partial_\mu \theta^k + g f^{klm} W_\mu^l \theta^m  \; .
 \end{equation}
 \item A covariant derivative: 
 \begin{equation}
-D^\mu = \partial^\mu + ig\tau^kW^\mu_k \; ,
+D_\mu = \partial_\mu - ig\tau^kW_\mu^k \; ,
 \end{equation}
 
 \noindent that substitutes the standard derivative in the Lagrangian.
 \item A free Lagrangian for the vector fields as in Equation \ref{eq:lproca}, with:
 \begin{equation}
-F^{\mu \nu}_k = \partial_\mu W_k^\nu - \partial_\nu W_k^\mu - g f_k^{lm} W^\mu_l W^\nu_m \; .
+F_{\mu \nu}^k = \partial_\mu W^k_\nu - \partial_\nu W^k_\mu + g f^{klm} W_\mu^l W_\nu^m \; .
 \end{equation}
 \noindent Note that the last term, of second order in the field, is present only for non-Abelian symmetry groups, since it is proportional to the structure constant. This has non-trivial consequences as the second-order term leads to self-interaction among the gauge fields.
 \end{itemize}
