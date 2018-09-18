@@ -7,9 +7,8 @@ CLs scan (maybe)
 ewk optimization, separation
 
 Cose da chiedere ad aurelio sulla tesi:
-come gestire il reset degli acronimi - ad ogni capitolo? 
+quando definire gli acronimi? Nelle introduzioni o solo quando se ne parla in dettaglio?
 data mc: miei senza sistematiche vs HF con sistematiche 
-comparison plots in systematic section: scale to unity and show the shape or not
 perche’ b-quark ma W boson (niente trattino)
 
 
