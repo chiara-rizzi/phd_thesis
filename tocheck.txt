@@ -2,6 +2,17 @@ Misteri della teoria
 Why neutrino masses do not derive from Higgs mechanism?
 --> masse terms mix left and right firlds and neutrinos are only left
 
+If the running of alpha-s depends on the number of active quarks, why don't we see jumps in the distribution?
+
+Why in VLQ do I need quarks where both the left and right component have the same transformation under SU(2)? 
+This way I can put arbitrary mass terms that don't break the SU(2) invariance, but this could have been done anyway?
+Why for quarks and leptons I could put mass terms without the Higgs mechanism?
+
+Sign and factors 2 in the coveriant derivative for SU(2)xU(1) 
+
+Se vogliamo piu' CP violation, perche' nel pMSSM mettiamo a zero le cose che fanno venire CP violation?
+
+
 Misteri sull’analisi
 why don’t we consider Gtt models with oaf-shell stops like SS?
 
