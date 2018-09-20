@@ -8,7 +8,7 @@ In this section we review the basic concepts that drive the design of the \gls{l
 
 
 
-The ability to accurately identify particles and reconstruct their energy and trajectory is what drives the design of detectors for high energy physics. In a detector, different sub-systems are able to capture different types of particle interactions, and the combination of the information collected by each of them allows to identify particles (or at least assign them to families, such as neutral or charged hadrons). A typical schema of the subdetectors sequence is shown in Fig. \ref{fig:detector:interaction}. The innermost layer, closer to the interaction point, is the \textit{tracking system}, dedicated to the measurement of the signed charge and momentum of charged particles. The following layers are the electromagnetic and hadronic \textit{calorimeters}, that measure the energy of particles with electromagnetic and hadronic interactions respectively. The outermost layer is dedicated to the \textit{muon system}: because of their large mass (about 200 times more than electrons) muons do not produce electromagnetic showers and are therefore easy to identify as they are the only detectable particles that reach the external part of the detector.
+The ability to accurately identify particles and reconstruct their energy and trajectory is what drives the design of detectors for high energy physics. In a detector, different sub-systems are able to capture different types of particle interactions, and the combination of the information collected by each of them allows to identify particles (or at least assign them to families, such as neutral or charged hadrons). A typical schema of the subdetectors sequence is shown in Figure \ref{fig:detector:interaction}. The innermost layer, closer to the interaction point, is the \textit{tracking system}, dedicated to the measurement of the signed charge and momentum of charged particles. The following layers are the electromagnetic and hadronic \textit{calorimeters}, that measure the energy of particles with electromagnetic and hadronic interactions respectively. The outermost layer is dedicated to the \textit{muon system}: because of their large mass (about 200 times more than electrons) muons do not produce electromagnetic showers and are therefore easy to identify as they are the only detectable particles that reach the external part of the detector.
 
 \begin{figure}[ht]
 \centering
@@ -20,7 +20,7 @@ The ability to accurately identify particles and reconstruct their energy and tr
 
 \subsection{Tracking and spectrometry}
 \label{sec:dec:tracking}
-A tracking device measures the traces left by charged particles passing through it. To allow the determination of the momentum and the charge of a particle, a tracking device needs to be accompanied by a magnetic field (in this case we speak of a \textit{magnetic spectrometer}): once the magnetic field is known, the measure of the radius of curvature of the particle is equivalent to a measure of its momentum, according to Equation \ref{eq:cern:p03br}. In a typical particle detector as the one in the schema in Fig. \ref{fig:detector:interaction}, both the inner tracking system and the muon system are magnetic spectrometers.
+A tracking device measures the traces left by charged particles passing through it. To allow the determination of the momentum and the charge of a particle, a tracking device needs to be accompanied by a magnetic field (in this case we speak of a \textit{magnetic spectrometer}): once the magnetic field is known, the measure of the radius of curvature of the particle is equivalent to a measure of its momentum, according to Equation \ref{eq:cern:p03br}. In a typical particle detector as the one in the schema in Figure \ref{fig:detector:interaction}, both the inner tracking system and the muon system are magnetic spectrometers.
 
 The relative uncertainty in the momentum is given by:
 \begin{equation}
@@ -68,7 +68,7 @@ where high precision and low occupancy are needed \cite{Hartmann:2009zza}.
 These detectors detectors are also based on the ionization of the material but in this case, since the structure is a crystal, 
 we talk about electrons and \textit{electron holes}. 
 
-The underlying principle is based on the \textit{band model} of solids, describing the allowed energy levels for electrons in a solid: when many atoms of the same type are bound together in a crystal lattice, in order to fulfill Pauli's principle the atomic orbitals split into many closely spaced molecular orbitals, that can be considered as continuous energy bands. The highest-energy full band is the \textit{valence band}, while the lowest partially-filled (or empty) band is the \textit{conduction band}; the energy difference between the conduction band and the valence band is referred to as \textit{energy gap}, as illustrated in Fig. \ref{fig:det:band:a}. 
+The underlying principle is based on the \textit{band model} of solids, describing the allowed energy levels for electrons in a solid: when many atoms of the same type are bound together in a crystal lattice, in order to fulfill Pauli's principle the atomic orbitals split into many closely spaced molecular orbitals, that can be considered as continuous energy bands. The highest-energy full band is the \textit{valence band}, while the lowest partially-filled (or empty) band is the \textit{conduction band}; the energy difference between the conduction band and the valence band is referred to as \textit{energy gap}, as illustrated in Figure \ref{fig:det:band:a}. 
 
 \begin{figure}[ht]
 \centering
@@ -78,11 +78,11 @@ The underlying principle is based on the \textit{band model} of solids, describi
 \label{fig:det:band}
 \end{figure}
 
-Semiconductors are materials where the conduction band is almost empty, but the energy gap is small ($\approx$ 1 eV, e.g. 1.07 eV for silicon), so the conduction band can be occupied by excited electrons from the valence band; this leaves holes in the valence band, that under the effect of an electric field can drift as well. Semiconductors with a pure composition have the same amount of electorns and holes. If the semiconductor is doped with an atom with one more electron in the valence band, this creates an excess of electrons and the material is referred to as a \textit{n-type} semiconductor. If instead the impurities are electron acceptors, the material has an excess of holes and is referred to as \textit{p-type} semiconductor. When a p-type and a n-type semiconductors are pulled together, the holes of the p-side drift into the n-side, and the electrons from the n-side into the p-side, as shown in Fig. \ref{fig:det:band:b}. This creates an electric field that takes charge carriers out of the area where it is present (\textit{depletion region}). When a charged particle passes through the semiconductor, it produces electron-hole pairs in the depletion region; these drift apart because of the electric field and can be collected by electrodes. The application of a negative potential difference between the p-side and the n-side can increase the depletion area.
+Semiconductors are materials where the conduction band is almost empty, but the energy gap is small ($\approx$ 1 eV, e.g. 1.07 eV for silicon), so the conduction band can be occupied by excited electrons from the valence band; this leaves holes in the valence band, that under the effect of an electric field can drift as well. Semiconductors with a pure composition have the same amount of electorns and holes. If the semiconductor is doped with an atom with one more electron in the valence band, this creates an excess of electrons and the material is referred to as a \textit{n-type} semiconductor. If instead the impurities are electron acceptors, the material has an excess of holes and is referred to as \textit{p-type} semiconductor. When a p-type and a n-type semiconductors are pulled together, the holes of the p-side drift into the n-side, and the electrons from the n-side into the p-side, as shown in Figure \ref{fig:det:band:b}. This creates an electric field that takes charge carriers out of the area where it is present (\textit{depletion region}). When a charged particle passes through the semiconductor, it produces electron-hole pairs in the depletion region; these drift apart because of the electric field and can be collected by electrodes. The application of a negative potential difference between the p-side and the n-side can increase the depletion area.
 
 The density of silicon is about one thousand times higher than that of gases like argon, and silicon also needs a much lower energy to be ionized (3.6 eV for silicon, while it is about 250 times higher for argon). This leads to a much higher number of electron-holes pairs than the number of electron-ion pairs in gas detectors, so the signal needs very little amplification, and the size of the detector itself can be smaller. 
 
-Different configurations of the silicon sensors are possible. Fig. \ref{fig:det:silicon_schema:a} shows the schema of a \textit{single-sided strip} sensor, where the readout strips are at negative potential. The second coordinate can be determined if also the n-side is divided into strips in a direction orthogonal to the ones in the p-side, as shown in Fig. \ref{fig:det:silicon_schema:b}. The grid structure of this \textit{double-sided strip} sensors can still lead to ambiguities when the number of hits is elevated; a true two-dimensional sensitivity is offered only by the \textit{pixel} modules, schematically shown in Fig. \ref{fig:det:silicon_schema:c}, where the module is divided in a matrix-like shape.
+Different configurations of the silicon sensors are possible. Figure \ref{fig:det:silicon_schema:a} shows the schema of a \textit{single-sided strip} sensor, where the readout strips are at negative potential. The second coordinate can be determined if also the n-side is divided into strips in a direction orthogonal to the ones in the p-side, as shown in Figure \ref{fig:det:silicon_schema:b}. The grid structure of this \textit{double-sided strip} sensors can still lead to ambiguities when the number of hits is elevated; a true two-dimensional sensitivity is offered only by the \textit{pixel} modules, schematically shown in Figure \ref{fig:det:silicon_schema:c}, where the module is divided in a matrix-like shape.
 
 \begin{figure}[ht]
 \centering
@@ -118,7 +118,7 @@ The type of interaction that electromagnetically interacting particles have with
 \end{figure}
 
 
-When electrons, positrons and photons with energies above 1 GeV traverse a block of material they produce a cascade of particles (\textit{electromagnetic shower}): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair (pair production is indicated with the symbol $\kappa_{nucl}$ in Fig. \ref{fig:det:xsec_elec:b}). A schematic view of the evolution of an electromagnetic shower is shown  in Fig. \ref{fig:det:shower_elec:a}. 
+When electrons, positrons and photons with energies above 1 GeV traverse a block of material they produce a cascade of particles (\textit{electromagnetic shower}): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair (pair production is indicated with the symbol $\kappa_{nucl}$ in Figure \ref{fig:det:xsec_elec:b}). A schematic view of the evolution of an electromagnetic shower is shown  in Figure \ref{fig:det:shower_elec:a}. 
 
 \begin{figure}[ht]
 \centering
@@ -146,7 +146,7 @@ The lateral with of the shower, determined mainly by multiple scattering, increa
 R_M = \frac{21 MeV \; X_0[\frac{g}{cm^2}]}{E_c [MeV]} \; .
 \end{equation}
 
-\noindent A cylinder of radius 2$R_M$ contains about 95\% of the shower; for most calorimeters $R_M$ has a value of few centimeters, so electromagnetic showers are quite narrow. The longitudinal and lateral development of the shower induced in lead by electrons with an energy of 6 GeV is shown in Fig. \ref{fig:det:shower_elec:b}.
+\noindent A cylinder of radius 2$R_M$ contains about 95\% of the shower; for most calorimeters $R_M$ has a value of few centimeters, so electromagnetic showers are quite narrow. The longitudinal and lateral development of the shower induced in lead by electrons with an energy of 6 GeV is shown in Figure \ref{fig:det:shower_elec:b}.
 
 Once the electrons in the shower have an energy lower than the \textit{critical energy} 
 ($E_c$, defined as the energy where the loss through Bremsstrahlung equals the loss through ionization), 
@@ -169,12 +169,12 @@ We have discussed in Section \ref{sec:dec:tracking} how the resolution of the mo
 
 The difference between electromagnetic calorimeters and hadronic calorimeters finds its origin in the more complicated nature of strong interactions compared to the electromagnetic ones. 
 
-A sketch of the evolution of an hadronic shower is shown in Fig. \ref{fig:det:shower_had:a}. A first relevant difference between hadronic and electromagnetic showers is that the former has a much larger spatial extension. On the longitudinal direction, the scale is determined by the \textit{nuclear interaction length} ($\lambda_I$), which is material-dependent and can be expressed as:
+A sketch of the evolution of an hadronic shower is shown in Figure \ref{fig:det:shower_had:a}. A first relevant difference between hadronic and electromagnetic showers is that the former has a much larger spatial extension. On the longitudinal direction, the scale is determined by the \textit{nuclear interaction length} ($\lambda_I$), which is material-dependent and can be expressed as:
 \begin{equation}
 \lambda_I = 35 \frac{g}{cm^2} A^{1/3} \; ,
 \end{equation}
 
-\noindent where $A$ is the atomic number of the material. For most materials used in particle detectors this turns out to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, and 16.77 cm for iron \cite{Patrignani:2016xqp}). The 99\% shower containment is reached after about 5(9) $\lambda_I$ for pions with E=10(138) GeV. Also the lateral width of the shower is larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of an hadronic shower depends on the transverse-momentum transfer, which can be quite sizable in strong nuclear interactions. Fig. \ref{fig:det:shower_had:b} shows the lateral shower profile in iron for pions with E=10 GeV.
+\noindent where $A$ is the atomic number of the material. For most materials used in particle detectors this turns out to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, and 16.77 cm for iron \cite{Patrignani:2016xqp}). The 99\% shower containment is reached after about 5(9) $\lambda_I$ for pions with E=10(138) GeV. Also the lateral width of the shower is larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of an hadronic shower depends on the transverse-momentum transfer, which can be quite sizable in strong nuclear interactions. Figure \ref{fig:det:shower_had:b} shows the lateral shower profile in iron for pions with E=10 GeV.
 
 \begin{figure}[ht]
 \centering
@@ -207,7 +207,7 @@ where $E_0$ is the energy necessary to produce one pion (e.g. 0.7 GeV for iron a
 \label{fig:det:shower_had_spectra}
 \end{figure}
 
-Fig. \ref{fig:det:shower_had_spectra} shows the particle spectra produced by protons with E=100 GeV absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301}. We can see that at low energies the particle content is dominated by electrons, positrons, photons and neutrons.
+Figure \ref{fig:det:shower_had_spectra} shows the particle spectra produced by protons with E=100 GeV absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301}. We can see that at low energies the particle content is dominated by electrons, positrons, photons and neutrons.
 
 While in electromagnetic showers most of the initial energy is recorded in the detector, in hadronic showers a relevant fraction (up to 30-40\%) is invisible. This invisible fraction is caused by energy that goes into breaking the nuclear bonds, nuclear fragments that in sampling calorimeters do not reach the active material, and neutral particles that can escape the calorimeter (e.g. neutrinos or long-lived neutral kaons). Therefore, for the same initial energy, the visible energy will be lower for an hadronic shower than for an electromagnetic one. If we define the \textit{response} as the collected signal per unit of incident energy, the invisible energy causes a different response of calorimeters to the electromagnetic and to the purely-hadronic parts of the shower. Defining $R_{em}$, $R_{h}$, $R_{\pi}$ respectively as the calorimeter response to electromagnetic shower, the hadronic part of the shower and to pions, we have that:
 \begin{equation}
@@ -246,7 +246,7 @@ Photon detectors can be broadly classified into three categories: vacuum, gaseou
 \subsubsection*{Photomultiplier tubes}  
 
 \glspl{pmt} are the most common type of vacuum photon detectors. 
-A sketch of the structure of a \gls{pmt} is shown in Fig. \ref{fig:det:pmt}. It consists of a vacuum tube with an input window, a photocatode, 
+A sketch of the structure of a \gls{pmt} is shown in Figure \ref{fig:det:pmt}. It consists of a vacuum tube with an input window, a photocatode, 
 a focusing electrode, electron multipliers, and an anode  \cite{hamamatsu}. 
 Photons enter the device through the window and excite the electrons in the valence band of the photocatode, which is a semiconductor; 
 in \textit{transmission-type} \glspl{pmt} the photocatode is deposited on the inside of the window, 
