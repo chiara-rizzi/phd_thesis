@@ -1,7 +1,7 @@
 \chapter{Event reconstruction}
 \label{sec:event:reco}
 
-The particles produced in the \gls{pp} collisions in the center of the \gls{atlas} detector interact with the detector material as discussed in Chapter \ref{chap:cern}. As a result of these interactions, electrical signals are recorded. \textit{Event reconstruction} is the process of recombining these digital signals and interpreting them as tracks and energy deposits in the calorimeters. Finally, a particle identification step
+The particles produced in the \gls{pp} collisions in the center of the \gls{atlas} detector interact with the detector material as discussed in Chapter \ref{chap:cern}. As a result of these interactions, electrical signals are recorded. Event reconstruction is the process of recombining these digital signals and interpreting them as tracks and energy deposits in the calorimeters. Finally, a particle identification step
 is performed, where the information from the relevant subdetectors is combined to reconstruct as accurately
 as possible a candidate physics object.
 This chapter describes the reconstruction and identification of the objects used in the analyses discussed in this thesis: tracks and vertices, hadronic jets, muons, electrons and missing transverse momentum. 
@@ -37,7 +37,7 @@ The track perigee parameters are schematically shown in Figure \ref{fig:obj:trac
 
 Primary tracks, originating from charged particles with a life time longer that $3 \times 10^{-11}$ s produced directly in the hard-scatttering vertex, are reconstructed with an inside-out approach \cite{Cornelissen:1020106}: the seed of the reconstruction are three hits in the silicon detector, and then compatible hits in the outer layers of the \gls{id} are added with a Kalman Filter \cite{citeulike:347166,Fruhwirth:1987fm}. The \gls{trt} segments that are not associated with primary tracks are used as starting point to reconstruct tracks from long-lived particles or from material interaction, with a back-tracking that extrapolates the \gls{trt} information to the pixel hits. 
 
-Random groups of hits can be wrongly reconstructed as belonging to the helical trajectory of a track (\textit{fake tracks}). The amount of fake tracks increases with the increase of pileup, and can be reduced by tightening the selection criteria of the track, at the expense of reconstruction efficiency. Three different selection criteria are used for the data collected in 2015 and 2016 (Loose, Loose-Primary and Tight-Primary), that differ in the requirements on the hits and holes (elements where a hit was expected but was not registered) in the different \gls{id} layers. The \textit{track reconstruction efficiency} is measured in \gls{mc} simulations as the ratio of the reconstructed tracks matched to a generated charged particle over the total number of generated charged particles. The reconstruction efficiency as a function of the track $\eta$ and \pt is shown in Figure \ref{fig:obj:tracks} for Loose and Tight-Primary tracks.
+Random groups of hits can be wrongly reconstructed as belonging to the helical trajectory of a track (fake tracks). The amount of fake tracks increases with the increase of pileup, and can be reduced by tightening the selection criteria of the track, at the expense of reconstruction efficiency. Three different selection criteria are used for the data collected in 2015 and 2016 (Loose, Loose-Primary and Tight-Primary), that differ in the requirements on the hits and holes (elements where a hit was expected but was not registered) in the different \gls{id} layers. The track reconstruction efficiency is measured in \gls{mc} simulations as the ratio of the reconstructed tracks matched to a generated charged particle over the total number of generated charged particles. The reconstruction efficiency as a function of the track $\eta$ and \pt is shown in Figure \ref{fig:obj:tracks} for Loose and Tight-Primary tracks.
  
 \begin{figure}[ht]
 \centering
@@ -58,10 +58,10 @@ Once all the \gls{pv} candidates are reconstructed, the one with the highest sum
 
 \section{Jets}
 
-Because of confinement, quarks and gluons produced in the collisions give origin to a collimated spray of hadrons (\textit{jets}) that move in the direction of the original parton. When jets interact with the detector, they loose most of their energy as deposits in the calorimeter systems, which are then grouped together aiming at reconstructing the characteristics of the original parton. 
+Because of confinement, quarks and gluons produced in the collisions give origin to a collimated spray of hadrons (jets) that move in the direction of the original parton. When jets interact with the detector, they loose most of their energy as deposits in the calorimeter systems, which are then grouped together aiming at reconstructing the characteristics of the original parton. 
 
 \subsection{Clusters}
-The first step in the jet reconstruction is the procedure that groups the calorimeter cells in three dimensional objects referred to as topological clusters (\textit{topoclusters}) \cite{ATL-LARG-PUB-2008-002,Aad:2016upy}. Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Figure \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
+The first step in the jet reconstruction is the procedure that groups the calorimeter cells in three dimensional objects referred to as topological clusters (topoclusters) \cite{ATL-LARG-PUB-2008-002,Aad:2016upy}. Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Figure \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
 
 \begin{figure}[h]
 \begin{center}
@@ -124,7 +124,7 @@ the standard \gls{atlas} corrections are \cite{PhysRevD.96.072002}:
 \begin{description}
 \item[Origin correction] The direction of the jet is changed to point to the reconstructed hard-scattering \gls{pv} rather than to the cented of the detector. This correction improves the $\eta$ resolution of the jets.
 
-\item[Pileup correction] Multiple collisions in the same bunch crossing (\textit{in-time pileup}), as well as residual energy from previous collisions (\textit{out-of-time pileup}), affect the jet energy reconstruction. The effect of pileup is corrected in two steps 
+\item[Pileup correction] Multiple collisions in the same bunch crossing (in-time pileup), as well as residual energy from previous collisions (out-of-time pileup), affect the jet energy reconstruction. The effect of pileup is corrected in two steps 
 \cite{Cacciari:2007fd,ATLAS-CONF-2013-083}: a first correction, dependent on the number of \glspl{pv}, uses the jet area to subtract form the jet energy the average energy form pileup events. 
 The jet area is measured with ghost-association: simulated ghost particles of infinitesimal momentum are added to the event uniformly in solid angle prior to jet reconstruction, and the jet area is computed from the fraction of ghost particles associated to the jet after the clusters are merged. 
 A second correction based on the number of \glspl{pv} and on the number of interactions per bunch crossing is then applied to disentangle the effect of in-time pileup and out-of-time pileup.
@@ -135,7 +135,7 @@ with the reconstructed energy, and it also corrects for biases in the $\eta$ rec
 
 \item[Global sequential calibration] The \gls{gsc} \cite{ATLAS-CONF-2015-002} improves the \gls{jes} resolution by deriving additional corrections based on individual jet properties, e.g. the number of associated tracks and the fraction of energy deposited in the various layers of the calorimeter.
 
-\item[In-situ calibration] As a last stage, the data-driven calibration (\textit{in-situ}) \cite{ATLAS-CONF-2015-017} corrects for the differences between \gls{mc} simulation and data (arising e.g. from imperfect simulation of the detector response and material interaction). These corrections are derived from events where the jet \pt is balanced against other well measured objects. In the $\eta$-intercalibration, dijet events are used to correct the response of forward jets (with $0.8 < |\eta| < 4.5$) using well-measured central jets (with $|\eta| < 0.8$). 
+\item[In-situ calibration] As a last stage, the data-driven calibration (in-situ) \cite{ATLAS-CONF-2015-017} corrects for the differences between \gls{mc} simulation and data (arising e.g. from imperfect simulation of the detector response and material interaction). These corrections are derived from events where the jet \pt is balanced against other well measured objects. In the $\eta$-intercalibration, dijet events are used to correct the response of forward jets (with $0.8 < |\eta| < 4.5$) using well-measured central jets (with $|\eta| < 0.8$). 
 The response of central jets is instead measured in $Z$+jets, $\gamma$+jets and multijet events; 
 in $Z$/$\gamma$+jets events, the \pt of the jet is measured against the \pt of a well measured $Z$ boson or photon, while 
 multijet events are used to calibrate central high-\pt jets ($300 < \pt < 2000$ GeV) against 
@@ -181,7 +181,7 @@ Jets with the same true energy can have different reconstructed energies; the di
 \subsection{Jet vertex tagger}
 \label{sec:jvt}
 
-%It has already been discussed in Sec. \ref{sec:obj:jetcalib} how pileup is taken into account in the calibration of the \gls{jes}. 
+%It has already been discussed in Section \ref{sec:obj:jetcalib} how pileup is taken into account in the calibration of the \gls{jes}. 
 Beside affecting the jet energy, high levels of pileup can also lead to the reconstruction of spurious jets not originating from the hard-scattering interaction. In \gls{atlas} track-based algorithms are used for the identification of pileup jets \cite{Aad:2015ina,ATLAS-CONF-2014-018}. 
 Tracks are matched to calorimeter jets by ghost-association \cite{Soyez:2012hv}. Once the hard-scattering \gls{pv} (\gls{pv}$_0$) is identified, 
 for each jet it is possible to compute the \gls{jvf}, the ratio of the scalar sum of the \pt of the tracks associated to the jet and originating from  \gls{pv}$_0$ to that of all the associated tracks:
@@ -250,18 +250,18 @@ $p_T$ scales as:
 \Delta R \approx \frac{2 m}{p_T} \; .
 \end{equation}
 
-This indicates that the ideal value of the $R$ parameter described in Sec. \ref{sec:obj:jetfinding} can vary depending on the event topology that we want to capture. 
-For example, the decay products of a heavy particle with a transverse momentum much larger than its rest mass (\textit{boosted object}) could be better described by a 
+This indicates that the ideal value of the $R$ parameter described in Section \ref{sec:obj:jetfinding} can vary depending on the event topology that we want to capture. 
+For example, the decay products of a heavy particle with a transverse momentum much larger than its rest mass (boosted object) could be better described by a 
 single jet with a larger $R$ than with multiple jets with the "standard" 0.4 radius, 
 as it happens e.g. in the decay of very energetic top quarks, $W$, $Z$ or Higgs bosons produced at the LHC.
-Each different value of the $R$ parameter requires a dedicated calibration following the steps described in Sec. \ref{sec:obj:jetcalib}. 
+Each different value of the $R$ parameter requires a dedicated calibration following the steps described in Section \ref{sec:obj:jetcalib}. 
 Therefore, it is not always possible to choose the optimal value of the jet radius. 
 A possible solution to this problem comes from noticing that the same jet-finding algorithms used to group topoclusters can have different types of inputs. 
-In particular, jets themselves can be be used as input and grouped together, and in this case we speak of \textit{re-clustered jets} \cite{Nachman:2014kla}. 
+In particular, jets themselves can be be used as input and grouped together, and in this case we speak of re-clustered jets \cite{Nachman:2014kla}. 
 Re-clustered jets are automatically calibrated as long as the input jets are, and also the jet uncertainties can be propagated directly. 
 A comparison of the jet clustering obtained with anti-$k_T$ $R$=1.0 and by re-clustering anti-$k_T$ $R$=0.3 jets into anti-$k_T$ $R$=1.0 jets 
 is shown in Figure \ref{fig:recluster}. It is possible to see how the jet axis is similar between the two cases, and how the anti-$k_T$ $R$=1.0 jets have more inputs away from the jet axis.
-Re-clustered jets can be \textit{trimmed} by removing the constituent small-R jets that have a \pt smaller than a defined fraction of the \pt of the original reclustered jet. 
+Re-clustered jets can be trimmed by removing the constituent small-R jets that have a \pt smaller than a defined fraction of the \pt of the original reclustered jet. 
 
 
 \begin{figure}[h]
@@ -275,7 +275,7 @@ Re-clustered jets can be \textit{trimmed} by removing the constituent small-R je
 \section{Jets from B-hadrons}
 \label{sec:btagging}
 
-Jets originating from the hadronization of a $b$-quark (\textit{$b$-jets}) can be identified thanks to the lifetime of $B$-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the $B$-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a $B$-hadron is shown in Figure \ref{fig:btag}. 
+Jets originating from the hadronization of a $b$-quark ($b$-jets) can be identified thanks to the lifetime of $B$-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the $B$-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a $B$-hadron is shown in Figure \ref{fig:btag}. 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.45\textwidth]{./figures/objects/secvtx.pdf}
@@ -283,7 +283,7 @@ Jets originating from the hadronization of a $b$-quark (\textit{$b$-jets}) can b
 \caption[Schematic view of the topology of a $b$-jet.]{Schematic view of the topology of a $b$-jet. Figure from Ref. \cite{d0btagging}.}
 \label{fig:btag}
 \end{figure}
-The procedure of identifying $b$-jets is referred to as \textit{$b$-tagging}, and in \gls{atlas} is performed using as input the tracks associated to the jets . As already mentioned in Sec. \ref{sec:atlas:pixel}, between Run 1 and Run 2 a fourth pixel layer, the \gls{ibl}, was added to the \gls{atlas} detector, allowing a better impact parameter resolution and therefore improving substantially the $b$-tagging performance. 
+The procedure of identifying $b$-jets is referred to as $b$-tagging, and in \gls{atlas} is performed using as input the tracks associated to the jets . As already mentioned in Section \ref{sec:atlas:pixel}, between Run 1 and Run 2 a fourth pixel layer, the \gls{ibl}, was added to the \gls{atlas} detector, allowing a better impact parameter resolution and therefore improving substantially the $b$-tagging performance. 
 
 There are three families of $b$-tagging algorithms that can be combined through multivariate techniques. The basic algorithms can be based on:
 
