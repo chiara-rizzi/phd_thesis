@@ -118,7 +118,7 @@ Figure from Ref. \cite{cacciari:antikt}.}
 \label{sec:obj:jetcalib}
 
 As mentioned previously, the inputs to the jet-finding algorithm are calibrated at the \gls{em} scale, and its coordinates refer to the center of the detector. To access a more precise measurement of the jet energy and kinematics, a sequence of calibration steps is applied; 
-%for the 2015-2016 dataset, 
+%for the 2015--2016 dataset, 
 the standard \gls{atlas} corrections are \cite{PhysRevD.96.072002}:
 
 \begin{description}
@@ -312,7 +312,7 @@ through which a $b$-quark decays preferentially to a $c$-quark, since the \gls{c
 
 \end{description}
 
-The default $b$-tagging algorithm used by \gls{atlas} in the analysis of the 2015-2016 dataset is MV2c10 
+The default $b$-tagging algorithm used by \gls{atlas} in the analysis of the 2015--2016 dataset is MV2c10 
 \cite{ATL-PHYS-PUB-2015-022,ATL-PHYS-PUB-2016-012}, 
 a multivariate algorithm based on a \gls{bdt} that combines the algorithms described above. 
 MV2c10 belongs to the family of MV2 algorithms, which are trained on a \ttbar sample using $b$-jets as signal and $c$-jets and light-jets as background, and differ in the relative fraction of $c$-jets and light-jets that are
@@ -333,7 +333,7 @@ Figure \ref{fig:obj:mv2} shows the light-jet and $c$-jet rejection as a function
 \end{figure}
 
 \glspl{op} are defined by a selection on the value of the \gls{bdt} output, and are designed to have a specific $b$-jet efficiency.
-Table \ref{tab:obj:mv2op} shows the \glspl{op} of the MV2c10 algorithm.
+Table \ref{tab:obj:mv2op} shows the \glspl{op} defined for the MV2c10 algorithm.
 
 \begin{table}[h]
 \begin{center}
@@ -579,7 +579,7 @@ that applies a selection on the ratio \ptvarele/\et to have an efficiency of 99\
 
 \subsection{Electron efficiency measurement}
 
-The measurement of the electron efficiency in data relies on the tag-and-probe method, applied to $Z\rightarrow e e$ and $J/\Psi \rightarrow e e$ events, for the high-\et ($> 15$ GeV) and low-\et (typically 7-20 GeV) regions respectively. One of the two electrons is identified with strict criteria and, after kinematic requirements, the second one is used to measure the efficiency.
+The measurement of the electron efficiency in data relies on the tag-and-probe method, applied to $Z\rightarrow e e$ and $J/\Psi \rightarrow e e$ events, for the high-\et ($> 15$ GeV) and low-\et (typically 7--20 GeV) regions respectively. One of the two electrons is identified with strict criteria and, after kinematic requirements, the second one is used to measure the efficiency.
 The electron efficiency is a product of the reconstruction, identification and isolation efficiency 
 (and also trigger efficiency, if the events are selected with an electron trigger).  The ratio between the efficiency expected from \gls{mc} simulations and the one measured in data, in the form of \glspl{sf} function of \et and $|\eta|$, is used to correct the simulations and its uncertainty is applied as a systematic variation. 
 
@@ -653,7 +653,7 @@ The missing transverse momentum is given by:
 
 \begin{equation}
 \bar{E}_{\rm{T}}^{\rm{miss}}=  - \sum \pt ^{e}  - \sum \pt ^{\gamma} - \sum \pt ^{\tau}    \nonumber \\
-- \sum \pt ^{\rm{jets}} - \sum \pt   ^{\mu} - \sum \pt  ^{\rm{soft-terms}}   \;
+- \sum \pt ^{\rm{jets}} - \sum \pt   ^{\mu} - \sum \pt  ^{\rm{soft-terms}}   \; .
 \label{eq:etm} 
 \end{equation}
 
@@ -664,7 +664,7 @@ The soft term includes all the detector signals that are not associated to muons
 both from the hard scattering and from pileup interactions. 
 % chiara: check: in some papers it says the tracks need to pe associated to the primary vertex
 In \gls{atlas} several algorithms are designed to reconstruct and calibrate the \met soft term, and the analyses discussed in this thesis use 
-the one recommended for the 2015-2016 analyses, the \gls{tst}. In this algorithm, the \met soft term is reconstructed purely from track information, without any contribution from the calorimeter information; 
+the one recommended for the 2015--2016 analyses, the \gls{tst}. In this algorithm, the \met soft term is reconstructed purely from track information, without any contribution from the calorimeter information; 
 this results at the same time in better pileup resistance but also in the loss of information about soft neutral particles. 
 An alternative version of the soft term is the \gls{cst}, that instead uses energy deposits in the calorimeters not associated to hard physics objects. 
 Other algorithms are described in Ref. \cite{Aad:2016nrq}.
@@ -683,7 +683,7 @@ Equation \ref{eq:etm} \cite{ATLAS-CONF-2018-023}:
 
 The performance of the \met reconstruction is evaluated in data and \gls{mc} simulation, studying the mean, the width and the integral of the 
 tail of the \met distribution in different topologies. 
-In the 2015-2016 dataset, the \met performance has been evaluated using two different signatures. 
+In the 2015--2016 dataset, the \met performance has been evaluated using two different signatures. 
 $Z \rightarrow \ell \ell$ events are studies both \gls{mc} simulation and in data, since the leptonic decay of the $Z$ boson are 
 abundant and easy to trigger. 
 These events do not contain any real \met, therefore all the reconstructed \met can be assigned to mismeasurement effects. 

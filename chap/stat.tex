@@ -100,7 +100,7 @@ The \gls{mle} is widely used because of the favorable properties that it reaches
 \item It follows a Gaussian distribution.
 \end{itemize}
 
-\noindent With a finite number of events, the estimator is biased and the bias is proportional to $\frac{1}{N}$. Also, the \gls{mle} is invariant under a functional transformation, which means that if $\hat{\theta}$ is the \gls{mle} for the parameter $\theta$, $g(\hat{\theta})$ is the \gls{mle} for $g(\theta)$, and therefore it maintains all the properties described above. This is not necessarily true for other estimators.
+\noindent With a finite number of events, the estimator is biased and the bias is proportional to $1/N$. Also, the \gls{mle} is invariant under a functional transformation, which means that if $\hat{\theta}$ is the \gls{mle} for the parameter $\theta$, $g(\hat{\theta})$ is the \gls{mle} for $g(\theta)$, and therefore it maintains all the properties described above. This is not necessarily true for other estimators.
 
 Practically, most of the times instead of maximizing the likelihood function it is more convenient to minimize $-\logl$. 
 This allows to perform a minimization rather than a maximization because of the minus sign,
@@ -127,7 +127,7 @@ whose variance gives access to the statistical uncertainty in the \gls{mle}. The
 
 \item Once the parameter is estimated from the experimental results, the experiment can be simulated N times with \gls{mc}  simulations. For each simulation the best value of the parameter can be estimated with the maximum likelihood method, and from the distribution of these values it is possible to compute the variance.
 
-\item With the increase of the size of the data sample, the likelihood function tends to a Gaussian, and the $\logl$ tends to a parabola, so the variance of the distribution can be obtained as the point where $-\logl$ differs by $\frac{1}{2}$ with respect to its minimum.
+\item With the increase of the size of the data sample, the likelihood function tends to a Gaussian, and the $\logl$ tends to a parabola, so the variance of the distribution can be obtained as the point where $-\logl$ differs by 1/2 with respect to its minimum.
 
 \end{itemize}
 
@@ -214,7 +214,7 @@ e.g. the \gls{jer}, has on the expected background yield in this bin.
 The \gls{jer} uncertainty is calibrated with an auxiliary measurement, whose likelihood we include by the simplification of a Gaussian constraint term, $G( \tilde{\theta} | \theta, \sigma_\theta)$, where $\tilde{\theta}$ is the nominal value of the calibration, $\theta$ the underlying real value and $\sigma_\theta$ the uncertainty. Stating that the uncertainty in \gls{jer} is 10\%, means that the width of the Gaussian is 10\%. 
 
 To include this information in the likelihood, we need to evaluate the response to this uncertainty, i.e. the effect of a shift in \gls{jer} in the background efficiency of our region.
-In practice this means that we need to evaluate how much a one-sigma variation of \gls{jer} (10\% in our example) changes the number of expected events in the bin we are considering. 
+In practice this means that we need to evaluate how much a one standard deviation variation of \gls{jer} (10\% in our example) changes the number of expected events in the bin we are considering. 
 For this example, we assume that a 10\% shift in \gls{jer} causes a 20\% change in the background yields.
 If we consider only one bin of the likelihood in Equation \ref{eq:stat:lik_no_sys}, consider only one systematic (\gls{jer} in this case) and write explicitly the effect of the systematic on the number of background events, we have:
 
@@ -288,7 +288,7 @@ This strategy avoids the discontinuity for $\theta=0$, but it can introduce prob
 \subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_4.pdf}\label{fig:interp_4}}
 \caption{Comparison of the four interpolation strategies supported by HistFactory \cite{Cranmer:1456844}. 
 $\alpha$ represents the variation of the \gls{np} in units of standard deviations, and $\eta$ the response relative to the nominal value; 
-the three white markers are the points where the response is measured (nominal and $\pm$ one sigma), 
+the three white markers are the points where the response is measured (nominal and $\pm$ one standard deviation), 
 while the colored lines show the interpolating function.
 \subref{fig:interp_1} $\eta(-1) = 0.8$, $\eta(+1) = 1.2$.
 \subref{fig:interp_2} $\eta(-1) = 1.1$, $\eta(+1) = 1.5$.
@@ -770,9 +770,9 @@ Figure \ref{fig:stat:CLscan:toys:two}, or with the asymptotic approximation.
 \subfigure[$\mu_{\rm SIG} = 1.6$]{\includegraphics[width=0.325\textwidth]{figures/stat/examples/cls3.pdf}\label{fig:stat:CLscan:toys:three}}
 \caption{
 Distribution of the test statistics for the background-only (blue) and signal-plus-background (red) hypothesis for 
-\ref{fig:stat:CLscan:toys:one} $\mu_{\rm SIG} = 0.1$,
-\ref{fig:stat:CLscan:toys:two} $\mu_{\rm SIG} = 1.0$,
-\ref{fig:stat:CLscan:toys:three} $\mu_{\rm SIG} = 1.6$.
+\subref{fig:stat:CLscan:toys:one} $\mu_{\rm SIG} = 0.1$,
+\subref{fig:stat:CLscan:toys:two} $\mu_{\rm SIG} = 1.0$,
+\subref{fig:stat:CLscan:toys:three} $\mu_{\rm SIG} = 1.6$.
 }
 \label{fig:stat:CLscan}
 \end{figure}

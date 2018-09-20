@@ -3,7 +3,7 @@
 
 The main results presented in this thesis are the two analyses described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}, which target respectively the strong and electroweak production of supersymmetric particles.
 While these analyses target two different benchmark models, they have many commonalities, since both models feature 
-a final state rich in $b$-jets and \met. This Chapter highlights these common aspects: 
+a final state rich in $b$-jets and \met. This chapter highlights these common aspects: 
 Section \ref{sec:common:datasample} illustrates the data sample used in the analyses. 
 Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design and interpret the searches. 
 Sections \ref{sec:common_obj_def} and \ref{sec:common_syst} focus on the definition of the physics objects and the experimental systematic uncertainties respectively; Section \ref{sec:common_variables} presents the main kinematic variables used in the analyses 
@@ -164,14 +164,14 @@ of jets that fulfill certain selections.
 They are divided into one \gls{np} for the uncertainty in the efficiency of tagging jets originating from $b$-quarks, 
 one for the mistagging of the jets originating from 
 $c$-quarks, and one for light jets; 
-furthermore, one additional \gls{np} for the high-\pt extrapolation uncertainty, based on MC simulation studies, 
+furthermore, one additional \gls{np} for the high-\pt extrapolation uncertainty, based on \gls{mc} simulation studies, 
 increases the uncertainties in the high-\pt region, where the $b$-tagging calibration is not available and the central 
 value of the \gls{sf} is taken from the closest calibrated \pt region. 
 The uncertainties in $b$-tagging play a relevant role in the analyses in this thesis, as they rely heavily on the selection of events containing $b$-tagged jets.
 
 \item[Luminosity] Besides those uncertainties associated with the object selections, 
 another experimental uncertainty that is taken into account in the analysis is 
-the uncertainty in the integrated luminosity, whose measurement is described in Section \ref{sec:lumimeas}; for the 2015-2016 dataset the luminosity uncertainty corresponds 
+the uncertainty in the integrated luminosity, whose measurement is described in Section \ref{sec:lumimeas}; for the 2015--2016 dataset the luminosity uncertainty corresponds 
 to 3.2\% and is derived with a strategy similar to that described in Ref. \cite{Aaboud:2016hhf}. The impact of this uncertainty on the analyses discussed in this thesis is very small.
 
 \end{description}
@@ -304,7 +304,7 @@ The \ttbar components that is dominating the background estimate are the dilepto
 In the second case, the dominating component is the single-lepton component, where one lepton is a hadronically decaying $\tau$, has a \pt too low to be reconstructed, or falls out of acceptance. 
 The \gls{mc} generator used to simulate \ttbar events produced in association with high-\pt jets is \PowhegBox v2 with the CT10 \gls{partdf} set \cite{Lai:2010vv} and interfaced with \PY v6.428 \cite{Sjostrand:2006za} for the \gls{psh} and hadronization. 
 The normalization is derived in \glspl{cr} designed to be kinematically as close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross-section computed with the highest
-available accuracy (NNLO+NNLL \cite{Czakon:2011xx}).
+available accuracy, which is \gls{nlo} + \gls{nnll} \cite{Czakon:2011xx}.
 
 \subsubsection*{Truth-level classification: \ttbar decays}
 
@@ -699,7 +699,7 @@ The jet smearing method overcomes these problems by providing a data-driven esti
 \begin{itemize}
 \item A sample of well-measured multijet seed events, with low values of \met, is selected in data.
 
-\item Each jet in each seed event is smeared: its four-momentum is multiplied by a random number thrown based on the jet response function, that quantifies the fluctuations in the \pt reconstruction of the jets. The response, defined as the ratio E$_{\rm{T}}^{\rm{reco}}$/E$_{\rm{T}}^{\rm{truth}}$, is determined from \gls{mc} simulations and is then corrected to match data measurements. 
+\item Each jet in each seed event is smeared: its four-momentum is multiplied by a random number thrown based on the jet response function, that quantifies the fluctuations in the \pt reconstruction of the jets. The response, defined as the ratio E$_{\rm{T}}^{\rm{reco}}$/E$_{\rm{T}}^{\rm{truth}}$, is determined from simulations and is then corrected to match data measurements. 
 A different response function is used for $b$-tagged jets. 
 
 \item The smearing procedure is repeated a large number of times, $\mathcal{O}(1000)$, for each event, and every time \met is recomputed with the smeared jets as input; some of these smeared events will have high \met values and will satisfy the analysis selections.
