@@ -13,7 +13,7 @@ relative impact on the expected background between 4 and 35\% in the different \
 $b$-tagging efficiency and mistagging rate (3--24\%).
 
 \item Theoretical uncertainties, which are the sum in quadrature of the modeling systematics discussed in Section \ref{sec:common_backgrounds}.
-In this case the dominant uncertainties are the ones on the modeling of the \ttbar background, whose impact ranges between 5 and 76\%).
+In this case the dominant uncertainties are the ones on the modeling of the \ttbar background, whose impact ranges between 5 and 76\%.
 
 \item \gls{mc} statistical uncertainty.
 
@@ -22,7 +22,7 @@ In this case the dominant uncertainties are the ones on the modeling of the \ttb
 \end{itemize}
 
 The total uncertainty (black line in Figure \ref{fig:syst}) takes into account correlation effects across the different systematic sources, 
-and therefore is not the sum in quadrature of the individual components. 
+and therefore is not equal to the sum in quadrature of the individual components. 
 
 \begin{figure}[htbp]
 	\centering
@@ -36,7 +36,7 @@ and therefore is not the sum in quadrature of the individual components.
 \section{Results}
 \label{sec:strongprod:results}
 
-The statistical procedures discussed in Chapter \ref{chap:stat} are used to compare the simulation and the data and extract 
+The statistical procedures discussed in Chapter \ref{chap:stat} are used to compare the simulations and the data, and to extract 
 quantitative information on their agreement and on the presence of \gls{bsm} signals. 
 The first step is the background-only fit, a maximum-likelihood fit where only the \glspl{cr} are included, as described in Section 
 \ref{sec:example_cr}. 
@@ -50,10 +50,10 @@ corresponding \glspl{sr}.
 The top panel of Figures \ref{fig:pullCR_discovery} and \ref{fig:pullCR_exclusion} shows the 
 comparison between data and simulation in the 
 \glspl{cr} of the cut-and-count and multi-bin analyses respectively. In the same figures, the bottom panel 
-shows the \ttbar normalization factor derived from the fit in the \glspl{cr} with its uncertainty, driven by the statistical uncertainty 
+shows the \ttbar normalization factor derived from the fit in the \glspl{cr} with the associated uncertainty, driven by the statistical uncertainty 
 in the \glspl{cr}.  The systematic uncertainties on the expected number of events are included in the fit as nuisance parameters.
-Note that in the case of the cut-and-count analysis the fit is performed separately in each \gls{cr}.
-Instead for the multi-bin analysis all the \glspl{cr} are included in the same fit, even though with independent parameters for the 
+Note that in the case of the cut-and-count analysis the fit is performed separately in each \gls{cr}, 
+while for the multi-bin analysis all the \glspl{cr} are included in the same fit, even though with independent parameters for the 
 \ttbar normalization. 
  
 
@@ -61,7 +61,7 @@ Instead for the multi-bin analysis all the \glspl{cr} are included in the same f
 	\centering
 	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_CRs_17_06_23_singlebin.pdf}\label{fig:pullCR_discovery}}
 	\subfigure[]{\includegraphics[width=0.9\textwidth]{figures/strong_prod/paper/pulls/histpull_pulls_in_CRs_multichannel_17_06_23.pdf}\label{fig:pullCR_exclusion}}
-	\caption{Pre-fit event yield in control regions and related \ttbar
+	\caption{Pre-fit event yield in \glspl{cr} and related \ttbar
           normalization factors after the background-only fit for
           \subref{fig:pullCR_discovery} 
 		the cut-and-count and \subref{fig:pullCR_exclusion} the multi-bin analyses. The upper panel shows 
@@ -76,7 +76,7 @@ Instead for the multi-bin analysis all the \glspl{cr} are included in the same f
 \end{figure}
 
 Figures \ref{fig:pullVR_discovery} and \ref{fig:pullVR_exclusion} show the result of the background-only fit extrapolated to the \glspl{vr} of 
-the cut-and-count and multi-bin analysis respectively. The upper panel shows the comparison of the number of predicted and observed events, 
+the cut-and-count and multi-bin analyses respectively. The upper panel shows the comparison of the number of predicted and observed events, 
 while the bottom panel quantifies the difference between the expected and the observed with the pull, defined as the difference between 
 number of observed and expected events divided by the total uncertainty. 
 
@@ -96,11 +96,11 @@ number of observed and expected events divided by the total uncertainty.
 	\label{fig:pullVR}
 \end{figure}
 
-The result of the fit extrapolated to the \glspl{sr} and the observed number of events in the \glspl{sr} is finally
+The result of the fit extrapolated to the \glspl{sr} and the observed number of events in the \glspl{sr} are finally
 shown in Figures \ref{fig:pullSR_discovery} and \ref{fig:pullSR_exclusion} 
 for the cut-and-count and the multi-bin analyses respectively. 
 No significant excess is observed in the \glspl{sr}; the largest excess is observed in SR-0L-HH, 
-one of the regions of the multi-bin analysis, where the pull 2.3 standard deviations. 
+one of the regions of the multi-bin analysis, where the pull is 2.3 standard deviations. 
 The numerical results in the cut-and-count \glspl{sr} are summarized in Table \ref{tab:yield_discovery}.
 
 \begin{figure}[htbp]
@@ -214,9 +214,9 @@ signal models.
 The results of the background-only fit in the cut-and-count \glspl{sr}
 are used to place model-independent limits on the number of \gls{bsm} events in the \glspl{sr}. 
 This limit is obtained with the \gls{cls} method; for each \gls{sr}, a fit similar to the background-only fit is performed 
-but the number of observed and expected events in the \glspl{sr} (with its uncertainty) is included in the fit as well. 
+but the number of observed and expected events in the \glspl{sr} (with the associated uncertainty) are included in the fit as well. 
 Any signal contamination in the \glspl{cr} is neglected. 
-The limits reported in Table \ref{mod-ind-lim} are obtained with pseudo-experiments, as dissed in Section \ref{sec:stat:example:limits}.
+The limits reported in Table \ref{mod-ind-lim} are obtained with pseudo-experiments, as discussed in Section \ref{sec:stat:example:limits}.
 
 \begin{table}[htbp]
         \centering
@@ -278,9 +278,9 @@ In this case the results are obtained using the asymptotic approximation \cite{C
 \end{figure}
 
 Figures \ref{fig:limits_Gtt} and \ref{fig:limits_Gbb} show the excluded region of the parameter space for Gtt and Gbb models 
-respectively. The dashed blue line shows the expected 95\% \gls{cls} limit, which is the limit we would obtain if the observed number of 
-events were identical to the expectation from \gls{sm} only, and the yellow band around it indicates the effect of the 
-uncertainty in the background prediction. The observed limit is shown with a solid red line, and the dotted red lines show the impact 
+respectively. The dashed blue lines show the expected 95\% \gls{cls} limit, which is the limit we would obtain if the observed number of 
+events were identical to the expectation from \gls{sm} only, and the yellow bands around it indicate the effect of the 
+uncertainty on the background predictions. The observed limits are shown with a solid red line, and the dotted red lines show the impact 
 of the signal systematic uncertainties on the signal modeling (discussed in Section \ref{sec:strong:signalxsec}). 
 Both in the case of the Gtt and Gbb models, the observed limit is weaker that the expected. 
 This particularly evident for Gtt models with massless neutralino, where the limit is driven by SR-0L-HH, which has the larges deviation 
@@ -304,15 +304,15 @@ and only a few selected mass points are considered.
 
 Figure \ref{fig:limit_br_fixed_neu} shows the 95\% \gls{cls} exclusion limit for signal models with $m(\ninoone) = 1$ GeV and 
 $m(\gluino) = 1.8$, 1.9 and 2.0 TeV. The solid and dashed lines show respectively the observed and expected limits for the different 
-mass hypothesis, distinguished by the different colors. The hashing indicates which side of the plane is excluded. 
+mass hypotheses, distinguished by the different colors. The hashing indicates which side of the plane is excluded. 
 Due to the mild excesses observed in the multi-bin analysis, the observed limits are weaker than the expected. 
 In particular, for a gluino mass of 1.8 TeV, we expect to exclude the entire \gls{br} plane, while the "pure Gtb" corner 
 in the bottom left, where both $B(\gluino \to t \bar{t} \ninoone)$ and $B(\gluino \to b \bar{b} \ninoone)$ are low, 
 is not excluded; none of the points are excluded for a gluino mass of 2.0 TeV. 
 
-Figure \ref{fig:limit_br_fixed_glu} shows instead three signal mass hypothesis with a gluino mass of 1.9 TeV 
+Figure \ref{fig:limit_br_fixed_glu} shows instead three signal mass hypotheses with a gluino mass of 1.9 TeV 
 and $m(\ninoone) = 1$, 600 and 1000 GeV. Also in this case the observed limits are less stringent than the expected, leaving 
-not-excluded areas also for signals that we expect to exclude for any \gls{br}, such as the one with neutralino mass of 600 GeV.
+non-excluded areas also for signals that we expect to exclude for any \gls{br}, such as the one with neutralino mass of 600 GeV.
 
 
 \begin{figure}[htbp]
@@ -336,7 +336,7 @@ not-excluded areas also for signals that we expect to exclude for any \gls{br}, 
 In this analysis, the results of the multi-bin analysis are used to set model-dependent limits on selected signal models.
 Also the regions cut-and-count analysis, used to set the model-independent limits in Section \ref{sec:strong:modelindepUL}, 
 can be used to provide a statement on specific signal models. The different regions of the cut-and-count analysis are not orthogonal 
-and therefore can not be combined in a single statistical fit, but they can still be "visually combined" in a single exclusion contour 
+and therefore cannot be combined in a single statistical fit, but they can still be "visually combined" in a single exclusion contour 
 by selection for each mass point the cut-and-count region with the best expected sensitivity, and this contour can be compared 
 with the contour obtained with the multi-bin approach.
 This is shown in Figures \ref{fig:limits_Gtt_comp} and \ref{fig:limits_Gbb_comp} for the Gtt and Gbb models respectively.
