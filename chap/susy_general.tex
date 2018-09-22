@@ -629,15 +629,15 @@ As an example, the impact of these systematic uncertainties on the shapes of the
 
 \subsection{Diboson production}
 
-Beside the production of a single vector boson, also pair production is possible: 
+In addition to the production of a single vector boson, also pair production is possible: 
 the \gls{lo} Feynman diagrams for the production of a boson pair are shown in Figure \ref{fig:dib_prod}.
 The cross-section is suppressed by more than three orders of magnitude with respect to the 
 single-vector-boson case. 
-Therefore, despite that presence of two bosons leads a higher acceptance into the analysis regions,
+Therefore, despite the fact that presence of two bosons leads a higher acceptance into the analysis regions,
 the overall contribution diboson processes to the total \gls{sm} background is small. 
 The diboson \gls{mc} samples are generated with \Sherpa v2.2.1, and their cross-sections are computed at \gls{nlo} \cite{ATL-PHYS-PUB-2016-002,ATL-PHYS-PUB-2017-005}.
 A 50\% normalization uncertainty is applied to the predicted number of events for this background, to take into account 
-systematic uncertainties in its modeling. This conservative uncertainty is found to have a negligible impact in the analysis results. 
+systematic uncertainties in its modeling. This conservative uncertainty is found to have a negligible impact on the analysis results. 
 
 
 \begin{figure}[h!]
@@ -654,9 +654,9 @@ systematic uncertainties in its modeling. This conservative uncertainty is found
 A pair of top quarks can be produced also in association with a vector boson o a Higgs boson, as shown in Figures \ref{fig:ttW_prod}-\ref{fig:tth_prod}.
 In this thesis, these processes constitute a minor background and are grouped in the category $\ttbar+X$, together with four-top production,
 for which an example \gls{lo} Feynman diagram is shown in Figure \ref{fig:fourtop_prod}. 
-The production of a \ttbar pair in association with a vector boson and four-top production is modeled with \aNLO showered with \PY v8, while for $\ttbar+H$ the same 
+The production of a \ttbar pair in association with a vector boson and the four-top production are modeled with \aNLO showered with \PY v8, while for $\ttbar+H$ the same 
 \gls{me} generator is used but the \gls{psh} processes is performed with \HWpp. 
-All of these samples are normalized to the \gls{nlo} cross-section \cite{Alwall:2014hca,Heinemeyer:2013tqa}.
+All of these samples are normalized to the corresponding \gls{nlo} cross-sections \cite{Alwall:2014hca,Heinemeyer:2013tqa}.
 As described above for the diboson background, a conservative 50\% normalization uncertainty is applied also to the 
 $\ttbar+X$ background, and also in this case it is found to have negligible impact in the analysis. 
 
@@ -673,7 +673,7 @@ $\ttbar+X$ background, and also in this case it is found to have negligible impa
 
 Multijet production is by far the process with the largest cross-section at the \gls{lhc} ($\mathcal{O}$(mb)). 
 Most of the \gls{qcd} events are $2 \to 2$ processes, for which some example \gls{lo} Feynman diagrams are shown in Figure \ref{fig:qcd_prod_1} and Figure \ref{fig:qcd_prod_2}, but higher order processes ($2 \to n$) are possible as well (an example of $2 \to 3$ process is shown in Figure \ref{fig:qcd_prod_3}). 
-Multijet processes do not have real \met, and therefore they can be a background in analyses that require high \met only if one or more of the jets are mismeasured, leading to an energy imbalance in the transverse plane that is reconstructed as \met. 
+Multijet processes do not yield real \met, and therefore they can be a background in analyses that require high \met only if one or more of the jets are mismeasured, leading to an energy imbalance in the transverse plane that is reconstructed as \met. 
 These processes do not produce any lepton either, so also a contribution to analyses requiring leptons must originate from a jet misreconstructed as a lepton. 
 Since the probability for a multijet event to both have a fake high \met and a fake lepton is very small, multijet processes are considered as background only in the analysis regions with a veto on the presence of leptons. 
 
@@ -691,10 +691,10 @@ Since the probability for a multijet event to both have a fake high \met and a f
 \label{sec:jet_smearing}
 
 The usage of \gls{mc} simulation to model the multijet background presents two main drawbacks.
-First of all, the production cross-section for multijet production is very difficult to predict accurately. 
+First of all, the cross-section for multijet production is very difficult to predict accurately. 
 It is feasible to model the $2 \to 2$ dijet production, 
 but every additional parton in a $2 \to n$ process brings into the computation a further $\alpha_{\rm{s}}$ factor, 
-and the energy scale of the interaction is low enough to be at the limit of the validity of the perturbative expansion, limiting the validity of a  \gls{lo} order computation. The inclusion of corrections of higher order can improve the description, but the number of extra diagrams that should be included makes this option unrealistic (just the \gls{lo} computation for the $2 \to 2$ process only comprises 10 different diagrams).
+and the energy scale of the interaction is low enough to be at the limit of the validity of the perturbative expansion, limiting the validity of a  \gls{lo} order computation. The inclusion of corrections of higher order can improve the description, but the number of extra diagrams that should be included makes this option unrealistic (just the \gls{lo} computation for the $2 \to 2$ process comprises 10 different diagrams).
 A second problem is of practical nature: the high cross-section for multijet production implies a huge number of \gls{mc} events that need to be simulated in order not to have a huge statistical uncertainty. 
 
 The jet smearing method overcomes these problems by providing a data-driven estimate of the multijet background, through the following steps:
@@ -709,7 +709,7 @@ A different response function is used for $b$-tagged jets.
 \item The number of events that satisfy the analysis selections is arbitrary and depends on the choice of the seed events and on the number of smears for each event. The normalization is derived in a specifically designed \gls{qcd} \gls{cr}, that relies on a tight upper selection on \dphimin ($\dphimin < 0.1$). All the zero-lepton analysis regions have the requirement $\dphimin > 0.4$, which makes them orthogonal to the \gls{qcd} \gls{cr} and allows also to have \glspl{vr} in the intermediate region. 
 \end{itemize}
 
-Figure \ref{fig:jet_smear_dphi} shows the distribution of \dphimin in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero lepton. The first bin of this distribution is the region used for the normalization of the multijet background, 
+Figure \ref{fig:jet_smear_dphi} shows the distribution of \dphimin after a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero lepton. The first bin of this distribution is the region used for the normalization of the multijet background, 
 while the phase space up to $\dphimin=0.4$ (which is the lower threshold for the analysis regions) serves as validation region. 
 Figures \ref{fig:jet_smear_met} and \ref{fig:jet_smear_jetn} show respectively the distribution of \met and of the number of jets in the \gls{qcd} \gls{cr} and in a validation region with $0.1 < \dphimin < 0.2$.
 

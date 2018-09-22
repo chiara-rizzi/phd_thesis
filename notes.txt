@@ -2,6 +2,10 @@ Big corrections:
 mc simul chapter - how many partons at NLO and such
 understand CLs scan
 
+zero lepton or zero leptons?
+uncertainty in / on 
+Add plot LM yields in SR
+
 Plots:
 CLs scan (maybe)
 ewk optimization, separation
