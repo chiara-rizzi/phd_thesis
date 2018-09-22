@@ -201,9 +201,8 @@ While a few of these variables are related to specific characteristics of the si
 discussed in Chapter \ref{chap:ewk_prod} that involves two Higgs bosons, most of them are built based on the features of the main  
 background processes we need to suppress and are therefore in common between the two analyses. 
 
-\subsubsection*{Object energy and multiplicity}
-
-Even just the multiplicity of the objects defined in Section \ref{sec:common_obj_def} provides a powerful handle to analyze the characteristics of an event. In particular, the following multiplicity variables are used:
+\begin{description}
+\item[Object energy and multiplicity] Even just the multiplicity of the objects defined in Section \ref{sec:common_obj_def} provides a powerful handle to analyze the characteristics of an event. In particular, the following multiplicity variables are used:
 
 \begin{description}
 \item[\njet] Number of signal jets in the event.
@@ -215,9 +214,7 @@ Even just the multiplicity of the objects defined in Section \ref{sec:common_obj
 for example, we always consider events with a minimum \met of 200 GeV (the selection is tighter in some \glspl{sr}), 
 or we can consider only jets with \pt above a certain threshold if we expect high-\pt jets from the signal. 
 
-\subsubsection*{Effective mass}
-
-The effective mass is defined as the scalar sum of the momenta of all the signal objects in the event and the missing transverse momentum:
+\item[Effective mass] The effective mass is defined as the scalar sum of the momenta of all the signal objects in the event and the missing transverse momentum:
 
 \begin{equation}
 \meffi = \sum_{i\leq n} {\pt}^{j_i}  + \sum_{j\leq m} {\pt}^{\ell_j}  + \met \; .
@@ -225,9 +222,7 @@ The effective mass is defined as the scalar sum of the momenta of all the signal
 
 \noindent This variable reflects the overall energy scale of the event, and in the signal is therefore correlated to the mass of the \gls{susy} particles produced. 
 
-\subsubsection*{Transverse mass}
-
-The transverse mass between lepton and \met (\mt) is defined for events with at least one selected signal lepton as: 
+\item[Transverse mass] The transverse mass between lepton and \met (\mt) is defined for events with at least one selected signal lepton as: 
 
 \begin{equation}
 \mt = \sqrt{2\pt^{\rm{lep}}\met(1-\cos\Delta\phi(\met,\pt^{\rm{lep}}))} \; ,
@@ -248,10 +243,7 @@ Another useful variable to suppress the \ttbar background is the minimum transve
 \noindent where the minimum is taken over the transverse mass computed with the three leading $b$-tagged jets in the event. 
 In semileptonic \ttbar events, this variable presents an endpoint near the top-quark mass, as this is the endpoint that is obtained when \met originating from the neutrino is perfectly measured and the $b$-jet produced in the decay of the same top quark as the neutrino is among the three leading $b$-tagged jets. 
 
-
-\subsubsection*{Multijet suppression}
-
-\gls{sm} background events without any neutrino in the decay chain can still have a sizable amount of reconstructed \met if one of the jets in the 
+\item[Multijet suppression] \gls{sm} background events without any neutrino in the decay chain can still have a sizable amount of reconstructed \met if one of the jets in the 
 event is mismeasured, leading to a fake energy imbalance in the event. In these cases, the resulting \met will have a value of the azimuthal angle ($\phi$) close to the one of the mismeasured jet. The variable \dphimin is defined as the minimum difference in azimuthal angle between \met and the  four jets with the highest \pt in the event:
 
 \begin{equation}
@@ -259,6 +251,9 @@ event is mismeasured, leading to a fake energy imbalance in the event. In these 
 \end{equation}
 
 \noindent Requiring high values of this variable helps rejecting events with no real \met. 
+
+\end{description}
+
 
 
 \section{Background processes and their modeling}

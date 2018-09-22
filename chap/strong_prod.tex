@@ -10,7 +10,7 @@ Section \ref{sec:strong:dataMC} shows the comparison between data and simulation
 Section \ref{sec:strong:syst} discusses the systematic uncertainties that are included in the analysis, and Section \ref{sec:strongprod:results} 
 presents the results. 
 The interpretation of the results in terms of model-independent and model-independent limits is presented in Section \ref{sec:strongprod:limits}. 
-In Section \ref{sec:strong:r21} we show the update of the analysis with 2017 data-taking period.
+In Section \ref{sec:strong:r21} we show the update of the analysis including also the 2017 data taking period.
 
 \section{Signal model}
 \label{sec:strong:signalmodel}
@@ -20,7 +20,7 @@ Figure \ref{fig:diagram_Gtt} shows a schematic diagram of the Gtt model:
 each of the pair-produced gluinos decays with 100\% \gls{br} to two top quarks and the lightest neutralino (\ninoone).
 In the Gbb model, shown in Figure \ref{fig:diagram_Gbb}, the decay happens through an off-shell sbottom and each gluino decays to 
 two bottom quarks and the \ninoone. Both models assume R-parity conservation, so the \ninoone, which in this case is the \gls{lsp}, is stable 
-and escapes undetected giving rise to \met in the event. In both cases, the three body decay is realized through an off-shell squark, 
+and escapes the detection giving rise to \met in the event. In both cases, the three body decay is realized through an off-shell squark, 
 and it involves two interaction vertices. The first one is a strong-interaction vertex, in the case of the Gtt model:
 $\gluino \to t \stop^{(*)}$.
 The second is an electroweak vertex, originating from the decay of the \stop (or \sbottom in the case of the Gbb model):
@@ -39,8 +39,8 @@ $\stop \to \bar{b} \chinoonem$ and
 $\sbottom \to t \chinoonem$.
 The charge-conjugate processes are also possible, and in both cases the overall decay chain of the gluino leads to $\gluino \to t b \chinoonem$, which we refer to as Gtb model.
 The model used to reinterpret this analysis assumes the decay $\chinoonepm \to \ninoone W^{\pm}$, where the $W$ boson can be off-shell if the mass difference between the \chinoonepm and the \ninoone is not large enough to produce an on-shell $W$ boson. 
-This mass difference becomes a further parameter of the model, and in this analysis we assume that the \chinoonepm and the \ninoone 
-are almost degenerate (in the simulation, they are generated with a mass difference of 2 GeV); in this case the $W$ boson is virtual and results into soft fermions, which most of the time are not reconstructed. This small mass difference is often verified in models where the \chinoonepm and the \ninoone are part of an approximate $SU(2)$ multiplet, and setting it to a fixed value allows reducing the number of parameters of the model. 
+This mass difference becomes an additional parameter of the model, and in this analysis we assume that the \chinoonepm and the \ninoone 
+are almost degenerate (in the simulation, they are generated with a mass difference of 2 GeV); in this case the $W$ boson is virtual and results into soft fermions, which most of the times are not reconstructed. This small mass difference is often verified in models where the \chinoonepm and the \ninoone are part of an approximate $SU(2)$ multiplet, and setting it to a fixed value allows to reduce the number of parameters of the model. 
 This analysis provides an interpretation of the result in terms of the \gls{br} of the gluino into the Gtt, Gbb and Gtb models. 
 A schematic diagram of the possible decay chains in this mixed-\gls{br} interpretation, in addition to the ones shown in Figure \ref{fig:strong_diagram}, is shown in Figure \ref{fig:strong_diagram_br}.
 
@@ -88,9 +88,8 @@ Most of the kinematic variables used in this analysis to discriminate between si
 are in common with the higgsino search and have already been discussed in Section \ref{sec:common_variables}.
 Two additional variables, used only in this analysis, are defined in this section.
 
-\subsubsection*{Total jet mass}
-
-The total jet mass is the sum of the masses of the four leading reclustered jets in the event:
+\begin{description}
+\item[Total jet mass] The total jet mass is the sum of the masses of the four leading reclustered jets in the event:
 
 \begin{equation}
 \mjsum = \sum_{i \leq 4} m_{J,i} \; .
@@ -98,9 +97,7 @@ The total jet mass is the sum of the masses of the four leading reclustered jets
 
 \noindent This variable is particularly useful in the case of boosted Gtt signals, where the four top quarks are produced with high momentum and can be reconstructed as reclustered jets with high mass. 
 
-\subsubsection*{ISR jet}
-
-In the case of Gbb models, when the mass of the neutralino is close to the mass of the gluino the neutralino is produced almost at rest and the event does not have a sizable \met; this reduces the sensitivity of the analysis to these cases. 
+\item[ISR jet] In the case of Gbb models, when the mass of the neutralino is close to the mass of the gluino the neutralino is produced almost at rest and the event does not have a sizable \met; this reduces the sensitivity of the analysis to these cases. 
 For these signal models, a sizable value of \met can be present in events where the gluino system is recoiling against a hard jet from \gls{isr}; if we assume that the \gls{isr} jet is the most energetic jet in the event, there will be an angular separation between this jet and \met larger than the average. The variable \dphilead, defined as:
 
 \begin{equation}
@@ -109,6 +106,7 @@ For these signal models, a sizable value of \met can be present in events where 
 
 \noindent helps therefore in selecting signal events where the \met derives from a neutralino boosted by an \gls{isr} jet. 
 
+\end{description}
 
 The variables defined above, together with the ones defined in Section \ref{sec:common_variables},
 allow to 
@@ -119,20 +117,21 @@ with at least one signal lepton.
 Figures \ref{fig:strong:sig:bjets_n} to \ref{fig:strong:sig:met} show the distribution of some important kinematic variables for 
 the sum of the \gls{sm} backgrounds and for selected signal samples. 
 
-From Figure \ref{fig:strong:sig:bjets_n} it is possible to see how signal events have in general higher number of 
+From Figure \ref{fig:strong:sig:bjets_n} it is possible to see how signal events have in general a higher number of 
 $b$-tagged jets than background events; despite this, this variable alone is not sufficient to reduce the number of 
-background events enough to be sensitive to the signal.
+background events enough to 
+yield a sizable sensitivity to the signal models of interest.
 
 Figure \ref{fig:strong:sig:jets_n} shows the distribution of the number of signal jets. 
-In this case, the result of the comparison between the shape of the distribution for signal and for backgrounds depends heavily 
+In this case, the result of the comparison between the shape of the distribution in signal and in the main backgrounds depends heavily 
 on the specific signal considered. In particular, Gbb signal models tend to have a lower number of jets than Gtt models; 
 this is expected, since in Gtt models the decay of the top quark to a $b$-quark and a $W$ boson can lead to up to 12 jets originating from the 
 hard scattering process, while only four of such jets are present in Gbb signals. 
-Furthermore, Gtt events in the 0-lepton channel have more jets than Gttt-events in the 1-lepton channel, since the leptonic decays of the $W$ boson 
+Furthermore, Gtt events in the 0-lepton channel have more jets than Gtt-events in the 1-lepton channel, since the leptonic decays of the $W$ boson 
 reduce the amount of hadronic activity in the final state. 
 It can be noted that while in \gls{sm} simulations all-hadronic \ttbar events do not enter our analysis regions because of the lack of real \met,  there are signal events where all the top quarks decay hadronically, since the \met is provided by the neutralino. 
 
-A key variable in the suppression of the \ttbar background is \mtb, whose distribution is shown in Figure \ref{fig:strong:sig:mTb_min}.
+A key variable for the suppression of the \ttbar background is \mtb, whose distribution is shown in Figure \ref{fig:strong:sig:mTb_min}.
 The kinematic endpoint that characterizes \ttbar events is not present for signal events, which tend to have a more uniform distribution.
 Despite not having a kinematic endpoint, not all signals have a \mtb distribution that reaches high values: this is more likely for 
 signals with a large splitting between the gluino and the neutralino masses, which leads to the decay products being boosted.
@@ -215,24 +214,25 @@ A similar argument can be made for \mjsum and \met, shown in Figures \ref{fig:st
 \section{Cut-and-count analysis regions}
 \label{sec:strong:cutandcount}
 In this section, we discuss the definition of the cut-and-count analysis regions: 
-first of all the optimization process that leads to the \glspl{sr} and then the 
-design of corresponding \glspl{cr} for the normalization of the \ttbar background and 
-\glspl{vr} to test the validity of the background prediction.
+first of all the optimization process that leads to the \glspl{sr}, then the 
+design of the corresponding \glspl{cr} for the normalization of the \ttbar background  
+and of the \glspl{vr} to test the validity of the background prediction.
 
 \subsection{Signal regions}
 
-As discussed in Section \ref{sec:analysisstrategy}, the cut-and-count \glspl{sr} are designed to maximize the significance to specific 
-signal benchmarks, where the significance is defined as the number of standard deviations in a Gaussian that give the p-value obtained with Equation \ref{eq:binomexpp}.
-Since they are not meant to be statistically combined, they do not need to be mutually exclusive and each of them can be optimized independently.
+As discussed in Section \ref{sec:analysisstrategy}, the cut-and-count \glspl{sr} are designed to maximize the significance for specific 
+signal benchmarks, where the significance is defined as the number of Gaussian standard deviations that correspond to the p-value obtained with Equation \ref{eq:binomexpp}.
+Since they are not meant to be statistically combined, the \glspl{sr} do not need to be mutually exclusive and each of them can be optimized independently.
 The variables considered in the optimization are chosen by selecting the ones that show the most significant differences in shape between signal and background, and are \njet, \nbjet, \met, \meff, \mjsum, \mtb and, in the case of regions requiring at least one lepton, \mt.
 The \glspl{sr} are defined as the set of selections that maximize the expected significance for each benchmark model while fulfilling these requirements:
 \begin{itemize}
 \item At least 0.5 expected background events.
-\item \ttbar as major background component, since it is the one that is normalized in \glspl{cr}.
+\item \ttbar as major background component, since it is the one that is normalized in \glspl{cr}  and is hence constrained more robustly. 
 \item The \gls{mc} statistical uncertainty in the \ttbar component $<30$\%.
 \item At least 2 expected events for the benchmark signal considered. 
 \end{itemize}
-After selecting events with at lest four jets, at least three $b$-jets, which fired the \met trigger and with $\met>200$ GeV, three separate optimizations are performed:
+After selecting events that satisfy the \met trigger requirement and have at least four jets, at least three $b$-jets and $\met>200$ GeV, 
+three separate optimizations are performed:
 
 \begin{description}
 
@@ -245,10 +245,10 @@ All the Gtt \glspl{sr} are reported in Table \ref{tab:GttEvsel}, together with t
 
 \item[Gbb] The optimization of the \glspl{sr} targeting the Gbb model (shown in Figure \ref{fig:diagram_Gbb}) is performed separately. 
 This signal does not produce any prompt lepton in the final state, but its characteristics differ noticeably from 
-the case of Gtt-0L, particularly it has a lower number of jets. 
+the case of Gtt-0L, particularly due to the lower number of jets. 
 Four \glspl{sr} are optimized for the Gbb signals: boosted (B), medium (M), compressed (C), and very compressed (VC). 
-The last \gls{sr} targets compressed Gbb models, where the ETmiss trigger requirement is satisfied because the gluino system is recoiling against 
-and \gls{isr} jet, giving additional boost to the neutralinos. To enhance this topology, this region requires that the leading jet is
+The last \gls{sr} targets compressed Gbb models, where the \met trigger requirement is satisfied because the gluino system is recoiling against 
+an \gls{isr} jet, giving additional boost to the neutralinos. To select this topology, this region requires that the leading jet is
 not $b$-tagged, and 
 the variable \dphilead is included in the optimization. The selections resulting from the optimization of the Gbb \glspl{sr} are 
 reported in Table \ref{tab:Gbb0LEvsel}, together with the corresponding \glspl{cr} and \glspl{vr}.
@@ -257,11 +257,12 @@ reported in Table \ref{tab:Gbb0LEvsel}, together with the corresponding \glspl{c
 
 \subsection{Control and validation regions}
 
-All the \glspl{cr} of the cut-and-count regions, including the ones for the Gbb \glspl{sr} and for the Gtt-1L \glspl{sr}
+All the \glspl{cr} of the cut-and-count regions, including the ones for the Gbb \glspl{sr} and for the Gtt-1L \glspl{sr}, 
 require the presence of at least one signal lepton. 
 The orthogonality with the Gtt-1L \glspl{sr} is ensured by applying to all the \glspl{cr} an upper selection on $\mt < 150$ GeV.
 To have enough events in the \glspl{cr} to properly constrain the \ttbar background, the 
-\mtb selection is removed and other selections are relaxed, ensuring at least 10 expected background events in each \gls{cr}.
+\mtb selection is removed and other selections are relaxed, 
+so that each \gls{cr} has a minimum of 10 expected background events. 
 
 In the Gtt-1L regions the extrapolation between each pair of \gls{cr} and \gls{sr} is validated in two different \glspl{vr}:
 \gls{vr}-\mt is designed to verify the extrapolation to high \mt, and is maintained orthogonal to the \gls{sr} through an inverted \mjsum 
@@ -273,7 +274,7 @@ In the case of the Gtt-0L regions, the main extrapolation between each pair of \
 This is validated in a specifically-designed 0-lepton \gls{vr}, 
 that is kept orthogonal to the corresponding \gls{sr} by an inverted \mjsum selection.
 
-Similarly, also each Gbb region has a 0-lepton \gls{vr}, whose orthogonality with the \gls{sr} is maintained through 
+Similarly, each Gbb region also has a 0-lepton \gls{vr}, whose orthogonality to the \gls{sr} is maintained through 
 a shift in the \meff selection for Gbb-B and Gbb-M, and in the \met selection in Gbb-C and Gbb-VC (since these last 
 two regions target signal models with a compressed mass spectrum, and therefore do not apply any \meff selection in the \gls{sr}).
 
@@ -425,8 +426,8 @@ Figure \ref{fig:ttcomp_Gtt1L} shows that the \glspl{cr} are dominated by single-
 this is because both these types of regions have an upper selection on \mt.
 Instead the \glspl{sr} and the \glspl{vr} that check the \mt extrapolation require high \mt values;
 this selection suppresses single-lepton \ttbar background and therefore the \glspl{sr} and \glspl{vr}-\mt
-are dominated by dilepton \ttbar.
-In the case of Figures \ref{fig:ttcomp_Gtt0L} and \ref{fig:ttcomp_Gbb} we see all regions are dominated by single-lepton \ttbar background.
+are dominated by dileptonic \ttbar.
+In the case of Figures \ref{fig:ttcomp_Gtt0L} and \ref{fig:ttcomp_Gbb} we see that all regions are dominated by single-lepton \ttbar background.
 In these cases, the \glspl{cr} are 1-lepton regions with an upper cut on \mt and the \glspl{sr} and \glspl{vr} are 0-lepton regions,
 so in all of them the main background component is  single-lepton \ttbar. In the case of SRs and VRs though, this single-lepton component
 is dominated by $\tau$+jets, since this category includes both hadronic and leptonic decays of the $\tau$-lepton.
@@ -454,9 +455,10 @@ is dominated by $\tau$+jets, since this category includes both hadronic and lept
 
 The classification of the \ttbar background based on the flavor of the jets associated to the 
 \ttbar production, as described in Section \ref{sec:susy_general:ttbar}, is shown in Figures 
-\ref{fig:HFcomp_Gtt1L}-\ref{fig:HFcomp_Gbb}.
-Thanks to adopting the same selection on the number of $b$-jets in \gls{cr}, \gls{sr} and \glspl{vr} 
-of the same region type, composition is similar in corresponding regions, even if the fraction of 
+\ref{fig:HFcomp_Gtt1L}-\ref{fig:HFcomp_Gbb}. 
+Thanks to the fact that the same selection on the number of $b$-jets is adopted in the \gls{cr}, \gls{sr} and \glspl{vr} of the same type, 
+the flavor composition is similar in the corresponding regions, 
+even if the fraction of 
 \tthf is sometimes higher in the \glspl{sr}, especially in the case of Gtt-1L regions. 
 
 
@@ -496,7 +498,7 @@ but all mutually exclusive, so that they can be statistically combined to increa
 Figure \ref{fig:strong:sig:jets_n} shows that the number of jets provides a good handle to separate 
 between Gbb signal models, with lower number of jets, and Gtt signal models, where the number of jets is instead higher;
 the Gtb model described in Section \ref{sec:strong:signalmodel} will have a number of jets intermediate between the Gtt and the Gtb case, 
-as well as the mixed-\gls{br} case where one of the two produced gluinos decays to $b \bar{b} \ninoone$ and the other to 
+similarly to the mixed-\gls{br} case where one of the two produced gluinos decays to $b \bar{b} \ninoone$ and the other to 
 $t \bar{t} \ninoone$.
 Within a single decay topology, the variable that best discriminates between signals with different mass splitting between $\tilde{g}$ and
 \ninoone is \meff: as shown in Figure \ref{fig:strong:sig:meff_incl}, signal models with larger mass splitting tend to have higher values 
@@ -531,8 +533,9 @@ are required to have either the leading jet $b$-tagged or $\dphilead < 2.9$.
 
 In each of these mutually exclusive \gls{sr}, the selections on variables other than \njet, \nlep and \meff are optimized in a two-steps procedure:
 \begin{enumerate}
-\item First of all, in each region we define the set of selections that maximize the expected significance for a specific benchmark model, where the significance is defined as the number of standard deviations in a Gaussian that give the p-value obtained with Equation \ref{eq:binomexpp}. 
-These selections have to satisfy the same criteria as for the cut-and-count \glspl{sr}, described in Section \ref{sec:strong:cutandcount}.
+\item First of all, in each region we define the set of selections that maximize the expected significance for a specific benchmark model. 
+%where the significance is defined as the number of standard deviations in a Gaussian that give the p-value obtained with Equation \ref{eq:binomexpp}. 
+These selections have to satisfy the same criteria as of the cut-and-count \glspl{sr}, described in Section \ref{sec:strong:cutandcount}.
 The benchmark models used to optimize each \gls{sr} are:
 \begin{description}
 \item[SR-0L-LL] Gbb, $m(\gluino) = 1.9$ TeV, $m(\ninoone) = 1.8$ TeV,
