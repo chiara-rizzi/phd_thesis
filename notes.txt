@@ -10,6 +10,7 @@ Cose da chiedere ad aurelio sulla tesi:
 quando definire gli acronimi? Nelle introduzioni o solo quando se ne parla in dettaglio?
 data mc: miei senza sistematiche vs HF con sistematiche 
 perche’ b-quark ma W boson (niente trattino)
+capitalize Naturalness
 
 Altre cosette 
 comma before “and” in list
