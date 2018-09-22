@@ -8,7 +8,7 @@ Section \ref{sec:common:datasample} illustrates the data sample used in the anal
 Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design and interpret the searches. 
 Sections \ref{sec:common_obj_def} and \ref{sec:common_syst} focus on the definition of the physics objects and the experimental systematic uncertainties respectively; Section \ref{sec:common_variables} presents the main kinematic variables used in the analyses 
 while Section \ref{sec:common_backgrounds} describes the background sources from \gls{sm} processes, 
-how they are modeled in the analyses and the uncertainties in this modeling. 
+how they are modeled in the analyses and the uncertainties on this modeling. 
 
 
 \section{Data sample}
@@ -26,7 +26,7 @@ The version of \met used in the trigger is calorimeter-based, which means that t
 therefore treated as invisible particles.  As described in Section \ref{sec:cern:trigger}, 
 trigger chains for physics analyses comprise first a \gls{lone} trigger selection, and then a selection from the \gls{hlt}.
 \begin{description}
-\item[L1] At \gls{lone} level, the computation of the \met is based on trigger towers of size $0.1\times0.1$ in the $\eta$, $\phi$ space. The towers are clustered in $4\times4$ group with a sliding-window algorithm, and these are used in the \met computation.
+\item[L1] At \gls{lone} level, the computation of the \met is based on trigger towers of size $0.1\times0.1$ in the $\eta$, $\phi$ space. The towers are clustered in $4\times4$ group with a sliding-window algorithm, and are used in the \met computation.
 \item[HLT] Many \gls{hlt} \met algorithms are available in \gls{atlas} and are described in Ref. \cite{Aaboud:2016leb}. 
 The one used in this thesis is the jet-based algorithm, where \met is computed as the negative sum of the \pt of the trigger-level jets in the event. 
 \end{description}
@@ -57,13 +57,13 @@ which can be done e.g. by relaxing the restrictions on the \gls{br} of the \gls{
 
 The analysis strategy is based on the definition of so-called \glspl{sr}, signal-enriched regions defined by selections on relevant kinematic variables with the goal of maximizing the sensitivity to specific benchmark models. 
 After the \glspl{sr} are defined, the key aspect of the analysis is an accurate estimate of the number of events expected from \gls{sm} processes (background events) in these regions, and of the associated uncertainty. 
-With the background estimate in hand, it is possible to look at the observed yields in data and compare it with the expectations;
-this comparison, performed with the statistical methods discussed in Chapter \ref{chap:stat}, allows quantifying the significance of an excess or placing limits on \gls{bsm} signal models.
+With the background estimate at hand, it is possible to look at the observed yields in data and compare it with the expectations;
+this comparison, performed with the statistical methods discussed in Chapter \ref{chap:stat}, allows to quantify the significance of an excess or placing limits on \gls{bsm} signal models.
 
-The estimate of the expected background events can be performed with different techniques. In particular, in these thesis three types of techniques are used:
+The estimate of the expected background events can be obtained with different techniques. In particular, in these thesis three types of techniques are used:
 \begin{itemize}
 \item A first option is to take the background estimate directly from \gls{mc} simulation. 
-\item The \gls{mc} estimate can be improved by normalizing each process in a dedicated \gls{cr}, which is a region non overlapping with the \gls{sr}, but kinematically close to it, enriched in the background process that we want to normalize and with a very low expected signal fraction. Since \gls{cr} and \gls{sr} must be non-overlapping, some of the selections of the \gls{sr} are inverted to design the \gls{cr}; the extrapolation of the background normalization factor form the \gls{cr} to the \gls{sr} is tested in dedicated \glspl{vr}. Figure \ref{fig:susy_common:CRschema} shows a schematic view of the relation between \glspl{cr}, \glspl{vr} and \glspl{vr}. A simplified example of how the usage of \glspl{cr} can lead to an improved background prediction with reduced systematic uncertainties is discussed in Section \ref{sec:example_cr}. 
+\item The \gls{mc} estimate can be improved by normalizing each process in a dedicated \gls{cr}, which is a region non overlapping with the \gls{sr}, but kinematically close to it, enriched in the background process that we want to normalize and with a very low expected signal fraction. Since \gls{cr} and \gls{sr} must be non-overlapping, some of the selections of the \gls{sr} are inverted to design the \gls{cr}; the extrapolation of the background normalization factor from the \gls{cr} to the \gls{sr} is tested in dedicated \glspl{vr}. Figure \ref{fig:susy_common:CRschema} shows a schematic view of the relation between \glspl{cr}, \glspl{vr} and \glspl{vr}. A simplified example of how the usage of \glspl{cr} can lead to an improved background prediction with reduced systematic uncertainties is discussed in Section \ref{sec:example_cr}. 
 \item In some cases, a background estimate that relies only on data and not on \gls{mc} simulation is preferred. In these cases we speak of a data-driven background estimate.
 \end{itemize}
 
@@ -76,7 +76,7 @@ The estimate of the expected background events can be performed with different t
  
 In each of the analyses described in this thesis, two different analysis strategies are carried out in parallel:
 \begin{description}
-\item[Cut-and-count] Several \glspl{sr} are designed, each optimized to maximize the discovery significance to a specific region of the parameter  space, represented by one benchmark model. Cut-and-count \glspl{sr} are useful also to provide simple and powerful model-independent \glspl{ul}, that are easy to re-interpret for signal models different than the ones considered in the analysis. 
+\item[Cut-and-count] Several \glspl{sr} are designed, each optimized to maximize the discovery significance to a specific region of the parameter  space, represented by one benchmark model. Cut-and-count \glspl{sr} are useful also to provide simple and powerful model-independent \glspl{ul}, that are easy to re-interpret for signal models different from the ones considered in the analysis. 
 
 \item[Multi-bin] In this case, the \glspl{sr} are non-overlapping. This requirement conflicts with the simple choice of the best selection to maximize the significance, which means that the individual discovery power of each \gls{sr} is smaller than in the case of cut-and-count \glspl{sr}. On the other hand, having non-overlapping \glspl{sr} allows to statistically combine them in the likelihood fit, leading to a stronger model-dependent expected \gls{ul}. The increase in expected exclusion obtained with the combination of several regions is demonstrated in Section \ref{sec:example_combi}.
  
@@ -86,10 +86,11 @@ In each of the analyses described in this thesis, two different analysis strateg
 \section{Object definition}
 \label{sec:common_obj_def}
 
-Physics objects used in the analyses are defined with two sets of inclusive selections:
-a first set of looser selections defines the baseline objects. 
-These are used as input for the overlap removal algorithm which, in the steps defined in the next paragraph,
-solves the possible double-counting of physics objects (e.g. electrons reconstructed also as jets); objects that survive the overlap removal procedure are then subject to 
+Physics objects used in the analyses are defined with two sets of inclusive selections. 
+A first set of looser selections defines the baseline objects; 
+these are used as input for the overlap removal algorithm which, in the steps defined in the next paragraph,
+solves the possible double-counting of physics objects (e.g. electrons reconstructed also as jets). 
+Objects that survive the overlap removal procedure are then subject to 
 tighter selections to define the signal objects. The specific selections applied to jets, electrons and muons are:
 
 \begin{description}
@@ -103,11 +104,11 @@ In order to suppress fake jets originating from pileup interactions, jets with $
 After overlap removal, signal jets are required to have $\pt>30 (20)$ GeV for the analysis discussed in Chapter \ref{chap:strong_prod} (\ref{chap:ewk_prod}); the difference on the \pt threshold 
 in the two analyses is related to differences in the signal event kinematics, and will be discussed more in detail in the specific chapters.
 
-Jets are considered $b$-tagged based on the output of the MV2c10 algorithm (see Section \ref{sec:btagging}); in both analyses the \gls{op} used corresponds to an average efficiency of 77\% for $b$-jets from simulated  
+Jets are considered to be $b$-tagged based on the output of the MV2c10 algorithm (see Section \ref{sec:btagging}); in both analyses the \gls{op} used corresponds to an average efficiency of 77\% for $b$-jets from simulated  
 \ttbar events, and to a rejection factor of 6, 22 and 134 against jets originating from $c$-quarks, hadronic decays of $\tau$ leptons and light jets respectively. 
 
 
-\item[Re-clustered jets] Baseline jets that survive the overlap removal are re-clustered with the anti-$k_T$ algorithm into large-R jets of radius $R=0.4$, as described in Section \ref{sec:reclustering}. 
+\item[Re-clustered jets] Baseline jets that survive the overlap removal are re-clustered with the anti-$k_T$ algorithm into large-R jets of radius $R=0.8$, as described in Section \ref{sec:reclustering}. 
 Re-clustered jets are trimmed removing the constituents whose \pt falls below 10\% of the \pt of the re-clustered jet, and are then required to have $\pt>100$ GeV and $|\eta|<2.0$.
 
 \item[Electrons] Baseline electrons have to satisfy the Loose identification \gls{op} (see Section \ref{sec:elec_id}) and required to have $\pt > 20 (5)$ GeV the analysis discussed in Chapter \ref{chap:strong_prod} (\ref{chap:ewk_prod}) and $|\eta|<2.47$. 
@@ -117,7 +118,7 @@ Electrons are matched to the \gls{pv} by requiring $|\dzero/\sigma_\dzero| < 5$ 
 
 \item[Muons] Baseline muons are required to satisfy the Medium identification \gls{op} (see Section \ref{sec:muon_id}) and to have $\pt > 20 (5)$ GeV in the analysis discussed in Chapter \ref{chap:strong_prod} (\ref{chap:ewk_prod}) and $|\eta|<2.5$. 
 After overlap removal, signal muons are required to satisfy the $LooseTrackOnly$ isolation \gls{op} and to have $\pt > 20$ GeV.
-Muons are also matched to the \gls{pv} by requiring $|\dzero/\sigma_\dzero| < 3$ and  $|\zzerost| < 0.5$ mm; muons that do not satisfy this selection as considered as cosmic muons, and the events with at least one cosmic muons are vetoed.
+Muons are also matched to the \gls{pv} by requiring $|\dzero/\sigma_\dzero| < 3$ and  $|\zzerost| < 0.5$ mm; muons that do not satisfy this selection are considered as cosmic muons, and the events with at least one cosmic muons are vetoed.
 
 \end{description}
 
@@ -127,12 +128,12 @@ detector signals not associated to reconstructed objects.
 \subsubsection*{Overlap removal}
 
 Potential overlaps between jets, electrons and muons are resolved sequentially with the overlap removal procedure. 
-First of all, electrons that are likely to originate form muon bremsstrahlung, i.e. those that lie within $\dR < 0.01$ from a muon candidate, are removed.
+First of all, electrons that are likely to originate from muon bremsstrahlung, i.e. those that lie within $\dR < 0.01$ from a muon candidate, are removed.
 
 Overlaps between jet candidates and electron arise mostly from two reasons. Electrons are reconstructed from deposits in the calorimeter, and are therefore reconstructed as jets as well.
 In this case we want to preserve the electron and remove the jet, so we remove any non-$b$-tagged jet that lies within $\dR < 0.2$ from an electron candidate;
 an exception is done for $b$-tagged jets, since in this case the electron is likely to originate from a semileptonic $B$-hadron decay. 
-Electron candidates that are close to the surviving jets are likely to have been produced in the decay of an hadron inside the jet, and are therefore removed
+Electron candidates that are close to the surviving jets are likely to have been produced in the decay of a hadron inside the jet, and are therefore removed
 if they lie within $\dR<0.4$ from a jet and their energy is lower than 50 GeV, or if their energy is higher than 50 GeV and the \dR from the jet 
 is lower than min$(0.4, 0.04 + 10 \, {\rm{GeV}}/E_{\rm{T}})$. 
 Having an energy-dependent \dR selection aims at increasing the acceptance for leptons originating from the decay of boosted top quarks.
@@ -148,30 +149,30 @@ is lower than min$(0.4, 0.04 + 10 \, {\rm{GeV}}/\pt)$.
 \section{Experimental systematic uncertainties}
 \label{sec:common_syst}
 
-Each of the selections in the definition of the objects described in Section \ref{sec:common_obj_def} has an associated experimental systematic uncertainty in the modeling of that selection in 
-the \gls{mc} simulation. The experimental systematic uncertainties that are most relevant for analyses targeting final states with multiple $b$-jets and \met are:
+Each of the selections in the definition of the objects described in Section \ref{sec:common_obj_def} has an associated experimental systematic uncertainty due to its modeling in the simulation. 
+The experimental systematic uncertainties that are most relevant for analyses targeting final states with multiple $b$-jets and \met are:
 
 \begin{description}
 
 \item[JES and JER] As discussed in Section \ref{sec:obj:jetcalib}, the \gls{jes} and \gls{jer} calibration procedures allow to both calibrate the jet energy from the \gls{em} to the
-hadronic scale, and also to correct \gls{mc} simulations to describe better the data; the uncertainties in these corrections propagate to the analyses. 
+hadronic scale, and also to correct \gls{mc} simulations to describe better the data; the uncertainties on these corrections propagate to the analyses. 
 For the \gls{jes}, reduced sets of uncertainties are available that reduce the number of \glspl{np} to be included in the analysis at the cost of potential loss in correlation; 
 the analyses discussed in this thesis use a strongly reduced set with three \glspl{np}. 
-Uncertainties in \gls{jes} and \gls{jer} are the leading source of experimental uncertainties, as they can change the kinematic of the jets in the event, and therefore also the number
+Uncertainties on \gls{jes} and \gls{jer} are the leading source of experimental uncertainties, as they can change the kinematics of the jets in the event, and therefore also the number
 of jets that fulfill certain selections.
 
-\item[$b$-tagging] The uncertainties in the $b$-tagging calibration procedure (see Section \ref{sec:obj:btaggingcalib}) are included through uncertainties in the $b$-tagging \gls{sf}. 
-They are divided into one \gls{np} for the uncertainty in the efficiency of tagging jets originating from $b$-quarks, 
+\item[$b$-tagging] The uncertainties on the $b$-tagging calibration procedure (see Section \ref{sec:obj:btaggingcalib}) are included through uncertainties on the $b$-tagging \gls{sf}. 
+They are divided into one \gls{np} for the uncertainty on the efficiency of tagging jets originating from $b$-quarks, 
 one for the mistagging of the jets originating from 
 $c$-quarks, and one for light jets; 
 furthermore, one additional \gls{np} for the high-\pt extrapolation uncertainty, based on \gls{mc} simulation studies, 
 increases the uncertainties in the high-\pt region, where the $b$-tagging calibration is not available and the central 
 value of the \gls{sf} is taken from the closest calibrated \pt region. 
-The uncertainties in $b$-tagging play a relevant role in the analyses in this thesis, as they rely heavily on the selection of events containing $b$-tagged jets.
+The uncertainties on $b$-tagging play a relevant role in the analyses in this thesis, as they rely heavily on the selection of events containing $b$-tagged jets.
 
 \item[Luminosity] Besides those uncertainties associated with the object selections, 
 another experimental uncertainty that is taken into account in the analysis is 
-the uncertainty in the integrated luminosity, whose measurement is described in Section \ref{sec:lumimeas}; for the 2015--2016 dataset the luminosity uncertainty corresponds 
+the uncertainty on the integrated luminosity, whose measurement is described in Section \ref{sec:lumimeas}; for the 2015--2016 dataset the luminosity uncertainty corresponds 
 to 3.2\% and is derived with a strategy similar to that described in Ref. \cite{Aaboud:2016hhf}. The impact of this uncertainty on the analyses discussed in this thesis is very small.
 
 \end{description}
@@ -182,8 +183,8 @@ to 3.2\% and is derived with a strategy similar to that described in Ref. \cite{
 \item[Leptons] The uncertainties in the calibration and resolution of the energy (momentum) of electrons (muons).
 % have been tested to be negligible in all the analyses discussed in this thesis. 
 
-\item[\met] The three \glspl{np} that take into
-account the uncertainty in the scale and the parallel and perpendicular resolution of the \met soft term. 
+\item[$\boldsymbol{\met}$] The three \glspl{np} that take into
+account the uncertainty on the scale and the parallel and perpendicular resolution of the \met soft term. 
 Note that, while the \met soft term uncertainties are not included in the final results, 
 the propagation of the \gls{jes} and \gls{jer} uncertainties to the \met computation 
 are always properly taken into account.
@@ -195,7 +196,7 @@ are always properly taken into account.
 \label{sec:common_variables}
 
 The kinematic properties of the objects in the event are used to define variables that, by combining information about multiple objects, 
-provide a handle to discriminate between the signal evens from the benchmark model being tested, and the background events from \gls{sm} processes, described in Section \ref{sec:common_backgrounds}. 
+provide a handle to discriminate between the signal events from the benchmark model being tested, and the background events from \gls{sm} processes, described in Section \ref{sec:common_backgrounds}. 
 While a few of these variables are related to specific characteristics of the signal model, especially in the case of the higgsino search 
 discussed in Chapter \ref{chap:ewk_prod} that involves two Higgs bosons, most of them are built based on the features of the main  
 background processes we need to suppress and are therefore in common between the two analyses. 
@@ -234,10 +235,10 @@ The transverse mass between lepton and \met (\mt) is defined for events with at 
 
 \noindent where $\pt^{\rm{lep}}$ is the transverse momentum of the leading signal lepton in the event. 
 For events where this lepton and the entire \met derive from the decay of a parent particle with mass m$_{\rm{parent}}$, \mt presents an endpoint at m$_{\rm{parent}}$. 
-This is the case when the lepton and \met derive form the leptonic decay of a $W$ boson, in $W$+jets events or in semileptonic \ttbar events; 
+This is the case when the lepton and \met derive from the leptonic decay of a $W$ boson, in $W$+jets events or in semileptonic \ttbar events; 
 note that dileptonic \ttbar events do not present the same endpoint at the W-boson mass, as it is not possible to completely disentangle the energy of the two neutrinos. Events from W+jets or semileptonic \ttbar processes can have values of \mt higher than the kinematic endpoint only if some of the objects in the event are not properly reconstructed (e.g. fake \met from mismeasured jets, jets misidentified as leptons, or leptons out of acceptance).
 
-Another variable useful to suppress the \ttbar background is the minimum transverse mass between \met and the $b$-jets in the event:
+Another useful variable to suppress the \ttbar background is the minimum transverse mass between \met and the $b$-jets in the event:
 
 \begin{equation}
 \label{eq:mtbmin}
@@ -245,7 +246,7 @@ Another variable useful to suppress the \ttbar background is the minimum transve
 \end{equation}
 
 \noindent where the minimum is taken over the transverse mass computed with the three leading $b$-tagged jets in the event. 
-In semileptonic \ttbar events, this variable presents an endpoint near the top-quark mass, as this is the endpoint that we would have if \met originating from the neutrino is perfectly measured and the $b$-jet produced in the decay of the same top quark as the neutrino is among the three leading $b$-tagged jets. 
+In semileptonic \ttbar events, this variable presents an endpoint near the top-quark mass, as this is the endpoint that is obtained when \met originating from the neutrino is perfectly measured and the $b$-jet produced in the decay of the same top quark as the neutrino is among the three leading $b$-tagged jets. 
 
 
 \subsubsection*{Multijet suppression}
@@ -300,8 +301,8 @@ All the analysis regions considered in this thesis have a tight \met selection (
 of the \ttbar background does not have any neutrino in the final state, it does not fulfill the \met requirement unless one or more jets are mismeasured; 
 this case produces a negligible background in the analysis regions, and 
 is estimated with the jet-smearing method (described in Section \ref{sec:jet_smearing}) together with the other processed that pass the selection due to mismeasured jets.
-The \ttbar components that is dominating the background estimate are the dilepton and single-lepton ones, both in the analysis regions that require reconstructed leptons as well as in the analysis regions that have a lepton veto.
-In the second case, the dominating component is the single-lepton component, where one lepton is a hadronically decaying $\tau$, has a \pt too low to be reconstructed, or falls out of acceptance. 
+The \ttbar components that are dominating the background estimate are the dilepton and single-lepton ones, both in the analysis regions that require reconstructed leptons as well as in the analysis regions that have a lepton veto.
+In the second case, the dominating component is the semi-leptonic \ttbar, where the lepton is a hadronically decaying $\tau$, has a \pt too low to be reconstructed, or falls out of acceptance. 
 The \gls{mc} generator used to simulate \ttbar events produced in association with high-\pt jets is \PowhegBox v2 with the CT10 \gls{partdf} set \cite{Lai:2010vv} and interfaced with \PY v6.428 \cite{Sjostrand:2006za} for the \gls{psh} and hadronization. 
 The normalization is derived in \glspl{cr} designed to be kinematically as close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross-section computed with the highest
 available accuracy, which is \gls{nlo} + \gls{nnll} \cite{Czakon:2011xx}.
@@ -310,8 +311,8 @@ available accuracy, which is \gls{nlo} + \gls{nnll} \cite{Czakon:2011xx}.
 
 When considering events at particle level,
 the \gls{mc} information can be used to reconstruct the decay chains that lead to the stable particles in the final state. 
-Starting from each top quark in the event, it is possible to follow its decay chain and classify the event first of all into dilepton or single-lepton, or also with a finer classification based on the flavor of the lepton. 
-Subsequent decays of the $\tau$ lepton are not considered, and hadronically decaying $\tau$ leptons are fully considered as leptons in this classification. 
+Starting from each top quark in the event, it is possible to follow its decay chain and classify the event first of all into dilepton or single-lepton, or also with a finer classification based on the lepton flavor.  
+Subsequent decays of the $\tau$ leptons are not considered, and hadronically decaying $\tau$ leptons are fully considered as leptons in this classification. 
 Figure \ref{fig:ttbar_decay_mT_1L} shows the \ttbar decay type as a function of the \mt value  in a selection requiring at least four jets, at least three $b$-jets, $\met>200$ GeV and at least one signal lepton. It is possible to see that, while at low \mt values the \ttbar component is dominated by events where one top quark decays leptonically and the other one decays hadronically, after the kinematic threshold imposed by the mass of the $W$ boson the dilepton component is dominant. 
 
 \begin{figure}[h!]
@@ -353,9 +354,9 @@ As expected, as the number of $b$-jets increases, the \ttlight fraction decrease
 \end{figure}
 
 
-\subsubsection*{Modelling uncertainties}
+\subsubsection*{Modeling uncertainties}
 
-The modeling uncertainties in the \ttbar background considered in this thesis are:
+The modeling uncertainties on the \ttbar background considered in this thesis are:
 \begin{description}
 \item[Generator] The uncertainty associated with the choice of a specific \gls{mc} generator is estimated by comparing \PowhegBox with \aNLO, both interfaced with \HWpp v2.7.1 with the UEEE5 underlying-event tune.
 
@@ -363,16 +364,16 @@ The modeling uncertainties in the \ttbar background considered in this thesis ar
 
 \item[Radiation] The systematic uncertainty related to the modeling of the \gls{isr} and \gls{fsr} is estimated by comparing samples
 generated with \PowhegBox interfaced with two versions of \PY v6.428 with two different settings \cite{Skands:2010ak}. 
-One uses the PERUGIA2012radHi tune, has $h_{\rm{damp}}$ parameter set to twice the top mass and the renormalization and factorization scales set to twice the nominal value; these settings lead to an overall larger amount of radiation. The second sample uses a version of \PY with the PERUGIA2012radLo tune, has $h_{\rm{damp}}$ set to the top mass and the renormalization and factorization scales set to half of the nominal value, leading to a description of the event with less additional jets.
+One uses the PERUGIA2012radHi tune, has the $h_{\rm{damp}}$ parameter set to twice the top mass and the renormalization and factorization scales set to twice the nominal value; these settings lead to an overall larger amount of radiation. The second sample uses a version of \PY with the PERUGIA2012radLo tune, has $h_{\rm{damp}}$ set to the top mass and the renormalization and factorization scales set to half of the nominal value, leading to a description of the event with less additional jets.
 
 \end{description}
 
 Figures \ref{fig:ttbar_nj_0L_syst} and \ref{fig:ttbar_ptj1_0L_syst} show the changes in shape in the distribution of the number of signal jets and the \pt of the leading jet when comparing these systematic variations in a representative selection with a lepton veto.
-The normalization of \ttbar events is derived in the \glspl{cr}, therefore modeling uncertainties affect only the extrapolation from 
+The normalization of \ttbar events is derived in the \glspl{cr}, therefore the modeling uncertainties affect only the extrapolation from 
 the \gls{cr} to the corresponding \glspl{sr} and \glspl{vr}, and not the overall normalization. 
 The modeling uncertainties are therefore estimated by comparing the expected values for the \glspl{tf}, defined in Section \ref{sec:example_cr}.
 as the ratio of expected yields in the \gls{sr} or \gls{vr} over the expected yields in the corresponding \gls{cr}. 
-The uncertainties in the \glspl{tf} obtained from the different sources listed above are summed in quadrature in each region, and are treated as uncorrelated across regions to avoid 
+The uncertainties on the \glspl{tf} obtained from the different sources listed above are summed in quadrature in each region, and are treated as uncorrelated across regions to avoid 
 constraints from the fit. 
 
 
@@ -440,11 +441,11 @@ For each jet, the probability to be $b$-tagged can be expressed as a function of
 \noindent This procedure can be extended to an arbitrary number of $b$-tagged jets by summing over all the possible permutations that lead to the desired number of $b$-tagged jets ($n$) to derive the exclusive probability and then subtract it from the $P_{\geq n}$ probability to have the inclusive probability for $\geq n+1$ $b$-tagged jets.
  
 Beside decreasing the statistical uncertainty in the expected number of events, the other advantage of using truth tagging on particle-level samples is that it allows to emulate the reconstruction-level efficiency of the $b$-tagging algorithm: 
-at particle-level a jet is considered a $b$-tagged if it is matched to a $b$-quark in the \gls{mc} record within a certain cone. This criterion has 
+at particle-level a jet is considered to be $b$-tagged if it is matched to a $b$-quark in the \gls{mc} record within a certain cone. This criterion has 
 almost 100\% efficiency for real $b$-jets, and it leads to a null mistag rate. Instead with truth tagging, if the efficiency map used in Equation \ref{eq:susy_common:btageff} corresponds to the $b$-tagging efficiency measured for reconstructed jets, 
 it is possible to obtain the same efficiency to a $b$-tagging selection as in a reconstructed-level analysis. 
 
-Some analysis variables are build using explicitly the kinematic characteristics of the $b$-tagged jets, e.g. \mtb. The truth tagging method allows to choose which jets in the event should be considered as $b$-tagged: in an event with $N$ jets, each permutation with a $n$ jets considered as $b$-tagged and $N-n$ jets considered as non $b$-tagged is characterized by an individual weight $w_i$. If we define $S$ the sum of all these individual weights, a pseudo-random number generated with uniform probability between 0 and $S$ will indicate which permutation to choose and consequently which jets to consider as $b$-tagged; this procedure is illustrated in Figure \ref{fig:susy_common_trf_perm}. 
+Some analysis variables are built using explicitly the kinematic characteristics of the $b$-tagged jets, e.g. \mtb. The truth tagging method allows to choose which jets in the event should be considered as $b$-tagged: in an event with $N$ jets, each permutation with $n$ jets considered as $b$-tagged and $N-n$ jets considered as non $b$-tagged is characterized by an individual weight $w_i$. If we let $S$ to be the sum of all these individual weights, a pseudo-random number generated with uniform probability between 0 and $S$ will indicate which permutation to choose and consequently which jets to consider as $b$-tagged; this procedure is illustrated in Figure \ref{fig:susy_common_trf_perm}. 
 
 \begin{figure}[h]
 \centering 
@@ -460,8 +461,9 @@ Some analysis variables are build using explicitly the kinematic characteristics
 While the production of a \ttbar pair is mediated by the strong interaction, in the case of a single top quark the production occurs via the electroweak interaction. 
 There are three possible production channels, illustrated in Figure \ref{fig:single_top_prod}: the t-channel, the Wt-channel, where a top quark and a $W$ boson are produced, and the s-channel. 
 The Wt- and s-channel production mechanisms are simulated with the same generator choice as \ttbar: \PowhegBox v2, showered with \PY v6.428.
-Single top events produced through the t-channel process are simulated with \PowhegBox v1, which uses the four-flavor scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set, with the four-flavor scheme as well, and the top quarks are decayed with \MadSpin \cite{Artoisenet:2012st}.
-The cross-section used for normalization is computed at \gls{nlo}+\gls{nnll} order 
+Single top events produced through the t-channel process are simulated with \PowhegBox v1, which uses the four-flavor scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set (with the four-flavor scheme as well); 
+the top quarks are decayed with \MadSpin \cite{Artoisenet:2012st}.
+The cross-section used for the normalization of the single top processes is computed at \gls{nlo}+\gls{nnll} order 
 \cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}.
 
 \begin{figure}[h]
@@ -477,7 +479,7 @@ The cross-section used for normalization is computed at \gls{nlo}+\gls{nnll} ord
 \subsubsection*{Wt-channel and \ttbar interference}
 
 While the \gls{lo} diagrams for Wt-channel single-top production in Figures \ref{fig:st_prod_Wt1} and \ref{fig:st_prod_Wt2} show a clear signature characterized by one single heavy-flavor quark in the final state,
-when \gls{nlo} diagrams are considered it is possible to reach the same final state as with \ttbar production, namely $WWbb$, as shown in Figure \ref{fig:WWbb_int}. 
+when \gls{nlo} diagrams are considered it is possible to reach the same final state as the \ttbar process, namely $WWbb$, as shown in Figure \ref{fig:WWbb_int}. 
 Considering the two processes separately leads necessarily to an improper treatment of the quantum interference between them.
 \PowhegBox allows to approach this problem with two different strategies, \gls{dr} and \gls{ds} \cite{Frixione:2005vw}; while none of them reproduces the quantum interference between single top and \ttbar, they allow to mitigate the size of the effect. 
 
@@ -526,7 +528,7 @@ in the analyses, \met and \mtb.
 }\label{fig:st_1L}
 \end{figure}
 
-To evaluate the uncertainty associate with the strategy chosen to account for the interference between \ttbar and single top
+To evaluate the uncertainty associated with the strategy chosen to account for the interference between \ttbar and single top
 we use a dedicated $WWbb$ sample generated at particle level with \aNLO showered with \PY v8, that takes fully into account the interference.
 This sample is produced at \gls{lo} and using the four-flavor scheme, where $b$-quarks are treated as massive and processes that require a $b$-quark in the initial state (which is the case for Wt production) are initiated by a gluon splitting into a $b\bar{b}$ pair. 
 Because of the \gls{lo} accuracy, the comparison with the sum of the two nominal samples for \ttbar and Wt, generated with \PowhegBox and showered with \PY, does not lead to sensible 
@@ -534,16 +536,16 @@ results as the \gls{nlo} corrections to the \ttbar sample are larger than the ef
 Instead, two additional samples are generated with the same settings as the $WWbb$ sample to simulate the double-resonance and the single-resonance samples: the former requires the presence of two resonant top quarks, the latter requires one resonant top quark and two $b$-quarks in the \gls{me}, vetoing the presence of a second resonant top quark.  
 
 
-\subsubsection*{Modelling uncertainties}
+\subsubsection*{Modeling uncertainties}
 
-The modeling uncertainties in the single top background are estimated at particle level, 
-like in the case of the uncertainties in the \ttbar background, but with the difference that in this case the uncertainty is computed based on the difference of expected yields in \glspl{sr} and \glspl{vr} and not based on the difference in the \glspl{tf}; 
-this is because in the analyses discussed in this thesis the single top backgrounds is normalized to its theoretical cross-section and does not have a data-driven normalization. Truth tagging is also used in this case to 
+The modeling uncertainties on the single top background are estimated at particle level, 
+like in the case of the uncertainties on the \ttbar background, but in this case the uncertainty is computed based on the difference of the expected yields in \glspl{sr} and \glspl{vr} and not based on the difference between the \glspl{tf}; 
+this is because in the analyses discussed in this thesis the single top background is normalized to its theoretical cross-section and does not have a data-driven normalization. Truth tagging is also used in this case to 
 increase the available number of simulated events,  
-and to provide a description of the $b$-tagging efficiency closer to the one that we have on reconstructed events. The modeling uncertainties considered are: 
+and to provide a description of the $b$-tagging efficiency closer to the one that we have in the reconstructed events. The modeling uncertainties considered are: 
 
 \begin{description}
-\item[Interference] The uncertainty deriving from the treatment of the interference between \ttbar and single top in the Wt channel is obtained comparing the sum of single-resonance and double-resonance contributions to the total $WWbb$ sample, using the samples described in the previous paragraph.
+\item[Interference] The uncertainty deriving from the treatment of the interference between \ttbar and single top in the Wt channel is obtained by  comparing the sum of single-resonance and double-resonance contributions to the total $WWbb$ sample, using the samples described in the previous paragraph.
 
 \item[Radiation] The systematic uncertainty in the modeling of the extra radiation is estimated with dedicated samples generated with the same set of varied parameters used to generate the variation samples for \ttbar, described in Section \ref{sec:susy_general:ttbar}. 
 
@@ -565,8 +567,8 @@ two quarks in Figure \ref{fig:W_prod_1} and the quark and antiquark in Figure \r
 \caption{Representative \gls{lo} Feynman diagrams for the production of a $W$ boson in association with one jet.}\label{fig:W_prod}
 \end{figure}
 
-Our analysis selections require high \met and the presence of $b$-jets, therefore most of the $W$+jets events that fulfill the selection are the ones where the $W$ boson decays to a electron, muon or $\tau$ lepton 
-and the associated neutrino (to produce some \met) and the $b$-tagging requirement is satisfied because of the production of extra heavy-flavor jets, or because the jet form the hadronic decay of the $\tau$
+Our analysis selections require high \met and the presence of $b$-jets, therefore most of the $W$+jets events that fulfill the selection are the ones where the $W$ boson decays to an electron, muon or $\tau$ lepton 
+and the associated neutrino (to produce some \met) and the $b$-tagging requirement is satisfied because of the production of extra heavy-flavor jets, or because the jet from the hadronic decay of the $\tau$
 lepton is incorrectly tagged as a $b$-jet together with other associated jets. 
 $W$+jets events can therefore be present both in analysis regions with a lepton requirement and in those with a veto on the presence of leptons. 
 In the case of $Z$+jets events, most of the events that enter the analysis regions have a $Z \to \nu \nu$ decay (which has a \gls{br} of about 20\%), and are produced in association with 
@@ -583,7 +585,7 @@ The systematic uncertainty associated with this choice is derived by comparison 
 
 \item[Factorization scale] Like $\mu_{\rm{R}}$, the factorization scale ($\mu_{\rm{F}}$) has its default value at the mass of the vector boson, and is varied to twice and half this value.
 
-\item[Matching scale] The scale for the matching between \gls{me} and \gls{psh} is set to 20 GeV, and this choice is compared with two alternative samples where is set to 30 and 15 GeV.
+\item[Matching scale] The scale for the matching between \gls{me} and \gls{psh} is set to 20 GeV, and this choice is compared with two alternative samples where it is set to 30 and 15 GeV.
 
 \item[Resummation scale] As in the case of $\mu_{\rm{R}}$ and $\mu_{\rm{F}}$, the central value of the resummation scale ($Q_{sf}$, the scale used to factorize between constant and logarithmic terms
 in the resummation process) is set to the $W$ or $Z$ boson mass, and varied to twice or half its central value in the systematic uncertainties. 
@@ -592,7 +594,7 @@ in the resummation process) is set to the $W$ or $Z$ boson mass, and varied to t
 
 In order to derive the effect of these systematic uncertainties, the analyses described in this thesis do not use a direct comparison of the nominal 
 samples with the ones implementing the systematic variations.
-Instead, the comparison is implemented through weights with a 2D parametrization based on the number of jets present in the event at particle level 
+Instead, the comparison is implemented through weights with a 2D parametrization based on the number of jets in the event at particle level 
 and on the transverse momentum of the vector boson \cite{Anders:2291836}.
 As an example, the impact of these systematic uncertainties on the shapes of the distributions of \met in a selection with a lepton veto is shown in Figure \ref{fig:Z_met_0L_syst} for the $Z$+jets sample and in Figure \ref{fig:W_met_0L_syst} for the $W$+jets sample.  
 
