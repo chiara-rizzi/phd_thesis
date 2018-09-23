@@ -217,7 +217,7 @@ or we can consider only jets with \pt above a certain threshold if we expect hig
 \item[Effective mass] The effective mass is defined as the scalar sum of the momenta of all the signal objects in the event and the missing transverse momentum:
 
 \begin{equation}
-\meffi = \sum_{i\leq n} {\pt}^{j_i}  + \sum_{j\leq m} {\pt}^{\ell_j}  + \met \; .
+\meffi = \sum_{i\leq n} {\pt}^{j_i}  + \sum_{j\leq m} {\pt}^{\ell_j}  + \met \; . \nonumber
 \end{equation}
 
 \noindent This variable reflects the overall energy scale of the event, and in the signal is therefore correlated to the mass of the \gls{susy} particles produced. 
@@ -225,7 +225,7 @@ or we can consider only jets with \pt above a certain threshold if we expect hig
 \item[Transverse mass] The transverse mass between lepton and \met (\mt) is defined for events with at least one selected signal lepton as: 
 
 \begin{equation}
-\mt = \sqrt{2\pt^{\rm{lep}}\met(1-\cos\Delta\phi(\met,\pt^{\rm{lep}}))} \; ,
+\mt = \sqrt{2\pt^{\rm{lep}}\met(1-\cos\Delta\phi(\met,\pt^{\rm{lep}}))} \; , \nonumber
 \end{equation}
 
 \noindent where $\pt^{\rm{lep}}$ is the transverse momentum of the leading signal lepton in the event. 
@@ -236,8 +236,7 @@ note that dileptonic \ttbar events do not present the same endpoint at the W-bos
 Another useful variable to suppress the \ttbar background is the minimum transverse mass between \met and the $b$-jets in the event:
 
 \begin{equation}
-\label{eq:mtbmin}
-\mtb =  \mathrm{min}_{i\leq 3}  \sqrt{(\met+p_T^{j_i})^2 - ({\met}_x+p_x^{j_i})^2 - ({\met}_y+p_y^{j_i})^2 } \; ,
+\mtb =  \mathrm{min}_{i\leq 3}  \sqrt{(\met+p_T^{j_i})^2 - ({\met}_x+p_x^{j_i})^2 - ({\met}_y+p_y^{j_i})^2 } \; , \nonumber
 \end{equation}
 
 \noindent where the minimum is taken over the transverse mass computed with the three leading $b$-tagged jets in the event. 
@@ -247,7 +246,7 @@ In semileptonic \ttbar events, this variable presents an endpoint near the top-q
 event is mismeasured, leading to a fake energy imbalance in the event. In these cases, the resulting \met will have a value of the azimuthal angle ($\phi$) close to the one of the mismeasured jet. The variable \dphimin is defined as the minimum difference in azimuthal angle between \met and the  four jets with the highest \pt in the event:
 
 \begin{equation}
-\dphimin = \textrm{min}_{i \leq 4}(|\phi_{{\rm{jet},}i} - \phi_{\met}|) \; .
+\dphimin = \textrm{min}_{i \leq 4}(|\phi_{{\rm{jet},}i} - \phi_{\met}|) \; . \nonumber
 \end{equation}
 
 \noindent Requiring high values of this variable helps rejecting events with no real \met. 
@@ -416,20 +415,20 @@ for example, the probability for the event to have at least three $b$-tagged jet
 For each jet, the probability to be $b$-tagged can be expressed as a function of the jet flavor ($f$), \pt and $\eta$:
 
 \begin{equation}
-\varepsilon \left(f,|\eta|,p_{\mathrm{T}}\right) \; .
+\varepsilon \left(f,|\eta|,p_{\mathrm{T}}\right) \; . 
 \label{eq:susy_common:btageff}
 \end{equation}
 
 \noindent If an event has $N$ jets, the probability of containing exactly one $b$-tag jet can be expressed as:
 \begin{equation}
-        P_{=1} = \sum\limits_{i=1}^N \left( \varepsilon_{i} \prod\limits_{i \neq j} \left( 1 - \varepsilon_{j} \right) \right) \; ,
+        P_{=1} = \sum\limits_{i=1}^N \left( \varepsilon_{i} \prod\limits_{i \neq j} \left( 1 - \varepsilon_{j} \right) \right) \; , \nonumber
 \end{equation}
 
 \noindent and in the same way, we can compute the probability for an inclusive $b$-tagging selection:
 \begin{equation}
  \begin{split}
         P_{=0} &= \prod\limits_{i=1}^N \left( 1 - \varepsilon_{j} \right) \; ,\\
-        P_{\geq 1} &= 1 - P_{=0} \; .
+        P_{\geq 1} &= 1 - P_{=0} \; . \nonumber
  \end{split}
 \end{equation} 
  
@@ -489,7 +488,7 @@ Considering the two processes separately leads necessarily to an improper treatm
 We can write the matrix element for the production of the $WWbb$ final state as:
 
 \begin{equation}
-\mathcal{M}_{WWbb} = \mathcal{M}_{\rm{double-res}} + \mathcal{M}_{\rm{single-res}} \; ,
+\mathcal{M}_{WWbb} = \mathcal{M}_{\rm{double-res}} + \mathcal{M}_{\rm{single-res}} \; , \nonumber
 \end{equation}
 
 \noindent where the first term represent the contribution from \ttbar production (double resonance) and the second term the contribution from 
@@ -497,7 +496,7 @@ We can write the matrix element for the production of the $WWbb$ final state as:
 When computing the squared amplitude, this becomes:
 
 \begin{equation}
-|\mathcal{M}_{WWbb}|^2 = |\mathcal{M}_{\rm{double-res}}|^2 + |\mathcal{M}_{\rm{single-res}}|^2 + 2 \mathcal{R}\left(\mathcal{M}_{\rm{double-res}}\times \mathcal{M}_{\rm{single-res}}^* \right) \; .
+|\mathcal{M}_{WWbb}|^2 = |\mathcal{M}_{\rm{double-res}}|^2 + |\mathcal{M}_{\rm{single-res}}|^2 + 2 \mathcal{R}\left(\mathcal{M}_{\rm{double-res}}\times \mathcal{M}_{\rm{single-res}}^* \right) \; . \nonumber
 \end{equation}
 
 While the first two terms are properly taken into account by the individual \ttbar and single top \gls{mc} simulations, 
