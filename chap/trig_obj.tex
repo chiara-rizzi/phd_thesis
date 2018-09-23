@@ -23,7 +23,7 @@ The precision on the position measurement of the track depends on the granularit
 
 After the point of closest approach (perigee) to a given reference is defined, the trajectory of the track can be described by five parameters: 
 \begin{equation}
-\theta, \; \phi, \; q/p, \; d_0, \; z_0 \;,
+\theta, \; \phi, \; q/p, \; d_0, \; z_0 \;, \nonumber
 \end{equation}
 \noindent where $\theta$ and $\phi$ are the azimuthal and polar angle, $q/p$ is the ratio of the charge of the track to the track momentum, and $d_0$ and $z_0$ are the distance to the perigee in the transverse plane and along the $z$-axis. 
 The track perigee parameters are schematically shown in Figure \ref{fig:obj:tracks_param}.
@@ -77,7 +77,7 @@ The first step in the jet reconstruction is the procedure that groups the calori
 The topoclusters are then grouped together by a jet-finding algorithm. Different algorithm are available, and in particular the algorithms of the $k_T$-family merge clusters according to the metric $d_{i,j}$, defined as:
 
 \begin{equation}
-d_{i,j} = min\left( k_{T,i}^{2n}, k_{T,i}^{2n}  \right) \frac{\Delta R_{i,j}^2}{R^2},
+d_{i,j} = min\left( k_{T,i}^{2n}, k_{T,i}^{2n}  \right) \frac{\Delta R_{i,j}^2}{R^2} \; ,
 \label{eq:obj:dij}
 \end{equation}
 
@@ -87,7 +87,7 @@ and therefore the shape of the resulting jets.
 Equation \ref{eq:obj:dij} defines the distance between two clusters, while the cluster-beam distance is defined as:
 
 \begin{equation}
-d_{i,B} =  k_{T,i}^{2n} \; .
+d_{i,B} =  k_{T,i}^{2n} \; . \nonumber
 \end{equation}
 
 The grouping of clusters follows an iterative approach:
@@ -196,8 +196,7 @@ Equation \ref{eq:jvf} increases; to correct for this dependence, the \gls{cjvf} 
 This is a modified version of \gls{jvf}, that takes into account the dependence on the number of pileup tracks (\nPUtrk):
 
 \begin{equation}
-\cJVF = \frac{\sum_m{p_{{\rm T}, m}^{{\rm track}}({\rm PV}_0)}}{\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_0) + \frac{\sum_{n\geq1}\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_n)}{ (k \cdot \nPUtrk)}} \; ,
-\label{eq:corrJVF}
+\cJVF = \frac{\sum_m{p_{{\rm T}, m}^{{\rm track}}({\rm PV}_0)}}{\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_0) + \frac{\sum_{n\geq1}\sum_l p_{{\rm T}, l}^{{\rm track}}({\rm PV}_n)}{ (k \cdot \nPUtrk)}} \; , \nonumber
 \end{equation}
 
 \noindent with $k=0.001$. Another variable used to discriminate hard-scattering jets against pileup jets is the ratio of the scalar
@@ -247,7 +246,7 @@ Different thresholds for the selections on these variable distinguish the two wo
 The angular separation between the decay products of a particle with mass $m$ and transverse momentum 
 $p_T$ scales as:
 \begin{equation}
-\Delta R \approx \frac{2 m}{p_T} \; .
+\Delta R \approx \frac{2 m}{p_T} \; . \nonumber
 \end{equation}
 
 This indicates that the ideal value of the $R$ parameter described in Section \ref{sec:obj:jetfinding} can vary depending on the event topology that we want to capture. 
@@ -546,7 +545,7 @@ The product of these \glspl{pdf} constitutes the
 signal and background likelihoods ($\mathcal{L}\rm s$ and $\mathcal{L}\rm s$ respectively), and the final discriminant is given by:
 
 \begin{equation}
- d_\mathcal{L} = \frac{\mathcal{L}\rm s}{\mathcal{L}\rm s + \mathcal{L}\rm b} \; .
+ d_\mathcal{L} = \frac{\mathcal{L}\rm s}{\mathcal{L}\rm s + \mathcal{L}\rm b} \; . \nonumber
 \end{equation} 
 
 Three identification \glspl{op} are defined, Loose, Medium and Tight, optimized in bins of $|\eta|$ and \et;
