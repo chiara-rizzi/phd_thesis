@@ -37,7 +37,7 @@ At the \gls{lhc} it has been chosen to study collisions with protons and lead io
 
 \begin{equation}
 \label{eq:cern:sync}
-\frac{dE}{dt} \propto \frac{E^4}{m^4 r^2} \; .
+\frac{dE}{dt} \propto \frac{E^4}{m^4 r^2} \; . \nonumber
 \end{equation}
 
 The larger mass of a proton with respect to an electron leads to a decrease by a factor $10^{12}$ in the energy lost through syncrotron radiation. This choice comes with a price: proton-proton collisions lead to less clean events, with a lot of soft interactions covering the interesting hard interactions. Furthermore, the center-of-mass energy is unknown as the particles taking part in hard interactions are not the protons themselves but their constituents.
@@ -71,19 +71,19 @@ Beside dipoles and quadrupoles, in the \gls{lhc} there are about 600 higher-orde
 
 While the orbit of particles is governed by the magnetic fields, longitudinal electric fields are used for acceleration. In the \gls{lhc} the electric filed is provided by \gls{rf} cavities. There are overall 16 \gls{rf} cavities, eight per beam, hosted in four cryo-modules. Each cavity can provide an accelerating field of 5 MV/m, and oscillates with a frequency of 400 MHz. Since the electric field changes over time with the oscillations, particles passing through the same point of a \gls{rf} cavity at different times experience a different voltage; this produces a non-trivial longitudinal dynamics, where particles oscillate around the ideal synchronous particle with changes in momentum and phase (Synchrotron oscillations). If we define the slip factor $\eta$ as the relative change in frequency in Synchrotron oscillations with the relative change in momentum:
 \begin{equation}
-\eta = \frac{\Delta f / f}{\Delta p / p} \; ,
+\eta = \frac{\Delta f / f}{\Delta p / p} \; , \nonumber
 \end{equation}
 
 \noindent and the compaction factor $\alpha$ as the relative change in frequency in orbit length with the relative change in momentum:
 
 \begin{equation}
-\alpha = \frac{\Delta L / L}{\Delta p / p} \; ,
+\alpha = \frac{\Delta L / L}{\Delta p / p} \; , \nonumber
 \end{equation}
 
 \noindent the following relation holds:
 
 \begin{equation}
-\eta = \frac{1}{\gamma^2} - \alpha \; ,
+\eta = \frac{1}{\gamma^2} - \alpha \; , \nonumber
 \end{equation}
 
 \noindent where $\gamma$ is the Lorentz factor of the particle. This means that while the energy of the particle is low ($\eta>0$) an increase in momentum leads to an increase in frequency, while it leads to a decrease in frequency for $\eta<0$. At the transition energy, a previously stable synchrotron phase becomes unstable and vice versa; this requires a rapid change in \gls{rf} phase. This situation is illustrated in Figure \ref{fig:lhc:phase}(a). For example, a particle corresponding to the phase point M1 will arrive in the \gls{rf} cavity after one corresponding to the stability point P1, and will experiment higher voltage and increase in momentum; if $\eta>0$ this increase in momentum will translate in an increase in frequency and the particle will, at the following revolution, arrive earlier, while if $\eta<0$ the frequency will further decrease and the particle will be eventually lost.  The transition energy in the \gls{lhc} is 53 GeV, well below the injection energy of 450 GeV, so the \gls{lhc} is always above transition. 
@@ -108,20 +108,20 @@ Given a certain process with production cross-section $\sigma$, the total number
 
 \begin{equation}
 \label{eq:cern:nev}
-N_{\mathrm{events}} = \sigma \,\, \mathcal{L}_{int} \; .
+N_{\mathrm{events}} = \sigma \,\, \mathcal{L}_{int} \; . \nonumber
 \end{equation}
 
 The integrated luminosity is the time integral of the instantaneous luminosity $\mathcal{L}$, 
 
 \begin{equation}
 \label{eq:cern:intlumi}
-\mathcal{L}_{int} = \int \mathcal{L} \, dt \; ,
+\mathcal{L}_{int} = \int \mathcal{L} \, dt \; , \nonumber
 \end{equation}
 
 \noindent which, assuming a Gaussian particle distribution and the same characteristics for the two beams, can be expressed as:
 
 \begin{equation}
-\mathcal{L}=\frac{f N_b n^2}{4 \pi \sigma_{x}\sigma_{y} } \; ,
+\mathcal{L}=\frac{f N_b n^2}{4 \pi \sigma_{x}\sigma_{y} } \; , 
 \label{eq:cern:lumi}
 \end{equation}
 
@@ -129,12 +129,12 @@ The integrated luminosity is the time integral of the instantaneous luminosity $
 
 The instantaneous luminosity defined in Equation \ref{eq:cern:lumi} needs to be corrected for two effects. First of all, this formula assumes a head-on collision between the bunches; in reality, to avoid unwanted interactions the beams collide with a crossing angle, and a large crossing angle decreases the instantaneous luminosity. The second correction is related to the beam transverse size, that can be expressed as:
 \begin{equation}
-\sigma_{x,y} = \sqrt{  \epsilon \beta^* } \; ,
+\sigma_{x,y} = \sqrt{  \epsilon \beta^* } \; , \nonumber
 \end{equation}
 where $\epsilon$ is the beam emittance and $\beta^*$ is the beta function. Beam collisions happen in minibeta insertions, drift spaces with a beta waist in the center, where the beam size is as small as possible. In the vicinity of the minimum, the beta function evolves like:
 
 \begin{equation}
-\beta(s) = \beta^* + \frac{s^2}{\beta^*} \; .
+\beta(s) = \beta^* + \frac{s^2}{\beta^*} \; . \nonumber
 \end{equation}
 
 From this it is possible to see that the smaller the beta function, the larger the dependence with $s$, so a bunch with a finite size will not have the same beta function as a whole (hour glass effect). This correction becomes more important with the decrease of the $\beta^*$ value. With the \gls{lhc} design parameters, the effect of crossing angle and hour glass changes the instantaneous luminosity by about 20\%.
