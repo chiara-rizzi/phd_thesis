@@ -85,7 +85,7 @@ determined by the equations derived independently by Dokshitzer \cite{Dokshitzer
 \begin{equation}
 \begin{aligned}
 \frac{\partial q(x,Q^2)}{\partial {\rm log}Q^2}~&=~\frac{\alpha_s}{2\pi}~\left( P_{qq} \otimes q~+~P_{qg} \otimes g \right) \, ,\\
-\frac{\partial g(x,Q^2)}{\partial {\rm log}Q^2}~&=~\frac{\alpha_s}{2\pi}~\left( \sum_i P_{gq} \otimes (q_i+\bar{q}_i)~+~P_{gg} \otimes g \right) \; .
+\frac{\partial g(x,Q^2)}{\partial {\rm log}Q^2}~&=~\frac{\alpha_s}{2\pi}~\left( \sum_i P_{gq} \otimes (q_i+\bar{q}_i)~+~P_{gg} \otimes g \right) \; . \nonumber
 \label{eq:glap1}
 \end{aligned}
 \end{equation}
@@ -96,7 +96,7 @@ which corresponds to the probability of the outgoing parton $j$
 to be emitted at a virtuality scale $Q^2$ and carry a fraction $x$/$y$ of the mother parton momentum, 
 and $\otimes$ is a symbol for the convolution integral:
 \begin{equation}
-P \otimes f \equiv \int^1_x\frac{dy}{y}f_q(y)~P\left(\frac{x}{y}\right).
+P \otimes f \equiv \int^1_x\frac{dy}{y}f_q(y)~P\left(\frac{x}{y}\right) \; . \nonumber
 \end{equation}
 
 As mentioned above, the \glspl{partdf} have to be determined experimentally. This is done by several collaborations through fits (with typically 10 to 30 parameters) to data from \gls{dis} experiments. As an example, Figure \ref{fig:sim:pp} shows the \gls{nlo} \glspl{partdf} obtained by the MSTW Collaboration for two different scales, Q$^2$ = 10 GeV$^2$ and Q$^2$ = 10$^4$ GeV$^2$. As can be appreciated, with the increase of Q$^2$, the shape of the \glspl{partdf} changes to favor lower $x$ values. At low $x$ values the gluon \gls{partdf} is dominating (and this effect increases with Q$^2$), while for high $x$ values the \glspl{partdf} of the valence quarks are more relevant.
@@ -155,7 +155,7 @@ In this case, the kinematic of the basic inclusive event is simulated at fixed o
 Starting from the cross-section for the production of $n$ particles, the cross-section for the production 
 of $n+1$ particles is calculated based on the parton splitting function $P_{ij}$ (described in Section \ref{sec:protpdf}):
 \begin{equation}
-d\sigma_{n+1} \approx d\sigma_n \, \frac{ \alpha_s }{2 \pi } \, \frac{dt}{t}  \,  P_{ij}(z, t) \, dz \; .
+d\sigma_{n+1} \approx d\sigma_n \, \frac{ \alpha_s }{2 \pi } \, \frac{dt}{t}  \,  P_{ij}(z, t) \, dz \; . \nonumber
 \end{equation}
 The probability for a parton to evolve from an energy $t$ to a lower energy $t'$ without splitting is encoded in the Sudakov form factor:
 \begin{equation}
@@ -214,7 +214,7 @@ $$
 \begin{split}
  {\rm{Matched (above \; matching \;  scale)}} &\approx {\rm{Exact}} (1 + {\mathcal{O}} ( \alpha_s)) \; , \\
 {\rm{Matched (below \; matching \;  scale)} } &= {\rm{Approximate}} + ({\rm{Exact}}- {\rm{Approximate}})  \\
-& \approx {\rm{Approximate}}    \; ,
+& \approx {\rm{Approximate}}    \; , \nonumber
 \end{split}
 \end{equation*}
 
@@ -388,7 +388,7 @@ and events are reweighted so that the simulated pileup distribution matches that
 Despite the accurate simulation, residual differences can be present in the reconstruction and selection efficiency in data and \gls{mc} simulation. 
 The simulated reconstruction and selection efficiencies are corrected with multiplicative \glspl{sf}, defined as:
 \begin{equation}
-{\rm SF} = \frac{\epsilon_{\rm data}}{\epsilon_{\rm MC}} \; ,
+{\rm SF} = \frac{\epsilon_{\rm data}}{\epsilon_{\rm MC}} \; , \nonumber
 \end{equation}
 \noindent where $\epsilon_{\rm data}$ and $\epsilon_{\rm MC}$ are measured in dedicated data calibration samples 
 and in the equivalent \gls{mc} simulation, respectively.
