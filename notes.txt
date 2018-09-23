@@ -21,7 +21,6 @@ spazi non sistemati in <
 Higgs boson denoted as h and not H
 quando mettere le maiuscole negli acronimi 
 - dopo re, e.g. re-built?
-togliere il numero a tutte le eq non citate
 decidere come indicare il BR (abbreviare con B e' orribile)
 
 
