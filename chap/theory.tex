@@ -27,7 +27,7 @@ Both leptons and quarks come in three generations, and conventionally the number
 The free Lagrangian of a fermion is given by:
 
 \begin{equation}
- \mathcal{L}_{free} = \bar{\psi} \left( i \gamma^{\mu} \partial_{\mu} - m \right) \psi \, , \
+ \mathcal{L}_{free} = \bar{\psi} \left( i \gamma^{\mu} \partial_{\mu} - m \right) \psi \, ,  
  \label{eq:sm:dirac}
 \end{equation}
 
@@ -69,14 +69,14 @@ The \gls{sm} includes also a spin-0 particle, the Higgs boson. It is the interac
 The Klein-Gordon Lagrangian governs the kinematics of spin-0 neutral particles:
 
 \begin{equation}
-\mathcal{L}_{\rm{free}} = \frac{1}{2} \partial^\mu \phi \partial_\mu \phi - \frac{1}{2} m^2 \phi ^2 ,
+\mathcal{L}_{\rm{free}} = \frac{1}{2} \partial^\mu \phi \partial_\mu \phi - \frac{1}{2} m^2 \phi ^2 , \nonumber
 \end{equation}
 
  
 \noindent while in the case of charged particles (described through a complex field) the Lagrangian becomes:
 
 \begin{equation}
-\mathcal{L}_{\rm{free}} =  \partial^\mu \phi \partial_\mu \phi^* -  m^2 \phi \phi^* .
+\mathcal{L}_{\rm{free}} =  \partial^\mu \phi \partial_\mu \phi^* -  m^2 \phi \phi^* . \nonumber
 \end{equation}
 
 
@@ -124,29 +124,29 @@ Electromagnetic & Photon ($\gamma$) & $< 10^{-27}$ & 0 \\%& $10^{-2}$ \\
 The interaction terms in the \gls{sm} Lagrangian are introduced by promoting an already existing global symmetry of the Lagrangian ($\theta$) to a local one ($\theta(x)$) function of the space-time coordinates. 
 In general, given a Lagrangian which is invariant under a symmetry group, the fields transform as:
 \begin{equation}
-\psi \rightarrow e^{ig\theta^k \tau^k} \psi  \; ,
+\psi \rightarrow e^{ig\theta^k \tau^k} \psi  \; , \nonumber
 \end{equation}
 
 \noindent where $g$ is the coupling constant of the field $\psi$ under the interaction and $\tau^k$ are the generators of the group and obey commutation relations: 
 \begin{equation}
-\left[ \tau^i, \tau^j \right] = i f^{ijk} \tau^k \; . 
+\left[ \tau^i, \tau^j \right] = i f^{ijk} \tau^k \; . \nonumber
 \end{equation}
 
 \noindent In the equation above, $f^{ijk}$ is the structure constant of the group and is always zero for Abelian groups. Promoting this global  invariance to a local one ($\theta^k \rightarrow \theta^k(x)$) implies adding to the theory:
 \begin{itemize}
 \item A number of massless gauge fields $W_\mu^k$ equal to the number of generators of the symmetry group, that transform as 
 \begin{equation}
-W_\mu^k \rightarrow W_\mu^k + \partial_\mu \theta^k + g f^{klm} W_\mu^l \theta^m  \; .
+W_\mu^k \rightarrow W_\mu^k + \partial_\mu \theta^k + g f^{klm} W_\mu^l \theta^m  \; . \nonumber
 \end{equation}
 \item A covariant derivative: 
 \begin{equation}
-D_\mu = \partial_\mu - ig\tau^kW_\mu^k \; ,
+D_\mu = \partial_\mu - ig\tau^kW_\mu^k \; , \nonumber
 \end{equation}
 
 \noindent that substitutes the standard derivative in the Lagrangian.
 \item A free Lagrangian for the vector fields as in Equation \ref{eq:lproca}, with:
 \begin{equation}
-F_{\mu \nu}^k = \partial_\mu W^k_\nu - \partial_\nu W^k_\mu + g f^{klm} W_\mu^l W_\nu^m \; .
+F_{\mu \nu}^k = \partial_\mu W^k_\nu - \partial_\nu W^k_\mu + g f^{klm} W_\mu^l W_\nu^m \; . \nonumber
 \end{equation}
 \noindent Note that the last term, of second order in the field, is present only for non-Abelian symmetry groups, since it is proportional to the structure constant. This has non-trivial consequences as the second-order term leads to self-interaction among the gauge fields.
 \end{itemize}
@@ -192,8 +192,8 @@ The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions,
 
 \begin{equation}
 \begin{aligned}
-\psi_L = P_L \psi = \frac{(1 - \gamma_5)}{2} \psi, \\
-\psi_R = P_R \psi = \frac{(1 + \gamma_5)}{2} \psi,
+\psi_L = P_L \psi = \frac{(1 - \gamma_5)}{2} \psi \; , \\
+\psi_R = P_R \psi = \frac{(1 + \gamma_5)}{2} \psi \; , \nonumber
 \end{aligned}
 \label{eq:sm:LR}
 \end{equation}
@@ -201,7 +201,7 @@ The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions,
 \noindent where $\gamma_5$ is defined as $\gamma_5 = i \gamma^0 \gamma^1 \gamma^2 \gamma^3 $. Looking back at Equation \ref{eq:sm:dirac}, it can be noted that, if we decompose the fermion field into its left-handed and right-handed components, the derivative term keeps $\psi_L$ and $\psi_R$ separated, while the mass term mixes them:
 \begin{equation}
 -m \bar \psi \psi = -m \bar \psi P_L^2 \psi - m \bar \psi P_R^2 \psi
-	= -m \bar \psi_R \psi_L - m \bar \psi_L \psi_R \; .
+	= -m \bar \psi_R \psi_L - m \bar \psi_L \psi_R \; .  \nonumber
 \end{equation}
 
 
@@ -213,13 +213,13 @@ The $SU(2)_\mathrm{L}$ part of the symmetry group governs the weak interactions,
 
 \noindent and substituting with this the regular derivative results in the interaction Lagrangian:
 \begin{equation}
-\mathcal{L}_{int}^{EW} = -\frac{g'}{2} \left( \bar{\psi} \gamma_\mu Y \psi \right) B^\mu - g \sum_k \left( \bar{\psi} \gamma_\mu T^k \psi  \right) W_k^\mu \; ,
+\mathcal{L}_{int}^{EW} = -\frac{g'}{2} \left( \bar{\psi} \gamma_\mu Y \psi \right) B^\mu - g \sum_k \left( \bar{\psi} \gamma_\mu T^k \psi  \right) W_k^\mu \; , \nonumber
 \end{equation}
 
 \noindent where we have introduced $T^k$, the weak isospin operator, and $Y$, the hypercharge operator (associated to the $U(1)_\mathrm{Y}$ group), and the respective coupling constants $g$ and $g'$. The quantum numbers of the $T^k$ and $Y$ operators relate to the electric charge $Q$ through the  Gell-Mann Nishijima relation:
 
 \begin{equation}
-Q = \frac{Y}{2} + T_3 \; ,
+Q = \frac{Y}{2} + T_3 \; , \nonumber
 \label{eq:sm:Q}
 \end{equation}
 
@@ -228,7 +228,7 @@ Q = \frac{Y}{2} + T_3 \; ,
 In the case of an $SU(2)$ symmetry, it is not possible to add directly to the Lagrangian a mass term for the vector bosons of the form in Equation \ref{eq:lproca}, as it would spoil the $SU(2)$ local invariance. The Higgs-Englert-Brout mechanism \cite{Englert:1964et, Higgs:1964pj, Higgs:1964ia} solves this problem through \gls{ssb} of the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ invariance. The \gls{ssb} is obtained by adding to the theory one extra isospin doublet of complex scalar components, the Higgs field:
 
 \begin{equation}
-	\Phi = \left( \begin{array}{c} \phi^+  \\ \phi^0 \end{array} \right) \; .
+	\Phi = \left( \begin{array}{c} \phi^+  \\ \phi^0 \end{array} \right) \; . \nonumber
 \end{equation}
 %	= \frac{1}{\sqrt{2}} \left( \begin{array}{c} \phi_1 + i \phi_2 \\ \phi_3 + i \phi_4 \end{array} \right)
 
@@ -242,7 +242,7 @@ In the case of an $SU(2)$ symmetry, it is not possible to add directly to the La
 \noindent where $\mathcal{D}_{\mu}$ is the covariant derivative defined in Equation \ref{eq:sm:covD} and the potential $V(\Phi)$ is given by:
 
 \begin{equation}
- V(\Phi) =  \mu^2 \Phi^{\dagger} \Phi + \lambda (\Phi^{\dagger} \Phi)^2 \, . 
+ V(\Phi) =  \mu^2 \Phi^{\dagger} \Phi + \lambda (\Phi^{\dagger} \Phi)^2 \, . \nonumber
 	\label{eq:hpot}
 \end{equation}
 
@@ -269,7 +269,7 @@ In the case of an $SU(2)$ symmetry, it is not possible to add directly to the La
 Up to this point the $SU(2)_\mathrm{L} \times U(1)_\mathrm{Y}$ symmetry is still intact, but the explicit choice of one of the infinite possible vacuum states for the Higgs field breaks the symmetry. According to the Goldstone theorem \cite{Goldstone:1962es}, the breaking of a continuous symmetry leads to the appearance of new massless scalar particles as field excitations. These new degrees of freedom are absorbed by the existing gauge bosons, thus giving them mass. To meet the experimental requirement of a massless photon, the choice of the Higgs vacuum has not to break the electromagnetic symmetry, $U(1)_{EM}$, so the component of the Higgs doublet that acquires a \gls{vev} is the neutral one:
 
 \begin{equation}
-	\Phi_0 = \frac{1}{\sqrt{2}} \left( \begin{array}{c} 0 \\ v  \end{array} \right) \, . \
+	\Phi_0 = \frac{1}{\sqrt{2}} \left( \begin{array}{c} 0 \\ v  \end{array} \right) \, . \nonumber
 \label{eq:hvphi}
 \end{equation}
 
@@ -293,14 +293,14 @@ The physical mass eigenstates of the gauge bosons are a rotation of the interact
 \begin{aligned}
 W_\mu^\pm &= \frac{W_\mu^1 \mp W_\mu^2}{\sqrt{2}} \; , \\
 A_\mu &= B_\mu \cos\theta_W + W^3_\mu \sin\theta_W \; ,  \\
-Z_\mu &= W^3_\mu \cos\theta_W - B_\mu \sin\theta_W \; ,
+Z_\mu &= W^3_\mu \cos\theta_W - B_\mu \sin\theta_W \; , \nonumber
 \end{aligned}
 \label{eq:wein}
 \end{equation}
 
 \noindent where we have introduced the Weinberg angle $\theta_W$ such that:
 \begin{equation}
-\tan\theta_W \equiv \frac{g'}{g} \; .
+\tan\theta_W \equiv \frac{g'}{g} \; . \nonumber
 \end{equation}
 
 
@@ -309,7 +309,7 @@ The $(\mathcal{D}_{\mu} \Phi)^{\dagger} (\mathcal{D}^{\mu} \Phi)$ term in Equati
 \begin{equation}
 \mathcal{L}_{\Phi} = \left(1+\frac{\phi}{v}\right)^2 \,
 \left\{ m_W^2\, W_\mu^\dagger W^\mu
-+ \frac{1}{2}\, m_Z^2\, Z_\mu Z^\mu \right\}\, +\, \mathcal{L}_H \; , 
++ \frac{1}{2}\, m_Z^2\, Z_\mu Z^\mu \right\}\, +\, \mathcal{L}_H \; ,  \nonumber
 \end{equation}
 
 \noindent where $\mathcal{L}_H$ denotes all the terms in $\mathcal{L}_{\Phi}$ that involve only the Higgs field: Higgs boson mass, cubic and quadratic self-interaction. Note that the coupling of the gauge bosons with the Higgs field is proportional to the square of the boson mass.
@@ -319,7 +319,7 @@ At tree level the resulting masses of the gauge bosons are:
 \begin{aligned}
 m_\gamma &= 0 \; ,\\
 m_Z &= \frac{v \sqrt{g^2 + g'^2}}{2} \; , \\
-m_W &= \frac{vg}{2} =  \cos\theta_W m_Z \; .
+m_W &= \frac{vg}{2} =  \cos\theta_W m_Z \; . \nonumber
 \end{aligned}
 \end{equation}
 
@@ -330,7 +330,7 @@ Therefore, the Higgs-Englert-Brout mechanism generates automatically a mass term
  \Phi_C = i \sigma^2 \Phi^* 
 	= i \left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array} \right) 
 	\left( \begin{array}{c} \phi^- \\ \phi^{0*} \end{array} \right)
-	= \left( \begin{array}{c} \phi^{0*} \\ - \phi^- \end{array} \right) \; .
+	= \left( \begin{array}{c} \phi^{0*} \\ - \phi^- \end{array} \right) \; . \nonumber
 \end{equation}
 
 \noindent If we identify as $y_f$ the coupling of the fermion $f$ to the Higgs field, referred to as Yukawa coupling, the additional part of the Lagrangian that generates the fermion masses is:
@@ -338,14 +338,14 @@ Therefore, the Higgs-Englert-Brout mechanism generates automatically a mass term
 \begin{equation}
 \begin{aligned}
 \mathcal{L}_{Yukawa} &= - \left[  y_d \left( \bar{u}_L \,\, \bar{d}_L  \right) \Phi d_R +  y_u \left( \bar{u}_L \,\, \bar{d}_L  \right) \Phi_C u_R \right] + h.c. \\
-&= - \frac{1}{\sqrt{2}} \left[  y_d \left( v + \phi \right) \bar{d}_L d_R + h.c. + y_u \left( v + \phi \right) \bar{u}_L d_u + h.c. \right]  \; .
-\end{aligned}
+&= - \frac{1}{\sqrt{2}} \left[  y_d \left( v + \phi \right) \bar{d}_L d_R + h.c. + y_u \left( v + \phi \right) \bar{u}_L d_u + h.c. \right]  \; . \nonumber
+\end{aligned} 
 \end{equation}
 
 \noindent In this equation we can now easily identify the fermion mass terms, of the form:
 
 \begin{equation}
-m_f =  \frac{v}{\sqrt{2}} y_f \; .
+m_f =  \frac{v}{\sqrt{2}} y_f \; . \nonumber
 \end{equation}
 
 \noindent Note that, in the case of fermions, the coupling to the Higgs boson is directly proportional to the fermion mass. 
@@ -355,7 +355,7 @@ The matrices $y_f$ are not necessarily diagonal, but they can be diagonalized th
 
 The value of the Higgs boson mass is not predicted by the \gls{sm}, but it can be measured and, once it is know, the Higgs boson production cross-section and decay fractions can be predicted accurately. These predictions can be verified experimentally, supporting the idea that the discovered boson is indeed the \gls{sm} Higgs boson. In 2015 the ATLAS and CMS collaborations published a combined measurement of the Higgs boson mass \cite{Aad:2015zhl}:
 \begin{equation}
-m_H = 125.09 \pm 0.21 (\mathrm{stat.}) \pm 0.11 (\mathrm{syst.}) \;\; \mathrm{GeV}.
+m_H = 125.09 \pm 0.21 (\mathrm{stat.}) \pm 0.11 (\mathrm{syst.}) \;\; \mathrm{GeV}. \nonumber
 \end{equation}
 
 \noindent This result uses the full Run 1 ATLAS and CMS data, analyzed in the $h \rightarrow \gamma \gamma$ and $h \rightarrow ZZ* \rightarrow 4 \; \mathrm{leptons}$ channels.
@@ -536,7 +536,7 @@ While the original model from Kaluza and Klein was disproved shortly after being
 \begin{equation}
 \begin{aligned}
 &Q |{\rm boson}\rangle = |{\rm fermion }\rangle \;, \\
-&Q |{\rm fermion}\rangle = |{\rm boson }\rangle \; .
+&Q |{\rm fermion}\rangle = |{\rm boson }\rangle \; . \nonumber
 \end{aligned}
 \end{equation}
 
@@ -587,7 +587,7 @@ W_{MSSM} & = y_u \stilde{u} \stilde{Q} H_u - y_d \stilde{d}\stilde{Q} H_d - y_e 
    \sum_{F, G, T} y_d^{FG} \stilde{d}_F \stilde{Q}_G^T H_d^T   \\ 
    & -
    \sum_{F, G, T} y_e^{FG} \stilde{e}_F\stilde{L}_G^T H_d^T  +
-   \sum_{T} \mu H_u^T H_d^T \;.
+   \sum_{T} \mu H_u^T H_d^T \;. \nonumber
 \end{aligned}
 \label{eq:WMMS}
 \end{equation}
@@ -737,7 +737,7 @@ To maintain an holomorphic superpotential, \gls{susy} requires at least two SU(2
 The \gls{mssm} does not include all the possible terms that are gauge- and \gls{susy}-invariant, to avoid interactions that would violate lepton or baryon number conservation. Matter parity, defined as:
 
 \begin{equation}
-P_M = (-1)^{3 (B-L)} \; ,
+P_M = (-1)^{3 (B-L)} \; , \nonumber
 \label{eq:defmatterparity}
 \end{equation}
 
@@ -746,7 +746,7 @@ P_M = (-1)^{3 (B-L)} \; ,
 A more convenient way to express the same conservation rule is R-parity:
 
 \begin{equation}
-P_R = (-1)^{3(B-L) + 2 s} \; ,
+P_R = (-1)^{3(B-L) + 2 s} \; , \nonumber
 \label{eq:defRparity}
 \end{equation}
 
@@ -760,7 +760,7 @@ this is just an assumption and is not deduced from the theory.
 \label{sec:theo:naturalsusy}
 
 Particles within the same supermultiplet share the same electric charge, isospin and \gls{qcd} color, as $Q$ and $Q^\dagger$ commute with the generator of the gauge transformations.
-The third equality in Equation \ref{eq:susyalgth} implies that $[ (P^\mu)^2 , Q  ]=0$. If we think of this as an operator applied to a supermultiplet, this implies that all the particles within the same supermultiplet should also have the same mass. The superpartners also bring a radiative correction to the Higgs boson mass, since they couple to the Higgs boson with the same coupling constant as their \gls{sm} partners ($y_S=y_f=y$). If we consider the case of a fermion and a sfermion, according to Eqs. \ref{eq:divhf}-\ref{eq:divhs} the two contributions have opposite sign and the total correction is:
+The third equality in Equation \ref{eq:susyalgth} implies that $[ (P^\mu)^2 , Q  ]=0$. If we think of this as an operator applied to a supermultiplet, this implies that all the particles within the same supermultiplet should also have the same mass. The superpartners also bring a radiative correction to the Higgs boson mass, since they couple to the Higgs boson with the same coupling constant as their \gls{sm} partners ($y_S=y_f=y$). If we consider the case of a fermion and a sfermion, according to Eqs. \ref{eq:divhf}--\ref{eq:divhs} the two contributions have opposite sign and the total correction is:
 
 \begin{equation}
 \Delta m_H^2 \>=\> {y\over 16 \pi^2}
@@ -768,7 +768,7 @@ The third equality in Equation \ref{eq:susyalgth} implies that $[ (P^\mu)^2 , Q 
 \> {\rm ln}(\Lambda_{UV}/m_f) 
 - m_S^2
 \> {\rm ln}(\Lambda_{UV}/m_S) 
-\right ].
+\right ] \; . \nonumber
 \label{eq:divhsusy}
 \end{equation}
 
@@ -812,7 +812,7 @@ Not all the superpartners have the same relevance in the contribution to the Hig
 Superpartners of the \gls{sm} particles have not been observed yet. This means that, if they exist, their mass must be larger than that of the corresponding \gls{sm} particle, and thus \gls{susy} must be a broken symmetry. The Lagrangian can therefore be written as:
 
 \begin{equation}
-\lagr = \lagr_{\rm SUSY} + \lagr_{\rm soft} \; ,
+\lagr = \lagr_{\rm SUSY} + \lagr_{\rm soft} \; , \nonumber
 \end{equation}
 
 \noindent where $\lagr_{\rm SUSY}$ is the \gls{susy}-conserving part derived from the superpotential, while $\lagr_{\rm soft}$ encloses the terms that break \gls{susy}. The suffix "soft" means that we allow only soft \gls{susy}-breaking terms in the Lagrangian, whose couplings have positive mass dimension, so that they vanish at very high mass scales. The inclusion of \gls{susy}-breaking terms requires the addition of new particles and interactions to the \gls{mssm}. While there is no unambiguous way to modify the theory to do this (some examples of \gls{susy}-breaking mechanisms are described in Section \ref{sec:susybreaking}), it is possible to include a general parametric form of the \gls{susy}-breaking terms  in the Lagrangian:
@@ -842,7 +842,7 @@ The \gls{susy}-breaking terms of $\lagr_{\rm soft}$ can be generated in models w
 \noindent where $D^a$ and $F_i$ are respectively the auxiliary real bosonic and complex fermion fields of the \gls{susy} Lagrangian, and $\langle \rangle $ denotes their vacuum expectation value. For Equation \ref{explicitgoldstino} to be non-trivial, at least one of the $D^a$ or $F_i$ has to have a non-zero \gls{vev}. This is related to the two possible mechanisms that lead to \gls{susy} breaking: via a $D$-term or an $F$-term. 
 The Fayet-Iliopoulos mechanism \cite{Fayet:1974jb} allows a non-zero \gls{vev} for an auxiliary field $D$ by adding to the Lagrangian a term proportional to the auxiliary field itself, with a coupling constant with the dimension of a squared mass:
 \begin{equation}
-\lagr_{\rm FI} \,=\, -\kappa D \; .
+\lagr_{\rm FI} \,=\, -\kappa D \; . \nonumber
 \end{equation}
 However with this mechanism it is difficult to properly attribute masses to all the \gls{mssm} particles.
 %This type of term is gauge-invariant only for abelian groups. 
@@ -850,8 +850,7 @@ However with this mechanism it is difficult to properly attribute masses to all 
 
 Another possibility is to assign a \gls{vev} to an $F$-term, with the O’Raifeartaigh mechanism \cite{ORaifeartaigh:1975nky}. Since in the \gls{mssm} there is not a good candidate to be a gauge singlet with a non-vanishing \gls{vev} for an $F$-term, this implies the addition of at least one set of chiral supermultiplets, such that $F_i$ is non-trivial for at least one of them. A realization of this is possible for example with three chiral supermupliplets $\Phi_i$ and a superpotential of the form:
 \begin{equation}
-W = -k \Phi_1 + m \Phi_2 \Phi_3 + {y\over 2} \Phi_1 \Phi_3^2 \;.
-\label{oraif}
+W = -k \Phi_1 + m \Phi_2 \Phi_3 + {y\over 2} \Phi_1 \Phi_3^2 \;. \nonumber
 \end{equation}
 The resulting scalar potential at tree level has a minimum for $\phi_2=\phi_3=0$ and is independent of $\phi_1$ (where $\phi_i$ are the scalar fields in $\Phi_i$), while the one-loop corrections lead to a non-zero global minimum when also $\phi_1=0$. In the following we will consider only \gls{susy} breaking originating from the O’Raifeartaigh mechanism.
 
