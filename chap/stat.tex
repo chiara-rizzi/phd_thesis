@@ -18,13 +18,13 @@ There are two main approaches to statistical inference: frequentist and Bayesian
 \begin{description}
 \item[Frequentist] In the frequentist approach, probability is defined as the fraction of favorable outcomes of a repeatable experiment when the number of repetitions tends to infinity:
 \begin{equation}
-P(\mathrm{A}) = \lim_{N_{\mathrm{tot}} \rightarrow \infty} \frac{N_\mathrm{A}}{N_{\mathrm{tot}}} \; .
+P(\mathrm{A}) = \lim_{N_{\mathrm{tot}} \rightarrow \infty} \frac{N_\mathrm{A}}{N_{\mathrm{tot}}} \; . \nonumber
 \end{equation}
 In this case there is no probability for a hypothesis or true values of the parameters: a theory is either true or false, and given a theory only the data has a certain probability or \gls{pdf}.
 
 \item[Bayesian] In the Bayesian approach, probability is a more subjective notion, which incorporates the degree of belief in the from of priors. In this case it is meaningful to speak about the \gls{pdf} not only for the observed data, but also for theories and parameters. Performing an experiment will modify the probability of a theory according to the Bayes formula:
 \begin{equation}
-P(\mathrm{theory} | \mathrm{data}) = \frac{ P(\mathrm{data}|\mathrm{theory}) \times P(\mathrm{theory})}{P(\mathrm{data})} \; ,
+P(\mathrm{theory} | \mathrm{data}) = \frac{ P(\mathrm{data}|\mathrm{theory}) \times P(\mathrm{theory})}{P(\mathrm{data})} \; , \nonumber
 \end{equation}
 where $P(\mathrm{data}|\mathrm{theory})$ is the probability of the data given the theory under examination, $P(\mathrm{theory})$ is the theory prior, $P(\mathrm{data})$ is a normalization constant that expresses the probability of observing these data whether the theory is true or false, and $P(\mathrm{theory} | \mathrm{data})$ is the final posterior probability of the theory.
 
@@ -41,7 +41,7 @@ Note that while $P(x|\theta)$ as a function of $x$ is a proper \gls{pdf} and it 
 function, which depends on $\theta$:
 
 \begin{equation}
-\int L(\theta) \, d \theta \neq 1 \; . 
+\int L(\theta) \, d \theta \neq 1 \; . \nonumber
 \end{equation}
 
 \section{Parameter estimation}
@@ -67,11 +67,11 @@ The characteristics used to evaluate the performance of an estimator are:
 \item[Bias] For a given number $N$ of observations, the bias is the difference between the expectation value of the estimator ($E[\hat{\vec{\theta}}]$) and the true value:
 \begin{equation}
 \label{eq:stat:bias}
-\vec{b} = E[\hat{\vec{\theta}}] - \vec{\theta} \; .
+\vec{b} = E[\hat{\vec{\theta}}] - \vec{\theta} \; . 
 \end{equation}
 Once the bias of a specific estimator is known, it is possible to build and unbiased one by defining 
 \begin{equation}
-\hat{\vec{\theta}}_{\mathrm{unbiased}} = \hat{\vec{\theta}} - \vec{b} \; .
+\hat{\vec{\theta}}_{\mathrm{unbiased}} = \hat{\vec{\theta}} - \vec{b} \; . \nonumber
 \end{equation}
 
 \item[Efficiency] The efficiency of an estimator is high when its variance ($V[\hat{\vec{\theta}}]$) is small. $V[\hat{\vec{\theta}}]$ has a lower bound, that is given by the Cramer-Rao inequality \cite{Cramer1946,Rao1992}.
@@ -138,7 +138,7 @@ If we consider the representation of the observed data given by the binned distr
 
 \begin{equation}
 \label{eq:stat:exp}
-E[n_i] = b_i + \mu s_i  \; ,
+E[n_i] = b_i + \mu s_i  \; , \nonumber
 \end{equation}
 
 \noindent where $b_i$ is the expected number of background events, $s_i$ the expected number of signal events, normalized to a given benchmark cross-section, and $\mu$ is a multiplicative factor of that cross-section referred to as signal strength.
@@ -161,12 +161,11 @@ in most practical cases this is not feasible, and the auxiliary likelihood is mo
 Assuming that data used to derive the constraints on the \glspl{np} is statistically independent from the data in the analysis and not affected by the potential presence of the signal under study, the combined likelihood assumes the factorized form:
 
 \begin{equation}
-\label{eq:stat:lik_sys}
 L(\mu, \vec{\theta}) =
 \prod_{i=1}^N \frac{ (\mu s_{i}(\vec{\theta}) +
 b_{i}(\vec{\theta}) )^{n_{i}} }{ n_{i}! }
 e^{- (\mu s_{i}(\vec{\theta}) + b_{i}(\vec{\theta})) }   \;
-\prod_{k=1}^M \rho( \theta_k) \; ,
+\prod_{k=1}^M \rho( \theta_k) \; , \nonumber
 \end{equation}
 
 \noindent where $\rho( \theta_k)$ is the constraint term for the parameter $\theta_k$. Note that the treatment of an uncertainty through the addition of a constraint term, from the pure frequentist point of view is justified only for sources of uncertainty of experimental nature, where there is indeed an auxiliary measurement. The same approach is instead often also used for theoretical uncertainties, where the frequentist prescription would be to have a result that depends on these parameters. While in the Bayesian view the constrain term would easily be interpreted as a prior on the value of the theoretical parameter, in the frequentist approach this is equivalent to assigning also to the theoretical uncertainties a fictitious auxiliary measurement. 
@@ -180,8 +179,7 @@ Depending on the underlying auxiliary measurement, different functional types ca
 \item[Gaussian constraint] This is the default constrain type for systematic uncertainties, and its usage is justified by the central limit theorem. In general, it is safe to use this constraint as long as the \gls{mle} of the \gls{np} from the corresponding auxiliary measurement follows a Gaussian distribution. The functional form is:
 
 \begin{equation}
-\label{eq:stat:gauss}
-\rho( \theta) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left( -\frac{(\theta - \hat{\theta})^2}{2\sigma^2} \right) \; .
+\rho( \theta) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left( -\frac{(\theta - \hat{\theta})^2}{2\sigma^2} \right) \; .  \nonumber
 \end{equation}
 
 \noindent Technically, the function implemented in the likelihood is a truncated Gaussian, in order to avoid non-zero probability for non-physical values of the \gls{np} (e.g. values that correspond to a negative background prediction). This truncated Gaussian is normalized to still have unit area.
@@ -189,15 +187,13 @@ Depending on the underlying auxiliary measurement, different functional types ca
 \item[Poisson constraint] This constraint is often referred to as "Gamma" constraint because, when using it in a Bayesian approach, if combined with a uniform prior it gives rise to a Gamma posterior. It is used for \glspl{np} related to event count and to model the \gls{mc} statistical uncertainty. If we assume that the background yield predicted from \gls{mc} is $n$ background events, derived from $N$ \gls{mc} simulated events with a multiplicative scale $\alpha$, then the constraint term is:
 
 \begin{equation}
-\label{eq:stat:poisson}
-\rho(n) = \frac{1}{\alpha} \frac{(n/\alpha)^N}{N!} \exp\left( -n/\alpha \right) \; .
+\rho(n) = \frac{1}{\alpha} \frac{(n/\alpha)^N}{N!} \exp\left( -n/\alpha \right) \; . \nonumber
 \end{equation}
 
 \item[Log-normal constraint] Log-normal is the distribution of a variable whose logarithm is distributed according to a Gaussian distribution. When random variables are multiplied, their product follows a log-normal distribution:
 
 \begin{equation}
-\label{eq:stat:lognorm}
-\rho( \theta) = \frac{1}{\sqrt{2\pi}\ln{\sigma}}\exp\left( -\frac{(ln{\theta} - \ln{\hat{\theta}})^2}{2(\ln{\sigma})^2} \right)\frac{1}{\theta} \; .
+\rho( \theta) = \frac{1}{\sqrt{2\pi}\ln{\sigma}}\exp\left( -\frac{(ln{\theta} - \ln{\hat{\theta}})^2}{2(\ln{\sigma})^2} \right)\frac{1}{\theta} \; . \nonumber
 \end{equation}
 
 \noindent One of the advantages of this constraint is that it never assumes negative values.
@@ -224,7 +220,7 @@ L(\mu, \theta) =
 \frac{ (\mu s +
 b \left( \frac{\theta}{\tilde{\theta}} \right) 2 )^{n} }{ n! }
 e^{- (\mu  + b\left(\frac{\theta}{\tilde{\theta} }\right)2)}   \; 
-G( \tilde{\theta} | \theta, \sigma_\theta) \; .
+G( \tilde{\theta} | \theta, \sigma_\theta) \; . 
 \end{equation}
 
 \noindent The change $b \rightarrow b\frac{\theta}{\tilde{\theta} }2$ encodes exactly the fact that a 10\% change in \gls{jer} leads to a 20\% change in background yields. To simplify this expression, the auxiliary measurement can be normalized to a standard Gaussian: $G( \tilde{\theta} | \theta, \sigma_\theta) \rightarrow G( 0 | \theta, 1)$, where also $\theta$ has been normalized such that the values $\theta = \pm 1$ correspond to the nominal uncertainty. The likelihood then becomes:
@@ -236,7 +232,7 @@ L(\mu, \theta) =
 \frac{ (\mu s +
 b(1 + 0.1\theta) )^{n} }{ n! }
 e^{- (\mu  + b (1 + 0.2\theta) )}   \;
-G( 0 | \theta, 1) \; .
+G( 0 | \theta, 1) \; . 
 \end{equation}
 
 \subsection*{Interpolation}
@@ -267,7 +263,7 @@ b(\theta)=
 \begin{cases}
 b \left( \frac{b^+}{b}\right)^{\theta}  \;\;\;\;\;\; \theta \geq 0\\
 b \left( \frac{b^-}{b}\right)^{-\theta}  \;\;\;\; \theta < 0
-\end{cases} \, , \
+\end{cases} \, , \nonumber
 \end{equation}
 
 \noindent In this case, $b(\theta)$ is bound to be positive. The discontinuity at $\theta=0$ is still present, and in this case it appears also when $b^+$ and $b^-$ are symmetric with respect to $b$ (see Figure \ref{fig:interp_3}). Note that, once this is inserted into the likelihood, the combination of a Gaussian constraint with exponential interpolation is equivalent to a log-normal constraint with a linear extrapolation. 
@@ -316,7 +312,7 @@ and \glspl{np}, the likelihood itself can be maximized globally with respect to 
 
 \begin{equation}
 \label{eq:stat:prl}
-\prl = \frac{ L(\mu, \hat{\hat{\theta}}) } {L(\hat{\mu}, \hat{\theta}) } \;.
+\prl = \frac{ L(\mu, \hat{\hat{\theta}}) } {L(\hat{\mu}, \hat{\theta}) } \;. 
 \end{equation}
 
 \noindent As it was discussed in Section \ref{sec:stat:MLE},
@@ -346,7 +342,7 @@ To quantify the compatibility of the observed data with a specific model, a $p$-
 \begin{equation}
 \label{eq:stat:pval}
 p_{\mu} = \int_{t_{{\rm obs}}}^{\infty} f(t | \mu ) \,
-d t \; ,
+d t \; , \nonumber
 \end{equation}
 
 The $p$-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the $p$-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% \gls{cl}. Note that excluding a test hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
@@ -357,7 +353,7 @@ The significance $Z$ of the $p$-value can be evaluated by transforming it in the
 
 \begin{equation}
 \label{eq:stat:sig}
-Z = \Phi^{-1}(1-p) \; ,
+Z = \Phi^{-1}(1-p) \; , \nonumber
 \end{equation} 
 
 
@@ -391,15 +387,14 @@ While a test statistic can be any real-valued function of the data, the Neyman-P
 
 \begin{equation}
 \label{eq:stat:tmu}
-t_{\mu} = -2 \log \prl \; ,
+t_{\mu} = -2 \log \prl \; , \nonumber
 \end{equation}
 
 \noindent and the corresponding $p$-value:
 
 \begin{equation}
-\label{eq:stat:pmu}
-p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \,
-d t_{\mu} \; .
+p_{\mu} = \int_{t_{\mu,{\rm obs}}}^{\infty} f(t_{\mu} | \mu ) \, \nonumber
+d t_{\mu} \; . 
 \end{equation}
 
 \noindent Different variations of this test statistic are used for discovery and exclusion.
@@ -442,8 +437,7 @@ q_{\mu} =
 \noindent This test statistic, also known as one-sided \gls{prl}, is the default one used in the analyses described in Chapters \ref{chap:strong_prod} and  \ref{chap:ewk_prod}. \pmu is consequently defined as the integral above the observed value: 
 
 \begin{equation}
-\label{eq:stat:pmu}
-p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \, d q_{\mu} \;.
+p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \, d q_{\mu} \;. \nonumber
 \end{equation}
 
 \noindent Note that switching from the discovery test statistic to the exclusion test statistic is equivalent to inverting the role of the background-only and signal-plus-background hypothesis: in the case of the exclusion fit, the null hypothesis to exclude is the signal-plus-background one.
@@ -456,13 +450,12 @@ p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \, d q_{\mu} \;.
 
 The strategy described above leads to a loss of information when the test statistic is set to 0. A solution is obtained by uncapping the test statistic and, instead of assigning a 0 to the situations we do not want to penalize, assign them a negative value. This is achieved with the $r_0$ and $r_\mu$ test statistics. As an example, the definition for $r_\mu$ is:
 \begin{equation}
-\label{eq:rmu}
 r_{\mu} =
 \left\{ \! \! \begin{array}{ll}
                - 2 \ln \lambda(\mu)  & \hat{\mu} \le \mu  \;, \\*[0.2 cm]
                + 2 \ln \lambda(\mu)  & \hat{\mu} > \mu  \;.
               \end{array}
-       \right.
+       \right. \nonumber
 \end{equation}
 
  
@@ -471,7 +464,6 @@ r_{\mu} =
 The alternate \gls{prl}, $\tilde{\lambda}({\mu})$, is designed to take into account the fact that, in most physical cases, only positive $\mu$ have a physical meaning. In this case, when $\hat{\mu} < 0$ , the best physical value is 0, and the alternate \gls{prl} is defined as: 
 
 \begin{equation}
-\label{eq:stat:lik:alpexcl}
 \tilde{\lambda}({\mu}) =
 \left\{ \! \! \begin{array}{ll}
                \frac{ L(\mu,
@@ -483,7 +475,7 @@ The alternate \gls{prl}, $\tilde{\lambda}({\mu})$, is designed to take into acco
                {L(0, \hat{\hat{\vec{\theta}}}(0)) }
  & \hat{\mu} < 0 \;.
               \end{array}
-       \right.
+       \right. \nonumber
 \end{equation}
 
 \noindent The corresponding test statistics are indicated with $\tilde{q}$ and are defined as in Equations \ref{eq:stat:q0} and \ref{eq:stat:qmu} after substituting $\lambda({\mu}) \rightarrow \tilde{\lambda}({\mu})$.
@@ -491,7 +483,6 @@ The alternate \gls{prl}, $\tilde{\lambda}({\mu})$, is designed to take into acco
 \iffalse
 % this equation in the original paper uses the notation t and not q
 \begin{equation}
-\label{eq:stat:q:excl}
 \qmu = - 2 \ln \tilde{\lambda}(\mu) =
 \left\{ \! \! \begin{array}{ll}
                - 2 \ln \frac{L(\mu, \hat{\hat{\vec{\theta}}}(\mu))}
@@ -501,7 +492,7 @@ The alternate \gls{prl}, $\tilde{\lambda}({\mu})$, is designed to take into acco
                 {L(\hat{\mu}, \hat{\vec{\theta}})}
 &  \quad \hat{\mu} \ge 0  \;.
               \end{array}
-       \right.
+       \right. \nonumber
 \end{equation}
 \fi
 
@@ -518,9 +509,8 @@ small) and we observe a downward fluctuation in data, we could end up excluding 
 \noindent where, as shown in Figure \ref{fig:stat:pmu_pb}:
 
 \begin{equation}
-\label{eq:stat:pb}
 p_b = \int_{0}^{q_{\mu,{\rm obs}}} f(q_{\mu} | 0 ) \,
-d q_{\mu}  \; .
+d q_{\mu}  \; . \nonumber
 \end{equation}
 
 With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if $\cls < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Equation \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \gls{cls} method is the default procedure used in this thesis to decide on the exclusion of a signal model. 
@@ -553,9 +543,8 @@ This is done twice: a first time using as expected number of events the one pred
 For large number of events, the asymptotic approximation \cite{Cowan2011} can be used to determine the \gls{pdf} of the test statistic without having to simulate a large number of pseudo-experiments. This technique is based on  Wald's theorem \cite{Wald1943}, which states that $t_{\mu} = -2 \ln \lambda(\mu)$ is parabolic up to corrections that scale with the inverse of the square root of the sample size:
 
 \begin{equation}
-\label{eq:wald}
 t_{\mu} = -2 \ln \lambda(\mu)
-= \frac{(\mu - \hat{\mu})^2}{\sigma^2} + {\cal  O}(1/\sqrt{N}) \;.
+= \frac{(\mu - \hat{\mu})^2}{\sigma^2} + {\cal  O}(1/\sqrt{N}) \;.  \nonumber
 \end{equation}
 
 \noindent Ignoring the ${\cal  O}(1/\sqrt{N})$ terms, $t_{\mu} = -2 \ln \lambda(\mu)$ is then distributed according to a noncentral chi-square distribution with one degree of freedom:
@@ -566,14 +555,13 @@ f(t_{\mu};\Lambda) = \frac{1}{2 \sqrt{t_{\mu}}} \frac{1}{\sqrt{2 \pi}}
 \left[ \exp \left( - \frac{1}{2}
 \left( \sqrt{t_{\mu}} + \sqrt{\Lambda} \right)^2 \right) +
 \exp \left( - \frac{1}{2} \left( \sqrt{t_{\mu}} - \sqrt{\Lambda} \right)^2
-\right) \right] \;,
+\right) \right] \;, 
 \end{equation}
 
 \noindent where the noncentrality parameter $\Lambda$ is:
 
 \begin{equation}
-\label{eq:stat:noncentrality}
-\Lambda = \frac{(\mu - \mu^{\prime})^2}{\sigma^2} \; .
+\Lambda = \frac{(\mu - \mu^{\prime})^2}{\sigma^2} \; . \nonumber
 \end{equation}
 
 \noindent The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values. 
@@ -635,7 +623,7 @@ assuming a 30\% uncertainty in the background yields. With this definition, the 
 
 \begin{equation}
 \label{eq:binomexpp}
-p(N_s, N_b, \sigma_b) = \mathcal{I} \left( \frac{1}{1+ \frac{1}{N_b \sigma_b^2}}; N_s + N_b; \frac{1}{\sigma_b^2} +1  \right)
+p(N_s, N_b, \sigma_b) = \mathcal{I} \left( \frac{1}{1+ \frac{1}{N_b \sigma_b^2}}; N_s + N_b; \frac{1}{\sigma_b^2} +1  \right) \; ,
 \end{equation}
 
 \noindent where $N_s$ ($N_b$) is the expected number of signal (background) events, and $\sigma_b$ the relative uncertainty in the background yields and $\mathcal{I}$ the regularized beta function. 
@@ -730,9 +718,9 @@ This is because the normalization of the background in the \gls{cr} absorbs the 
 In this example, while the pre-fit uncertainty in the \gls{vr} is large, the variation of the transfer factor is significantly smaller:
 \begin{equation}
 \begin{split}
-\rm TF^{nominal}_{VR} &= \frac{62.9}{279.1} = 0.225 \; ,\\
-\rm TF^{up}_{VR} &= \frac{83.2}{360.3} = 0.231 \; , \\
-\rm TF^{down}_{VR} &= \frac{42.5}{197.8} = 0.215 \; . \\
+\rm TF^{nominal}_{VR} &= \frac{62.9}{279.1} = 0.225 \; ,\\ \nonumber
+\rm TF^{up}_{VR} &= \frac{83.2}{360.3} = 0.231 \; , \\ \nonumber
+\rm TF^{down}_{VR} &= \frac{42.5}{197.8} = 0.215 \; . \\ \nonumber
 \end{split}
 \end{equation}
 
