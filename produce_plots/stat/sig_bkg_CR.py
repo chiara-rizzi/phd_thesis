@@ -111,18 +111,18 @@ tcr2.SetLineStyle(3)
 tcr2.Draw()
 ar1 = r.TArrow(cr-10,hb.GetMaximum()*0.01,cr_low +10, hb.GetMaximum()*0.01, 0.02, '<>')
 ar1.Draw()
-text.DrawLatex(cr-400, hb.GetMaximum()*0.02, "CR")
+text.DrawLatex(cr-400, hb.GetMaximum()*0.013, "CR")
 
 tsr = r.TLine(sr, 0, sr,  hs.GetMaximum()*100)
 tsr.SetLineStyle(3)
 tsr.Draw()
 ar2 = r.TArrow(sr +10,hs.GetMaximum()*5,sr+500 -10, hs.GetMaximum()*5, 0.02)
 ar2.Draw()
-text.DrawLatex(sr+50, hs.GetMaximum()*6, "SR")
+text.DrawLatex(sr+70, hs.GetMaximum()*6, "SR")
 
 ar3 = r.TArrow(cr+10,hb.GetMaximum()*0.002,sr-10, hb.GetMaximum()*0.002, 0.02, '<>')
 ar3.Draw()
-text.DrawLatex(cr+300, hs.GetMaximum()*50, "VR")
+text.DrawLatex(cr+100, hs.GetMaximum()*60, "VR")
 
 print "bin0",bin0
 print "starting at:", hb.GetBinLowEdge(bin0)
