@@ -2,9 +2,9 @@
 \label{sec:ewk:syst}
 
 The effect of the systematic uncertainties discussed in Sections \ref{sec:common_syst} and \ref{sec:common_backgrounds} 
-is summarized in Figure \ref{fig:syst_etmiss}, showing the relative size of each group of systematics after the fit in the 
+is summarized in Figure \ref{fig:syst_etmiss}, which shows the relative size of each group of systematics after the fit in the 
 \glspl{cr}. 
-The meaning of each group of systematics is the same as discussed for the strong-production analysis in Section \ref{sec:strong:syst}.
+The meaning of each group of systematics is the same as discussed for the gluino search in Section \ref{sec:strong:syst}.
 
 
 % \gls{jes} (that has a relative impact on the expected background between 4 and 35\% in the different \glspl{sr}), \gls{jer} (0-26\%) and the uncertainties on the b-tagging efficiency and mistagging rate (3-24\%).
@@ -13,7 +13,7 @@ The meaning of each group of systematics is the same as discussed for the strong
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/ewk_prod/etmiss_misc/High-MET-syst.pdf}
-	\caption{Relative systematic uncertainties in the background estimate for the high-mass analysis. The individual uncertainties can be correlated, such that the total background uncertainty is not necessarily their sum in quadrature. 
+	\caption{Relative systematic uncertainties in the background estimate for the high-mass analysis. The individual uncertainties can be correlated, such that the total background uncertainty is not necessarily their sum in quadrature. Figure from Ref. \cite{Aaboud:2018htj}. 
 	} 
 	\label{fig:syst_etmiss}
 \end{figure}
@@ -23,7 +23,7 @@ The meaning of each group of systematics is the same as discussed for the strong
 
 Figure \ref{fig:ewk:pullCR} shows the comparison between data and simulation in the \glspl{cr} before the fit (top panel)
 and the scale factor for the \ttbar background that is derived from the fit in the \glspl{cr} (bottom panel).
-If we compare with the equivalent result for the strong production analysis, in Figure \ref{fig:pullCR}, it is possible 
+If we compare with the equivalent result for the gluino search, in Figure \ref{fig:pullCR}, it is possible 
 to see that on average the \ttbar scale factors have values closer to one. 
 This is again because of the improvement in the $b$-tagging calibration of $c$-jets was implemented in this analyses. 
 The fit in the \glspl{cr} is extrapolated to the \glspl{vr} and to the \glspl{sr}. 
@@ -31,15 +31,15 @@ The fit in the \glspl{cr} is extrapolated to the \glspl{vr} and to the \glspl{sr
 The post-fit data-\gls{mc} agreement in the \glspl{vr} is shown in Figure \ref{fig:ewk:pullVR}: the top panel of this figure 
 shows the post-fit predicted yields in each of the \glspl{vr} and the data yields, while the bottom panel quantifies the 
 difference between observed data and predictions in terms of the significance, defined as in Ref. \cite{Choudalakis:2011okv}. 
-Note that this is different from the pull definition adopted in Figure \ref{fig:pullVR}. 
+Note that this is different from the pull definition adopted in the gluino search. 
 The closure in the \glspl{vr} is good: all the bins have discrepancies with significance lower than 0.8. 
 
 The results in the \glspl{sr} are shown in Figure \ref{fig:ewk:pullSR}. As in Figure \ref{fig:ewk:pullVR}, the top panel shows the 
 predicted and observed yields in each \gls{sr}, and the bottom panel the significance of the discrepancy. 
 No significant excess is observed and the observations are in agreement with the \gls{sm} predictions. 
-The numerical results of the background-only fit extrapolated to the \glspl{sr} are presented also in Table \ref{tab:ewk:yieldsSR},
+The numerical results of the background-only fit extrapolated to the \glspl{sr} are presented in Table \ref{tab:ewk:yieldsSR},
 where the background prediction is also broken down by component. 
-This table shows also the total background prediction before the fit in the \glspl{cr}, which is labeled ``MC-only background''.
+This table shows also the total background prediction before the fit in the \glspl{cr}, which is labeled as ``MC-only background''.
 
 
 \begin{figure}[htbp]
@@ -153,7 +153,7 @@ The results presented in Section \ref{sec:ewk:results} are used to set limits on
 The number of expected and observed events in the two discovery \glspl{sr} SR-4b-meff1-A-disc and SR-3b-meff3-A are used to set model-independent limits on the number of \gls{bsm} events. 
 These limits, obtained with the \gls{cls} procedure, ignore any signal contamination in the \glspl{cr} and are reported in Table \ref{tab:ewk:UL_toys}.
 In the same table are reports also the model-independent limits obtained from the low-mass analysis, complementary to the analysis 
-discussed in this thesis, which is briefly presented in Section \ref{sec:ewk:LM}. 
+discussed in this document, which is briefly presented in Section \ref{sec:ewk:LM}. 
 To distinguish them from the ones of the low-mass analysis, the results in SR-4b-meff1-A-disc and SR-3b-meff3-A are labeled as 
 high-SR-4b-meff1-A-disc and high-SR-3b-meff3-A respectively. 
 
@@ -188,14 +188,14 @@ Table from Ref. \cite{Aaboud:2018htj}.
 A combined fit that includes simultaneously all the \glspl{cr} and all the orthogonal \glspl{sr} (i.e. all the \glspl{sr}
 except from  SR-4b-meff1-A-disc) is used to place limits on the specific models described in Section \ref{sec:ewk:sig}.
 
-The signal model that is used to optimize the analysis regions is higgsino pair production with $B(\hino\rightarrow h \tilde{G})=100$\%.
-The 95\% upper limits on the total pair production cross-section for this model is shown in Figure \ref{fig:exclusion_high}, 
+The signal model that is used to optimize the analysis regions is higgsino pair production with \gls{br}$(\hino\rightarrow h \tilde{G})=100$\%.
+The 95\% CL upper limit on the total pair production cross-section for this model is shown in Figure \ref{fig:exclusion_high}, 
 as a function of \mhino. 
 The expected exclusion is between 250 and 830 GeV in \mhino. 
 Due to the slight deficit in the region with the highest \meffb selection, the observed exclusion is up to 880 GeV.
 
-A second interpretation of the results is provided in Figure \ref{fig:exclusion_high:BR}, showing the exclusion contour in the 
-plane $B(\hino\rightarrow h \tilde{G})$-\mhino, with the assumption $B(\hino\rightarrow h \tilde{G}) + B(\hino\rightarrow Z \tilde{G}) =1$.
+A second interpretation of the results is provided in Figure \ref{fig:exclusion_high:BR}, which shows the exclusion contour in the 
+plane \gls{br}$(\hino\rightarrow h \tilde{G})$--\mhino, with the assumption \gls{br}$(\hino\rightarrow h \tilde{G})$+\gls{br}$(\hino\rightarrow Z \tilde{G}) =1$.
 For $\mhino = 400$ GeV, which is the mass point with the lowest excluded $\sigma/\sigma_{\rm theory}$, we exclude at 95\% \gls{cl}
 \glspl{br} as low as 45\%.
 
@@ -210,7 +210,7 @@ For $\mhino = 400$ GeV, which is the mass point with the lowest excluded $\sigma
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/ewk_prod/interpretation/br_limit_HM.pdf}
-	\caption{The observed (solid) vs expected (dashed) 95\% limits in the \mhino\ vs $B(\hino\rightarrow h \tilde{G})$ plane, where $B(\hino\rightarrow h \tilde{G})$ denotes the branching ratio for the decay $\hino \rightarrow h \gravino$. The 1$\sigma$ uncertainty band is overlaid in green and the 2$\sigma$ in yellow. The regions above the lines are excluded by the analysis.} 
+	\caption{The observed (solid) vs expected (dashed) 95\% limits in the \mhino--\gls{br}$(\hino\rightarrow h \tilde{G})$ plane, where \gls{br}$(\hino\rightarrow h \tilde{G})$ denotes the branching ratio for the decay $\hino \rightarrow h \gravino$. The 1$\sigma$ uncertainty band is overlaid in green and the 2$\sigma$ in yellow. The regions above the lines are excluded by the analysis.} 
 	\label{fig:exclusion_high:BR}
 \end{figure}
 
