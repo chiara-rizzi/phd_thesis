@@ -8,9 +8,6 @@ Plots:
 CLs scan (maybe)
 ewk optimization, separation
 
-
-ADD HISTFITTER
-
 Cose da chiedere ad aurelio sulla tesi:
 quando definire gli acronimi? Nelle introduzioni o solo quando se ne parla in dettaglio?
 data mc: miei senza sistematiche vs HF con sistematiche 
