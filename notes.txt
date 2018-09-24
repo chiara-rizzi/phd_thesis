@@ -15,6 +15,7 @@ perche’ b-quark ma W boson (niente trattino)
 capitalize Naturalness
 quando mettere cifre e quando numeri scritti a lettere
 
+mettere frase su different resolution function for b-jets for qcd
 
 Altre cosette 
 comma before “and” in list
