@@ -13,6 +13,8 @@ quando definire gli acronimi? Nelle introduzioni o solo quando se ne parla in de
 data mc: miei senza sistematiche vs HF con sistematiche 
 perche’ b-quark ma W boson (niente trattino)
 capitalize Naturalness
+quando mettere cifre e quando numeri scritti a lettere
+
 
 Altre cosette 
 comma before “and” in list
