@@ -3,8 +3,7 @@
 
 The analysis discussed in this chapter is limited in sensitivity for low \mhino, as it is clear from Figure \ref{fig:exclusion_high}. 
 This is because when \mhino approaches the Higgs mass, the decay products (Higgs boson and \gravino)
-have increasingly low \pt, and a low \pt \gravino does not produce enough \met to satisfy the \met trigger requirements and be selected 
-in the analysis. 
+have increasingly low \pt, and a low \pt \gravino does not produce enough \met to satisfy the \met trigger requirements.  
 To gain sensitivity also to the low-\mhino part of the mass spectrum, which is particularly interesting for Naturalness arguments (see the 
 discussion in Section \ref{sec:theo:naturalsusy}), 
 this analysis is complemented by a second analysis that targets low-\met events, referred to as "low-mass" analysis \cite{Aaboud:2018htj}. 
@@ -25,13 +24,13 @@ and this choice is therefore more effective than minimizing \dRmax.
 
 The main background is constituted by multijet events and a small fraction of \ttbar events, as opposed to the
 high mass analysis, where multijet is an almost-negligible background after applying the \dphimin selection. 
-The background from \ttbar events is further reduced by requiring $X_{Wt}>1.8$, defined as:
+The background from \ttbar events is further reduced by requiring $X_{Wt}>1.8$, where $X_{Wt}$ is defined as:
 
 \begin{equation}
- X_{Wt} = \sqrt{\left( \frac{m_W - 80.4\,\ \gev}{0.1  m_W} \right)^2 + \left( \frac{m_t - 172.5\,\ \gev}{0.1  m_t} \right)^2 } \;, \nonumber
+ X_{Wt} = \sqrt{\left( \frac{m_W - 80.4\,\ \gev}{0.1  m_W} \right)^2 + \left( \frac{m_t - 172.5\,\ \gev}{0.1  m_t} \right)^2 } \;. \nonumber
 \end{equation}
 
-\noindent where the top and W-boson candidates are built as described in Ref. \cite{Aaboud:2018htj}. 
+In the above equation, the top and W-boson candidates are built as described in Ref. \cite{Aaboud:2018htj}. 
 A low value of $X_{Wt}$ corresponds to a high probability of the event to be a \ttbar event. 
 
 The \gls{sr} is defined by requiring: 
@@ -50,14 +49,15 @@ and this is used as input in the statistical analysis. The binning used is:
 
 \noindent where the values are expressed in GeV.
 
-Two dedicated discovery regions have optimized selections to maximize the discovery significance for \mhino = 150 and 300 GeV:
+Two dedicated discovery regions have optimized selections to maximize the discovery significance for \mhino = 150 GeV and \mhino = 300 GeV:
 \begin{itemize}
 \item low-SR-MET0-meff440: \meffb $>$ 440 GeV.
 \item low-SR-MET150-meff440: \meffb $>$ 440 GeV, \met $>$ 150 GeV.
 \end{itemize}
 
 The background estimate is fully data-driven and relies on a sample with exactly two $b$-tagged jets (orthogonal to the \gls{sr} and 
-with very low signal contamination). $m_{2j}^\textrm{lead}$ and $m_{2j}^\textrm{subl}$ are used to define a \gls{cr} and two \glspl{vr}, both in the $\geq4b$ and in the $2b$ samples; all these regions exclude the $X_{hh}^\textrm{SR}<1.6$ area, to be orthogonal to the \gls{sr}.
+with very low signal contamination). 
+Selections on $m_{2j}^\textrm{lead}$ and $m_{2j}^\textrm{subl}$ are used to define a \gls{cr} and two \glspl{vr}, both in the $\geq4b$ and in the $2b$ samples; all these regions exclude the $X_{hh}^\textrm{SR}<1.6$ area, to be orthogonal to the \gls{sr}.
 The 2-tag and 4-tag \glspl{cr} are used to derive a reweighting function to go from the 2-tag sample to the 4-tag sample, that consists in two steps:
 first of all an overall normalization correction is applied, and then 
 a reweighting based on boosted decision trees corrects for further kinematic differences. 
@@ -86,13 +86,13 @@ Figure from Ref. \cite{Aaboud:2018htj}.
 \label{sec:ewk:HMLM}
 
 Figures \ref{fig:ewk:exclusion_comb} and \ref{fig:ewk:exclusion_combBR} show the combined results of the two analyses for the model-dependent 
-exclusion, respectively in the case $B(\hino\rightarrow h \tilde{G})=100$\% and in the \mhino vs $B(\hino\rightarrow h \tilde{G})$ plane.
+exclusion, respectively in the case \gls{br}$(\hino\rightarrow h \tilde{G})=100$\% and in the \mhino--\gls{br}$(\hino\rightarrow h \tilde{G})$ plane.
 The results of the low-mass analysis are used below 300 GeV, while above it is the high-mass search that provides the nominal result.
 The transition at 300 GeV is chosen such that in the transition point the two analyses have 
-similar sensitivity in the case $B(\hino\rightarrow h \tilde{G})=100$\%.
+similar sensitivity in the case \gls{br}$(\hino\rightarrow h \tilde{G})=100$\%.
 In the low-mass analysis the high-\met bins of the \gls{sr} show a mild excess; 
 therefore, the observed limit is weaker than expected and the portion of the mass spectrum between 230 and 290 GeV is not excluded in the 
-$B(\hino\rightarrow h \tilde{G})=100$\%, despite the expected sensitivity. 
+\gls{br}$(\hino\rightarrow h \tilde{G})=100$\%, despite the expected sensitivity. 
 
 \begin{figure}[htbp]
 	\centering
@@ -107,7 +107,7 @@ $B(\hino\rightarrow h \tilde{G})=100$\%, despite the expected sensitivity.
 \begin{figure}[htbp]    
 	\centering    
     \includegraphics[width=0.75\textwidth]{figures/ewk_prod/interpretation/my_br_plot_unblind_yellow_band}\label{fig:exclusion_br}
-	\caption{The observed (solid) vs expected (dashed) 95\% limits in the \mhino\ vs $B(\hino\rightarrow h \tilde{G})$ plane, where $B(\hino\rightarrow h \tilde{G})$ denotes the branching ratio for the decay $\hino \rightarrow h \gravino$. The 1$\sigma$ uncertainty band is overlaid in green and the 2$\sigma$ in yellow.
+	\caption{The observed (solid) vs expected (dashed) 95\% limits in the \mhino--\gls{br}$(\hino\rightarrow h \tilde{G})$ plane, where \gls{br}$(\hino\rightarrow h \tilde{G})$ denotes the branching ratio for the decay $\hino \rightarrow h \gravino$. The 1$\sigma$ uncertainty band is overlaid in green and the 2$\sigma$ in yellow.
 	The results of the low-mass analysis are used below $\mhino = 300$ GeV, while those of the high-mass analysis are used above.
 	 The regions above the lines are excluded by the analyses. Figure from Ref. \cite{Aaboud:2018htj}. } 
 	\label{fig:ewk:exclusion_combBR}
