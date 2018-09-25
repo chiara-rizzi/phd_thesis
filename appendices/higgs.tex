@@ -1,7 +1,7 @@
 \chapter{Higgs boson reconstruction in the higgsino search}
 \label{app:higgs}
 
-This appendix discusses the approaches that have been tested for the reconstruction of the 
+This appendix discusses the approaches that are tested for the reconstruction of the 
 candidate Higgs bosons for the higgsino search described in Chapter \ref{chap:ewk_prod}. 
 The signal events considered in this appendix are those where both Higgs bosons decay to a $b\bar{b}$ pair. 
 As already discussed in Section \ref{sec:ewk:sigbkg}, the four jets selected to reconstruct the two Higgs bosons 
@@ -15,7 +15,7 @@ are selected with the following criteria:
 
 Figure  \ref{fig:h_reco_match_possible}  shows the fraction of signal events that have four reconstructed jets, the fraction 
 of signal events where it is possible to select the four correct jets originating from the decay of the Higgs bosons 
-(which corresponds to requiring four jets with \pt $>$25 GeV  matched in dR$<$0.3 with the 4 $b$-quarks coming from the two Higgs bosons), 
+(which corresponds to requiring four jets with \pt $>$25 GeV  matched in dR$<$0.3 with the 4 $b$-quarks originating from the two Higgs bosons), 
 and the fraction of signal events where the choice of jets described above selects the correct jets. 
 The four jets selected are the correct set of jets about 70--80\% of the times that the correct match is possible. 
 
@@ -36,7 +36,7 @@ are compared:
 \item[min-diff] Minimize the difference between m($h_1$)  and m($h_2$), where m($h_1$) and m($h_2$) are the masses of the two boson candidates and 
 m($h_1$)$>$m($h_2$).
 \item[min-dR] Minimize \dRmax (defined in Section \ref{sec:ewk:sigbkg}).
-\item[max-\pt] Maximize min(\pt($h_1$), \pt($h_1$)).
+\item[max-\pt] Maximize min(\pt($h_1$), \pt($h_2$)).
 \end{description}
 
 %The performance of each of these algorithms has been compared, 
@@ -62,10 +62,10 @@ respectively, for signal and background events normalized to unit area,
 with Higgs boson candidates reconstructed with the min-dR and min-diff algorithms. 
 We can notice the different shape of the distributions with the two algorithms, especially in the case of m($h_2$). 
 Considering that the high-mass analysis focuses on signals with intermediate and high higgsino mass, 
-the min-dR algorithm was chosen as baseline algorithm for the reconstruction of the candidate Higgs bosons. 
-This choice was confirmed by the optimization procedure described in Section \ref{sec:ewk:multibin}, 
-where the values of the candidate Higgs bosons reconstructed with both algorithms have been used as input and 
-the min-dR algorithm gave consistently better expected significances.  
+the min-dR algorithm is chosen as baseline algorithm for the reconstruction of the candidate Higgs bosons. 
+This choice is confirmed by the optimization procedure described in Section \ref{sec:ewk:multibin}: 
+if  the values of the candidate Higgs bosons reconstructed with both algorithms have are as input, 
+the min-dR algorithm gives consistently better expected significance.
 
 
 \begin{figure*}[htbp]
