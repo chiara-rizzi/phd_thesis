@@ -17,8 +17,6 @@ quando mettere cifre e quando numeri scritti a lettere
 
 AGGIUNGERE
 mettere frase su different resolution function for b-jets for qcd
-sistematica su ttHF
-descrizione sistematiche EWK analysis 
 
 Altre cosette 
 comma before “and” in list
