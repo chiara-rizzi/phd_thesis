@@ -17,12 +17,13 @@ the magnet systems. Figure from Ref. \cite{atlas:atlas}.}
 
 The \gls{atlas} physics program covers a large variety of topics: 
 \begin{itemize}
-\item Standard Model processes can be measured at the \gls{lhc} at energies never reached before, and being sensitive to them is essential both to provide accurate measurements and to use them as candles to calibrate the detector. 
+\item \gls{sm} processes can be measured at the \gls{lhc} at energies never reached before, and being sensitive to them is essential both to provide accurate measurements and to use them as candles to calibrate the detector. 
 \item The discovery of the Higgs boson was one of the main goals of the \gls{lhc} and, after its observation in 2012, the focus moved onto measuring its properties. 
 \item Compared to the Tevatron, the \gls{lhc} is a true top-quark factory, 
 and the study of the properties of this particle can both probe the \gls{sm} and set limits on \gls{bsm} theories.
-\item The \gls{lhc} offers an exciting opportunity to discover \gls{bsm} physics, and \gls{atlas} needs to be ready to identify its signs.
-\item Despite the ALICE detector is specifically designed to study heavy-ion collisions, \gls{atlas} also carries out a heavy-ion program.
+\item The \gls{lhc} offers an exciting opportunity to discover \gls{bsm} physics, and \gls{atlas} needs to be ready to identify its signs. 
+\item \gls{atlas} has a dedicated program to study the properties of the physics involving $b$- and $c$-quarks, and of the physics of low mass states.  
+\item \gls{atlas} also carries out a heavy-ion program.
 \end{itemize}
 
 To cope with the wide range of types and energies (from few GeV to several TeV) of particles that need to be identified, \gls{atlas} relies on a sequence of subdetectors nested in a cylindrical geometry, that follow the general schema discussed in Section \ref{sec:detectors:identification}: close to the \gls{ip} we find the \gls{id}, embedded in a solenoidal magnetic field of 2 T. The following layers are the \gls{ecal} and \gls{hcal}, and the outermost part is occupied by the muon system, where muons are bent by a 4 T toroidal magnetic field. All these components are described in the next sections.
@@ -268,13 +269,13 @@ Under the assumption that these densities can be factorized into the horizontal 
 
 The relevant quantity in physics analyses is the integrated luminosity over a defined period of time. The basic time unit over which the integrated luminosity is computed and stored is the \gls{lub}, whose duration is defined by the \gls{atlas} trigger system and is typically about one minute. The data contained in each \gls{lub} is collected with the same detector conditions, and the integrated luminosity is computed as the average instantaneous luminosity multiplied by the \gls{lub} time duration.
 
-\gls{atlas} has two primary specifically-designed luminometers, LUCID-2 (LUminosity measurements using Cherenkov Integrating Detector) and BCM (Beam Conditions Monitor), whose results are compared with the one obtained by other \gls{atlas} subsystems that measure luminosity through quantities that are sensitive to it, such as the number of tracks or the flow of particles.
+\gls{atlas} has two primary specifically-designed luminometers, LUCID-2 (LUminosity measurements using Cherenkov Integrating Detector) and \gls{bcm}, whose results are compared with the one obtained by other \gls{atlas} subsystems that measure luminosity through quantities that are sensitive to it, such as the number of tracks or the flow of particles.
 
 \subsubsection*{Bunch-by-bunch luminometers}
 
 The two dedicated luminometers are able to provide information for individual bunch crossings, each labeled by a \gls{bcid}.
 
-BCM consists of four $8 \times 8$ mm$^2$ diamond sensors, located at $z= \pm 184$ m from the \gls{ip} and disposed in a cross shape around the beam pipe, at $|\eta| = 4.2$. Beside luminosity measurements, BCM is also used to recognize beam losses so that the beam can be dumped before damaging the silicon detectors. 
+\gls{bcm} consists of four $8 \times 8$ mm$^2$ diamond sensors, located at $z= \pm 184$ m from the \gls{ip} and disposed in a cross shape around the beam pipe, at $|\eta| = 4.2$. Beside luminosity measurements, \gls{bcm} also contributes to recognize beam losses so that the beam can be dumped before damaging the silicon detectors. 
 
 LUCID is located 17 m from the \gls{ip}, at $5.6 < |\eta| < 6.0$, and consists on each side of 16 Cherenkov detectors built by aluminum tubes with a diameter of 10 mm. Cherenkov radiation is produced in the passage of particles through the quartz windows of the \glspl{pmt}. A signal over threshold produces a hit for that bunch crossing.
 
@@ -295,7 +296,7 @@ The reconstruction of the tracks used in this process is described in Section \r
 
 \subsubsection*{Bunch-integrating devices}
 
-The long-term stability of the luminosity measurement provided by BCM, LUCID and the track system is checked with devices that are sensitive to the flux of particles through the detector. This technique only allows to measure the instantaneous luminosity integrated over a time of a few seconds, and not bunch-by-bunch.
+The long-term stability of the luminosity measurement provided by \gls{bcm}, LUCID and the track system is checked with devices that are sensitive to the flux of particles through the detector. This technique only allows to measure the instantaneous luminosity integrated over a time of a few seconds, and not bunch-by-bunch.
 
 A subdetector capable of providing such measurement is \gls{tilecal}, described in Section \ref{sec:atlas:calo}. The current generated by the \glspl{pmt} is proportional to the total number of particles; this current is not read through the digital readout system, but through an integrator system sensitive to currents between 0.01 nA and 1.2 $\mu$A over a time window of 10--20 ms. The current induced in different cells varies largely with the cell position: the ones that receive a larger amount of particles are the ones around $|\eta|=1.25$ and in the inner part of the detector (as the hadronic shower is stopped while it passes through the calorimeter). The \gls{tilecal} luminosity measurement is not calibrated during \gls{vdm} scans, but is instead equalized to LUCID or the track measurement for one specific run, and the calibration constant between current and luminosity allows to measure the luminosity also in different runs. More details on the \gls{tilecal} luminosity measurement are given in 
 Appendix \ref{app:pmt}. 
