@@ -29,14 +29,18 @@ To cope with the wide range of types and energies (from few GeV to several TeV) 
 
 \subsection{Coordinate system}
 
-\gls{atlas} uses a right-handed coordinate system, with its origin at the nominal \gls{ip}. The $z$-axis follows the beam direction, while in the transverse plane the $y$-axis points upward and the $x$-axis toward the \gls{lhc} center. Positive and negative values of the $z$-axis identify respectively the A-side and the C-side of the detector. When spherical coordinates are used, the azimuthal angle $\phi$ is defined starting from the $x$-axis, and ranges between $-\pi$ and $\pi$; the polar angle $\theta$ is defined starting from the $z$-axis and takes values between $0$ and $\pi$. Often the polar angle is substituted by the pseudorapidity: 
+\gls{atlas} uses a right-handed coordinate system, with its origin at the nominal \gls{ip}. The $z$-axis follows the beam direction, 
+while in the transverse plane the $y$-axis points upward and the $x$-axis toward the \gls{lhc} center. Positive and negative values of the $z$-axis identify respectively the A-side and the C-side of the detector. 
+When spherical coordinates are used, the azimuthal angle $\phi$ is defined starting from the $x$-axis, 
+and ranges between $-\pi$ and $\pi$; the polar angle $\theta$ is defined starting from the $z$-axis and takes values between $0$ and $\pi$. 
+The pseudorapidity is often used instead of the polar angle and is defined as: 
  
 \begin{equation}
-\eta = - \ln\tan\left(\frac{\theta}{2}\right) \; , \nonumber
+\eta = - \ln\tan\left(\frac{\theta}{2}\right) \; . \nonumber
 \label{eq:cern:eta}
 \end{equation}
 
-\noindent which, in the limit of massless particles, is equivalent to the rapidity:
+\noindent In the limit of massless particles, is equivalent to the rapidity:
 
 \begin{equation}
 y = \frac{1}{2} \ln\left(\frac{E + p_z}{E - p_z}\right) \; , \nonumber
@@ -112,7 +116,7 @@ The \gls{id} is divided into a barrel, whose schema is shown in Figure \ref{fig:
 
 \subsubsection*{Pixel detector}
 \label{sec:atlas:pixel}
-The innermost layer of the \gls{id} is the pixel detector, divided into barrel and end-cap regions. 
+The innermost layer of the \gls{id} is the pixel detector \cite{Aad:2008zz}, divided into barrel and end-cap regions. 
 During the Long Shutdown after the \gls{lhc} Run 1, the \gls{id} was subject to important upgrades \cite{Potamianos:2016ptf}. 
 The main one is the addition of a fourth pixel layer in the barrel, in addition to the three already existing ones, 
 the \gls{ibl} \cite{Capeans:1291633}, that is positioned 3.33 cm away from the \gls{ip}. 
@@ -234,18 +238,18 @@ The muon trigger system needs to be able to identify events with energetic muons
 \subsection{Luminosity measurement}
 \label{sec:lumimeas}
 
-An accurate determination of the luminosity is important both for \gls{sm} measurements, where often the luminosity uncertainty can dominate in some cases, and for \gls{bsm} searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the \gls{atlas} detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Equation \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{Aaboud:2016hhf} as product of the number of bunch crossings $N_b$ and the average luminosity per bunch cross $<\mathcal{L}_b>$:
+An accurate determination of the luminosity is important both for \gls{sm} measurements, where often the luminosity uncertainty can dominate in some cases, and for \gls{bsm} searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the \gls{atlas} detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Equation \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{Aaboud:2016hhf} as product of the number of bunch crossings $N_b$ and the average luminosity per bunch cross ${<}\mathcal{L}_b{>}$:
 \begin{equation}
-\mathcal{L} = N_b <\mathcal{L}_b> = N_b \frac{f <\mu>}{\sigma_{\mathrm{inel}} } \; .
+\mathcal{L} = N_b {<}\mathcal{L}_b{>} = N_b \frac{f {<}\mu{>}}{\sigma_{\mathrm{inel}} } \; .
 \label{eq:atlas:lumi}
 \end{equation}
 
-With respect to the nomenclature of Equation \ref{eq:cern:lumi}, $<\mu>$ is the average pileup per bunch crossing and $\sigma_{\mathrm{inel}}$ the inelastic \gls{pp} cross-section. Because of the finite acceptance and efficiency of the detector, what is measured is:
+With respect to the nomenclature of Equation \ref{eq:cern:lumi}, ${<}\mu{>}$ is the average pileup per bunch crossing and $\sigma_{\mathrm{inel}}$ the inelastic \gls{pp} cross-section. Because of the finite acceptance and efficiency of the detector, what is measured is:
 \begin{equation}
-\mathcal{L}_b = \frac{f <\mu_\mathrm{vis}>}{\sigma_{\mathrm{vis}} } \; , \nonumber
+\mathcal{L}_b = \frac{f {<}\mu_\mathrm{vis}{>}}{\sigma_{\mathrm{vis}} } \; , \nonumber
 \end{equation}
 
-\noindent where $<\mu_\mathrm{vis}>$ and $\sigma_{\mathrm{vis}}$ are the product of the corresponding quantities in Equation \ref{eq:atlas:lumi} and the acceptance and efficiency of the detector. Out of these two quantities, $<\mu_\mathrm{vis}>$ is directly measurable during the collisions, while $\sigma_{\mathrm{vis}}$ is determined with the \gls{vdm} method \cite{vanderMeer:296752}, carried out in the dedicated \gls{vdm} runs. These are special runs with low bunch intensity and number of bunches, where a variation (scan) of the overlap of the two beams in the $x$- and $y$-direction is performed; the beam parameters and the peak of visible interaction rate per bunch crossing during the scan can be used to determine the visible cross-section and therefore calibrate each subsystem. 
+\noindent where ${<}\mu_\mathrm{vis}{>}$ and $\sigma_{\mathrm{vis}}$ are the product of the corresponding quantities in Equation \ref{eq:atlas:lumi} and the acceptance and efficiency of the detector. Out of these two quantities, ${<}\mu_\mathrm{vis}{>}$ is directly measurable during the collisions, while $\sigma_{\mathrm{vis}}$ is determined with the \gls{vdm} method \cite{vanderMeer:296752}, carried out in the dedicated \gls{vdm} runs. These are special runs with low bunch intensity and number of bunches, where a variation (scan) of the overlap of the two beams in the $x$- and $y$-direction is performed; the beam parameters and the peak of visible interaction rate per bunch crossing during the scan can be used to determine the visible cross-section and therefore calibrate each subsystem. 
 
 We can express the luminosity per bunch cross as:
 \begin{equation}
@@ -283,7 +287,7 @@ LUCID is located 17 m from the \gls{ip}, at $5.6 < |\eta| < 6.0$, and consists o
 
 \subsubsection*{Tracker-based algorithms}
 
-The \gls{id}, described in Section \ref{sec:atlas:id}, records the passage of charged particles as tracks. The number of such charged tracks in each bunch crossing is proportional to the luminosity, and can be used as $<\mu_\mathrm{vis}>$ if averaged over a \gls{lub}. 
+The \gls{id}, described in Section \ref{sec:atlas:id}, records the passage of charged particles as tracks. The number of such charged tracks in each bunch crossing is proportional to the luminosity, and can be used as ${<}\mu_\mathrm{vis}{>}$ if averaged over a \gls{lub}. 
 During collisions partial data, selected with a random trigger that has the same probability of firing for each colliding bunch, are recorded in a dedicated stream. Because of the high number of colliding bunches, to achieve enough statistical precision the luminosity is provided as integrated over the \gls{lub}; instead, during \gls{vdm} scans, bunch-by-bunch luminosity can be provided. 
 % chiara: indicate which track types have been used in 2015--2016 and which in 2017
 The reconstruction of the tracks used in this process is described in Section \ref{sec:reco:tracks}.
