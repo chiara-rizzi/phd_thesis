@@ -237,7 +237,7 @@ that can in turn decay to secondary hadrons. This transition is described throug
 The two main hadronization models used in \gls{mc} generators are:
 
 \begin{description}
-\item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). The term "string model" comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
+\item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). The term ``string model'' comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
 A color string forms that joins the final state in a string configuration of field energies, and hadrons originate from the breakups of the string. The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm.
 The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two strings and have therefore a rate for hadron production twice that of quarks. 
 % chiara: describe the main steps of the string model hadronization
@@ -271,7 +271,7 @@ The mass distribution of the preconfined clusters results to be independent of t
 
 
 These two hadronization models were developed in the 1980's, and since then there has been no fundamental progress in the theoretical understanding of hadronization. 
-When the simulation of the events stops before hadronization, it is referred to as "parton-level".
+When the simulation of the events stops before hadronization, it is referred to as ``parton-level''.
 
 \subsection{Underlying event}
 
@@ -357,12 +357,12 @@ The tau decays are then handled by separated packages like \tauola, which includ
 \label{sec:detsim}
 
 The outcomes of the event simulation are the four-vectors of all the stable particles produced in the final state of the event, stored in the standard HepMC format \cite{Dobbs:2001ck}.
-When this information is used directly, the analysis is referred to as "particle level" analysis; furthermore, if we want to filter the simulated events based on the final state, this can be done at this stage. 
+When this information is used directly, the analysis is referred to as ``particle level'' analysis; furthermore, if we want to filter the simulated events based on the final state, this can be done at this stage. 
 While the event generation can already provide information on the kinematic of the event, it is not enough to compare the \gls{mc} simulations with the 
 data collected by the \gls{atlas} detector. 
 After the event simulation, the \gls{atlas} simulation chain \cite{Aad:2010ah} (described in Figure \ref{fig:sim:chain}) proceeds with the emulation of the
 interaction of the particles with the detector and the signal generated in each of the detector's subsystems, 
-which is done with the \geant package \cite{Agostinelli:2002hh}. The configuration of the detector, including any misalignment, can be set at run time, and the energy depositions are recorded as hits. The digitalization step takes the input hits from the hard scattering, underlying event and pileup and transforms them into detector signals, adding also detector noise. Also the response of the \gls{lone} trigger (described in Section \ref{sec:cern:trigger}) is simulated at this stage. The final output of the digitalization is the \gls{rdo} file, to which the output of the \gls{atlas} detector itself, which is in "bytestream" format, can be converted as well. The \gls{hlt} decision and the event reconstruction run on the \gls{rdo} data format. After the detector simulation, the \gls{mc} simulated events are treated in the same manner as data, going through the object reconstruction procedures
+which is done with the \geant package \cite{Agostinelli:2002hh}. The configuration of the detector, including any misalignment, can be set at run time, and the energy depositions are recorded as hits. The digitalization step takes the input hits from the hard scattering, underlying event and pileup and transforms them into detector signals, adding also detector noise. Also the response of the \gls{lone} trigger (described in Section \ref{sec:cern:trigger}) is simulated at this stage. The final output of the digitalization is the \gls{rdo} file, to which the output of the \gls{atlas} detector itself, which is in ``bytestream'' format, can be converted as well. The \gls{hlt} decision and the event reconstruction run on the \gls{rdo} data format. After the detector simulation, the \gls{mc} simulated events are treated in the same manner as data, going through the object reconstruction procedures
 described in Chapter \ref{sec:event:reco}.
 
 \begin{figure}[h]
