@@ -21,10 +21,10 @@ fb.SetLineColor(kRed)
 fs = TF1("fs","ROOT::Math::chisquared_pdf(x,1,0)", 1, 8);
 fs.SetLineColor(kBlue)
 
-fs.GetXaxis().SetTitle("t")
+fs.GetXaxis().SetTitle("q_{#mu}")
 fs.GetXaxis().SetTitleSize(0.06)
 fs.GetXaxis().SetTitleOffset(0.4)
-fs.GetYaxis().SetTitle("f(t)")
+fs.GetYaxis().SetTitle("f(q_{#mu})")
 fs.GetYaxis().SetTitleSize(0.06)
 fs.GetYaxis().SetTitleOffset(0.4)
 fs.GetXaxis().SetLabelSize(0)
@@ -73,7 +73,7 @@ g_CLb.Draw("f same")
 
 
 t = TLatex()
-t.DrawLatex(tc - tc/30, -0.02, "t_{obs}")
+t.DrawLatex(tc - tc/30, -0.02, "q_{#mu,obs}")
 
 
 leg = TLegend(0.7,0.65,0.89,0.85)
