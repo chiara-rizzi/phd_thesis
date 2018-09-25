@@ -455,9 +455,9 @@ Some analysis variables are built using explicitly the kinematic characteristics
 While the production of a \ttbar pair is mediated by the strong interaction, in the case of a single top quark the production occurs via the electroweak interaction. 
 There are three possible production channels, illustrated in Figure \ref{fig:single_top_prod}: the t-channel, the Wt-channel, where a top quark and a $W$ boson are produced, and the s-channel. 
 The Wt- and s-channel production mechanisms are simulated with the same generator choice as \ttbar: \PowhegBox v2, showered with \PY v6.428.
-Single top events produced through the t-channel process are simulated with \PowhegBox v1, which uses the four-flavor scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set (with the four-flavor scheme as well); 
+Single-top events produced through the t-channel process are simulated with \PowhegBox v1, which uses the four-flavor scheme for the computation of the \gls{nlo} \gls{me} and the CT10f4 \gls{partdf} set (with the four-flavor scheme as well); 
 the top quarks are decayed with \MadSpin \cite{Artoisenet:2012st}.
-The cross-section used for the normalization of the single top processes is computed at \gls{nlo}+\gls{nnll} order 
+The cross-section used for the normalization of the single-top processes is computed at \gls{nlo}+\gls{nnll} order 
 \cite{Kidonakis:2011wy,Kidonakis:2010ux,Kidonakis:2010tc}.
 
 \begin{figure}[h]
@@ -466,7 +466,7 @@ The cross-section used for the normalization of the single top processes is comp
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_3}\label{fig:st_prod_Wt2}} \\
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_4}\label{fig:st_prod_3}}
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_5}\label{fig:st_prod_4}}
-\caption{\Gls{lo} Feynman diagram for single top production. \subref{fig:st_prod_Wt1}-\subref{fig:st_prod_Wt2} Wt-channel. 
+\caption{\Gls{lo} Feynman diagram for single-top production. \subref{fig:st_prod_Wt1}-\subref{fig:st_prod_Wt2} Wt-channel. 
 \subref{fig:st_prod_Wt2} s-channel. \subref{fig:st_prod_4} t-channel.}\label{fig:single_top_prod}
 \end{figure}
 
@@ -492,24 +492,24 @@ We can write the matrix element for the production of the $WWbb$ final state as:
 \end{equation}
 
 \noindent where the first term represent the contribution from \ttbar production (double resonance) and the second term the contribution from 
-\gls{nlo} corrections to the Wt single top production, where only one of the two $Wb$ systems is resonant (single resonance). 
+\gls{nlo} corrections to the Wt single-top production, where only one of the two $Wb$ systems is resonant (single resonance). 
 When computing the squared amplitude, this becomes:
 
 \begin{equation}
 |\mathcal{M}_{WWbb}|^2 = |\mathcal{M}_{\rm{double-res}}|^2 + |\mathcal{M}_{\rm{single-res}}|^2 + 2 \mathcal{R}\left(\mathcal{M}_{\rm{double-res}}\times \mathcal{M}_{\rm{single-res}}^* \right) \; . \nonumber
 \end{equation}
 
-While the first two terms are properly taken into account by the individual \ttbar and single top \gls{mc} simulations, 
+While the first two terms are properly taken into account by the individual \ttbar and single-top \gls{mc} simulations, 
 the last term represent the interference between the two processes and, unless special care to avoid this is taken, it is completely ignored if the two processes are simulated independently. 
 
-In the \gls{dr} approach, all the diagrams where a $W$ boson and a $b$-quark form a top quark are removed from the matrix element used to compute the single top cross-section in the Wt channel. While this approach is not gauge invariant, it is found to have negligible dependence on the gauge choice.
+In the \gls{dr} approach, all the diagrams where a $W$ boson and a $b$-quark form a top quark are removed from the matrix element used to compute the   single-top cross-section in the Wt channel. While this approach is not gauge invariant, it is found to have negligible dependence on the gauge choice.
 
 Instead in the \gls{ds} approach an extra subtraction term is added directly to the differential cross-section to cancel the contribution of the 
 production of two on-shell top quarks, which is more accurate the more the invariant mass of the non-resonant $Wb$ system tends to the top quark mass. 
 Acting at the cross-section level and not at the matrix-element level, this approach aims at accounting also for the interference term. 
 
 Which one of the two strategies gives a better description of the data depends on the phase space under consideration. 
-In this thesis the nominal single top estimate for the Wt channel is obtained with the \gls{dr} strategy. 
+In this thesis the nominal single-top estimate for the Wt channel is obtained with the \gls{dr} strategy. 
 As an example, Figure \ref{fig:st_1L} shows how the choice of the \gls{dr} or \gls{ds} approach can change the distribution of two key variables 
 in the analyses, \met and \mtb. 
 
@@ -518,7 +518,7 @@ in the analyses, \met and \mtb.
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_met.pdf}\label{fig:st_met_1L}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_mTb_min.pdf}\label{fig:st_mtb_1L}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_jets_n.pdf}\label{fig:st_nj_1L}}
-\caption{Distribution of \subref{fig:st_met_1L} \met,  \subref{fig:st_mtb_1L} \mtb and \subref{fig:st_nj_1L} number of signal jets in the single top \gls{mc} sample obtained with the \gls{dr} and \gls{ds} approaches (pink and blue line respectively), in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and at least one lepton. 
+\caption{Distribution of \subref{fig:st_met_1L} \met,  \subref{fig:st_mtb_1L} \mtb and \subref{fig:st_nj_1L} number of signal jets in the single-top \gls{mc} sample obtained with the \gls{dr} and \gls{ds} approaches (pink and blue line respectively), in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and at least one lepton. 
 }\label{fig:st_1L}
 \end{figure}
 
@@ -532,9 +532,9 @@ Instead, two additional samples are generated with the same settings as the $WWb
 
 \subsubsection*{Modeling uncertainties}
 
-The modeling uncertainties on the single top background are estimated at particle level, 
+The modeling uncertainties on the single-top background are estimated at particle level, 
 like in the case of the uncertainties on the \ttbar background, but in this case the uncertainty is computed based on the difference of the expected yields in \glspl{sr} and \glspl{vr} and not based on the difference between the \glspl{tf}; 
-this is because in the analyses discussed in this thesis the single top background is normalized to its theoretical cross-section and does not have a data-driven normalization. Truth tagging is also used in this case to 
+this is because in the analyses discussed in this thesis the single-top background is normalized to its theoretical cross-section and does not have a data-driven normalization. Truth tagging is also used in this case to 
 increase the available number of simulated events,  
 and to provide a description of the $b$-tagging efficiency closer to the one that we have in the reconstructed events. The modeling uncertainties considered are: 
 
