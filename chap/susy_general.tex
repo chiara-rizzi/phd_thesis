@@ -699,8 +699,10 @@ The jet smearing method overcomes these problems by providing a data-driven esti
 \begin{itemize}
 \item A sample of well-measured multijet seed events, with low values of \met, is selected in data.
 
-\item Each jet in each seed event is smeared: its four-momentum is multiplied by a random number thrown based on the jet response function, that quantifies the fluctuations in the \pt reconstruction of the jets. The response, defined as the ratio E$_{\rm{T}}^{\rm{reco}}$/E$_{\rm{T}}^{\rm{truth}}$, is determined from simulations and is then corrected to match data measurements. 
-A different response function is used for $b$-tagged jets. 
+\item Each jet in each seed event is smeared: its four-momentum is multiplied by a random number found from sampling the jet response function, that quantifies the fluctuations in the \pt reconstruction of the jets. The response, defined as the ratio E$_{\rm{T}}^{\rm{reco}}$/E$_{\rm{T}}^{\rm{truth}}$, is determined from simulations and is then corrected to match data measurements. 
+A different response function is used for $b$-tagged jets, 
+since the neutrinos originating from the semileptonic decay of $B$-hadrons affect the response of the jet. 
+ 
 
 \item The smearing procedure is repeated a large number of times, $\mathcal{O}(1000)$, for each event, and every time \met is recomputed with the smeared jets as input; some of these smeared events will have high \met values and will satisfy the analysis selections.
 
