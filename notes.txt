@@ -19,7 +19,6 @@ mettere frase su different resolution function for b-jets for qcd
 
 Altre cosette 
 comma before “and” in list
-spazi non sistemati in < 
 Higgs boson denoted as h and not H
 quando mettere le maiuscole negli acronimi 
 - dopo re, e.g. re-built?
