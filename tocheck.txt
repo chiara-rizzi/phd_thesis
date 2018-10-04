@@ -2,27 +2,44 @@ Misteri della teoria
 Why neutrino masses do not derive from Higgs mechanism?
 --> masse terms mix left and right firlds and neutrinos are only left
 
-If the running of alpha-s depends on the number of active quarks, why don't we see jumps in the distribution?
+- Quandti gradi di liberta' ha uno spin 2 e uno spion 3/2?
 
-Why in VLQ do I need quarks where both the left and right component have the same transformation under SU(2)? 
+- Perche' lo stop2 puo' essere pesante? non e' tanto importante quanto lo stop1?
+
+
+- If the running of alpha-s depends on the number of active quarks, why don't we see jumps in the distribution?
+--> because it depends on the number of states with mass *sufficiently* smaller than the energy I am considering. It's not a net step. 
+With the increase of energy I get a mild change in trend in the proximity of the energy region where I can produce another particle
+
+- Higgs mechanism: is it strictly needed to build fermion masses, or is it needed only for the gauge bosons?
+
+- Why in VLQ do I need quarks where both the left and right component have the same transformation under SU(2)? 
 This way I can put arbitrary mass terms that don't break the SU(2) invariance, but this could have been done anyway?
 Why for quarks and leptons I could put mass terms without the Higgs mechanism?
 
-Sign and factors 2 in the coveriant derivative for SU(2)xU(1) 
+- Sign and factors 2 in the coveriant derivative for SU(2)xU(1) 
 
-Se vogliamo piu' CP violation, perche' nel pMSSM mettiamo a zero le cose che fanno venire CP violation?
+* pMSSM related *
+- Se vogliamo piu' CP violation, perche' nel pMSSM mettiamo a zero le cose che fanno venire CP violation?
+- "the sfermion mass matrices and all thetrilinear couplings are diagonal." --> but what about stop and sbottom?
+
+- why is the decay of a susy particle preferentially to its SM partner?
+
+- Are gravitinos good DM candidates? How about higgsinos?
+
+- why can't sneutrinos be DM? 
+- why can't neutrinos be DM? Only too small mass or other things?
 
 
 Misteri sull’analisi
 why don’t we consider Gtt models with oaf-shell stops like SS?
 
 Misteri della statistica 
-How to decide how many toys to use for upper limit scan? 
+- How to decide how many toys to use for upper limit scan? 
 
 Cose da controllare:
 non ho messo da nessuna parte le incertezze sul segnale 
 perche’ higgsino-like LSP favorisce una differenza di massa piccola tra chi1_0 e chi1_+
-add plot with signal cross section 
 difference between GGM and GMSB
 perche’ in generale nessuno si fila gli sneutrini? 
 EWK: perche’ i segnali con bassa massa hanno una distribuzione del numero di getti che picca a valori più alti? E’ perché’ sono ISR events? Fare plot di correlazione tra numero di getti e MET, tra MET e dphi-j1-met for signal events without preselections 
