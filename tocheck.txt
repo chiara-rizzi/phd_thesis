@@ -36,6 +36,7 @@ why don’t we consider Gtt models with oaf-shell stops like SS?
 
 Misteri della statistica 
 - How to decide how many toys to use for upper limit scan? 
+- Nel background-ony fit, cosa si minimizza? 
 
 Cose da controllare:
 non ho messo da nessuna parte le incertezze sul segnale 
