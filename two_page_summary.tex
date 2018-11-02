@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\title{Searches for supersymmetric particles in final states with multiple top and bottom quarks with the ATLAS detector}
+\author{Chiara Rizzi}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+At the LHC $pp$ collisions are used to probe the nature of particles in energy regimes that were not accessible before. 
+After the discovery of the Higgs boson in 2012, the LHC is now continuing its operations with the dual goal 
+of measuring the Higgs boson properties in great detail but also to continue the quest for new particles.
+
+ATLAS is one of the two general purpose experiments on the LHC ring, and this thesis focus on the data that is has collected between 
+2015 and 2016, 
+%in the first part of the LHC Run 2, 
+at a center-of-mass energy \cmtre TeV, corresponding to an 
+integrated luminosity of approximately 36 \ifb. 
+
+The Standard Model (SM) is the theory that as of today best describes the experimental results on subatomic particles. 
+Nevertheless, there are strong theoretical and experimental arguments to believe that the SM is the low-energy limit 
+of a more general theory, yet to be determined. 
+Supersymmetry (SUSY) is one of the most promising SM extensions, 
+addressing some of its shortcomings. SUSY predicts the existence of partners for  
+SM particles, which cancel the SM corrections to the Higgs boson mass, solving the naturalness problem. 
+In ``natural'' SUSY models, several particles are expected to be light and therefore observable at the LHC.
+First of all higgsinos, which share the same tree-level mass parameter as the Higgs boson. 
+Then top squarks (stops), that provide a one-loop correction to its mass, and gluinos, that give a two-loop correction since they contribute 
+at one-loop at the stop mass. 
+The requirement on the stop mass reflects also on the sbottom mass, to which is related through the weak-isospin symmetry. 
+These particles are exactly the target of the searches presented in this thesis.
+Furthermore, in the framework of R-parity conserving SUSY, supersymmetric particles are produced in pairs and the 
+lightest supersymmetric particle (LSP) is stable. 
+In several models the LSP is neutral and weakly interacting, providing a good candidate for dark matter.
+ 
+
+In this dissertation I discuss two analyses searching for SUSY in final states enriched in $b$-jets, the collimated sprays of 
+particles originating from the hadronization of a $b$-quark. 
+I have been strongly involved in both analyses, 
+and in this thesis I describe with more emphasis the topics where I have given direct contribution.
+
+The first analysis discussed is a search for gluino pair production, where each gluino decays through a stop or a sbottom 
+to respectively four top or four bottom quarks and the LSP, which is assumed to be neutral and stable.
+Since the top quark decays to a $b$-quark and a $W$-boson, both the gluino decay chain through stop and sbottom lead to a 
+final state with multiple $b$-jets and missing transverse momentum (\met). 
+
+The second search targets a General Gauge Mediation (GGM) model of higgsino pair production, where each higgsino then decays to a Higgs boson and 
+a gravitino, which in this case is the LSP. The high branching ratio of the Higgs boson into a pair of $b$-quarks makes a final state 
+rich in $b$-jets promising to tackle this signature.
+
+The content of this dissertation is organized as follows. Chapter \ref{chap:SMSUSY} presents an introduction to the SM, 
+moving then to its shortcomings and possible extensions, with particular focus on SUSY. 
+Chapter \ref{chap:cern} describes the LHC accelerator complex, the general techniques used in detectors 
+for high-energy physics and the details of the ATLAS detector. 
+Chapter \ref{chap:event:MC} discusses the physics of $pp$ interactions and how they are simulated with Monte Carlo techniques. 
+The event reconstruction and the identification of the physics objects used in the analyses is presented in Chapter \ref{sec:event:reco}. 
+Chapter \ref{chap:stat} describes the main statistical procedures used to derive quantitative results in the analysis of the LHC data.
+Chapter \ref{chap:multib_general} gives a general introduction to the strategies common to both the analyses discussed in this thesis, 
+which are discussed in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod} for the gluino search and 
+higgsino search respectively. 
+Chapter \ref{chap:summary_susy} presents a comparison of the analyses discussed in this thesis with other searches carried out 
+by the ATLAS and CMS collaborations targeting similar signal models. 
+Finally, the conclusions are discussed. 
+
+The results presented in this dissertation have lead to the following publications:
+
+\begin{itemize}
+\item  ATLAS Collaboration, ``Search for Supersymmetry in final states with missing transverse momentum and multiple $b$-jets in proton–proton collisions at \cmtre TeV with the ATLAS detector'', JHEP 06 (2018) 107. 
+\item  ATLAS Collaboration, ``Search for supersymmetry in final states with missing transverse momentum and multiple $b$-jets in proton-proton collisions at \cmtre TeV with the ATLAS detector'', ATLAS-CONF-2018-041.
+\item  ATLAS Collaboration, ``Search for pair production of higgsinos in final states with at least three b-tagged jets in \cmtre TeV pp collisions using the ATLAS detector'',  
+arXiv:1806.04030 [hep-ex], 
+Submitted to: Phys. Rev. (2018).
+\end{itemize}
+
+While the paper mentioned above is the first ATLAS result for the signal model with higgsino pair production, 
+the high cross-section for gluino pair-production made strong-production multi-$b$ signals among the ones that were targeted since Run 1. 
+I have been heavily involved in all the strong-production multi-$b$ results since the beginning of Run 2, in particular:
+
+\begin{itemize}
+\item ATLAS Collaboration, ``Search for pair production of gluinos decaying via stop and sbottom in events with $b$-jets and large missing transverse momentum in $pp$ collisions at \cmtre TeV with the ATLAS detector'', Phys. Rev. D 94 (2016) 032003.
+\item ATLAS Collaboration, ``Search for pair production of gluinos decaying via top or bottom squarks in events with $b$-jets and large missing transverse momentum in
+$pp$ collisions at \cmtre TeV with the ATLAS detector'', ATLAS-CONF-2016-052.
+\end{itemize}
+
+Beside physics analyses, I have also been involved in studies related to the performance of the ATLAS hadronic calorimeter: 
+as discussed in Appendix \ref{app:pmt}, I have evaluated the impact of a non-linearity in the response of the photon multiplier tubes of the 
+hadronic calorimeter on the measurement of the ATLAS luminosity. 
+I have also carried out studies related to the identification of $b$-jets, 
+performing studies on the $b$-tagging efficiency for jets with high transverse momentum and contributing to 
+the development and validation of a tool to facilitate the use of truth-tagging; this technique 
+allows to reduce the statistical uncertainty on samples of simulated events when requiring a high number of $b$-jets. 
+
+
+
+
+\end{document}
