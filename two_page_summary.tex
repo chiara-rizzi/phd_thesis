@@ -1,4 +1,7 @@
 \documentclass[11pt,a4paper]{article}
+
+
+
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{amsmath}
@@ -6,7 +9,13 @@
 \usepackage{amssymb}
 \usepackage{xspace}
 \usepackage{graphicx}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[left=2cm,right=2cm,top=1.85cm,bottom=1.85cm]{geometry}
+
+%\usepackage[backend=bibtex,style=numeric,natbib=true,sorting=none]{biblatex}
+%\addbibresource{two_page_summary.bib}
+\usepackage{cite}
+\usepackage[autostyle=true]{csquotes}
+\bibliographystyle{atlasBibStyleWithTitle}
 
 \title{Searches for supersymmetric particles in final states with multiple top and bottom quarks with the ATLAS detector}
 \author{Chiara Rizzi}
@@ -128,7 +137,11 @@ stops. In this case it is found that, while for most m($\tilde{t}$) the sensitiv
 is close to the one obtained in the off-shell case, it becomes weaker 
 when m($\tilde{t}$) is close to the kinematic boundary of 
 m(\ninoone)+m($t$) and m(\gluino)-m($t$).  
-These results have been released in Ref. \cite{ATLAS-CONF-2018-041}.
+These results have been released in Ref. \cite{ATLAS-CONF-2018-041}. 
+While the results included in this thesis are directly related to the ones in Refs. \cite{Aaboud:2017hrg,ATLAS-CONF-2018-041}, 
+the high cross-section for gluino pair-production made strong-production multi-$b$ signals among the ones that were targeted since Run 1. 
+I have been heavily involved in all the strong-production multi-$b$ results since the beginning of Run 2, in particular the ones in Refs. \cite{Aad:2016eki,ATLAS-CONF-2016-052}. 
+
 
 The second search, presented in Chapter 8, targets a General Gauge Mediation (GGM) model of higgsino pair production, where each higgsino then decays to a Higgs boson and 
 a gravitino, which in this case is the LSP. 
@@ -154,25 +167,6 @@ These results are published in Ref. \cite{Aaboud:2018htj}.
 Chapter 9 presents a comparison of the analyses discussed in this thesis with other searches carried out 
 by the ATLAS and CMS collaborations targeting similar signal models. 
 
-The results presented in this dissertation have lead to the following publications:
-
-\begin{itemize}
-\item  ATLAS Collaboration, ``Search for Supersymmetry in final states with missing transverse momentum and multiple $b$-jets in proton–proton collisions at \cmtre TeV with the ATLAS detector'', JHEP 06 (2018) 107. 
-\item  ATLAS Collaboration, ``Search for supersymmetry in final states with missing transverse momentum and multiple $b$-jets in proton-proton collisions at \cmtre TeV with the ATLAS detector'', ATLAS-CONF-2018-041.
-\item  ATLAS Collaboration, ``Search for pair production of higgsinos in final states with at least three b-tagged jets in \cmtre TeV pp collisions using the ATLAS detector'',  
-arXiv:1806.04030 [hep-ex], 
-Submitted to: Phys. Rev. (2018).
-\end{itemize}
-
-While the paper mentioned above is the first ATLAS result for the signal model with higgsino pair production, 
-the high cross-section for gluino pair-production made strong-production multi-$b$ signals among the ones that were targeted since Run 1. 
-I have been heavily involved in all the strong-production multi-$b$ results since the beginning of Run 2, in particular:
-
-\begin{itemize}
-\item ATLAS Collaboration, ``Search for pair production of gluinos decaying via stop and sbottom in events with $b$-jets and large missing transverse momentum in $pp$ collisions at \cmtre TeV with the ATLAS detector'', Phys. Rev. D 94 (2016) 032003.
-\item ATLAS Collaboration, ``Search for pair production of gluinos decaying via top or bottom squarks in events with $b$-jets and large missing transverse momentum in
-$pp$ collisions at \cmtre TeV with the ATLAS detector'', ATLAS-CONF-2016-052.
-\end{itemize}
 
 The searched discussed in this thesis are an important element in the wide ATLAS program 
 for SUSY searches: they  
@@ -188,12 +182,7 @@ performing studies on the $b$-tagging efficiency for jets with high transverse m
 the development and validation of a tool to facilitate the use of truth-tagging; this technique 
 allows to reduce the statistical uncertainty on samples of simulated events when requiring a high number of $b$-jets. 
 
-
-
-
- 
-
-
-
+%\printbibliography[heading=bibintoc]
+\bibliography{two_page_summary}
 
 \end{document}

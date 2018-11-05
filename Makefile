@@ -21,3 +21,8 @@ clean:
 clean_pdf: clean
 	rm *.pdf
 
+two:
+	pdflatex two_page_summary.tex
+	bibtex two_page_summary
+	pdflatex two_page_summary.tex
+	pdflatex two_page_summary.tex
