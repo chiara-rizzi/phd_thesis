@@ -240,7 +240,7 @@ The muon trigger system needs to be able to identify events with energetic muons
 \subsection{Luminosity measurement}
 \label{sec:lumimeas}
 
-An accurate determination of the luminosity is important both for \gls{sm} measurements, where often the luminosity uncertainty can dominate in some cases, and for \gls{bsm} searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the \gls{atlas} detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Equation \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{Aaboud:2016hhf} as product of the number of bunch crossings $N_b$ and the average luminosity per bunch cross ${<}\mathcal{L}_b{>}$:
+An accurate determination of the luminosity is important both for \gls{sm} measurements, where the luminosity uncertainty can dominate in some cases, and for \gls{bsm} searches, where a precise background estimate is a key ingredient to be sensitive to a signal. In the \gls{atlas} detector the luminosity measurement is performed with redundancy by multiple luminometers that use different technologies and algorithms, to allow a better determination of the final number and to assign systematic uncertainties. The instantaneous luminosity in Equation \ref{eq:cern:lumi} can also be expressed following the conventions in Ref. \cite{Aaboud:2016hhf} as product of the number of bunch crossings $N_b$ and the average luminosity per bunch cross ${<}\mathcal{L}_b{>}$:
 \begin{equation}
 \mathcal{L} = N_b {<}\mathcal{L}_b{>} = N_b \frac{f {<}\mu{>}}{\sigma_{\mathrm{inel}} } \; .
 \label{eq:atlas:lumi}
@@ -270,7 +270,7 @@ Under the assumption that these densities can be factorized into the horizontal 
 
 The relevant quantity in physics analyses is the integrated luminosity over a defined period of time. The basic time unit over which the integrated luminosity is computed and stored is the \gls{lub}, whose duration is defined by the \gls{atlas} trigger system and is typically about one minute. The data contained in each \gls{lub} is collected with the same detector conditions, and the integrated luminosity is computed as the average instantaneous luminosity multiplied by the \gls{lub} time duration.
 
-\gls{atlas} has two primary specifically-designed luminometers, LUCID-2 (LUminosity measurements using Cherenkov Integrating Detector) and \gls{bcm}, whose results are compared with the one obtained by other \gls{atlas} subsystems that measure luminosity through quantities that are sensitive to it, such as the number of tracks or the flow of particles.
+\gls{atlas} has two primary specifically-designed luminometers, LUCID-2 (LUminosity measurements using Cherenkov Integrating Detector) and \gls{bcm}, whose results are compared with the ones obtained by other \gls{atlas} subsystems that measure luminosity through quantities that are sensitive to it, such as the number of tracks or the flow of particles.
 
 \subsubsection*{Bunch-by-bunch luminometers}
 
@@ -290,7 +290,7 @@ LUCID is located 17 m from the \gls{ip}, at $5.6 < |\eta| < 6.0$, and consists o
 \subsubsection*{Tracker-based algorithms}
 
 The \gls{id}, described in Section \ref{sec:atlas:id}, records the passage of charged particles as tracks. The number of such charged tracks in each bunch crossing is proportional to the luminosity, and can be used as ${<}\mu_\mathrm{vis}{>}$ if averaged over a \gls{lub}. 
-During collisions, partial data, which selected with a random trigger that has the same probability of firing for each colliding bunch, 
+During collisions, partial data, which are selected with a random trigger that has the same probability of firing for each colliding bunch, 
 are recorded in a dedicated stream. Because of the high number of colliding bunches, to achieve enough statistical precision the luminosity is provided as integrated over the \gls{lub}; instead, during \gls{vdm} scans, bunch-by-bunch luminosity can be provided. 
 % chiara: indicate which track types have been used in 2015--2016 and which in 2017
 The reconstruction of the tracks used in this process is described in Section \ref{sec:reco:tracks}.
