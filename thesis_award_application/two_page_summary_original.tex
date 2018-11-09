@@ -1,0 +1,171 @@
+\documentclass[11pt,a4paper]{article}
+
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xspace}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=1.85cm,bottom=1.85cm]{geometry}
+
+%\usepackage[backend=bibtex,style=numeric,natbib=true,sorting=none]{biblatex}
+%\addbibresource{two_page_summary.bib}
+\usepackage{cite}
+\usepackage[autostyle=true]{csquotes}
+\bibliographystyle{atlasBibStyleWithTitle}
+
+\title{Searches for supersymmetric particles in final states with multiple top and bottom quarks with the ATLAS detector}
+\author{Chiara Rizzi}
+\date{}
+
+\newcommand{\cmsette}{\ensuremath{\sqrt{s}  =  7}\xspace}
+\newcommand{\cmotto}{\ensuremath{\sqrt{s}  =  8}\xspace}
+\newcommand{\cmtre}{\ensuremath{\sqrt{s}  =  13}\xspace}
+\newcommand{\cmfour}{\ensuremath{\sqrt{s}  =  14}\xspace}
+\newcommand{\cmpart}{\ensuremath{\sqrt{\hat{s}}}\xspace}
+\newcommand{\lumi}{\ensuremath{\int L \, dt}}
+\def\ipb{\mbox{pb$^{-1}$}} %  Inverse picobarns.
+\def\ifb{\mbox{fb$^{-1}$}} %  Inverse femtobarns.
+\def\inb{\mbox{nb$^{-1}$}}
+\newcommand{\pp}        {\ensuremath{pp}\xspace}
+\newcommand{\met}{\ensuremath{E_{\rm T}^{\mathrm{miss}}}\xspace}
+\newcommand{\pt}{\ensuremath{p_{\rm T}}\xspace}
+\newcommand{\ttbar}{\ensuremath{t\overline{t}}\xspace}
+\newcommand*{\gravino}{\ensuremath{\tilde{G}}\xspace}
+\renewcommand*{\stop}{\ensuremath{\tilde{t}}\xspace}
+\newcommand*{\sbottom}{\ensuremath{\tilde{b}}\xspace}
+\newcommand*{\gluino}{\ensuremath{\tilde{g}}\xspace}
+\def\stilde{\widetilde}
+\def\hino{\ensuremath{\tilde{H}}\xspace}
+\def\mhino{\ensuremath{m(\tilde{H})}\xspace}
+\newcommand*{\ninoone}{\ensuremath{\mathchoice%
+      {\displaystyle\raise.4ex\hbox{$\displaystyle\tilde\chi^0_1$}}%
+         {\textstyle\raise.4ex\hbox{$\textstyle\tilde\chi^0_1$}}%
+       {\scriptstyle\raise.3ex\hbox{$\scriptstyle\tilde\chi^0_1$}}%
+ {\scriptscriptstyle\raise.3ex\hbox{$\scriptscriptstyle\tilde\chi^0_1$}}}\xspace}
+\newcommand*{\chinoonepm}{\ensuremath{\mathchoice%
+      {\displaystyle\raise.4ex\hbox{$\displaystyle\tilde\chi^\pm_1$}}%
+         {\textstyle\raise.4ex\hbox{$\textstyle\tilde\chi^\pm_1$}}%
+       {\scriptstyle\raise.3ex\hbox{$\scriptstyle\tilde\chi^\pm_1$}}%
+ {\scriptscriptstyle\raise.3ex\hbox{$\scriptscriptstyle\tilde\chi^\pm_1$}}}\xspace}
+
+
+\begin{document}
+
+\maketitle
+
+At the LHC $pp$ collisions are used to probe the nature of particles in energy regimes that were not accessible before. 
+After the discovery of the Higgs boson in 2012, the LHC is now continuing its operations with the dual goal 
+of measuring the Higgs boson properties in great detail but also to continue the quest for new particles.
+ATLAS is one of the two general purpose experiments on the LHC ring, and this thesis focuses on the data that is has collected between 
+2015 and 2016, 
+%in the first part of the LHC Run 2, 
+at a center-of-mass energy \cmtre TeV, for a total  
+integrated luminosity of approximately 36 \ifb. 
+
+In this dissertation I discuss two searches for SUSY in final states enriched in $b$-jets, the collimated sprays of 
+particles originating from the hadronization of a $b$-quark. 
+I have been strongly involved in both analyses, 
+and in this thesis I describe with more emphasis the topics where I have given direct contribution.
+
+The Standard Model (SM) is the theory that as of today best describes the experimental results on subatomic particles. 
+Nevertheless, there are strong theoretical and experimental arguments to believe that the SM is the low-energy limit 
+of a more general theory, yet to be determined. 
+Supersymmetry (SUSY) is one of the most promising SM extensions, 
+addressing some of its shortcomings. SUSY predicts the existence of partners for  
+SM particles, which cancel the SM corrections to the Higgs boson mass, solving the naturalness problem. 
+In ``natural'' SUSY models, several particles are expected to be light and therefore observable at the LHC.
+First of all higgsinos, which share the same tree-level mass parameter as the Higgs boson. 
+Then top squarks (stops), that provide a one-loop correction to its mass, and gluinos, that give a two-loop correction since they 
+contribute at one-loop at the stop mass. 
+The requirement on the stop mass reflects also on the sbottom mass, to which is related through the weak-isospin symmetry. 
+These particles are exactly the target of the searches presented in this thesis.
+Furthermore, in the framework of R-parity conserving SUSY, supersymmetric particles are produced in pairs and the 
+lightest supersymmetric particle (LSP) is stable. 
+In several models the LSP is neutral and weakly interacting, providing a good candidate for dark matter.
+ 
+The first analysis discussed in the thesis is a search for gluino pair production, where each gluino decays through a stop or a sbottom 
+to respectively four top or four bottom quarks and the LSP, which is assumed to be neutral and stable.
+Since the top quark decays to a $b$-quark and a $W$-boson, both the gluino decay chain through stop and the one through sbottom lead to a 
+final state with multiple $b$-jets and missing transverse momentum (\met). 
+This analysis employs two different strategies: cut-and-count, with several non-orthogonal SRs optimized to 
+maximize the discovery significance for selected benchmark models, and multi-bin, with orthogonal SRs 
+that are statistically combined in the maximum-likelihood fit 
+to maximize the exclusion power of the analysis. 
+In all the SRs semi-leptonic \ttbar+jets constitutes the dominant background.
+No significant excess is found in any of the analysis regions. 
+The largest deviation between expected and observed number of events 
+is in SR-0L-HH, one of the multi-bin SRs, and it has a significance of approximately 
+2.3 standard deviations. 
+Exclusion limits in the m(\gluino)-m(\ninoone) are set for the two simplified models assuming 
+100\% branching ratio (BR) for the gluino into $t\bar{t}\ninoone$ and $b\bar{b}\ninoone$, denoted as ``Gtt'' and ``Gbb'' respectively.
+In the case of the Gtt model, the expected and observed limit at 95\% CL for massless neutralino 
+are 2.14 and 1.97 TeV respectively; the main reason of the difference is the excess in SR-0L-HH.
+Also for the Gbb model the observed limit is slightly weaker than the expected one: 
+while the expected limit for massless neutralino is 2.01 TeV, the observed is 1.92 TeV.
+The results of this analysis are reinterpreted also allowing a variable BR of the gluino 
+into tt\ninoone, bb\ninoone and tb\chinoonepm. 
+These limits, as well as the other limits discussed in this thesis, are obtained with the CLs 
+prescription. These results are published in Ref. \cite{Aaboud:2017hrg}. 
+The mild excess in SR-0L-HH has been verified also with the 2017 dataset,
+leaving the definition of the SRs unchanged; 
+together with the 2015 and 2016 data-taking periods, this leads to a total integrated luminosity 
+of 79.8 \ifb. 
+The update of the analysis did not find an excess in SR-0L-HH, and the increase in luminosity 
+allowed to set more stringent limits on gluino pair production. 
+In the case of the Gtt model, for neutralino masses below 800 GeV we excluded gluino masses up to 
+2.25 TeV, while for the Gbb model the limit is at 2.17 TeV. 
+The results of the analysis of the 79.8 \ifb are reinterpreted also for signals with on-shell 
+stops. In this case it is found that, while for most m($\tilde{t}$) the sensitivity 
+is close to the one obtained in the off-shell case, it becomes weaker 
+when m($\tilde{t}$) is close to the kinematic boundary of 
+m(\ninoone)+m($t$) and m(\gluino)-m($t$).  
+These results have been released in Ref. \cite{ATLAS-CONF-2018-041}. 
+While the results included in this thesis are directly related to the ones in Refs. \cite{Aaboud:2017hrg,ATLAS-CONF-2018-041}, 
+the high cross-section for gluino pair-production made strong-production multi-$b$ signals among the ones that were targeted since Run 1. 
+I have been heavily involved in all the strong-production multi-$b$ results since the beginning of Run 2, in particular the ones in Refs. \cite{Aad:2016eki,ATLAS-CONF-2016-052}. 
+
+
+The second search presented targets a General Gauge Mediation (GGM) model of higgsino pair production, where each higgsino then 
+decays promptly to a Higgs boson and 
+a gravitino, which in this case is the LSP. 
+The search is performed in the channel with four $b$-jets, originating from 
+the decay of the two Higgs bosons, and \met. 
+This was the first ATLAS search targeting this signature, that had been 
+previously considered only in searches performed by the CMS collaboration.
+This analysis relies on the identification of two Higgs boson candidates in events with at least three or 
+at least four $b$-tagged jets. Several orthogonal SRs are optimized and statistically combined in the fit. 
+Two discovery SRs are also defined to provide stronger model-independent limits. 
+If we assume that the higgsino decays to Higgs boson and gravitino with 100\% BR, 
+this analysis excludes \mhino in the range 240-880 GeV at 95\% CL. 
+This analysis is complemented by a second analysis targeting signals with low \mhino, where the 
+invisible momentum in the final state is not enough to fire the \met trigger. 
+Because of a mild excess in this latter analysis, the excluded range of higgsino masses is 
+between 130 and 230 GeV and between 290 and 880 GeV.
+The results are also interpreted in models with a variable BR of the higgsino into Higgs or $Z$ boson. 
+For \mhino = 400 GeV, signal models with BR to Higgs boson higher than 45\% are 
+excluded at 95\% CL.
+These results are published in Ref. \cite{Aaboud:2018htj}. 
+
+
+The searches discussed in this thesis are an important element in the wide ATLAS program 
+for SUSY searches: they  
+provide some of the most restrictive bounds on Natural SUSY scenarios, 
+and the experience gained in developing them represents a stepping stone to more sensitive searches 
+with the data to be collected in the coming years.
+
+Beside physics analyses, I have also been involved in studies related to the performance of the ATLAS hadronic calorimeter: 
+I have evaluated the impact of a non-linearity in the response of the photon multiplier tubes of the 
+hadronic calorimeter on the measurement of the ATLAS luminosity. 
+I have also carried out studies related to the identification of $b$-jets, 
+performing studies on the $b$-tagging efficiency for jets with high transverse momentum and contributing to 
+the development and validation of a tool to facilitate the use of truth-tagging; this technique 
+allows to reduce the statistical uncertainty on samples of simulated events when requiring a high number of $b$-jets. 
+
+%\printbibliography[heading=bibintoc]
+\bibliography{two_page_summary}
+
+\end{document}
