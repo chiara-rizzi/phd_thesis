@@ -9,7 +9,17 @@ all: _base_
 
 _base_:
 	@$(BASIC_BUILD) #&>/dev/null
-	@$(BUILD_BIBLIOGRAPHY)
+	#@$(BUILD_BIBLIOGRAPHY)
+	bibtex chap/theory
+	bibtex chap/lhc
+	bibtex chap/mc_simul
+	bibtex chap/trig_obj 
+	bibtex chap/stat
+	bibtex chap/susy_general
+	bibtex chap/strong_prod
+	bibtex chap/ewk_prod
+	bibtex chap/summary_susy
+	bibtex chap/concl
 	@$(BUILD_GLOSSARY)
 	@$(BASIC_BUILD) #&>/dev/null
 	@$(BASIC_BUILD) #&>/dev/null
