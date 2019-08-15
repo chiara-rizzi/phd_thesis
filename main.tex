@@ -173,6 +173,23 @@ headsepline, % Uncomment to get a line under the header
 \include{chap/abstract}
 %\include{chap/abstract_Spanish}
 
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+%The acknowledgments and the people to thank go here, don't forget to include your project advisor\ldots
+\input{chap/acknowledgements}
+\end{acknowledgements}
+
+
+\clearpage
+% GLOSSARY
+\addcontentsline{toc}{chapter}{List of acronyms}
+\printglossary[title={List of acronyms},nonumberlist]
+\clearpage
+
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -304,12 +321,6 @@ headsepline, % Uncomment to get a line under the header
 %\listoffigures % Prints the list of figures
 %\listoftables % Prints the list of tables
 
-\clearpage
-% GLOSSARY
-\addcontentsline{toc}{chapter}{List of acronyms}
-\printglossary[title={List of acronyms},nonumberlist]
-\clearpage
-
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
@@ -317,16 +328,6 @@ headsepline, % Uncomment to get a line under the header
 %\printbibliography[heading=bibintoc]
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{main}
-
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%	ACKNOWLEDGEMENTS
-%----------------------------------------------------------------------------------------
-\begin{acknowledgements}
-\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-%The acknowledgments and the people to thank go here, don't forget to include your project advisor\ldots
-\input{chap/acknowledgements}
-\end{acknowledgements}
 
 
 \end{document}  
