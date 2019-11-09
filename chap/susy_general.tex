@@ -1,9 +1,9 @@
-\chapter{Common aspects to SUSY searches with multiple $b$-jets and \met}
+\chapter{Common aspects to SUSY searches with multiple \textit{b}-jets and \met}
 \label{chap:multib_general}
 
 The main results presented in this thesis are the two analyses described in Chapter \ref{chap:strong_prod} and Chapter \ref{chap:ewk_prod}, which target respectively the strong and electroweak production of supersymmetric particles.
 While these analyses target two different benchmark models, they have many commonalities, since both models feature 
-a final state rich in $b$-jets and \met. This chapter highlights these common aspects: 
+a final state rich in \textit{b}-jets and \met. This chapter highlights these common aspects: 
 Section \ref{sec:common:datasample} illustrates the data sample used in the analyses. 
 Section \ref{sec:simplified_models} describes the philosophy of simplified models, used to design and interpret the searches. 
 Sections \ref{sec:common_obj_def} and \ref{sec:common_syst} focus on the definition of the physics objects and the experimental systematic uncertainties respectively; Section \ref{sec:common_variables} presents the main kinematic variables used in the analyses 
@@ -104,8 +104,8 @@ In order to suppress fake jets originating from pileup interactions, jets with $
 After overlap removal, signal jets are required to have $\pt>30 (20)$ GeV for the analysis discussed in Chapter \ref{chap:strong_prod} (\ref{chap:ewk_prod}); the difference on the \pt threshold 
 in the two analyses is related to differences in the signal event kinematics, and will be discussed more in detail in the specific chapters.
 
-Jets are considered to be $b$-tagged based on the output of the MV2c10 algorithm (see Section \ref{sec:btagging}); in both analyses the \gls{op} used corresponds to an average efficiency of 77\% for $b$-jets from simulated  
-\ttbar events, and to a rejection factor of 6, 22 and 134 against jets originating from $c$-quarks, hadronic decays of $\tau$ leptons and light jets respectively. 
+Jets are considered to be \textit{b}-tagged based on the output of the MV2c10 algorithm (see Section \ref{sec:btagging}); in both analyses the \gls{op} used corresponds to an average efficiency of 77\% for \textit{b}-jets from simulated  
+\ttbar events, and to a rejection factor of 6, 22 and 134 against jets originating from \textit{c}-quarks, hadronic decays of $\tau$ leptons and light jets respectively. 
 
 
 \item[Re-clustered jets] Baseline jets that survive the overlap removal are re-clustered with the anti-$k_T$ algorithm into large-R jets of radius $R=0.8$, as described in Section \ref{sec:reclustering}. 
@@ -131,8 +131,8 @@ Potential overlaps between jets, electrons and muons are resolved sequentially w
 First of all, electrons that are likely to originate from muon bremsstrahlung, i.e. those that lie within $\dR < 0.01$ from a muon candidate, are removed.
 
 Overlaps between jet candidates and electron arise mostly from two reasons. Electrons are reconstructed from deposits in the calorimeter, and are therefore reconstructed as jets as well.
-In this case we want to preserve the electron and remove the jet, so we remove any non-$b$-tagged jet that lies within $\dR < 0.2$ from an electron candidate;
-an exception is done for $b$-tagged jets, since in this case the electron is likely to originate from a semileptonic $B$-hadron decay. 
+In this case we want to preserve the electron and remove the jet, so we remove any non-\textit{b}-tagged jet that lies within $\dR < 0.2$ from an electron candidate;
+an exception is done for \textit{b}-tagged jets, since in this case the electron is likely to originate from a semileptonic \textit{B}-hadron decay. 
 Electron candidates that are close to the surviving jets are likely to have been produced in the decay of a hadron inside the jet, and are therefore removed
 if they lie within $\dR<0.4$ from a jet and their energy is lower than 50 GeV, or if their energy is higher than 50 GeV and the \dR from the jet 
 is lower than min$(0.4, 0.04 + 10 \, {\rm{GeV}}/E_{\rm{T}})$. 
@@ -141,7 +141,7 @@ Having an energy-dependent \dR selection aims at increasing the acceptance for l
 Unlike electrons, muons are unlikely to be reconstructed as jets. Therefore, the first step in the overlap removal procedure between muon candidates and jets 
 aims primarily at removing the muons that originate from the decay of hadrons inside the jets. 
 Muons and jets can also be close if the jet is originating from muon bremsstrahlung; these jets typically have a small number of associated \gls{id} tracks.
-Therefore jets that lie within $\dR < 0.2$ from a muon are removed if they are not $b$-tagged and if they have less than three matching \gls{id} tracks. 
+Therefore jets that lie within $\dR < 0.2$ from a muon are removed if they are not \textit{b}-tagged and if they have less than three matching \gls{id} tracks. 
 Muons in close proximity to the surviving jets are removed 
 if they lie within $\dR<0.4$ from a jet and their \pt is lower than 50 GeV, or if their \pt is higher than 50 GeV and the \dR from the jet 
 is lower than min$(0.4, 0.04 + 10 \, {\rm{GeV}}/\pt)$. 
@@ -150,7 +150,7 @@ is lower than min$(0.4, 0.04 + 10 \, {\rm{GeV}}/\pt)$.
 \label{sec:common_syst}
 
 Each of the selections in the definition of the objects described in Section \ref{sec:common_obj_def} has an associated experimental systematic uncertainty due to its modeling in the simulation. 
-The experimental systematic uncertainties that are most relevant for analyses targeting final states with multiple $b$-jets and \met are:
+The experimental systematic uncertainties that are most relevant for analyses targeting final states with multiple \textit{b}-jets and \met are:
 
 \begin{description}
 
@@ -161,14 +161,14 @@ the analyses discussed in this thesis use a strongly reduced set with three \gls
 Uncertainties on \gls{jes} and \gls{jer} are the leading source of experimental uncertainties, as they can change the kinematics of the jets in the event, and therefore also the number
 of jets that fulfill certain selections.
 
-\item[$b$-tagging] The uncertainties on the $b$-tagging calibration procedure (see Section \ref{sec:obj:btaggingcalib}) are included through uncertainties on the $b$-tagging \gls{sf}. 
-They are divided into one \gls{np} for the uncertainty on the efficiency of tagging jets originating from $b$-quarks, 
+\item[\textit{b}-tagging] The uncertainties on the \textit{b}-tagging calibration procedure (see Section \ref{sec:obj:btaggingcalib}) are included through uncertainties on the \textit{b}-tagging \gls{sf}. 
+They are divided into one \gls{np} for the uncertainty on the efficiency of tagging jets originating from \textit{b}-quarks, 
 one for the mistagging of the jets originating from 
-$c$-quarks, and one for light jets; 
+\textit{c}-quarks, and one for light jets; 
 furthermore, one additional \gls{np} for the high-\pt extrapolation uncertainty, based on \gls{mc} simulation studies, 
-increases the uncertainties in the high-\pt region, where the $b$-tagging calibration is not available and the central 
+increases the uncertainties in the high-\pt region, where the \textit{b}-tagging calibration is not available and the central 
 value of the \gls{sf} is taken from the closest calibrated \pt region. 
-The uncertainties on $b$-tagging play a relevant role in the analyses in this thesis, as they rely heavily on the selection of events containing $b$-tagged jets.
+The uncertainties on \textit{b}-tagging play a relevant role in the analyses in this thesis, as they rely heavily on the selection of events containing \textit{b}-tagged jets.
 
 \item[Luminosity] Besides those uncertainties associated with the object selections, 
 another experimental uncertainty that is taken into account in the analysis is 
@@ -206,7 +206,7 @@ background processes we need to suppress and are therefore in common between the
 
 \begin{description}
 \item[\njet] Number of signal jets in the event.
-\item[\nbjet] Number of signal jets that are $b$-tagged using the 77\% \gls{op}.
+\item[\nbjet] Number of signal jets that are \textit{b}-tagged using the 77\% \gls{op}.
 \item[\nlep] Number of signal leptons (electrons and muons) in the event.
 \end{description}
 
@@ -233,15 +233,15 @@ For events where this lepton and the entire \met derive from the decay of a pare
 This is the case when the lepton and \met derive from the leptonic decay of a $W$ boson, in $W$+jets events or in semileptonic \ttbar events; 
 note that dileptonic \ttbar events do not present the same endpoint at the W-boson mass, as it is not possible to completely disentangle the energy of the two neutrinos. Events from W+jets or semileptonic \ttbar processes can have values of \mt higher than the kinematic endpoint only if some of the objects in the event are not properly reconstructed (e.g. fake \met from mismeasured jets, jets misidentified as leptons, or leptons out of acceptance).
 
-Another useful variable to suppress the \ttbar background is the minimum transverse mass between \met and the $b$-jets in the event:
+Another useful variable to suppress the \ttbar background is the minimum transverse mass between \met and the \textit{b}-jets in the event:
 
 \begin{equation}
 \mtb =  \mathrm{min}_{i\leq 3}  \sqrt{(\met+p_T^{j_i})^2 - ({\met}_x+p_x^{j_i})^2 - ({\met}_y+p_y^{j_i})^2 } \; , \nonumber
 \end{equation}
 
-\noindent where the minimum is taken over the transverse mass computed with the three leading $b$-tagged jets in the event. 
+\noindent where the minimum is taken over the transverse mass computed with the three leading \textit{b}-tagged jets in the event. 
 In semileptonic \ttbar events, this variable presents an endpoint near $\sqrt{ m( \mathrm{top})^2 - m(W)^2  }$, 
-as this is the endpoint that is obtained when \met originating from the neutrino is perfectly measured and the $b$-jet produced in the decay of the same top quark as the neutrino is among the three leading $b$-tagged jets. 
+as this is the endpoint that is obtained when \met originating from the neutrino is perfectly measured and the \textit{b}-jet produced in the decay of the same top quark as the neutrino is among the three leading \textit{b}-tagged jets. 
 
 \item[Multijet suppression] \gls{sm} background events without any neutrino in the decay chain can still have a sizable amount of reconstructed \met if one of the jets in the 
 event is mismeasured, leading to a fake energy imbalance in the event. In these cases, the resulting \met will have a value of the azimuthal angle ($\phi$) close to the one of the mismeasured jet. The variable \dphimin is defined as the minimum difference in azimuthal angle between \met and the  four jets with the highest \pt in the event:
@@ -260,7 +260,7 @@ event is mismeasured, leading to a fake energy imbalance in the event. In these 
 \label{sec:common_backgrounds}
 
 This section describes the main background processes in the analysis regions, 
-which are characterized by the selection of events with an high number of $b$-jets and high \met, and the way they are modeled. 
+which are characterized by the selection of events with an high number of \textit{b}-jets and high \met, and the way they are modeled. 
 In general, the modeling is based on \gls{mc} simulations for
 all the backgrounds, except multijet which is estimated with a data-driven technique.
 For the main background, pair production of top quark pairs (\ttbar), the shape of the different distributions is obtained from \gls{mc}
@@ -278,14 +278,14 @@ but the normalization is data-driven, derived in specifically designed \glspl{cr
 \subsection{Top quark pair production}
 \label{sec:susy_general:ttbar}
 
-Given the presence of several $b$-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production, which at the \gls{lhc} at 13 TeV has a cross-section of $831.8^{+19.8 + 35.1}_{-29.2-35.1}$ pb \cite{Czakon:2013goa}, is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Figure \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Figure \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
+Given the presence of several \textit{b}-jets in the final state, \ttbar production in association with jets constitutes the main source of \gls{sm} background in all the analysis regions. \ttbar production, which at the \gls{lhc} at 13 TeV has a cross-section of $831.8^{+19.8 + 35.1}_{-29.2-35.1}$ pb \cite{Czakon:2013goa}, is mediated by the strong interaction, and it can occur through quark-antiquark annihilation (Figure \ref{fig:ttbar_prod_qq}) or through gluon-gluon fusion (Figure \ref{fig:ttbar_prod_gg_1} to \ref{fig:ttbar_prod_gg_3}). When the \gls{lhc} is running at 13 TeV, the threshold fraction of the proton energy that must be carried by each parton in order to have sufficient energy to produce a system of two top quarks 
 is about 2.6\%.
 %, assuming a top quark mass of 173.1 GeV \cite{Patrignani:2016xqp}. 
 At these low fractions, the \gls{partdf} of the gluon is higher than the \gls{partdf} of quarks and much higher than the \gls{partdf} of the antiquarks, so gluon-gluon fusion is the dominant \ttbar production mode at the \gls{lhc}.
 
 
-In the \gls{sm}, the top quark decays $\approx 99.8$\% of the times to a $W$ boson and a $b$-quark. 
-Beside the pair of $b$-quarks, which are always present, the final state can be characterized based on the decay of the two $W$ bosons, leading to three different categories:
+In the \gls{sm}, the top quark decays $\approx 99.8$\% of the times to a $W$ boson and a \textit{b}-quark. 
+Beside the pair of \textit{b}-quarks, which are always present, the final state can be characterized based on the decay of the two $W$ bosons, leading to three different categories:
 \begin{description}
 \item[Dilepton]  Both $W$ bosons decay to a lepton ($e$, $\mu$, $\tau$) and a neutrino (10.5\%).
 \item[Single-lepton] One $W$ boson decays to lepton and neutrino, the other decays hadronically (43.8\%).
@@ -308,16 +308,16 @@ When considering events at particle level,
 the \gls{mc} information can be used to reconstruct the decay chains that lead to the stable particles in the final state. 
 Starting from each top quark in the event, it is possible to follow its decay chain and classify the event first of all into dilepton or single-lepton, or also with a finer classification based on the lepton flavor.  
 Subsequent decays of the $\tau$ leptons are not considered, and hadronically decaying $\tau$ leptons are fully considered as leptons in this classification. 
-Figure \ref{fig:ttbar_decay_mT_1L} shows the \ttbar decay type as a function of the \mt value  in a selection requiring at least four jets, at least three $b$-jets, $\met>200$ GeV and at least one signal lepton. It is possible to see that, while at low \mt values the \ttbar component is dominated by events where one top quark decays leptonically and the other one decays hadronically, after the kinematic threshold imposed by the mass of the $W$ boson the dilepton component is dominant. 
+Figure \ref{fig:ttbar_decay_mT_1L} shows the \ttbar decay type as a function of the \mt value  in a selection requiring at least four jets, at least three \textit{b}-jets, $\met>200$ GeV and at least one signal lepton. It is possible to see that, while at low \mt values the \ttbar component is dominated by events where one top quark decays leptonically and the other one decays hadronically, after the kinematic threshold imposed by the mass of the $W$ boson the dilepton component is dominant. 
 
 \begin{figure}[h!]
 \centering 
 \includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_mT_1L_3b_tt_dec.pdf}
-\caption{\ttbar decay type as a function of the \mt value  in a selection requiring at least four jets, at least three $b$-jets, $\met>200$ GeV and at least one signal lepton.}\label{fig:ttbar_decay_mT_1L}
+\caption{\ttbar decay type as a function of the \mt value  in a selection requiring at least four jets, at least three \textit{b}-jets, $\met>200$ GeV and at least one signal lepton.}\label{fig:ttbar_decay_mT_1L}
 
 \subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_mTb_min_1L_3b_tt_dec.pdf}\label{fig:ttbar_dec_mTb_min_1L}}
 \subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_mTb_min_0L_3b_tt_dec.pdf}\label{fig:ttbar_dec_mTb_min_0L}}
-\caption{\ttbar decay type as a function of the \mtb value  in a selection requiring at least four jets, at least three $b$-jets, $\met>200$ GeV and \subref{fig:ttbar_dec_mTb_min_1L} at least one signal lepton \subref{fig:ttbar_dec_mTb_min_0L} exactly zero leptons and $\dphimin > 0.4$.}\label{fig:ttbar_decay_mTb_min}
+\caption{\ttbar decay type as a function of the \mtb value  in a selection requiring at least four jets, at least three \textit{b}-jets, $\met>200$ GeV and \subref{fig:ttbar_dec_mTb_min_1L} at least one signal lepton \subref{fig:ttbar_dec_mTb_min_0L} exactly zero leptons and $\dphimin > 0.4$.}\label{fig:ttbar_decay_mTb_min}
 \end{figure}
 
 Figure \ref{fig:ttbar_decay_mTb_min} shows the same \ttbar classification but as a function of \mtb, both in a selection with at least one signal lepton (Figure \ref{fig:ttbar_dec_mTb_min_1L}) and with a lepton veto (Figure \ref{fig:ttbar_dec_mTb_min_0L}). Here it is possible to notice two features. First of all, in general both the selection with a lepton requirement and the one with a lepton veto are dominated by semileptonic decays: in the case of the selection with the lepton requirement the lepton is in most of the cases a muon or an electron, while in the case of the selection with the lepton veto most of the events contain one $\tau$ lepton, which can decay hadronically giving rise to a topology with no electrons or muons.
@@ -334,12 +334,12 @@ Secondly, while in the case of \mt \ttbar events are dominating the background c
 A truth-level classification is in place to study the \ttbar+jets background based on the flavor of the associated jets.
 This is done starting from the \gls{mc} information at particle level; stable particles are grouped into jets using the anti-k$_t$ algorithm 
 described in Section \ref{sec:obj:jetfinding} with R=0.4; only particle jets with $\pt > 15$ GeV and $|\eta|<2.5$ are considered. 
-The flavor of the jets is determined by matching them with the $B$- and $D$-hadrons that are in a cone of $\Delta R = 0.4$ from the jet. 
-If the event contains at least one jet matched to one or more $B$-hadrons, excluding the ones originating from the decay of the top quarks, the event 
+The flavor of the jets is determined by matching them with the \textit{B}- and $D$-hadrons that are in a cone of $\Delta R = 0.4$ from the jet. 
+If the event contains at least one jet matched to one or more \textit{B}-hadrons, excluding the ones originating from the decay of the top quarks, the event 
 is classified as \ttbb. Otherwise, if at least one jet is matched to $D$-hadrons, excluding the ones from the decay chain of the top quarks, the event is classified as \ttcc. \ttbb and \ttcc events are categorized together as \tthf events, where HF stands for heavy flavor, while the remaining ones are classified as \ttlight.
 Figure \ref{fig:ttbar_HF_bjets} shows the evolution of the flavor composition of the jets produced in association with \ttbar
-as a function of the number of $b$-jets in the event. 
-As expected, as the number of $b$-jets increases, the \ttlight fraction decreases and the \ttbb fraction increases. 
+as a function of the number of \textit{b}-jets in the event. 
+As expected, as the number of \textit{b}-jets increases, the \ttlight fraction decreases and the \ttbb fraction increases. 
 
 The production of \tthf is a process that has large theoretical uncertainties, and therefore in the searches discussed in this document 
 it has assigned a 30\% normalization uncertainty, in accordance with the results of the \gls{atlas} measurement of this cross-section 
@@ -349,7 +349,7 @@ at $\sqrt{s}= 8$ TeV \cite{TOPQ-2014-10}.
 \centering 
 \subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_bjets_n_1L_2b_HF.pdf}\label{fig:ttbar_HF_bjets_1L}}
 \subfigure[]{\includegraphics[width=0.49\textwidth]{figures/susy_common/mc_stack_bjets_n_0L_2b_HF.pdf}\label{fig:ttbar_HF_bjets_0L}}
-\caption{Evolution of the flavor of the jets produced in association with \ttbar in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and \subref{fig:ttbar_HF_bjets_1L} at least one signal lepton \subref{fig:ttbar_HF_bjets_0L} exactly zero leptons and $\dphimin > 0.4$.}\label{fig:ttbar_HF_bjets}
+\caption{Evolution of the flavor of the jets produced in association with \ttbar in a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and \subref{fig:ttbar_HF_bjets_1L} at least one signal lepton \subref{fig:ttbar_HF_bjets_0L} exactly zero leptons and $\dphimin > 0.4$.}\label{fig:ttbar_HF_bjets}
 \end{figure}
 
 
@@ -381,11 +381,11 @@ constraints from the fit.
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/ttbar_syst_gen/0L_3b/compare_jets_n_ttbar_syst_3b_scale.pdf}\label{fig:ttbar_nj_0L_gen}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/ttbar_syst_ps/0L_3b/compare_jets_n_ttbar_syst_3b_scale.pdf}\label{fig:ttbar_nj_0L_ps}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/ttbar_syst_rad/0L_3b/compare_jets_n_ttbar_syst_3b_scale.pdf}\label{fig:ttbar_nj_0L_rad}}
-\caption{Distribution normalized to unity of the number of signal jets in the \ttbar \gls{mc} sample in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero leptons. 
+\caption{Distribution normalized to unity of the number of signal jets in the \ttbar \gls{mc} sample in a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and exactly zero leptons. 
 \subref{fig:ttbar_nj_0L_gen} \PowhegBox (pink line) and \aNLO (blue line), both interfaced with \HWpp.
 \subref{fig:ttbar_nj_0L_ps} Nominal sample (pink line), generated with \PowhegBox and showered with \PY, and a sample generated with \PowhegBox and showered with \HWpp (blue line).
 \subref{fig:ttbar_nj_0L_rad} Nominal sample (pink line) and two varied samples generated with \PowhegBox interfaced with two versions of \PY (blue and green line).
-%Distribution normalized to unity of the number of signal jets in the \ttbar \gls{mc} sample in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero leptons. 
+%Distribution normalized to unity of the number of signal jets in the \ttbar \gls{mc} sample in a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and exactly zero leptons. 
 %\subref{fig:ttbar_nj_0L_gen} Comparison of \PowhegBox (pink line) with \aNLO (blue line), both interfaced with \HWpp.
 %\subref{fig:ttbar_nj_0L_ps} Comparison of the nominal sample (pink line), generated with \PowhegBox and showered with \PY, with a sample generated with \PowhegBox and showered with \HWpp (blue line).
 %\subref{fig:ttbar_nj_0L_rad} Comparison of the nominal sample (pink line) with two varied samples generated with \PowhegBox interfaced with two versions of \PY (blue and green line).
@@ -397,7 +397,7 @@ constraints from the fit.
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/ttbar_syst_gen/0L_3b/compare_pt_jet_1_ttbar_syst_3b_scale.pdf}\label{fig:ttbar_ptj1_0L_gen}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/ttbar_syst_ps/0L_3b/compare_pt_jet_1_ttbar_syst_3b_scale.pdf}\label{fig:ttbar_ptj1_0L_ps}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/ttbar_syst_rad/0L_3b/compare_pt_jet_1_ttbar_syst_3b_scale.pdf}\label{fig:ttbar_ptj1_0L_rad}}
-\caption{Distribution normalized to unity of the \pt of the leading signal jet in the \ttbar \gls{mc} sample in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero leptons. 
+\caption{Distribution normalized to unity of the \pt of the leading signal jet in the \ttbar \gls{mc} sample in a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and exactly zero leptons. 
 \subref{fig:ttbar_nj_0L_gen} \PowhegBox (pink line) and \aNLO (blue line), both interfaced with \HWpp.
 \subref{fig:ttbar_nj_0L_ps} nominal sample (pink line), generated with \PowhegBox and showered with \PY, and a sample generated with \PowhegBox and showered with \HWpp (blue line).
 \subref{fig:ttbar_nj_0L_rad} Nominal sample (pink line) and two varied samples generated with \PowhegBox interfaced with two versions of \PY (blue and green line).}\label{fig:ttbar_ptj1_0L_syst}
@@ -409,27 +409,27 @@ A higher number of simulated events is available at particle level, where the si
 comparing samples at particle level, with the assumption that the detector simulation has a similar effect on all the samples, 
 independently of the \gls{mc} generator used. Two further strategies are in place to reduce the statistical uncertainty in the comparison of the different samples. 
 One consists in relaxing or removing some selections to both the \glspl{cr} and the corresponding \glspl{sr}/\glspl{vr}. 
-Another is to substitute the selection on the number of $b$-jets with truth-tagging, described in the next section.
+Another is to substitute the selection on the number of \textit{b}-jets with truth-tagging, described in the next section.
 
-\subsubsection*{Truth $b$-tagging}
+\subsubsection*{Truth \textit{b}-tagging}
 
-With truth tagging, instead of keeping only the events that satisfy a certain criterion on the number of $b$-tagged jets, all the events are kept and weighted. The weight is the probability that, out of all selected jets in the event,
-a certain number pass the $b$-tagging identification.
-A different weight is computed for each $b$-tagging requirement; 
-for example, the probability for the event to have at least three $b$-tagged jets will be different from the probability of having exactly two. 
-For each jet, the probability to be $b$-tagged can be expressed as a function of the jet flavor ($f$), \pt and $\eta$:
+With truth tagging, instead of keeping only the events that satisfy a certain criterion on the number of \textit{b}-tagged jets, all the events are kept and weighted. The weight is the probability that, out of all selected jets in the event,
+a certain number pass the \textit{b}-tagging identification.
+A different weight is computed for each \textit{b}-tagging requirement; 
+for example, the probability for the event to have at least three \textit{b}-tagged jets will be different from the probability of having exactly two. 
+For each jet, the probability to be \textit{b}-tagged can be expressed as a function of the jet flavor ($f$), \pt and $\eta$:
 
 \begin{equation}
 \varepsilon \left(f,|\eta|,p_{\mathrm{T}}\right) \; . 
 \label{eq:susy_common:btageff}
 \end{equation}
 
-\noindent If an event has $N$ jets, the probability of containing exactly one $b$-tag jet can be expressed as:
+\noindent If an event has $N$ jets, the probability of containing exactly one \textit{b}-tag jet can be expressed as:
 \begin{equation}
         P_{=1} = \sum\limits_{i=1}^N \left( \varepsilon_{i} \prod\limits_{i \neq j} \left( 1 - \varepsilon_{j} \right) \right) \; , \nonumber
 \end{equation}
 
-\noindent and in the same way, we can compute the probability for an inclusive $b$-tagging selection:
+\noindent and in the same way, we can compute the probability for an inclusive \textit{b}-tagging selection:
 \begin{equation}
  \begin{split}
         P_{=0} &= \prod\limits_{i=1}^N \left( 1 - \varepsilon_{j} \right) \; ,\\
@@ -437,21 +437,21 @@ For each jet, the probability to be $b$-tagged can be expressed as a function of
  \end{split}
 \end{equation} 
  
-\noindent This procedure can be extended to an arbitrary number of $b$-tagged jets by summing over all the possible permutations that lead to the desired number of $b$-tagged jets ($n$) to derive the exclusive probability and then subtract it from the $P_{\geq n}$ probability to have the inclusive probability for $\geq n+1$ $b$-tagged jets.
+\noindent This procedure can be extended to an arbitrary number of \textit{b}-tagged jets by summing over all the possible permutations that lead to the desired number of \textit{b}-tagged jets ($n$) to derive the exclusive probability and then subtract it from the $P_{\geq n}$ probability to have the inclusive probability for $\geq n+1$ \textit{b}-tagged jets.
  
-Beside decreasing the statistical uncertainty on the expected number of events, the other advantage of using truth tagging on particle-level samples is that it allows to emulate the reconstruction-level efficiency of the $b$-tagging algorithm: 
-at particle-level a jet is considered to be $b$-tagged if it is matched to a $b$-quark in the \gls{mc} record within a certain cone. This criterion has 
-almost 100\% efficiency for real $b$-jets, and it leads to a null mistag rate. Instead with truth tagging, if the efficiency map used in Equation \ref{eq:susy_common:btageff} corresponds to the $b$-tagging efficiency measured for reconstructed jets, 
-it is possible to obtain the same efficiency to a $b$-tagging selection as in a reconstructed-level analysis. 
+Beside decreasing the statistical uncertainty on the expected number of events, the other advantage of using truth tagging on particle-level samples is that it allows to emulate the reconstruction-level efficiency of the \textit{b}-tagging algorithm: 
+at particle-level a jet is considered to be \textit{b}-tagged if it is matched to a \textit{b}-quark in the \gls{mc} record within a certain cone. This criterion has 
+almost 100\% efficiency for real \textit{b}-jets, and it leads to a null mistag rate. Instead with truth tagging, if the efficiency map used in Equation \ref{eq:susy_common:btageff} corresponds to the \textit{b}-tagging efficiency measured for reconstructed jets, 
+it is possible to obtain the same efficiency to a \textit{b}-tagging selection as in a reconstructed-level analysis. 
 
-Some analysis variables are built using explicitly the kinematic characteristics of the $b$-tagged jets, e.g. \mtb. The truth tagging method allows to choose which jets in the event should be considered as $b$-tagged: in an event with $N$ jets, each permutation with $n$ jets considered as $b$-tagged and $N-n$ jets considered as non $b$-tagged is characterized by an individual weight $w_i$. If we let $S$ to be the sum of all these individual weights, a pseudo-random number generated with uniform probability between 0 and $S$ will indicate which permutation to choose and consequently which jets to consider as $b$-tagged; this procedure is illustrated in Figure \ref{fig:susy_common_trf_perm}. 
+Some analysis variables are built using explicitly the kinematic characteristics of the \textit{b}-tagged jets, e.g. \mtb. The truth tagging method allows to choose which jets in the event should be considered as \textit{b}-tagged: in an event with $N$ jets, each permutation with $n$ jets considered as \textit{b}-tagged and $N-n$ jets considered as non \textit{b}-tagged is characterized by an individual weight $w_i$. If we let $S$ to be the sum of all these individual weights, a pseudo-random number generated with uniform probability between 0 and $S$ will indicate which permutation to choose and consequently which jets to consider as \textit{b}-tagged; this procedure is illustrated in Figure \ref{fig:susy_common_trf_perm}. 
 
 \begin{figure}[h]
 \centering 
 %\subfigure[]{
 \includegraphics[width=0.6\textwidth]{figures/susy_common/trf_perm}
 %}
-\caption{Example schema to choose the selected permutation with truth $b$-tagging.}\label{fig:susy_common_trf_perm}
+\caption{Example schema to choose the selected permutation with truth \textit{b}-tagging.}\label{fig:susy_common_trf_perm}
 \end{figure}
 
 
@@ -507,7 +507,7 @@ When computing the squared amplitude, this becomes:
 While the first two terms are properly taken into account by the individual \ttbar and single-top \gls{mc} simulations, 
 the last term represent the interference between the two processes and, unless special care to avoid this is taken, it is completely ignored if the two processes are simulated independently. 
 
-In the \gls{dr} approach, all the diagrams where a $W$ boson and a $b$-quark form a top quark are removed from the matrix element used to compute the   single-top cross-section in the Wt channel. While this approach is not gauge invariant, it is found to have negligible dependence on the gauge choice.
+In the \gls{dr} approach, all the diagrams where a $W$ boson and a \textit{b}-quark form a top quark are removed from the matrix element used to compute the   single-top cross-section in the Wt channel. While this approach is not gauge invariant, it is found to have negligible dependence on the gauge choice.
 
 Instead in the \gls{ds} approach an extra subtraction term is added directly to the differential cross-section to cancel the contribution of the 
 production of two on-shell top quarks, which is more accurate the more the invariant mass of the non-resonant $Wb$ system tends to the top quark mass. 
@@ -523,16 +523,16 @@ in the analyses, \met and \mtb.
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_met.pdf}\label{fig:st_met_1L}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_mTb_min.pdf}\label{fig:st_mtb_1L}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/st_DRDS/1L_3b/compare_jets_n.pdf}\label{fig:st_nj_1L}}
-\caption{Distribution of \subref{fig:st_met_1L} \met,  \subref{fig:st_mtb_1L} \mtb and \subref{fig:st_nj_1L} number of signal jets in the single-top \gls{mc} sample obtained with the \gls{dr} and \gls{ds} approaches (pink and blue line respectively), in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and at least one lepton. 
+\caption{Distribution of \subref{fig:st_met_1L} \met,  \subref{fig:st_mtb_1L} \mtb and \subref{fig:st_nj_1L} number of signal jets in the single-top \gls{mc} sample obtained with the \gls{dr} and \gls{ds} approaches (pink and blue line respectively), in a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and at least one lepton. 
 }\label{fig:st_1L}
 \end{figure}
 
 To evaluate the uncertainty associated with the strategy chosen to account for the interference between \ttbar and single top
 we use a dedicated $WWbb$ sample generated at particle level with \aNLO showered with \PY v8, that takes fully into account the interference.
-This sample is produced at \gls{lo} and using the four-flavor scheme, where $b$-quarks are treated as massive and processes that require a $b$-quark in the initial state (which is the case for Wt production) are initiated by a gluon splitting into a $b\bar{b}$ pair. 
+This sample is produced at \gls{lo} and using the four-flavor scheme, where \textit{b}-quarks are treated as massive and processes that require a \textit{b}-quark in the initial state (which is the case for Wt production) are initiated by a gluon splitting into a $b\bar{b}$ pair. 
 Because of the \gls{lo} accuracy, the comparison with the sum of the two nominal samples for \ttbar and Wt, generated with \PowhegBox and showered with \PY, does not lead to sensible 
 results as the \gls{nlo} corrections to the \ttbar sample are larger than the effect of the interference. 
-Instead, two additional samples are generated with the same settings as the $WWbb$ sample to simulate the double-resonance and the single-resonance samples: the former requires the presence of two resonant top quarks, the latter requires one resonant top quark and two $b$-quarks in the \gls{me}, vetoing the presence of a second resonant top quark.  
+Instead, two additional samples are generated with the same settings as the $WWbb$ sample to simulate the double-resonance and the single-resonance samples: the former requires the presence of two resonant top quarks, the latter requires one resonant top quark and two \textit{b}-quarks in the \gls{me}, vetoing the presence of a second resonant top quark.  
 
 
 \subsubsection*{Modeling uncertainties}
@@ -541,7 +541,7 @@ The modeling uncertainties on the single-top background are estimated at particl
 like in the case of the uncertainties on the \ttbar background, but in this case the uncertainty is computed based on the difference of the expected yields in \glspl{sr} and \glspl{vr} and not based on the difference between the \glspl{tf}; 
 this is because in the analyses discussed in this thesis the single-top background is normalized to its theoretical cross-section and does not have a data-driven normalization. Truth tagging is also used in this case to 
 increase the available number of simulated events,  
-and to provide a description of the $b$-tagging efficiency closer to the one that we have in the reconstructed events. The modeling uncertainties considered are: 
+and to provide a description of the \textit{b}-tagging efficiency closer to the one that we have in the reconstructed events. The modeling uncertainties considered are: 
 
 \begin{description}
 \item[Interference] The uncertainty deriving from the treatment of the interference between \ttbar and single top in the Wt channel is obtained by  comparing the sum of single-resonance and double-resonance contributions to the total $WWbb$ sample, using the samples described in the previous paragraph.
@@ -566,9 +566,9 @@ two quarks in Figure \ref{fig:W_prod_1} and the quark and antiquark in Figure \r
 \caption{Representative \gls{lo} Feynman diagrams for the production of a $W$ boson in association with one jet.}\label{fig:W_prod}
 \end{figure}
 
-Our analysis selections require high \met and the presence of $b$-jets, therefore most of the $W$+jets events that fulfill the selection are the ones where the $W$ boson decays to an electron, muon or $\tau$ lepton 
-and the associated neutrino (to produce some \met) and the $b$-tagging requirement is satisfied because of the production of extra heavy-flavor jets, or because the jet from the hadronic decay of the $\tau$
-lepton is incorrectly tagged as a $b$-jet together with other associated jets. 
+Our analysis selections require high \met and the presence of \textit{b}-jets, therefore most of the $W$+jets events that fulfill the selection are the ones where the $W$ boson decays to an electron, muon or $\tau$ lepton 
+and the associated neutrino (to produce some \met) and the \textit{b}-tagging requirement is satisfied because of the production of extra heavy-flavor jets, or because the jet from the hadronic decay of the $\tau$
+lepton is incorrectly tagged as a \textit{b}-jet together with other associated jets. 
 $W$+jets events can therefore be present both in analysis regions with a lepton requirement and in those with a veto on the presence of leptons. 
 In the case of $Z$+jets events, most of the events that enter the analysis regions have a $Z \to \nu \nu$ decay (which has a \gls{br} of about 20\%), and are produced in association with 
 heavy-flavor jets or jets that are mistagged; these events contribute almost exclusively to the analysis regions with a lepton veto. 
@@ -603,7 +603,7 @@ As an example, the impact of these systematic uncertainties on the shapes of the
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/Z_syst_fac/0L_3b/compare_met_Z_scale.pdf}\label{fig:Z_met_0L_fac}}\\
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/Z_syst_match/0L_3b/compare_met_Z_scale.pdf}\label{fig:Z_met_0L_match}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/Z_syst_res/0L_3b/compare_met_Z_scale.pdf}\label{fig:Z_met_0L_res}}
-\caption{Distribution normalized to unity of the \pt of the leading signal jet in the $Z$+jets \gls{mc} sample in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero leptons. 
+\caption{Distribution normalized to unity of the \pt of the leading signal jet in the $Z$+jets \gls{mc} sample in a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and exactly zero leptons. 
 \subref{fig:Z_met_0L_ren} Comparison of nominal and renormalization scale variations.
 \subref{fig:Z_met_0L_fac} Comparison of nominal and factorization scale variations.
 \subref{fig:Z_met_0L_match} Comparison of nominal and matching scale variations.
@@ -617,7 +617,7 @@ As an example, the impact of these systematic uncertainties on the shapes of the
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/W_syst_fac/0L_3b/compare_met_W_scale.pdf}\label{fig:W_met_0L_fac}}\\
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/W_syst_match/0L_3b/compare_met_W_scale.pdf}\label{fig:W_met_0L_match}}
 \subfigure[]{\includegraphics[width=0.32\textwidth]{figures/susy_common/W_syst_res/0L_3b/compare_met_W_scale.pdf}\label{fig:W_met_0L_res}}
-\caption{Distribution normalized to unity of the \pt of the leading signal jet in the $W$+jets \gls{mc} sample in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero leptons. 
+\caption{Distribution normalized to unity of the \pt of the leading signal jet in the $W$+jets \gls{mc} sample in a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and exactly zero leptons. 
 \subref{fig:W_met_0L_ren} Comparison of nominal and renormalization scale variations.
 \subref{fig:W_met_0L_fac} Comparison of nominal and factorization scale variations.
 \subref{fig:W_met_0L_match} Comparison of nominal and matching scale variations.
@@ -701,8 +701,8 @@ The jet smearing method overcomes these problems by providing a data-driven esti
 \item A sample of well-measured multijet seed events, with low values of \met, is selected in data.
 
 \item Each jet in each seed event is smeared: its four-momentum is multiplied by a random number found from sampling the jet response function, that quantifies the fluctuations in the \pt reconstruction of the jets. The response, defined as the ratio E$_{\rm{T}}^{\rm{reco}}$/E$_{\rm{T}}^{\rm{truth}}$, is determined from simulations and is then corrected to match data measurements. 
-A different response function is used for $b$-tagged jets, 
-since the neutrinos originating from the semileptonic decay of $B$-hadrons affect the response of the jet. 
+A different response function is used for \textit{b}-tagged jets, 
+since the neutrinos originating from the semileptonic decay of \textit{B}-hadrons affect the response of the jet. 
  
 
 \item The smearing procedure is repeated a large number of times, $\mathcal{O}(1000)$, for each event, and every time \met is recomputed with the smeared jets as input; some of these smeared events will have high \met values and will satisfy the analysis selections.
@@ -710,14 +710,14 @@ since the neutrinos originating from the semileptonic decay of $B$-hadrons affec
 \item The number of events that satisfy the analysis selections is arbitrary and depends on the choice of the seed events and on the number of smears for each event. The normalization is derived in a specifically designed \gls{qcd} \gls{cr}, that relies on a tight upper selection on \dphimin ($\dphimin < 0.1$). All the 0-lepton analysis regions have the requirement $\dphimin > 0.4$, which makes them orthogonal to the \gls{qcd} \gls{cr} and allows also to have \glspl{vr} in the intermediate region. 
 \end{itemize}
 
-Figure \ref{fig:jet_smear_dphi} shows the distribution of \dphimin after a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero leptons. The first bin of this distribution is the region used for the normalization of the multijet background, 
+Figure \ref{fig:jet_smear_dphi} shows the distribution of \dphimin after a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and exactly zero leptons. The first bin of this distribution is the region used for the normalization of the multijet background, 
 while the phase space up to $\dphimin=0.4$ (which is the lower threshold for the analysis regions) serves as validation region. 
 Figures \ref{fig:jet_smear_met} and \ref{fig:jet_smear_jetn} show respectively the distribution of \met and of the number of jets in the \gls{qcd} \gls{cr} and in a validation region with $0.1 < \dphimin < 0.2$.
 
 \begin{figure}[h!]
 \centering 
 \includegraphics[width=0.49\textwidth]{figures/susy_common/jet_smearing/data_mc_dphi_min_QCD_noDphi.pdf}
-\caption{Distribution of \dphimin in a selection requiring at least four jets, at least two $b$-jets, $\met>200$ GeV and exactly zero leptons.}\label{fig:jet_smear_dphi}
+\caption{Distribution of \dphimin in a selection requiring at least four jets, at least two \textit{b}-jets, $\met>200$ GeV and exactly zero leptons.}\label{fig:jet_smear_dphi}
 \end{figure}
 
 

@@ -10,7 +10,7 @@ This chapter describes the reconstruction and identification of the objects used
 \section{Tracks and primary vertices}
 \label{sec:reco:tracks}
 
-In \gls{atlas} the identification of tracks from charged particles relies on the information collected by the \gls{id}. The tracking information is crucial to the reconstruction and identification of many types of particles, including electrons, muons, and the jets originating from the hadronization of a $b$-quark. 
+In \gls{atlas} the identification of tracks from charged particles relies on the information collected by the \gls{id}. The tracking information is crucial to the reconstruction and identification of many types of particles, including electrons, muons, and the jets originating from the hadronization of a \textit{b}-quark. 
 Charged particles traversing the \gls{id} deposit energy through ionization,  
 which is read out as hits; in the Pixel detector each hit corresponds to a space point, 
 while in the \gls{sct} the space points are obtained as pairs of hits from each side of the modules. 
@@ -274,50 +274,50 @@ Re-clustered jets can be trimmed by removing the constituent small-R jets that h
 \section{Jets from B-hadrons}
 \label{sec:btagging}
 
-Jets originating from the hadronization of a $b$-quark ($b$-jets) can be identified thanks to the lifetime of $B$-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the $B$-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a $B$-hadron is shown in Figure \ref{fig:btag}. 
+Jets originating from the hadronization of a \textit{b}-quark (\textit{b}-jets) can be identified thanks to the lifetime of \textit{B}-hadrons (about $10^{-12}$ s), which is shorter than the typical lifetime of hadrons containing only light quarks, but still long enough to allow the \textit{B}-hadrons to travel distances of the order of the mm before decaying. A schematic view of the topology originating from a jet containing a \textit{B}-hadron is shown in Figure \ref{fig:btag}. 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.45\textwidth]{./figures/objects/secvtx.pdf}
 \end{center}
-\caption[Schematic view of the topology of a $b$-jet.]{Schematic view of the topology of a $b$-jet. Figure from Ref. \cite{d0btagging}.}
+\caption[Schematic view of the topology of a \textit{b}-jet.]{Schematic view of the topology of a \textit{b}-jet. Figure from Ref. \cite{d0btagging}.}
 \label{fig:btag}
 \end{figure}
-The procedure of identifying $b$-jets is referred to as $b$-tagging, and in \gls{atlas} is performed using as input the tracks associated to the jets. As already mentioned in Section \ref{sec:atlas:pixel}, between Run 1 and Run 2 a fourth pixel layer, the \gls{ibl}, was added to the \gls{atlas} detector, allowing a better impact parameter resolution and therefore improving substantially the $b$-tagging performance. 
+The procedure of identifying \textit{b}-jets is referred to as \textit{b}-tagging, and in \gls{atlas} is performed using as input the tracks associated to the jets. As already mentioned in Section \ref{sec:atlas:pixel}, between Run 1 and Run 2 a fourth pixel layer, the \gls{ibl}, was added to the \gls{atlas} detector, allowing a better impact parameter resolution and therefore improving substantially the \textit{b}-tagging performance. 
 
-There are three families of $b$-tagging algorithms that can be combined through multivariate techniques. The basic algorithms can be based on:
+There are three families of \textit{b}-tagging algorithms that can be combined through multivariate techniques. The basic algorithms can be based on:
 
 \begin{description}
 
 \item[Impact Parameter] The transverse impact parameter of a track (\dzero) is the point of closest approach to the 
 \gls{pv} in the transverse plane, while the longitudinal impact parameter (\zzerost) is defined as the distance along 
 the $z$-axis between the \gls{pv} and the point of closest approach in the transverse plane. Because of the typical 
-lifetime of $B$-hadrons, on average $b$-jets contain tracks with higher impact parameter than light-jets. 
+lifetime of \textit{B}-hadrons, on average \textit{b}-jets contain tracks with higher impact parameter than light-jets. 
 The sign of the impact parameter is positive if the track extrapolation crosses the jet direction in front of the primary vertex, and negative otherwise. 
 The negative side of the impact-parameter distribution derives from the 
 impact-parameter resolution, and can be used to calibrate light-jets. In \gls{atlas}, two taggers make use of the information on the impact parameter
- \cite{ATLAS-CONF-2011-102}: IP2D, which is based on the significance of the transverse impact parameter (\dzero/$\sigma_{\dzero}$), and IP3D, which builds a two-dimensional template including also the significance of the longitudinal impact parameter (\zzerost/$\sigma_{\zzerost}$). The \gls{pdf} for each flavor hypothesis ($b$, $c$, and light) is derived from \gls{mc} simulation on a per-track basis, and then a \gls{llr} of the different probabilities is computed, including the contribution from all tracks associated to the jet. For example, the \gls{llr} discriminating $b$-jets from light-jets is of the form $\sum_{i=1}^{N}\log\frac{p_b}{p_{light}}$, where the index $N$ runs on all the tracks associated to the jet. 
+ \cite{ATLAS-CONF-2011-102}: IP2D, which is based on the significance of the transverse impact parameter (\dzero/$\sigma_{\dzero}$), and IP3D, which builds a two-dimensional template including also the significance of the longitudinal impact parameter (\zzerost/$\sigma_{\zzerost}$). The \gls{pdf} for each flavor hypothesis (\textit{b}, \textit{c}, and light) is derived from \gls{mc} simulation on a per-track basis, and then a \gls{llr} of the different probabilities is computed, including the contribution from all tracks associated to the jet. For example, the \gls{llr} discriminating \textit{b}-jets from light-jets is of the form $\sum_{i=1}^{N}\log\frac{p_b}{p_{light}}$, where the index $N$ runs on all the tracks associated to the jet. 
 
 \item[Secondary Vertex Finding] The SV1 algorithm \cite{ATLAS-CONF-2011-102} explicitly looks for a secondary vertex within a jet. 
 All the track pairs in the jet are tested for a two-track vertex hypothesis, removing the pairs that are likely to originate from 
 long-lived particles (e.g. K$_0$, $\Lambda$), photon conversion or hadronic interaction with the detector material. 
 If a two-track vertex remains, a new single vertex is fitted with the tracks passing this selection. 
-$B$-tagged jets are identified by high values of a likelihood discriminant, 
+\textit{B}-tagged jets are identified by high values of a likelihood discriminant, 
 built using several variables 
 including the decay-length significance, the invariant mass of all tracks associated with the vertex, 
 the ratio of the sum of the energies of the tracks in the vertex to the sum of the energies of all tracks in the jet, 
 and the number of two-track vertices.
 
-\item[Identification of the Decay Chain] The $B$-hadrons inside $b$-jets decay with an electroweak interaction, 
-through which a $b$-quark decays preferentially to a $c$-quark, since the \gls{ckm} matrix element $|V_{cb}|^2$ is much larger than $|V_{ub}|^2$. Hadrons containing a $c$-quark ($D$-hadrons) subsequently decay as well, giving rise to a topology with two decay vertices. While the resolution is often not enough to reconstruct the two vertices individually, the JetFitter algorithm \cite{1742-6596-119-3-032032} operates assuming that they both lie on the same line, the flight axis of the $B$-hadron. The information on the event topology derived with JetFitter is then used in a likelihood function, from which three different templates (one for each flavor) are derived.
+\item[Identification of the Decay Chain] The \textit{B}-hadrons inside \textit{b}-jets decay with an electroweak interaction, 
+through which a \textit{b}-quark decays preferentially to a \textit{c}-quark, since the \gls{ckm} matrix element $|V_{cb}|^2$ is much larger than $|V_{ub}|^2$. Hadrons containing a \textit{c}-quark ($D$-hadrons) subsequently decay as well, giving rise to a topology with two decay vertices. While the resolution is often not enough to reconstruct the two vertices individually, the JetFitter algorithm \cite{1742-6596-119-3-032032} operates assuming that they both lie on the same line, the flight axis of the \textit{B}-hadron. The information on the event topology derived with JetFitter is then used in a likelihood function, from which three different templates (one for each flavor) are derived.
 
 \end{description}
 
-The default $b$-tagging algorithm used by \gls{atlas} in the analysis of the 2015--2016 dataset is MV2c10 
+The default \textit{b}-tagging algorithm used by \gls{atlas} in the analysis of the 2015--2016 dataset is MV2c10 
 \cite{ATL-PHYS-PUB-2015-022,ATL-PHYS-PUB-2016-012}, 
 a multivariate algorithm based on a \gls{bdt} that combines the algorithms described above. 
-MV2c10 belongs to the family of MV2 algorithms, which are trained on a \ttbar sample using $b$-jets as signal and $c$-jets and light-jets as background, and differ in the relative fraction of $c$-jets and light-jets that are
-used in the training; in the case of MV2c10, the background sample in the training contains 15\% of $c$-jets.
-Figure \ref{fig:obj:mv2} shows the light-jet and $c$-jet rejection as a function of $b$-jet efficiency for different MV2 algorithms.
+MV2c10 belongs to the family of MV2 algorithms, which are trained on a \ttbar sample using \textit{b}-jets as signal and \textit{c}-jets and light-jets as background, and differ in the relative fraction of \textit{c}-jets and light-jets that are
+used in the training; in the case of MV2c10, the background sample in the training contains 15\% of \textit{c}-jets.
+Figure \ref{fig:obj:mv2} shows the light-jet and \textit{c}-jet rejection as a function of \textit{b}-jet efficiency for different MV2 algorithms.
 
 \begin{figure}[h]
 \begin{center}
@@ -328,66 +328,66 @@ Figure \ref{fig:obj:mv2} shows the light-jet and $c$-jet rejection as a function
     \label{fig:obj:mv2_b}
     \includegraphics[width=0.48\textwidth]{figures/objects/mv2c10_b.pdf} }
 \end{center}
- \caption{Light-jet \subref{fig:obj:mv2_a} and $c$-jet \subref{fig:obj:mv2_b} rejection as a function of the $b$-jet efficiency for the MV2 algorithms. Figures from Ref. \cite{ATL-PHYS-PUB-2016-012}.}
+ \caption{Light-jet \subref{fig:obj:mv2_a} and \textit{c}-jet \subref{fig:obj:mv2_b} rejection as a function of the \textit{b}-jet efficiency for the MV2 algorithms. Figures from Ref. \cite{ATL-PHYS-PUB-2016-012}.}
   \label{fig:obj:mv2}
 \end{figure}
 
-\glspl{op} are defined by a selection on the value of the \gls{bdt} output, and are designed to have a specific $b$-jet efficiency.
+\glspl{op} are defined by a selection on the value of the \gls{bdt} output, and are designed to have a specific \textit{b}-jet efficiency.
 Table \ref{tab:obj:mv2op} shows the \glspl{op} defined for the MV2c10 algorithm.
 
 \begin{table}[h]
 \begin{center}
     \includegraphics[width=1.0\textwidth]{figures/objects/btag_op.pdf}  
 \end{center}
- \caption{Operating points for the MV2c10 $b$-tagging algorithm. The efficiency and rejection rates are computed for jets with $\pt > 20$ GeV from \ttbar events. Table from Ref. \cite{ATL-PHYS-PUB-2016-012}.}
+ \caption{Operating points for the MV2c10 \textit{b}-tagging algorithm. The efficiency and rejection rates are computed for jets with $\pt > 20$ GeV from \ttbar events. Table from Ref. \cite{ATL-PHYS-PUB-2016-012}.}
   \label{tab:obj:mv2op}
 \end{table}
 
 \subsection{B-tagging calibration and uncertainties}
 \label{sec:obj:btaggingcalib}
 
-The $b$-tagging efficiency can be different in \gls{mc} simulation and data. The $b$-tagging efficiency, 
-$c$-tagging efficiency and light mistag rate are measured in data for the \glspl{op} of Table \ref{tab:obj:mv2op}, 
+The \textit{b}-tagging efficiency can be different in \gls{mc} simulation and data. The \textit{b}-tagging efficiency, 
+\textit{c}-tagging efficiency and light mistag rate are measured in data for the \glspl{op} of Table \ref{tab:obj:mv2op}, 
 and the \gls{mc} simulation is corrected with the \glspl{sf} derived as the ratio of the efficiency in data and in \gls{mc}. 
 The \glspl{sf} are derived on a per-jet basis in a parametric form based on jet \pt, $\eta$ and truth flavor. 
-For each \gls{mc} simulated event, an event-level \gls{sf} is derived by multiplying all the efficiency \glspl{sf} for the $b$-tagged jets 
-and all the inefficiency \glspl{sf} for the jets that are not $b$-tagged. Several techniques are used in \gls{atlas} to measure the $b$-tagging 
+For each \gls{mc} simulated event, an event-level \gls{sf} is derived by multiplying all the efficiency \glspl{sf} for the \textit{b}-tagged jets 
+and all the inefficiency \glspl{sf} for the jets that are not \textit{b}-tagged. Several techniques are used in \gls{atlas} to measure the \textit{b}-tagging 
 efficiency for the different jet flavors \cite{1748-0221-11-04-P04008}.
 The calibrations used in the analyses described in this thesis are:
 
 \begin{description}
 
-\item[$b$-jets] The default $b$-tagging calibration for $b$-jets is based on a \ttbar dileptonic sample. Events with exactly two opposite-sign leptons
-and two or three jets are selected, and a per-event likelihood is built containing the $b$-tagging weight \gls{pdf} for a jet of a given flavor;
-the \gls{pdf} for light-jets and $c$-jets is taken from \gls{mc}, while the \gls{pdf} for $b$-jets is the information that we want to extract from data.
-This last \gls{pdf} is described by a histogram with only two bins, one below and one above the threshold to $b$-tag a jet. 
+\item[\textit{b}-jets] The default \textit{b}-tagging calibration for \textit{b}-jets is based on a \ttbar dileptonic sample. Events with exactly two opposite-sign leptons
+and two or three jets are selected, and a per-event likelihood is built containing the \textit{b}-tagging weight \gls{pdf} for a jet of a given flavor;
+the \gls{pdf} for light-jets and \textit{c}-jets is taken from \gls{mc}, while the \gls{pdf} for \textit{b}-jets is the information that we want to extract from data.
+This last \gls{pdf} is described by a histogram with only two bins, one below and one above the threshold to \textit{b}-tag a jet. 
 
 %\gls{bdt} based on 8 input variables 
 %Likelihood fit using per-jet flavor correlations. 
 
-\item[$c$-jets] The analysis described in Chapter \ref{chap:strong_prod} uses a $c$-jet calibration based on events where a $W$ boson 
-is produced in association with a $c$-quark. The events selected are the ones where the $W$ boson decays to an electron and a neutrino,
-and the D-hadron originating from the fragmentation of the $c$-quark decays to a muon. 
+\item[\textit{c}-jets] The analysis described in Chapter \ref{chap:strong_prod} uses a \textit{c}-jet calibration based on events where a $W$ boson 
+is produced in association with a \textit{c}-quark. The events selected are the ones where the $W$ boson decays to an electron and a neutrino,
+and the D-hadron originating from the fragmentation of the \textit{c}-quark decays to a muon. 
 In $W+c$ production the electron and the muon in the final state have opposite charge, 
 while most of the background processes have an equal number of same-sign and opposite-sign events. The number of $W+c$ events can therefore 
 be obtained as the difference of these two categories.
-For the higgsino search described in Chapter \ref{chap:ewk_prod}, which was developed at a later time, a new calibration for $c$-jets, 
+For the higgsino search described in Chapter \ref{chap:ewk_prod}, which was developed at a later time, a new calibration for \textit{c}-jets, 
 based on \ttbar events \cite{ATLAS-CONF-2018-001}, was available. 
-This calibration selects \ttbar events where one of the $W$ bosons decays leptonically and the other one decays to a $c$-quark and an s-quark. 
+This calibration selects \ttbar events where one of the $W$ bosons decays leptonically and the other one decays to a \textit{c}-quark and an s-quark. 
 
-\item[light-jets] The $b$-tagging efficiency of light-jets (mistag rate) is measured on an inclusive sample of jets, using the negative tag method 
+\item[light-jets] The \textit{b}-tagging efficiency of light-jets (mistag rate) is measured on an inclusive sample of jets, using the negative tag method 
 \cite{ATLAS-CONF-2018-006}. 
-The two main reasons that lead to $b$-tagged light-jets are the finite resolution of the impact parameter and the secondary vertices caused
+The two main reasons that lead to \textit{b}-tagged light-jets are the finite resolution of the impact parameter and the secondary vertices caused
 by long-lived particles and material interactions. If we consider only the first type of mistags, the signed impact parameter distribution 
 will be symmetric around zero. 
-The negative tag method is based on a modified version of the $b$-tagging algorithms, that takes as input impact parameters and decay lengths with
+The negative tag method is based on a modified version of the \textit{b}-tagging algorithms, that takes as input impact parameters and decay lengths with
 reversed sign. The mistag rate is measured as the negative-tag efficiency of the jet sample, with \gls{mc}-based correction factors that take into account 
-the negative-tag rate for $b$- and $c$-jets and the effect of long-lived particles and material interactions.
+the negative-tag rate for \textit{b}- and \textit{c}-jets and the effect of long-lived particles and material interactions.
 
 \end{description}
 
-The $b$-tagging scale factors are affected by multiple sources of uncertainty, which are reflected in uncertainties in the \glspl{sf}.
-As an example, Figure \ref{fig:obj:btagSF} shows the $b$-tagging \gls{sf} for $c$-jets derived with the \ttbar calibration 77\% \gls{op}, 
+The \textit{b}-tagging scale factors are affected by multiple sources of uncertainty, which are reflected in uncertainties in the \glspl{sf}.
+As an example, Figure \ref{fig:obj:btagSF} shows the \textit{b}-tagging \gls{sf} for \textit{c}-jets derived with the \ttbar calibration 77\% \gls{op}, 
 and Figure \ref{fig:obj:mistagSF} shows the \glspl{sf} for light-jets derived with the negative tag calibration for the same \gls{op}.
 
 %\note{Plots for other calibrations will be added after CONF are public (should be LHCP)}.
@@ -401,7 +401,7 @@ and Figure \ref{fig:obj:mistagSF} shows the \glspl{sf} for light-jets derived wi
    % \label{fig:obj:mv2_b}
     %\includegraphics[width=0.48\textwidth]{figures/objects/mv2c10_b.pdf} }
 \end{center}
- \caption{$B$-tagging \gls{sf} for $c$-jets for the \gls{op} corresponding to the 77\% \gls{op}. Figure from Ref. \cite{ATLAS-CONF-2018-001}.}
+ \caption{\textit{B}-tagging \gls{sf} for \textit{c}-jets for the \gls{op} corresponding to the 77\% \gls{op}. Figure from Ref. \cite{ATLAS-CONF-2018-001}.}
   \label{fig:obj:btagSF}
 \end{figure}
 
@@ -414,7 +414,7 @@ and Figure \ref{fig:obj:mistagSF} shows the \glspl{sf} for light-jets derived wi
     \label{fig:obj:mistag2}
     \includegraphics[width=0.48\textwidth]{figures/objects/mistag_fig_05d.png} }
 \end{center}
- \caption{$B$-tagging \gls{sf} for light-jets for the \gls{op} corresponding to the 77\% \gls{op} for \subref{fig:obj:mistag1} 
+ \caption{\textit{B}-tagging \gls{sf} for light-jets for the \gls{op} corresponding to the 77\% \gls{op} for \subref{fig:obj:mistag1} 
  $|\eta|<1.2$ and \subref{fig:obj:mistag2} $1.2 < |\eta| < 2.5$. Figures from Ref. \cite{ATLAS-CONF-2018-006}.}
   \label{fig:obj:mistagSF}
 \end{figure}
