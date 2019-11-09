@@ -1,10 +1,12 @@
+
+
 %%%%%%%%%%%%%%%%%% ATLAS
 
 \section{The ATLAS experiment}
 \label{sed:cern:atlas}
 
 \gls{atlas} \cite{atlas:atlas}, shown in Figure \ref{fig:atlas:atlas}, is the largest of the \gls{lhc} detectors, 
-measuring 44 meters in length and 25 meters in height, and weighting about 700 tons. 
+measuring 44 meters in length and 25 meters in height, and weighting about 7000 tons. 
 To be fully functional in the \gls{lhc} environment,  the \gls{atlas} detector needs to be fast in order to resolve the collisions resulting from consecutive bunches (which are interspaced by 25 ns) and radiation resistant. 
 
 \begin{figure}[ht]
@@ -49,7 +51,7 @@ y = \frac{1}{2} \ln\left(\frac{E + p_z}{E - p_z}\right) \; , \nonumber
 \end{equation}
 
 \noindent where $E$ is the energy of the particle and $p_z$ its momentum projected on the $z$-axis. 
-The advantage of rapidity and pseudorapidity over the polar angle is that rapidity differences $\Delta y$ are boostinvariant
+The advantage of rapidity and pseudorapidity over the polar angle is that rapidity differences $\Delta y$ are boost-invariant 
 along the $z$-axis, as well as pseudorapidity differences $\Delta \eta$ for massless particles.
 The pseudorapidity is usually preferred to the rapidity as it does not require
 knowing the particle’s mass but only its polar position.
@@ -93,7 +95,7 @@ The toroids allow to efficiently generate the magnetic field over a large volume
 of material. This minimizes the amount of multiple scattering, which represents one
 of the factors limiting the muon momentum resolution.
 The main drawback of the usage of a toroid is that, in order to obtain the same strength of magnetic field, a toroid needs more current than a solenoid (20.5 kA for 4 T).
-The \gls{atlas} toroid system is divided into two subsystems, to allows for an easier design, 
+The \gls{atlas} toroid system is divided into two subsystems, to allow for an easier design, 
 as well as to provide access to the core part of the detector.
 The barrel toroid \cite{ATLAS:1997ac} provides a peak field of 3.9 T in the cylindrical shell between the calorimeters and the end of the muon spectrometer, and consists of eight coils contained in individual vacuum vessels.  
 The end-cap toroids \cite{ATLAS:1997ab} provide the magnetic field necessary to bend the muons in the end-cap region of the spectrometer, and each of them consists of eight coils building a single cold mass, originating a peak field of 4.1 T. 
@@ -103,7 +105,7 @@ The end-cap toroids \cite{ATLAS:1997ab} provide the magnetic field necessary to 
 \subsection{Inner detector}
 \label{sec:atlas:id}
 
-The main purposes of \gls{atlas} \gls{id} \cite{ATLAS:1997ag,ATLAS:1997af} are to provide a good momentum resolution of the charged particles produced in the collisions and to allow the determination of secondary vertices. The dimensions of the \gls{id} are determined on one side by the 
+The main purposes of the \gls{atlas} \gls{id} \cite{ATLAS:1997ag,ATLAS:1997af} are to provide a good momentum resolution of the charged particles produced in the collisions and to allow the determination of secondary vertices. The dimensions of the \gls{id} are determined on one side by the 
 radius of the beam pipe and on the other side by the beginning of the \gls{ecal}. The total length is 5.4 m, which provides a coverage up to $|\eta|<$2.5.
 The \gls{id} is divided into a barrel, whose schema is shown in Figure \ref{fig:atlas:id}, and two end-cap regions, covering respectively the pseudorapidity regions $|\eta|<1.2$ and $1.2<|\eta|<2.5$. In both, a mixture of gaseous and silicon detectors is used to maximize the performance and reduce the costs. The three components of the \gls{id} are the pixel detector, the semi-conductor tracker, and the transition radiation tracker, discussed in the following paragraphs.
 
@@ -235,7 +237,7 @@ and two providing fast event selection for the trigger system.
 
 The two systems dedicated to precision measurement are the \gls{mdt} and the \gls{csc}, both present in barrel and end caps. The \glspl{mdt} are proportional drift chambers covering the region $|\eta|<2.7$; they are made of aluminium tubes with a diameter of 30 mm and a length between 700 and 6300 mm, and a cathode wire made of an alloy of tungsten (97\%) and rhenium (3\%). The filling gas is a mixture of Ar, N$_2$, and CH$_4$ with percentages respectively of 91\%, 4\% and 5\%. The \glspl{csc} are multi-wire proportional chambers that cover the region with $2.0<|\eta|<2.7$, where the shorter drift time of this detector (30 ns compared to the 480 ns of the \glspl{mdt}) allows to better cope with the increase in particle flux in the forward region. The anode wires in the \glspl{csc} are made of the same tungsten-rhenium alloy of the \glspl{mdt} and have a 2.54 mm pitch, which is the same distance separating them from the copper cathode strips, creating a symmetric cell. The gas inside the chamber is a mixture of 30\% Ar, 50\% CO$_2$, and 20\% CF$_4$. The spatial resolution is 40 $\mu$m in the bending plane and 5 mm in the perpendicular plane.
 
-The muon trigger system needs to be able to identify events with energetic muons in a timescale compatible with assigning them to the correct bunch crossing, that are spaced by 25 ns. The two trigger chambers are the \gls{rpc} and the \gls{tgc}. The \glspl{rpc} are arranged in three layers in the barrel region, outside the outermost \gls{mdt} layer. Each narrow chamber consists of two parallel resistive bakelite plates and is filled with a mixture of 94.7\% C$_2$H$_2$F$_4$, 5\% Iso-C$_4$H$_{10}$, and 0.3\% SF$_6$. The signal is readout by metal plates through capacitive coupling, providing a time resolution of 1.5 ns, while the space resolution is about 1 cm. The \gls{rpc} also provides the $\phi$ coordinate for the track, which is not measured by the \glspl{mdt}. The \glspl{tgc} are multi-wire proportional chambers located in the end caps, filled with a mixture of 55\% CO$_2$ and 45\% n-C$_5$H$_{12}$. Contrary to the \glspl{csc}, the \glspl{tgc} are characterized by a distance between the cathode and the anode shorter than the anode pitch. The pseudorapidity coverage is $1.05<|\eta|<2.7$ for tracking and $1.05<|\eta|<2.4$ for triggering; the time response is similar to that of the \glspl{rpc}, while the spatial resolution is better: between 2 and 7 mm. 
+The muon trigger system needs to be able to identify events with energetic muons in a timescale compatible with assigning them to the correct bunch crossing, that are spaced by 25 ns. The two trigger chambers are the \gls{rpc} and the \gls{tgc}. The \glspl{rpc} are arranged in three layers in the barrel region, outside the outermost \gls{mdt} layer. Each narrow chamber consists of two parallel resistive bakelite plates and is filled with a mixture of 94.7\% C$_2$H$_2$F$_4$, 5\% Iso-C$_4$H$_{10}$, and 0.3\% SF$_6$. The signal is read out by metal plates through capacitive coupling, providing a time resolution of 1.5 ns, while the space resolution is about 1 cm. The \gls{rpc} also provides the $\phi$ coordinate for the track, which is not measured by the \glspl{mdt}. The \glspl{tgc} are multi-wire proportional chambers located in the end caps, filled with a mixture of 55\% CO$_2$ and 45\% n-C$_5$H$_{12}$. Contrarily to the \glspl{csc}, the \glspl{tgc} are characterized by a distance between the cathode and the anode shorter than the anode pitch. The pseudorapidity coverage is $1.05<|\eta|<2.7$ for tracking and $1.05<|\eta|<2.4$ for triggering; the time response is similar to that of the \glspl{rpc}, while the spatial resolution is better: between 2 and 7 mm. 
 
 \subsection{Luminosity measurement}
 \label{sec:lumimeas}
@@ -324,7 +326,7 @@ A trigger chain is a set of selections that characterize a certain trigger objec
 
 \subsection{ATLAS operation}
 
-\gls{atlas} has been successfully recording the collision data delivered by the \gls{lhc} in Run 1 and Run 2. Figure \ref{fig:atlas:lumi1} shows the cumulative luminosity delivered by the \gls{lhc} between the declaration of stable beams and the request to put the detector in standby for beam dump  as well as the luminosity recorded by \gls{atlas} in 2015 and 2016, which is the dataset used in the analyses described in this thesis. The difference between the delivered and recorded luminosity derives from inefficiencies of the data acquisition system and from the ``warm start'' procedure: 
+\gls{atlas} has been successfully recording the collision data delivered by the \gls{lhc} in Run 1 and Run 2. Figure \ref{fig:atlas:lumi1} shows the cumulative luminosity delivered by the \gls{lhc} between the declaration of stable beams and the request to put the detector in standby for beam dump  as well as the luminosity recorded by \gls{atlas} in 2015, 2016 and 2017, which is the dataset used in the analyses described in this thesis. The difference between the delivered and recorded luminosity derives from inefficiencies of the data acquisition system and from the ``warm start'' procedure: 
 the pixel and \gls{sct} high voltage and the preamplifiers of the pixel detector are turned on after the start of stable beams \cite{LumiTwiki}.
 
 \begin{figure}[ht]
@@ -338,5 +340,5 @@ and \subref{fig:atlas:lumi1:c} 2017. \subref{fig:atlas:lumi1:d} Cumulative lumin
 \label{fig:atlas:lumi1}
 \end{figure}
 
-At the time of this writing, the 2017 dataset has been collected but not yet analyzed. The delivered and recorded luminosity for 2017 is shown in Figure \ref{fig:atlas:lumi1:c}. Not all the recorded luminosity can be used for physics analyses, as most of these require a good state of all the detector subsystems. This is checked for each luminosity block; the ones with poor detector conditions are disregarded, while the ones that pass this criteria form the \gls{grl}, which imposes requirements on the quality of the beams and of the detector. Figure \ref{fig:atlas:lumi1:d} shows the total cumulative luminosity for the 2015--2017 period, highlighting the portion that enters the \gls{grl}. 
+Not all the recorded luminosity can be used for physics analyses, as most of these require a good state of all the detector subsystems. This is checked for each luminosity block; the ones with poor detector conditions are disregarded, while the ones that pass this criteria form the \gls{grl}, which imposes requirements on the quality of the beams and of the detector. Figure \ref{fig:atlas:lumi1:d} shows the total cumulative luminosity for the 2015--2017 period, highlighting the portion that enters the \gls{grl}. 
 
