@@ -1,7 +1,7 @@
 \chapter{Statistical methods}
 \label{chap:stat}
 
-The result of a \gls{pp} interaction is not deterministic, as the statements that can be obtain from quantum field theory are of probabilistic nature. 
+The result of a \gls{pp} interaction is not deterministic, as the statements that can be obtained from quantum field theory are of probabilistic nature. 
 Furthermore, uncertainties in our predictions related both to experimental effects and to the modeling of the physics processes need to be taken into account. 
 Therefore, a proper statistical treatment is essential to extract quantitative statements from the observed data. 
 %This chapter does not aim at being an exhaustive reference for statistics, but it 
@@ -22,7 +22,7 @@ P(\mathrm{A}) = \lim_{N_{\mathrm{tot}} \rightarrow \infty} \frac{N_\mathrm{A}}{N
 \end{equation}
 In this case there is no probability for a hypothesis or true values of the parameters: a theory is either true or false, and given a theory only the data has a certain probability or \gls{pdf}.
 
-\item[Bayesian] In the Bayesian approach, probability is a more subjective notion, which incorporates the degree of belief in the from of priors. In this case it is meaningful to speak about the \gls{pdf} not only for the data, but also for theories and parameters. Performing an experiment will modify the probability of a theory according to the Bayes formula:
+\item[Bayesian] In the Bayesian approach, probability is a more subjective notion, which incorporates the degree of belief in the form of priors. In this case it is meaningful to speak about the \gls{pdf} not only for the data, but also for theories and parameters. Performing an experiment will modify the probability of a theory according to the Bayes formula:
 \begin{equation}
 P(\mathrm{theory} | \mathrm{data}) = \frac{ P(\mathrm{data}|\mathrm{theory}) \times P(\mathrm{theory})}{P(\mathrm{data})} \; , \nonumber
 \end{equation}
@@ -70,7 +70,7 @@ The characteristics used to evaluate the performance of an estimator are:
 \label{eq:stat:bias}
 \vec{b} = E[\hat{\vec{\theta}}] - \vec{\theta} \; . 
 \end{equation}
-Once the bias of a specific estimator is known, it is possible to build and unbiased one by defining 
+Once the bias of a specific estimator is known, it is possible to build an unbiased one by defining 
 \begin{equation}
 \hat{\vec{\theta}}_{\mathrm{unbiased}} = \hat{\vec{\theta}} - \vec{b} \; . \nonumber
 \end{equation}
@@ -82,7 +82,7 @@ Once the bias of a specific estimator is known, it is possible to build and unbi
 %V[\hat{\vec{\theta}}] \geq I[\vec{\theta}]^{-1}
 %\end{equation}
 
-\item[Robustness] An estimator is robust if it is not sensitive to small changes in the assumptions in the \gls{pdf} $f(x|\vec{\theta})$, 
+\item[Robustness] An estimator is robust if it is not sensitive to small changes in the assumptions on the \gls{pdf} $f(x|\vec{\theta})$, 
 and is not 	excessively affected by outliers.
 \end{description}
 
@@ -157,10 +157,10 @@ e^{- (\mu s_{i} + b_{i}) } \; ,
 \noindent where the index $i$ runs on all the bins of the distribution.
 
 The prediction on the expected number of events in each bin is affected by systematic and statistical uncertainties, that are incorporated in the likelihood in the form of \glspl{np}. 
-In the frequentistic approach, each \gls{np} has a true unknown value, whose \gls{mle} is derived in auxiliary measurements. 
+In the frequentist approach, each \gls{np} has a true unknown value, whose \gls{mle} is derived in auxiliary measurements. 
 While in principle the full likelihood of the auxiliary measurements should be included in the likelihood of our own measurement, 
 in most practical cases this is not feasible, and the auxiliary likelihood is modeled through constraining terms. 
-Assuming that data used to derive the constraints on the \glspl{np} is statistically independent from the data in the analysis and not affected by the potential presence of the signal under study, the combined likelihood assumes the factorized form:
+Assuming that data used to derive the constraints on the \glspl{np} are statistically independent from the data in the analysis and not affected by the potential presence of the signal under study, the combined likelihood assumes the factorized form:
 
 \begin{equation}
 L(\mu, \vec{\theta}) =
@@ -170,15 +170,15 @@ e^{- (\mu s_{i}(\vec{\theta}) + b_{i}(\vec{\theta})) }   \;
 \prod_{k=1}^M \rho( \theta_k) \; , \nonumber
 \end{equation}
 
-\noindent where $\rho( \theta_k)$ is the constraint term for the parameter $\theta_k$. Note that the treatment of an uncertainty through the addition of a constraint term, from the pure frequentist point of view is justified only for sources of uncertainty of experimental nature, where there is indeed an auxiliary measurement. The same approach is instead often also used for theoretical uncertainties, where the frequentist prescription would be to have a result that depends on these parameters. While in the Bayesian view the constrain term would easily be interpreted as a prior on the value of the theoretical parameter, in the frequentist approach this is equivalent to assigning also to the theoretical uncertainties a fictitious auxiliary measurement. 
+\noindent where $\rho( \theta_k)$ is the constraint term for the parameter $\theta_k$. Note that the treatment of an uncertainty through the addition of a constraint term, from the pure frequentist point of view is justified only for sources of uncertainty of experimental nature, where there is indeed an auxiliary measurement. The same approach is instead often also used for theoretical uncertainties, where the frequentist prescription would be to have a result that depends on these parameters. While in the Bayesian view the constraint term would easily be interpreted as a prior on the value of the theoretical parameter, in the frequentist approach this is equivalent to assigning also to the theoretical uncertainties a fictitious auxiliary measurement. 
 
 
-\subsubsection*{Functional forms of the constraining terms}
+\subsubsection*{Functional forms of the constraint terms}
 
-Depending on the underlying auxiliary measurement, different functional forms can be used for the constraining terms.
+Depending on the underlying auxiliary measurement, different functional forms can be used for the constraint terms.
 
 \begin{description}
-\item[Gaussian constraint] This is the default constrain type for systematic uncertainties, and its usage is justified by the central limit theorem. In general, it is safe to use this constraint as long as the \gls{mle} of the \gls{np} from the corresponding auxiliary measurement follows a Gaussian distribution. The functional form is:
+\item[Gaussian constraint] This is the default constraint type for systematic uncertainties, and its usage is justified by the central limit theorem. In general, it is safe to use this constraint as long as the \gls{mle} of the \gls{np} from the corresponding auxiliary measurement follows a Gaussian distribution. The functional form is:
 
 \begin{equation}
 \rho( \theta) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left( -\frac{(\theta - \hat{\theta})^2}{2\sigma^2} \right) \; .  \nonumber
@@ -204,14 +204,14 @@ Depending on the underlying auxiliary measurement, different functional forms ca
 
 
 
-\subsubsection*{Effect of a systematic uncertainty in the yield}
+\subsubsection*{Effect of a systematic uncertainty on the yield}
 
 Let’s consider a single bin of a distribution and the effect that a systematic uncertainty, 
 e.g. the \gls{jer}, has on the expected background yield in this bin. 
 %Leaving aside the physical meaning of this uncertainty, we can focus on the effect that this calibration uncertainty has on the likelihood of a single bin counting experiment. 
 The \gls{jer} uncertainty is calibrated with an auxiliary measurement, whose likelihood we include by the simplification of a Gaussian constraint term, $G( \tilde{\theta} | \theta, \sigma_\theta)$, where $\tilde{\theta}$ is the nominal value of the calibration, $\theta$ the underlying real value and $\sigma_\theta$ the uncertainty. Stating that the uncertainty in \gls{jer} is 10\%, means that the width of the Gaussian is 10\%. 
 
-To include this information in the likelihood, we need to evaluate the response to this uncertainty, i.e. the effect of a shift in \gls{jer} in the background efficiency of our region.
+To include this information in the likelihood, we need to evaluate the response to this uncertainty, i.e. the effect of a shift in \gls{jer} on the background efficiency of our region.
 In practice this means that we need to evaluate how much a one standard deviation variation of \gls{jer} (10\% in our example) changes the number of expected events in the bin we are considering. 
 For this example, we assume that a 10\% shift in \gls{jer} causes a 20\% change in the background yields.
 If we consider only one bin of the likelihood in Equation \ref{eq:stat:lik_no_sys}, and only one systematic (\gls{jer} in this case), 
@@ -240,7 +240,7 @@ G( 0 | \theta, 1) \; .
 
 \subsection*{Interpolation}
 
-The dependence of the expected yield to a $\pm 1 \sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done for only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Equation \ref{eq:stat:lik_one_bin_sys_pre} and Equation \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. 
+The dependence of the expected yield on a $\pm 1 \sigma$ variation of each parameter in the likelihood is something that is measured in each specific analysis. This process is done only for three points (the nominal value and the $\pm 1 \sigma$ variations), but it needs to be implemented in the likelihood as a continuous function. In the examples in Equation \ref{eq:stat:lik_one_bin_sys_pre} and Equation \ref{eq:stat:lik_one_bin_sys} a linear interpolation is assumed, but this is not always the best solution. 
 Several interpolation strategies are possible; the ones described below and compared in Figure \ref{fig:stat:interp} are those supported by HistFactory \cite{Cranmer:1456844}.
  
 
@@ -302,7 +302,7 @@ Figures from Ref. \cite{Cranmer:1456844}.
 
 \subsubsection*{Correlation and profiling}
 
-The post-fit values of the \glspl{np} can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central values is different from 0, it means that the best value is different from the nominal one; the modified \gls{mc} prediction will have a better agreement with data than the original prediction. If the post-fit uncertainty in one \gls{np} is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty in that \gls{np}.
+The post-fit values of the \glspl{np} can be compared to the pre-fit values. A central value close to 0 and an uncertainty close to 1 indicates that the fit does not have enough statistical power to profile the uncertainties. If the central value is different from 0, it means that the best value is different from the nominal one; the modified \gls{mc} prediction will have a better agreement with data than the original prediction. If the post-fit uncertainty on one \gls{np} is smaller than 1, it means that the original assigned uncertainty was too large and the fit was able to constrain the uncertainty on that \gls{np}.
 % The effect of a specific systematic is not compatible with the range allowed by the data statistics 
 
 When multiple \glspl{np} have a similar effect on the background prediction, the total variation obtained as a sum of their effects can be larger than what allowed by the statistical precision of the data. The individual effects cannot be disentangled and constrained individually, but a correlation between them produces a total variation that is compatible with what is observed in data. % chiarareco:;\ un po' copiato da Javier, rifrasare!
@@ -350,7 +350,7 @@ p_{\mu} = \int_{t_{{\rm obs}}}^{\infty} f(t | \mu ) \,
 d t \; , \nonumber
 \end{equation}
 
-The $p$-value is therefore a frequentistic statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the $p$-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% \gls{cl}. Note that excluding a test hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
+The $p$-value is therefore a frequentist statement on the conditional probability of having higher values for $t$ if the measurement is repeated. When the $p$-value for the test hypothesis is lower than a predefined threshold, the test hypothesis is excluded. In high energy physics the convention is to set this threshold at 0.05. This corresponds to exclusion at 95\% \gls{cl}. Note that excluding a test hypothesis does not mean confirming that the null hypothesis is correct, unless the union of the two covers all the possible phase space.
 
 The threshold to exclude the null hypothesis (\gls{sm} only) and declare a discovery has to be tighter than the one needed to exclude the test hypotheses (\gls{bsm}). The 0.05 threshold would lead to 5\% of the \gls{bsm} searches to declare a discovery even in the absence of any real \gls{bsm} signal. Instead, the convention is to declare evidence for New Physics when the $p$-value for the null hypothesis is lower than $1.3 \times 10^{-3}$, and discovery when it is lower than $2.9 \times 10^{-7}$.
 
@@ -518,7 +518,7 @@ p_b = \int_{0}^{q_{\mu,{\rm obs}}} f(q_{\mu} | 0 ) \,
 d q_{\mu}  \; . \nonumber
 \end{equation}
 
-With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if \gls{cls}$ < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denumerator in Equation \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \gls{cls} method is the default procedure used in the searches discussed in this document to decide on the exclusion of a signal model. 
+With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if \gls{cls}$ < 0.05$. In the situation described above, where the null and the test hypotheses give similar \qmu distribution, in case of a deficit both the numerator and the denominator in Equation \ref{eq:stat:cls} will be small, and the test hypothesis will not be excluded. The \gls{cls} method is the default procedure used in the searches discussed in this document to decide on the exclusion of a signal model. 
 
 
 \begin{figure}
@@ -536,7 +536,7 @@ To compute the $p$-value associated with the observed test statistics $t$, we ne
 
 The distribution of the test statistic can be obtained by sampling the likelihood function with \gls{mc} simulations (pseudo-experiments). This is obtained by repeating many times the following steps:
 \begin{itemize}
-\item The nominal value of all the \glspl{np} is varied by sampling randomly their constraining terms.
+\item The nominal value of all the \glspl{np} is varied by sampling randomly their constraint terms.
 \item The new value of the \glspl{np} is used to compute a new expected value for the yields.
 \item The observed value is substituted by a Poisson fluctuation of the expected yields.
 \item The test statistic for this ``observed'' value is computed.
@@ -599,7 +599,7 @@ Figures from Ref. \cite{Cowan2011}.
 \label{sec:stat:examples}
 
 In this section we present a few simplified examples that illustrate the concepts described in the previous sections and how they are applied in physics analyses that search for \gls{bsm} signals.
-In particular, Section \ref{sec:example_sr} described the guideline followed in optimizing \glspl{sr}, Section \ref{sec:example_cr} discusses the  advantages of using \glspl{cr},
+In particular, Section \ref{sec:example_sr} describes the guideline followed in optimizing \glspl{sr}, Section \ref{sec:example_cr} discusses the  advantages of using \glspl{cr},
 while Sections \ref{sec:stat:example:limits} and \ref{sec:example_combi} focus respectively on limit setting and on how to improve limits by combining several \glspl{sr}. 
 In all the examples in this section, as well as in the searches described in Chapters \ref{chap:strong_prod} and  \ref{chap:ewk_prod}, 
 the profile likelihood fit is implemented in the HistFitter framework \cite{Baak:2014wma}. 
@@ -626,14 +626,14 @@ tends to have lower values of \meff with respect to the signal;
 this means that the \gls{sr} will be defined by a lower boundary on the value of \meff.
 There are different criteria that can be used to choose the value of \meff that defines the \gls{sr}. 
 The one used in this document is the maximization of the expected significance, computed through the function \binexpZ in \roostats \cite{Moneta:2010pm}, 
-assuming a 30\% uncertainty in the background yields. With this definition, the significance is the equivalent number of standard deviations of a Gaussian of a $p$-value defined as:
+assuming a 30\% uncertainty on the background yields. With this definition, the significance is the equivalent number of standard deviations of a Gaussian of a $p$-value defined as:
 
 \begin{equation}
 \label{eq:binomexpp}
 p(N_s, N_b, \sigma_b) = \mathcal{I} \left( \frac{1}{1+ \frac{1}{N_b \sigma_b^2}}; N_s + N_b; \frac{1}{\sigma_b^2} +1  \right) \; ,
 \end{equation}
 
-\noindent where $N_s$ ($N_b$) is the expected number of signal (background) events, and $\sigma_b$ the relative uncertainty in the background yields,  and $\mathcal{I}$ the regularized beta function. 
+\noindent where $N_s$ ($N_b$) is the expected number of signal (background) events, and $\sigma_b$ the relative uncertainty on the background yields,  and $\mathcal{I}$ the regularized beta function. 
 
 In the case of the signal and background models shown in Figure \ref{fig:stat:example}, values of \meff between 2 TeV and 4 TeV have been tested in steps of 100 GeV, and the optimal value has been found to be $\meff > 3000$ TeV. This selection leads to a \gls{sr} with  9.5 signal events, 10.5 background events and an expected significance of 1.58 $\sigma$. 
 The portion of the \meff spectrum that is not occupied by the \gls{sr}, can be used to define a \gls{cr} and a \gls{vr}.
@@ -691,7 +691,7 @@ Pseudo-data & 231 & 52 & 15 \\
 and extrapolate it to \glspl{vr} and \glspl{sr}. A background estimate based on a \gls{cr} has two main advantages with respect to the nominal \gls{mc} prediction:
 
 \begin{itemize}
-\item First of all, the usage of a \gls{cr} allows to eliminate mismodelings in the normalization of the background sample in a phase space 
+\item First of all, the usage of a \gls{cr} allows to eliminate mis-modellings in the normalization of the background sample in a phase space 
 kinematically close to the \gls{sr}. This is implemented through the inclusion in the likelihood of a normalization \gls{np} with a flat constraint.
 The improvement in the description of the data in the \gls{vr} is shown in Figure \ref{fig:stat:VRclosure}: the central value of the bottom panel,
 showing the ratio of the pseudo-data to the \gls{mc} simulation, is closer to one after the fit.
@@ -735,7 +735,7 @@ In this example, while the pre-fit uncertainty in the \gls{vr} is large, the var
 \end{equation}
 
 \noindent This leads to an overall reduction of the impact of the systematic uncertainty, as shown in Figure \ref{fig:stat:VRunc}:  
-after the fit in the \gls{cr}, the shaded band indicating the uncertainty in the background estimate is smaller. 
+after the fit in the \gls{cr}, the shaded band indicating the uncertainty on the background estimate is smaller. 
 This example was carried out on a \gls{vr}, but the same is true for the uncertainty in the \gls{sr}.
 
 \begin{figure}[h]
@@ -824,7 +824,7 @@ Since, in this case, the signal has a harder \meff spectrum than the background,
 with \meff below this threshold has a lower signal fraction. Nevertheless, it can still provide information useful to
 discriminate signal and background. If we consider for example the region with \meff between 2.6 and 3.0 TeV (which is non-overlapping with 
 the previous \gls{sr} definition), here we expect 17.1 background events and 7.4 signal events;
-assuming a 30\% uncertainty in the background estimate, this corresponds to an expected significance of 0.82 standard deviations, far below the significance of 1.58 standard deviations in the 
+assuming a 30\% uncertainty on the background estimate, this corresponds to an expected significance of 0.82 standard deviations, far below the significance of 1.58 standard deviations in the 
 \gls{sr} previously defined. Note that this region overlaps with the \gls{vr} defined in Section \ref{sec:example_sr}, which in the case of this last example would need to be modified.
 
 If we include this new region as well into the likelihood fit and perform an upper-limit scan (in this case, for simplicity, only with the asymptotic approximation), we have that the expected \gls{ul} on $\mu_{\rm SIG}$ is 0.62. This corresponds to an improvement of about 10\% on the expected \gls{ul}, obtained just by adding to the fit a region with limited sensitivity. This effect is increased when the regions that are considered simultaneously in the fit all offer a good sensitivity and have different signal fractions. 
