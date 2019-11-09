@@ -338,11 +338,11 @@ Hypothesis testing is the statistical procedure that allows to confirm or reject
 \noindent The test hypothesis can be generalized by including the signal strength $\mu$, that acts as a cross-section modifier. 
 The case $\mu$=1 corresponds to the \gls{sm} prediction plus the \gls{bsm} process with its theoretical cross-section, while $\mu$=0 corresponds to  the \gls{sm}.
 
-\subsection{Test statistics and $p$-value}
+\subsection{Test statistic and $p$-value}
 
  A test statistic $t$ is a single real-value quantity, function of all the collected data. The \gls{pdf} of the test statistic is different if we assume the null hypothesis or the alternative hypothesis to be true.
 
-To quantify the compatibility of the observed data with a specific model, a $p$-value can be extracted from the distribution of the test statistics according to a certain hypothesis. For each hypothesis under test and given the observed value of the test statistic, $t_{{\rm obs}}$, the $p$-value corresponds to the probability of having another observation more extreme than the current one:
+To quantify the compatibility of the observed data with a specific model, a $p$-value can be extracted from the distribution of the test statistic according to a certain hypothesis. For each hypothesis under test and given the observed value of the test statistic, $t_{{\rm obs}}$, the $p$-value corresponds to the probability of having another observation more extreme than the current one:
 
 \begin{equation}
 \label{eq:stat:pval}
@@ -406,7 +406,7 @@ d t_{\mu} \; .
 
 \subsubsection*{Test statistic for discovery}
 
-The discovery test statistics $q_{0}$ used to quantify the level of disagreement of data with the background-only hypothesis in case of an excess is defined as:
+The discovery test statistic $q_{0}$ used to quantify the level of disagreement of data with the background-only hypothesis in case of an excess is defined as:
 
 \begin{equation}
 \label{eq:stat:q0}
@@ -418,16 +418,16 @@ q_{0} =
               \end{array} \; \right.
 \end{equation}
  
-\noindent The reason to assign the value 0 to the test statistic when $\hat{\mu} < 0$ is to avoid excluding the background-only hypothesis in case of a deficit. In fact, $\hat{\mu} < 0$ can indeed be symptomatic of a non correct background-only hypothesis (e.g. due to a systematic error), but it does not indicate the presence of a signal, which is what we want to highlight with this test statistics. Note that, since \gls{prl} assumes values between 0 and 1, \qzero is positive definite. The associated discovery $p$-value $p_{0}$ is:
+\noindent The reason to assign the value 0 to the test statistic when $\hat{\mu} < 0$ is to avoid excluding the background-only hypothesis in case of a deficit. In fact, $\hat{\mu} < 0$ can indeed be symptomatic of a non correct background-only hypothesis (e.g. due to a systematic error), but it does not indicate the presence of a signal, which is what we want to highlight with this test statistic. Note that, since \gls{prl} assumes values between 0 and 1, \qzero is positive definite. The associated discovery $p$-value $p_{0}$ is:
 
 \begin{equation}
 \label{eq:stat:p0}
 p_{0} = \int_{q_{0,{\rm obs}}}^{\infty} f(q_{0} | 0 ) \, d q_{0} \; .
 \end{equation}
 
-\subsubsection*{Test statistics for exclusion}
+\subsubsection*{Test statistic for exclusion}
 
-When investigating the exclusion of the test hypothesis, we want a test statistics that does not penalize an excess. The exclusion test statistics \qmu is therefore defined as:
+When investigating the exclusion of the test hypothesis, we want a test statistic that does not penalize an excess. The exclusion test statistic \qmu is therefore defined as:
 
 \begin{equation}
 \label{eq:stat:qmu}
@@ -451,9 +451,9 @@ p_{\mu} = \int_{q_{\mu,{\rm obs}}}^{\infty} f(q_{\mu} | \mu ) \, d q_{\mu} \;. \
 % credo che dipenda dal fatto che la L sia simmetrica rispetto a eccessi o deficit
 %\noindent Note that, despite the very similar integration formula in \ref{eq:stat:p0} and \ref{eq:stat:pmu}, $p_{\mu, \mu=0}$ is different from \pzero because of the difference in definition between the exclusion and discovery test statistics.
 
-\subsubsection*{Uncapped test statistics}
+\subsubsection*{Uncapped test statistic}
 
-The strategy described above leads to a loss of information when the test statistic is set to 0. A solution is obtained by uncapping the test statistic and, instead of assigning a 0 to the situations we do not want to penalize, assigning them a negative value. This is achieved with the $r_0$ and $r_\mu$ test statistics. As an example, the definition for $r_\mu$ is:
+The strategy described above leads to a loss of information when the test statistic is set to 0. A solution is obtained by uncapping the test statistic and, instead of assigning a 0 to the situations we do not want to penalize, assigning them a negative value. This is achieved with the $r_0$ and $r_\mu$ test statistic. As an example, the definition for $r_\mu$ is:
 \begin{equation}
 r_{\mu} =
 \left\{ \! \! \begin{array}{ll}
@@ -530,7 +530,7 @@ With the \gls{cls} method, the test hypothesis is excluded at 95\% \gls{cl} if \
 
 \subsection{Distribution of the test statistic}
 
-To compute the $p$-value associated with the observed test statistics $t$, we need the \gls{pdf} of $t$ assuming that the signal hypothesis $H_\mu$ is true, $ f(t | \mu ) $. The distribution of the test statistic can be obtained with pseudo-experiments or, in the case of large statistics, with the asymptotic approximation. 
+To compute the $p$-value associated with the observed test statistic $t$, we need the \gls{pdf} of $t$ assuming that the signal hypothesis $H_\mu$ is true, $ f(t | \mu ) $. The distribution of the test statistic can be obtained with pseudo-experiments or, in the case of large statistics, with the asymptotic approximation. 
 
 \subsubsection*{Pseudo-experiments}
 
@@ -767,7 +767,7 @@ Figure \ref{fig:stat:CLscan:toys:two}, or with the asymptotic approximation.
 \subfigure[$\mu_{\rm SIG} = 1.0$]{\includegraphics[width=0.325\textwidth]{figures/stat/examples/cls2.pdf}\label{fig:stat:CLscan:toys:two}}
 \subfigure[$\mu_{\rm SIG} = 1.6$]{\includegraphics[width=0.325\textwidth]{figures/stat/examples/cls3.pdf}\label{fig:stat:CLscan:toys:three}}
 \caption{
-Distribution of the test statistics for the background-only (blue) and signal-plus-background (red) hypothesis for 
+Distribution of the test statistic for the background-only (blue) and signal-plus-background (red) hypothesis for 
 \subref{fig:stat:CLscan:toys:one} $\mu_{\rm SIG} = 0.1$,
 \subref{fig:stat:CLscan:toys:two} $\mu_{\rm SIG} = 1.0$,
 \subref{fig:stat:CLscan:toys:three} $\mu_{\rm SIG} = 1.6$.
