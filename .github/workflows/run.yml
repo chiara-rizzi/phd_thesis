@@ -6,6 +6,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: setup git
+        uses: actions/checkout@v1
       - name: list
         run: ls 
       - name: list figures
