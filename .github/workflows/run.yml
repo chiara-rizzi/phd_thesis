@@ -1,0 +1,12 @@
+image: blang/latex
+
+compile_pdf:
+  script:
+    - ls 
+    - ls figures
+    - ls figures/front
+    - make
+    - make clean
+  artifacts:
+    paths:
+      - main.pdf
