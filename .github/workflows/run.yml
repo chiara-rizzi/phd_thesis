@@ -2,8 +2,6 @@ name: CI
 
 on: [push]
 
-env: blang/latex
-
 jobs:
   test:
     runs-on: ubuntu-latest
