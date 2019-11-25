@@ -2,16 +2,27 @@ name: CI
 
 on: [push]
 
-image: blang/latex
+env: blang/latex
 
 jobs:
-  build:
-    script:
-      - ls 
-      - ls figures
-      - ls figures/front
-      - make
-      - make clean
-  artifacts:
-    paths:
-      - main.pdf
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list
+        run: ls 
+      - name: list figures
+        run: ls figures
+      - name: list figures, front
+      - name: make
+        run: make
+      - name: clean
+        run: make clean
+      - name: check pdf
+        run: main.pdf | grep -q ' PDF '
+      - name: upload file
+        uses: actions/upload-artifact@master
+        with:
+          name: test
+          path: test
+        if: always()
+        
