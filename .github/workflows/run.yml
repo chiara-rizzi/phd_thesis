@@ -19,10 +19,4 @@ jobs:
         run: make clean
       - name: check pdf
         run: main.pdf | grep -q ' PDF '
-      - name: upload file
-        uses: actions/upload-artifact@master
-        with:
-          name: test
-          path: test
-        if: always()
         
