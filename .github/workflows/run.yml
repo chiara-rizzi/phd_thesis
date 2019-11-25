@@ -13,6 +13,7 @@ jobs:
       - name: list figures
         run: ls figures
       - name: list figures, front
+        run: ls figures/front
       - name: make
         run: make
       - name: clean
