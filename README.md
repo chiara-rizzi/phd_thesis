@@ -1,1 +1,1 @@
-![](figures/cover.pdf)
+![](figures/cover.jpg)
