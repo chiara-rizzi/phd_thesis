@@ -20,6 +20,7 @@ _base_:
 	bibtex chap/ewk_prod
 	bibtex chap/summary_susy
 	bibtex chap/concl
+	bibtex appendices/pmt_response	
 	@$(BUILD_GLOSSARY)
 	@$(BASIC_BUILD) #&>/dev/null
 	@$(BASIC_BUILD) #&>/dev/null
