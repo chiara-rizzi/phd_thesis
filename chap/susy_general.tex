@@ -31,7 +31,7 @@ trigger chains for physics analyses comprise first a \gls{lone} trigger selectio
 The one used in this thesis is the jet-based algorithm, where \met is computed as the negative sum of the \pt of the trigger-level jets in the event. 
 \end{description}
 
-For each run, the \met trigger with the lowest available unprescaled threshold is used; this corresponds to a \gls{hlt} threshold of 
+For each run, the \met trigger with the lowest available unprescaled threshold is used; this corresponds to an \gls{hlt} threshold of 
 70 GeV, 90 GeV, 100 GeV and 110 GeV for the 2015, early 2016, mid 2016 and late 2016/2017 respectively. 
 These triggers are fully efficient after requiring that the offline reconstructed \met exceeds 200 GeV and that there are at 
 least four jets in the event; these selections are applied in all the regions of the searches in this thesis. 
@@ -58,7 +58,7 @@ which can be done e.g. by relaxing the restrictions on the \gls{br} of the \gls{
 The analysis strategy is based on the definition of so-called \glspl{sr}, signal-enriched regions defined by selections on relevant kinematic variables with the goal of maximizing the sensitivity to specific benchmark models. 
 After the \glspl{sr} are defined, the key aspect of the analysis is an accurate estimate of the number of events expected from \gls{sm} processes (background events) in these regions, and of the associated uncertainty. 
 With the background estimate at hand, it is possible to look at the observed yields in data and compare it with the expectations;
-this comparison, performed with the statistical methods discussed in Chapter \ref{chap:stat}, allows to quantify the significance of an excess or placing limits on \gls{bsm} signal models.
+this comparison, performed with the statistical methods discussed in Chapter \ref{chap:stat}, allows to quantify the significance of an excess or to place  limits on \gls{bsm} signal models.
 
 The estimate of the expected background events can be obtained with different techniques. In particular, in these thesis three types of techniques are used:
 \begin{itemize}
@@ -241,7 +241,7 @@ Another useful variable to suppress the \ttbar background is the minimum transve
 
 \noindent where the minimum is taken over the transverse mass computed with the three leading \textit{b}-tagged jets in the event. 
 In semileptonic \ttbar events, this variable presents an endpoint near $\sqrt{ m( \mathrm{top})^2 - m(W)^2  }$, 
-as this is the endpoint that is obtained when \met originating from the neutrino is perfectly measured and the \textit{b}-jet produced in the decay of the same top quark as the neutrino is among the three leading \textit{b}-tagged jets. 
+as this is the endpoint that is obtained when the \met originating from the neutrino is perfectly measured and the \textit{b}-jet produced in the decay of the same top quark as the neutrino is among the three leading \textit{b}-tagged jets. 
 
 \item[Multijet suppression] \gls{sm} background events without any neutrino in the decay chain can still have a sizable amount of reconstructed \met if one of the jets in the 
 event is mismeasured, leading to a fake energy imbalance in the event. In these cases, the resulting \met will have a value of the azimuthal angle ($\phi$) close to the one of the mismeasured jet. The variable \dphimin is defined as the minimum difference in azimuthal angle between \met and the  four jets with the highest \pt in the event:
@@ -295,11 +295,11 @@ Beside the pair of \textit{b}-quarks, which are always present, the final state 
 All the analysis regions considered in this thesis have a tight \met selection (the loosest one is $\met > 200$ GeV). Since the all-hadronic component 
 of the \ttbar background does not have any neutrino in the final state, it does not fulfill the \met requirement unless one or more jets are mismeasured; 
 this case produces a negligible background in the analysis regions, and 
-is estimated with the jet-smearing method (described in Section \ref{sec:jet_smearing}) together with the other processed that pass the selection due to mismeasured jets.
+is estimated with the jet-smearing method (described in Section \ref{sec:jet_smearing}) together with the other processes that pass the selection due to mismeasured jets.
 The \ttbar components that are dominating the background estimate are the dilepton and single-lepton ones, both in the analysis regions that require reconstructed leptons as well as in the analysis regions that have a lepton veto.
 In the second case, the dominating component is the semi-leptonic \ttbar, where the lepton is a hadronically decaying $\tau$, has a \pt too low to be reconstructed, or falls out of acceptance. 
 The \gls{mc} generator used to simulate \ttbar events produced in association with high-\pt jets is \PowhegBox v2 with the CT10 \gls{partdf} set \cite{Lai:2010vv} and interfaced with \PY v6.428 \cite{Sjostrand:2006za} for the \gls{psh} and hadronization. 
-The normalization is derived in \glspl{cr} designed to be kinematically as close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross-section computed with the highest
+The normalization is derived in \glspl{cr} designed to be as kinematically close as possible to the corresponding \glspl{sr} (while being non-overlapping with them by inverting some of the selections), and is expressed in terms of \glspl{sf} relative to the cross-section computed with the highest
 available accuracy, which is \gls{nlo} + \gls{nnll} \cite{Czakon:2011xx}.
 
 \subsubsection*{Truth-level classification: \ttbar decays}
@@ -367,10 +367,10 @@ One uses the PERUGIA2012radHi tune, has the $h_{\rm{damp}}$ parameter set to twi
 
 \end{description}
 
-Figures \ref{fig:ttbar_nj_0L_syst} and \ref{fig:ttbar_ptj1_0L_syst} show the changes in shape in the distribution of the number of signal jets and the \pt of the leading jet when comparing these systematic variations in a representative selection with a lepton veto.
+Figures \ref{fig:ttbar_nj_0L_syst} and \ref{fig:ttbar_ptj1_0L_syst} show the changes in the shape of the distribution of the number of signal jets and the \pt of the leading jet when comparing these systematic variations in a representative selection with a lepton veto.
 The normalization of \ttbar events is derived in the \glspl{cr}, therefore the modeling uncertainties affect only the extrapolation from 
 the \gls{cr} to the corresponding \glspl{sr} and \glspl{vr}, and not the overall normalization. 
-The modeling uncertainties are therefore estimated by comparing the expected values for the \glspl{tf}, defined in Section \ref{sec:example_cr}.
+The modeling uncertainties are therefore estimated by comparing the expected values for the \glspl{tf}, defined in Section \ref{sec:example_cr} 
 as the ratio of expected yields in the \gls{sr} or \gls{vr} over the expected yields in the corresponding \gls{cr}. 
 The uncertainties on the \glspl{tf} obtained from the different sources listed above are summed in quadrature in each region, and are treated as uncorrelated across regions to avoid 
 constraints from the fit. 
@@ -408,7 +408,7 @@ The main limitation for the estimate of the uncertainties is the statistical unc
 A higher number of simulated events is available at particle level, where the simulation of the interaction of the particles with the detector and the following event reconstruction (discussed in Section \ref{sec:detsim}) is not performed, so the evaluation of the \ttbar modeling uncertainties is carried out 
 comparing samples at particle level, with the assumption that the detector simulation has a similar effect on all the samples, 
 independently of the \gls{mc} generator used. Two further strategies are in place to reduce the statistical uncertainty in the comparison of the different samples. 
-One consists in relaxing or removing some selections to both the \glspl{cr} and the corresponding \glspl{sr}/\glspl{vr}. 
+One consists in relaxing or removing some selections in both the \glspl{cr} and the corresponding \glspl{sr}/\glspl{vr}. 
 Another is to substitute the selection on the number of \textit{b}-jets with truth-tagging, described in the next section.
 
 \subsubsection*{Truth \textit{b}-tagging}
@@ -451,7 +451,7 @@ Some analysis variables are built using explicitly the kinematic characteristics
 %\subfigure[]{
 \includegraphics[width=0.6\textwidth]{figures/susy_common/trf_perm}
 %}
-\caption{Example schema to choose the selected permutation with truth \textit{b}-tagging.}\label{fig:susy_common_trf_perm}
+\caption{Example scheme to choose the selected permutation with truth \textit{b}-tagging.}\label{fig:susy_common_trf_perm}
 \end{figure}
 
 
@@ -471,8 +471,8 @@ The cross-section used for the normalization of the single-top processes is comp
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_3}\label{fig:st_prod_Wt2}} \\
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_4}\label{fig:st_prod_3}}
 \subfigure[]{\includegraphics[width=0.3\textwidth]{figures/susy_common/feynman/st_5}\label{fig:st_prod_4}}
-\caption{\Gls{lo} Feynman diagram for single-top production. \subref{fig:st_prod_Wt1}-\subref{fig:st_prod_Wt2} Wt-channel. 
-\subref{fig:st_prod_Wt2} s-channel. \subref{fig:st_prod_4} t-channel.}\label{fig:single_top_prod}
+\caption{\Gls{lo} Feynman diagrams for single-top production: \subref{fig:st_prod_Wt1}-\subref{fig:st_prod_Wt2} Wt-channel,  
+\subref{fig:st_prod_Wt2} s-channel, \subref{fig:st_prod_4} t-channel.}\label{fig:single_top_prod}
 \end{figure}
 
 \subsubsection*{Wt-channel and \ttbar interference}
@@ -496,7 +496,7 @@ We can write the matrix element for the production of the $WWbb$ final state as:
 \mathcal{M}_{WWbb} = \mathcal{M}_{\rm{double-res}} + \mathcal{M}_{\rm{single-res}} \; , \nonumber
 \end{equation}
 
-\noindent where the first term represent the contribution from \ttbar production (double resonance) and the second term the contribution from 
+\noindent where the first term represents the contribution from \ttbar production (double resonance) and the second term the contribution from 
 \gls{nlo} corrections to the Wt single-top production, where only one of the two $Wb$ systems is resonant (single resonance). 
 When computing the squared amplitude, this becomes:
 
@@ -505,7 +505,7 @@ When computing the squared amplitude, this becomes:
 \end{equation}
 
 While the first two terms are properly taken into account by the individual \ttbar and single-top \gls{mc} simulations, 
-the last term represent the interference between the two processes and, unless special care to avoid this is taken, it is completely ignored if the two processes are simulated independently. 
+the last term represents the interference between the two processes and, unless special care to avoid this is taken, it is completely ignored if the two processes are simulated independently. 
 
 In the \gls{dr} approach, all the diagrams where a $W$ boson and a \textit{b}-quark form a top quark are removed from the matrix element used to compute the   single-top cross-section in the Wt channel. While this approach is not gauge invariant, it is found to have negligible dependence on the gauge choice.
 
