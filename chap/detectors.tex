@@ -68,17 +68,10 @@ where high precision and low occupancy are needed \cite{Hartmann:2009zza}.
 These detectors detectors are also based on the ionization of the material but in this case, since the structure is a crystal, 
 we talk about electrons and electron holes. 
 
-The underlying principle is based on the band model of solids, describing the allowed energy levels for electrons in a solid: when many atoms of the same type are bound together in a crystal lattice, in order to fulfill Pauli's principle the atomic orbitals split into many closely spaced molecular orbitals, that can be considered as continuous energy bands. The highest-energy full band is the valence band, while the lowest partially-filled (or empty) band is the conduction band; the energy difference between the conduction band and the valence band is referred to as energy gap, as illustrated in Figure \ref{fig:det:band:a}. 
+The underlying principle is based on the band model of solids, describing the allowed energy levels for electrons in a solid: when many atoms of the same type are bound together in a crystal lattice, in order to fulfill Pauli's principle the atomic orbitals split into many closely spaced molecular orbitals, that can be considered as continuous energy bands. The highest-energy full band is the valence band, while the lowest partially-filled (or empty) band is the conduction band; the energy difference between the conduction band and the valence band is referred to as energy gap. 
 
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/band_structure}\label{fig:det:band:a}}
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/pn.pdf}\label{fig:det:band:b}}
-\caption{\subref{fig:det:band:a} Schema of band model of solids. \subref{fig:det:band:b} Top: schema of a p-n junction. Bottom: charge distribution in a p-n junction and extension of the depletion area. Figures from Ref. \cite{grupen_shwartz_2008}.}
-\label{fig:det:band}
-\end{figure}
 
-Semiconductors are materials where the conduction band is almost empty, but the energy gap is small ($\approx$ 1 eV, e.g. 1.07 eV for silicon), so the conduction band can be occupied by excited electrons from the valence band; this leaves holes in the valence band, that under the effect of an electric field can drift as well. Semiconductors with a pure composition have the same amount of electrons and holes. If the semiconductor is doped with an atom with one more electron in the valence band, this creates an excess of electrons and the material is referred to as a n-type semiconductor. If instead the impurities are electron acceptors, the material has an excess of holes and is referred to as p-type semiconductor. When a p-type and a n-type semiconductors are pulled together, the holes of the p-side drift into the n-side, and the electrons from the n-side into the p-side, as shown in Figure \ref{fig:det:band:b}. This creates an electric field that takes charge carriers out of the area where it is present (depletion region). When a charged particle passes through the semiconductor, it produces electron-hole pairs in the depletion region; these drift apart because of the electric field and can be collected by electrodes. The application of a negative potential difference between the p-side and the n-side can increase the depletion area.
+Semiconductors are materials where the conduction band is almost empty, but the energy gap is small ($\approx$ 1 eV, e.g. 1.07 eV for silicon), so the conduction band can be occupied by excited electrons from the valence band; this leaves holes in the valence band, that under the effect of an electric field can drift as well. Semiconductors with a pure composition have the same amount of electrons and holes. If the semiconductor is doped with an atom with one more electron in the valence band, this creates an excess of electrons and the material is referred to as a n-type semiconductor. If instead the impurities are electron acceptors, the material has an excess of holes and is referred to as p-type semiconductor. When a p-type and a n-type semiconductors are pulled together, the holes of the p-side drift into the n-side, and the electrons from the n-side into the p-side. This creates an electric field that takes charge carriers out of the area where it is present (depletion region). When a charged particle passes through the semiconductor, it produces electron-hole pairs in the depletion region; these drift apart because of the electric field and can be collected by electrodes. The application of a negative potential difference between the p-side and the n-side can increase the depletion area.
 
 The density of silicon is about one thousand times higher than that of gases like argon, and silicon also needs a much lower energy to be ionized (3.6 eV for silicon, while it is about 250 times higher for argon). This leads to a much higher number of electron-holes pairs than the number of electron-ion pairs in gas detectors, so the signal needs very little amplification, and the size of the detector itself can be smaller. 
 
@@ -109,17 +102,7 @@ The type of interaction that electromagnetically interacting particles have with
 \end{figure}
 
 
-When electrons, positrons and photons with energies above 1 GeV traverse a block of material they produce a cascade of particles (electromagnetic shower): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair (pair production is indicated with the symbol $\kappa_{nucl}$ in Figure \ref{fig:det:xsec_elec:b}). A schematic view of the evolution of an electromagnetic shower is shown  in Figure \ref{fig:det:shower_elec:a}. 
-
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/elec_shower} \label{fig:det:shower_elec:a}}
-\subfigure[]{\includegraphics[width=0.52\textwidth]{figures/detector/elec_shower_lateral}\label{fig:det:shower_elec:b}}
-\caption{\subref{fig:det:shower_elec:a} Sketch of the evolution of an electromagnetic shower. 
-\subref{fig:det:shower_elec:b} Lateral and longitudinal evolution of the shower from electrons with an energy of 6 GeV. Figure from Ref. \cite{grupen_shwartz_2008}.}
-\label{fig:det:shower_elec}
-\end{figure}
-
+When electrons, positrons and photons with energies above 1 GeV traverse a block of material they produce a cascade of particles (electromagnetic shower): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair.
 
 The main parameter to describe the evolution of an electromagnetic shower is the radiation length ($X_0$), defined as the distance over which an electron reduces its energy to $1/e$ of the initial value, and it corresponds also to 7/9 of the mean free path for pair production for a photon. The radiation length depends on the characteristics of the material:
 \begin{equation}
@@ -137,7 +120,7 @@ The lateral width of the shower, determined mainly by multiple scattering, incre
 R_M = \frac{21 MeV \; X_0[\frac{g}{cm^2}]}{E_c [MeV]} \; . \nonumber
 \end{equation}
 
-\noindent A cylinder of radius 2$R_M$ contains about 95\% of the shower; for most calorimeters $R_M$ has a value of few centimeters, so electromagnetic showers are quite narrow. The longitudinal and lateral development of the shower induced in lead by electrons with an energy of 6 GeV is shown in Figure \ref{fig:det:shower_elec:b}.
+\noindent A cylinder of radius 2$R_M$ contains about 95\% of the shower; for most calorimeters $R_M$ has a value of few centimeters, so electromagnetic showers are quite narrow. 
 
 Once the electrons in the shower have an energy lower than the critical energy 
 ($E_c$, defined as the energy where the loss through Bremsstrahlung equals the loss through ionization), 
