@@ -155,6 +155,6 @@ if __name__ == '__main__':
         plt.xlabel(r"$\theta$", fontsize='large')
         plt.ylabel(r"b($\theta$)", fontsize='large')
         plt.grid(True)
-        plt.savefig(str(down).replace('.','-')+'_'+str(nom).replace('.','-')+'_'+str(up).replace('.','-')+'.pdf')
+        plt.savefig('../'+str(down).replace('.','-')+'_'+str(nom).replace('.','-')+'_'+str(up).replace('.','-')+'.pdf')
         plt.close()
         
