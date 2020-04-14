@@ -54,16 +54,9 @@ Once all the \gls{pv} candidates are reconstructed, the one with the highest sum
 Because of confinement, quarks and gluons produced in the collisions give origin to a collimated spray of hadrons (jets) that move in the direction of the original parton. When jets interact with the detector, they loose most of their energy as deposits in the calorimeter systems, which are then grouped together aiming at reconstructing the characteristics of the original parton. 
 
 \subsection{Clusters}
-The first step in the jet reconstruction is the procedure that groups the calorimeter cells in three dimensional objects referred to as topological clusters (topoclusters) \cite{ATL-LARG-PUB-2008-002,Aad:2016upy}. Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal. This procedure is illustrated in Figure \ref{fig:obj:topocluster}. Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
+The first step in the jet reconstruction is the procedure that groups the calorimeter cells in three dimensional objects referred to as topological clusters (topoclusters) \cite{ATL-LARG-PUB-2008-002,Aad:2016upy}. Topoclusters are built starting from seed cells with a signal-to-noise ratio higher than 4. All the neighboring cells with signal-to-noise ratio higher than two are added with an iterative procedure, and finally a ring of guard cells are added independently of their signal.  
+Topoclusters are calibrated at the \gls{em} scale, which means that the proportionality constant between the readout current and the particle energy is correct only for particles of an \gls{em} shower.
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.3\textwidth]{./figures/objects/topocluster.pdf}
-\end{center}
-\caption[Topocluster schematic representation]{Topocluster schematic representation. The seed of the cluster is shown in red, the neighbouring cells are in yellow and the ring of guard cells is in grey.}
-\label{fig:obj:topocluster}
-\end{figure}
- 
 \subsection{Jet-finding algorithms}
 \label{sec:obj:jetfinding}
 
@@ -98,14 +91,9 @@ The grouping of clusters follows an iterative approach:
 \item $n=-1$: anti-$k_T$ algorithm. Groups hard objects first; the shape of the jets is more regular than in the two previous cases and is a cone of radius R.
 \end{itemize}
 
-The choice of a particular algorithm results in different shapes of the jets, represented in Figure \ref{fig:jetsalg}. The standard algorithm used by \gls{atlas} is the anti-$k_T$ algorithm \cite{cacciari:antikt}.
-
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{./figures/objects/jetsalg.pdf}
-\caption[Shape of jets reconstructed with different algorithms]{Shape of jets reconstructed with different algorithms.
-Figure from Ref. \cite{cacciari:antikt}.}
-\label{fig:jetsalg}
-\end{figure}
+The choice of a particular algorithm results in different shapes of the jets, as discussed in Ref. \cite{cacciari:antikt}. 
+The standard algorithm used by \gls{atlas} is the anti-$k_T$ algorithm, which leads to jets with a more regular shape 
+in the ($\eta$-$\phi$) plane. 
 
 \subsection{Jet calibration}
 \label{sec:obj:jetcalib}
