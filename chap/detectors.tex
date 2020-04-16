@@ -91,17 +91,15 @@ When the incident particle interacts with the material of the calorimeter it dev
 \subsubsection*{Electromagnetic calorimeters}
 
 The type of interaction that electromagnetically interacting particles have with the detector depends on their energy. 
-As an example, the photon interaction cross-section in lead is shown in Figure  \ref{fig:det:xsec_photon}. 
+%As an example, the photon interaction cross-section in lead is shown in Figure  \ref{fig:det:xsec_photon}. 
 %The average fractional energy loss in lead for electrons and positrons and the photon interaction cross-section in lead are shown in Figures \ref{fig:det:xsec_elec:a} and \ref{fig:det:xsec_elec:b} respectively. 
 
-\begin{figure}[ht]
-\centering
-%\subfigure[]{\includegraphics[width=0.54\textwidth]{figures/detector/electron_energy_loss}\label{fig:det:xsec_elec:a}}
-%\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/detector/photon_xsec}\label{fig:det:xsec_elec:b}}
-\includegraphics[width=0.54\textwidth]{figures/springer/photon_xsec.pdf}
-\caption{Photon interaction cross-section in lead. Numbers from Ref. \cite{Patrignani:2016xqp}. }
-\label{fig:det:xsec_photon}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=0.54\textwidth]{figures/springer/photon_xsec.pdf}
+%\caption{Photon interaction cross-section in lead. Numbers from Ref. \cite{Nist}. }
+%\label{fig:det:xsec_photon}
+%\end{figure}
 
 For photons and electrons with energies above 1 GeV, the dominant type of interaction is nuclear pair production and Bremsstrahlung, respectively. 
 When these particles traverse a block of material they produce a cascade of particles (electromagnetic shower): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair.
@@ -145,21 +143,23 @@ We have discussed in Section \ref{sec:dec:tracking} how the resolution of the mo
 
 The difference between electromagnetic calorimeters and hadronic calorimeters finds its origin in the more complicated nature of strong interactions compared to the electromagnetic ones. 
 
-A sketch of the evolution of a hadronic shower is shown in Figure \ref{fig:det:shower_had:a}. A first relevant difference between hadronic and electromagnetic showers is that the former has a much larger spatial extension. On the longitudinal direction, the scale is determined by the nuclear interaction length ($\lambda_I$), which is material-dependent and can be expressed as:
+%A sketch of the evolution of a hadronic shower is shown in Figure \ref{fig:det:shower_had:a}. 
+With respect to electromagnetic showers, hadronic ones have a much larger spatial extension. On the longitudinal direction, the scale is determined by the nuclear interaction length ($\lambda_I$), which is material-dependent and can be expressed as:
 \begin{equation}
 \lambda_I = 35 \frac{g}{cm^2} A^{1/3} \; , \nonumber
 \end{equation}
 
-\noindent where $A$ is the atomic number of the material. For most materials used in particle detectors this turns out to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, and 16.77 cm for iron \cite{Patrignani:2016xqp}). The 99\% shower containment is reached after about 5(9) $\lambda_I$ for pions with E=10(138) GeV. Also the lateral width of the shower is larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of a hadronic shower depends on the transverse-momentum transfer, which can be quite sizable in strong nuclear interactions. Figure \ref{fig:det:shower_had:b} shows the lateral shower profile in iron for pions with E=10 GeV.
+\noindent where $A$ is the atomic number of the material. For most materials used in particle detectors this turns out to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, and 16.77 cm for iron \cite{Patrignani:2016xqp}). The 99\% shower containment is reached after about 5(9) $\lambda_I$ for pions with E=10(138) GeV. Also the lateral width of the shower is larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of a hadronic shower depends on the transverse-momentum transfer, which can be quite sizable in strong nuclear interactions. 
+%Figure \ref{fig:det:shower_had:b} shows the lateral shower profile in iron for pions with E=10 GeV.
 
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower}\label{fig:det:shower_had:a}}
-\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower_lateral}\label{fig:det:shower_had:b}}
-\caption{\subref{fig:det:shower_had:a} Sketch of the evolution of a hadronic shower. Figure from Ref. \cite{grupen_shwartz_2008}. 
-\subref{fig:det:shower_had:b} Lateral energy distribution of shower induced by $\pi^-$ with E=10 GeV, measured at a depth of 10, 20, 30, 50 and 70 cm in Fe. Figure from Ref. \cite{FRIEND1976505}.}
-\label{fig:det:shower_had}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower}\label{fig:det:shower_had:a}}
+%\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower_lateral}\label{fig:det:shower_had:b}}
+%\caption{\subref{fig:det:shower_had:a} Sketch of the evolution of a hadronic shower. Figure from Ref. \cite{grupen_shwartz_2008}. 
+%\subref{fig:det:shower_had:b} Lateral energy distribution of shower induced by $\pi^-$ with E=10 GeV, measured at a depth of 10, 20, 30, 50 and 70 cm in Fe. Figure from Ref. \cite{FRIEND1976505}.}
+%\label{fig:det:shower_had}
+%\end{figure}
 
 
 Another difference with electromagnetic showers lies in the composition of the shower: while an electromagnetic shower is constituted only by electrons, positrons and photons, a much larger variety of particles participates in hadronic showers, including both hadrons and electromagnetically-interacting particles. Starting from the simplifying assumption that one third of the particles produced in nuclear interactions are neutral pions ($f_{\pi^0}=1/3$), a first approximation of the electromagnetic fraction of a shower is given by:
@@ -176,14 +176,16 @@ where $E_0$ is the energy necessary to produce one pion (e.g. 0.7 GeV for iron a
 \end{equation}
 
 
-\begin{figure}[ht]
-\centering
-\subfigure{\includegraphics[width=0.42\textwidth]{figures/detector/had_shower_spectra}}
-\caption{Particle spectra produced by protons with E=100 GeV absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301} and averaged over many showers. Figure from Ref. \cite{RevModPhys.75.1243}.}
-\label{fig:det:shower_had_spectra}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\subfigure{\includegraphics[width=0.42\textwidth]{figures/detector/had_shower_spectra}}
+%\caption{Particle spectra produced by protons with E=100 GeV absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301} and averaged over many showers. Figure from Ref. \cite{RevModPhys.75.1243}.}
+%\label{fig:det:shower_had_spectra}
+%\end{figure}
 
-Figure \ref{fig:det:shower_had_spectra} shows the particle spectra produced by protons with E=100 GeV absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301}. We can see that at low energies the particle content is dominated by electrons, positrons, photons and neutrons.
+%Figure \ref{fig:det:shower_had_spectra} shows 
+
+If we consider e.g. the particle spectra produced by protons with E=100 GeV absorbed by lead, at low energies the particle content is dominated by electrons, positrons, photons and neutrons \cite{RevModPhys.75.1243}.
 
 While in electromagnetic showers most of the initial energy is recorded in the detector, in hadronic showers a relevant fraction (up to 30-40\%) is invisible. This invisible fraction is caused by energy that goes into breaking the nuclear bonds, nuclear fragments that in sampling calorimeters do not reach the active material, and neutral particles that can escape the calorimeter (e.g. neutrinos or long-lived neutral kaons). Therefore, for the same initial energy, the visible energy will be lower for a hadronic shower than for an electromagnetic one. If we define the response as the collected signal per unit of incident energy, the invisible energy causes a different response of calorimeters to the electromagnetic and to the purely-hadronic parts of the shower. Defining $R_{em}$, $R_{h}$, $R_{\pi}$ respectively as the calorimeter response to electromagnetic shower, the hadronic part of the shower and to pions, we have that:
 \begin{equation}
@@ -238,8 +240,8 @@ which then outputs the current to the external circuit.
 
 \begin{figure}[ht]
 \centering
-\subfigure{\includegraphics[width=0.72\textwidth]{figures/detector/pmt}}
-\caption{Sketch of the structure of a \gls{pmt}. Figure from Ref. \cite{hamamatsu}.}
+\subfigure{\includegraphics[width=0.72\textwidth]{figures/springer/pmt}}
+\caption{Sketch of the structure of a \gls{pmt}. }
 \label{fig:det:pmt}
 \end{figure}
 
