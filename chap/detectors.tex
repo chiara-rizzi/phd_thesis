@@ -90,19 +90,21 @@ When the incident particle interacts with the material of the calorimeter it dev
 
 \subsubsection*{Electromagnetic calorimeters}
 
-The type of interaction that electromagnetically interacting particles have with the detector depends on their energy. The average fractional energy loss in lead for electrons and positrons and the photon interaction cross-section in lead are shown in Figures \ref{fig:det:xsec_elec:a} and \ref{fig:det:xsec_elec:b} respectively. 
+The type of interaction that electromagnetically interacting particles have with the detector depends on their energy. 
+As an example, the photon interaction cross-section in lead is shown in Figure  \ref{fig:det:xsec_photon}. 
+%The average fractional energy loss in lead for electrons and positrons and the photon interaction cross-section in lead are shown in Figures \ref{fig:det:xsec_elec:a} and \ref{fig:det:xsec_elec:b} respectively. 
 
 \begin{figure}[ht]
 \centering
-\subfigure[]{\includegraphics[width=0.54\textwidth]{figures/detector/electron_energy_loss}\label{fig:det:xsec_elec:a}}
-\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/detector/photon_xsec}\label{fig:det:xsec_elec:b}}
-\caption{\subref{fig:det:xsec_elec:a} Fractional energy loss per radiation length in lead as a function of the electron (positron) energy. 
-\subref{fig:det:xsec_elec:b} Photon interaction cross-section in lead. Figures from Ref. \cite{Patrignani:2016xqp}. }
-\label{fig:det:xsec_elec}
+%\subfigure[]{\includegraphics[width=0.54\textwidth]{figures/detector/electron_energy_loss}\label{fig:det:xsec_elec:a}}
+%\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/detector/photon_xsec}\label{fig:det:xsec_elec:b}}
+\includegraphics[width=0.54\textwidth]{figures/springer/photon_xsec.pdf}
+\caption{Photon interaction cross-section in lead. Numbers from Ref. \cite{Patrignani:2016xqp}. }
+\label{fig:det:xsec_photon}
 \end{figure}
 
-
-When electrons, positrons and photons with energies above 1 GeV traverse a block of material they produce a cascade of particles (electromagnetic shower): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair.
+For photons and electrons with energies above 1 GeV, the dominant type of interaction is nuclear pair production and Bremsstrahlung, respectively. 
+When these particles traverse a block of material they produce a cascade of particles (electromagnetic shower): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair.
 
 The main parameter to describe the evolution of an electromagnetic shower is the radiation length ($X_0$), defined as the distance over which an electron reduces its energy to $1/e$ of the initial value, and it corresponds also to 7/9 of the mean free path for pair production for a photon. The radiation length depends on the characteristics of the material:
 \begin{equation}
