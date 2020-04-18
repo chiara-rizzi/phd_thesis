@@ -1,7 +1,7 @@
 BASIC_BUILD = pdflatex main.tex 
 BUILD_GLOSSARY =  makeglossaries main
 BUILD_BIBLIOGRAPHY = bibtex main
-CLEAN =  rm -rf *.aux *.lof *.log *.lot *.toc *.bbl *.blg *~ *.out *.xml *blx.bib *.alg *.acr *.acn *.tex.bak *.gls *.glg *.ist *.glo
+CLEAN =  rm -rf *.aux *.lof *.log *.lot *.toc *.bbl *.blg *~ *.out *.xml *blx.bib *.alg *.acr *.acn *.tex.bak *.gls *.glg *.ist *.glo */*.aux */*.lof */*.log */*.lot */*.toc */*.bbl */*.blg */*~ */*.out */*.xml */*blx.bib */*.alg */*.acr */*.acn */*.tex.bak */*.gls */*.glg */*.ist */*.glo
 
 
 all: _base_ 
@@ -10,17 +10,17 @@ all: _base_
 _base_:
 	@$(BASIC_BUILD) #&>/dev/null
 	#@$(BUILD_BIBLIOGRAPHY)
-	bibtex chap/theory
-	bibtex chap/lhc
-	bibtex chap/mc_simul
-	bibtex chap/trig_obj 
-	bibtex chap/stat
-	bibtex chap/susy_general
-	bibtex chap/strong_prod
-	bibtex chap/ewk_prod
-	bibtex chap/summary_susy
-	bibtex chap/concl
-	bibtex appendices/pmt_response	
+	bibtex chap/Rizzi-Chap2
+	bibtex chap/Rizzi-Chap3
+	bibtex chap/Rizzi-Chap4
+	bibtex chap/Rizzi-Chap5
+	bibtex chap/Rizzi-Chap6
+	bibtex chap/Rizzi-Chap7
+	bibtex chap/Rizzi-Chap8
+	bibtex chap/Rizzi-Chap9
+	bibtex chap/Rizzi-Chap10
+	bibtex chap/Rizzi-Chap11
+	bibtex appendices/Rizzi-App4
 	@$(BUILD_GLOSSARY)
 	@$(BASIC_BUILD) #&>/dev/null
 	@$(BASIC_BUILD) #&>/dev/null
