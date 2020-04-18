@@ -1,4 +1,5 @@
 
+
 \section{Signal Model}
 \label{sec:ewk:sig}
 
@@ -72,7 +73,9 @@ As discussed in Ref. \cite{Meade:2009qv}, the partial width of the three decays 
 {\cal A} = \frac{m^5_{\tilde{\chi}^0_1}}{16\pi F_0^2} \approx \left(\frac{m_{\tilde{\chi}^0_1}}{100~{\rm GeV}}\right)^5 \left(\frac{100~\rm{TeV}}{\sqrt{F_0}}\right)^4 \frac{1}{0.1~{\rm mm}} \;, \nonumber
 \end{equation}
 
-\noindent $s_\beta$ and $c_\beta$ are the sine and cosine of the angle whose tangent is 
+\noindent 
+where $s_W$ and $c_W$ are the sine and cosine of the Weinberg angle,
+$s_\beta$ and $c_\beta$ are the sine and cosine of the angle whose tangent is 
 the ratio of the up-type to down-type Higgs \glspl{vev}, 
 $\eta$ represents the relative sign of the coefficients 
 of the two \glspl{vev} in the linear combination that constitutes \ninoone,
@@ -80,12 +83,26 @@ $M_1$ and $M_2$ are the bino and wino mass parameters respectively, and
 $F_0$ is the \gls{vev} of the \gls{susy}-breaking $F$-term, the fundamental scale of \gls{susy} breaking.
 The three \glspl{br} for different choices of the parameters are shown in Figure \ref{fig:higgsinoBR}.
 
-\begin{figure}[h]
+\begin{figure*}[htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{figures/ewk_prod/varie/BRfracs}
-\caption{Branching ratios of the higgsino NLSP to a photon, a $Z$ boson, and a Higgs boson, as a function of $m_{NLSP}$, for $\eta=\pm1$ and $\tan\beta=1.5,\,20$. In all the figures, $M_1=500$ GeV, $M_2=1000$ GeV, and $m_{h^0}=115$ GeV. Figure from Ref. \cite{Meade:2009qv}.}
+\subfigure{\includegraphics[width=0.48\textwidth]{figures/springer/BR_higgsino_tanb20-0_eta1-0.pdf}}
+\subfigure{\includegraphics[width=0.48\textwidth]{figures/springer/BR_higgsino_tanb20-0_eta-1-0.pdf}}
+\subfigure{\includegraphics[width=0.48\textwidth]{figures/springer/BR_higgsino_tanb1-5_eta1-0.pdf}}
+\subfigure{\includegraphics[width=0.48\textwidth]{figures/springer/BR_higgsino_tanb1-5_eta-1-0.pdf}}
+\caption{Branching ratios of the higgsino NLSP to a photon, a $Z$ boson, and a Higgs boson, as a function of $m_{NLSP}$, for $\eta=\pm1$ and $\tan\beta=1.5,\,20$. In all the figures, $M_1=500$ GeV, $M_2=1000$ GeV, and $m_{h^0}=125$ GeV. The figures are obtained following the calculations in Ref. \cite{Meade:2009qv}.}
 \label{fig:higgsinoBR}
-\end{figure}
+\end{figure*}
+
+\begin{figure*}[htbp]
+\centering 
+\subfigure[m($h_1$)]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_mass_h1_min_dR.pdf}\label{fig:ewk:sig:mass_h1_min_dR}}
+\subfigure[m($h_2$)]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_mass_h2_min_dR.pdf}\label{fig:ewk:sig:mass_h2_min_dR}} \\
+\subfigure[\dRmax]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_dRmax_dR.pdf}\label{fig:ewk:sig:dRmax_dR}}
+\subfigure[\meffb]{\includegraphics[width=0.48\textwidth]{figures/ewk_prod/sig_bkg/hh_compare_meff_4bj.pdf}\label{fig:ewk:sig:meff_4bj}}
+\caption{Distribution of  the main kinematic variables in background and signal events after the selections described in the text.}
+\label{fig:ewk:sig:1}
+\end{figure*}
+
 
 The decay to photon is relevant only for very low \mhino, where the other decays are kinematically suppressed. 
 Once all the decays are allowed, the decay is mostly to $Z$ boson or Higgs boson; 

@@ -21,10 +21,10 @@ collectively referred to as partons. A schematic view of a \gls{pp} event is sho
 \begin{center}
 %  \subfigure[]{
 %    \label{fig:Comb_syst:pt}
-    \includegraphics[width=0.58\textwidth]{figures/simul/ppcoll2}
+    \includegraphics[width=0.68\textwidth]{figures/springer/mc_simul}
 %  }
 \end{center}
- \caption{Schematic representation of a \gls{pp} collision, involving a quark-gluon scattering that leads to a final state consisting of a $Z$ boson and a hard jet. Figure from Ref. \cite{Butterworth:2012fj}.}
+ \caption{Schematic representation of a \gls{pp} collision, involving a quark-gluon scattering that leads to a final state consisting of a $Z$ boson and a hard jet.}
   \label{fig:sim:pp2}
 \end{figure}
 
@@ -100,13 +100,18 @@ and $\otimes$ is a symbol for the convolution integral:
 P \otimes f \equiv \int^1_x\frac{dy}{y}f_q(y)~P\left(\frac{x}{y}\right) \; . \nonumber
 \end{equation}
 
-As mentioned above, the \glspl{partdf} have to be determined experimentally. This is done by several collaborations through fits (with typically 10 to 30 parameters) to data from \gls{dis} experiments. As an example, Figure \ref{fig:sim:pp} shows the \gls{nlo} \glspl{partdf} obtained by the MSTW Collaboration for two different scales, Q$^2$ = 10 GeV$^2$ and Q$^2$ = 10$^4$ GeV$^2$. As can be appreciated, with the increase of Q$^2$, the shape of the \glspl{partdf} changes to favor lower $x$ values. At low $x$ values the gluon \gls{partdf} is dominating (and this effect increases with Q$^2$), while for high $x$ values the \glspl{partdf} of the valence quarks are more relevant.
+As mentioned above, the \glspl{partdf} have to be determined experimentally. This is done by several collaborations through fits (with typically 10 to 30 parameters) to experimental data. 
+As an example, Figure \ref{fig:sim:pp} shows the \gls{nlo} \glspl{partdf} obtained by the \gls{atlas} Collaboration at Q$^2$ = 10 GeV$^2$. 
+Comparing this with \glspl{partdf} at different Q$^2$ (e.g. in Ref. \cite{Martin:2009iq}), it can be observed that, with the increase of Q$^2$, the shape of the \glspl{partdf} changes to favor lower $x$ values. At low $x$ values the gluon \gls{partdf} is dominating (and this effect increases with Q$^2$), while for high $x$ values the \glspl{partdf} of the valence quarks are more relevant.
 
 \begin{figure}[h]
 \begin{center}
-    \includegraphics[width=0.8\textwidth]{figures/simul/pdf}
+    \includegraphics[width=0.65\textwidth]{figures/springer/pdf}
 \end{center}
-\caption{MSTW 2008 \gls{nlo} \glspl{partdf} at Q$^2$ = 10 GeV$^2$ and Q$^2$ = 10$^4$ GeV$^2$. Figure from Ref. \cite{Martin:2009iq}.}
+\caption{Gluon and valence \glspl{partdf} at Q$^2$ = 10 GeV$^2$. 
+Figure from Ref. \cite{ATL-PHYS-PUB-2018-017}.
+%Figure from Ref. \cite{Martin:2009iq}.
+}
  \label{fig:sim:pp}
 \end{figure}
 
@@ -184,18 +189,8 @@ One might wish to improve the accuracy of the description of the event by adding
 for the process F with the addition of one extra parton (F+1), as in the second diagram in Figure \ref{fig:sim:matching}. 
 In this figure, the boxes are only partially filled to indicate the phase-space restriction 
 necessary to deal with the divergence of the F+1 \glspl{me}. 
-The naive addition of these two pieces leads to double counting of configurations, 
-as illustrated in the third diagram of Figure \ref{fig:sim:matching}. 
+The naive addition of these two pieces leads to double counting of configurations. 
 This double-counting problem worsens with the increase of the number of extra legs that we want to add to the \glspl{me}.
-
-\begin{figure}[h]
-\begin{center}
-    \includegraphics[width=\textwidth]{figures/simul/matching}
-\end{center}
-\caption{Illustration of the source of possible double-counting originating from  adding cross-sections involving matrix
-elements with different numbers of legs when interfaced to parton showers. Figure from Ref. \cite{Skands:2011pf}.}
- \label{fig:sim:matching}
-\end{figure}
 
 Different methods have been designed to match \glspl{me} to showers such that, for each order in perturbation theory, double-counting is avoided. The three main strategies are \cite{Giele:2011cb}:
 \begin{description}
@@ -237,13 +232,17 @@ that can in turn decay to secondary hadrons. This transition is described throug
 The two main hadronization models used in \gls{mc} generators are:
 
 \begin{description}
-\item[String Model] The string model \cite{Artru:1974hr}, whose schematic is depicted in Figure \ref{fig:string_model}, is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). The term ``string model'' comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
+\item[String Model] The string model \cite{Artru:1974hr} 
+%, whose schematic is depicted in Figure \ref{fig:string_model}, 
+is based on linear confinement: the potential energy between two colored particles increases linearly with their distance, when the distance is greater than about 1 fm (while at shorter distances also a Coulomb term is present). The term ``string model'' comprises several different models, among which the most used nowadays is the Lund model \cite{Andersson:1983ia,Andersson:1998tv}. 
 A color string forms that joins the final state in a string configuration of field energies, and hadrons originate from the breakups of the string. The proportionality constant of the linear inter-quark potential can be measured from quarkonia spectra or from lattice \gls{qcd}, and results to be $\approx$ 1 GeV/fm.
 The main difference between quarks and gluons resides in the fact that, while quarks are connected to one single string, gluons are connected to two strings and have therefore a rate for hadron production twice that of quarks. 
 % chiara: describe the main steps of the string model hadronization
 The fragmentation function determines the probability of a given hadron to carry a certain fraction of the available momentum. In the Lund model the form of the fragmentation function is constrained by the left-right symmetry necessary to make the model independent of the sequence of string breakups. The resulting function depends on the mass and \pt of the hadron, leading to heavier hadrons carrying on average a higher fraction of the momentum.
 
-\item[Cluster Model] The cluster model, sketched in Figure \ref{fig:cluster_model}, is based on the preconfinement property of \gls{qcd}. 
+\item[Cluster Model] The cluster model  
+%, sketched in Figure \ref{fig:cluster_model}, 
+is based on the preconfinement property of \gls{qcd}. 
 Color-singlet combinations of partons, referred to as clusters, are formed during the parton shower,  
 and then decay to (possibly unstable) hadrons. 
 Heavier clusters may first split through non-perturbative processes, and decay first to a pair of clusters or to a cluster and a hadron; 
@@ -252,22 +251,22 @@ The mass distribution of the preconfined clusters results to be independent of t
 
 \end{description}
 
-\begin{figure}[h]
-\begin{center}
-  \subfigure[]{
-    \includegraphics[width=0.35\textwidth]{figures/simul/Figures_MonteCarlo_string_had.pdf}
-        \label{fig:string_model}
-  }
-    \subfigure[]{
-    \includegraphics[width=0.35\textwidth]{figures/simul/Figures_MonteCarlo_clustr_had.pdf}
-    \label{fig:cluster_model}
-  }
-\end{center}
+%\begin{figure}[h]
+%\begin{center}
+%  \subfigure[]{
+%    \includegraphics[width=0.35\textwidth]{figures/simul/Figures_MonteCarlo_string_had.pdf}
+ %       \label{fig:string_model}
+%  }
+%    \subfigure[]{
+ %   \includegraphics[width=0.35\textwidth]{figures/simul/Figures_MonteCarlo_clustr_had.pdf}
+%    \label{fig:cluster_model}
+%  }
+%\end{center}
 % chiara note: check reference!
- \caption{Schematic view of \subref{fig:string_model} the string hadronization model and \subref{fig:cluster_model} the cluster hadronization model. 
- Figure from Ref. \cite{Isildak:2013kfa}.}
-  \label{fig:had_model}
-\end{figure}
+ %\caption{Schematic view of \subref{fig:string_model} the string hadronization model and \subref{fig:cluster_model} the cluster hadronization model. 
+% Figure from Ref. \cite{Isildak:2013kfa}.}
+%  \label{fig:had_model}
+%\end{figure}
 
 
 These two hadronization models were developed in the 1980's, and since then there has been no fundamental progress in the theoretical understanding of hadronization. 

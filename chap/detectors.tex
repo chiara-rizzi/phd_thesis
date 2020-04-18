@@ -12,8 +12,8 @@ The ability to accurately identify particles and reconstruct their energy and tr
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/detector/particles_in_detector}
-\caption{Components of a typical detector for physics at colliders. Different particles are identified by the distinctive signatures in the subdetectors. Figure from Ref. \cite{Lippmann:2011bb}.}
+\includegraphics[width=0.7\textwidth]{figures/springer/detector}
+\caption{Components of a typical detector for physics at colliders. Different particles are identified by the distinctive signatures in the subdetectors.}
 \label{fig:detector:interaction}
 \end{figure}
 
@@ -68,31 +68,15 @@ where high precision and low occupancy are needed \cite{Hartmann:2009zza}.
 These detectors detectors are also based on the ionization of the material but in this case, since the structure is a crystal, 
 we talk about electrons and electron holes. 
 
-The underlying principle is based on the band model of solids, describing the allowed energy levels for electrons in a solid: when many atoms of the same type are bound together in a crystal lattice, in order to fulfill Pauli's principle the atomic orbitals split into many closely spaced molecular orbitals, that can be considered as continuous energy bands. The highest-energy full band is the valence band, while the lowest partially-filled (or empty) band is the conduction band; the energy difference between the conduction band and the valence band is referred to as energy gap, as illustrated in Figure \ref{fig:det:band:a}. 
+The underlying principle is based on the band model of solids, describing the allowed energy levels for electrons in a solid: when many atoms of the same type are bound together in a crystal lattice, in order to fulfill Pauli's principle the atomic orbitals split into many closely spaced molecular orbitals, that can be considered as continuous energy bands. The highest-energy full band is the valence band, while the lowest partially-filled (or empty) band is the conduction band; the energy difference between the conduction band and the valence band is referred to as energy gap. 
 
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/band_structure}\label{fig:det:band:a}}
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/pn.pdf}\label{fig:det:band:b}}
-\caption{\subref{fig:det:band:a} Schema of band model of solids. \subref{fig:det:band:b} Top: schema of a p-n junction. Bottom: charge distribution in a p-n junction and extension of the depletion area. Figures from Ref. \cite{grupen_shwartz_2008}.}
-\label{fig:det:band}
-\end{figure}
 
-Semiconductors are materials where the conduction band is almost empty, but the energy gap is small ($\approx$ 1 eV, e.g. 1.07 eV for silicon), so the conduction band can be occupied by excited electrons from the valence band; this leaves holes in the valence band, that under the effect of an electric field can drift as well. Semiconductors with a pure composition have the same amount of electrons and holes. If the semiconductor is doped with an atom with one more electron in the valence band, this creates an excess of electrons and the material is referred to as a n-type semiconductor. If instead the impurities are electron acceptors, the material has an excess of holes and is referred to as p-type semiconductor. When a p-type and a n-type semiconductors are pulled together, the holes of the p-side drift into the n-side, and the electrons from the n-side into the p-side, as shown in Figure \ref{fig:det:band:b}. This creates an electric field that takes charge carriers out of the area where it is present (depletion region). When a charged particle passes through the semiconductor, it produces electron-hole pairs in the depletion region; these drift apart because of the electric field and can be collected by electrodes. The application of a negative potential difference between the p-side and the n-side can increase the depletion area.
+Semiconductors are materials where the conduction band is almost empty, but the energy gap is small ($\approx$ 1 eV, e.g. 1.07 eV for silicon), so the conduction band can be occupied by excited electrons from the valence band; this leaves holes in the valence band, that under the effect of an electric field can drift as well. Semiconductors with a pure composition have the same amount of electrons and holes. If the semiconductor is doped with an atom with one more electron in the valence band, this creates an excess of electrons and the material is referred to as a n-type semiconductor. If instead the impurities are electron acceptors, the material has an excess of holes and is referred to as p-type semiconductor. When a p-type and a n-type semiconductors are pulled together, the holes of the p-side drift into the n-side, and the electrons from the n-side into the p-side. This creates an electric field that takes charge carriers out of the area where it is present (depletion region). When a charged particle passes through the semiconductor, it produces electron-hole pairs in the depletion region; these drift apart because of the electric field and can be collected by electrodes. The application of a negative potential difference between the p-side and the n-side can increase the depletion area.
 
 The density of silicon is about one thousand times higher than that of gases like argon, and silicon also needs a much lower energy to be ionized (3.6 eV for silicon, while it is about 250 times higher for argon). This leads to a much higher number of electron-holes pairs than the number of electron-ion pairs in gas detectors, so the signal needs very little amplification, and the size of the detector itself can be smaller. 
 
-Different configurations of the silicon sensors are possible. Figure \ref{fig:det:silicon_schema:a} shows the schema of a single-sided strip sensor, where the readout strips are at negative potential. The second coordinate can be determined if also the n-side is divided into strips in a direction orthogonal to the ones in the p-side, as shown in Figure \ref{fig:det:silicon_schema:b}. The grid structure of this double-sided strip sensors can still lead to ambiguities when the number of hits is elevated; a true two-dimensional sensitivity is offered only by the pixel modules, schematically shown in Figure \ref{fig:det:silicon_schema:c}, where the module is divided in a matrix-like shape.
-
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/single-sided-AC-coupled-silicon-strip.pdf}\label{fig:det:silicon_schema:a}}
-\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/double-sided-silicon-strip.pdf}\label{fig:det:silicon_schema:b}}
-\subfigure[]{\includegraphics[width=0.32\textwidth]{figures/detector/pixel-schema.pdf}\label{fig:det:silicon_schema:c}}
-\caption{Schematic view of \subref{fig:det:silicon_schema:a} a single-sided strip sensor,
-\subref{fig:det:silicon_schema:b} a double-sided strip sensor and \subref{fig:det:silicon_schema:c} a pixel module. }
-\label{fig:det:silicon_schema}
-\end{figure}
+Different configurations of the silicon sensors are possible. In a single-sided strip sensor, the readout strips are at negative potential. The second coordinate can be determined if also the n-side is divided into strips in a direction orthogonal to the ones in the p-side. 
+The grid structure of this double-sided strip sensors can still lead to ambiguities when the number of hits is elevated; a true two-dimensional sensitivity is offered only by the pixel modules, where the module is divided in a matrix-like shape.
 
 
 
@@ -106,29 +90,19 @@ When the incident particle interacts with the material of the calorimeter it dev
 
 \subsubsection*{Electromagnetic calorimeters}
 
-The type of interaction that electromagnetically interacting particles have with the detector depends on their energy. The average fractional energy loss in lead for electrons and positrons and the photon interaction cross-section in lead are shown in Figures \ref{fig:det:xsec_elec:a} and \ref{fig:det:xsec_elec:b} respectively. 
+The type of interaction that electromagnetically interacting particles have with the detector depends on their energy. 
+%As an example, the photon interaction cross-section in lead is shown in Figure  \ref{fig:det:xsec_photon}. 
+%The average fractional energy loss in lead for electrons and positrons and the photon interaction cross-section in lead are shown in Figures \ref{fig:det:xsec_elec:a} and \ref{fig:det:xsec_elec:b} respectively. 
 
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.54\textwidth]{figures/detector/electron_energy_loss}\label{fig:det:xsec_elec:a}}
-\subfigure[]{\includegraphics[width=0.36\textwidth]{figures/detector/photon_xsec}\label{fig:det:xsec_elec:b}}
-\caption{\subref{fig:det:xsec_elec:a} Fractional energy loss per radiation length in lead as a function of the electron (positron) energy. 
-\subref{fig:det:xsec_elec:b} Photon interaction cross-section in lead. Figures from Ref. \cite{Patrignani:2016xqp}. }
-\label{fig:det:xsec_elec}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=0.54\textwidth]{figures/springer/photon_xsec.pdf}
+%\caption{Photon interaction cross-section in lead. Numbers from Ref. \cite{Nist}. }
+%\label{fig:det:xsec_photon}
+%\end{figure}
 
-
-When electrons, positrons and photons with energies above 1 GeV traverse a block of material they produce a cascade of particles (electromagnetic shower): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair (pair production is indicated with the symbol $\kappa_{nucl}$ in Figure \ref{fig:det:xsec_elec:b}). A schematic view of the evolution of an electromagnetic shower is shown  in Figure \ref{fig:det:shower_elec:a}. 
-
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.45\textwidth]{figures/detector/elec_shower} \label{fig:det:shower_elec:a}}
-\subfigure[]{\includegraphics[width=0.52\textwidth]{figures/detector/elec_shower_lateral}\label{fig:det:shower_elec:b}}
-\caption{\subref{fig:det:shower_elec:a} Sketch of the evolution of an electromagnetic shower. 
-\subref{fig:det:shower_elec:b} Lateral and longitudinal evolution of the shower from electrons with an energy of 6 GeV. Figure from Ref. \cite{grupen_shwartz_2008}.}
-\label{fig:det:shower_elec}
-\end{figure}
-
+For photons and electrons with energies above 1 GeV, the dominant type of interaction is nuclear pair production and Bremsstrahlung, respectively. 
+When these particles traverse a block of material they produce a cascade of particles (electromagnetic shower): electrons and positrons can emit a photon by Bremsstrahlung, and a photon, thanks to the interaction with a nucleus, can turn into an electron-positron pair.
 
 The main parameter to describe the evolution of an electromagnetic shower is the radiation length ($X_0$), defined as the distance over which an electron reduces its energy to $1/e$ of the initial value, and it corresponds also to 7/9 of the mean free path for pair production for a photon. The radiation length depends on the characteristics of the material:
 \begin{equation}
@@ -146,7 +120,7 @@ The lateral width of the shower, determined mainly by multiple scattering, incre
 R_M = \frac{21 MeV \; X_0[\frac{g}{cm^2}]}{E_c [MeV]} \; . \nonumber
 \end{equation}
 
-\noindent A cylinder of radius 2$R_M$ contains about 95\% of the shower; for most calorimeters $R_M$ has a value of few centimeters, so electromagnetic showers are quite narrow. The longitudinal and lateral development of the shower induced in lead by electrons with an energy of 6 GeV is shown in Figure \ref{fig:det:shower_elec:b}.
+\noindent A cylinder of radius 2$R_M$ contains about 95\% of the shower; for most calorimeters $R_M$ has a value of few centimeters, so electromagnetic showers are quite narrow. 
 
 Once the electrons in the shower have an energy lower than the critical energy 
 ($E_c$, defined as the energy where the loss through Bremsstrahlung equals the loss through ionization), 
@@ -169,21 +143,23 @@ We have discussed in Section \ref{sec:dec:tracking} how the resolution of the mo
 
 The difference between electromagnetic calorimeters and hadronic calorimeters finds its origin in the more complicated nature of strong interactions compared to the electromagnetic ones. 
 
-A sketch of the evolution of a hadronic shower is shown in Figure \ref{fig:det:shower_had:a}. A first relevant difference between hadronic and electromagnetic showers is that the former has a much larger spatial extension. On the longitudinal direction, the scale is determined by the nuclear interaction length ($\lambda_I$), which is material-dependent and can be expressed as:
+%A sketch of the evolution of a hadronic shower is shown in Figure \ref{fig:det:shower_had:a}. 
+With respect to electromagnetic showers, hadronic ones have a much larger spatial extension. On the longitudinal direction, the scale is determined by the nuclear interaction length ($\lambda_I$), which is material-dependent and can be expressed as:
 \begin{equation}
 \lambda_I = 35 \frac{g}{cm^2} A^{1/3} \; , \nonumber
 \end{equation}
 
-\noindent where $A$ is the atomic number of the material. For most materials used in particle detectors this turns out to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, and 16.77 cm for iron \cite{Patrignani:2016xqp}). The 99\% shower containment is reached after about 5(9) $\lambda_I$ for pions with E=10(138) GeV. Also the lateral width of the shower is larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of a hadronic shower depends on the transverse-momentum transfer, which can be quite sizable in strong nuclear interactions. Figure \ref{fig:det:shower_had:b} shows the lateral shower profile in iron for pions with E=10 GeV.
+\noindent where $A$ is the atomic number of the material. For most materials used in particle detectors this turns out to be larger than $X_0$ (e.g. the nuclear interaction length is 17.59 cm for lead, and 16.77 cm for iron \cite{Patrignani:2016xqp}). The 99\% shower containment is reached after about 5(9) $\lambda_I$ for pions with E=10(138) GeV. Also the lateral width of the shower is larger than in electromagnetic interactions: while the size of the Moli\'ere radius is determined mainly by multiple scattering, the lateral profile of a hadronic shower depends on the transverse-momentum transfer, which can be quite sizable in strong nuclear interactions. 
+%Figure \ref{fig:det:shower_had:b} shows the lateral shower profile in iron for pions with E=10 GeV.
 
-\begin{figure}[ht]
-\centering
-\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower}\label{fig:det:shower_had:a}}
-\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower_lateral}\label{fig:det:shower_had:b}}
-\caption{\subref{fig:det:shower_had:a} Sketch of the evolution of a hadronic shower. Figure from Ref. \cite{grupen_shwartz_2008}. 
-\subref{fig:det:shower_had:b} Lateral energy distribution of shower induced by $\pi^-$ with E=10 GeV, measured at a depth of 10, 20, 30, 50 and 70 cm in Fe. Figure from Ref. \cite{FRIEND1976505}.}
-\label{fig:det:shower_had}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower}\label{fig:det:shower_had:a}}
+%\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/detector/hadron_shower_lateral}\label{fig:det:shower_had:b}}
+%\caption{\subref{fig:det:shower_had:a} Sketch of the evolution of a hadronic shower. Figure from Ref. \cite{grupen_shwartz_2008}. 
+%\subref{fig:det:shower_had:b} Lateral energy distribution of shower induced by $\pi^-$ with E=10 GeV, measured at a depth of 10, 20, 30, 50 and 70 cm in Fe. Figure from Ref. \cite{FRIEND1976505}.}
+%\label{fig:det:shower_had}
+%\end{figure}
 
 
 Another difference with electromagnetic showers lies in the composition of the shower: while an electromagnetic shower is constituted only by electrons, positrons and photons, a much larger variety of particles participates in hadronic showers, including both hadrons and electromagnetically-interacting particles. Starting from the simplifying assumption that one third of the particles produced in nuclear interactions are neutral pions ($f_{\pi^0}=1/3$), a first approximation of the electromagnetic fraction of a shower is given by:
@@ -200,14 +176,16 @@ where $E_0$ is the energy necessary to produce one pion (e.g. 0.7 GeV for iron a
 \end{equation}
 
 
-\begin{figure}[ht]
-\centering
-\subfigure{\includegraphics[width=0.42\textwidth]{figures/detector/had_shower_spectra}}
-\caption{Particle spectra produced by protons with E=100 GeV absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301} and averaged over many showers. Figure from Ref. \cite{RevModPhys.75.1243}.}
-\label{fig:det:shower_had_spectra}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\subfigure{\includegraphics[width=0.42\textwidth]{figures/detector/had_shower_spectra}}
+%\caption{Particle spectra produced by protons with E=100 GeV absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301} and averaged over many showers. Figure from Ref. \cite{RevModPhys.75.1243}.}
+%\label{fig:det:shower_had_spectra}
+%\end{figure}
 
-Figure \ref{fig:det:shower_had_spectra} shows the particle spectra produced by protons with E=100 GeV absorbed by lead, as simulated by the Fluka code \cite{Ferrari:898301}. We can see that at low energies the particle content is dominated by electrons, positrons, photons and neutrons.
+%Figure \ref{fig:det:shower_had_spectra} shows 
+
+If we consider e.g. the particle spectra produced by protons with E=100 GeV absorbed by lead, at low energies the particle content is dominated by electrons, positrons, photons and neutrons \cite{RevModPhys.75.1243}.
 
 While in electromagnetic showers most of the initial energy is recorded in the detector, in hadronic showers a relevant fraction (up to 30-40\%) is invisible. This invisible fraction is caused by energy that goes into breaking the nuclear bonds, nuclear fragments that in sampling calorimeters do not reach the active material, and neutral particles that can escape the calorimeter (e.g. neutrinos or long-lived neutral kaons). Therefore, for the same initial energy, the visible energy will be lower for a hadronic shower than for an electromagnetic one. If we define the response as the collected signal per unit of incident energy, the invisible energy causes a different response of calorimeters to the electromagnetic and to the purely-hadronic parts of the shower. Defining $R_{em}$, $R_{h}$, $R_{\pi}$ respectively as the calorimeter response to electromagnetic shower, the hadronic part of the shower and to pions, we have that:
 \begin{equation}
@@ -262,8 +240,8 @@ which then outputs the current to the external circuit.
 
 \begin{figure}[ht]
 \centering
-\subfigure{\includegraphics[width=0.72\textwidth]{figures/detector/pmt}}
-\caption{Sketch of the structure of a \gls{pmt}. Figure from Ref. \cite{hamamatsu}.}
+\subfigure{\includegraphics[width=0.8\textwidth]{figures/springer/pmt}}
+\caption{Sketch of the structure of a \gls{pmt}. }
 \label{fig:det:pmt}
 \end{figure}
 

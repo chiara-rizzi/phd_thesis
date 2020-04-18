@@ -282,19 +282,18 @@ This strategy avoids the discontinuity for $\theta=0$, but it can introduce prob
 
 \begin{figure}[hbt]
 \centering 
-\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_1.pdf}\label{fig:interp_1}}
-\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_2.pdf}\label{fig:interp_2}}
-\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_3.pdf}\label{fig:interp_3}}
-\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/stat/interp_4.pdf}\label{fig:interp_4}}
+\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/springer/0-85_1_1-15.pdf}\label{fig:interp_1}}
+\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/springer/0-1_1_1-9.pdf}\label{fig:interp_2}}
+\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/springer/1-2_1_1-8.pdf}\label{fig:interp_3}}
+\subfigure[]{\includegraphics[width=0.4\textwidth]{figures/springer/0-95_1_1-5.pdf}\label{fig:interp_4}}
 \caption{Comparison of the four interpolation strategies supported by HistFactory \cite{Cranmer:1456844}. 
-$\alpha$ represents the variation of the \gls{np} in units of standard deviations, and $\eta$ the response relative to the nominal value; 
-the three white markers are the points where the response is measured (nominal and $\pm$ one standard deviation), 
+$\theta$ represents the variation of the \gls{np} in units of standard deviations, and b($\theta$) the response relative to the nominal value; 
+the three pink markers are the points where the response is measured (nominal and $\pm$ one standard deviation), 
 while the colored lines show the interpolating function.
-\subref{fig:interp_1} $\eta(-1) = 0.8$, $\eta(+1) = 1.2$.
-\subref{fig:interp_2} $\eta(-1) = 1.1$, $\eta(+1) = 1.5$.
-\subref{fig:interp_3} $\eta(-1) = 0.2$, $\eta(+1) = 1.8$.
+\subref{fig:interp_1} $\eta(-1) = 0.85$, $\eta(+1) = 1.15$.
+\subref{fig:interp_2} $\eta(-1) = 0.1$, $\eta(+1) = 1.9$.
+\subref{fig:interp_3} $\eta(-1) = 1.2$, $\eta(+1) = 1.8$.
 \subref{fig:interp_4} $\eta(-1) = 0.95$, $\eta(+1) = 1.5$.
-Figures from Ref. \cite{Cranmer:1456844}.
 }
 \label{fig:stat:interp}
 \end{figure}
@@ -571,27 +570,28 @@ f(t_{\mu};\Lambda) = \frac{1}{2 \sqrt{t_{\mu}}} \frac{1}{\sqrt{2 \pi}}
 
 \noindent The value of $\sigma$ can be estimated through the Asimov dataset, defined as the dataset that, when used to estimate the likelihood parameters, leads to their true values. 
 In practice the Asimov dataset is built by setting data equal to the nominal background prediction. 
-Plugging this back into Equation \ref{eq:stat:ftmulambda} allows to obtain a functional form of the distribution of the test statistic. Figure \ref{fig:stat:asymtoys1} compares the distribution of the test statistic $q_1$ with pseudo-experiments and with the asymptotic approximation in the case of the background-only hypothesis and in the signal-plus-background hypothesis
-in a cut-and-count experiment with nine background events and six signal events; 
-a dataset of this size leads to a good agreement of the asymptotic approximation with the \gls{pdf} obtained with pseudo-experiments.
-Figure \ref{fig:stat:asymtoys2} shows a further investigation of this comparison: the discovery significance obtained for $q_0=16$ with pseudo-experiments and with the asymptotic approximation is compared as a function of the number of events. 
-Even if the approximations used to derive the asymptotic formulae hold in the case of a large data sample, 
+Plugging this back into Equation \ref{eq:stat:ftmulambda} allows to obtain a functional form of the distribution of the test statistic. 
+%Figure \ref{fig:stat:asymtoys1} compares the distribution of the test statistic $q_1$ with pseudo-experiments and with the asymptotic approximation in the case of the background-only hypothesis and in the signal-plus-background hypothesis
+%in a cut-and-count experiment with nine background events and six signal events; 
+%a dataset of this size leads to a good agreement of the asymptotic approximation with the \gls{pdf} obtained with pseudo-experiments.
+%Figure \ref{fig:stat:asymtoys2} shows a further investigation of this comparison: the discovery significance obtained for $q_0=16$ with pseudo-experiments and with the asymptotic approximation is compared as a function of the number of events. 
+As discussed in Ref. \cite{Cowan2011}, even if the approximations used to derive the asymptotic formulae hold in the case of a large data sample, 
 the agreement between this method and pseudo-experiments is at the level of $\approx 10\%$ even for an expected background of three events. 
 
 
-\begin{figure}[h]
-\centering 
-\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/stat/q11_s6_b9_pdf-eps-converted-to.pdf}\label{fig:stat:asymtoys1}}
-\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/stat/Z4-eps-converted-to.pdf}\label{fig:stat:asymtoys2}}
-\caption{
-\subref{fig:stat:asymtoys1} \glspl{pdf} for $q_1$ in the case of the background-only hypothesis and in the signal-plus-background hypothesis
-in a cut-and-count experiment with nine background events and six signal events.
-The solid curves show the asymptotic approximation, while the histograms are the distributions obtained with pseudo-experiments. 
-\subref{fig:stat:asymtoys2} Discovery significance obtained for $q_0=16$ with pseudo-experiments (black points) and with the asymptotic approximation, that leads to a nominal value of $Z_0 = \sqrt{q_0} =4$, as a function of the number of background events. 
-Figures from Ref. \cite{Cowan2011}.
-}
-\label{fig:stat:interp}
-\end{figure}
+%\begin{figure}[h]
+%\centering 
+%\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/stat/q11_s6_b9_pdf-eps-converted-to.pdf}\label{fig:stat:asymtoys1}}
+%\subfigure[]{\includegraphics[width=0.48\textwidth]{figures/stat/Z4-eps-converted-to.pdf}\label{fig:stat:asymtoys2}}
+%\caption{
+%\subref{fig:stat:asymtoys1} \glspl{pdf} for $q_1$ in the case of the background-only hypothesis and in the signal-plus-background hypothesis
+%in a cut-and-count experiment with nine background events and six signal events.
+%The solid curves show the asymptotic approximation, while the histograms are the distributions obtained with pseudo-experiments. 
+%\subref{fig:stat:asymtoys2} Discovery significance obtained for $q_0=16$ with pseudo-experiments (black points) and with the asymptotic approximation, that leads to a nominal value of $Z_0 = \sqrt{q_0} =4$, as a function of the number of background events. 
+%Figures from Ref. \cite{Cowan2011}.
+%}
+%\label{fig:stat:interp}
+%\end{figure}
 
 
 
