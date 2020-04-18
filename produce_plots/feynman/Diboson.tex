@@ -1,0 +1,39 @@
+\documentclass[12pt,a4paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{feynman}
+\usepackage[left=5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+
+
+\begin{feynman} 
+    \fermion[]{0.20, 2.20}{2.20, 2.20}
+    \fermion[]{2.20, 0.20}{0.20, 0.20}
+    \electroweak[]{2.20, 2.20}{4.20, 2.20}
+    \fermion[]{2.20, 2.20}{2.20, 0.20}
+    \electroweak[]{2.20, 0.20}{4.20, 0.20}\end{feynman}
+
+\clearpage
+
+\begin{feynman} 
+    \fermion[]{0.20, 2.20}{2.20, 2.20}
+    \fermion[]{2.20, 0.20}{0.20, 0.20}
+    \electroweak[]{2.20, 2.20}{4.20, 0.20}
+    \fermion[]{2.20, 2.20}{2.20, 0.20}
+    \electroweak[]{2.20, 0.20}{4.20, 2.20}\end{feynman}
+
+\clearpage
+
+\begin{feynman} 
+    \electroweak[]{2.20, 2.20}{4.20, 2.20}
+    \electroweak[]{4.20, 2.20}{6.20, 4.20}
+    \fermion[]{2.20, 2.20}{0.20, 0.20}
+    \electroweak[]{6.20, 0.20}{4.20, 2.20}
+    \fermion[]{0.20, 4.20}{2.20, 2.20}\end{feynman}
+
+
+\end{document}
